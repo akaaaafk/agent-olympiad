@@ -1,0 +1,173 @@
+[
+  {
+    "problem_id": "econ_ieo_2019_q1",
+    "competition": "International Economics Olympiad",
+    "year": 2019,
+    "topic": "Mechanism Design",
+    "source_file": "data/raw/2019.pdf",
+    "task_type": "open_question",
+    "problem_description": "There are three kids: Alice, Bob and Clara. Their mother wants to split a cake of size 1 into three pieces and distribute them among the kids. Every kid wants to eat as much cake as possible. Consider the following mechanism: Alice cuts the cake in three pieces the way she likes; then Bob takes any piece he likes, and then Clara takes any piece she likes (of the two that are left), so Alice is left with the remaining piece. How will Alice cut the cake? Prove the subgame perfect Nash equilibrium.",
+    "gold_label": {
+      "grading_rubric": [
+        "Identifies that Bob and Clara will each pick the largest available piece sequentially (10 points)",
+        "Deduces that Alice must cut the cake into exactly three equal pieces of 1/3 each to guarantee her maximum share (10 points)",
+        "Formally proves that if any piece exceeds 1/3, Alice's remaining piece drops strictly below 1/3 (10 points)"
+      ],
+      "expected_answer": "Alice cuts the cake into three equal pieces of 1/3 each. This is the unique subgame perfect Nash equilibrium."
+    }
+  },
+  {
+    "problem_id": "econ_ieo_2019_q5",
+    "competition": "International Economics Olympiad",
+    "year": 2019,
+    "topic": "Connecting Short Run and Long Run",
+    "source_file": "data/raw/2019.pdf",
+    "task_type": "open_question",
+    "problem_description": "Banks cannot perfectly screen the quality of investment projects and therefore offer all applicants the same loan rate to break even. Detail how asymmetric information affects capital allocation and argue why recessions might paradoxically stimulate long-run economic growth by altering the entrepreneurial pool.",
+    "gold_label": {
+      "grading_rubric": [
+        "Explains that high-quality projects are overcharged to subsidize defaults of risky projects due to imperfect bank screening (10 points)",
+        "Argues that recessions force low-quality, highly risky entrepreneurs to exit or default first (10 points)",
+        "Deduces that the exit of bad firms allows banks to lower loan rates for surviving high-quality entrepreneurs, improving capital allocation long-run (10 points)"
+      ],
+      "expected_answer": "Adverse selection causes cross-subsidization. Recessions act as a cleansing mechanism: low-quality firms exit, banks can lower rates, and long-run innovation improves."
+    }
+  },
+  {
+    "problem_id": "econ_ieo_2021_q1",
+    "competition": "International Economics Olympiad",
+    "year": 2021,
+    "topic": "Dynamic Equilibrium",
+    "source_file": "data/raw/2021.pdf",
+    "task_type": "open_question",
+    "problem_description": "Oil (A) and Gas (B) are substitutes. Demand: Da = K - 2Pa + Pb, Db = 80 - 6Pb + 2Pa. Supply: Sa = -10 + 2Pa, Sb = -5 + Pb. In a dynamic setting, production decisions must be made exactly one period before sales occur based on expected prices. Evaluate the system's stability under time-lagged feedback loops and find the steady-state equilibrium.",
+    "gold_label": {
+      "grading_rubric": [
+        "Correctly sets up dynamic time-lag equations linking period t production decisions to period t-1 price expectations (10 points)",
+        "Solves for steady-state equilibrium prices where production matches demand over repeated cycles (10 points)",
+        "Evaluates convergence or divergence conditions based on the slopes of the supply and demand curves (10 points)"
+      ],
+      "expected_answer": "Steady-state requires Pa* and Pb* such that Sa(Pa*) = Da(Pa*, Pb*) and Sb(Pb*) = Db(Pa*, Pb*). Convergence depends on the product of supply and demand slope ratios being less than 1."
+    }
+  },
+  {
+    "problem_id": "econ_ieo_2021_q3",
+    "competition": "International Economics Olympiad",
+    "year": 2021,
+    "topic": "Vaccination Game Theory",
+    "source_file": "data/raw/2021.pdf",
+    "task_type": "open_question",
+    "problem_description": "Model a population deciding whether to vaccinate based on individual vaccination costs vs. social herd immunity benefits. Evaluate the policy paradox where mandating vaccination for high-cost individuals can unexpectedly cause mid-cost individuals to stop vaccinating voluntarily, potentially leaving total immunization unchanged.",
+    "gold_label": {
+      "grading_rubric": [
+        "Correctly models utility functions incorporating the probability of encountering an unvaccinated individual (10 points)",
+        "Identifies Nash Equilibrium thresholds where private optimization diverges from socially optimal immunization levels (10 points)",
+        "Explains the crowding-out effect showing that forcing high-cost groups in may push mid-cost groups out, leaving overall coverage unchanged (10 points)"
+      ],
+      "expected_answer": "In Nash equilibrium, voluntary vaccination falls short of the social optimum. A mandate can produce crowding out if marginal voluntarily-vaccinating individuals drop out when the perceived infection risk falls."
+    }
+  },
+  {
+    "problem_id": "econ_ieo_2022_q1",
+    "competition": "International Economics Olympiad",
+    "year": 2022,
+    "topic": "Measuring Inequality",
+    "source_file": "data/raw/2022.pdf",
+    "task_type": "open_question",
+    "problem_description": "Ann uses administrative tax microdata to estimate income inequality by dividing reported tax payments by statutory tax rates to reconstruct incomes, then computes a Gini coefficient. Analyze the systemic data blind spots (e.g., untaxed informal income, tax evasion, capital gains exclusions) that bias this measure and their policy implications.",
+    "gold_label": {
+      "grading_rubric": [
+        "Identifies that informal economies and illegal tax evasion are structurally absent from administrative tax data (10 points)",
+        "Explains how systematic exclusion of low-income informal workers and high-income capital gains skews the Gini coefficient in opposite directions (10 points)",
+        "Connects these measurement biases to the risk of designing faulty redistributive macroeconomic policy (10 points)"
+      ],
+      "expected_answer": "Administrative tax data omits informal and illegally hidden income, biasing the Gini. Policy makers relying on this measure may under-target redistribution programs or misallocate resources."
+    }
+  },
+  {
+    "problem_id": "econ_ieo_2022_q5",
+    "competition": "International Economics Olympiad",
+    "year": 2022,
+    "topic": "The Bandwagon Effect",
+    "source_file": "data/raw/2022.pdf",
+    "task_type": "open_question",
+    "problem_description": "200,000 households consider buying solar panels subject to a bandwagon effect. Demand: Qc = 150,000 - p, Qb = 40,000 - 5p + 500*sqrt(N), where N is the total number of current users. Supply is perfectly elastic at p = 25,000. Consumers iteratively observe the current adoption level N each period. (a) Find the no-subsidy steady-state equilibrium. (b) Calculate the new equilibrium when a $5,000 subsidy is introduced. (c) Determine the equilibrium if the subsidy is later suddenly eliminated.",
+    "gold_label": {
+      "grading_rubric": [
+        "Sets up the quadratic equilibrium equation by substituting x = sqrt(N) and solves for the no-subsidy steady-state adoption (10 points)",
+        "Recalculates the expanded equilibrium accurately after the $5,000 subsidy shifts the demand curve (10 points)",
+        "Solves the asymmetric retraction path after subsidy removal, identifying whether hysteresis causes a higher or lower new steady-state compared to the original (10 points)"
+      ],
+      "expected_answer": "Solve N = Qb(p=25000, N) + Qc(p=25000) iteratively. The bandwagon effect creates multiple equilibria; subsidy removal may leave the market at a permanently higher adoption level due to hysteresis."
+    }
+  },
+  {
+    "problem_id": "econ_ieo_2023_q1",
+    "competition": "International Economics Olympiad",
+    "year": 2023,
+    "topic": "Human Capital Theory",
+    "source_file": "data/raw/2023.pdf",
+    "task_type": "open_question",
+    "problem_description": "Julia chooses among three career investment paths over 3 periods at a 10% interest rate per period. Path 1: Cashier earning 12,000 each period. Path 2: Marine Biologist — study 1 period (tuition cost 7,000), then earn 30,000 for 2 periods. Path 3: Philosophy PhD — study 2 periods (tuition cost 5,000/period), then earn 60,000 for 1 period. (a) Calculate the NPV of each path. (b) Identify the optimal choice. (c) Discuss how a government tuition subsidy of 50% on Path 3 would change the decision.",
+    "gold_label": {
+      "grading_rubric": [
+        "Correctly discounts all future cash flows to period 0 using the 10% per-period discount factor (10 points)",
+        "Computes accurate NPVs for all three career paths including tuition costs as negative cash flows (10 points)",
+        "Compares NPVs correctly and identifies the optimal path, then re-evaluates under the 50% subsidy scenario (10 points)"
+      ],
+      "expected_answer": "NPV_1 = 12000 + 12000/1.1 + 12000/1.21. NPV_2 = -7000 + 30000/1.1 + 30000/1.21. NPV_3 = -5000 + (-5000)/1.1 + 60000/1.21. Compare results. The subsidy reduces tuition costs by 50%, potentially making Path 3 optimal."
+    }
+  },
+  {
+    "problem_id": "econ_ieo_2023_q4",
+    "competition": "International Economics Olympiad",
+    "year": 2023,
+    "topic": "Financial Cash Flow and Government Intervention",
+    "source_file": "data/raw/2023.pdf",
+    "task_type": "open_question",
+    "problem_description": "A firm borrows 71 units and makes payments P1=15, P2=28, P3=30 across three periods. (a) Calculate the Internal Rate of Return (IRR) using linear interpolation between 14% and 16%. (b) After period 2, interest rates unexpectedly spike by 3 percentage points. Recalculate the remaining principal. (c) The government then introduces a 25% subsidy on the remaining principal. Calculate the firm's final modified repayment obligation.",
+    "gold_label": {
+      "grading_rubric": [
+        "Applies the multi-period IRR linear interpolation formula correctly between the two trial rates (10 points)",
+        "Dynamically recalculates the remaining principal balance after the unexpected 3% interest rate increase post-period 2 (10 points)",
+        "Correctly applies the 25% government subsidy to the remaining principal to output the final modified repayment (10 points)"
+      ],
+      "expected_answer": "IRR ≈ 14% + (NPV_14 / (NPV_14 - NPV_16)) * 2%. Post-shock principal = original remaining balance compounded at new rate. Subsidy reduces this by 25%."
+    }
+  },
+  {
+    "problem_id": "econ_ieo_2024_q1",
+    "competition": "International Economics Olympiad",
+    "year": 2024,
+    "topic": "Mortgage Securitization",
+    "source_file": "data/raw/2024.pdf",
+    "task_type": "open_question",
+    "problem_description": "A bank holds 100 mortgages each worth $1M. Compare two strategies: (A) auctioning each mortgage individually, (B) pooling all mortgages into 10,000 tradable securities. Analyze the economic trade-offs. Then evaluate the following policy paradox: an affordability mandate designed to help borrowers with credit scores of 620+ resulted in borrowers at exactly 620 defaulting at higher rates than those at 619. Explain this adverse selection mechanism.",
+    "gold_label": {
+      "grading_rubric": [
+        "Provides economic arguments for pooling (liquidity premium, risk diversification, lower transaction costs) versus auctioning individually (10 points)",
+        "Identifies how securitization severs loan originators from ongoing credit monitoring incentives, contributing to asset price inflation (10 points)",
+        "Explains the adverse selection policy paradox: borrowers just above the 620 threshold are systematically riskier because lenders actively targeted them, while borrowers at 619 are not incentivized to over-leverage (10 points)"
+      ],
+      "expected_answer": "Pooling reduces idiosyncratic risk and creates liquidity but generates moral hazard. The 620-threshold creates a discontinuous incentive: lenders push marginal borrowers just over the line, selecting for the riskiest possible 620-score population."
+    }
+  },
+  {
+    "problem_id": "econ_ieo_2025_q1",
+    "competition": "International Economics Olympiad",
+    "year": 2025,
+    "topic": "Conspicuous Consumption and Signaling Games",
+    "source_file": "data/raw/2025.pdf",
+    "task_type": "open_question",
+    "problem_description": "Two neighboring families simultaneously choose between buying a Modest or Luxury car. Payoff matrix: (Modest, Modest) = (2, 2); (Luxury, Luxury) = (1, 1); (Modest, Luxury) = (0.5, 2.5); (Luxury, Modest) = (2.5, 0.5). (a) Write a brief economic narrative for this scenario. (b) Find all Nash Equilibria. (c) Is the Nash Equilibrium socially optimal? Propose a government policy to correct the outcome. (d) Discuss why real-world behavior might deviate from the static game prediction.",
+    "gold_label": {
+      "grading_rubric": [
+        "Frames the scenario as a Prisoner's Dilemma driven by status signaling / conspicuous consumption (Veblen effect) (6 points)",
+        "Correctly identifies dominant strategies and proves the unique Nash Equilibrium at (Luxury, Luxury) (6 points)",
+        "Proposes a corrective policy (e.g., luxury tax, subsidy on Modest cars) that shifts the equilibrium to the Pareto-superior (Modest, Modest) outcome (8 points)",
+        "Uses repeated game theory or social norm arguments to explain real-world deviations from the one-shot Nash prediction (10 points)"
+      ],
+      "expected_answer": "Luxury is a dominant strategy for both players, yielding the NE (Luxury, Luxury) with payoff (1,1), which is Pareto-dominated by (Modest, Modest) at (2,2). A luxury tax shifting Luxury payoffs below Modest payoffs resolves the dilemma. In reality, repeated interactions and social monitoring may sustain cooperative (Modest) norms."
+    }
+  }
+]
