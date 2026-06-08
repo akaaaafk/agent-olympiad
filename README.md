@@ -1,6 +1,6 @@
 # Agent Olympiad — Economics Benchmark (IEO)
 
-A curated dataset of 10 open-ended problems from the **International Economics Olympiad (IEO)** designed to benchmark agentic AI systems on multi-step economic reasoning tasks.
+A curated dataset of **5 open-ended problems** from the **International Economics Olympiad (IEO)** selected for their agentic properties — multi-step modeling, dynamic systems, and strategic reasoning that goes beyond recall.
 
 This is part of the broader **Agent Olympiad** research project at DAPLab, which aims to create the first benchmark suite focused exclusively on *agentic* tasks drawn from international academic competitions across diverse subjects (economics, geography, linguistics, physics lab sections, etc.).
 
@@ -11,33 +11,33 @@ Existing AI benchmarks focus heavily on paper-based math and physics (AMC, IMO, 
 - **Multi-step strategic reasoning** (Game theory, Nash equilibria)
 - **Dynamic/iterative environment interaction** (Time-lagged markets, bandwagon feedback loops)
 - **Policy design under uncertainty** (Counterfactual analysis, LLM-as-judge scoring)
-- **Data interpretation with blind spots** (Inequality measurement, securitization paradoxes)
+- **Path dependence and multiple equilibria** (Bandwagon effects, policy hysteresis)
 
 ## Repository Structure
 
 ```
 agent-olympiad/
 ├── README.md
+├── run_experiment.py          # Experiment runner (supports Perplexity Sonar + Agent APIs)
 ├── data/
-│   ├── raw/               # Original IEO exam PDFs (2018–2025)
+│   ├── raw/                   # Original IEO exam PDFs (2018–2025)
 │   └── processed/
-│       └── ieo_benchmark.json   # Structured benchmark dataset
+│       ├── ieo_benchmark.json          # Structured benchmark (5 questions)
+│       ├── results_<model>.json        # Raw results per model
+│       └── results_summary.md          # Multi-model score comparison
 ```
 
 ## Dataset Summary
 
-| Problem ID | Year | Topic |
-|---|---|---|
-| econ_ieo_2019_q1 | 2019 | Mechanism Design (Cake Cutting) |
-| econ_ieo_2019_q5 | 2019 | Short Run vs Long Run / Adverse Selection |
-| econ_ieo_2020_q2 | 2020 | Optimal Lockdown / Nash Equilibrium vs Social Optimum |
-| econ_ieo_2021_q1 | 2021 | Dynamic Equilibrium (Oil & Gas Markets) |
-| econ_ieo_2021_q3 | 2021 | Pandemic Possibility Frontier |
-| econ_ieo_2021_q5 | 2021 | Vaccination Dilemmas / Crowding Out |
-| econ_ieo_2022_q1 | 2022 | Measuring Inequality / Data Bias |
-| econ_ieo_2022_q5 | 2022 | Bandwagon Effect / Solar Panels |
-| econ_ieo_2024_q1 | 2024 | Mortgage Securitization / Adverse Selection |
-| econ_ieo_2025_q1 | 2025 | Conspicuous Consumption / Signaling Game |
+Questions were selected for **agentic properties**: iterative reasoning, dynamic systems, mechanism design, and counterintuitive results that require working through a model step by step.
+
+| Problem ID | Year | Topic | Agentic Properties |
+|---|---|---|---|
+| econ_ieo_2019_q1 | 2019 | Mechanism Design | Sequential game theory, creative mechanism design |
+| econ_ieo_2020_q2 | 2020 | Optimal Lockdown | Nash equilibrium vs social optimum, integer optimization |
+| econ_ieo_2021_q1 | 2021 | Dynamic Equilibrium | Cobweb model, multi-period divergence |
+| econ_ieo_2022_q5 | 2022 | Going Green (Bandwagon Effect) | Iterative equilibrium, multiple equilibria, path dependence |
+| econ_ieo_2025_q1 | 2025 | Buying Cars | Prisoner's dilemma, policy design, repeated game theory |
 
 ## JSON Schema
 
