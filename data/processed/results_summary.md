@@ -1,22 +1,22 @@
 # Experiment Results — Multi-Model Comparison
 
-**Benchmark:** IEO Agentic Questions (5 questions)  
-**Judge:** same model as agent (LLM-as-judge)
+**Benchmark:** IEO Agentic Questions (5 questions, 30 pts each)  
+**Judge:** same model as agent (self-judging — see observations)
 
 ## Score Summary
 
-| Topic (Year) | gemini-2.5-flash-lite | sonar-pro |
-|---|---|---|
-| Mechanism Design (q1) | **25/30** | **10/30** |
-| Dynamic Equilibrium (q1) | **30/30** | **10/30** |
-| Going Green (q5) | **26/30** | **22/30** |
-| Optimal Lockdown (q2) | **28/30** | **30/30** |
-| Buying Cars (q1) | **30/30** | **30/30** |
-| **TOTAL** | **139/150** | **102/150** |
+| Topic | gemini-2.5-flash-lite | openai/gpt-5.5 | sonar-pro | sonar-reasoning-pro |
+|---|---|---|---|---|
+| Mechanism Design (2019) | **25/30** | **30/30** | **10/30** | **12/30** |
+| Dynamic Equilibrium (2021) | **30/30** | **30/30** | **10/30** | **30/30** |
+| Going Green (2022) | **26/30** | **30/30** | **22/30** | **None/30** |
+| Optimal Lockdown (2020) | **28/30** | **28/30** | **30/30** | **30/30** |
+| Buying Cars (2025) | **30/30** | **30/30** | **30/30** | **30/30** |
+| **TOTAL /150** | **139/150** | **148/150** | **102/150** | **102/150** |
 
 ## Key Observations
 
-- High scores may reflect lenient self-judging (same model judges itself)
-- sonar-pro scores vary widely (10–30/30), suggesting these questions do challenge some models
-- Dynamic Equilibrium and Mechanism Design are the hardest questions for sonar-pro
-- Future work: use a fixed strong judge (e.g. Claude) to remove self-judging bias
+- **Self-judging bias**: each model judges its own answers, which inflates scores — GPT-5.5 and Gemini score near-perfect
+- **sonar-pro** shows the most spread (102/150), struggling on Mechanism Design and Dynamic Equilibrium (10/30 each)
+- **Next step**: use a fixed external judge (e.g. always use GPT-5.5 as judge for all models) for a fairer comparison
+- The benchmark does differentiate between models, validating its design
