@@ -36,16 +36,16 @@ IJSO is ★★ because we only have the protocol text — no lab equipment or re
 
 | Olympiad | Collected | Problem text | Gold solution text | **Q + solution pairs** (runnable) | Human score in JSON | Target |
 |----------|----------:|-------------:|-------------------:|----------------------------------:|--------------------:|-------:|
-| IOL Team Contest | 21 | 19 | 15 | **14** | 0 | 21 |
+| IOL Team Contest | 21 | 19 | 15 | **14** | **13** | 21 |
 | IOAA Group | 9 | 9 | 4 | **4** | 0 | 18 |
-| ARML Power | 15 | 15 | 11 | **11** | 0 | 30 |
-| IJSO Practical | 22 | 14 | 12 | **12** | 0 | 22 |
+| ARML Power | 15 | 15 | 11 | **11** | **9** | 30 |
+| IJSO Practical | 22 | 14 | 12 | **12** | **1** | 22 |
 | IEO Business Case | 5 | 5 | rubric only | 5 (rubric) | 1 | 30 |
-| **4 test olympiads** | **67** | **57** | **42** | **41** | 0 | ~91 max |
+| **4 test olympiads** | **67** | **57** | **42** | **41** | **23** | ~91 max |
 
 **Runnable** = `--with-gold` can run it (problem text + `gold_label.expected_answer` extracted from solution PDF).
 
-**Human baseline:** almost all per-problem fields are `null`. Competition-level human gold examples are in Table 2.
+**Human baseline:** published top-team scores in `gold_label.human_baseline` where available (see [Human baselines](#human-baselines-published)). IOAA has no point-based human score (time-ranked only).
 
 ### Gold-runnable problems (by olympiad)
 
@@ -74,9 +74,82 @@ IJSO is ★★ because we only have the protocol text — no lab equipment or re
 
 | Olympiad | Example |
 |----------|---------|
-| IOL | Taiwan 2025: 200.0/200 |
-| ARML Power | Top teams: 36–40/40 |
+| IOL | Taiwan 2025: 200.0/200 (see human baselines below) |
+| ARML Power | Top teams: 36–40/40 (see human baselines below) |
+| IJSO | Russia 2007: 39.4/40 practical gold |
 | IEO | Canada 2025: 92.5/100 overall |
+| IOAA | **Time-ranked only** — no /100 human baseline |
+
+---
+
+## IOAA Group — agent results vs real olympiad
+
+### How agents are doing
+
+| Run | Config | Scores |
+|-----|--------|--------|
+| Smoke | 2 agents, 2 rounds | 2025: **9/150** |
+| Gold batch | 5 agents, 2 rounds | 2014: **43/100**, 2015: **15/100**, 2021: **15/115**, 2025: **8/150** |
+
+Agents are scoring **~5–15%** of available marks (judge scale varies by year). That is expected: IOAA group tasks often require hands-on work, plots, and timed submission — none of which the text-only pipeline provides.
+
+### Real IOAA Group vs our pipeline
+
+| | **Real IOAA Group** | **Our benchmark** |
+|---|---------------------|-------------------|
+| **Team** | 5 students from **5 different countries** (random mix at venue) | 5 LLM agents (same model family) |
+| **Time** | **90 min** hard cap; **winner = fastest finish** after time penalties for wrong/missing answers | No time limit; async API calls over many minutes |
+| **Scoring** | Wall-clock time + penalties (e.g. +15 min for wrong Arecibo decode); **not points** | External LLM judge vs official marking scheme → **/100** (or problem max) |
+| **Materials** | Calculator, paper, constants table, geometry tools **provided on table** | Text problem only; no attachments (CSV, star charts, graph paper) |
+| **Equipment / media** | Often requires **radio telescope software**, **video on room screens** (e.g. 2023 Arecibo reply), plotting on **graph paper** | No telescope, no video, no plotting — agents answer from PDF text |
+| **Interaction** | One table, sealed envelope, proctor; no other teams | Multi-round written discussion → single synthesized answer |
+| **Internet** | Not allowed | Not used in pipeline (but agents lack physical kit anyway) |
+
+**Pipeline fit ★★★★** (not ★★★★★): problem text transfers well, but **time-based human scoring cannot be compared** to our point-based judge, and **lab/observation-heavy years (2025 radio telescope, 2021 HI CSV spectra)** are a poor match for a text-only agent.
+
+---
+
+## Human baselines (published)
+
+Populated in `gold_label.human_baseline` via `scripts/populate_human_baselines.py`. Sources: [ioling.org/results](https://ioling.org/results/), [arml.com power results](https://www.arml.com/ARML/arml_2019/page/index.php?page=5&page_type=public&show_page=power_results), [ijsoweb.org/past-results](http://www.ijsoweb.org/past-results).
+
+**IOL Team** (gold trophy score; max varies by year — compare cautiously to AI /100):
+
+| Year | Human gold |
+|------|------------|
+| 2008 | 85 (USA 2) |
+| 2009 | 2261 (USA Red; different scale) |
+| 2010 | 96 (Latvia) |
+| 2011 | 85 (USA Red) |
+| 2014 | 29 (USA Red) |
+| 2016 | 57 (Sweden) |
+| 2018 | 84.83 (USA Blue) |
+| 2019 | 113 (Slovenia) |
+| 2021 | 56.8 (Ukraine) |
+| 2022 | 68.1 (Korea Mal) |
+| 2023 | 256 (UK) |
+| 2024 | 85.5 (Czechia) |
+| 2025 | **200.0/200** (Taiwan Blue Magpie) |
+
+**ARML Power** (top team /40 per round):
+
+| Season | Human gold |
+|--------|------------|
+| Fall 2018 | 40/40 |
+| Fall 2019 | 40/40 |
+| Spring 2019 | 39/40 |
+| Fall 2020 | 40/40 |
+| Spring 2020 | 38/40 |
+| Fall 2021 | 40/40 |
+| Spring 2021 | 38/40 |
+| Fall 2024 | 37/40 |
+| Fall 2025 | 40/40 |
+
+Fall 2022–2023 and several spring seasons: results pages not yet parsed → still `null`.
+
+**IJSO Practical:** 2007 only so far — **39.4/40** (Russia, experimental gold). Most years need manual extraction from result booklets.
+
+**IOAA / IEO:** IOAA is time-ranked (no point baseline). IEO 2025: Canada **92.5/100** overall (already in JSON).
 
 ---
 
@@ -122,9 +195,18 @@ GPT-5.4-mini agents, Claude Sonnet 4.6 judge, real team sizes, `--with-gold`. Fi
 | Olympiad | Done | Total | Scores (Claude judge) |
 |----------|-----:|------:|-----------------------|
 | IOL Team | 4 | 14 | 2008: 27/100, 2009: 19/100, 2010: 86/100, 2011: 37/100 — **crashed on 2014** |
-| IOAA Group | 4 | 4 | 2014: 43/100, 2015: 15/100, 2021: 15/115, 2025: 8/150 |
+| IOAA Group | 4 | 4 | see [IOAA section](#ioaa-group--agent-results-vs-real-olympiad) |
 | ARML Power | 11 | 11 | see table below |
 | IJSO Practical | 12 | 12 | see table below |
+
+**IOAA Group** (5 agents, Claude judge):
+
+| Year | Score | Human baseline |
+|------|------:|----------------|
+| 2014 | 43/100 | time-ranked (no /100) |
+| 2015 | 15/100 | time-ranked (no /100) |
+| 2021 | 15/115 | time-ranked (no /100) |
+| 2025 | 8/150 | time-ranked (no /100) |
 
 **ARML Power** (12 agents, Claude judge /40):
 

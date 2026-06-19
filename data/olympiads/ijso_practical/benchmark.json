@@ -67,7 +67,7 @@
     "gold_label": {
       "expected_answer": null,
       "grading_rubric": null,
-      "human_baseline": null
+      "human_baseline": "39.4/40 (Russia, experimental gold, 4th IJSO 2007)"
     },
     "status": "collected"
   },
