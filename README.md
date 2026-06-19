@@ -5,7 +5,7 @@ Benchmark **multi-agent AI teams** on olympiad-style **team tasks** (not solo pa
 ## Current focus
 
 1. **IEO Business Case** (rubric-based pilot) — pipeline working, 5 agents, configurable rounds
-2. **5 test-based team olympiads** — IOL Team, IOAA Group, ARML Power, EUSO, IJSO Practical (up to 30 full problems each from multiple years, in progress)
+2. **4 test-based team olympiads** — IOL Team, IOAA Group, ARML Power, IJSO Practical (up to 30 full problems each from multiple years, in progress)
 
 See [`data/olympiads/README.md`](data/olympiads/README.md) for schemas, gold-score sources, and collection status.
 
@@ -33,7 +33,7 @@ agent_olympiad_econ/
 ├── run_experiment.py              # Legacy single-agent IEO open questions
 ├── scripts/scaffold_olympiad_slots.py
 ├── data/
-│   ├── olympiads/                 # 5 test olympiads + IEO business case
+│   ├── olympiads/                 # 4 test olympiads + IEO business case
 │   ├── raw/business_case/         # IEO PDFs 2021–2025
 │   └── processed/                 # Results JSON/MD
 ```

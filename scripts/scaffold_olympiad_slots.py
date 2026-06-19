@@ -43,10 +43,6 @@ SLOTS = {
     "ioaa_group": [
         (str(y), f"Group Competition {y}") for y in range(2007, 2025)
     ],
-    "euso": [
-        (str(2003 + (i // 2)), f"Experiment {(i % 2) + 1}")
-        for i in range(30)
-    ],
     "ijso_practical": [
         (str(2004 + i), f"Team Practical {2004 + i}") for i in range(30)
     ],
@@ -56,7 +52,6 @@ META = {
     "iol_team": ("International Linguistics Olympiad", "team_contest", 4, "https://ioling.org/problems/{year}/"),
     "arml_power": ("ARML Power Contest", "team_power", None, "https://www.arml.com/"),
     "ioaa_group": ("IOAA Group Competition", "team_contest", 5, "https://ioaastrophysics.org/"),
-    "euso": ("European Union Science Olympiad", "team_practical", 3, "http://euso.eu/"),
     "ijso_practical": ("IJSO Practical", "team_practical", 3, "https://ijsoweb.org/"),
 }
 

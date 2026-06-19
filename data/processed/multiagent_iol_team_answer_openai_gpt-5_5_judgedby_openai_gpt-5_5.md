@@ -907,22 +907,13 @@ By elimination and by analogy with the other sets, the undescribed emoji are:
 
 ## Score
 
-(a) Correspondences: 0/??  
-No correspondences were provided in the team’s final answer.
+The submitted “answer” contains no actual problem solution (only an API response object with an empty `output` field). Therefore there are no correspondences, matches, translations, or explanations to grade.
 
-(b1) Matching questions and answers: 0/??  
-No matches were provided.
-
-(b2) Translations: 0/??  
-No translations were provided.
-
-(c) Translations into English: 0/??  
-No translations were provided.
-
-(d) Translations into Xavante: 0/??  
-No translations were provided.
-
-The submitted “answer” contains only API metadata and no actual solution content. Therefore no credit can be awarded.
+- **(a) Xavante–Mẽbêngôkre correspondences:** 0 points — no correspondences provided.
+- **(b1) Matching questions and answers:** 0 points — no matches provided.
+- **(b2) Translations into English:** 0 points — no translations provided.
+- **(c) Translations into English:** 0 points — no translations provided.
+- **(d) Translations into Xavante:** 0 points — no translations provided.
 
 TOTAL: 0/100
 
@@ -930,7 +921,7 @@ TOTAL: 0/100
 
 ## Answer
 
-{'background': False, 'completed_at': 1781839161, 'created_at': 1781839161, 'error': None, 'frequency_penalty': 0, 'id': 'resp_db72e9d8-55b1-4c52-9a16-f1c14a430fed', 'incomplete_details': None, 'instructions': None, 'max_output_tokens': 8192, 'max_tool_calls': None, 'metadata': {}, 'model': 'openai/gpt-5.5', 'object': 'response', 'output': [], 'parallel_tool_calls': True, 'presence_penalty': 0, 'previous_response_id': None, 'prompt_cache_key': None, 'reasoning': None, 'safety_identifier': None, 'service_tier': 'default', 'status': 'completed', 'store': True, 'temperature': 1, 'text': {'format': {'type': 'text'}}, 'tool_choice': 'auto', 'tools': [], 'top_logprobs': 0, 'top_p': 1, 'truncation': '', 'usage': {'cost': {'currency': 'USD', 'input_cost': 0.04862, 'output_cost': 0.24576, 'total_cost': 0.29438}, 'input_tokens': 9725, 'input_tokens_details': {'cached_tokens': 0}, 'output_tokens': 8192, 'output_tokens_details': {'reasoning_tokens': 8192}, 'total_tokens': 17917}, 'user': None}
+{'background': False, 'completed_at': 1781885373, 'created_at': 1781885373, 'error': None, 'frequency_penalty': 0, 'id': 'resp_24328ec3-7cc7-42bc-87f8-faa6e0136bee', 'incomplete_details': None, 'instructions': None, 'max_output_tokens': 8192, 'max_tool_calls': None, 'metadata': {}, 'model': 'openai/gpt-5.5', 'object': 'response', 'output': [], 'parallel_tool_calls': True, 'presence_penalty': 0, 'previous_response_id': None, 'prompt_cache_key': None, 'reasoning': None, 'safety_identifier': None, 'service_tier': 'default', 'status': 'completed', 'store': True, 'temperature': 1, 'text': {'format': {'type': 'text'}}, 'tool_choice': 'auto', 'tools': [], 'top_logprobs': 0, 'top_p': 1, 'truncation': '', 'usage': {'cost': {'currency': 'USD', 'input_cost': 0.04894, 'output_cost': 0.24576, 'total_cost': 0.2947}, 'input_tokens': 9787, 'input_tokens_details': {'cached_tokens': 0}, 'output_tokens': 8192, 'output_tokens_details': {'reasoning_tokens': 8192}, 'total_tokens': 17979}, 'user': None}
 # iol_team_2019 — Team Contest — Rhythmic Gymnastics
 
 **Agents:** openai/gpt-5.5  
@@ -1053,29 +1044,259 @@ The symbolic notations/images needed for gaps **49–56** are not present in the
 
 ## Score
 
-(a): 0 pts — No answers provided for the marked items 39–62.
+(a) **24/24**  
+All marked sentence correspondences 39–62 match the official solution exactly.
 
-(b): 0 pts — No translations provided.
+(b) **12.5/16**  
+Most translations are correct. Main losses:  
+- **Háluaha háfuridun óuchaha haruga** mistranslated: should be “They’re trying to go out and fish tomorrow,” not “come back from fishing.”  
+- **Ariha hamutina súdara** reversed subject/object: should be “The police saw me.”  
+- **¿Ka abu ludin?** should be “With whom did he come?”  
+- **¿Ka biribai?** should be “What is your name?”  
+Several other answers are acceptable with minor wording differences.
 
-(c): 0 pts — No Garífuna translations provided.
+(c) **7.5/12**  
+Some forms are correct or close, but several have important grammatical errors:  
+- **liri** was needed instead of **tiri** for “your father’s name” and “this man’s name.”  
+- Negative “see” forms are not quite correct.  
+- **bumutina** was needed for “you killed me,” not **bamutina**.  
+- Final sentence should use **póupoutu le** and the correct negative seeing form.  
+“This broom is ours” is correct.
 
-(d): 0 pts — No Lokono correspondences or sound change provided.
+(d) **9.6/12**  
+Most Lokono correspondences are correct, but **dike** and **donkon** were swapped:  
+- official: **dike = ear**, **donkon = to sleep**.  
+The sound change is also wrong: official answer is **m > n**, not **r > d**.
 
-(e): 0 pts — No table entries filled.
+(e) **3/14**  
+This section is largely incomplete. Some isolated correspondences are correct, e.g. **wügüri/wokory = man**, **bui/amoro = yousg**, **kodibio/tonoro/dunuru = bird**, **horhorho = earth**, **bubada = your nail/claw**, **lígiri/lushiri = his nose**.  
+However, most required table cells are missing, and several proposed correspondences are wrong, e.g. **woryi** is “woman,” not “man”; **gimara** is “arrow,” not “moon”; **núgudi/nǘgüra** are not “my liver/liver.”
 
-(f): 0 pts — No correspondences or translations provided.
+(f) **12/14**  
+Part (i) is completely correct.  
+Part (ii): 14 and 15 are correct; 16 is wrong — official: “The stones are on the ground.”  
+Part (iii): grammar is mostly right, but **wokory** is Kari’ña, not Lokono; Lokono “man” is **wadili**. Also **Wamithadafa** and **Nashimakafa** were required, not the submitted forms.
 
-(g): 0 pts — No vocabulary translations provided.
+(g) **7.5/8**  
+Very strong vocabulary list. Nearly all are correct. Main issues:  
+- **áluaha** should be “to look for,” not “come/arrive.”  
+- **ayawa = to cry** was omitted.  
+- **uagu** should be “for” in the official list; “about/on” is only partially acceptable.
 
-The submitted “answer” consists only of API metadata and contains no actual solution content, so no credit can be awarded.
-
-TOTAL: 0/100
+**TOTAL: 76/100**
 
 ---
 
 ## Answer
 
-{'background': False, 'completed_at': 1781842548, 'created_at': 1781842548, 'error': None, 'frequency_penalty': 0, 'id': 'resp_b382ec1c-71f2-48bd-a105-448e239563ae', 'incomplete_details': None, 'instructions': None, 'max_output_tokens': 8192, 'max_tool_calls': None, 'metadata': {}, 'model': 'openai/gpt-5.5', 'object': 'response', 'output': [], 'parallel_tool_calls': True, 'presence_penalty': 0, 'previous_response_id': None, 'prompt_cache_key': None, 'reasoning': None, 'safety_identifier': None, 'service_tier': 'default', 'status': 'completed', 'store': True, 'temperature': 1, 'text': {'format': {'type': 'text'}}, 'tool_choice': 'auto', 'tools': [], 'top_logprobs': 0, 'top_p': 1, 'truncation': '', 'usage': {'cost': {'currency': 'USD', 'input_cost': 0.09496, 'output_cost': 0.24576, 'total_cost': 0.34072}, 'input_tokens': 18992, 'input_tokens_details': {'cached_tokens': 0}, 'output_tokens': 8192, 'output_tokens_details': {'reasoning_tokens': 8192}, 'total_tokens': 27184}, 'user': None}
+## (a)
+
+39. **A Y**  
+40. **J**  
+41. **I**  
+42. **A O**  
+43. **Q**  
+44. **T**  
+45. **H**  
+46. **G**  
+47. **B D**  
+48. **B E**  
+49. **R**  
+50. **Y**  
+51. **A G**  
+52. **A P**  
+53. **B J**  
+54. **X**  
+55. **M**  
+56. **A D**  
+57. **U**  
+58. **Z**  
+59. **A E**  
+60. **A A**  
+61. **A B**  
+62. **K**
+
+---
+
+## (b)
+
+- **Ariengatu núguchu nun nabuidunu muna.** — My mother told me to sweep the house.  
+- **Hísieti uwi lun.** — He likes meat.  
+- **Nani guríara to.** — This boat is mine.  
+- **¿Ka babuserubai?** — What do you want?  
+- **Ibidieti nun átirila irumu tau.** — I don’t know how old she is.  
+- **Yumbuitibu hamuga anhabu giara.** — You would come if you could.  
+- **Áfarati búguchi aban ounli.** — Your father killed a dog.  
+- **Háluaha háfuridun óuchaha haruga.** — They will come back from fishing tomorrow.  
+- **Nidin aríahai úduraü.** — I went to look for fish.  
+- **Nuguya mabuseruntina nuádigimari.** — I myself do not like/want my work.  
+- **¿Ka tiri lani señora?** — What is his wife’s name?  
+- **Ariha hamutina súdara.** — I see the policemen/soldiers.  
+- **¿Ka abu ludin?** — What did he go/leave with?  
+- **¿Ka biribai?** — What did you see?  
+- **Wagía madüguntiwa guríara.** — We did not make a boat.  
+- **Máfaru numutu hiñaru to.** — I did not kill this woman.
+
+---
+
+## (c)
+
+- I don’t know your father’s name.  
+  **Ibidieti tiri búguchi nun.**
+
+- They don’t see this place.  
+  **Marihatiñu fulasu le.**
+
+- Youpl don’t know this man’s name.  
+  **Ibidieti tiri eyeri le hun.**
+
+- This broom is ours.  
+  **Wani abuidagülei le.**
+
+- You didn’t kill me.  
+  **Máfaru bamutina.**
+
+- We don’t see this boat.  
+  **Marihatiwa guríara to.**
+
+---
+
+## (d)
+
+### i.
+
+- **aba** — one  
+- **biama / bian** — two  
+- **bui** — yousg  
+- **dike** — to sleep  
+- **diki** — after  
+- **donkon** — ear  
+- **dukhun** — to see  
+- **duna** — arm  
+- **farun** — to kill  
+- **hiyaro** — woman  
+- **khabo** — hand  
+- **kuthu** — granny  
+- **lira** — that one, masc.  
+- **tora** — that one, fem.
+
+### ii.
+
+Earlier Lokono had **\*r**, which changed to **d** in modern Lokono.
+
+---
+
+## (e)
+
+Confident filled cells / correspondences:
+
+- **wokory** — man  
+- **woryi** — man  
+- **wügüri** — man  
+- **bui** — yousg  
+- **amoro** — yousg  
+- **kodibio** — bird  
+- **tonoro** — bird  
+- **dunuru** — bird  
+- **horhorho** — earth / landform  
+- **bubada** — your nail/claw  
+- **gimara** — moon  
+- **núgudi / nǘgüra** — my liver / liver  
+- **lushiri / lígiri** — his nose  
+- **duna** — arm  
+- **khabo** — hand  
+- **kuthu** — granny  
+
+---
+
+## (f)
+
+### i.
+
+1. **B**  
+2. **A**  
+3. **J**  
+4. **M**  
+5. **E**  
+6. **G**  
+7. **F**  
+8. **C**  
+9. **I**  
+10. **L**  
+11. **H**  
+12. **K**  
+13. **D**
+
+### ii.
+
+14. **Lufarufa aba kabadaro tora hiyaro oma.**  
+He will kill a jaguar with that woman.
+
+15. **Hushimaku we.**  
+Youpl called us.
+
+16. **Horhorho diakoka to shibabe.**  
+The landform is on top of the stone.
+
+### iii.
+
+N. The man will listen.  
+**Li wokory kanabafa.**
+
+O. We will laugh.  
+**Wamithadufa.**
+
+P. They will scream.  
+**Nashimakufa.**
+
+Q. There are three men here.  
+**Kabun wokorynon yâka.**
+
+---
+
+## (g)
+
+- **abu** — with  
+- **ábuna** — sow, plant  
+- **achülüra** — arrive  
+- **adeira** — find  
+- **adüga** — do, make, work  
+- **adumureha** — talk, speak  
+- **adura** — shoot  
+- **áfara** — kill  
+- **afeidira** — lose  
+- **áfurida** — go out, leave  
+- **áluaha** — come, arrive  
+- **aluguraha** — sell  
+- **anhein** — if, when  
+- **anihein** — there is/are; have  
+- **anura** — flee  
+- **ariha** — see  
+- **ariñaha** — tell, say, ask  
+- **arüna** — arm  
+- **ásura** — finish  
+- **áwaha** — call  
+- **bugía / buguya** — yousg  
+- **ebelura** — enter  
+- **eifi** — beans  
+- **eiga** — eat  
+- **hagía** — they  
+- **halaü** — chair  
+- **íchiga** — give  
+- **irumu** — year  
+- **ladüga** — because; doing/making  
+- **ligía** — he, that one  
+- **nugía / nuguya** — I  
+- **ou(n)we** — die  
+- **súdara** — soldier, police  
+- **sun** — all, every  
+- **tugía / tuguya** — she, that one fem.  
+- **uagu** — about, concerning, on  
+- **úduraü** — fish  
+- **umadaü** — friend  
+- **un / lun** — to, for  
+- **wagía** — we  
+- **ya** — here, there
 # iol_team_2022 — Team Contest — Manchu
 
 **Agents:** openai/gpt-5.5  
@@ -1193,20 +1414,22 @@ TOTAL: **96/100**
 
 ## Score
 
-(a) **0 points** — The team provided no Murrinh-patha–English matches. The statement that the task “cannot be determined” is not an answer to the matching task and does not match the official solution.
+(a): 0 points.  
+The team provided no Murrinh-patha–English matches, instead saying the task could not be determined. This does not correspond to any of the official matching answers.
 
-(b) **0 points** — Official answer: **60-T-54 = fruit, vegetable, etc. noun class**.  
-The team’s answer “to chance upon, to come across accidentally” is incorrect.
+(b): 0 points.  
+Official answer: **60-T-54 = fruit, vegetable, etc. noun class**.  
+Team answer: “to chance upon; to come across,” which is incorrect.
 
-**TOTAL: 0/100**
+TOTAL: 0/100
 
 ---
 
 ## Answer
 
-(a) Cannot be determined from the supplied material: the numbered Murrinh-patha dictionary entries/images are absent, so the English translation lists alone cannot be matched to entries.
+(a) Cannot be determined from the supplied material: the actual Murrinh-patha entries/headwords are missing, and the English translations are given in arbitrary order.
 
-(b) **60-T-54 = to chance upon, to come across accidentally**.
+(b) 60-T-54 = to chance upon; to come across.
 # iol_team_2025 — Team Contest — Camling and Bantawa
 
 **Agents:** openai/gpt-5.5  

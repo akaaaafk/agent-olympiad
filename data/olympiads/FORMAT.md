@@ -2,23 +2,23 @@
 
 How each competition format maps to our multi-agent benchmark pipeline.
 
-**Five test-based olympiads** (OlympiadMAS) + **IEO Business Case** (rubric pilot).
+**Four test-based olympiads** (OlympiadMAS) + **IEO Business Case** (rubric pilot).
 
 ---
 
 ## Master comparison
 
-| | **IOL Team** | **IOAA Group** | **ARML Power** | **EUSO** | **IJSO Practical** | **IEO Business Case** |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Type** | Test | Test | Test | Test | Test | Rubric |
-| **Team size** | 4 | 5 | 10–15 (typical) | 3 | 3 | 5 |
-| **Time limit** | 4 hours | 90 min | 45 min | 4 hours / task | 3–4 hours | ~24 h prep + presentation |
-| **Internet / external tools** | **No** | **No** | **No** | **No** | **No** | **Yes** |
-| **Deliverable** | Answer sheet | Answer sheet | Proof / computation sheet | Lab report | Lab report | Slides / report |
-| **Human score out of** | **Varies by year** (problem-set max) | **Time** (not points) | **40** | **100** (as %) | **40** | **50** raw BC; **100** overall IEO |
-| **AI judge out of** | **100** | **100** | **40** | **100** | **40** | **50** |
-| **Gold label (AI judge)** | Official solution PDF | Marking scheme PDF | Solution PDF | Model answers PDF | Marking scheme PDF | Grading rubric |
-| **Human gold (best published)** | See table below | See table below | See table below | See table below | See table below | See table below |
+| | **IOL Team** | **IOAA Group** | **ARML Power** | **IJSO Practical** | **IEO Business Case** |
+|---|:---:|:---:|:---:|:---:|:---:|
+| **Type** | Test | Test | Test | Test | Rubric |
+| **Team size** | 4 | 5 | 10–15 (typical) | 3 | 5 |
+| **Time limit** | 4 hours | 90 min | 45 min | 3–4 hours | ~24 h prep + presentation |
+| **Internet / external tools** | **No** | **No** | **No** | **No** | **Yes** |
+| **Deliverable** | Answer sheet | Answer sheet | Proof / computation sheet | Lab report | Slides / report |
+| **Human score out of** | **Varies by year** (problem-set max) | **Time** (not points) | **40** | **40** | **50** raw BC; **100** overall IEO |
+| **AI judge out of** | **100** | **100** | **40** | **40** | **50** |
+| **Gold label (AI judge)** | Official solution PDF | Marking scheme PDF | Solution PDF | Marking scheme PDF | Grading rubric |
+| **Human gold (best published)** | See table below | See table below | See table below | See table below | See table below |
 
 \*IOAA Group Competition is won by **shortest total time** after penalties, not a fixed point total. Our pipeline still judges AI answers out of **100** for comparability.
 
@@ -31,7 +31,6 @@ How each competition format maps to our multi-agent benchmark pipeline.
 | **IOL Team** | **Varies** — e.g. 200.0/200 (2025), 68.1/? (2022); not always /100 | **/100** | Problem-set max changes each year. Judge normalizes to /100. |
 | **IOAA Group** | **Time + penalties** (90 min cap); winner = fastest | **/100** | No official /100 human score; we use /100 for AI only. |
 | **ARML Power** | **/40** per season | **/40** | 40 pts = sum of sub-problem weights on answer sheet. |
-| **EUSO** | **/100** reported as **%** (e.g. 97.5%) | **/100** | Two experiments per year; each ~4 h. |
 | **IJSO Practical** | **/40** (team score shared by all 3 members) | **/40** | Practical = 40% of individual total (MCQ 30 + Theory 30 + Practical 40). |
 | **IEO Business Case** | **/50** raw (4 rubric dims × 12.5); overall IEO **/100** after normalization | **/50** | 2025 winner Canada **92.5/100** = overall IEO raw, not BC-only. |
 
@@ -46,7 +45,6 @@ These are **human baselines** for comparison with AI runs — not the same as of
 | **IOL Team** | Varies (e.g. **/200** in 2025) | **200.0/200** — Taiwan Blue Magpie (2025); **68.1/?** Korea Mal (2022) | **/100** | Max depends on problem set. [Results 2025](https://ioling.org/results/2025/) |
 | **IOAA Group** | Time-ranked | Fastest team wins (no /100) | **/100** | 90 min cap. [2023 instructions](https://cdn.ioaastrophysics.org/assets/IOAA%20problems/16th%20IOAA%202023/Group%20Competition%202023%20IOAA.pdf) |
 | **ARML Power** | **/40** | Top teams **36–40/40**; perfect 40 possible | **/40** | [ARML Power](https://www.arml.com/ARML/arml_2019/page/index.php?page=5&page_type=public) |
-| **EUSO / EOES** | **/100** (%) | **97.5/100** — Germany (2004); **80/100** — UK (2003) | **/100** | [EUSO history](http://euso.eu/history-of-euso/) |
 | **IJSO Practical** | **/40** | Gold team = highest **/40** that year (~30–40) | **/40** | [IJSO statutes](http://www.ijsoweb.org/qna/Statutes20140324.pdf) |
 | **IEO Business Case** | **/50** BC raw; **/100** overall | **92.5/100** overall — Canada (2025 winner) | **/50** | BC = 4 dims × 12.5. [2025 results](https://2025.ieo-official.org/results) |
 
@@ -120,29 +118,7 @@ python3 run_multiagent_experiment.py agent:openai/gpt-5.5 answer \
 
 ---
 
-## 4. EUSO / EOES (European Olympiad of Experimental Science)
-
-| Setting | Real competition | Our benchmark |
-|---------|------------------|---------------|
-| **Type** | Test-based (integrated lab experiment) | `task_type: team_practical`, format `answer` |
-| **Team size** | 3 students (2 teams per country) | 3 agents |
-| **Duration** | **4 hours** per experiment (2 experiments over 2 days) | Not enforced |
-| **External tools** | **Not allowed** — lab equipment and materials provided; no formula sheets | **Not allowed** in pipeline |
-| **Collaboration** | Team divides lab work; one joint report | Multi-round discussion |
-| **Deliverable** | Written experimental report + answer sheets | `final_answer` |
-| **Grading** | Marking scheme / model answers (Waxmann book 2008–2012; euso.eu 2003–2017) | Judge vs `expected_answer` |
-| **Human gold** | Winning team **~80–97.5%** (year-dependent) | `human_baseline`: null |
-
-**Sources:** [euso.eu experiments](http://euso.eu/about/experiments/), [EOES](https://www.eoes.science/)
-
-```bash
-python3 run_multiagent_experiment.py agent:openai/gpt-5.5 answer \
-  --olympiad euso --with-gold --rounds 3
-```
-
----
-
-## 5. IJSO Practical (Team Experiment)
+## 4. IJSO Practical (Team Experiment)
 
 | Setting | Real competition | Our benchmark |
 |---------|------------------|---------------|
@@ -164,7 +140,7 @@ python3 run_multiagent_experiment.py agent:openai/gpt-5.5 answer \
 
 ---
 
-## 6. IEO Business Case (rubric pilot)
+## 5. IEO Business Case (rubric pilot)
 
 | Setting | Real competition | Our benchmark |
 |---------|------------------|---------------|
@@ -197,7 +173,7 @@ python3 run_multiagent_experiment.py agent:openai/gpt-5.5 agent:openai/gpt-5.5 s
 
 ## Pipeline settings (all olympiads)
 
-| Setting | Test-based (5 olympiads) | IEO Business Case |
+| Setting | Test-based (4 olympiads) | IEO Business Case |
 |---------|--------------------------|-------------------|
 | API | Perplexity `POST /v1/agent` | Same |
 | Tools | **None** | **None** (should add web search to match real rules) |
@@ -210,7 +186,7 @@ python3 run_multiagent_experiment.py agent:openai/gpt-5.5 agent:openai/gpt-5.5 s
 ## Alignment gaps
 
 1. **IOL / IOAA / IJSO:** PDF text extraction drops images and diagrams.
-2. **EUSO / IJSO:** Benchmark collection not yet complete (0 problems filled).
+2. **IJSO Practical:** Lab tasks are text-only in the pipeline (no actual lab equipment).
 3. **IEO Business Case:** Web search not enabled — biggest mismatch with real competition.
 4. **Human baselines:** Mostly `null` in benchmark JSON — need per-year extraction from results pages.
 5. **Time limits:** Not enforced in API runs (4 h, 90 min, 45 min, 24 h).

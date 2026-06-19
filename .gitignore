@@ -8,3 +8,6 @@ data/raw/
 
 # Run logs (results JSON/MD are kept)
 data/processed/*.log
+
+# Local meeting notes — not for GitHub
+MEETING_BRIEF.md

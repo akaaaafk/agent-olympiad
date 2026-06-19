@@ -1,5 +1,5 @@
 {
-  "description": "OlympiadMAS \u2014 5 test-based multi-agent olympiads (+ IEO Business Case rubric-based pilot)",
+  "description": "OlympiadMAS — 4 test-based multi-agent olympiads (+ IEO Business Case rubric-based pilot)",
   "target_per_olympiad": 30,
   "note_on_30": "Collect one full published team task per slot (internal sub-parts stay together). Combine across years/contests to reach 30 where history allows; some olympiads have fewer than 30 available.",
   "olympiads": [
@@ -101,26 +101,6 @@
       "status": "partial",
       "slots_scaffolded": 30,
       "gold_solutions": 11
-    },
-    {
-      "id": "euso",
-      "name": "European Union Science Olympiad (EUSO/EOES)",
-      "type": "test_based",
-      "team_size": 3,
-      "benchmark_path": "data/olympiads/euso/benchmark.json",
-      "problems_collected": 14,
-      "target": 30,
-      "human_score_out_of": 100,
-      "ai_judge_out_of": 100,
-      "source_url": "http://euso.eu/",
-      "gold_scores": {
-        "available": "partial",
-        "notes": "Human scores as %. Top e.g. 97.5/100 (Germany 2004). Marking schemes need manual collection."
-      },
-      "collection_strategy": "One full team experiment per slot; 2 experiments/year \u00d7 15 years (2003\u20132017)",
-      "status": "partial",
-      "slots_scaffolded": 30,
-      "gold_solutions": 0
     }
   ]
 }
