@@ -27,6 +27,36 @@ ENTRIES = [
     (2004, 2, "Luminescence and Plastic LDSs", [
         ("http://euso.eu/wp-content/uploads/EUSO_I_2004_TaskB.pdf", "task.pdf"),
     ]),
+    (2005, 1, "Water Quality", [
+        ("http://euso.eu/wp-content/uploads/EUSO_I_2005_TaskA.pdf", "task.pdf"),
+    ]),
+    (2005, 2, "Salinity and Mussel Physiology", [
+        ("http://euso.eu/wp-content/uploads/EUSO_I_2005_TaskB.pdf", "task.pdf"),
+    ]),
+    (2007, 1, "All About the Potato", [
+        ("http://euso.eu/wp-content/uploads/EUSO_I_2007_TaskA.pdf", "task.pdf"),
+    ]),
+    (2007, 2, "All about Starch", [
+        ("http://euso.eu/wp-content/uploads/EUSO_I_2007_TaskB.pdf", "task.pdf"),
+    ]),
+    (2008, 1, "Energy from Light", [
+        ("http://euso.eu/wp-content/uploads/EUSO_I_2008_TaskA.pdf", "task.pdf"),
+    ]),
+    (2008, 2, "Light Energy", [
+        ("http://euso.eu/wp-content/uploads/EUSO_I_2008_TaskB.pdf", "task.pdf"),
+    ]),
+    (2009, 1, "Fibres", [
+        ("http://euso.eu/wp-content/uploads/EUSO_I_2009_TaskA.pdf", "task.pdf"),
+    ]),
+    (2009, 2, "Fruit, Juices and Food", [
+        ("http://euso.eu/wp-content/uploads/EUSO_I_2009_TaskB.pdf", "task.pdf"),
+    ]),
+    (2010, 1, "Water", [
+        ("http://euso.eu/wp-content/uploads/EUSO_I_2010_TaskA.pdf", "task.pdf"),
+    ]),
+    (2010, 2, "CSI Sweden", [
+        ("http://euso.eu/wp-content/uploads/EUSO_I_2010_TaskB.pdf", "task.pdf"),
+    ]),
     (2006, 1, "CSI Brussels", [
         ("http://www.vob-ond.be/Olympiades/EUSO2006/TEST1.pdf", "task.pdf"),
     ]),
@@ -40,23 +70,23 @@ ENTRIES = [
         ("http://black-hole.cz/euso2011/P2Tasks.pdf", "task.pdf"),
     ]),
     (2012, 1, "Amber", [
-        ("http://www.euso2012.lt/wp-content/uploads/2012/05/EUSO2012-experiment-no-1.pdf", "task.pdf"),
-        ("http://www.euso2012.lt/wp-content/uploads/2012/05/EUSO2012-task1-key.pdf", "key.pdf"),
+        ("https://www.euso2012.lt/wp-content/uploads/2012/05/EUSO2012-experiment-no-1.pdf", "task.pdf"),
+        ("https://www.euso2012.lt/wp-content/uploads/2012/05/EUSO2012-task1-key.pdf", "key.pdf"),
     ]),
     (2012, 2, "Space Exploration", [
-        ("http://www.euso2012.lt/wp-content/uploads/2012/05/EUSO-2012-experiment-2-tasks.pdf", "task.pdf"),
+        ("https://www.euso2012.lt/wp-content/uploads/2012/05/EUSO-2012-experiment-2-tasks.pdf", "task.pdf"),
     ]),
     (2013, 1, "Silicon From Nature to Hi-Tec", [
-        ("http://www.euso2013.lu/resources/site1/General/EUSO%202013%20_%20TEST%201_TASK.pdf", "task.pdf"),
+        ("https://www.euso2013.lu/resources/site1/General/EUSO%202013%20_%20TEST%201_TASK.pdf", "task.pdf"),
     ]),
     (2013, 2, "Renewable Energy", [
-        ("http://www.euso2013.lu/resources/site1/General/EUSO%202013%20TEST%202%20TASK%202.pdf", "task.pdf"),
+        ("https://www.euso2013.lu/resources/site1/General/EUSO%202013%20TEST%202%20TASK%202.pdf", "task.pdf"),
     ]),
     (2014, 1, "Olive Oil", [
-        ("http://www.euso2014.eu/downloads/euso2014_Task_A.pdf", "task.pdf"),
+        ("https://www.euso2014.eu/downloads/euso2014_Task_A.pdf", "task.pdf"),
     ]),
     (2014, 2, "Sea Water", [
-        ("http://www.euso2014.eu/downloads/euso2014_Task_B.pdf", "task.pdf"),
+        ("https://www.euso2014.eu/downloads/euso2014_Task_B.pdf", "task.pdf"),
     ]),
     (2015, 1, "Blowing in the Wind", [
         ("http://euso.eu/wp-content/uploads/ExpBlowingintheWind.pdf", "task.pdf"),
@@ -68,7 +98,7 @@ ENTRIES = [
         ("http://www.euso.at/euso/uploads/tasks/tasksheet1.pdf", "task.pdf"),
     ]),
     (2016, 2, "Battery Day", [
-        ("http://www.euso.at/euso/uploads/tasks/tasksheet2.pdf", "task.pdf"),
+        ("http://www.euso.at/euso/uploads/tasks/additionalfileschallenge1.pdf", "task2.pdf"),
     ]),
     (2017, 1, "ICE", [
         ("http://euso.eu/wp-content/uploads/Task_1_ICE.pdf", "task.pdf"),

@@ -15,6 +15,8 @@ BENCHMARK_PATH = os.path.join(ROOT, "data", "olympiads", "ijso_practical", "benc
 
 # One full team practical per year: (year, prob_url, prob_name, sol_urls...)
 ENTRIES = [
+    (2007, "https://ijsoweb.org/qna/expt-2007.pdf", "questions.pdf", []),
+    (2008, "https://ijsoweb.org/qna/expt-2008.pdf", "questions.pdf", []),
     (2009, "https://ijsoweb.org/qna/expt-2009.pdf", "questions.pdf",
      [("https://ijsoweb.org/qna/expt-2009-soln.pdf", "solutions.pdf")]),
     (2010, "https://ijsoweb.org/qna/expt-2010.pdf", "questions.pdf",
@@ -30,8 +32,8 @@ ENTRIES = [
       ("https://ijsoweb.org/qna/IJSO_2013_Experiment_TaskC_Solutions.pdf", "taskC-sol.pdf")]),
     (2014, "https://ijsoweb.org/qna2014/ijso2014_experimental_questions.pdf", "questions.pdf",
      [("https://ijsoweb.org/qna2014/experiment-answers-2014.pdf", "solutions.pdf")]),
-    (2015, "https://ijsoweb.org/qna2015/Experiment-questions.pdf", "questions.pdf",
-     [("https://ijsoweb.org/qna2015/Experiment-solutions.pdf", "solutions.pdf")]),
+    (2015, "https://ijsoweb.org/qna2015/IJSO2015-Experiment-Questions.pdf", "questions.pdf",
+     [("https://ijsoweb.org/qna2015/IJSO2015-Experiment-Solutions.pdf", "solutions.pdf")]),
     (2016, "https://ijsoweb.org/qna2016/Experiment/Exam_Sheet_Experimental_Final_INDIA.pdf", "questions.pdf",
      [("https://ijsoweb.org/qna2016/Experiment/Grading_Experiment_Biology.pdf", "bio-grade.pdf"),
       ("https://ijsoweb.org/qna2016/Experiment/Grading_Experiment_Chemistry.pdf", "chem-grade.pdf"),
@@ -136,6 +138,7 @@ def main():
         print(f"  ok — prob={len(entry['problem_description'])} sol={len(entry['gold_label'].get('expected_answer') or '')}")
 
     entries = sorted(existing.values(), key=lambda e: (e.get("year") or 0, e["problem_id"]))
+    entries = [e for e in entries if (e.get("year") or 0) <= 2025]
     with open(BENCHMARK_PATH, "w") as f:
         json.dump(entries, f, indent=2)
     filled = sum(1 for e in entries if e.get("problem_description"))

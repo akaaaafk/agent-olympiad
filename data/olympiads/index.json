@@ -1,11 +1,11 @@
 {
-  "description": "OlympiadMAS — 5 test-based multi-agent olympiads (+ IEO Business Case rubric-based pilot)",
+  "description": "OlympiadMAS \u2014 5 test-based multi-agent olympiads (+ IEO Business Case rubric-based pilot)",
   "target_per_olympiad": 30,
   "note_on_30": "Collect one full published team task per slot (internal sub-parts stay together). Combine across years/contests to reach 30 where history allows; some olympiads have fewer than 30 available.",
   "olympiads": [
     {
       "id": "ijso_practical",
-      "name": "International Junior Science Olympiad — Practical (Team)",
+      "name": "International Junior Science Olympiad \u2014 Practical (Team)",
       "type": "test_based",
       "team_size": 3,
       "benchmark_path": "data/olympiads/ijso_practical/benchmark.json",
@@ -25,7 +25,7 @@
     },
     {
       "id": "ieo_business_case",
-      "name": "International Economics Olympiad — Business Case",
+      "name": "International Economics Olympiad \u2014 Business Case",
       "type": "rubric_based",
       "team_size": 5,
       "benchmark_path": "data/olympiads/ieo_business_case/benchmark.json",
@@ -39,16 +39,16 @@
         "notes": "2025 winner Canada 92.5/100 overall raw. https://2025.ieo-official.org/results",
         "human_baseline_2025_winner": "Canada 92.5/100 overall"
       },
-      "collection_strategy": "One full business case per IEO year (2021–2025 available so far)",
+      "collection_strategy": "One full business case per IEO year (2021\u20132025 available so far)",
       "status": "pipeline_working"
     },
     {
       "id": "iol_team",
-      "name": "International Linguistics Olympiad — Team Contest",
+      "name": "International Linguistics Olympiad \u2014 Team Contest",
       "type": "test_based",
       "team_size": 4,
       "benchmark_path": "data/olympiads/iol_team/benchmark.json",
-      "problems_collected": 18,
+      "problems_collected": 21,
       "target": 21,
       "human_score_out_of": "varies by year",
       "ai_judge_out_of": 100,
@@ -57,14 +57,14 @@
         "available": "partial",
         "notes": "Solutions PDF per year. Human gold e.g. 200.0/200 (2025 Taiwan)."
       },
-      "collection_strategy": "One full team contest per year; 2003–2025",
+      "collection_strategy": "One full team contest per year; 2003\u20132025",
       "status": "collected",
       "slots_scaffolded": 21,
       "gold_solutions": 15
     },
     {
       "id": "ioaa_group",
-      "name": "International Olympiad on Astronomy and Astrophysics — Group Competition",
+      "name": "International Olympiad on Astronomy and Astrophysics \u2014 Group Competition",
       "type": "test_based",
       "team_size": 5,
       "benchmark_path": "data/olympiads/ioaa_group/benchmark.json",
@@ -77,7 +77,7 @@
         "available": "partial",
         "notes": "Marking schemes in solution PDFs. Winner = fastest team."
       },
-      "collection_strategy": "One full group competition per IOAA edition (2007–2024)",
+      "collection_strategy": "One full group competition per IOAA edition (2007\u20132024)",
       "status": "partial",
       "slots_scaffolded": 18,
       "gold_solutions": 4
@@ -95,7 +95,7 @@
       "source_url": "https://www.arml.com/ARML/arml_2019/page/index.php?page=5&page_type=public&show_page=samples",
       "gold_scores": {
         "available": true,
-        "notes": "Solution PDFs published each season. Top teams 36–40/40."
+        "notes": "Solution PDFs published each season. Top teams 36\u201340/40."
       },
       "collection_strategy": "One full power round per contest season (~2/year since 1994)",
       "status": "partial",
@@ -117,7 +117,7 @@
         "available": "partial",
         "notes": "Human scores as %. Top e.g. 97.5/100 (Germany 2004). Marking schemes need manual collection."
       },
-      "collection_strategy": "One full team experiment per slot; 2 experiments/year × 15 years (2003–2017)",
+      "collection_strategy": "One full team experiment per slot; 2 experiments/year \u00d7 15 years (2003\u20132017)",
       "status": "partial",
       "slots_scaffolded": 30,
       "gold_solutions": 0
