@@ -29,7 +29,7 @@
       "type": "rubric_based",
       "team_size": 5,
       "benchmark_path": "data/olympiads/ieo_business_case/benchmark.json",
-      "problems_collected": 1,
+      "problems_collected": 5,
       "target": 30,
       "human_score_out_of": "50 BC raw; 100 overall",
       "ai_judge_out_of": 50,

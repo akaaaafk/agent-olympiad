@@ -13,7 +13,7 @@ Five **test-based** team olympiads (OlympiadMAS) + **IEO Business Case** rubric 
 | `arml_power` | test | variable | [arml.com power archive](https://www.arml.com/ARML/arml_2019/page/index.php?page=5&page_type=public&show_page=samples) | scaffolded |
 | `euso` | test | 3 | [euso.eu](http://euso.eu/) | scaffolded |
 | `ijso_practical` | test | 3 | [ijsoweb.org](https://ijsoweb.org/downloads) | scaffolded |
-| `ieo_business_case` | rubric | 5 | IEO PDFs in `data/raw/business_case/` | **1 problem, pipeline working** |
+| `ieo_business_case` | rubric | 5 | IEO PDFs in `data/raw/business_case/` | **5 problems, pipeline working** |
 
 See `index.json` for collection strategy and gold-score notes per olympiad.
 
