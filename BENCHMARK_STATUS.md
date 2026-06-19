@@ -123,8 +123,41 @@ GPT-5.4-mini agents, Claude Sonnet 4.6 judge, real team sizes, `--with-gold`. Fi
 |----------|-----:|------:|-----------------------|
 | IOL Team | 4 | 14 | 2008: 27/100, 2009: 19/100, 2010: 86/100, 2011: 37/100 — **crashed on 2014** |
 | IOAA Group | 4 | 4 | 2014: 43/100, 2015: 15/100, 2021: 15/115, 2025: 8/150 |
-| ARML Power | 11 | 11 | 19–35/40 (top: Fall 2025 35/40, Fall 2024 33/40) |
-| IJSO Practical | 12 | 12 | 0–85/100 (best: 2011 85/100; many low) |
+| ARML Power | 11 | 11 | see table below |
+| IJSO Practical | 12 | 12 | see table below |
+
+**ARML Power** (12 agents, Claude judge /40):
+
+| Season | Score |
+|--------|------:|
+| Fall 2018 | 19/40 |
+| Fall 2019 | 27/40 |
+| Spring 2019 | 22/40 |
+| Fall 2020 | 20/40 |
+| Spring 2020 | 27/40 |
+| Fall 2021 | 31/40 |
+| Spring 2021 | 24/40 |
+| Fall 2022 | 21/40 |
+| Fall 2023 | 22/40 |
+| Fall 2024 | 33/40 |
+| Fall 2025 | 35/40 |
+
+**IJSO Practical** (3 agents, Claude judge — scale varies by year):
+
+| Year | Score |
+|------|------:|
+| 2009 | 15/40 |
+| 2010 | 43/100 |
+| 2011 | 85/100 |
+| 2013 | 8.5/40 |
+| 2014 | 6.5/40 |
+| 2016 | 21/40 (52/100 normalized) |
+| 2017 | 15/100 |
+| 2018 | 31/100 |
+| 2019 | 13/100 |
+| 2021 | 5/100 |
+| 2022 | 35/100 |
+| 2023 | 0/100 |
 
 IOL still needs **10 remaining gold problems** rerun (2014+ crashed mid-judge).
 
