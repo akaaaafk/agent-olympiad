@@ -2,3 +2,9 @@
 __pycache__/
 *.pyc
 .env
+
+# Raw PDFs — re-download via scripts/collect_*.py
+data/raw/
+
+# Run logs (results JSON/MD are kept)
+data/processed/*.log

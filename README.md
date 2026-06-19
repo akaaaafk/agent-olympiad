@@ -1,72 +1,52 @@
-# Agent Olympiad — Economics Benchmark (IEO)
+# Agent Olympiad — Multi-Agent Team Benchmark
 
-A curated dataset of **5 open-ended problems** from the **International Economics Olympiad (IEO)** selected for their agentic properties — multi-step modeling, dynamic systems, and strategic reasoning that goes beyond recall.
+Benchmark **multi-agent AI teams** on olympiad-style **team tasks** (not solo paper tests). Part of the **Agent Olympiad** research project at DAPLab.
 
-This is part of the broader **Agent Olympiad** research project at DAPLab, which aims to create the first benchmark suite focused exclusively on *agentic* tasks drawn from international academic competitions across diverse subjects (economics, geography, linguistics, physics lab sections, etc.).
+## Current focus
 
-## Why This Dataset
+1. **IEO Business Case** (rubric-based pilot) — pipeline working, 5 agents, configurable rounds
+2. **5 test-based team olympiads** — IOL Team, IOAA Group, ARML Power, EUSO, IJSO Practical (up to 30 full problems each from multiple years, in progress)
 
-Existing AI benchmarks focus heavily on paper-based math and physics (AMC, IMO, etc.). This dataset targets tasks that require:
+See [`data/olympiads/README.md`](data/olympiads/README.md) for schemas, gold-score sources, and collection status.
 
-- **Multi-step strategic reasoning** (Game theory, Nash equilibria)
-- **Dynamic/iterative environment interaction** (Time-lagged markets, bandwagon feedback loops)
-- **Policy design under uncertainty** (Counterfactual analysis, LLM-as-judge scoring)
-- **Path dependence and multiple equilibria** (Bandwagon effects, policy hysteresis)
+## Quick start
 
-## Repository Structure
+```bash
+export PERPLEXITY_API_KEY="pplx-..."
+
+# IEO Business Case — 20 rounds, slides
+python3 run_multiagent_experiment.py agent:openai/gpt-5.5 slides --rounds 20
+
+# Smoke test (2 agents, 2 rounds)
+python3 run_multiagent_experiment.py agent:openai/gpt-5.4-mini slides --smoke
+
+# Score teamwork on saved discussion logs
+python3 score_teamwork.py
+```
+
+## Repository structure
 
 ```
-agent-olympiad/
-├── README.md
-├── run_experiment.py          # Experiment runner (supports Perplexity Sonar + Agent APIs)
+agent_olympiad_econ/
+├── run_multiagent_experiment.py   # Main multi-agent pipeline
+├── score_teamwork.py              # Teamwork scorer (retroactive on JSON logs)
+├── run_experiment.py              # Legacy single-agent IEO open questions
+├── scripts/scaffold_olympiad_slots.py
 ├── data/
-│   ├── raw/                   # Original IEO exam PDFs (2018–2025)
-│   └── processed/
-│       ├── ieo_benchmark.json                    # Structured benchmark (5 open questions + business case)
-│       ├── results_<model>.json                  # Raw single-agent results per model
-│       ├── results_summary.md                    # Multi-model score comparison (open questions)
-│       ├── results_multiagent_summary.md         # Business case multi-agent results summary
-│       └── multiagent_<model>_judgedby_<judge>.json  # Full multi-agent discussion + report + score
+│   ├── olympiads/                 # 5 test olympiads + IEO business case
+│   ├── raw/business_case/         # IEO PDFs 2021–2025
+│   └── processed/                 # Results JSON/MD
 ```
 
-## Dataset Summary
+## Results so far (IEO 2025 Caspian Connector)
 
-Questions were selected for **agentic properties**: iterative reasoning, dynamic systems, mechanism design, and counterintuitive results that require working through a model step by step.
+| Run | Score | Teamwork |
+|---|---|---|
+| GPT-5.5 report | 46/50 | 10/10 |
+| GPT-5.5 slides | 44/50 | 9.9/10 |
 
-| Problem ID | Year | Topic | Agentic Properties |
-|---|---|---|---|
-| econ_ieo_2019_q1 | 2019 | Mechanism Design | Sequential game theory, creative mechanism design |
-| econ_ieo_2020_q2 | 2020 | Optimal Lockdown | Nash equilibrium vs social optimum, integer optimization |
-| econ_ieo_2021_q1 | 2021 | Dynamic Equilibrium | Cobweb model, multi-period divergence |
-| econ_ieo_2022_q5 | 2022 | Going Green (Bandwagon Effect) | Iterative equilibrium, multiple equilibria, path dependence |
-| econ_ieo_2025_q1 | 2025 | Buying Cars | Prisoner's dilemma, policy design, repeated game theory |
+Human baseline (2025 winner Canada): **92.5/100** raw — not directly comparable to LLM judge /50.
 
-## JSON Schema
+## Legacy
 
-Each entry in `ieo_benchmark.json` follows this structure:
-
-```json
-{
-  "problem_id": "econ_ieo_YYYY_qN",
-  "competition": "International Economics Olympiad",
-  "year": 2025,
-  "topic": "Topic Name",
-  "source_file": "data/raw/YYYY.pdf",
-  "task_type": "open_question",
-  "problem_description": "Full problem text...",
-  "gold_label": {
-    "grading_rubric": ["Criterion 1 (X points)", "..."],
-    "expected_answer": "Reference solution summary..."
-  }
-}
-```
-
-## Evaluation
-
-Evaluation uses an **LLM-as-judge** approach: an agent attempts the problem, and a judge model scores the response against the `grading_rubric` criteria. This is a first-pass approach intended to establish baseline agent performance and identify evaluation challenges for future work.
-
-## Sources
-
-All problems are from official IEO Open Questions booklets (2018–2025). Raw PDFs are in `data/raw/`.
-
-- IEO Official Site: [https://ieo.world](https://ieo.world)
+Single-agent IEO open-ended questions remain in `data/processed/ieo_benchmark.json` and `run_experiment.py` but are no longer the primary track.
