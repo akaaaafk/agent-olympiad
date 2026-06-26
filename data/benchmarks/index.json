@@ -101,6 +101,60 @@
       "status": "partial",
       "slots_scaffolded": 30,
       "gold_solutions": 11
+    },
+    {
+      "id": "arml_national_team",
+      "name": "ARML National Meet \u2014 Team Round",
+      "type": "test_based",
+      "team_size": 15,
+      "benchmark_path": "data/benchmarks/arml_national_team/benchmark.json",
+      "problems_collected": 11,
+      "target": 30,
+      "human_score_out_of": 50,
+      "ai_judge_out_of": 50,
+      "source_url": "https://www.arml.com/",
+      "gold_scores": {
+        "available": "partial",
+        "notes": "Solution sections in national meet PDFs and 2009\u20132014 book."
+      },
+      "collection_strategy": "One team round per national meet year",
+      "status": "partial"
+    },
+    {
+      "id": "arml_national_power",
+      "name": "ARML National Meet \u2014 Power Round",
+      "type": "test_based",
+      "team_size": 15,
+      "benchmark_path": "data/benchmarks/arml_national_power/benchmark.json",
+      "problems_collected": 11,
+      "target": 30,
+      "human_score_out_of": 50,
+      "ai_judge_out_of": 50,
+      "source_url": "https://www.arml.com/",
+      "gold_scores": {
+        "available": "partial",
+        "notes": "Solution sections in national meet PDFs and 2009\u20132014 book."
+      },
+      "collection_strategy": "One power round per national meet year",
+      "status": "partial"
+    },
+    {
+      "id": "arml_local",
+      "name": "ARML Local",
+      "type": "test_based",
+      "team_size": 6,
+      "benchmark_path": "data/benchmarks/arml_local/benchmark.json",
+      "problems_collected": 6,
+      "target": 30,
+      "human_score_out_of": "40 or 60",
+      "ai_judge_out_of": 60,
+      "source_url": "https://www.arml.com/ARML/arml_2019/public_contest_files/2009_2014_book/ARML_2009_2014.pdf",
+      "gold_scores": {
+        "available": "partial",
+        "notes": "Team solutions in 2009\u20132014 book."
+      },
+      "collection_strategy": "One local team round per year from ARML book",
+      "status": "partial"
     }
   ]
 }

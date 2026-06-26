@@ -1,57 +1,44 @@
 # Agent Olympiad — Multi-Agent Team Benchmark
 
-Benchmark **multi-agent AI teams** on olympiad-style **team tasks** (not solo paper tests). Part of the **Agent Olympiad** research project at DAPLab.
+Benchmark **multi-agent AI teams** on olympiad-style **team tasks**. Part of the **Agent Olympiad** research project at DAPLab.
 
-Pipeline: problem text → N agents × R discussion rounds → synthesized answer → external judge vs gold solution.
-
-## Quick start
-
-```bash
-pip install -r requirements.txt
-export PERPLEXITY_API_KEY="pplx-..."
-
-# Smoke test (2 agents, 2 rounds)
-python3 src/run.py agent:openai/gpt-5.4-mini slides --smoke
-
-# IEO Business Case — 20 rounds, slides
-python3 src/run.py agent:openai/gpt-5.5 slides --rounds 20
-
-# Score teamwork on saved discussion logs
-python3 src/score_teamwork.py
-```
+**Current focus:** collecting and documenting team-competition data (PDFs + extracted benchmarks).
 
 ## Documentation
 
 | Doc | Contents |
 |-----|----------|
-| [`docs/STATUS.md`](docs/STATUS.md) | Dataset counts, experiment scores, human baselines |
-| [`docs/FORMAT.md`](docs/FORMAT.md) | Per-olympiad format reference and scoring scales |
+| [`docs/DATA_COLLECTION.md`](docs/DATA_COLLECTION.md) | What we collected — summary table + format per contest |
 | [`data/benchmarks/index.json`](data/benchmarks/index.json) | Olympiad catalog and collection status |
-| [`results/`](results/) | Experiment outputs grouped by run |
+| [`initial_experiments/`](initial_experiments/) | Archived smoke tests and early multi-agent runs |
 
 ## Repository structure
 
 ```
-├── src/
-│   ├── run.py                 # Main multi-agent pipeline
-│   ├── score_teamwork.py      # Teamwork scorer on saved JSON logs
-│   └── collectors/              # PDF download + benchmark.json builders
+├── docs/
+│   └── DATA_COLLECTION.md       # Living data tracker
 ├── data/
-│   ├── benchmarks/            # Curated problem JSON (5 olympiads)
-│   └── raw/                   # Source PDFs (gitignored; run collectors)
-├── results/                   # Experiment outputs
-├── docs/                      # STATUS.md, FORMAT.md
-└── archive/                   # Legacy single-agent IEO track
+│   ├── raw/                     # Source PDFs (committed to git)
+│   │   ├── iol/, ioaa/, arml/, ijso/
+│   │   ├── arml_national/, arml_local/
+│   │   └── business_case/
+│   └── benchmarks/              # Extracted problem JSON per competition
+├── collectors/                  # PDF → benchmark.json scripts (run locally)
+└── initial_experiments/         # Archived experiment code + results
+    ├── src/run.py
+    ├── docs/STATUS.md
+    └── results/
 ```
 
-## Olympiads
+## Refresh benchmarks from PDFs
 
-| ID | Type | Team size |
-|----|------|-----------|
-| `iol_team` | test | 4 |
-| `ioaa_group` | test | 5 |
-| `arml_power` | test | variable |
-| `ijso_practical` | test | 3 |
-| `ieo_business_case` | rubric | 5 |
+```bash
+pip install -r requirements.txt
+python3 collectors/iol_team.py
+python3 collectors/arml_power.py
+# … see collectors/ for each competition
+```
 
-Collect or refresh problems: `python3 src/collectors/iol_team.py` (and siblings in `src/collectors/`).
+## Olympiads tracked
+
+See [`docs/DATA_COLLECTION.md`](docs/DATA_COLLECTION.md) for counts. Eight competition types collected so far (IOL, IOAA, four ARML tracks, IJSO, IEO).
