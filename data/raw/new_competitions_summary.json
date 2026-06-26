@@ -1,0 +1,62 @@
+{
+  "hmmt_team": {
+    "sessions": 14,
+    "questions": 140
+  },
+  "hmmt_guts": {
+    "sessions": 21,
+    "questions": 766
+  },
+  "business_case": {
+    "sessions": 8,
+    "questions": 8
+  },
+  "ioaa": {
+    "sessions": 14,
+    "questions": 14
+  },
+  "iypt": {
+    "sessions": 39,
+    "questions": 655
+  },
+  "arml": {
+    "sessions": 26,
+    "questions": 26
+  },
+  "purple_comet": {
+    "sessions": 24,
+    "questions": 527
+  },
+  "fyziklani": {
+    "sessions": 14,
+    "questions": 282
+  },
+  "arml_national": {
+    "sessions": 6,
+    "questions": 6
+  },
+  "ijso": {
+    "sessions": 34,
+    "questions": 34
+  },
+  "itym": {
+    "sessions": 17,
+    "questions": 218
+  },
+  "iol": {
+    "sessions": 43,
+    "questions": 43
+  },
+  "arml_local": {
+    "sessions": 1,
+    "questions": 1
+  },
+  "mcm": {
+    "sessions": 18,
+    "questions": 18
+  },
+  "icm": {
+    "sessions": 19,
+    "questions": 19
+  }
+}
