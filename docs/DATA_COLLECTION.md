@@ -38,7 +38,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 | `fyziklani` | Physics Brawl Online (Fyziklání) | 14 | 282 |
 | `purple_comet` | Purple Comet! Math Meet | 44 | 1,051 |
 | `itym` | ITYM (Young Mathematicians' Tournament) | 17 | 218 |
-| **Total** | **286** | **4,195** |
+| **Total** |  |**286** |**4,195** 
 
 ---
 
@@ -297,25 +297,3 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 | **PDFs** | `data/raw/itym/` |
 
 ---
-
-## Proposed (other) · awaiting approval
-
-| ID | Competition | Approved |
-|----|-------------|:--------:|
-| `pumac_power` | PUMaC Power Round | ☐ |
-| `euso` | EUSO Team Practical | ☐ |
-
----
-
-## Collection backlog (raw PDFs only)
-
-| ID | Action |
-|----|--------|
-| `mcm` / `icm` | More years (2000–2014, 2018–2020, 2023) — COMAP URLs vary |
-| `hmmt_team` | Earlier years if published on archive |
-| `iypt` | Verify 2021–2025 problem-list PDFs match official IOC versions |
-| `arml_power` | Older mail-in Fall/Spring seasons |
-| `ioaa_group` | More years + attachment files |
-| `iol_team` | Missing problem/solution PDFs |
-| `ijso_practical` | Missing years + answer PDFs |
-| `ieo_business_case` | Pre-2021 cases if published |
