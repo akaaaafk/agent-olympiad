@@ -10,7 +10,7 @@ Experiment results: [`docs/STATUS.md`](STATUS.md)
 
 ---
 
-## Summary (numbers only)
+## Summary
 
 ### Collected
 
