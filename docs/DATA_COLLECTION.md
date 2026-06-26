@@ -32,25 +32,6 @@ Experiment results: [`docs/STATUS.md`](STATUS.md)
 
 10 years/sessions have no extracted text yet (2 IOL, 8 IJSO) — question counts above are for sessions with text only.
 
-### Proposed (not collected yet)
-
-| Competitions | Years/sessions | Questions |
-|-------------:|---------------:|----------:|
-| **4** | **0** | **0** |
-
-| ID | Competition | Years/sessions | Questions |
-|----|-------------|---------------:|----------:|
-| `hmmt_guts` | HMMT Guts Round | 0 | 0 |
-| `pumac_power` | PUMaC Power Round | 0 | 0 |
-| `iypt` | IYPT | 0 | 0 |
-| `euso` | EUSO Team Practical | 0 | 0 |
-
-### All tracked
-
-| | Competitions | Years/sessions | Questions |
-|--|-------------:|---------------:|----------:|
-| Collected + proposed | **12** | **100** | **1,046** |
-
 ---
 
 ## IOL Team · `iol_team`
