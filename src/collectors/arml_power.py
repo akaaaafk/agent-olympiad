@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download ARML Power Contest PDFs and populate data/olympiads/arml_power/benchmark.json."""
+"""Download ARML Power Contest PDFs and populate data/benchmarks/arml_power/benchmark.json."""
 
 import json
 import os
@@ -10,9 +10,9 @@ import time
 
 from pypdf import PdfReader
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 RAW_DIR = os.path.join(ROOT, "data", "raw", "arml")
-BENCHMARK_PATH = os.path.join(ROOT, "data", "olympiads", "arml_power", "benchmark.json")
+BENCHMARK_PATH = os.path.join(ROOT, "data", "benchmarks", "arml_power", "benchmark.json")
 BASE = "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive"
 
 # Fall + Spring seasons to try (public archive)

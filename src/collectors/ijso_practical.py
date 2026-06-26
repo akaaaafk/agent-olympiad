@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download IJSO team practical PDFs into data/olympiads/ijso_practical/benchmark.json."""
+"""Download IJSO team practical PDFs into data/benchmarks/ijso_practical/benchmark.json."""
 
 import json
 import os
@@ -9,9 +9,9 @@ import time
 
 from pypdf import PdfReader
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 RAW_DIR = os.path.join(ROOT, "data", "raw", "ijso")
-BENCHMARK_PATH = os.path.join(ROOT, "data", "olympiads", "ijso_practical", "benchmark.json")
+BENCHMARK_PATH = os.path.join(ROOT, "data", "benchmarks", "ijso_practical", "benchmark.json")
 
 # One full team practical per year: (year, prob_url, prob_name, sol_urls...)
 ENTRIES = [

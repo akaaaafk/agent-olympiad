@@ -4,8 +4,8 @@
 import json
 import os
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OLYMP = os.path.join(ROOT, "data", "olympiads")
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+OLYMP = os.path.join(ROOT, "data", "benchmarks")
 
 # IOL team contest gold trophy scores — https://ioling.org/results/{year}/
 IOL_GOLD = {

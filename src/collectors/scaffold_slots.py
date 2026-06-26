@@ -4,8 +4,8 @@
 import json
 import os
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OLYMP_DIR = os.path.join(ROOT, "data", "olympiads")
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+OLYMP_DIR = os.path.join(ROOT, "data", "benchmarks")
 
 # Each slot is (year_or_id, title). One entry = one complete published team task.
 SLOTS = {

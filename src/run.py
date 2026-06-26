@@ -4,9 +4,9 @@ Multi-Agent Olympiad Experiment
 Teams of agents collaborate on olympiad team tasks with no pre-assigned roles.
 
 Usage:
-  python3 run_multiagent_experiment.py agent:openai/gpt-5.5 slides --rounds 20
-  python3 run_multiagent_experiment.py agent:openai/gpt-5.4-mini --olympiad iol_team --smoke --limit 1
-  python3 run_multiagent_experiment.py agent:openai/gpt-5.5 --benchmark data/olympiads/iol_team/benchmark.json --format answer
+  python3 src/run.py agent:openai/gpt-5.5 slides --rounds 20
+  python3 src/run.py agent:openai/gpt-5.4-mini --olympiad iol_team --smoke --limit 1
+  python3 src/run.py agent:openai/gpt-5.5 --benchmark data/benchmarks/iol_team/benchmark.json --format answer
 
 Set PERPLEXITY_API_KEY environment variable before running.
 """
@@ -40,7 +40,7 @@ def parse_args():
     parser.add_argument("--agents", type=int, default=None)
     parser.add_argument("--smoke", action="store_true", help="Quick test: 2 agents, 2 rounds")
     parser.add_argument("--benchmark", default=None, help="Path to benchmark JSON")
-    parser.add_argument("--olympiad", default=None, help="Olympiad id from data/olympiads/index.json")
+    parser.add_argument("--olympiad", default=None, help="Olympiad id from data/benchmarks/index.json")
     parser.add_argument("--limit", type=int, default=None, help="Max problems to run")
     parser.add_argument("--year", type=int, default=None, help="Run only this problem year")
     parser.add_argument("--years", default=None, help="Comma-separated years, e.g. 2018,2021,2023")
@@ -314,7 +314,7 @@ def judge_system_prompt(problem):
 
 def load_benchmarks(benchmark_path, olympiad_id):
     if olympiad_id:
-        index_path = "data/olympiads/index.json"
+        index_path = "data/benchmarks/index.json"
         with open(index_path) as f:
             index = json.load(f)
         match = next((o for o in index["olympiads"] if o["id"] == olympiad_id), None)
@@ -327,13 +327,13 @@ def load_benchmarks(benchmark_path, olympiad_id):
             data = json.load(f)
         return data if isinstance(data, list) else [data]
 
-    default = "data/olympiads/ieo_business_case/benchmark.json"
+    default = "data/benchmarks/ieo_business_case/benchmark.json"
     if os.path.exists(default):
         with open(default) as f:
             data = json.load(f)
         return data if isinstance(data, list) else [data]
 
-    with open("data/processed/ieo_benchmark.json") as f:
+    with open("results/legacy/ieo_benchmark.json") as f:
         all_problems = json.load(f)
     return [p for p in all_problems if p.get("task_type") == "business_case"]
 
@@ -407,7 +407,7 @@ safe_judge = JUDGE_MODEL.replace("/", "_").replace(".", "_")
 format_suffix = f"_{OUTPUT_FORMAT}" if OUTPUT_FORMAT != "report" else ""
 rounds_suffix = f"_{NUM_ROUNDS}r" if NUM_ROUNDS != 3 else ""
 olympiad_suffix = f"_{OLYMPIAD_ID}" if OLYMPIAD_ID else ""
-default_output = f"data/processed/multiagent{olympiad_suffix}{format_suffix}{rounds_suffix}_{safe_model}_judgedby_{safe_judge}.json"
+default_output = f"results/multiagent{olympiad_suffix}{format_suffix}{rounds_suffix}_{safe_model}_judgedby_{safe_judge}.json"
 output_path = args.merge_into or default_output
 md_path = output_path.replace(".json", ".md")
 

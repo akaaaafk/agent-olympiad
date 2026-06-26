@@ -2,51 +2,56 @@
 
 Benchmark **multi-agent AI teams** on olympiad-style **team tasks** (not solo paper tests). Part of the **Agent Olympiad** research project at DAPLab.
 
-## Current focus
-
-1. **IEO Business Case** (rubric-based pilot) — pipeline working, 5 agents, configurable rounds
-2. **4 test-based team olympiads** — IOL Team, IOAA Group, ARML Power, IJSO Practical (up to 30 full problems each from multiple years, in progress)
-
-See [`data/olympiads/README.md`](data/olympiads/README.md) for schemas, gold-score sources, and collection status.
+Pipeline: problem text → N agents × R discussion rounds → synthesized answer → external judge vs gold solution.
 
 ## Quick start
 
 ```bash
+pip install -r requirements.txt
 export PERPLEXITY_API_KEY="pplx-..."
 
-# IEO Business Case — 20 rounds, slides
-python3 run_multiagent_experiment.py agent:openai/gpt-5.5 slides --rounds 20
-
 # Smoke test (2 agents, 2 rounds)
-python3 run_multiagent_experiment.py agent:openai/gpt-5.4-mini slides --smoke
+python3 src/run.py agent:openai/gpt-5.4-mini slides --smoke
+
+# IEO Business Case — 20 rounds, slides
+python3 src/run.py agent:openai/gpt-5.5 slides --rounds 20
 
 # Score teamwork on saved discussion logs
-python3 score_teamwork.py
+python3 src/score_teamwork.py
 ```
+
+## Documentation
+
+| Doc | Contents |
+|-----|----------|
+| [`docs/STATUS.md`](docs/STATUS.md) | Dataset counts, experiment scores, human baselines |
+| [`docs/FORMAT.md`](docs/FORMAT.md) | Per-olympiad format reference and scoring scales |
+| [`data/benchmarks/index.json`](data/benchmarks/index.json) | Olympiad catalog and collection status |
+| [`results/`](results/) | Experiment outputs grouped by run |
 
 ## Repository structure
 
 ```
-agent_olympiad_econ/
-├── run_multiagent_experiment.py   # Main multi-agent pipeline
-├── score_teamwork.py              # Teamwork scorer (retroactive on JSON logs)
-├── run_experiment.py              # Legacy single-agent IEO open questions
-├── scripts/scaffold_olympiad_slots.py
+├── src/
+│   ├── run.py                 # Main multi-agent pipeline
+│   ├── score_teamwork.py      # Teamwork scorer on saved JSON logs
+│   └── collectors/              # PDF download + benchmark.json builders
 ├── data/
-│   ├── olympiads/                 # 4 test olympiads + IEO business case
-│   ├── raw/business_case/         # IEO PDFs 2021–2025
-│   └── processed/                 # Results JSON/MD
+│   ├── benchmarks/            # Curated problem JSON (5 olympiads)
+│   └── raw/                   # Source PDFs (gitignored; run collectors)
+├── results/                   # Experiment outputs
+├── docs/                      # STATUS.md, FORMAT.md
+└── archive/                   # Legacy single-agent IEO track
 ```
 
-## Results so far (IEO 2025 Caspian Connector)
+## Olympiads
 
-| Run | Score | Teamwork |
-|---|---|---|
-| GPT-5.5 report | 46/50 | 10/10 |
-| GPT-5.5 slides | 44/50 | 9.9/10 |
+| ID | Type | Team size |
+|----|------|-----------|
+| `iol_team` | test | 4 |
+| `ioaa_group` | test | 5 |
+| `arml_power` | test | variable |
+| `ijso_practical` | test | 3 |
+| `ieo_business_case` | rubric | 5 |
 
-Human baseline (2025 winner Canada): **92.5/100** raw — not directly comparable to LLM judge /50.
-
-## Legacy
-
-Single-agent IEO open-ended questions remain in `data/processed/ieo_benchmark.json` and `run_experiment.py` but are no longer the primary track.
+Collect or refresh problems: `python3 src/collectors/iol_team.py` (and siblings in `src/collectors/`).

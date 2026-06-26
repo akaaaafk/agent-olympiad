@@ -2,7 +2,7 @@
 
 Last updated: 2026-06-19
 
-**Use this file instead of `README.md` + `FORMAT.md` for a quick overview.**
+**Use this file with [`README.md`](../README.md) for a quick overview. Format details: [`FORMAT.md`](FORMAT.md).**
 
 Pipeline: problem text → N agents × R discussion rounds → synthesized answer → external judge vs gold solution.
 
@@ -50,7 +50,7 @@ IJSO scores are a text-only proxy — agents cannot run the experiment. IOAA hum
 | ARML Power | 11 | Fall 2018–2025 (11 seasons with solutions) |
 | IJSO Practical | 12 | 2009–2011, 2013–2014, 2016–2019, 2021–2023 |
 
-Human gold sources: [ioling.org/results](https://ioling.org/results/), [ARML power results](https://www.arml.com/ARML/arml_2019/page/index.php?page=5&page_type=public&show_page=power_results), [IJSO past results](http://www.ijsoweb.org/past-results). Populated via `scripts/populate_human_baselines.py`.
+Human gold sources: [ioling.org/results](https://ioling.org/results/), [ARML power results](https://www.arml.com/ARML/arml_2019/page/index.php?page=5&page_type=public&show_page=power_results), [IJSO past results](http://www.ijsoweb.org/past-results). Populated via `src/collectors/populate_human_baselines.py`.
 
 ---
 
@@ -67,7 +67,7 @@ Human gold sources: [ioling.org/results](https://ioling.org/results/), [ARML pow
 
 ### Gold batch — GPT-5.4-mini agents, real team size, 2 rounds, Claude Sonnet 4.6 judge
 
-Finished **Fri Jun 19, 1:19 PM EDT** (~59 min). Log: `data/processed/gold_batch_full_teams.log`. Output: `data/processed/multiagent_*_2r_openai_gpt-5_4-mini_judgedby_anthropic_claude-sonnet-4-6.{json,md}`
+Finished **Fri Jun 19, 1:19 PM EDT** (~59 min). Log: `results/logs/gold_batch_full_teams.log`. Output: `results/gold-batch-2025-06-19/{iol_team,ioaa_group,arml_power,ijso_practical}/answer.{json,md}`
 
 #### IOL Team (4 agents) — 4/14 complete
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download IOAA group/team competition PDFs into data/olympiads/ioaa_group/benchmark.json."""
+"""Download IOAA group/team competition PDFs into data/benchmarks/ioaa_group/benchmark.json."""
 
 import json
 import os
@@ -9,9 +9,9 @@ import time
 
 from pypdf import PdfReader
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 RAW_DIR = os.path.join(ROOT, "data", "raw", "ioaa")
-BENCHMARK_PATH = os.path.join(ROOT, "data", "olympiads", "ioaa_group", "benchmark.json")
+BENCHMARK_PATH = os.path.join(ROOT, "data", "benchmarks", "ioaa_group", "benchmark.json")
 
 # (year, label, [(url, local_name), ...]) — multiple PDFs merged into one problem for 2013
 ENTRIES = [

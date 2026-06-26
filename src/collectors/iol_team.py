@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download IOL team contest PDFs and populate data/olympiads/iol_team/benchmark.json."""
+"""Download IOL team contest PDFs and populate data/benchmarks/iol_team/benchmark.json."""
 
 import json
 import os
@@ -10,9 +10,9 @@ import time
 
 from pypdf import PdfReader
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 RAW_DIR = os.path.join(ROOT, "data", "raw", "iol")
-BENCHMARK_PATH = os.path.join(ROOT, "data", "olympiads", "iol_team", "benchmark.json")
+BENCHMARK_PATH = os.path.join(ROOT, "data", "benchmarks", "iol_team", "benchmark.json")
 BASE = "https://ioling.org/booklets"
 
 # One full team contest PDF per year (2003 has 3 named tasks inside one booklet)
@@ -146,7 +146,7 @@ def main():
     with open(BENCHMARK_PATH, "w") as f:
         json.dump(entries, f, indent=2)
 
-    index_path = os.path.join(ROOT, "data", "olympiads", "index.json")
+    index_path = os.path.join(ROOT, "data", "benchmarks", "index.json")
     with open(index_path) as f:
         index = json.load(f)
     for o in index["olympiads"]:

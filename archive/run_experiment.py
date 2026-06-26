@@ -106,7 +106,7 @@ def generate(model, api, system_prompt, user_prompt):
         return call_sonar(model, system_prompt, user_prompt)
 
 
-with open("data/processed/ieo_benchmark.json") as f:
+with open("results/legacy/ieo_benchmark.json") as f:
     problems = json.load(f)
 
 results = []
@@ -169,9 +169,9 @@ Your task:
 safe_student = STUDENT_MODEL.replace("/", "_").replace(".", "_")
 safe_judge   = JUDGE_MODEL.replace("/", "_").replace(".", "_")
 if SELF_JUDGE:
-    output_path = f"data/processed/results_{safe_student}.json"
+    output_path = f"results/legacy/results_{safe_student}.json"
 else:
-    output_path = f"data/processed/results_{safe_student}_judgedby_{safe_judge}.json"
+    output_path = f"results/legacy/results_{safe_student}_judgedby_{safe_judge}.json"
 
 with open(output_path, "w") as f:
     json.dump(results, f, indent=2)

@@ -3,11 +3,12 @@ __pycache__/
 *.pyc
 .env
 
-# Raw PDFs — re-download via scripts/collect_*.py
+# Raw PDFs — re-download via src/collectors/
 data/raw/
 
-# Run logs (results JSON/MD are kept)
-data/processed/*.log
+# Run logs (result JSON/MD are kept)
+results/logs/
+results/**/*.log
 
 # Local meeting notes — not for GitHub
 MEETING_BRIEF.md

@@ -68,7 +68,7 @@ Store per-problem values in benchmark JSON as `gold_label.human_baseline` when c
 **Sources:** [IOL regulations](https://ioling.org/rules/rules.pdf), [guidelines](https://ioling.org/guidelines/en/)
 
 ```bash
-python3 run_multiagent_experiment.py agent:openai/gpt-5.5 agent:openai/gpt-5.5 answer \
+python3 src/run.py agent:openai/gpt-5.5 agent:openai/gpt-5.5 answer \
   --olympiad iol_team --with-gold --rounds 3
 ```
 
@@ -90,7 +90,7 @@ python3 run_multiagent_experiment.py agent:openai/gpt-5.5 agent:openai/gpt-5.5 a
 **Sources:** [IOAA problems archive](https://ioaastrophysics.org/resources/problems-from-past-ioaa), [2023 group instructions PDF](https://cdn.ioaastrophysics.org/assets/IOAA%20problems/16th%20IOAA%202023/Group%20Competition%202023%20IOAA.pdf)
 
 ```bash
-python3 run_multiagent_experiment.py agent:openai/gpt-5.5 answer \
+python3 src/run.py agent:openai/gpt-5.5 answer \
   --olympiad ioaa_group --with-gold --rounds 3
 ```
 
@@ -112,7 +112,7 @@ python3 run_multiagent_experiment.py agent:openai/gpt-5.5 answer \
 **Sources:** [ARML Power Contest](https://www.arml.com/ARML/arml_2019/page/index.php?page=5&page_type=public)
 
 ```bash
-python3 run_multiagent_experiment.py agent:openai/gpt-5.5 answer \
+python3 src/run.py agent:openai/gpt-5.5 answer \
   --olympiad arml_power --with-gold --rounds 3
 ```
 
@@ -134,7 +134,7 @@ python3 run_multiagent_experiment.py agent:openai/gpt-5.5 answer \
 **Sources:** [IJSO downloads](https://ijsoweb.org/downloads), [statutes](http://www.ijsoweb.org/qna/Statutes20140324.pdf)
 
 ```bash
-python3 run_multiagent_experiment.py agent:openai/gpt-5.5 answer \
+python3 src/run.py agent:openai/gpt-5.5 answer \
   --olympiad ijso_practical --with-gold --rounds 3
 ```
 
@@ -156,7 +156,7 @@ python3 run_multiagent_experiment.py agent:openai/gpt-5.5 answer \
 **Sources:** [IEO syllabus](https://files.ieo-official.org/IEO_Syllabus.pdf), `data/raw/business_case/`
 
 ```bash
-python3 run_multiagent_experiment.py agent:openai/gpt-5.5 agent:openai/gpt-5.5 slides --rounds 20
+python3 src/run.py agent:openai/gpt-5.5 agent:openai/gpt-5.5 slides --rounds 20
 ```
 
 ---

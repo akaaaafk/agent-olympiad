@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Populate data/olympiads/ieo_business_case/benchmark.json from IEO PDFs in data/raw/business_case/."""
+"""Populate data/benchmarks/ieo_business_case/benchmark.json from IEO PDFs in data/raw/business_case/."""
 
 import json
 import os
@@ -7,9 +7,9 @@ import re
 
 from pypdf import PdfReader
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 RAW = os.path.join(ROOT, "data", "raw", "business_case")
-BENCHMARK = os.path.join(ROOT, "data", "olympiads", "ieo_business_case", "benchmark.json")
+BENCHMARK = os.path.join(ROOT, "data", "benchmarks", "ieo_business_case", "benchmark.json")
 
 CASES = [
     (2021, "2021_case.pdf", "Business Case — Rebirth and Evolution of JDL"),

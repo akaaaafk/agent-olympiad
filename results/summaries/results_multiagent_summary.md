@@ -31,4 +31,4 @@ Human teams are scored by a professional jury. Raw scores are normalized to fina
 | Slides | `multiagent_slides_openai_gpt-5_5_judgedby_openai_gpt-5_5.json` | `multiagent_slides_openai_gpt-5_5_judgedby_openai_gpt-5_5.md` |
 
 Case source: `data/raw/business_case/2025.pdf`  
-Script: `run_multiagent_experiment.py` (add `slides` as third argument for slide format)
+Script: `src/run.py` (add `slides` as third argument for slide format)

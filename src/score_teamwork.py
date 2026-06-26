@@ -5,9 +5,9 @@ Reads saved discussion logs — no need to re-run the full experiment.
 One judge API call per results file.
 
 Usage:
-  python3 score_teamwork.py [results.json ...]
+  python3 src/score_teamwork.py [results.json ...]
 
-  python3 score_teamwork.py data/processed/multiagent_*.json
+  python3 src/score_teamwork.py results/multiagent_*.json
 
 Set PERPLEXITY_API_KEY environment variable before running.
 """
@@ -33,7 +33,7 @@ for arg in sys.argv[1:]:
 
 JUDGE_MODEL = raw_judge or "openai/gpt-5.5"
 if not file_args:
-    file_args = sorted(glob.glob("data/processed/multiagent*.json"))
+    file_args = sorted(glob.glob("results/multiagent*.json"))
 
 HEADERS = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
 
