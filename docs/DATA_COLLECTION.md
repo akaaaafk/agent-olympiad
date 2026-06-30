@@ -38,7 +38,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 | `fyziklani` | Physics Brawl Online (Fyziklání) | Physics | 14 | 282 |
 | `purple_comet` | Purple Comet! Math Meet | Mathematics | 44 | 1,051 |
 | `itym` | ITYM (Young Mathematicians' Tournament) | Mathematics | 17 | 218 |
-| `wsc_writing` | WSC — Collaborative Writing | Literature / Humanities | 0 | 0 |
+| `wsc_writing` | WSC — Collaborative Writing | Literature / Humanities | 3 (2024–2026) | 42 |
 | `jessup` | Jessup Moot Court Competition | International Law | 0 | 0 |
 | `iiot` | IIOT (Informatics Olympiad in Teams) | Informatics / CS | 0 | 0 |
 | `icpc` | ICPC World Finals | Informatics / CS | 0 | 0 |
@@ -307,15 +307,16 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 | | |
 |---|---|
 | **Domain** | Literature / Humanities |
-| **Years/sessions** | 0 (collection not started) |
-| **Questions** | 0 |
+| **Years/sessions** | 3 (2024, 2025, 2026) |
+| **Questions** | 42 guiding questions (discussion prompts) |
 | **Team size** | 3 students |
-| **Time** | ~50 minutes per essay (3 essays per portfolio) |
-| **Answer type** | Persuasive essays on a shared annual theme |
-| **Grading** | Rubric: argument quality, evidence use, style, originality |
-| **Source** | Published essay prompts and rubrics per annual WSC season; internet allowed during prep |
-| **Link** | [scholarscup.org](https://scholarscup.org/about/) |
-| **PDFs** | `data/raw/wsc_writing/` (not yet collected) |
+| **Time** | 75 min total: 20 min team prep → 40 min individual writing → 15 min peer edit |
+| **Answer type** | Persuasive essays; 6 prompts offered (1 per subject area), team picks 3, each member writes one |
+| **Grading** | 4 criteria × 1–7 = max 28 pts per essay; contributes 18.75% of team total |
+| **Source** | Official WSC themes site (themes.scholarscup.org); prompts are guiding questions from the annual curriculum |
+| **Link** | [themes.scholarscup.org](https://themes.scholarscup.org) |
+| **Data** | `data/raw/wsc_writing/all_guiding_questions.json` (42 prompts), `data/benchmarks/wsc_writing/benchmark.json` |
+| **Notes** | Actual competition writing prompts are not published in advance. The 42 guiding questions extracted from the official themes SPA are the closest public proxy — these ARE what students prep with. Covers 2024 ("Reimagining the Present"), 2025 ("Reigniting the Future"), 2026 ("Are We There Yet?"). |
 
 ---
 

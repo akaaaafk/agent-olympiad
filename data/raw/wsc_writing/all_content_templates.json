@@ -1,0 +1,286 @@
+[
+  {
+    "length": 25316,
+    "preview": "+o.stack}return{value:e,source:t,stack:a,digest:null}}function Nd(e,t,r){return{value:e,source:null,stack:r??null,digest:t??null}}function Xh(e,t){try{console.error(t.value)}catch(r){setTimeout(functi"
+  },
+  {
+    "length": 2336,
+    "preview": "),tC(a)){let l=De({},a,t(a),{id:s});return n[s]=l,l}else{let l=De({},a,t(a),{id:s,children:void 0});return n[s]=l,a.children&&(l.children=df(a.children,t,i,n)),l}})}function Ya(e,t,r){r===void 0&&(r=\""
+  },
+  {
+    "length": 1519,
+    "preview": "in the pattern. To get rid of this warning, \"+('please change the route path to \"'+e.replace(/\\*$/,\"/*\")+'\".'));let n=[],a=\"^\"+e.replace(/\\/*\\*?$/,\"\").replace(/^\\/*/,\"/\").replace(/[\\\\.*+^$?{}|()[\\]]/g"
+  },
+  {
+    "length": 3387,
+    "preview": "field. Alternatively you may provide the full path as \")+'a string in and the router will parse it for you.'}function bu(e){return e.filter((t,r)=>r===0||t.route.path&&t.route.path.length>0)}function "
+  },
+  {
+    "length": 14023,
+    "preview": "instead of using router navigation APIs. This can also happen if you are using createHashRouter and the user manually changes the URL.\");let B=Xn({currentLocation:v.location,nextLocation:I,historyActi"
+  },
+  {
+    "length": 3894,
+    "preview": "},\"\"):String(n.body);return{path:r,submission:{formMethod:i,formAction:s,formEncType:n.formEncType,formData:void 0,json:void 0,text:h}}}else if(n.formEncType===\"application/json\"){if(!_r(i))return a()"
+  },
+  {
+    "length": 16815,
+    "preview": ";r[o]=Oc(\"colors\",t[n])}),r}const $y=\"theme-ui-color-mode\",vf=\"(prefers-color-scheme: dark)\",s4=\"(prefers-color-scheme: light)\",Uy={get:()=>{try{return window.localStorage.getItem($y)}catch(e){console"
+  },
+  {
+    "length": 3908,
+    "preview": "context value. Please ensure the component is wrapped in a \");return e}function K4(e){var t=Y4(),r=x.useRef(null),n=q4(e),a=n.parallaxProps;V4(t);var o=x.useState(),i=o[0],s=o[1];return x.useEffect(fu"
+  },
+  {
+    "length": 33064,
+    "preview": "package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types\");throw c.name=\"Invariant Violation\",c}}e.isRequired=e;function t(){return e}var r={array:e,bigint:"
+  },
+  {
+    "length": 23227,
+    "preview": ").concat(JSON.stringify(h.data)));return n.scheduler.schedule(function(){n.forward(h);var g=n._nextState(h);n.update(g,h)}),n._state},this.sendTo=function(u,d,h){var g=n.parent&&(d===To.Parent||n.pare"
+  },
+  {
+    "length": 3811,
+    "preview": ")}};let Ni={animationIterationCount:!0,borderImageOutset:!0,borderImageSlice:!0,borderImageWidth:!0,boxFlex:!0,boxFlexGroup:!0,boxOrdinalGroup:!0,columnCount:!0,columns:!0,flex:!0,flexGrow:!0,flexPosi"
+  },
+  {
+    "length": 9047,
+    "preview": ")}return r=e[Symbol.iterator](),r.next.bind(r)}function ik(){}function sk(){for(var e=arguments.length,t=new Array(e),r=0;r 1?t-1:0),n=1;n 0,u},swipeVelocity:function(t){return t===void 0&&(t=u8),Rn(t"
+  },
+  {
+    "length": 928,
+    "preview": "Main Venue: Sheikh Rashid Auditorium, Oud Metha Official Hotels We encourage all participants to stay at one of our official hotels. Rates include breakfast and taxes. Please note that shuttle buses w"
+  },
+  {
+    "length": 324,
+    "preview": ",Jn={\"The Experience\":[\"Themes\"]},qO=[{name:\"welcome-letters\",title:\"ToC Intent To Participate\",data:$O}],VO=[{name:\"dubai-winter-2023\",title:\"Dubai Winter\",year:\"2023\",data:UO,updates:GO}];function Y"
+  },
+  {
+    "length": 1097,
+    "preview": ",children:_.jsx(\"div\",{className:\"expanding-list-subtitle\",children:o},p0())}))},p0()),Do=({alwaysSticky:e,withPad:t})=>{const[r,n]=x.useState(!1),[a,o]=x.useState(!1),[i,s]=x.useState(0),l=()=>{const"
+  },
+  {
+    "length": 305,
+    "preview": ",children:\"Copyright \u00a9 2026 World Scholar\u2019s Cup | 912 Thistlegate Rd. | Oak Park, CA 91377 | +1 866 325 7222 | +1 818 445 2246\"}),L6=()=>{const e=K4({scale:[.6,1]});var t={dots:!0,infinite:!0,autoplay"
+  },
+  {
+    "length": 1107,
+    "preview": "body { background-color: var(--bg); background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23832"
+  },
+  {
+    "length": 4624,
+    "preview": ")}var nS=0,Yn=1,Zu=2,ed=3,Gm=4,aS=5,oS=6;function fP(e){return yt.hasOwnProperty(e)?yt[e]:null}function Nt(e,t,r,n,a,o,i){this.acceptsBooleans=t===Zu||t===ed||t===Gm,this.attributeName=n,this.attribut"
+  },
+  {
+    "length": 5508,
+    "preview": ").toString()}function pA(e){let t=fA(e),r=ip.get(t);if(!r){const n=new Map;let a;const o=new IntersectionObserver(i=>{i.forEach(s=>{var l;const c=s.isIntersecting&&a.some(u=>s.intersectionRatio>=u);e."
+  },
+  {
+    "length": 456,
+    "preview": ";function KA(e,t,r){switch(r){case\"bottom-left\":return t?NA:bA;case\"bottom-right\":return t?LA:kA;case\"down\":return e?t?WA:xA:t?FA:SA;case\"left\":return e?t?HA:CA:t?BA:Jm;case\"right\":return e?t?UA:TA:t?"
+  },
+  {
+    "length": 1638,
+    "preview": ",children:[_.jsx(\"div\",{className:\"global-seal-box\",children:_.jsx(\"img\",{className:\"global-seal-img\",loading:\"lazy\",height:\"100px\",src:i.logo})}),_.jsxs(\"div\",{className:\"global-content-box\",children"
+  },
+  {
+    "length": 12696,
+    "preview": "package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types\");throw f.name=\"Invariant Violation\",f}}function u(){return c}c.isRequired=c;var d={array:c,bigint:"
+  },
+  {
+    "length": 1789,
+    "preview": ",darkBG:!0})]})]})}),_.jsxs(\"div\",{className:\"global-round-nav-container\",children:[_.jsx(\"div\",{className:\"shadow-left\"}),_.jsxs(\"div\",{className:\"global-round-nav-outer\",children:[_.jsxs(\"div\",{clas"
+  },
+  {
+    "length": 1103,
+    "preview": "})]})]}),_.jsxs(\"div\",{className:\"subject-container\",children:[_.jsx(\"div\",{className:\"switch-box\",children:CS.map((o,i)=>{if(o.year===a)return _.jsx(kI,{year:a,data:o,title:e},i)})}),_.jsx(\"div\",{cla"
+  },
+  {
+    "length": 495,
+    "preview": ",children:_.jsx(Zm,{delay:100,children:_.jsxs(\"div\",{className:\"subject-card\",children:[_.jsx(\"div\",{className:\"subject-icon\",children:_.jsx(\"img\",{className:\"subject-img\",src:n.icon})}),_.jsxs(\"div\","
+  },
+  {
+    "length": 3021,
+    "preview": "If you walked out of your home without knowing you\u2019d accidentally time traveled into the past, how long would it take you to realize what had happened? What if they had sent you back ten years, or thi"
+  },
+  {
+    "length": 9939,
+    "preview": "Artists sometimes rethink what materials can even be used to make art. Consider the butter sculptures of Caroline Brooks, or the cassette tape sculptures of Erika Iris Simmons, in which the artist cra"
+  },
+  {
+    "length": 2189,
+    "preview": "\u201cWrite what you know,\u201d is the first piece of advice given to most students in writing workshops. Artists, too, tend to paint that which they\u2019ve experienced and observed; Monet spent a lot of time at h"
+  },
+  {
+    "length": 10840,
+    "preview": "You can\u2019t read records that don\u2019t exist, just as you can\u2019t listen to music that was never recorded. Learn about the world\u2019s earliest record-keeping , usually credited to the Sumerians or the Egyptians"
+  },
+  {
+    "length": 2838,
+    "preview": "A ball drops; some scholars open red envelopes while others dip apple bits in honey. Different cultures around the world celebrate the new year differently and at different times, but all of them are "
+  },
+  {
+    "length": 5237,
+    "preview": "For a long time, the Tomb of the Unknown Soldier was also the Tomb of the Misplaced King: after Richard III fell in battle in 1485, it took centuries to locate his corpse. In 2012, a team of archaeolo"
+  },
+  {
+    "length": 7243,
+    "preview": "Whether you see Edward Hopper\u2019s Nighthawks (1942) as a homage to solitude or as a paean for a lost era of root beer floats, the odds are good that you see it often. The recent Netflix series The Sandm"
+  },
+  {
+    "length": 4972,
+    "preview": "True stories are one of the most popular sources of script ideas in Hollywood. But some are meaningfully less true than others. Discuss with your team: how much should filmmakers be allowed to change "
+  },
+  {
+    "length": 4476,
+    "preview": "Some tourists opt for hands-on experiences\u2014such as learning to cook Thai food in Chiang Mai, walking the streets of Xi\u2019an in Tang-dynasty outfits , honing their shuriken-throwing at a \u201cNinja Village\u201d "
+  },
+  {
+    "length": 4266,
+    "preview": "Small bits of music can quickly conjure up a time and place. Consider the following examples of these musical riffs and motifs, then discuss: when is it okay to use a musical clich\u00e9 as a storytelling "
+  },
+  {
+    "length": 5500,
+    "preview": "Examine these postcards in which 19th century French artists tried to imagine their world a century in the future, along with this set from the year 1900 doing the same for the year 2000 (and totally "
+  },
+  {
+    "length": 3179,
+    "preview": "Historians draw on newspaper and other records of this kind to construct their story of the past. But the nature of journalism\u2014what is being communicated, to whom, and in what formats\u2014has changed over"
+  },
+  {
+    "length": 2373,
+    "preview": "Some old games are being reimagined as television shows, movies , and mobile apps ; even their soundtracks are sometimes revived for orchestral performance . But these adaptations require looking at h"
+  },
+  {
+    "length": 8687,
+    "preview": "You haven\u2019t studied enough for the Scholar\u2019s Challenge? \u201cThat\u2019s a tomorrow problem,\u201d your teammate says. \u201cFirst, we need to book a flight to Baku.\u201d Economists also distinguish between today\u2019s problems"
+  },
+  {
+    "length": 6466,
+    "preview": "The world is only as large as our voices can carry across it. The invention of the telegraph in the 1840s shrank the world ; by 1858 the first telegraph cable across the Atlantic meant stockbrokers in"
+  },
+  {
+    "length": 2090,
+    "preview": "Suppose a single drop of blood were enough to test you for a host of diseases; you could learn if you had lupus with less pain than from a papercut. That was the marketing pitch of the company Therano"
+  },
+  {
+    "length": 6894,
+    "preview": "In a world new to airships and submarines, the UFOs of the early 20th century looked like\u2014airships and submarines. Mysterious steam-powered blimps roved the night sky. By the late 1940s, they had evol"
+  },
+  {
+    "length": 4296,
+    "preview": "Rip Van Winkle slept for twenty years, Steve Rogers for seventy, Aang for a hundred\u2014in each case, with remarkably little impact on their health. (Rip Van Winke did grow some facial hair.) Imagine that"
+  },
+  {
+    "length": 3975,
+    "preview": "In 2009, the Australian government announced an ambitious project to provide super-fast fiber-based Internet to 93% of the population; in 2013, it revised the plan to reuse existing copper wire; in 20"
+  },
+  {
+    "length": 6554,
+    "preview": "Nostradamus never predicted that people would remember him 500 years later, but his reputation for accurate prophecies has nonetheless flourished for centuries. Discuss with your team: why do people w"
+  },
+  {
+    "length": 1582,
+    "preview": "Explore the following futuristic technologies that failed to be widely adopted. What prevented their success, and is there a situation in the future where they might find popularity? rocket mail | fly"
+  },
+  {
+    "length": 3865,
+    "preview": "Rasputin may be the most famous Russian monk, but he wasn\u2019t the first to opine on geopolitical affairs. In the 16th century, his distant (and also lushly-bearded) predecessor Filofei proposed (in lett"
+  },
+  {
+    "length": 4830,
+    "preview": "The Hangzhou Round famously caught fire. But what is a fire, and how does it burn? Begin your exploration of this topic with the terms below: oxidization | ignition | combustion | flash point | convec"
+  },
+  {
+    "length": 2485,
+    "preview": "JFK\u2019s most famous speech may have been about going to the moon, but that giant leap was a lot easier to achieve than peace in his (or our) time. Watch these selected excerpts from his \u201cpeace speech\u201d a"
+  },
+  {
+    "length": 3655,
+    "preview": "\u201cTime of death,\u201d says a doctor on TV, after frantic efforts to get someone\u2019s heart pumping again fail, \u201c5:11 am.\u201d If it were only that simple! Research is increasingly suggesting that death is a compl"
+  },
+  {
+    "length": 4088,
+    "preview": "The third book of the Lord of the Rings trilogy is titled The Return of the King; in it (spoilers ahead) the character Aragorn returns to unite humanity against a dire threat. The idea of a prophesied"
+  },
+  {
+    "length": 2932,
+    "preview": "Sometimes cars don\u2019t start\u2014but when they do, how does it happen? Explore the ways in which cars can be powered on. And that\u2019s only the start(er): once a car is moving, it speeds away propelled by a se"
+  },
+  {
+    "length": 4939,
+    "preview": "During a difficult conversation, you look down and see what looks like a giraffe in the carpet. This phenomenon\u2014the human brain\u2019s ability to find patterns and images even where none exist\u2014is called pa"
+  },
+  {
+    "length": 2923,
+    "preview": "Some creative works\u2014including film, theatrical productions, and even novels\u2014fail at the first go, but are then reworked in new ways months, years, or even decades later, in hopes that they can find th"
+  },
+  {
+    "length": 2915,
+    "preview": "The future began in 1909\u2014or, at least, futurism did. When Italian poet Filippo Tommaso Marinetti coined the word 'futurism' , he imagined a world of speed, danger, and beauty. To him, this future coul"
+  },
+  {
+    "length": 829,
+    "preview": "Reconstruct, reimagine, reignite: consider the works of David Irvine as examples of how new art can be made from old things, even those found in thrift stores. Will the future be built from bits of th"
+  },
+  {
+    "length": 2861,
+    "preview": "The journey of a thousand miles begins with a single step, but how does it end? Have you ever asked someone, \u201cAre we there yet?\u201d If so, whom were you asking\u2014and where were you going? Did you ever get "
+  },
+  {
+    "length": 3647,
+    "preview": "Before 1985, you\u2019d have had no idea how long it would take to install a program on your computer\u2014or to save a file, or to complete an online form. (To be fair, there were no online forms.) Consider th"
+  },
+  {
+    "length": 1400,
+    "preview": "Things to do today include exploring the history of the to-do list ( alternate link ). You\u2019ll find that they were famously used by Benjamin Franklin and Leonardo da Vinci, among other high achievers o"
+  },
+  {
+    "length": 5219,
+    "preview": "In November 2025, the Supreme Court of Bangladesh restored the practice of caretaker governments. In most countries with parliamentary systems, when an election is about to take place, a caretaker gov"
+  },
+  {
+    "length": 1871,
+    "preview": "Finished works don\u2019t materialize out of thin air. Authors, artists, musicians, architects, animators\u2014nearly all creators go through one or more rough drafts before coming up with a finished product. F"
+  },
+  {
+    "length": 4726,
+    "preview": "As returning scholars might remember, some big projects take much too long to finish\u2014high speed rail in California, the Haunted Chocolatier, these outlines. Some never get there at all. Explore the fo"
+  },
+  {
+    "length": 2683,
+    "preview": "Dubai barely has them; in New York they\u2019re bustling with people and halal food stands. Research the history of the sidewalk\u2014that liminal gap between street and building that serves as a gathering plac"
+  },
+  {
+    "length": 3344,
+    "preview": "Products can have rough drafts too. To see how well they work and what people think of them, companies often create early samples\u2014or prototypes\u2014of potential products. Here are some examples of prototy"
+  },
+  {
+    "length": 4426,
+    "preview": "You\u2019re there now\u2014but why? If you\u2019ve ever forgotten why you walked into a room, you may have experienced what scientists call the doorway effect . This temporary amnesia happens when you pass through t"
+  },
+  {
+    "length": 3901,
+    "preview": "In 2001, millennial pop star Britney Spears sang that she was \u201cnot a girl, not yet a woman\u201d. In other words, she was an adolescent. Actually, she was 20 at the time\u2014no longer a teenager, but well belo"
+  },
+  {
+    "length": 5208,
+    "preview": "In the fifteenth century, Europeans launched their caravels and galleons on what would become a merciless colonial crusade around the globe. They relied on a Chinese invention, the compass , which tra"
+  },
+  {
+    "length": 5324,
+    "preview": "\u201cAll roads lead to Rome,\u201d insisted one medieval European proverb. (In other parts of the world, roads led elsewhere.) While Roman roads may be the most famous for their longevity and scale , they were"
+  },
+  {
+    "length": 3015,
+    "preview": "People on the road have historically needed places to park themselves too. With your team, explore the history of inns and hotels , including what might be the oldest hotel in the world . What differe"
+  },
+  {
+    "length": 5437,
+    "preview": "\u201cScience has not yet mastered prophecy,\u201d Neil Armstrong (the first man on the moon) once said. \u201cWe predict too much for the next year and yet far too little for the next ten.\u201d Indeed, some technologie"
+  },
+  {
+    "length": 2042,
+    "preview": "When is it a good idea to give up? Be sure to learn about the sunk cost fallacy . Does it imply that we should quit on things more often? How about on people? Is it always better to know how long it\u2019l"
+  }
+]

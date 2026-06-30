@@ -163,7 +163,7 @@
       "type": "rubric_based",
       "team_size": 3,
       "benchmark_path": "data/benchmarks/wsc_writing/benchmark.json",
-      "problems_collected": 0,
+      "problems_collected": 42,
       "target": 20,
       "human_score_out_of": "varies by rubric",
       "ai_judge_out_of": 100,
@@ -173,7 +173,7 @@
         "notes": "Published essay prompts and rubrics per annual season. Top team scores available from leaderboards."
       },
       "collection_strategy": "One collaborative writing portfolio (3 essays on shared theme) per annual WSC season",
-      "status": "not_started"
+      "status": "collected"
     },
     {
       "id": "jessup",
