@@ -1,6 +1,6 @@
 # Data collected
 
-Last updated: 2026-06-26
+Last updated: 2026-06-29
 
 **Current focus:** raw PDF collection only (`data/raw/`). No benchmark or experiment work for now.
 
@@ -18,27 +18,31 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 | Competitions | Years/sessions | Questions |
 |-------------:|---------------:|----------:|
-| **16** | **286** | **4,195** |
+| **20** | **286+** | **4,195+** |
 
-| ID | Competition | Years/sessions | Questions |
-|----|-------------|---------------:|----------:|
-| `iol_team` | IOL Team Contest | 21 | 73 |
-| `ioaa_group` | IOAA Group Competition | 9 | 232 |
-| `arml_power` | ARML Power Contest (mail-in) | 15 | 278 |
-| `arml_national_team` | ARML National — Team Round | 11 | 110 |
-| `arml_national_power` | ARML National — Power Round | 11 | 209 |
-| `arml_local` | ARML Local | 6 | 65 |
-| `ijso_practical` | IJSO Team Practical | 22 | 74 |
-| `ieo_business_case` | IEO Business Case | 5 | 5 |
-| `iypt` | IYPT (Young Physicists' Tournament) | 39 | 655 |
-| `hmmt_team` | HMMT — Team Round | 14 | 140 |
-| `hmmt_guts` | HMMT — Guts Round | 21 | 766 |
-| `mcm` | MCM (Mathematical Contest in Modeling) | 18 | 18 |
-| `icm` | ICM (Interdisciplinary Contest in Modeling) | 19 | 19 |
-| `fyziklani` | Physics Brawl Online (Fyziklání) | 14 | 282 |
-| `purple_comet` | Purple Comet! Math Meet | 44 | 1,051 |
-| `itym` | ITYM (Young Mathematicians' Tournament) | 17 | 218 |
-| **Total** |  |**286** |**4,195** 
+| ID | Competition | Domain | Years/sessions | Questions |
+|----|-------------|--------|---------------:|----------:|
+| `iol_team` | IOL Team Contest | Linguistics | 21 | 73 |
+| `ioaa_group` | IOAA Group Competition | Astronomy | 9 | 232 |
+| `arml_power` | ARML Power Contest (mail-in) | Mathematics | 15 | 278 |
+| `arml_national_team` | ARML National — Team Round | Mathematics | 11 | 110 |
+| `arml_national_power` | ARML National — Power Round | Mathematics | 11 | 209 |
+| `arml_local` | ARML Local | Mathematics | 6 | 65 |
+| `ijso_practical` | IJSO Team Practical | Science | 22 | 74 |
+| `ieo_business_case` | IEO Business Case | Economics | 5 | 5 |
+| `iypt` | IYPT (Young Physicists' Tournament) | Physics | 39 | 655 |
+| `hmmt_team` | HMMT — Team Round | Mathematics | 14 | 140 |
+| `hmmt_guts` | HMMT — Guts Round | Mathematics | 21 | 766 |
+| `mcm` | MCM (Mathematical Contest in Modeling) | Mathematics | 18 | 18 |
+| `icm` | ICM (Interdisciplinary Contest in Modeling) | Interdisciplinary | 19 | 19 |
+| `fyziklani` | Physics Brawl Online (Fyziklání) | Physics | 14 | 282 |
+| `purple_comet` | Purple Comet! Math Meet | Mathematics | 44 | 1,051 |
+| `itym` | ITYM (Young Mathematicians' Tournament) | Mathematics | 17 | 218 |
+| `wsc_writing` | WSC — Collaborative Writing | Literature / Humanities | 0 | 0 |
+| `jessup` | Jessup Moot Court Competition | International Law | 0 | 0 |
+| `iiot` | IIOT (Informatics Olympiad in Teams) | Informatics / CS | 0 | 0 |
+| `icpc` | ICPC World Finals | Informatics / CS | 0 | 0 |
+| **Total** | | | **286+** | **4,195+** |
 
 ---
 
@@ -297,3 +301,97 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 | **PDFs** | `data/raw/itym/` |
 
 ---
+
+## WSC Collaborative Writing · `wsc_writing`
+
+| | |
+|---|---|
+| **Domain** | Literature / Humanities |
+| **Years/sessions** | 0 (collection not started) |
+| **Questions** | 0 |
+| **Team size** | 3 students |
+| **Time** | ~50 minutes per essay (3 essays per portfolio) |
+| **Answer type** | Persuasive essays on a shared annual theme |
+| **Grading** | Rubric: argument quality, evidence use, style, originality |
+| **Source** | Published essay prompts and rubrics per annual WSC season; internet allowed during prep |
+| **Link** | [scholarscup.org](https://scholarscup.org/about/) |
+| **PDFs** | `data/raw/wsc_writing/` (not yet collected) |
+
+---
+
+## Jessup Moot Court · `jessup`
+
+| | |
+|---|---|
+| **Domain** | International Law |
+| **Years/sessions** | 0 (collection not started) |
+| **Questions** | 0 |
+| **Team size** | 2–5 students (law school / collegiate) |
+| **Time** | Months of preparation; written memorials + oral rounds |
+| **Answer type** | Written memorials (Applicant + Respondent) and oral pleadings |
+| **Grading** | Rubric: legal analysis, argumentation, writing quality, oral advocacy |
+| **Source** | Compromis (problem) released annually each September since 1960; ~100 countries, 700 schools |
+| **Link** | [ilsa.org/jessup](https://www.ilsa.org/jessup/) |
+| **PDFs** | `data/raw/jessup/` (not yet collected) |
+
+---
+
+## IIOT · `iiot`
+
+| | |
+|---|---|
+| **Domain** | Informatics / Computer Science |
+| **Years/sessions** | 0 (collection not started) |
+| **Questions** | 0 |
+| **Team size** | 4 students (high school) |
+| **Time** | 3 hours (international round: 4 hours); 2 PCs per team |
+| **Answer type** | Algorithmic code solutions submitted to an online judge |
+| **Grading** | Automated judge: accepted / wrong answer / time-limit exceeded per test case |
+| **Source** | Paper, 2 computers; no internet |
+| **Link** | [iio.team](https://iio.team/) |
+| **PDFs** | `data/raw/iiot/` (not yet collected) |
+
+---
+
+## ICPC World Finals · `icpc`
+
+| | |
+|---|---|
+| **Domain** | Informatics / Computer Science |
+| **Years/sessions** | 0 (collection not started) |
+| **Questions** | 0 |
+| **Team size** | 3 students (collegiate) |
+| **Time** | 5 hours; 1 computer per team |
+| **Answer type** | Algorithmic code solutions; multiple problems per contest |
+| **Grading** | Automated judge; ranked by problems solved then time penalty |
+| **Source** | 1 computer; no internet; reference materials allowed |
+| **Link** | [icpc.global](https://icpc.global/) / [problems.icpc.io](https://problems.icpc.io/) |
+| **PDFs** | `data/raw/icpc/` (not yet collected) |
+
+---
+
+## Proposed (other) · awaiting approval
+
+| ID | Competition | Approved |
+|----|-------------|:--------:|
+| `pumac_power` | PUMaC Power Round | ☐ |
+| `euso` | EUSO Team Practical | ☐ |
+
+---
+
+## Collection backlog (raw PDFs only)
+
+| ID | Action |
+|----|--------|
+| `mcm` / `icm` | More years (2000–2014, 2018–2020, 2023) — COMAP URLs vary |
+| `hmmt_team` | Earlier years if published on archive |
+| `iypt` | Verify 2021–2025 problem-list PDFs match official IOC versions |
+| `arml_power` | Older mail-in Fall/Spring seasons |
+| `ioaa_group` | More years + attachment files |
+| `iol_team` | Missing problem/solution PDFs |
+| `ijso_practical` | Missing years + answer PDFs |
+| `ieo_business_case` | Pre-2021 cases if published |
+| `wsc_writing` | Collect essay prompts + rubrics from scholarscup.org per season |
+| `jessup` | Collect Compromis PDFs from ilsa.org archive (1990s–present) |
+| `iiot` | Collect task PDFs + solutions from iio.team/competition/tasks |
+| `icpc` | Collect World Finals problem sets from problems.icpc.io |

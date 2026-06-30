@@ -155,6 +155,82 @@
       },
       "collection_strategy": "One local team round per year from ARML book",
       "status": "partial"
+    },
+    {
+      "id": "wsc_writing",
+      "name": "World Scholar's Cup \u2014 Collaborative Writing",
+      "domain": "Literature / Humanities",
+      "type": "rubric_based",
+      "team_size": 3,
+      "benchmark_path": "data/benchmarks/wsc_writing/benchmark.json",
+      "problems_collected": 0,
+      "target": 20,
+      "human_score_out_of": "varies by rubric",
+      "ai_judge_out_of": 100,
+      "source_url": "https://scholarscup.org/about/",
+      "gold_scores": {
+        "available": "partial",
+        "notes": "Published essay prompts and rubrics per annual season. Top team scores available from leaderboards."
+      },
+      "collection_strategy": "One collaborative writing portfolio (3 essays on shared theme) per annual WSC season",
+      "status": "not_started"
+    },
+    {
+      "id": "jessup",
+      "name": "Philip C. Jessup International Law Moot Court Competition",
+      "domain": "International Law",
+      "type": "rubric_based",
+      "team_size": "2-5",
+      "benchmark_path": "data/benchmarks/jessup/benchmark.json",
+      "problems_collected": 0,
+      "target": 20,
+      "human_score_out_of": "varies (memorial + oral rounds)",
+      "ai_judge_out_of": 100,
+      "source_url": "https://www.ilsa.org/jessup/",
+      "gold_scores": {
+        "available": true,
+        "notes": "Compromis (problem) published annually since 1960. Winning memorials available via Jessup Compendium / HeinOnline."
+      },
+      "collection_strategy": "One Compromis per year; agents write memorials arguing both Applicant and Respondent sides",
+      "status": "not_started"
+    },
+    {
+      "id": "iiot",
+      "name": "International Informatics Olympiad in Teams (IIOT)",
+      "domain": "Informatics / Computer Science",
+      "type": "test_based",
+      "team_size": 4,
+      "benchmark_path": "data/benchmarks/iiot/benchmark.json",
+      "problems_collected": 0,
+      "target": 20,
+      "human_score_out_of": "varies by contest",
+      "ai_judge_out_of": 100,
+      "source_url": "https://iio.team/",
+      "gold_scores": {
+        "available": "partial",
+        "notes": "Task statements and results published at iio.team/competition/tasks. Scoring based on automated judge (accepted / wrong answer)."
+      },
+      "collection_strategy": "One full contest set per IIOT edition (international round); teams of 4 solve algorithmic problems in 3\u20134 hours",
+      "status": "not_started"
+    },
+    {
+      "id": "icpc",
+      "name": "ICPC \u2014 International Collegiate Programming Contest",
+      "domain": "Informatics / Computer Science",
+      "type": "test_based",
+      "team_size": 3,
+      "benchmark_path": "data/benchmarks/icpc/benchmark.json",
+      "problems_collected": 0,
+      "target": 20,
+      "human_score_out_of": "number of problems solved (varies)",
+      "ai_judge_out_of": 100,
+      "source_url": "https://icpc.global/",
+      "gold_scores": {
+        "available": true,
+        "notes": "World Finals problem sets and solutions published since 1976 at problems.icpc.io and icpc.kattis.com."
+      },
+      "collection_strategy": "One World Finals problem set per year; teams of 3 solve algorithmic problems on 1 computer in 5 hours",
+      "status": "not_started"
     }
   ]
 }

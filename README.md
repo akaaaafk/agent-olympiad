@@ -41,4 +41,4 @@ python3 collectors/arml_power.py
 
 ## Olympiads tracked
 
-See [`docs/DATA_COLLECTION.md`](docs/DATA_COLLECTION.md) for counts. Eight competition types collected so far (IOL, IOAA, four ARML tracks, IJSO, IEO).
+See [`docs/DATA_COLLECTION.md`](docs/DATA_COLLECTION.md) for counts. **20 competition types** across mathematics, physics, science, linguistics, economics, informatics, international law, and humanities.
