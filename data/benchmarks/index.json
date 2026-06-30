@@ -182,7 +182,7 @@
       "type": "rubric_based",
       "team_size": "2-5",
       "benchmark_path": "data/benchmarks/jessup/benchmark.json",
-      "problems_collected": 0,
+      "problems_collected": 1,
       "target": 20,
       "human_score_out_of": "varies (memorial + oral rounds)",
       "ai_judge_out_of": 100,
@@ -192,7 +192,7 @@
         "notes": "Compromis (problem) published annually since 1960. Winning memorials available via Jessup Compendium / HeinOnline."
       },
       "collection_strategy": "One Compromis per year; agents write memorials arguing both Applicant and Respondent sides",
-      "status": "not_started"
+      "status": "collected"
     },
     {
       "id": "iiot",

@@ -19,6 +19,12 @@ BENCHMARK_PATH = os.path.join(ROOT, "data", "benchmarks", "jessup", "benchmark.j
 ILSA_BASE = "https://www.ilsa.org"
 ARCHIVE_URL = f"{ILSA_BASE}/jessup/jessup-problem/"
 
+# NOTE: ILSA.org is closed for maintenance May–June 2026.
+# The correct URL pattern (confirmed from ONU library guide) is:
+#   https://www.ilsa.org/Jessup/Jessup{YEAR}/{YEAR}%20Jessup%20Compromis.pdf
+# Re-run this script once the site is back (expected July 2026).
+# 2024 Compromis was recovered from the Wayback Machine in the meantime.
+
 # Known Compromis titles (for metadata)
 COMPROMIS_TITLES = {
     2026: "The Case Concerning the Gordian Gorge",
@@ -44,17 +50,14 @@ COMPROMIS_TITLES = {
 
 # Direct PDF URL patterns to try per year
 def candidate_urls(year):
-    slug = str(year)[-2:]  # e.g. "26" for 2026
+    # Primary URL pattern confirmed from ONU library guide (jessup2026 libguide)
     return [
-        f"{ILSA_BASE}/wp-content/uploads/{year}/09/Jessup{year}Compromis.pdf",
-        f"{ILSA_BASE}/wp-content/uploads/{year}/09/jessup{year}compromis.pdf",
-        f"{ILSA_BASE}/wp-content/uploads/{year}/10/Jessup{year}Compromis.pdf",
-        f"{ILSA_BASE}/wp-content/uploads/{year}/08/Jessup{year}Compromis.pdf",
-        f"{ILSA_BASE}/wp-content/uploads/Jessup{year}Compromis.pdf",
-        f"https://jessup.ilsa.org/wp-content/uploads/{year}/Jessup{year}Compromis.pdf",
-        # Older naming conventions
-        f"{ILSA_BASE}/wp-content/uploads/{year}/09/{year}JessupCompromis.pdf",
-        f"{ILSA_BASE}/wp-content/uploads/{year}/09/Jessup-Compromis-{year}.pdf",
+        f"{ILSA_BASE}/Jessup/Jessup{year}/{year}%20Jessup%20Compromis.pdf",
+        f"{ILSA_BASE}/Jessup/Jessup{year}/{year}%20Jessup%20Compromis%20and%20Corrections%20and%20Clarifications.pdf",
+        f"{ILSA_BASE}/Jessup/Jessup{year}/{year}JessupCompromis.pdf",
+        f"{ILSA_BASE}/Jessup/Jessup{year}/Jessup{year}Compromis.pdf",
+        # Wayback Machine fallback
+        f"https://web.archive.org/web/{year}0915000000*/{ILSA_BASE}/Jessup/Jessup{year}/{year}%20Jessup%20Compromis.pdf",
     ]
 
 

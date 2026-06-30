@@ -332,7 +332,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 | **Grading** | Rubric: legal analysis, argumentation, writing quality, oral advocacy |
 | **Source** | Compromis (problem) released annually each September since 1960; ~100 countries, 700 schools |
 | **Link** | [ilsa.org/jessup](https://www.ilsa.org/jessup/) |
-| **PDFs** | `data/raw/jessup/` (not yet collected) |
+| **PDFs** | `data/raw/jessup/` — 2024 recovered via Wayback Machine; full archive available once ILSA.org returns from maintenance (closed May–June 2026, expected back July 2026) |
 
 ---
 
@@ -392,6 +392,6 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 | `ijso_practical` | Missing years + answer PDFs |
 | `ieo_business_case` | Pre-2021 cases if published |
 | `wsc_writing` | Collect essay prompts + rubrics from scholarscup.org per season |
-| `jessup` | Collect Compromis PDFs from ilsa.org archive (1990s–present) |
+| `jessup` | Re-run `collectors/jessup.py` once ILSA.org returns from maintenance (expected July 2026); URL pattern confirmed: `ilsa.org/Jessup/Jessup{YEAR}/{YEAR} Jessup Compromis.pdf` |
 | `iiot` | Collect task PDFs + solutions from iio.team/competition/tasks |
 | `icpc` | Collect World Finals problem sets from problems.icpc.io |
