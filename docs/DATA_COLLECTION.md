@@ -39,14 +39,43 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 | `purple_comet` | Purple Comet! Math Meet | Mathematics | 44 | 1,051 |
 | `itym` | ITYM (Young Mathematicians' Tournament) | Mathematics | 17 | 218 |
 | `wsc_writing` | WSC — Collaborative Writing | Literature / Humanities | 3 (2024–2026) | 42 |
-| `jessup` | Jessup Moot Court Competition | International Law | 0 | 0 |
-| `iiot` | IIOT (Informatics Olympiad in Teams) | Informatics / CS | 0 | 0 |
-| `icpc` | ICPC World Finals | Informatics / CS | 0 | 0 |
+| `jessup` | Jessup Moot Court Competition | International Law | 1 (2024) | 1 |
+| `iiot` | IIOT (Informatics Olympiad in Teams) | Informatics / CS | 4 (2021–2024) | 38 |
+| `icpc` | ICPC World Finals | Informatics / CS | 5 (2020–2024) | 51 |
 | **Total** | | | **286+** | **4,195+** |
 
 ---
 
-## IOL Team · `iol_team`
+## Simulator Matrix
+
+For each competition, the AI agent must be given exactly the same resources a human team has. This table defines what the simulator must provide.
+
+| ID | Full Name | Input Modality | Team Setup | Computers / Devices | Allowed Tools & Resources | Materials Provided by Organiser | Final Deliverable |
+|----|-----------|----------------|------------|---------------------|--------------------------|-------------------------------|-------------------|
+| `iol_team` | International Linguistics Olympiad | PDF + embedded images | 4 agents | **None** | **Strict closed-book: paper & pencil only.** No calculator, no reference material. | Problem packet PDF | Written answers on team answer sheet |
+| `ioaa_group` | Intl. Olympiad on Astronomy & Astrophysics | PDF + data tables + star-chart images | 5 agents | **None** (1 scientific calculator per student) | Scientific calculator; compass, ruler, protractor; provided constants/formulae sheet. No internet. | Problem PDF, constants sheet, star charts, CSV data files, graph paper | Boxed numerical answers with units |
+| `arml_power` | American Regions Mathematics League — Power | PDF | Flexible team size | **None** | **Paper & pencil only; no calculator.** Proofs may be written in any format. | Problem packet | Written proofs / justifications (partial credit per sub-part) |
+| `arml_national_team` | ARML National — Team Round | PDF / printed cards | ~15 agents | **None** | **Calculator allowed** (scientific or graphing). No internet. | Problem cards | Single numerical answer per question |
+| `arml_national_power` | ARML National — Power Round | PDF | ~15 agents | **None** | **Calculator allowed** (scientific or graphing). No internet. | Problem packet | Written proofs / justifications |
+| `arml_local` | ARML Local | PDF | 6 agents | **None** | **Calculator allowed** (scientific or graphing). No internet. | Problem sheet | Single numerical answer per question |
+| `ijso_practical` | International Junior Science Olympiad — Team Practical | PDF protocol + physical lab setup | 3 agents | **None** | Scientific calculator; physical lab instruments (glassware, chemicals, thermometer, scale, etc.); graph paper. No internet. | Protocol PDF, lab equipment list, data tables | Lab report: measurements, calculations, tables, graphs, drawings |
+| `ieo_business_case` | International Economics Olympiad — Business Case | PDF case study + data files | 5 agents | **1+ computers** | **Full internet research** allowed; spreadsheet (Excel/Google Sheets); slide software (PowerPoint/Google Slides). ~24 h window. | Case PDF, supporting data files | Presentation slides (PDF) + oral Q&A |
+| `iypt` | International Young Physicists' Tournament | Annual text problem list | 5 agents | Varies; presentation slides required | **Months of prep:** any books, papers, software, experiments allowed. **At tournament:** printed materials & slides only; no live internet. | 17 open-ended physics problems per year | Oral physics presentation (~12 min) + live Reporter/Opponent/Reviewer debate |
+| `hmmt_team` | Harvard-MIT Mathematics Tournament — Team Round | PDF | 6–8 agents | **None** | **Paper & pencil only; no calculator.** Problems often build on each other sequentially. | Problem sheet | Short numerical or algebraic answers (problems may reference earlier answers) |
+| `hmmt_guts` | HMMT — Guts Round | Paper batches delivered progressively | 6–8 agents | **None** | **Paper & pencil only; no calculator.** Answers submitted as each batch is completed. | Sets of 3–4 problems delivered one batch at a time | Numerical answers per set, submitted progressively; live leaderboard feedback |
+| `mcm` | Mathematical Contest in Modeling | PDF problem statement | 3 agents | **1 computer** | **Full internet, any software** (Python, MATLAB, R, Excel, LaTeX/Word). Data downloads permitted. 99-hour window. | Problem PDF (Problems A, B, or C) | PDF report ≤ 25 pages + 1-page summary sheet |
+| `icm` | Interdisciplinary Contest in Modeling | PDF problem statement | 3 agents | **1 computer** | Same as MCM. | Problem PDF (Problems D, E, or F) | PDF report ≤ 25 pages + 1-page summary sheet |
+| `fyziklani` | Physics Brawl Online (Fyziklání) | Online text + images (progressive queue) | Up to 5 agents | **1 computer** (online judge only) | Scientific calculator; paper. **No internet browsing.** Only the online judge portal is accessible. Problems unlock based on correct answers. | Progressive problem queue (harder problems unlock as easier ones are solved) | Numerical / short-text answers submitted via online judge; live score visible |
+| `purple_comet` | Purple Comet! Math Meet | PDF or online text | Up to 6 agents | **1 computer** (online submission) | **Calculator allowed.** Online submission only; no internet research during contest. | Problem PDF (HS or MS division) | Integer or rational numerical answers submitted online |
+| `itym` | International Tournament of Young Mathematicians | Annual text problem list | 4–6 agents | Varies; presentation slides required | **Months of prep:** any books, papers, software, tools. **At tournament:** printed materials & slides only; no live internet. | 10–11 open-ended math problems per year | Oral math presentation + live Reporter/Opponent/Reviewer debate |
+| `wsc_writing` | World Scholar's Cup — Collaborative Writing | 6 text prompts (revealed at start of event) | 3 agents | **None** | **Nothing — fully closed.** No devices, no notes from outside. During 20-min team prep: 1 sheet of blank paper per team member for notes only (discarded before writing). | 6 prompts (1 per subject area); blank lined paper | 3 handwritten essays (1 per agent, ~1 page each), 40 min individual writing |
+| `jessup` | Philip C. Jessup International Law Moot Court Competition | PDF Compromis (legal problem scenario, ~15 pp.) | 2–5 agents | **Computers** (multi-month prep window) | **Full internet, legal databases** (Westlaw, LexisNexis, HeinOnline), any legal texts, international law treaties. | Compromis PDF (released annually each September) | Written memorials (Applicant ≤ 45 pp., Respondent ≤ 45 pp.) + oral pleading rounds |
+| `iiot` | Informatics Olympiad in Teams | PDF problem statements | 4 agents | **2 computers** per team | 2 computers; **no internet**; offline language documentation & standard library reference only. Common IDEs (VS Code, CLion, vim). No communication between the 2 computers beyond paper/speech. | Problem PDFs, online judge interface | Code solutions submitted to automated judge; judge returns AC / WA / TLE / RE per test case |
+| `icpc` | International Collegiate Programming Contest — World Finals | PDF problem set | 3 agents | **1 computer** | 1 computer; **no internet**; **team reference sheet allowed** (self-prepared, ≤ 25 pages, printed, brought in). Common IDEs. Language choice: C++, Java, Python, Kotlin. | Problem PDF, 1 computer, blank scratch paper | Code solutions submitted to automated judge; ranked by # problems solved then total time penalty |
+
+---
+
+## IOL Team (International Linguistics Olympiad) · `iol_team`
 
 | | |
 |---|---|
@@ -62,7 +91,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ---
 
-## IOAA Group · `ioaa_group`
+## IOAA Group (International Olympiad on Astronomy and Astrophysics) · `ioaa_group`
 
 | | |
 |---|---|
@@ -78,7 +107,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ---
 
-## ARML Power Contest (mail-in) · `arml_power`
+## ARML Power Contest — mail-in (American Regions Mathematics League) · `arml_power`
 
 | | |
 |---|---|
@@ -94,7 +123,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ---
 
-## ARML National — Team Round · `arml_national_team`
+## ARML National — Team Round (American Regions Mathematics League) · `arml_national_team`
 
 | | |
 |---|---|
@@ -110,7 +139,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ---
 
-## ARML National — Power Round · `arml_national_power`
+## ARML National — Power Round (American Regions Mathematics League) · `arml_national_power`
 
 | | |
 |---|---|
@@ -126,7 +155,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ---
 
-## ARML Local · `arml_local`
+## ARML Local (American Regions Mathematics League) · `arml_local`
 
 | | |
 |---|---|
@@ -142,7 +171,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ---
 
-## IJSO Team Practical · `ijso_practical`
+## IJSO Team Practical (International Junior Science Olympiad) · `ijso_practical`
 
 | | |
 |---|---|
@@ -158,7 +187,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ---
 
-## IEO Business Case · `ieo_business_case`
+## IEO Business Case (International Economics Olympiad) · `ieo_business_case`
 
 | | |
 |---|---|
@@ -174,7 +203,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ---
 
-## IYPT · `iypt`
+## IYPT (International Young Physicists' Tournament) · `iypt`
 
 | | |
 |---|---|
@@ -190,7 +219,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ---
 
-## HMMT — Team Round · `hmmt_team`
+## HMMT — Team Round (Harvard-MIT Mathematics Tournament) · `hmmt_team`
 
 | | |
 |---|---|
@@ -206,7 +235,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ---
 
-## HMMT — Guts Round · `hmmt_guts`
+## HMMT — Guts Round (Harvard-MIT Mathematics Tournament) · `hmmt_guts`
 
 | | |
 |---|---|
@@ -222,7 +251,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ---
 
-## MCM · `mcm`
+## MCM (Mathematical Contest in Modeling) · `mcm`
 
 | | |
 |---|---|
@@ -238,7 +267,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ---
 
-## ICM · `icm`
+## ICM (Interdisciplinary Contest in Modeling) · `icm`
 
 | | |
 |---|---|
@@ -254,7 +283,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ---
 
-## Physics Brawl Online · `fyziklani`
+## Physics Brawl Online (Fyziklání) · `fyziklani`
 
 | | |
 |---|---|
@@ -286,7 +315,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ---
 
-## ITYM · `itym`
+## ITYM (International Tournament of Young Mathematicians) · `itym`
 
 | | |
 |---|---|
@@ -302,7 +331,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ---
 
-## WSC Collaborative Writing · `wsc_writing`
+## WSC Collaborative Writing (World Scholar's Cup) · `wsc_writing`
 
 | | |
 |---|---|
@@ -320,13 +349,13 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ---
 
-## Jessup Moot Court · `jessup`
+## Jessup Moot Court (Philip C. Jessup International Law Moot Court Competition) · `jessup`
 
 | | |
 |---|---|
 | **Domain** | International Law |
-| **Years/sessions** | 0 (collection not started) |
-| **Questions** | 0 |
+| **Years/sessions** | 1 (2024, via Wayback Machine; full archive pending ILSA.org maintenance) |
+| **Questions** | 1 Compromis |
 | **Team size** | 2–5 students (law school / collegiate) |
 | **Time** | Months of preparation; written memorials + oral rounds |
 | **Answer type** | Written memorials (Applicant + Respondent) and oral pleadings |
@@ -337,37 +366,37 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ---
 
-## IIOT · `iiot`
+## IIOT (Informatics Olympiad in Teams) · `iiot`
 
 | | |
 |---|---|
 | **Domain** | Informatics / Computer Science |
-| **Years/sessions** | 0 (collection not started) |
-| **Questions** | 0 |
+| **Years/sessions** | 4 (2021–2024) |
+| **Questions** | 38 problem statements |
 | **Team size** | 4 students (high school) |
 | **Time** | 3 hours (international round: 4 hours); 2 PCs per team |
 | **Answer type** | Algorithmic code solutions submitted to an online judge |
 | **Grading** | Automated judge: accepted / wrong answer / time-limit exceeded per test case |
 | **Source** | Paper, 2 computers; no internet |
 | **Link** | [iio.team](https://iio.team/) |
-| **PDFs** | `data/raw/iiot/` (not yet collected) |
+| **Data** | `data/raw/iiot/` (38 PDFs), `data/benchmarks/iiot/benchmark.json` |
 
 ---
 
-## ICPC World Finals · `icpc`
+## ICPC World Finals (International Collegiate Programming Contest) · `icpc`
 
 | | |
 |---|---|
 | **Domain** | Informatics / Computer Science |
-| **Years/sessions** | 0 (collection not started) |
-| **Questions** | 0 |
+| **Years/sessions** | 5 (2020–2024) |
+| **Questions** | 51 problem statements |
 | **Team size** | 3 students (collegiate) |
 | **Time** | 5 hours; 1 computer per team |
 | **Answer type** | Algorithmic code solutions; multiple problems per contest |
 | **Grading** | Automated judge; ranked by problems solved then time penalty |
 | **Source** | 1 computer; no internet; reference materials allowed |
 | **Link** | [icpc.global](https://icpc.global/) / [problems.icpc.io](https://problems.icpc.io/) |
-| **PDFs** | `data/raw/icpc/` (not yet collected) |
+| **Data** | `data/raw/icpc/` (51 `.txt` problem statements, 2020–2024), `data/benchmarks/icpc/benchmark.json` |
 
 ---
 
