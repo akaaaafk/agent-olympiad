@@ -220,7 +220,7 @@
       "type": "test_based",
       "team_size": 3,
       "benchmark_path": "data/benchmarks/icpc/benchmark.json",
-      "problems_collected": 51,
+      "problems_collected": 158,
       "target": 20,
       "human_score_out_of": "number of problems solved (varies)",
       "ai_judge_out_of": 100,

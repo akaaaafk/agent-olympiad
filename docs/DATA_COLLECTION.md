@@ -18,7 +18,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 | Competitions | Years/sessions | Questions |
 |-------------:|---------------:|----------:|
-| **20** | **299** | **4,327** |
+| **20** | **308** | **4,434** |
 
 | ID | Competition | Domain | Years/sessions | Questions |
 |----|-------------|--------|---------------:|----------:|
@@ -41,7 +41,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 | `wsc_writing` | WSC — Collaborative Writing | Literature / Humanities | 3 (2024–2026) | 42 |
 | `jessup` | Jessup Moot Court Competition | International Law | 1 (2024) | 1 |
 | `iiot` | IIOT (Informatics Olympiad in Teams) | Informatics / CS | 4 (2021–2024) | 38 |
-| `icpc` | ICPC World Finals | Informatics / CS | 5 (2020–2024) | 51 |
+| `icpc` | ICPC World Finals | Informatics / CS | 14 (2012–2025) | 158 |
 | **Total** | | | **286+** | **4,195+** |
 
 ---
@@ -388,15 +388,15 @@ For each competition, the AI agent must be given exactly the same resources a hu
 | | |
 |---|---|
 | **Domain** | Informatics / Computer Science |
-| **Years/sessions** | 5 (2020–2024) |
-| **Questions** | 51 problem statements |
+| **Years/sessions** | 14 (2012–2025) |
+| **Questions** | 158 problem statements |
 | **Team size** | 3 students (collegiate) |
 | **Time** | 5 hours; 1 computer per team |
 | **Answer type** | Algorithmic code solutions; multiple problems per contest |
 | **Grading** | Automated judge; ranked by problems solved then time penalty |
 | **Source** | 1 computer; no internet; reference materials allowed |
 | **Link** | [icpc.global](https://icpc.global/) / [problems.icpc.io](https://problems.icpc.io/) |
-| **Data** | `data/raw/icpc/` (51 `.txt` problem statements, 2020–2024), `data/benchmarks/icpc/benchmark.json` |
+| **Data** | `data/raw/icpc/` (158 `.txt` problem statements, 2012–2025), `data/benchmarks/icpc/benchmark.json` |
 
 ---
 

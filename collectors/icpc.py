@@ -20,27 +20,20 @@ BENCHMARK_PATH = os.path.join(ROOT, "data", "benchmarks", "icpc", "benchmark.jso
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
-# Kattis contest slugs for ICPC World Finals
-# Verified by checking open.kattis.com/problem-sources/ICPC World Finals
-CONTEST_SLUGS = {
-    2024: "icpc2024",
-    2023: "icpc2023",
-    2022: "icpc2022",
-    2021: "icpc2021",
-    2020: "icpc2020",
-    2019: "icpc2019",
-    2018: "icpc2018",
-    2017: "icpc2017",
-    2016: "icpc2016",
-    2015: "icpc2015",
-    2014: "icpc2014",
-    2013: "icpc2013",
-    2012: "icpc2012",
-    2011: "icpc2011",
-    2010: "icpc2010",
-}
+# open.kattis.com problem-source slugs for ICPC World Finals.
+# 2012–2018 use the longer ACM-ICPC branding; 2019 uses ACM-ICPC short form;
+# 2020+ use the current ICPC branding. All verified by scraping all 847 Kattis sources.
+def kattis_source_slug(year: int) -> str:
+    if year >= 2020:
+        return f"ICPC%20World%20Finals%20{year}"
+    elif year == 2019:
+        return f"ACM-ICPC%20World%20Finals%20{year}"
+    elif 2012 <= year <= 2018:
+        return f"International%20Collegiate%20Programming%20Contest%20(ACM-ICPC)%20World%20Finals%20{year}"
+    return ""
 
-TARGET_YEARS = sorted(CONTEST_SLUGS.keys())
+# Years available on open.kattis.com (2012–2025)
+TARGET_YEARS = list(range(2012, 2026))
 
 
 def curl_html(url):
@@ -52,13 +45,9 @@ def curl_html(url):
 
 
 def scrape_problem_list(year, slug):
-    """Return list of (problem_id, title) from a Kattis contest page."""
-    url = f"https://open.kattis.com/problem-sources/ICPC%20World%20Finals%20{year}"
+    """Return list of (problem_id, title) from a Kattis problem-source page."""
+    url = f"https://open.kattis.com/problem-sources/{slug}"
     html_src = curl_html(url)
-    if not html_src:
-        # Fallback: try contest page directly
-        url = f"https://open.kattis.com/contests/{slug}/problems"
-        html_src = curl_html(url)
     if not html_src:
         return []
 
@@ -173,7 +162,8 @@ def main():
             print(f"  {year}: {len(already)} problems already collected — skipping")
             continue
 
-        entries = collect_year(year, CONTEST_SLUGS[year])
+        slug = kattis_source_slug(year)
+        entries = collect_year(year, slug)
         # Replace any partial entries for this year
         all_entries = [e for e in all_entries if e.get("year") != year]
         all_entries.extend(entries)
