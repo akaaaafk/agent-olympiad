@@ -40,9 +40,9 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 | `itym` | ITYM (Young Mathematicians' Tournament) | Mathematics | 17 | 218 |
 | `wsc_writing` | WSC — Collaborative Writing | Literature / Humanities | 3 (2024–2026) | 42 |
 | `jessup` | Jessup Moot Court Competition | International Law | 1 (2024) | 1 |
-| `iiot` | IIOT (Informatics Olympiad in Teams) | Informatics / CS | 4 (2021–2024) | 38 |
+| `iiot` | IIOT (Informatics Olympiad in Teams) | Informatics / CS | 4 (2017, 2021–2023) | 38 |
 | `icpc` | ICPC World Finals | Informatics / CS | 14 (2012–2025) | 158 |
-| **Total** | | | **286+** | **4,195+** |
+| **Total** | | | **308** | **4,434** |
 
 ---
 
@@ -371,7 +371,7 @@ For each competition, the AI agent must be given exactly the same resources a hu
 | | |
 |---|---|
 | **Domain** | Informatics / Computer Science |
-| **Years/sessions** | 4 (2021–2024) |
+| **Years/sessions** | 4 (2017, 2021–2023) |
 | **Questions** | 38 problem statements |
 | **Team size** | 4 students (high school) |
 | **Time** | 3 hours (international round: 4 hours); 2 PCs per team |
