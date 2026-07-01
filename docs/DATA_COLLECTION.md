@@ -18,7 +18,7 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 | Competitions | Years/sessions | Questions |
 |-------------:|---------------:|----------:|
-| **20** | **286+** | **4,195+** |
+| **20** | **299** | **4,327** |
 
 | ID | Competition | Domain | Years/sessions | Questions |
 |----|-------------|--------|---------------:|----------:|
