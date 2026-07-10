@@ -19,6 +19,12 @@ Rules:
 - submit_final must contain the complete team answer.
 - Be substantive; build on prior discussion."""
 
+ACTION_BLOCK_RE = re.compile(
+    r"^\s*ACTION:\s*(?P<action>[\w_]+)\s*\|\s*PAYLOAD:\s*(?P<payload>.*?)(?=^\s*ACTION:|\Z)",
+    re.IGNORECASE | re.MULTILINE | re.DOTALL,
+)
+
+# Legacy single-line matcher kept for reference; multi-line payloads need ACTION_BLOCK_RE.
 ACTION_LINE_RE = re.compile(
     r"^\s*ACTION:\s*(?P<action>[\w_]+)\s*\|\s*PAYLOAD:\s*(?P<payload>.*)$",
     re.IGNORECASE | re.MULTILINE,
@@ -38,7 +44,7 @@ def parse_agent_response(response: str) -> list[tuple[str, str]]:
     if not response or not response.strip():
         return [("speak", "(empty response)")]
 
-    matches = list(ACTION_LINE_RE.finditer(response.strip()))
+    matches = list(ACTION_BLOCK_RE.finditer(response.strip()))
     if not matches:
         return [("speak", response.strip())]
 

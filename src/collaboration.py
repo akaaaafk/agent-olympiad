@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Callable, Literal
 
-from actions import apply_agent_response, build_action_instructions, extract_final_answer_from_text
+from actions import apply_agent_response, build_action_instructions, extract_final_answer_from_text, parse_agent_response
 
 SchemaName = Literal["round_table", "centralized", "decentralized"]
 QueryFn = Callable[[str, str], str]
@@ -63,6 +63,15 @@ def _count_numbered_parts(text: str) -> int:
     return len(re.findall(r"(?:^|\n)\s*\d+\s*[\.\)]", text))
 
 
+def _synthesis_system_prompt(env, synthesizer: str) -> str:
+    meta = env.get_metadata()
+    return (
+        f"You are {synthesizer}, writing the team's official final answer sheet for "
+        f"{meta['competition_id']} ({meta.get('year', 'n/a')}).\n"
+        "Output ONLY the numbered answer sheet. No ACTION lines, no commentary."
+    )
+
+
 def _final_answer_instructions(env) -> str:
     task_type = env.problem_data.get("task_type", "")
     total_pts = env.problem_data.get("total_points")
@@ -71,15 +80,37 @@ def _final_answer_instructions(env) -> str:
         return f"""Write the team's COMPLETE final answer sheet{points_line}.
 
 CRITICAL:
-- Include EVERY numbered problem from the problem statement (e.g. 1. through 10.).
-- One line per problem:  1. [answer]  2. [answer]  ...  10. [answer]
+- Include EVERY numbered problem from the problem statement (1. through 10.).
+- Format exactly:
+1. [answer]
+2. [answer]
+...
+10. [answer]
 - Compile the best answers from the full discussion and scratchpad above.
-- Do NOT submit only one or two problems.
+- Output plain text only (no ACTION: lines)."""
+    return "Synthesize the team's complete final answer as plain text."
 
-Use:
-ACTION: submit_final | PAYLOAD: <full numbered answer sheet>"""
-    return """Synthesize the team's complete final answer.
-Use ACTION: submit_final | PAYLOAD: <complete answer>"""
+
+def _submit_synthesis_response(env, synthesizer: str, response: str) -> int:
+    """Submit synthesis output; prefer full response over truncated ACTION payloads."""
+    text = response.strip()
+    if not text:
+        return 0
+
+    for action_type, payload in parse_agent_response(response):
+        if action_type == "submit_final":
+            text = payload.strip()
+            break
+
+    parts = _count_numbered_parts(text)
+    if parts < 3:
+        stripped = response.strip()
+        if _count_numbered_parts(stripped) > parts:
+            text = stripped
+            parts = _count_numbered_parts(text)
+
+    env.execute_action(synthesizer, "submit_final", text)
+    return parts
 
 
 def _synthesis_prompt(env, schema_note: str) -> str:
@@ -117,36 +148,40 @@ def _run_synthesis(
         if progress:
             progress(msg)
 
+    best_answer = ""
+    best_parts = 0
+
     for attempt in range(2):
         _log(f"{synthesizer} synthesizing final answer (attempt {attempt + 1})...")
-        system = _system_prompt(env, synthesizer)
+        system = _synthesis_system_prompt(env, synthesizer)
         user = _synthesis_prompt(env, schema_note)
         if attempt > 0:
             user += (
                 "\n\nREMINDER: Your previous submission was incomplete. "
-                "You MUST include ALL numbered problems (1., 2., 3., ...)."
+                "You MUST include ALL numbered problems (1. through 10.)."
             )
         response = query_llm_fn(system, user)
-        allowed = submitters if submitters is not None else {synthesizer}
-        apply_agent_response(env, synthesizer, response, submitters=allowed)
-        if not env.submitted:
-            answer = extract_final_answer_from_text(response)
-            if answer:
-                env.execute_action(synthesizer, "submit_final", answer)
+        if env.submitted:
+            env.workspace["final_answer"] = ""
+            env.submitted = False
+            env.submitted_by = None
 
-        if not env.submitted:
-            continue
+        parts = _submit_synthesis_response(env, synthesizer, response)
+        answer = env.workspace.get("final_answer", "")
+        if parts > best_parts:
+            best_parts = parts
+            best_answer = answer
 
-        task_type = env.problem_data.get("task_type", "")
-        if task_type in {"team_contest", "team_power", "team_practical"}:
-            parts = _count_numbered_parts(env.workspace.get("final_answer", ""))
-            if parts < 5:
-                _log(f"  submission has only {parts} numbered parts — retrying synthesis")
-                env.workspace["final_answer"] = ""
-                env.submitted = False
-                env.submitted_by = None
-                continue
-        break
+        if parts >= 5:
+            break
+        _log(f"  submission has only {parts} numbered parts — retrying synthesis")
+
+    if best_answer and not env.submitted:
+        env.execute_action(synthesizer, "submit_final", best_answer)
+    elif best_answer and _count_numbered_parts(env.workspace.get("final_answer", "")) < best_parts:
+        env.workspace["final_answer"] = best_answer
+        env.submitted = True
+        env.submitted_by = synthesizer
 
 
 def run_round_table(env, query_llm_fn: QueryFn, config: CollabConfig | None = None) -> dict:
@@ -216,34 +251,14 @@ def run_centralized(env, query_llm_fn: QueryFn, config: CollabConfig | None = No
         apply_agent_response(env, peer, response, submitters=set())
 
     if config.synthesize and not env.submitted:
-        if config.progress:
-            config.progress("Group_Leader synthesizing final answer...")
-        system = _system_prompt(env, leader)
-        user = _synthesis_prompt(env, schema_note)
-        response = query_llm_fn(system, user)
-        apply_agent_response(env, leader, response, submitters={"Group_Leader"})
-        if not env.submitted:
-            answer = extract_final_answer_from_text(response)
-            if answer:
-                env.execute_action(leader, "submit_final", answer)
-        task_type = env.problem_data.get("task_type", "")
-        if env.submitted and task_type in {"team_contest", "team_power", "team_practical"}:
-            parts = _count_numbered_parts(env.workspace.get("final_answer", ""))
-            if parts < 5:
-                if config.progress:
-                    config.progress(f"  only {parts} parts — retrying leader synthesis...")
-                env.workspace["final_answer"] = ""
-                env.submitted = False
-                env.submitted_by = None
-                user = _synthesis_prompt(env, schema_note) + (
-                    "\n\nREMINDER: include ALL numbered problems."
-                )
-                response = query_llm_fn(system, user)
-                apply_agent_response(env, leader, response, submitters={"Group_Leader"})
-                if not env.submitted:
-                    answer = extract_final_answer_from_text(response)
-                    if answer:
-                        env.execute_action(leader, "submit_final", answer)
+        _run_synthesis(
+            env,
+            query_llm_fn,
+            schema_note,
+            leader,
+            submitters={"Group_Leader"},
+            progress=config.progress,
+        )
 
     return _result(env, "centralized")
 

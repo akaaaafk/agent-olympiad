@@ -65,7 +65,7 @@ def make_perplexity_caller(
                 resp = requests.post(
                     "https://api.perplexity.ai/v1/agent",
                     headers=headers,
-                    json={"model": model, "input": full_input},
+                    json={"model": model, "input": full_input, "max_output_tokens": 16000},
                     timeout=180,
                 )
                 if not resp.ok:
