@@ -4,8 +4,8 @@ The raw data files are NOT stored in this git repo (some exceed GitHub's 100 MB
 limit). They live in the private HF dataset repo `akaaafk/multiagent_bench`,
 mirroring the same folder layout:
 
-    art/       12 humanities / arts / ethics / business competitions (~549 MB)
-    olympiad/  OlympicArena parquet + math modeling JSON (~254 MB)
+    art/       9 humanities / arts / ethics / business competitions (~540 MB)
+    olympiad/  OlympicArena parquet + math modeling JSON + MLAgentBench tasks (~254 MB)
 
 Usage:
     pip install -U huggingface_hub

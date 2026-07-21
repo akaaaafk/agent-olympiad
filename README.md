@@ -8,7 +8,7 @@ Benchmark **multi-agent AI teams** on olympiad-style **team tasks**. Part of the
 
 | Doc | Contents |
 |-----|----------|
-| [`docs/DATA_COLLECTION.md`](docs/DATA_COLLECTION.md) | What we collected — summary table + format per contest |
+| [`docs/DATA_COLLECTION.md`](docs/DATA_COLLECTION.md) | Canonical tracker — 20 source-collected competitions + 33 external benchmark datasets |
 | [`data/benchmarks/index.json`](data/benchmarks/index.json) | Olympiad catalog and collection status |
 | [`initial_experiments/`](initial_experiments/) | Archived smoke tests and early multi-agent runs |
 
@@ -41,4 +41,7 @@ python3 collectors/arml_power.py
 
 ## Olympiads tracked
 
-See [`docs/DATA_COLLECTION.md`](docs/DATA_COLLECTION.md) for counts. **20 competition types** across mathematics, physics, science, linguistics, economics, informatics, international law, and humanities.
+See [`docs/DATA_COLLECTION.md`](docs/DATA_COLLECTION.md) for the unified catalog:
+**20 source-collected competition types** plus **33 external benchmark
+datasets** (17 rule-based, 16 rubric/open-ended). The inventories are reported
+separately because they can overlap conceptually.

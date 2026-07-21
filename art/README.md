@@ -1,10 +1,10 @@
 # Data collected — `art/`
 
-Last updated: 2026-07-06
+Last updated: 2026-07-15
 
 > **Data files are not in git.** They are hosted on the private HF dataset [`akaaafk/multiagent_bench`](https://huggingface.co/datasets/akaaafk/multiagent_bench) — run `python download_data.py` at the repo root to fetch them.
 
-**Current focus:** raw material collection only (problems, cases, rubrics, winning samples) for 12 proposed team competitions in humanities, arts appreciation, ethics debate, and business case (~5-agent teams). All files downloaded from official public channels on 2026-07-06.
+**Current focus:** raw material collection only (problems, cases, rubrics, winning samples) for 9 proposed team competitions in humanities, arts appreciation, ethics debate, and business case (~5-agent teams). All files downloaded from official public channels on 2026-07-06.
 
 **Competition** = one contest type (one row in the tracker).  
 **Year/session** = one published case set / problem release (one PDF or archive).  
@@ -18,7 +18,7 @@ Last updated: 2026-07-06
 
 | Competitions | Years/sessions | Questions |
 |-------------:|---------------:|----------:|
-| **12** | **117** | **~114,000** |
+| **9** | **113** | **~114,000** |
 
 | ID | Competition | Domain | Years/sessions | Questions |
 |----|-------------|--------|---------------:|----------:|
@@ -27,14 +27,11 @@ Last updated: 2026-07-06
 | `science_bowl` | DOE National Science Bowl | Science (buzzer quiz) | 33 sample-set groups (508 PDFs) | ~14,000+ |
 | `qanta` | QANTA Quiz Bowl | General knowledge | 1 (2021.12.20 release) | ~100,000 tossups |
 | `gcch_harvard` | Global Case Competition at Harvard | Business (M&A / strategy) | 7 (2018–2026) | 7 cases |
-| `case_world_cup` | Undergrad Case Competition World Cup | Business (consulting) | 1 (2026, rules only) | 0 (case pending registration) |
 | `cfa_research_challenge` | CFA Institute Research Challenge | Finance (equity research) | 19 (2008–2026) | 19 champion reports |
 | `wharton_investment` | Wharton Global HS Investment Competition | Finance (portfolio, long-horizon) | 4 (2019–22 + current) | 4 case studies |
-| `igem` | iGEM | Synthetic biology (project) | 2 (2019, 2025 handbooks) | — (rubrics only) |
-| `nhd` | National History Day (Group entries) | History | 1 (rule book + 5 category rubrics) | — (rubrics only) |
 | `debatebench` | WUDC / BP Debate (DebateBench) | Debate | 32 debates | 256 speeches |
 | `vis_moot` | Willem C. Vis Moot | International commercial law | 7 (26th–33rd editions) | 7 Problems |
-| **Total** | | | **117** | **~114,000** |
+| **Total** | | | **113** | **~114,000** |
 
 ---
 
@@ -49,11 +46,8 @@ For each competition, the AI agent must be given exactly the same resources a hu
 | `science_bowl` | DOE National Science Bowl | Question sets (read aloud; PDF here) | 4 agents + 1 alternate | None | No calculators · no reference materials · Toss-Up: **no conferring**; Bonus: team conferring allowed · buzzer-based | Toss-Up + Bonus question rounds (~25 questions/round) | Spoken short answers on buzzer | [science.osti.gov NSB](https://science.osti.gov/wdts/nsb/Regional-Competitions/Resources) |
 | `qanta` | QANTA Quiz Bowl | Pyramidal tossup text, revealed clue by clue | 4 agents | None | Clues revealed incrementally · earlier buzz = more knowledge credit · no external references · buzz-timing decision is part of the task | JSON question stream with answers & metadata | Answer at chosen buzz point, auto-judged | [qanta-org.github.io](https://qanta-org.github.io/data-and-code/) · [HF mirror](https://huggingface.co/datasets/TasnimKabir12/qanta) |
 | `gcch_harvard` | Global Case Competition at Harvard | Case PDF | 2–5 agents | Unrestricted | Full internet & any software · winning decks from past editions serve as gold-standard references | Case PDF | Slide deck + recorded/live pitch | [thecasecompetition.org](https://www.thecasecompetition.org/past-editions) |
-| `case_world_cup` | Undergrad Case Competition World Cup | Case (distributed by email after registration) | 4–5 agents | Unrestricted | Full internet & any software · two-stage format: written deck qualifies for video/live pitch | Case prompt (pending), scoring criteria page archived | Round 1 written deck → Round 2 pitch | [managementconsulted.com](https://managementconsulted.com/undergrad-case-competition-world-cup-2026/) |
 | `cfa_research_challenge` | CFA Institute Research Challenge | Assigned public company + public filings | 3–5 agents | Unrestricted | Full internet research · public company data · industry-standard rubric (valuation, writing, presentation) | Subject company; 19 years of champion reports as reference | 10-page equity research report (buy/sell) + oral defense | [cfainstitute.org](https://www.cfainstitute.org/insights/events/research-challenge/past-champions) |
 | `wharton_investment` | Wharton Global HS Investment Competition | Client case study (HTML) + trading simulator | 4–7 agents | Online simulator | 10-week simulated portfolio management · full research allowed · client constraints defined in case | Client case study with background & investment constraints | Portfolio track record + final strategy report & defense | [globalyouth.wharton.upenn.edu](https://globalyouth.wharton.upenn.edu/investment-competition/) |
-| `igem` | iGEM | Project brief + judging handbook | 8–15 agents | Unrestricted | Season-long synthetic-biology project · full lab & internet · two-layer judging: objective medal criteria checklist + subjective award rubric | Judging handbooks (2019, 2025) with medal criteria & rubrics | Team wiki + presentation + judging session | [competition.igem.org](https://competition.igem.org/) |
-| `nhd` | National History Day — Group entries | Annual theme + rule book | 2–5 agents | Unrestricted | Year-long historical research · 5 entry categories (paper / exhibit / documentary / performance / website) · weighted rubric: 80% historical quality, 20% presentation | Contest rule book + per-category evaluation forms | Category-specific project entry | [nhd.org contest rules](https://nhd.org/en/contest/contest-rules/) |
 | `debatebench` | WUDC / British Parliamentary Debate | Motion text (revealed 15 min before round) | 8 agents (4 teams × 2) | None during prep | BP format: 15-minute prep after motion release · printed materials only, no internet during prep · 7-minute speeches in fixed order | Motion; 32 transcribed matches with official judge scores as ground truth | 7-minute speech per agent; ranked by judges | [DebateBench on HF](https://huggingface.co/datasets/utkarsh2105/DebateBench) · [arXiv:2502.06279](https://arxiv.org/abs/2502.06279) |
 | `vis_moot` | Willem C. Vis International Commercial Arbitration Moot | Problem PDF (60–90 pp. case record) | 2–8 agents | Unrestricted | Full legal research · months of preparation · Procedural Order No. 2 provides official clarifications · same structure as Jessup (pipeline reusable) | Problem + PO2 + current rules | Claimant & Respondent memoranda + oral pleading | [vismoot.org](https://www.vismoot.org/previous-moots/) |
 
@@ -149,24 +143,6 @@ For each competition, the AI agent must be given exactly the same resources a hu
 
 ---
 
-## Undergrad Case Competition World Cup · `case_world_cup`
-
-| | |
-|---|---|
-| **Domain** | Business case — consulting |
-| **Years/sessions** | 1 (2026 format / scoring / registration page archived) |
-| **Questions** | 0 collected (case prompt distributed by email after registration) |
-| **Team size** | 4–5 students |
-| **Time** | Two rounds: written deck → video/live pitch |
-| **Answer type** | Round 1 written deck; Round 2 pitch |
-| **Grading** | Public scoring dimensions |
-| **Source** | Unrestricted internet & software |
-| **Link** | [managementconsulted.com](https://managementconsulted.com/undergrad-case-competition-world-cup-2026/) |
-| **Data** | `case_world_cup/` — `competition-info-2026.html` |
-| **Notes** | Medium data availability. Either register to obtain the case, or use GCCH / CFA as the primary business-case sources instead. |
-
----
-
 ## CFA Institute Research Challenge · `cfa_research_challenge`
 
 | | |
@@ -200,42 +176,6 @@ For each competition, the AI agent must be given exactly the same resources a hu
 | **Link** | [globalyouth.wharton.upenn.edu](https://globalyouth.wharton.upenn.edu/investment-competition/) |
 | **Data** | `wharton_investment/` — `case-study-2019-2020/2020-2021/2021-2022.html` + `case-study-current.html` |
 | **Notes** | **Best long-horizon candidate** — deterministic evaluation possible by replaying real historical market data. Analyst/PM role split for 4–7 agents. Past winning reports are scattered on Issuu/SlideShare (see backlog). |
-
----
-
-## iGEM (International Genetically Engineered Machine) · `igem`
-
-| | |
-|---|---|
-| **Domain** | Synthetic biology — season-long project competition |
-| **Years/sessions** | 2 (2019 + 2025 judging handbooks) |
-| **Questions** | — (rubrics only; no problem sets — iGEM is project-based) |
-| **Team size** | 8–15 students |
-| **Time** | Full season (months) |
-| **Answer type** | Team wiki + presentation + judging session |
-| **Grading** | Two-layer: objective medal-criteria checklist + subjective award rubric |
-| **Source** | Unrestricted (real lab + internet) |
-| **Link** | [competition.igem.org](https://competition.igem.org/) · [static.igem.org](https://static.igem.org/) |
-| **Data** | `igem/` — `2025-judge-handbook.pdf` (7.5 MB, medal criteria + award rubric + judging process) + `2019-judging-handbook.pdf` |
-| **Notes** | Template for large-team, capstone-style project competition. The **two-layer judging structure** (objective checklist + subjective rubric) transfers directly to agent-team evaluation. 20 years of team wikis (`20XX.igem.org/Team:XXX`) are statically crawlable but huge — sample by year/medal (see backlog). |
-
----
-
-## National History Day — Group entries · `nhd`
-
-| | |
-|---|---|
-| **Domain** | History (humanities project competition) |
-| **Years/sessions** | 1 (2020 contest rule book + 2024 evaluation forms for 5 categories) |
-| **Questions** | — (rules & rubrics only; task instances generated from annual themes) |
-| **Team size** | 2–5 students (Group entries) |
-| **Time** | Year-long project |
-| **Answer type** | One of 5 categories: paper / exhibit / documentary / performance / website |
-| **Grading** | Weighted rubric: 80% historical quality (argument, sources, theme fit) + 20% presentation |
-| **Source** | Unrestricted research |
-| **Link** | [nhd.org contest rules](https://nhd.org/en/contest/contest-rules/) |
-| **Data** | `nhd/` — `nhd-contest-rule-book-2020.pdf` + 5 category evaluation guides (6 files) |
-| **Notes** | Annual themes are public, so task instances can be batch-generated. |
 
 ---
 
@@ -282,7 +222,52 @@ For each competition, the AI agent must be given exactly the same resources a hu
 | `ethics_bowl_appe` | 2001–2021 Case Library on official Google Drive (28 topic categories, incl. Art and Cultural Heritage) |
 | `ethics_bowl_nhseb` | 2012–2024 regional/national cases archived page-by-page at `https://nhseb.org/case-library/category/<year>+National+Case+Set` — write a scraper for batch collection |
 | `gcch_harvard` | Open the 9 untitled winning decks (`gcch_*.pdf`) to confirm edition and rename |
-| `case_world_cup` | Register by email to obtain the actual case prompt, or drop in favor of GCCH / CFA |
 | `wharton_investment` | Past winning reports scattered on Issuu/SlideShare (not archived centrally by the organizer) |
-| `igem` | Sample team wikis by year/medal from `20XX.igem.org/Team:XXX` static archive (thousands of teams — do not crawl exhaustively) |
 | `vis_moot` | Earlier Problems (1994–2018) archived on per-edition pages at vismoot.org; winning memoranda from the Pace database |
+
+---
+
+## Evaluation design
+
+The 9 competitions fall into three tiers by how objectively the deliverable can be scored. Every score reported from Tier 2/3 must be backed by the judge-validation step below.
+
+### Tier 1 — Rule-based auto-grading
+
+Closed-form answers; no judge needed.
+
+| ID | Protocol |
+|----|----------|
+| `science_bowl` | Normalized exact match against official answers (accept listed alternate forms). Preserve the round protocol: Toss-Up = one agent answers with no conferring (individual decision), Bonus = team confers then answers — a built-in individual-vs-team controlled comparison. Score = official point rules (4/10 pts). |
+| `qanta` | Reveal clues incrementally; team must decide **when to buzz** and what to answer. Metrics: answer accuracy + expected-wins-style buzz-position credit (earlier correct buzz scores higher, wrong early buzz penalized), following the official QANTA evaluation. Fully automatic. |
+| `wharton_investment` (portfolio half) | Deterministic replay: execute the team's trade decisions against real historical market data for the 10-week window, scoring return / drawdown / constraint compliance against the client case's stated constraints. The strategy-report half falls under Tier 3. |
+
+### Tier 2 — Reference-anchored comparison (gold samples or human scores exist)
+
+| ID | Anchor | Protocol |
+|----|--------|----------|
+| `debatebench` | Official speaker scores + team rankings (`scores.xlsx`) | **This is the calibration set.** First validate an LLM adjudicator on the 256 human speeches (Spearman vs official speaker scores; pairwise ranking accuracy on team rankings). Only a judge that passes this gate is used elsewhere. Then run agent teams in BP self-play (4 teams × 2 agents, 15-min-prep budget) and rank matches with the validated adjudicator. |
+| `gcch_harvard` | 9 winning decks | Pairwise LLM-judge under the official criteria: agent deck vs champion deck, position-swapped, → win rate. A well-below-50% win rate is expected; track it over time rather than reading it as absolute quality. |
+| `cfa_research_challenge` | 19 champion reports | Same pairwise protocol on the assigned company's report; rubric axes = valuation rigor / financial analysis / writing / presentation (the published CFA criteria). Champion reports double as few-shot references for the judge, not for the solver. |
+| `vis_moot` | Winning memoranda (Pace database, backlog) | Pairwise memorandum comparison per edition (Claimant and Respondent scored separately) once winning memoranda are collected; until then falls back to Tier 3 rubric judging. |
+
+### Tier 3 — Rubric-based judge panel (no gold reference)
+
+| ID | Protocol |
+|----|----------|
+| `ethics_bowl_appe` / `ethics_bowl_nhseb` | Run the full adversarial match structure between **two agent teams** (presentation → opposing commentary → response → judge Q&A), not single-output grading. A panel of ≥3 LLM judges scores with the official judging/scoring guides included in the folder; team-vs-team outcomes aggregate into Elo across the case set. Self-play makes only relative ranking meaningful — which is exactly what the benchmark needs. |
+| `wharton_investment` (report half) | Panel-judged against the official judging emphasis (strategy coherence, constraint fit, risk articulation); combined score = weighted portfolio replay (Tier 1) + report rubric. |
+
+### Judge validation & bias controls
+
+- **Gate:** every LLM judge configuration must first pass the `debatebench` calibration (target: Spearman ≥ 0.5 with official speaker scores, pairwise team-ranking accuracy meaningfully above chance) before its Tier 2/3 scores are trusted.
+- **Position bias:** all pairwise comparisons run twice with order swapped; disagreements count as ties.
+- **Verbosity bias:** enforce the competition's own length limits (page/time caps from the rules PDFs) before judging; over-limit output is truncated, mirroring real rules.
+- **Panel:** ≥3 judge models (or 3 prompts) with score averaging; report inter-judge agreement alongside results.
+
+### Team-level metrics (all tiers)
+
+Besides deliverable quality, log per run: turn/token budget consumed, number of inter-agent messages, role-specialization entropy (how unevenly work is distributed), and a solo-agent baseline with the same total budget — the headline claim of the benchmark is the team-vs-solo delta, not the absolute score.
+
+### Contamination note
+
+QANTA (2021 release), DebateBench transcripts, and older case sets predate current model training cutoffs — assume memorization. Prefer the newest sessions (2025–26 case sets, 33rd Vis Problem, current Wharton case) for headline numbers, and use older years as development splits.

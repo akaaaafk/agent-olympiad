@@ -1,10 +1,20 @@
-# Data collected
+# Data collection and benchmark catalog
 
-Last updated: 2026-06-29
+Last updated: 2026-07-15
 
-**Current focus:** raw PDF collection only (`data/raw/`). No benchmark or experiment work for now.
+This is the **canonical detailed tracker** for Agent Olympiad. It covers two
+complementary inventories:
 
-Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_experiments/docs/STATUS.md)
+1. **Source-collected team competitions** — official PDFs and extracted JSON
+   maintained in this repository under `data/raw/` and `data/benchmarks/`.
+2. **External benchmark suite** — ready-made public datasets kept in the
+   workspace-level [`benchmark/`](../../benchmark/README.md) directory.
+
+The two inventories are counted separately: one contest can conceptually overlap
+with a benchmark (for example MCM/ICM and `modeling_agent`). Therefore **20 + 33
+does not claim 53 unique contest families**.
+
+Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_experiments/docs/STATUS.md).
 
 **Competition** = one contest type (one row in the tracker).  
 **Year/session** = one published team exam (one PDF / one `problem_id`).  
@@ -14,7 +24,17 @@ Past experiment results: [`initial_experiments/docs/STATUS.md`](../initial_exper
 
 ## Summary
 
-### Collected
+| Inventory | Entries | Rule-based | Rubric / open-ended | Local data |
+|-----------|--------:|-----------:|---------------------:|-----------:|
+| Source-collected official competitions | 20 | mixed | mixed | 20 |
+| External benchmark suite | 33 | 17 | 16 | 25 |
+| **Tracked entries (not deduplicated)** | **53** | — | — | **45** |
+
+External status: **✅ local** · **⏳ fetched on demand**. Full per-benchmark
+deep dives, source links, and download commands are mirrored in
+[`benchmark/README.md`](../../benchmark/README.md).
+
+### Source-collected official competitions
 
 | Competitions | Years/sessions | Questions |
 |-------------:|---------------:|----------:|
@@ -397,6 +417,77 @@ For each competition, the AI agent must be given exactly the same resources a hu
 | **Source** | 1 computer; no internet; reference materials allowed |
 | **Link** | [icpc.global](https://icpc.global/) / [problems.icpc.io](https://problems.icpc.io/) |
 | **Data** | `data/raw/icpc/` (158 `.txt` problem statements, 2012–2025), `data/benchmarks/icpc/benchmark.json` |
+
+---
+
+## External benchmark suite
+
+These datasets live outside this git repository in the workspace-level
+[`benchmark/`](../../benchmark/README.md) directory. This table is aligned with
+that directory and is the authoritative inventory summary; the linked README
+contains a full detail card for every row.
+
+| ID | Domain | Type | Questions / tasks | Team simulation | Data |
+|----|--------|:----:|------------------:|-----------------|:----:|
+| `OlympicArena` | STEM olympiad | RULE | 10,615 | Per-discipline specialists | ✅ |
+| `OlympiadBench` | STEM olympiad | RULE | 8,476 | Math / physics specialists | ✅ |
+| `AIME` | Competition mathematics | RULE | 60 | Independent solvers + verifier | ✅ |
+| `science_bowl` | Team science quiz | RULE | ~14,000 | 4 agents + alternate; toss-up/bonus protocol | ✅ |
+| `USACO` | Competitive programming | RULE | 307 | Solver / coder / tester | ✅ |
+| `LiveCodeBench` | Competitive programming | RULE | ~1,055 | Solver / coder / reviewer | ⏳ |
+| `CodeContests` | Competitive programming | RULE | ~13,600 | ICPC-style shared submission queue | ⏳ |
+| `SWE-bench_Verified` | Software engineering | RULE | 500 | Locator / patcher / reviewer | ✅ |
+| `MLAgentBench` | ML engineering | RULE | 15 | Researcher / engineer / reviewer | ✅ |
+| `MLE-bench` | ML engineering | RULE | 75 (Lite 22) | Kaggle-style EDA / feature / model roles | ⏳ |
+| `MLR-Bench` | AI/ML research | RUBRIC | 201 | Ideator / experimenter / writer / verifier | ✅ |
+| `PaperBench` | AI/ML research | RUBRIC | 20 papers | Paper reader / implementer / experimenter | ⏳ |
+| `modeling_agent` | Applied math modeling | RUBRIC | 68 | Modeler / coder / writer | ✅ |
+| `NYU_CTF_Bench` | Cybersecurity | RULE | 200 | Category-specialist CTF team | ⏳ |
+| `Cybench` | Cybersecurity | RULE | 40 | Category specialists + verifier | ⏳ |
+| `HealthBench` | Medicine | RUBRIC | 5,000 | Clinician / safety / communicator | ✅ |
+| `HealthBench-Professional` | Medicine | RUBRIC | 525 | Specialist / safety / medical writer | ✅ |
+| `gcch_harvard` | Business strategy | RUBRIC | 7 cases | Finance / strategy / deck / pitch roles | ✅ |
+| `cfa_research_challenge` | Finance | RUBRIC | 19 reports | Valuation / industry / writing / defense | ✅ |
+| `wharton_investment` | Finance | RULE + RUBRIC | 4 cases | Analysts + portfolio manager | ✅ |
+| `vis_moot` | Law | RUBRIC | 7 problems | Research / claimant / respondent / oral roles | ✅ |
+| `debatebench` | Debate | RUBRIC | 32 debates | 4 teams × 2 speakers | ✅ |
+| `ethics_bowl_appe` | Ethics | RUBRIC | ~140 cases | Presentation / commentary / response | ✅ |
+| `ethics_bowl_nhseb` | Ethics | RUBRIC | 15 cases | 3–7 agent dialogic team | ✅ |
+| `qanta` | Quiz bowl | RULE | ~100,000 | Category specialists + buzz controller | ✅ |
+| `HLE` | Frontier multidisciplinary exam | RULE | 2,500 | Subject router + specialist agents | ✅ |
+| `GPQA` | Graduate science | RULE | 448 (Diamond 198) | Biology / physics / chemistry debate | ✅ |
+| `ARC-AGI-2` | Abstract reasoning | RULE | 1,120 public | Hypothesis / program / verifier roles | ⏳ |
+| `GAIA` | General assistant / tool use | RULE | 466 | Orchestrator + browser / file / calculator agents | ✅ |
+| `WritingBench` | Generative writing | RUBRIC | 1,000 | Writer / editor / fact-checker | ✅ |
+| `ProfBench` | Professional reports | RUBRIC | 40 | Researcher / analyst / report writer | ✅ |
+| `BiGGen-Bench` | General generation | RUBRIC | 765 | Capability router + specialist agents | ✅ |
+| `FLASK` | Fine-grained generation skills | RUBRIC | ~1,700 | Skill-specialized agents | ⏳ |
+| **Total** | **12 domain groups** | **17 RULE / 16 RUBRIC** | | | **25 local / 8 on demand** |
+
+### Newly approved gated datasets
+
+The three gated Hugging Face datasets requested in the latest collection pass
+have been approved, downloaded, and verified:
+
+| ID | Verified local content | Workspace path |
+|----|------------------------|----------------|
+| `HLE` | 2,500 parquet rows, ~262 MiB | `../../benchmark/HLE/` |
+| `GPQA` | main 448, Diamond 198, extended 546, ~8 MiB | `../../benchmark/GPQA/` |
+| `GAIA` | validation 165 + test 301, 118 files with attachments, ~105 MiB | `../../benchmark/GAIA/` |
+
+### Evaluation protocol
+
+| Tier | Datasets | Scoring |
+|------|----------|---------|
+| **Tier 1 — deterministic** | All RULE rows | Exact/normalized answer match, hidden tests, `eval.py`, flag match, private-leaderboard score, or exact output-grid match. No LLM judge. |
+| **Tier 2 — reference anchored** | `debatebench`, `gcch_harvard`, `cfa_research_challenge`, `vis_moot`, `PaperBench` | Position-swapped pairwise comparison against official scores, winning entries, or author-designed replication rubrics. |
+| **Tier 3 — rubric panel** | Remaining RUBRIC rows | At least 3 judges apply the official or per-instance rubric; average scores and report inter-judge agreement. |
+
+Before a Tier 2/3 judge is used, calibrate it on `debatebench` human scores
+(target Spearman ≥ 0.5). Run pairwise comparisons in both answer orders, enforce
+the original contest's time/length limits, and treat order disagreement as a tie.
+For every tier, report equal-budget **team vs. solo delta**, token/turn cost,
+inter-agent messages, and role-specialization statistics.
 
 ---
 
