@@ -29,7 +29,7 @@ Last updated: 2026-07-15
 | `gcch_harvard` | Global Case Competition at Harvard | Business (M&A / strategy) | 7 (2018–2026) | 7 cases |
 | `cfa_research_challenge` | CFA Institute Research Challenge | Finance (equity research) | 19 (2008–2026) | 19 champion reports |
 | `wharton_investment` | Wharton Global HS Investment Competition | Finance (portfolio, long-horizon) | 4 (2019–22 + current) | 4 case studies |
-| `debatebench` | WUDC / BP Debate (DebateBench) | Debate | 32 debates | 256 speeches |
+| `debatebench` | WUDC / BP Debate (DebateBench) | Debate | 45 debates | 360 scored speeches |
 | `vis_moot` | Willem C. Vis Moot | International commercial law | 7 (26th–33rd editions) | 7 Problems |
 | **Total** | | | **113** | **~114,000** |
 
@@ -48,7 +48,7 @@ For each competition, the AI agent must be given exactly the same resources a hu
 | `gcch_harvard` | Global Case Competition at Harvard | Case PDF | 2–5 agents | Unrestricted | Full internet & any software · winning decks from past editions serve as gold-standard references | Case PDF | Slide deck + recorded/live pitch | [thecasecompetition.org](https://www.thecasecompetition.org/past-editions) |
 | `cfa_research_challenge` | CFA Institute Research Challenge | Assigned public company + public filings | 3–5 agents | Unrestricted | Full internet research · public company data · industry-standard rubric (valuation, writing, presentation) | Subject company; 19 years of champion reports as reference | 10-page equity research report (buy/sell) + oral defense | [cfainstitute.org](https://www.cfainstitute.org/insights/events/research-challenge/past-champions) |
 | `wharton_investment` | Wharton Global HS Investment Competition | Client case study (HTML) + trading simulator | 4–7 agents | Online simulator | 10-week simulated portfolio management · full research allowed · client constraints defined in case | Client case study with background & investment constraints | Portfolio track record + final strategy report & defense | [globalyouth.wharton.upenn.edu](https://globalyouth.wharton.upenn.edu/investment-competition/) |
-| `debatebench` | WUDC / British Parliamentary Debate | Motion text (revealed 15 min before round) | 8 agents (4 teams × 2) | None during prep | BP format: 15-minute prep after motion release · printed materials only, no internet during prep · 7-minute speeches in fixed order | Motion; 32 transcribed matches with official judge scores as ground truth | 7-minute speech per agent; ranked by judges | [DebateBench on HF](https://huggingface.co/datasets/utkarsh2105/DebateBench) · [arXiv:2502.06279](https://arxiv.org/abs/2502.06279) |
+| `debatebench` | WUDC / British Parliamentary Debate | Motion text (revealed 15 min before round) | 8 agents (4 teams × 2) | None during prep | BP format: 15-minute prep after motion release · printed materials only, no internet during prep · 7-minute speeches in fixed order | Motion; 45 scored matches in `scores.xlsx` (32 with full transcripts) | 7-minute speech per agent; ranked by judges | [DebateBench on HF](https://huggingface.co/datasets/utkarsh2105/DebateBench) · [arXiv:2502.06279](https://arxiv.org/abs/2502.06279) |
 | `vis_moot` | Willem C. Vis International Commercial Arbitration Moot | Problem PDF (60–90 pp. case record) | 2–8 agents | Unrestricted | Full legal research · months of preparation · Procedural Order No. 2 provides official clarifications · same structure as Jessup (pipeline reusable) | Problem + PO2 + current rules | Claimant & Respondent memoranda + oral pleading | [vismoot.org](https://www.vismoot.org/previous-moots/) |
 
 ---
@@ -185,14 +185,14 @@ For each competition, the AI agent must be given exactly the same resources a hu
 |---|---|
 | **Domain** | Debate (humanities, adversarial) |
 | **Years/sessions** | 32 British Parliamentary debates |
-| **Questions** | 256 full speech transcripts (8 speeches per debate) |
+| **Questions** | 360 scored speeches across 45 debates (`scores.xlsx`); 32 debates also have full transcripts |
 | **Team size** | 8 speakers per round (4 teams × 2) |
 | **Time** | 15-minute prep after motion release; 7-minute speeches |
 | **Answer type** | Structured speeches in fixed BP order |
 | **Grading** | **Official judge speaker scores + team rankings included as ground truth** (`scores.xlsx`); Debatrix-style LLM-as-adjudicator reproducible |
 | **Source** | Printed materials only during prep; no internet |
 | **Link** | [DebateBench on HF](https://huggingface.co/datasets/utkarsh2105/DebateBench) · [arXiv:2502.06279](https://arxiv.org/abs/2502.06279) |
-| **Data** | `debatebench/` — `cleaned_speeches/` (extracted, 43 files) + `scores.xlsx` |
+| **Data** | `debatebench/` — `cleaned_speeches/` (32 transcript files) + `scores.xlsx` |
 | **Notes** | The only humanities adversarial dataset here with official judge scores as ground truth. ~32k tokens per match → long-context, multi-party adversarial evaluation. |
 
 ---
@@ -245,7 +245,7 @@ Closed-form answers; no judge needed.
 
 | ID | Anchor | Protocol |
 |----|--------|----------|
-| `debatebench` | Official speaker scores + team rankings (`scores.xlsx`) | **This is the calibration set.** First validate an LLM adjudicator on the 256 human speeches (Spearman vs official speaker scores; pairwise ranking accuracy on team rankings). Only a judge that passes this gate is used elsewhere. Then run agent teams in BP self-play (4 teams × 2 agents, 15-min-prep budget) and rank matches with the validated adjudicator. |
+| `debatebench` | Official speaker scores + team rankings (`scores.xlsx`) | **This is the calibration set.** First validate an LLM adjudicator on the 360 human-scored speeches in `scores.xlsx` (Spearman vs official speaker scores; pairwise ranking accuracy on team rankings). Only a judge that passes this gate is used elsewhere. Then run agent teams in BP self-play (4 teams × 2 agents, 15-min-prep budget) and rank matches with the validated adjudicator. |
 | `gcch_harvard` | 9 winning decks | Pairwise LLM-judge under the official criteria: agent deck vs champion deck, position-swapped, → win rate. A well-below-50% win rate is expected; track it over time rather than reading it as absolute quality. |
 | `cfa_research_challenge` | 19 champion reports | Same pairwise protocol on the assigned company's report; rubric axes = valuation rigor / financial analysis / writing / presentation (the published CFA criteria). Champion reports double as few-shot references for the judge, not for the solver. |
 | `vis_moot` | Winning memoranda (Pace database, backlog) | Pairwise memorandum comparison per edition (Claimant and Respondent scored separately) once winning memoranda are collected; until then falls back to Tier 3 rubric judging. |
