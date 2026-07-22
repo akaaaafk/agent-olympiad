@@ -9,6 +9,7 @@ Benchmark **multi-agent AI teams** on olympiad-style **team tasks**. Part of the
 | Doc | Contents |
 |-----|----------|
 | [`docs/DATA_COLLECTION.md`](docs/DATA_COLLECTION.md) | What we collected — summary table + format per contest |
+| [`docs/EVALUATION.md`](docs/EVALUATION.md) | PDF-first artifact evaluators, human calibration, and readiness |
 | [`data/benchmarks/index.json`](data/benchmarks/index.json) | Olympiad catalog and collection status |
 | [`initial_experiments/`](initial_experiments/) | Archived smoke tests and early multi-agent runs |
 
