@@ -18,20 +18,20 @@ Last updated: 2026-07-15
 
 | Competitions | Years/sessions | Questions |
 |-------------:|---------------:|----------:|
-| **9** | **113** | **~114,000** |
+| **9** | **113** | **~124,000** |
 
 | ID | Competition | Domain | Years/sessions | Questions |
 |----|-------------|--------|---------------:|----------:|
 | `ethics_bowl_appe` | APPE Intercollegiate Ethics Bowl | Philosophy / Ethics | 9 (2021–2026 case sets) | ~140 cases |
 | `ethics_bowl_nhseb` | National High School Ethics Bowl | Ethics | 1 (2025–26) | 15 cases |
-| `science_bowl` | DOE National Science Bowl | Science (buzzer quiz) | 33 sample-set groups (508 PDFs) | ~14,000+ |
+| `science_bowl` | DOE National Science Bowl | Science (buzzer quiz) | 33 sample-set groups (508 PDFs) | ~23,691 |
 | `qanta` | QANTA Quiz Bowl | General knowledge | 1 (2021.12.20 release) | ~100,000 tossups |
 | `gcch_harvard` | Global Case Competition at Harvard | Business (M&A / strategy) | 7 (2018–2026) | 7 cases |
-| `cfa_research_challenge` | CFA Institute Research Challenge | Finance (equity research) | 19 (2008–2026) | 19 champion reports |
+| `cfa_research_challenge` | CFA Institute Research Challenge | Finance (equity research) | 19 (2008–2026) | 19 inferred company tasks + champion reports |
 | `wharton_investment` | Wharton Global HS Investment Competition | Finance (portfolio, long-horizon) | 4 (2019–22 + current) | 4 case studies |
 | `debatebench` | WUDC / BP Debate (DebateBench) | Debate | 45 debates | 360 scored speeches |
 | `vis_moot` | Willem C. Vis Moot | International commercial law | 7 (26th–33rd editions) | 7 Problems |
-| **Total** | | | **113** | **~114,000** |
+| **Total** | | | **113** | **~124,000** |
 
 ---
 
@@ -95,7 +95,7 @@ For each competition, the AI agent must be given exactly the same resources a hu
 |---|---|
 | **Domain** | Science — physics, chemistry, biology, earth science, energy, math (buzzer quiz) |
 | **Years/sessions** | 33 sample-set groups (HS: 17, MS: 16), 1990s–2022 |
-| **Questions** | ~14,000+ across 508 PDFs (~25 questions per round: Toss-Up + Bonus) |
+| **Questions** | **~23,691** across 508 PDFs (11,846 Toss-Up + 11,845 Bonus; typical round 23+23 or 25+25) |
 | **Team size** | 4 students + 1 alternate |
 | **Time** | Short timed buzzer rounds |
 | **Answer type** | Spoken short answers; Toss-Up = no conferring, Bonus = team conferring allowed |
@@ -149,15 +149,15 @@ For each competition, the AI agent must be given exactly the same resources a hu
 |---|---|
 | **Domain** | Finance — equity research reports |
 | **Years/sessions** | 19 (2008–2026, one global champion per year) |
-| **Questions** | 19 champion written reports (+ defense presentations), 38 PDFs total |
+| **Questions** | 19 inferred subject-company tasks (`tasks.json`) + 19 champion written reports (+ defense presentations), 38 PDFs |
 | **Team size** | 3–5 students |
 | **Time** | Months-long: research → 10-page report → oral defense |
-| **Answer type** | Buy/sell equity research report on an assigned listed company + defense |
+| **Answer type** | Buy/sell/hold equity research report on an assigned listed company + oral defense |
 | **Grading** | Industry rubric (valuation, writing, presentation); real winning samples as ground truth |
 | **Source** | Unrestricted public research |
 | **Link** | [cfainstitute.org past champions](https://www.cfainstitute.org/insights/events/research-challenge/past-champions) |
-| **Data** | `cfa_research_challenge/` — 38 PDFs covering real subjects (Commonwealth Bank, Vestas, Canadian Tire, …) |
-| **Notes** | Clear task definition; 19 years of champion samples usable as reward-model training / comparison data. Natural 3–5 agent role split: valuation / industry / writing / defense. |
+| **Data** | `cfa_research_challenge/` — `tasks.json` + 38 PDFs (Commonwealth Bank, Vestas, Canadian Tire, …) |
+| **Notes** | **Task (same every year):** For a host-society–assigned publicly listed company, research using only public information and produce an approximately 10-page equity research report with a BUY / SELL / HOLD recommendation, then defend it orally. CFA Institute does **not** publish separate yearly problem statements on the Past Champions page—only winning reports and presentations—so subject companies in `tasks.json` are **inferred from each global champion’s written report** (the company that society assigned that year). Champion PDFs are gold references for pairwise / rubric judging, not inputs for the solver. Natural 3–5 agent role split: valuation / industry / writing / defense. |
 
 ---
 
@@ -247,7 +247,7 @@ Closed-form answers; no judge needed.
 |----|--------|----------|
 | `debatebench` | Official speaker scores + team rankings (`scores.xlsx`) | **This is the calibration set.** First validate an LLM adjudicator on the 360 human-scored speeches in `scores.xlsx` (Spearman vs official speaker scores; pairwise ranking accuracy on team rankings). Only a judge that passes this gate is used elsewhere. Then run agent teams in BP self-play (4 teams × 2 agents, 15-min-prep budget) and rank matches with the validated adjudicator. |
 | `gcch_harvard` | 9 winning decks | Pairwise LLM-judge under the official criteria: agent deck vs champion deck, position-swapped, → win rate. A well-below-50% win rate is expected; track it over time rather than reading it as absolute quality. |
-| `cfa_research_challenge` | 19 champion reports | Same pairwise protocol on the assigned company's report; rubric axes = valuation rigor / financial analysis / writing / presentation (the published CFA criteria). Champion reports double as few-shot references for the judge, not for the solver. |
+| `cfa_research_challenge` | 19 inferred company tasks + champion reports | Same pairwise protocol on the assigned company's report; rubric axes = valuation rigor / financial analysis / writing / presentation (the published CFA criteria). Champion reports double as few-shot references for the judge, not for the solver. |
 | `vis_moot` | Winning memoranda (Pace database, backlog) | Pairwise memorandum comparison per edition (Claimant and Respondent scored separately) once winning memoranda are collected; until then falls back to Tier 3 rubric judging. |
 
 ### Tier 3 — Rubric-based judge panel (no gold reference)

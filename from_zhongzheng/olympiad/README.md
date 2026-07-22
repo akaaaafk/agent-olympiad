@@ -35,6 +35,7 @@ For each competition, the AI agent team must be given the same resources a human
 | `modeling_agent` | HiMCM / MCM / ICM / IM2C / MidMCM | RUBRIC | 3–4 (COMAP) | 3–4 | Open-ended modeling statement | Unrestricted | Multi-day open-book | Modeling paper | [COMAP](https://www.comap.com/contests) |
 | `MLR-Bench` | MLR-Bench | RUBRIC | 1 (task assignee) | 4–5 (ideator / proposer / experimenter / writer ± verifier) | Research task prompt | Required for experiments | Literature + code | Idea → experiments → writeup | [HF](https://huggingface.co/datasets/chchenhui/mlrbench-tasks) · [arXiv:2505.19955](https://arxiv.org/abs/2505.19955) |
 | `HealthBench` | HealthBench | RUBRIC | 1 (assistant) | 3 (clinician / safety / communicator) | Multi-turn clinical chat | Unrestricted | Health-assistant constraints | Free-form clinical response | [HF](https://huggingface.co/datasets/openai/healthbench) · [arXiv:2505.08775](https://arxiv.org/abs/2505.08775) |
+| `HealthBench-Professional` | HealthBench Professional | RUBRIC | 1 (assistant) | 3 (specialist / safety / medical-writer) | Physician workflow chat | Unrestricted | Clinical consult / writing / research | Free-form + physician reference | [HF](https://huggingface.co/datasets/openai/healthbench-professional) |
 | `PaperBench` | PaperBench | RUBRIC | 1–3 (researchers) | 3 (read / implement / run) | ICML 2024 paper PDF | Required | Full research stack | Replication codebase | [GitHub](https://github.com/openai/preparedness/tree/main/project/paperbench) · [arXiv:2504.01848](https://arxiv.org/abs/2504.01848) |
 | `cfa_research_challenge` | CFA Institute Research Challenge | RUBRIC | 3–5 | 3–5 | Public company + filings | Unrestricted | Full market research | Equity report + defense | See [`art/README.md`](../art/README.md) |
 | `gcch_harvard` | Global Case Competition at Harvard | RUBRIC | 2–5 | 2–5 | Case PDF | Unrestricted | Full internet | Deck + pitch | See [`art/README.md`](../art/README.md) |
@@ -48,7 +49,7 @@ For each competition, the AI agent team must be given the same resources a human
 | `pumac_power` | PUMaC Power Round | RUBRIC | 8 | 8 | Multi-part proof packet | Unrestricted in window | Team collaboration · no outside humans | Written proof packet | [PUMaC Archives](https://jason-shi-f9dm.squarespace.com/archives) |
 | `mystery_hunt` | MIT Mystery Hunt | RULE | 5–150 (specialty squads) | 8–20 for lab sims (scale as needed) | Web / PDF / multimedia puzzles | Shared workstations | Full internet · arbitrary tooling | Puzzle → meta → coin | [puzzles.mit.edu](https://puzzles.mit.edu/) · [mh_answers](https://github.com/dgulotta/mh_answers) |
 | `iol` | International Linguistics Olympiad | RULE | Indiv. 1 · Team Contest 4 | Indiv. Rec 2–3 · Team Rec 4 | Problem PDFs | None | Paper & pencil · no devices | Written answers / rule inferences | [ioling.org](https://ioling.org/problems/by_year/) · [HF](https://huggingface.co/datasets/agurung/ioling) |
-| `igeo` | International Geography Olympiad (iGeo) | RULE + RUBRIC | 1 (WRT/MMT) | 3 (map / data / writer) for fieldwork-style sim | WRT booklets + fieldwork | Limited | Maps · resource booklets | Written responses + field report | [iGeo library](https://geoolympiad.org/document-library/) |
+| `igeo` | International Geography Olympiad (iGeo) | RULE + RUBRIC | 1 (WRT/MMT) | 3 (map / data / writer) for fieldwork-style sim | 600 items (WRT 505 · FWE 55 · MMT 40) | Limited | Maps · resource booklets | Written responses + field report | [iGeo library](https://geoolympiad.org/document-library/) |
 | `ieso` | International Earth Science Olympiad | RULE | 1 | 2–3 (lab-role split on practicals) | Theory + practical papers | Lab equipment | Organizer instruments | MCQ / short / practical sheets | [IESO past](http://www.geosocindia.org/index.php/ieso/Questions_From_Past_IESOs) |
 | `ipo` | International Philosophy Olympiad | RUBRIC | 1 (essay; ≤2 per country) | 3 (drafter / critic / editor) | 4 quotation-topics (pick 1) | None | Closed-book timed essay | Philosophical essay | [philosophy-olympiad.org](https://www.philosophy-olympiad.org/) |
 | `history_olympiad` | International History Olympiad | RULE + RUBRIC | Bee 1 · Bowl team | Bee Rec 2–3 · Bowl Rec 4 | Bee/Bowl + written exams | None for bees | Study guides · timed rounds | Short answers / essays | [historyolympiad.com](https://www.historyolympiad.com/resources/) |
@@ -189,7 +190,7 @@ For each competition, the AI agent team must be given the same resources a human
 |---|---|
 | **Domain** | Competitive programming — Codeforces / ICPC-style (AlphaCode training data) |
 | **Years/sessions** | Multi-year contest archive |
-| **Questions** | ~13,600 |
+| **Questions** | **13,610** (train 13,328 · valid 117 · test 165) |
 | **Team size** | **Origin: 3** (ICPC-style) · **Rec: 3** (shared machine + penalty queue) |
 | **Time** | ICPC-style contest window with time penalty |
 | **Answer type** | Source code accepted by hidden judge |
@@ -219,21 +220,21 @@ For each competition, the AI agent team must be given the same resources a human
 
 ---
 
-## Cybench · `Cybench/` (on demand)
+## Cybench · `Cybench/`
 
 | | |
 |---|---|
-| **Domain** | Cybersecurity — professional CTF (HackTheBox / Sekai etc.) |
+| **Domain** | Cybersecurity — professional CTF (HackTheBox / Sekai / HKCERT) |
 | **Years/sessions** | 1 (Cybench release) |
-| **Questions** | 40 tasks with subtask decomposition |
+| **Questions** | **40** tasks with subtask decomposition (local packs under HackTheBox / Project Sekai / HKCERT) |
 | **Team size** | **Origin: 4–6** (typical CTF team) · **Rec: 4–6** (category / subtask split) |
 | **Time** | Open-ended within per-task Docker |
 | **Answer type** | Flag (+ intermediate subtask checkpoints) |
 | **Grading** | Flag match + per-subtask checks in Docker |
 | **Source** | Per-task Docker images with professional CTF tooling |
-| **Link** | [GitHub andyzorigin/cybench](https://github.com/andyzorigin/cybench) |
-| **Data** | ⏳ on demand (GitHub + per-task Docker images) |
-| **Notes** | Harder / more professional tier than NYU CTF Bench; subtasks support partial-progress scoring. |
+| **Link** | [GitHub andyzorigin/cybench](https://github.com/andyzorigin/cybench) · [cybench.github.io](https://cybench.github.io) · [arXiv:2408.08926](https://arxiv.org/abs/2408.08926) |
+| **Data** | `benchmark/Cybench/benchmark/` — per-challenge folders (`README.md`, `challenge/`/`dist/`, `metadata/metadata.json` with `easy_prompt`/`hard_prompt`); Docker images still needed for interactive web/pwn eval |
+| **Notes** | Harder / more professional tier than NYU CTF Bench. For **problem-only** use: take `README` + `challenge`/`dist` + prompts; hide `metadata/solution` and `answer` fields. Full agent eval still needs the Cybench runner + Docker. |
 
 ---
 
@@ -291,6 +292,24 @@ For each competition, the AI agent team must be given the same resources a human
 
 ---
 
+## HealthBench Professional · `HealthBench-Professional/`
+
+| | |
+|---|---|
+| **Domain** | Medicine — physician-facing clinical workflows (harder tier than HealthBench) |
+| **Years/sessions** | 1 (OpenAI HealthBench Professional release) |
+| **Questions** | **525** examples (`consult` / `writing` / `research`; `good_faith` + `red_teaming`; `difficult` / `typical`) |
+| **Team size** | **Origin: 1** (assistant) · **Rec: 3** (specialist / safety / medical-writer) |
+| **Time** | Multi-turn chat; open-ended response length |
+| **Answer type** | Free-form clinical response; each item ships a physician-written reference response |
+| **Grading** | Per-example physician-written `rubric_items` (criterion + points); model grader met/unmet → weighted score |
+| **Source** | Clinician workflow setting; specialty labels present |
+| **Link** | [HF: openai/healthbench-professional](https://huggingface.co/datasets/openai/healthbench-professional) · [OpenAI post](https://openai.com/index/making-chatgpt-better-for-clinicians/) |
+| **Data** | `benchmark/HealthBench-Professional/` — `healthbench_professional_eval.jsonl` (~2.8 MB) |
+| **Notes** | Consumer HealthBench = patient/public Q&A (~5,000). Professional = doctor-side tasks (~525) with reference answers — better Tier-2 gold + Tier-3 rubric hybrid. |
+
+---
+
 ## PaperBench · `PaperBench/` (on demand)
 
 | | |
@@ -327,14 +346,14 @@ Nine contests filling linguistics, geography, earth science, philosophy, history
 |---|---|
 | **Domain** | Artificial intelligence olympiad — ML, CV, NLP + Team Challenge |
 | **Years/sessions** | 2024 (Burgas), 2025 (Beijing), 2026 (Astana) |
-| **Questions** | Individual: ~6 ML tasks in the 2025 HF release (train/val/test); Team Challenge: 1 robotics / generative brief per year × 2024–2026 |
+| **Questions** | **17** tasks (deduped local packs; `IOAI2025/` HF mirror not double-counted) |
 | **Team size** | **Origin:** Individual **1** · Team Challenge national team · **Rec:** Individual **3** · Team **3–5** |
 | **Time** | At-home + on-site Individual windows; Team Challenge timed on-site |
 | **Answer type** | Model predictions / code notebooks (Individual); Team Challenge artifact (robotics / generative) |
 | **Grading** | Task metrics on hidden tests for Individual; rubric / jury for Team Challenge |
 | **Source** | Contest-provided data only; Python + standard ML stack |
 | **Link** | [HF: IOAI-official/IOAI2025](https://huggingface.co/datasets/IOAI-official/IOAI2025) · [GitHub 2024](https://github.com/IOAI-official/IOAI-2024) · [2025](https://github.com/IOAI-official/IOAI-2025) · [2026](https://github.com/IOAI-official/IOAI-2026) · [Resources](https://ioai-official.org/resources/) |
-| **Data** | `benchmark/IOAI/` — `IOAI2025/` (HF, ~2.2 GB) + cloned `IOAI-2024/`, `IOAI-2025/`, `IOAI-2026/` task repos |
+| **Data** | `benchmark/IOAI/` — see `README.md` (**17** tasks); `IOAI2025/` HF mirror + `IOAI-2024/` · `IOAI-2025/` · `IOAI-2026/` |
 | **Notes** | Best new multi-agent AI olympiad with official datasets. Pair ML-specialist agents on Individual tasks; use a separate robotics / planning team for the Team Challenge. CC-BY-4.0. |
 
 ---
@@ -363,7 +382,7 @@ Nine contests filling linguistics, geography, earth science, philosophy, history
 |---|---|
 | **Domain** | Chemistry research / open problems (IYPT-style tournament) |
 | **Years/sessions** | 2017–2026 (9 published problem sets; 2020/2021 combined) |
-| **Questions** | 9 published problem sets (2017–2026; ~10–15 open-ended chemistry problems per set) |
+| **Questions** | **106** open problems across 9 sets (2017–2024 & 2026: 12 each; 2025: 10; no separate 2021 PDF) |
 | **Team size** | **Origin: 3+** (Reporter / Opponent / Reviewer) · **Rec: 3+** (role rotation) |
 | **Time** | Months of prep; timed oral fights at the tournament |
 | **Answer type** | Oral scientific report + opposition / review speeches |
@@ -399,15 +418,15 @@ Nine contests filling linguistics, geography, earth science, philosophy, history
 |---|---|
 | **Domain** | Large-scale collaborative puzzle hunt (not a classical STEM olympiad; included for extreme multi-agent structure) |
 | **Years/sessions** | 1982 + 1994–2025 indexed; answer keys 1994–present |
-| **Questions** | ~2,300 keyed answers in `answers.tsv`; ~4,000+ puzzles indexed across hunts; metas feed a final coin |
+| **Questions** | **4,202** keyed answers (`mh_answers`); puzzle bodies+media mirrored under `puzzles/` (see local README) |
 | **Team size** | **Origin: 5–150** (specialty squads) · **Rec: 8–20** for lab sims (scale as needed) |
 | **Time** | ~48-hour hunt weekend (remote-capable in recent years) |
 | **Answer type** | Short string answers → meta answers → coin location |
 | **Grading** | Exact / normalized answer match (RULE); structure in `metapuzzles.yml` |
 | **Source** | Full internet and arbitrary tooling; extreme division of labor |
 | **Link** | [puzzles.mit.edu](https://puzzles.mit.edu/) · [Archive by year](https://puzzles.mit.edu/huntsbyyear.html) · [Puzzle Index](http://devjoe.appspot.com/huntindex/) · [mh_answers](https://github.com/dgulotta/mh_answers) |
-| **Data** | `benchmark/MIT_Mystery_Hunt/` — `mh_answers/` (answer keys + metas), `answers.tsv`, hunt index pages, year landing pages |
-| **Notes** | Strongest public multi-agent collaboration dataset. Start with answer-key grading on text-extractable puzzles; treat multimedia / on-campus physical puzzles as optional. Full puzzle media remain on year hunt sites — expand locally as needed. |
+| **Data** | `benchmark/MIT_Mystery_Hunt/` — `mh_answers/`, `answers.tsv`, `puzzles/` (HTML+multimedia mirror), hunt index pages |
+| **Notes** | Strongest public multi-agent collaboration dataset. Local mirror links answers→puzzle pages via `answers.tsv` + huntindex. Procedurally generated rounds (e.g. Infinite Corridor / Hydra) excluded from keys. |
 
 ---
 
@@ -434,16 +453,16 @@ Nine contests filling linguistics, geography, earth science, philosophy, history
 | | |
 |---|---|
 | **Domain** | Geography — human, physical, environmental, fieldwork |
-| **Years/sessions** | Multi-year Written Response Tests (+ fieldwork where published) |
-| **Questions** | ~17 WRT editions with question booklets (1996–2025) + fieldwork packs · 151 PDFs locally |
+| **Years/sessions** | WRT: 1996, 2006–2019, 2021–2025 (17 eds) · FWE: 1996–2025 (partial) · MMT: sample only |
+| **Questions** | **600** total — **WRT 505** · **FWE 55** · **MMT 40** (scored response units) |
 | **Team size** | **Origin: 1** (WRT/MMT) · **Rec: 3** (map / data / writer) for fieldwork-style sim |
 | **Time** | Timed WRT; multi-hour fieldwork |
-| **Answer type** | Short written responses, map interpretation, field report |
-| **Grading** | RULE for keyed items; RUBRIC for open fieldwork writeups |
+| **Answer type** | Short written responses, map interpretation, field report; MMT = MCQ |
+| **Grading** | RULE for keyed items (marking schemes); RUBRIC for open fieldwork writeups |
 | **Source** | Resource booklets provided; exam-hall constraints |
 | **Link** | [iGeo document library](https://geoolympiad.org/document-library/) |
-| **Data** | `benchmark/iGeo/` — WRT PDF booklets |
-| **Notes** | Adds spatial / environmental reasoning missing from pure STEM olympiad sets. |
+| **Data** | `benchmark/iGeo/` — `igeo_questions.json` / `.jsonl` + `summary.json` (+ source PDFs) |
+| **Notes** | Canonical index is the JSON (not PDF file count). Some scanned years have `question: null`. See `benchmark/iGeo/README.md`. |
 
 ---
 
@@ -543,15 +562,15 @@ Nine contests filling linguistics, geography, earth science, philosophy, history
 |---|---|
 | **Domain** | Collaborative creative / analytical writing |
 | **Years/sessions** | Seasonal WSC events (prompts vary) |
-| **Questions** | 3–4 prompts per session; local mirror also has ~42 guiding questions + discussion prompts |
+| **Questions** | **42** public guiding questions locally; live Collaborative Writing uses **3–4 prompts/session** (not pre-published) |
 | **Team size** | **Origin: 3** · **Rec: 3** |
 | **Time** | Staged: plan → individual write → peer edit |
 | **Answer type** | Three handwritten essays |
 | **Grading** | RUBRIC (WSC judging criteria) |
 | **Source** | No electronic devices; handwritten only |
 | **Link** | [WSC Events](https://scholarscup.org/events/) · [WSC Wiki](https://www.owiki.org/wiki/World_Scholar%27s_Cup) |
-| **Data** | `benchmark/WSC_Writing/` — prompts / guides when published; may include copies from repo `data/raw/wsc_writing` |
-| **Notes** | Extreme constraint on tools (no devices) makes it a clean test of pure collaboration protocols. |
+| **Data** | `benchmark/WSC_Writing/` — guiding questions + discussion prompts; may include copies from repo `data/raw/wsc_writing` |
+| **Notes** | The 42 guiding Qs are prep/proxy items from official themes — not the sealed on-site prompts. |
 
 ---
 
@@ -591,10 +610,11 @@ hf download deepmind/code_contests             --repo-type dataset --local-dir o
 # Open-ended (HF datasets)
 hf download chchenhui/mlrbench-tasks --repo-type dataset --local-dir olympiad/MLR-Bench
 hf download openai/healthbench       --repo-type dataset --local-dir olympiad/HealthBench
+hf download openai/healthbench-professional --repo-type dataset --local-dir olympiad/HealthBench-Professional
 
 # Docker / GitHub-based (not plain HF pulls)
 #   NYU CTF Bench : pip install nyuctf ; challenges cloned on first CTFDataset(split=...) call
-#   Cybench       : git clone https://github.com/andyzorigin/cybench (per-task Docker images)
+#   Cybench       : local packs in benchmark/Cybench/benchmark/ (problem-only OK); Docker images for full eval
 #   PaperBench    : git clone https://github.com/openai/preparedness --filter=blob:none ; git lfs fetch --include "project/paperbench/data/**"
 
 # Newly collected team olympiads → workspace benchmark/
@@ -623,15 +643,15 @@ hf download agurung/ioling --repo-type dataset --local-dir benchmark/IOL/ioling_
 | `modeling_agent` | Collect Outstanding-winner papers (COMAP publishes abstracts; full papers via UMAP Journal) as gold-standard references |
 | `MLAgentBench` | Set up Kaggle API credentials + run `prepare.py` per task to cache raw datasets; pin the upstream Docker image for sandboxed execution |
 | `LiveCodeBench` / `CodeContests` | Pull locally when coding-track evals start (4.4 GB / 7.6 GB) |
-| `NYU_CTF_Bench` / `Cybench` | Install Docker tooling and smoke-test one challenge per category |
+| `NYU_CTF_Bench` / `Cybench` | Cybench challenge packs already local; install Docker and smoke-test one challenge per category for full flag grading |
 | `PaperBench` | Clone preparedness repo with LFS for the 20-paper rubric trees |
 | `ioai` | Expand Team Challenge simulation assets (robotics env / generative briefs beyond statements) |
 | `eoes` | Local mirror ~90 PDFs (`benchmark/EOES/INVENTORY.md`); still missing EOES 2022 official tasks + several dead-host EUSO years |
 | `ichto` | Optional: collect winning fight recordings / written solutions if published |
 | `pumac_power` | Rename PDFs to `YYYY_problems.pdf` / `YYYY_solutions.pdf` for uniform loading |
-| `mystery_hunt` | Optionally mirror full puzzle media for selected years (2020–2025) from year hunt sites |
+| `mystery_hunt` | Answer→puzzle body+media mirror in progress under `benchmark/MIT_Mystery_Hunt/puzzles/` (`answers.tsv` queue + huntindex); continue with `mirror_*.py` |
 | `iol` | Prefer HF structured answers; backfill figure/script PDFs for multimodal rows |
-| `igeo` | Pull remaining years from iGeo document library (MMT temporarily offline upstream) |
+| `igeo` | Structured extract done (`igeo_questions.json`); optional: backfill early WRT gaps + yearly MMT when upstream republishes |
 | `ieso` | Normalize year folders; ensure practical keys sit beside theory PDFs |
 | `ipo` | Fill sparse early years (1994/1996/1998/1999/2006) from `page_1.html`; collect official marking criteria |
 | `history_olympiad` | Flatten year event names; separate RULE bees from RUBRIC written exams |
@@ -673,6 +693,7 @@ hf download agurung/ioling --repo-type dataset --local-dir benchmark/IOL/ioling_
 | `modeling_agent` | LLM-judge panel walking per-problem `requirements` with `eval_roles` as judge personas. | 3–4 agents per COMAP rules (modeler / coder / writer); `decomposition` field seeds the role split. |
 | `MLR-Bench` | MLR-Judge across up to 9 dims, dual-judge averaged; stepwise or end-to-end. | Ideator / proposer / experimenter / writer; add a verifier (fabrication risk). |
 | `HealthBench` | Per-conversation physician-written weighted criteria; model grader → weighted score. | Clinician / safety-reviewer / communicator; `red_teaming` stresses refusal & safety coordination. |
+| `HealthBench-Professional` | Per-example `rubric_items` + physician reference response; model grader → weighted score. | Specialist / safety / medical-writer; harder clinician-facing tier than HealthBench. |
 | `PaperBench` | Hierarchical rubric tree (leaf = binary, weighted to Replication Score); rubric hidden from solver. | Read-paper / implement / run-experiments; sandboxed long-horizon like MLAgentBench. |
 | `cfa` / `gcch` / `wharton` / `vis_moot` / `debatebench` / `ethics_bowl` | See Evaluation design in [`art/README.md`](../art/README.md). | Same as `art/` — those contests define the humanities/business/law team protocols. |
 | `eoes` | Official marking schemes on answer sheets; partial credit as published. | 3 agents as experimentalist / analyst / scribe; compare against solo agent at equal lab steps. |

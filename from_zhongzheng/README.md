@@ -21,7 +21,7 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 
 | Domains | Unique competitions | Sources |
 |:-------:|--------------------:|---------|
-| **23** | **36** | `olympiad/` · `art/` |
+| **23** | **37** | `olympiad/` · `art/` |
 
 | # | Domain | Competitions | RULE | RUBRIC | Hybrid |
 |---|--------|-------------:|-----:|-------:|-------:|
@@ -38,7 +38,7 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 | 11 | [Geography](#11-geography) | 1 | 0 | 0 | 1 |
 | 12 | [Linguistics](#12-linguistics) | 1 | 1 | 0 | 0 |
 | 13 | [Cybersecurity](#13-cybersecurity) | 2 | 2 | 0 | 0 |
-| 14 | [Medicine](#14-medicine) | 1 | 0 | 1 | 0 |
+| 14 | [Medicine](#14-medicine) | 2 | 0 | 2 | 0 |
 | 15 | [Business, finance & economics](#15-business-finance--economics) | 4 | 0 | 2 | 2 |
 | 16 | [Law](#16-law) | 1 | 0 | 1 | 0 |
 | 17 | [Ethics](#17-ethics) | 2 | 0 | 2 | 0 |
@@ -48,7 +48,7 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 | 21 | [Collaborative writing](#21-collaborative-writing) | 1 | 0 | 1 | 0 |
 | 22 | [Science & general-knowledge quiz](#22-science--general-knowledge-quiz) | 2 | 2 | 0 | 0 |
 | 23 | [Collaborative puzzle hunt](#23-collaborative-puzzle-hunt) | 1 | 1 | 0 | 0 |
-| | **Total** | **36** | **16** | **15** | **5** |
+| | **Total** | **37** | **16** | **16** | **5** |
 
 ---
 
@@ -69,7 +69,7 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 |----|-------------|--------|-----------|---------|---------|
 | `USACO` | USA Computing Olympiad | Individual programming contest (submit code) | 520 | RULE | [olympiad](olympiad/README.md) |
 | `LiveCodeBench` | LeetCode / AtCoder / Codeforces | Online judge programming contest | ~1,055 | RULE | [olympiad](olympiad/README.md) |
-| `CodeContests` | Codeforces / ICPC-style (AlphaCode) | ICPC-style team programming (shared machine) | ~13,600 | RULE | [olympiad](olympiad/README.md) |
+| `CodeContests` | Codeforces / ICPC-style (AlphaCode) | ICPC-style team programming (shared machine) | **13,610** | RULE | [olympiad](olympiad/README.md) |
 
 ---
 
@@ -95,7 +95,7 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 |----|-------------|--------|-----------|---------|---------|
 | `MLR-Bench` | ML research tasks | Open-ended research pipeline contest | 201 | RUBRIC | [olympiad](olympiad/README.md) |
 | `PaperBench` | Replicate ICML 2024 papers | Paper-replication research contest | 20 papers | RUBRIC | [olympiad](olympiad/README.md) |
-| `ioai` | International Olympiad in AI | AI olympiad: Individual ML tasks + Team Challenge | ~6 Individual tasks (2025) + Team Challenge ×3 yrs | RULE + RUBRIC | [olympiad](olympiad/README.md) |
+| `ioai` | International Olympiad in AI | AI olympiad: Individual ML tasks + Team Challenge | **17** tasks | RULE + RUBRIC | [olympiad](olympiad/README.md) |
 
 ---
 
@@ -111,7 +111,7 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 
 | ID | Competition | Format | Questions | Grading | Tracker |
 |----|-------------|--------|-----------|---------|---------|
-| `eoes` | EOES / EUSO | 3-person integrated lab practical olympiad | ~90 PDFs / ~172 MB · EOES 2021/23–25 packs + EUSO archive (2 exp/year; 2022 tasks unpublished) | RUBRIC | [olympiad](olympiad/README.md) |
+| `eoes` | EOES / EUSO | 3-person integrated lab practical olympiad | **2 exp/year** · local **~90 PDFs / ~172 MB** (EOES 2021/23–25 + EUSO archive; 2022 tasks unpublished) | RUBRIC | [olympiad](olympiad/README.md) |
 
 ---
 
@@ -119,7 +119,7 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 
 | ID | Competition | Format | Questions | Grading | Tracker |
 |----|-------------|--------|-----------|---------|---------|
-| `ichto` | International Chemistry Tournament | IYPT-style oral science fights (report / oppose / review) | 9 sets · ~10–15 problems/set | RUBRIC | [olympiad](olympiad/README.md) |
+| `ichto` | International Chemistry Tournament | IYPT-style oral science fights (report / oppose / review) | **106** problems · 9 sets (12×8 + 10 in 2025) | RUBRIC | [olympiad](olympiad/README.md) |
 
 ---
 
@@ -143,7 +143,7 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 
 | ID | Competition | Format | Questions | Grading | Tracker |
 |----|-------------|--------|-----------|---------|---------|
-| `igeo` | International Geography Olympiad (iGeo) | Written response exam + fieldwork exercise | ~17 WRT editions (1996–2025) + fieldwork | RULE + RUBRIC | [olympiad](olympiad/README.md) |
+| `igeo` | International Geography Olympiad (iGeo) | WRT written + FWE fieldwork + MMT sample | **600** (WRT 505 · FWE 55 · MMT 40) · structured `igeo_questions.json` | RULE + RUBRIC | [olympiad](olympiad/README.md) |
 
 ---
 
@@ -151,7 +151,7 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 
 | ID | Competition | Format | Questions | Grading | Tracker |
 |----|-------------|--------|-----------|---------|---------|
-| `iol` | International Linguistics Olympiad | Written linguistics olympiad (+ 4-person Team Contest) | 130 source · 555 HF records | RULE | [olympiad](olympiad/README.md) |
+| `iol` | International Linguistics Olympiad | Written linguistics olympiad (+ 4-person Team Contest) | **130** source problems · 555 HF records | RULE | [olympiad](olympiad/README.md) |
 
 ---
 
@@ -160,7 +160,7 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 | ID | Competition | Format | Questions | Grading | Tracker |
 |----|-------------|--------|-----------|---------|---------|
 | `NYU_CTF_Bench` | CSAW CTF (NYU CTF Bench) | Team CTF (capture-the-flag) | 200 | RULE | [olympiad](olympiad/README.md) |
-| `Cybench` | Professional CTF | Harder professional CTF | 40 | RULE | [olympiad](olympiad/README.md) |
+| `Cybench` | Professional CTF | Harder professional CTF (HackTheBox / Sekai / HKCERT packs) | **40** local challenge packs | RULE | [olympiad](olympiad/README.md) |
 
 ---
 
@@ -168,7 +168,8 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 
 | ID | Competition | Format | Questions | Grading | Tracker |
 |----|-------------|--------|-----------|---------|---------|
-| `HealthBench` | OpenAI HealthBench | Multi-turn clinical Q&A / advice challenge | 5,000 | RUBRIC | [olympiad](olympiad/README.md) |
+| `HealthBench` | OpenAI HealthBench | Multi-turn clinical Q&A / advice (consumer) | 5,000 | RUBRIC | [olympiad](olympiad/README.md) |
+| `HealthBench-Professional` | OpenAI HealthBench Professional | Physician workflow (consult / writing / research) | **525** | RUBRIC | [olympiad](olympiad/README.md) |
 
 ---
 
@@ -177,7 +178,7 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 | ID | Competition | Format | Questions | Grading | Tracker |
 |----|-------------|--------|-----------|---------|---------|
 | `gcch_harvard` | Global Case Competition at Harvard | Business case → slide deck + pitch | 7 | RUBRIC | [art](art/README.md) · [olympiad](olympiad/README.md) |
-| `cfa_research_challenge` | CFA Institute Research Challenge | Equity research report + oral defense | 19 champion reports | RUBRIC | [art](art/README.md) · [olympiad](olympiad/README.md) |
+| `cfa_research_challenge` | CFA Institute Research Challenge | Equity research report + oral defense | **19** inferred company tasks (`tasks.json`) + champion reports | RUBRIC | [art](art/README.md) · [olympiad](olympiad/README.md) |
 | `wharton_investment` | Wharton Global HS Investment Competition | Long-horizon portfolio simulation + strategy defense | 4 | RULE + RUBRIC | [art](art/README.md) · [olympiad](olympiad/README.md) |
 | `ieo` | International Economics Olympiad | Economics exam + team business case | ~1 open set + ~10+ case/task PDFs | RULE + RUBRIC | [olympiad](olympiad/README.md) |
 
@@ -228,7 +229,7 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 
 | ID | Competition | Format | Questions | Grading | Tracker |
 |----|-------------|--------|-----------|---------|---------|
-| `wsc_writing` | World Scholar's Cup — Collaborative Writing | 3-person staged collaborative essay writing | ~42 guiding Qs + 3–4 prompts/session | RUBRIC | [olympiad](olympiad/README.md) |
+| `wsc_writing` | World Scholar's Cup — Collaborative Writing | 3-person staged collaborative essay writing | **42** guiding Qs (+ 3–4 live prompts/session) | RUBRIC | [olympiad](olympiad/README.md) |
 
 ---
 
@@ -236,7 +237,7 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 
 | ID | Competition | Format | Questions | Grading | Tracker |
 |----|-------------|--------|-----------|---------|---------|
-| `science_bowl` | DOE National Science Bowl | Buzzer quiz bowl (Toss-Up + Bonus) | ~14,000+ | RULE | [art](art/README.md) |
+| `science_bowl` | DOE National Science Bowl | Buzzer quiz bowl (Toss-Up + Bonus) | **~23,691** (11,846 Toss-Up + 11,845 Bonus) | RULE | [art](art/README.md) |
 | `qanta` | QANTA Quiz Bowl | Pyramidal quiz bowl (buzz on clues) | ~100,000 | RULE | [art](art/README.md) |
 
 ---
@@ -245,7 +246,7 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 
 | ID | Competition | Format | Questions | Grading | Tracker |
 |----|-------------|--------|-----------|---------|---------|
-| `mystery_hunt` | MIT Mystery Hunt | Large-team puzzle hunt → metas → coin | ~2,300 keyed answers · ~4,000+ indexed | RULE | [olympiad](olympiad/README.md) |
+| `mystery_hunt` | MIT Mystery Hunt | Large-team puzzle hunt → metas → coin | **4,202** keyed answers · puzzle body/media mirror in progress | RULE | [olympiad](olympiad/README.md) |
 
 ---
 
@@ -253,9 +254,9 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 
 | Tracker | Role | Competitions (unique) |
 |---------|------|----------------------:|
-| [`olympiad/README.md`](olympiad/README.md) | Broad olympiad suite + links to art | 34 rows (6 shared with `art/`) |
+| [`olympiad/README.md`](olympiad/README.md) | Broad olympiad suite + links to art | 35 rows (6 shared with `art/`) |
 | [`art/README.md`](art/README.md) | Humanities, quiz, business, law, debate | 9 |
-| **Union** | | **36** |
+| **Union** | | **37** |
 
 ---
 
