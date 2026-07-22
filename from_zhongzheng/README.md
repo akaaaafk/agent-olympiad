@@ -2,7 +2,7 @@
 
 Last updated: 2026-07-22
 
-English index of **domains** covered by the datasets documented under [`olympiad/`](olympiad/README.md) and [`art/`](art/README.md). Per-contest deep dives, simulator rules, and download notes stay in those trackers.
+English index of **domains** covered by the datasets documented under [`olympiad/`](olympiad/README.md), [`art/`](art/README.md), and the workspace [`benchmark/README.md`](../../../benchmark/README.md). Per-contest deep dives, simulator rules, and download notes stay in those trackers.
 
 **Grading**
 - **RULE** — closed-form / tests / flags / exact match (auto-gradable)
@@ -13,7 +13,7 @@ English index of **domains** covered by the datasets documented under [`olympiad
 
 **Format** — what kind of contest this is (exam style, team event, pitch, CTF, etc.) — the human competition form we are simulating.
 
-Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to `art/`). They are counted once below.
+Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to `art/`). They are counted once below. Local `benchmark/` folders = **46** (same union).
 
 ---
 
@@ -21,14 +21,14 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 
 | Domains | Unique competitions | Sources |
 |:-------:|--------------------:|---------|
-| **23** | **37** | `olympiad/` · `art/` |
+| **25** | **46** | `olympiad/` · `art/` · `benchmark/` |
 
 | # | Domain | Competitions | RULE | RUBRIC | Hybrid |
 |---|--------|-------------:|-----:|-------:|-------:|
 | 1 | [STEM olympiad & competition math](#1-stem-olympiad--competition-math) | 4 | 3 | 1 | 0 |
 | 2 | [Competitive programming](#2-competitive-programming) | 3 | 3 | 0 | 0 |
 | 3 | [Software engineering](#3-software-engineering) | 1 | 1 | 0 | 0 |
-| 4 | [ML engineering](#4-ml-engineering) | 1 | 1 | 0 | 0 |
+| 4 | [ML engineering](#4-ml-engineering) | 2 | 2 | 0 | 0 |
 | 5 | [AI / ML research & AI olympiad](#5-ai--ml-research--ai-olympiad) | 3 | 0 | 2 | 1 |
 | 6 | [Applied math modeling](#6-applied-math-modeling) | 1 | 0 | 1 | 0 |
 | 7 | [Experimental science](#7-experimental-science) | 1 | 0 | 1 | 0 |
@@ -48,7 +48,9 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 | 21 | [Collaborative writing](#21-collaborative-writing) | 1 | 0 | 1 | 0 |
 | 22 | [Science & general-knowledge quiz](#22-science--general-knowledge-quiz) | 2 | 2 | 0 | 0 |
 | 23 | [Collaborative puzzle hunt](#23-collaborative-puzzle-hunt) | 1 | 1 | 0 | 0 |
-| | **Total** | **37** | **16** | **16** | **5** |
+| 24 | [Frontier exams, reasoning & agents](#24-frontier-exams-reasoning--agents) | 4 | 4 | 0 | 0 |
+| 25 | [Writing & professional deliverables](#25-writing--professional-deliverables) | 4 | 0 | 4 | 0 |
+| | **Total** | **46** | **21** | **20** | **5** |
 
 ---
 
@@ -86,6 +88,7 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 | ID | Competition | Format | Questions | Grading | Tracker |
 |----|-------------|--------|-----------|---------|---------|
 | `MLAgentBench` | MLAgentBench | Kaggle-style ML engineering tasks | 15 tasks · 15 problems total | RULE | [olympiad](olympiad/README.md) |
+| `MLE-bench` | MLE-bench (OpenAI) | Real Kaggle competitions end-to-end | 75 official (Lite 22); local 82 folders | RULE | [benchmark](../../../benchmark/README.md) |
 
 ---
 
@@ -250,16 +253,39 @@ Overlaps: several `art/` contests are also listed in `olympiad/` (linked back to
 
 ---
 
+## 24. Frontier exams, reasoning & agents
+
+| ID | Competition | Format | Questions | Grading | Tracker |
+|----|-------------|--------|-----------|---------|---------|
+| `HLE` | Humanity's Last Exam | Expert closed-ended exam (100+ subjects) | 2,500 | RULE | [benchmark](../../../benchmark/README.md) |
+| `GPQA` | GPQA (Diamond / main) | Graduate-level Google-proof MCQ | 448 (Diamond 198) | RULE | [benchmark](../../../benchmark/README.md) |
+| `ARC-AGI-2` | ARC Prize abstraction puzzles | Few-shot grid transformation | 1,000 train + 120 eval | RULE | [benchmark](../../../benchmark/README.md) |
+| `GAIA` | GAIA general AI assistant | Tool-using real-world Q&A | 466 | RULE | [benchmark](../../../benchmark/README.md) |
+
+---
+
+## 25. Writing & professional deliverables
+
+| ID | Competition | Format | Questions | Grading | Tracker |
+|----|-------------|--------|-----------|---------|---------|
+| `WritingBench` | WritingBench | Real-world writing with instance rubrics | 1,000 | RUBRIC | [benchmark](../../../benchmark/README.md) |
+| `ProfBench` | ProfBench (NVIDIA) | Professional report generation | 40 tasks · 4 domains | RUBRIC | [benchmark](../../../benchmark/README.md) |
+| `BiGGen-Bench` | BiGGen-Bench | Instance-rubric generation | 765 | RUBRIC | [benchmark](../../../benchmark/README.md) |
+| `FLASK` | FLASK | Fine-grained skill-rubric alignment eval | ~1,700 | RUBRIC | [benchmark](../../../benchmark/README.md) |
+
+---
+
 ## Cross-reference by tracker
 
 | Tracker | Role | Competitions (unique) |
 |---------|------|----------------------:|
-| [`olympiad/README.md`](olympiad/README.md) | Broad olympiad suite + links to art | 35 rows (6 shared with `art/`) |
+| [`olympiad/README.md`](olympiad/README.md) | Broad olympiad suite + links to art | 43 matrix rows (8 linked to `art/`) |
 | [`art/README.md`](art/README.md) | Humanities, quiz, business, law, debate | 9 |
-| **Union** | | **37** |
+| [`benchmark/README.md`](../../../benchmark/README.md) | Full local suite (incl. frontier + writing packs) | **46** |
+| **Union** | | **46** |
 
 ---
 
 ## Data location
 
-Raw files are **not** stored in this git folder. See download sections in each tracker; local mirrors live under the workspace [`benchmark/`](../../../benchmark/) directory (and HF [`akaaafk/multiagent_bench`](https://huggingface.co/datasets/akaaafk/multiagent_bench) for the original private bundle).
+Raw files are **not** stored in this git folder. See download sections in each tracker; local mirrors live under the workspace [`benchmark/`](../../../benchmark/) directory (**46** top-level datasets — see [`benchmark/README.md`](../../../benchmark/README.md)), plus HF [`akaaafk/multiagent_bench`](https://huggingface.co/datasets/akaaafk/multiagent_bench) for the original private bundle.

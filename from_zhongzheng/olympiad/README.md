@@ -2,9 +2,11 @@
 
 Last updated: 2026-07-22
 
-> **Data files are not in git.** The three original datasets (`OlympicArena`, `modeling_agent`, `MLAgentBench`) are mirrored on the private HF dataset [`akaaafk/multiagent_bench`](https://huggingface.co/datasets/akaaafk/multiagent_bench) — run `python download_data.py` at the repo root. The newly added benchmarks below are pulled directly from their public HF / GitHub sources — see [Downloading](#downloading). Local copies live in the workspace-level [`benchmark/`](../../../benchmark/) folder.
+> **Data files are not in git.** The three original datasets (`OlympicArena`, `modeling_agent`, `MLAgentBench`) are mirrored on the private HF dataset [`akaaafk/multiagent_bench`](https://huggingface.co/datasets/akaaafk/multiagent_bench) — run `python download_data.py` at the repo root. The newly added benchmarks below are pulled directly from their public HF / GitHub sources — see [Downloading](#downloading). Local copies live in the workspace-level [`benchmark/`](../../../benchmark/) folder (**46** datasets — see [`benchmark/README.md`](../../../benchmark/README.md)).
 
-**Current focus:** a curated benchmark suite for multi-agent team competitions across STEM, AI, engineering, security, medicine, finance, law, debate, linguistics, geography, earth science, philosophy, history, economics, astronomy, biology, collaborative writing, and puzzle solving — plus humanities/arts/business material in `art/`. Grading type is marked per row in the [Simulator Matrix](#simulator-matrix) (**RULE** = auto-graded closed-form / tests / flags; **RUBRIC** = open-ended deliverable scored by rubric or jury).
+**Current focus:** a curated benchmark suite for multi-agent team competitions across STEM, AI, engineering, security, medicine, finance, law, debate, linguistics, geography, earth science, philosophy, history, economics, astronomy, biology, collaborative writing, and puzzle solving — plus humanities/arts/business material in `art/` and frontier/writing packs documented below. Grading type is marked per row in the [Simulator Matrix](#simulator-matrix) (**RULE** = auto-graded closed-form / tests / flags; **RUBRIC** = open-ended deliverable scored by rubric or jury).
+
+**Suite size:** Simulator Matrix **43** rows + `art/` quiz extras (`science_bowl`, `qanta`) and ethics split (`ethics_bowl_appe` / `ethics_bowl_nhseb`) → domain-catalog / `benchmark/` union **46**.
 
 **Competition** = one contest type (one row in the tracker).  
 **Year/session** = one published contest release, split, or benchmark edition (e.g. AIME 2024, OlympicArena `val`/`test`, one CTF challenge set).  
@@ -28,6 +30,7 @@ For each competition, the AI agent team must be given the same resources a human
 | `USACO` | USA Computing Olympiad | RULE | 1 | 3 (reader / coder / tester) | Problem + I/O spec | Required | Submit vs hidden cases | Source code | [HF](https://huggingface.co/datasets/codegenning/usacobench_formatted) |
 | `SWE-bench_Verified` | SWE-bench Verified | RULE | 1 | 3 (locator / patcher / reviewer) | GitHub issue + repo | Required (Docker) | Full repo tools · run tests | Git patch | [HF](https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified) |
 | `MLAgentBench` | MLAgentBench | RULE | 1 | 3 (engineer / researcher / reviewer) | Research goal + starter code | Required (GPU/CPU) | Open experimentation · Kaggle API on some tasks | Improved model / `submission.csv` | [GitHub](https://github.com/snap-stanford/MLAgentBench) · [arXiv:2310.03302](https://arxiv.org/abs/2310.03302) |
+| `MLE-bench` | MLE-bench (OpenAI) | RULE | 1–several (Kaggle team) | 3–4 (EDA / features / model / runner) | Competition brief + data | Required (GPU) | Full ML stack · Kaggle API | `submission.csv` / medal | [GitHub](https://github.com/openai/mle-bench) · [arXiv:2410.07095](https://arxiv.org/abs/2410.07095) |
 | `LiveCodeBench` | LiveCodeBench | RULE | 1 | 2–3 (coder + tester) | Contest problem text | Required | Hidden tests · post-cutoff windows | Passing program | [HF](https://huggingface.co/datasets/livecodebench/code_generation_lite) · [arXiv:2403.07974](https://arxiv.org/abs/2403.07974) |
 | `CodeContests` | CodeContests (AlphaCode) | RULE | 3 (ICPC-style) | 3 (shared machine + penalty queue) | Contest problem text | 1 shared machine | Hidden tests · wrong-submit penalty | Accepted code | [HF](https://huggingface.co/datasets/deepmind/code_contests) |
 | `NYU_CTF_Bench` | NYU CTF Bench (CSAW) | RULE | 4–6 (typical CTF team) | 4–6 (by category) | Challenge brief + Docker | Required | CTF tooling in container | Flag string | [GitHub](https://github.com/NYU-LLM-CTF/NYU_CTF_Bench) |
@@ -56,6 +59,14 @@ For each competition, the AI agent team must be given the same resources a human
 | `ieo` | International Economics Olympiad | RULE + RUBRIC | Econ 1 · Business Case 3–5 | Econ Rec 2–3 · Case Rec 3–5 | Problem sets + case PDFs | Unrestricted for case | Research on Business Case | Numeric answers + case deck | [IEO prepare](https://ieo-official.org/prepare) |
 | `ioaa` | Intl. Olympiad on Astronomy & Astrophysics | RULE | Indiv. 1 · Group 5 | Indiv. Rec 2–3 · Group Rec 5 | Theory / data / observation / group | Organizer calculator only | Constants · charts · data tables | Boxed numerical answers | [IOAA past](https://ioaastrophysics.org/resources/problems-from-past-ioaa) |
 | `wsc_writing` | World Scholar's Cup — Collaborative Writing | RUBRIC | 3 | 3 | 3–4 prompts | None (devices banned) | Handwritten staged collab | 3 essays (one per writer) | [WSC Events](https://scholarscup.org/events/) |
+| `HLE` | Humanity's Last Exam | RULE | 1 | 3–5 (per-subject + aggregator) | Expert Q (+ multimodal) | Unrestricted | Closed-ended; non-searchable keys | MC / short answer | [HF](https://huggingface.co/datasets/cais/hle) · [arXiv:2501.14249](https://arxiv.org/abs/2501.14249) |
+| `GPQA` | GPQA | RULE | 1 | 3 (domain debate → consensus) | Graduate MCQ | Unrestricted | No answer lookup | 4-option MC | [HF](https://huggingface.co/datasets/Idavidrein/gpqa) · [arXiv:2311.12022](https://arxiv.org/abs/2311.12022) |
+| `ARC-AGI-2` | ARC Prize / ARC-AGI-2 | RULE | team (prize) | 3 (hypothesize / verify / program) | Few-shot grid puzzles | Required | Code + search over programs | Output grid | [GitHub](https://github.com/arcprize/ARC-AGI-2) · [arcprize.org](https://arcprize.org) |
+| `GAIA` | GAIA | RULE | 1 (assistant) | 3–4 (orchestrator + tools) | Question ± attachment | Required | Web / files / tools | Short exact answer | [HF](https://huggingface.co/datasets/gaia-benchmark/GAIA) · [arXiv:2311.12983](https://arxiv.org/abs/2311.12983) |
+| `WritingBench` | WritingBench | RUBRIC | 1 | 3 (writer / editor / fact-checker) | Writing query + constraints | Unrestricted | Open drafting | Free-form text | [GitHub](https://github.com/X-PLUG/WritingBench) · [arXiv:2503.05244](https://arxiv.org/abs/2503.05244) |
+| `ProfBench` | ProfBench (NVIDIA) | RUBRIC | 1 | 3 (research / analyze / write) | Professional assignment | Unrestricted | Domain research | Report | [HF](https://huggingface.co/datasets/nvidia/ProfBench) · [arXiv:2510.18941](https://arxiv.org/abs/2510.18941) |
+| `BiGGen-Bench` | BiGGen-Bench | RUBRIC | 1 | 2–3 (capability-routed) | Generation prompt | Unrestricted | Open generation | Free-form + instance rubric | [HF](https://huggingface.co/datasets/prometheus-eval/BiGGen-Bench) · [arXiv:2406.05761](https://arxiv.org/abs/2406.05761) |
+| `FLASK` | FLASK | RUBRIC | 1 | 2–3 (skill specialists) | Alignment prompt | Unrestricted | Open response | Free-form + skill rubrics | [GitHub](https://github.com/kaistAI/FLASK) · [arXiv:2307.10928](https://arxiv.org/abs/2307.10928) |
 ---
 
 ## OlympicArena · `OlympicArena/`
@@ -574,9 +585,115 @@ Nine contests filling linguistics, geography, earth science, philosophy, history
 
 ---
 
+## Frontier exams, MLE-bench & writing packs
+
+Also local under [`benchmark/`](../../../benchmark/); counted in the **46**-dataset suite with [`benchmark/README.md`](../../../benchmark/README.md) / domain catalog.
+
+### MLE-bench · `MLE-bench/`
+
+| | |
+|---|---|
+| **Domain** | End-to-end Kaggle ML competitions |
+| **Questions** | 75 official (Lite 22); local clone has 82 folders |
+| **Team size** | **Origin:** Kaggle team · **Rec: 3–4** |
+| **Answer type** | `submission.csv` / trained models |
+| **Grading** | RULE — `mlebench grade` vs private leaderboard / medals |
+| **Data** | `benchmark/MLE-bench/` — harness local; CSVs via Kaggle + `mlebench prepare` |
+| **Link** | [openai/mle-bench](https://github.com/openai/mle-bench) · [arXiv:2410.07095](https://arxiv.org/abs/2410.07095) |
+
+### HLE · `HLE/`
+
+| | |
+|---|---|
+| **Domain** | Frontier closed-ended exam (100+ subjects) |
+| **Questions** | 2,500 |
+| **Team size** | **Origin: 1** · **Rec: 3–5** (per-subject + aggregator) |
+| **Grading** | RULE — exact match / MC key |
+| **Data** | `benchmark/HLE/` (~262 MiB; gated) |
+| **Link** | [HF cais/hle](https://huggingface.co/datasets/cais/hle) · [arXiv:2501.14249](https://arxiv.org/abs/2501.14249) |
+
+### GPQA · `GPQA/`
+
+| | |
+|---|---|
+| **Domain** | Graduate-level Google-proof science MCQ |
+| **Questions** | 448 (Diamond 198) |
+| **Team size** | **Origin: 1** · **Rec: 3** (domain debate) |
+| **Grading** | RULE — MC key |
+| **Data** | `benchmark/GPQA/` (gated) |
+| **Link** | [HF Idavidrein/gpqa](https://huggingface.co/datasets/Idavidrein/gpqa) · [arXiv:2311.12022](https://arxiv.org/abs/2311.12022) |
+
+### ARC-AGI-2 · `ARC-AGI-2/`
+
+| | |
+|---|---|
+| **Domain** | Abstraction / few-shot grid puzzles (ARC Prize) |
+| **Questions** | 1,000 public train + 120 public eval |
+| **Team size** | **Rec: 3** (hypothesize / verify / program) |
+| **Grading** | RULE — exact grid match |
+| **Data** | `benchmark/ARC-AGI-2/` (~6 MB) |
+| **Link** | [arcprize/ARC-AGI-2](https://github.com/arcprize/ARC-AGI-2) |
+
+### GAIA · `GAIA/`
+
+| | |
+|---|---|
+| **Domain** | General AI assistant / tool-using Q&A |
+| **Questions** | 466 (val 165 public answers · test 301) |
+| **Team size** | **Rec: 3–4** (orchestrator + tool agents) |
+| **Grading** | RULE — official exact-match scorer |
+| **Data** | `benchmark/GAIA/` (+ attachments; gated) |
+| **Link** | [HF gaia-benchmark/GAIA](https://huggingface.co/datasets/gaia-benchmark/GAIA) · [arXiv:2311.12983](https://arxiv.org/abs/2311.12983) |
+
+### WritingBench · `WritingBench/`
+
+| | |
+|---|---|
+| **Domain** | Real-world writing with per-query rubrics |
+| **Questions** | 1,000 |
+| **Team size** | **Rec: 3** (writer / editor / fact-checker) |
+| **Grading** | RUBRIC — 5 instance criteria / query |
+| **Data** | `benchmark/WritingBench/benchmark_all.jsonl` |
+| **Link** | [X-PLUG/WritingBench](https://github.com/X-PLUG/WritingBench) · [arXiv:2503.05244](https://arxiv.org/abs/2503.05244) |
+
+### ProfBench · `ProfBench/`
+
+| | |
+|---|---|
+| **Domain** | Professional report generation (Physics / Chem / Finance / Consulting) |
+| **Questions** | 40 tasks · 3,000+ expert criteria |
+| **Team size** | **Rec: 3** (research / analyze / write) |
+| **Grading** | RUBRIC — per-task criteria |
+| **Data** | `benchmark/ProfBench/test.jsonl` |
+| **Link** | [HF nvidia/ProfBench](https://huggingface.co/datasets/nvidia/ProfBench) · [arXiv:2510.18941](https://arxiv.org/abs/2510.18941) |
+
+### BiGGen-Bench · `BiGGen-Bench/`
+
+| | |
+|---|---|
+| **Domain** | Instance-rubric generation (9 capabilities) |
+| **Questions** | 765 |
+| **Team size** | **Rec: 2–3** |
+| **Grading** | RUBRIC — per-instance 5-point rubric + reference |
+| **Data** | `benchmark/BiGGen-Bench/` |
+| **Link** | [HF prometheus-eval/BiGGen-Bench](https://huggingface.co/datasets/prometheus-eval/BiGGen-Bench) · [arXiv:2406.05761](https://arxiv.org/abs/2406.05761) |
+
+### FLASK · `FLASK/`
+
+| | |
+|---|---|
+| **Domain** | Fine-grained alignment-skill evaluation |
+| **Questions** | ~1,700 |
+| **Team size** | **Rec: 2–3** (skill specialists) |
+| **Grading** | RUBRIC — 12-skill taxonomy + instance rubrics |
+| **Data** | `benchmark/FLASK/` |
+| **Link** | [kaistAI/FLASK](https://github.com/kaistAI/FLASK) · [arXiv:2307.10928](https://arxiv.org/abs/2307.10928) |
+
+---
+
 ## Entries living under `art/`
 
-These six open-ended competitions are part of this olympiad catalog but their files and full deep-dive tables live in [`art/README.md`](../art/README.md):
+These open-ended / quiz competitions are part of the olympiad suite catalog but their files and full deep-dive tables live in [`art/README.md`](../art/README.md):
 
 | ID | Where documented |
 |----|------------------|
@@ -586,6 +703,8 @@ These six open-ended competitions are part of this olympiad catalog but their fi
 | `vis_moot` | [`art/README.md`](../art/README.md) → Willem C. Vis Moot |
 | `debatebench` | [`art/README.md`](../art/README.md) → WUDC / BP Debate |
 | `ethics_bowl` (`ethics_bowl_appe` + `ethics_bowl_nhseb`) | [`art/README.md`](../art/README.md) → APPE / NHSEB Ethics Bowl |
+| `science_bowl` | [`art/README.md`](../art/README.md) → DOE National Science Bowl |
+| `qanta` | [`art/README.md`](../art/README.md) → QANTA Quiz Bowl |
 
 ---
 
@@ -612,10 +731,22 @@ hf download chchenhui/mlrbench-tasks --repo-type dataset --local-dir olympiad/ML
 hf download openai/healthbench       --repo-type dataset --local-dir olympiad/HealthBench
 hf download openai/healthbench-professional --repo-type dataset --local-dir olympiad/HealthBench-Professional
 
+# Frontier / writing packs → workspace benchmark/
+#   hf download cais/hle            --repo-type dataset --local-dir benchmark/HLE      # gated
+#   hf download Idavidrein/gpqa     --repo-type dataset --local-dir benchmark/GPQA     # gated
+#   hf download gaia-benchmark/GAIA --repo-type dataset --local-dir benchmark/GAIA     # gated
+hf download nvidia/ProfBench             --repo-type dataset --local-dir benchmark/ProfBench
+hf download prometheus-eval/BiGGen-Bench --repo-type dataset --local-dir benchmark/BiGGen-Bench
+# WritingBench: curl JSONL from X-PLUG/WritingBench (see benchmark/README.md)
+# ARC-AGI-2 / FLASK / MLE-bench: git clone upstream repos (Kaggle prepare for MLE-bench)
+
 # Docker / GitHub-based (not plain HF pulls)
 #   NYU CTF Bench : pip install nyuctf ; challenges cloned on first CTFDataset(split=...) call
 #   Cybench       : local packs in benchmark/Cybench/benchmark/ (problem-only OK); Docker images for full eval
 #   PaperBench    : git clone https://github.com/openai/preparedness --filter=blob:none ; git lfs fetch --include "project/paperbench/data/**"
+#   MLE-bench     : git clone https://github.com/openai/mle-bench ; Kaggle API ; mlebench prepare --lite
+#   ARC-AGI-2     : git clone https://github.com/arcprize/ARC-AGI-2
+#   FLASK         : git clone https://github.com/kaistAI/FLASK
 
 # Newly collected team olympiads → workspace benchmark/
 hf download IOAI-official/IOAI2025 --repo-type dataset --local-dir benchmark/IOAI/IOAI2025   # ~2.2 GB
@@ -675,6 +806,7 @@ hf download agurung/ioling --repo-type dataset --local-dir benchmark/IOL/ioling_
 | `USACO` | Run submitted code against hidden test cases; score = fraction of cases passed (bronze→platinum tiers). | Reader / coder / tester split; tester writes local cases before submitting. |
 | `SWE-bench_Verified` | Apply the generated patch, run `FAIL_TO_PASS` + `PASS_TO_PASS`; pass only if all target tests go green. Needs per-repo Docker. | Locator / patcher / reviewer on a shared checkout; solo baseline at equal edit budget. |
 | `MLAgentBench` | Run each task's hidden `eval.py`; success = >10% improvement over baseline starter code. Needs sandboxed Docker executor. | Engineer / researcher / reviewer sharing one workspace; solo-agent baseline at the same action budget. |
+| `MLE-bench` | `mlebench grade` vs private leaderboard / medal thresholds. Needs Kaggle data prepare. | EDA / feature / model / runner team vs solo at equal GPU budget. |
 | `LiveCodeBench` | Hidden test cases; use the release window **after** each model's cutoff. | Same as USACO; good for time-boxed "contest round" simulation. |
 | `CodeContests` | Hidden test cases; ICPC-style (one shared machine, penalty per wrong submission). | 3 agents sharing one submission queue under a penalty budget — direct ICPC analogue. |
 | `NYU_CTF_Bench` / `Cybench` | Exact flag match (and per-subtask checks for Cybench) inside Docker; fully automatic. | CTF teams split by category (pwn / crypto / web / rev); log which specialist solved each flag. |
@@ -685,6 +817,7 @@ hf download agurung/ioling --repo-type dataset --local-dir benchmark/IOL/ioling_
 | `igeo` (keyed WRT items) | Marking scheme match on short answers. | Map-reader / data-analyst / writer roles on resource booklets. |
 | `history_olympiad` (bees / bowls) | Exact / normalized answer match. | Team Bowl conferring vs individual Bee. |
 | `ieo` (economics) | Official numeric / short-answer keys. | Solo economics baseline before team case. |
+| `HLE` / `GPQA` / `ARC-AGI-2` / `GAIA` | Exact match / MC / grid / official GAIA scorer. | Subject specialists + aggregator (HLE/GPQA); program-search team (ARC); tool-orchestrator team (GAIA). |
 
 ### RUBRIC
 
@@ -695,7 +828,7 @@ hf download agurung/ioling --repo-type dataset --local-dir benchmark/IOL/ioling_
 | `HealthBench` | Per-conversation physician-written weighted criteria; model grader → weighted score. | Clinician / safety-reviewer / communicator; `red_teaming` stresses refusal & safety coordination. |
 | `HealthBench-Professional` | Per-example `rubric_items` + physician reference response; model grader → weighted score. | Specialist / safety / medical-writer; harder clinician-facing tier than HealthBench. |
 | `PaperBench` | Hierarchical rubric tree (leaf = binary, weighted to Replication Score); rubric hidden from solver. | Read-paper / implement / run-experiments; sandboxed long-horizon like MLAgentBench. |
-| `cfa` / `gcch` / `wharton` / `vis_moot` / `debatebench` / `ethics_bowl` | See Evaluation design in [`art/README.md`](../art/README.md). | Same as `art/` — those contests define the humanities/business/law team protocols. |
+| `cfa` / `gcch` / `wharton` / `vis_moot` / `debatebench` / `ethics_bowl` / `science_bowl` / `qanta` | See Evaluation design in [`art/README.md`](../art/README.md) (`science_bowl` / `qanta` are RULE quiz bowls documented there). | Same as `art/` — those contests define the humanities/business/law/quiz team protocols. |
 | `eoes` | Official marking schemes on answer sheets; partial credit as published. | 3 agents as experimentalist / analyst / scribe; compare against solo agent at equal lab steps. |
 | `ichto` | Tournament jury rubric (Reporter / Opponent / Reviewer). Calibrate LLM judges like `iypt`. | Role-rotating agents; score both content quality and opposition/review usefulness. |
 | `pumac_power` | Proof rubric against official solutions; stepwise credit on subparts. | 8 agents sharing lemmas over a multi-day window; measure document coherence + coverage. |
@@ -704,5 +837,6 @@ hf download agurung/ioling --repo-type dataset --local-dir benchmark/IOL/ioling_
 | `igeo` (fieldwork) / `history_olympiad` (historiography) | Official fieldwork / written-exam rubrics. | Observer / analyst / writer split. |
 | `ieo` (Business Case) | Case deck + oral presentation rubric. | 3–5 agents (research / model / slides / pitch). |
 | `wsc_writing` | WSC collaborative-writing criteria; score plan / draft / peer-edit stages. | Strict 3-agent staged protocol with no tools. |
+| `WritingBench` / `ProfBench` / `BiGGen-Bench` / `FLASK` | Instance- or skill-specific rubrics shipped with each item; LLM / critic judges. | Writer–editor pipelines or skill-routed specialists; BiGGen also calibrates judges. |
 
-All RUBRIC judges must report inter-judge agreement and run pairwise comparisons position-swapped. Cross-cutting: log the same team-level metrics as `art/` (budget consumed, inter-agent messages, role-specialization entropy, team-vs-solo delta). For contamination, prefer withheld/newest splits — OlympicArena `test`, AIME 2025, LiveCodeBench post-cutoff windows, post-2023 modeling problems, and IOAI 2025/2026 tasks — for headline numbers.
+All RUBRIC judges must report inter-judge agreement and run pairwise comparisons position-swapped. Cross-cutting: log the same team-level metrics as `art/` (budget consumed, inter-agent messages, role-specialization entropy, team-vs-solo delta). For contamination, prefer withheld/newest splits — OlympicArena `test`, AIME 2026, LiveCodeBench post-cutoff windows, post-2023 modeling problems, IOAI 2025/2026, and gated frontier held-outs — for headline numbers.
