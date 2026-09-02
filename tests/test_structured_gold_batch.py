@@ -53,6 +53,9 @@ class StructuredGoldBatchTests(unittest.TestCase):
                 "communication_score": 4,
                 "planning_score": 2,
                 "coordination_score": 3,
+                "cce": 0.4,
+                "causal_efficiency": 0.5,
+                "utility_weighted_cce": 0.4,
                 "api_calls": 10,
                 "tokens_used": 100,
                 "elapsed_seconds": 20,
@@ -65,6 +68,9 @@ class StructuredGoldBatchTests(unittest.TestCase):
                 "communication_score": 5,
                 "planning_score": 3,
                 "coordination_score": 4,
+                "cce": 0.8,
+                "causal_efficiency": 0.8,
+                "utility_weighted_cce": 0.8,
                 "api_calls": 7,
                 "tokens_used": 50,
                 "elapsed_seconds": 10,
@@ -79,6 +85,9 @@ class StructuredGoldBatchTests(unittest.TestCase):
         self.assertAlmostEqual(metrics["mean_communication_score"], 4.5)
         self.assertAlmostEqual(metrics["mean_planning_score"], 2.5)
         self.assertAlmostEqual(metrics["mean_coordination_score"], 3.5)
+        self.assertAlmostEqual(metrics["mean_cce"], 0.6)
+        self.assertAlmostEqual(metrics["mean_causal_efficiency"], 0.65)
+        self.assertAlmostEqual(metrics["mean_utility_weighted_cce"], 0.6)
         self.assertEqual(metrics["total_api_calls"], 17)
         self.assertEqual(metrics["total_tokens_used"], 150)
         self.assertEqual(metrics["total_elapsed_seconds"], 30)
@@ -110,6 +119,23 @@ class StructuredGoldBatchTests(unittest.TestCase):
             self.assertTrue(
                 _row_is_complete(rows[0], judge_task=True, judge_collab=True)
             )
+            self.assertFalse(
+                _row_is_complete(
+                    rows[0],
+                    judge_task=True,
+                    judge_collab=True,
+                    judge_cce=True,
+                )
+            )
+            rows[0]["cce"] = 0.0
+            self.assertTrue(
+                _row_is_complete(
+                    rows[0],
+                    judge_task=True,
+                    judge_collab=True,
+                    judge_cce=True,
+                )
+            )
 
             changed = {**metadata, "model": "different-model"}
             with self.assertRaisesRegex(ValueError, "model changed"):
@@ -129,6 +155,7 @@ class StructuredGoldBatchTests(unittest.TestCase):
             text = path.read_text(encoding="utf-8-sig")
 
         self.assertIn("answer_accuracy", text)
+        self.assertIn("utility_weighted_cce", text)
         self.assertIn("0.75", text)
 
     def test_builds_and_writes_competition_aggregates(self) -> None:

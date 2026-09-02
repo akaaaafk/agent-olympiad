@@ -278,6 +278,8 @@ Pilots under `results/arml_local_2009_*_20260812-183636.json`.
 
 Pilot only: small model, 2 turns, diagram problem often unsolved from text.
 
+**Open Table Coach batch results** (32-task structured gold, CF/ICPC pilots): see [`docs/from_zhongzheng/open-table-coach-batch-results.md`](from_zhongzheng/open-table-coach-batch-results.md).
+
 ---
 
 ## 5. Evaluation-only smokes

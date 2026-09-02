@@ -38,6 +38,7 @@ from evaluation.collaboration_score import (
     score_coordination,
     score_interaction_helpfulness,
 )
+from evaluation.cce import score_cce
 from evaluation.finalize import apply_registered_judge
 from env_config import load_repo_dotenv
 from llm import (
@@ -212,6 +213,9 @@ def _aggregate_metrics(rows: list[dict]) -> dict:
         "mean_communication_score": _mean(scores("communication_score")),
         "mean_planning_score": _mean(scores("planning_score")),
         "mean_coordination_score": _mean(scores("coordination_score")),
+        "mean_cce": _mean(scores("cce")),
+        "mean_causal_efficiency": _mean(scores("causal_efficiency")),
+        "mean_utility_weighted_cce": _mean(scores("utility_weighted_cce")),
         "total_api_calls": sum(
             int(row.get("api_calls") or 0)
             for row in rows
@@ -254,6 +258,7 @@ def _build_summary(rows: list[dict], metadata: dict) -> dict:
         "with_coordination": sum(
             1 for row in rows if row.get("coordination_score") is not None
         ),
+        "with_cce": sum(1 for row in rows if row.get("cce") is not None),
         "aggregate_metrics": _aggregate_metrics(rows),
         "aggregate_by_competition": aggregate_by_competition,
         "results": rows,
@@ -271,6 +276,9 @@ def _write_results_tsv(path: Path, rows: list[dict]) -> None:
         "communication_score",
         "planning_score",
         "coordination_score",
+        "cce",
+        "causal_efficiency",
+        "utility_weighted_cce",
         "turns_used",
         "max_turns",
         "api_calls",
@@ -331,6 +339,9 @@ def _write_summary_tsv(path: Path, summary: dict) -> None:
         "mean_communication_score",
         "mean_planning_score",
         "mean_coordination_score",
+        "mean_cce",
+        "mean_causal_efficiency",
+        "mean_utility_weighted_cce",
         "total_api_calls",
         "total_tokens_used",
         "total_elapsed_seconds",
@@ -383,11 +394,22 @@ def _load_resume_rows(path: Path, metadata: dict) -> tuple[list[dict], str | Non
     return list(prior.get("results") or []), prior.get("timestamp")
 
 
-def _row_is_complete(row: dict, *, judge_task: bool, judge_collab: bool) -> bool:
+def _row_is_complete(
+    row: dict,
+    *,
+    judge_task: bool,
+    judge_collab: bool,
+    judge_cce: bool = False,
+) -> bool:
     return (
         row.get("status") == "ok"
         and (not judge_task or row.get("graded") is True)
         and (not judge_collab or row.get("coordination_score") is not None)
+        and (
+            not judge_cce
+            or row.get("cce") is not None
+            or row.get("cce_unavailable") is True
+        )
     )
 
 
@@ -483,6 +505,8 @@ def run_one(
     model: str = "mock",
     max_output_tokens: int | None = None,
     temperature: float | None = None,
+    judge_cce: bool = False,
+    cce_request_fn=None,
 ) -> dict:
     started_at = time.perf_counter()
     env = OlympiadEnvironment(
@@ -534,6 +558,9 @@ def run_one(
     grade: dict = {}
     coordination = None
     interaction = None
+    cce = None
+    cce_error = None
+    cce_unavailable = False
     run_error = None
     try:
         result = run_collaboration(schema, env, query_fn, config)
@@ -609,6 +636,44 @@ def run_one(
             "grade": grade,
         }
 
+    # Isolate CCE so a judge failure does not rewrite an otherwise successful run.
+    if judge_cce and run_error is None:
+        cce_judge = cce_request_fn or request_fn
+        has_grade = (
+            isinstance(grade.get("score"), (int, float))
+            and isinstance(grade.get("max_score"), (int, float))
+            and float(grade["max_score"]) > 0
+        )
+        if cce_judge is None:
+            cce_unavailable = True
+            cce_error = "cce_judge_unavailable"
+        elif not has_grade:
+            cce_unavailable = True
+            cce_error = "ungraded_or_pending"
+        else:
+            try:
+                task_utility = max(
+                    0.0,
+                    min(1.0, float(grade["score"]) / float(grade["max_score"])),
+                )
+                contestant_agents = [
+                    name
+                    for name in _agent_names(env, schema)
+                    if name not in {"Coach", "Contest_Control"}
+                ]
+                cce = score_cce(
+                    request_fn=cce_judge,
+                    task_text=str(
+                        env.problem_data.get("problem_description") or env.problem_id
+                    ),
+                    action_log=list(env.action_log),
+                    task_utility=task_utility,
+                    task_outcome=json.dumps(grade, ensure_ascii=False, default=str),
+                    agents=contestant_agents,
+                ).to_dict()
+            except Exception as exc:
+                cce_error = _sanitize_exception(exc)
+
     transcript = env.to_transcript()
     transcript["run"] = {
         "provider": provider,
@@ -621,6 +686,9 @@ def run_one(
         "grade": grade,
         "coordination": coordination,
         "interaction": interaction,
+        "cce": cce,
+        "cce_error": cce_error,
+        "cce_unavailable": cce_unavailable,
         "status": "error" if run_error else "ok",
         "error": run_error,
         "final_result": result,
@@ -659,6 +727,12 @@ def run_one(
         "communication_score": (coordination or {}).get("communication_score"),
         "planning_score": (coordination or {}).get("planning_score"),
         "coordination": coordination,
+        "cce": (cce or {}).get("cce"),
+        "causal_efficiency": (cce or {}).get("causal_efficiency"),
+        "utility_weighted_cce": (cce or {}).get("utility_weighted_cce"),
+        "cce_result": cce,
+        "cce_error": cce_error,
+        "cce_unavailable": cce_unavailable,
         "interaction_helpfulness_score": (interaction or {}).get(
             "interaction_helpfulness_score"
         ),
@@ -712,6 +786,15 @@ def main() -> None:
         action=argparse.BooleanOptionalAction,
         default=None,
         help="Run MultiAgentBench coordination score (default: on for --live)",
+    )
+    parser.add_argument(
+        "--judge-cce",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+        help=(
+            "Run AgentWorld-style causal action graph judge "
+            "(opt-in; may add up to one judge call per turn)"
+        ),
     )
     parser.add_argument(
         "--judge-provider",
@@ -792,13 +875,13 @@ def main() -> None:
     tsv_path = out_dir / "competition_batch.tsv"
     summary_tsv_path = out_dir / "competition_summary.tsv"
 
-    need_request = args.live and (judge_task or judge_collab)
+    need_request = args.live and (judge_task or judge_collab or args.judge_cce)
     if need_request:
         key_name = _judge_api_key_name(judge_provider)
         if not os.environ.get(key_name):
             parser.error(
                 f"Set {key_name} for task/collaboration judging with "
-                f"--judge-provider {judge_provider}, or disable both judges."
+                f"--judge-provider {judge_provider}, or disable the enabled judges."
             )
     try:
         query_fn = (
@@ -823,6 +906,16 @@ def main() -> None:
         if need_request
         else None
     )
+    cce_request_fn = (
+        resolve_request_fn(
+            provider=judge_provider,
+            model=judge_model,
+            max_output_tokens=args.max_output_tokens,
+            temperature=0.0,
+        )
+        if args.live and args.judge_cce
+        else None
+    )
 
     print(
         f"Competition batch: {len(cases)} contests | schema={args.schema} | "
@@ -830,7 +923,8 @@ def main() -> None:
         f"mode={'live' if args.live else 'mock'} | provider={args.provider} | "
         f"judge_provider={judge_provider} | "
         f"task_judge={'on' if judge_task else 'off'} | "
-        f"collab_judge={'on' if judge_collab else 'off'}"
+        f"collab_judge={'on' if judge_collab else 'off'} | "
+        f"cce_judge={'on' if args.judge_cce else 'off'}"
     )
 
     metadata = {
@@ -850,6 +944,8 @@ def main() -> None:
         ],
         "judge_task": judge_task,
         "judge_collab": judge_collab,
+        "judge_cce": args.judge_cce,
+        "cce_judge_temperature": 0.0 if args.judge_cce else None,
         "judge_provider": judge_provider if need_request else None,
         "judge_model": judge_model if need_request else None,
     }
@@ -891,6 +987,7 @@ def main() -> None:
             existing,
             judge_task=judge_task,
             judge_collab=judge_collab,
+            judge_cce=args.judge_cce,
         ):
             print(f"\n--- {label} ---\n  resume: already complete", flush=True)
             continue
@@ -914,6 +1011,8 @@ def main() -> None:
                 model=model if args.live else "mock",
                 max_output_tokens=args.max_output_tokens if args.live else None,
                 temperature=args.temperature if args.live else None,
+                judge_cce=args.judge_cce,
+                cce_request_fn=cce_request_fn,
             )
             if row.get("status") == "rules_baseline_unavailable":
                 print(f"  UNAVAILABLE: {row['error']}", flush=True)
@@ -935,6 +1034,8 @@ def main() -> None:
                 bits.append(f"task={row['grade_score']:g}/{row['grade_max_score']:g}")
             if row.get("coordination_score") is not None:
                 bits.append(f"CS={row['coordination_score']:.2f}")
+            if row.get("cce") is not None:
+                bits.append(f"CCE={row['cce']:.3f}")
             print("  ok " + " ".join(bits), flush=True)
         except ProblemNotFoundError as exc:
             row = {
@@ -975,7 +1076,8 @@ def main() -> None:
     print(
         f"  DONE: {summary['ok']}/{summary['total']} ok | "
         f"{summary['submitted']} submitted | {summary['graded']} graded | "
-        f"{summary['with_coordination']} with CS"
+        f"{summary['with_coordination']} with CS | "
+        f"{summary['with_cce']} with CCE"
     )
     print(f"  Saved: {out_path}")
     print("=" * 60)

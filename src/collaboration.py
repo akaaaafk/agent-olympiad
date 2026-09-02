@@ -636,6 +636,82 @@ def _open_table_turn_policy(policy: dict[str, Any]) -> dict[str, Any]:
     return dict(policy["contestant_turn_policy"])
 
 
+def _recovery_work_has_evidence(item: dict[str, Any], verdict: str) -> bool:
+    text = f"{item.get('payload') or ''}\n{item.get('result') or ''}".lower()
+    has_change = "change:" in text or "corrected implementation" in text
+    if verdict == "WA":
+        return (
+            has_change
+            and ("counterexample:" in text or "failing test:" in text)
+            and "validation:" in text
+        )
+    if verdict == "TLE":
+        return (
+            has_change
+            and "complexity before:" in text
+            and "complexity after:" in text
+            and "stress test:" in text
+        )
+    if verdict in {"CE", "RE"}:
+        return (
+            has_change
+            and "reproduction:" in text
+            and "validation:" in text
+        )
+    return has_change and "evidence:" in text and "validation:" in text
+
+
+def _failed_submission_recovery_stage(env) -> tuple[str | None, str | None]:
+    """Return the missing recovery step after the latest non-AC code run."""
+    latest_index: int | None = None
+    latest_verdict: str | None = None
+    for index in range(len(env.action_log) - 1, -1, -1):
+        item = env.action_log[index]
+        if item.get("action") != "submit_code":
+            continue
+        try:
+            feedback = json.loads(str(item.get("result") or "{}"))
+        except json.JSONDecodeError:
+            feedback = {}
+        remote = feedback.get("remote") or {}
+        verdict = str(remote.get("verdict") or feedback.get("verdict") or "").upper()
+        if not verdict:
+            continue
+        if verdict in {"PENDING", "AC"}:
+            return None, None
+        if verdict == "SUBMIT_FAILED":
+            return None, None
+        latest_index = index
+        latest_verdict = verdict
+        break
+    if latest_index is None:
+        return None, None
+
+    recovery_items = [
+        item
+        for item in env.action_log[latest_index + 1 :]
+        if item.get("agent") != "Coach" and not item.get("protocol_error")
+    ]
+    actions_after_failure = [item.get("action") for item in recovery_items]
+    try:
+        first_speak = actions_after_failure.index("speak")
+    except ValueError:
+        return "discuss", latest_verdict
+    work_after_discussion = [
+        item
+        for item in recovery_items[first_speak + 1 :]
+        if item.get("action") == "work"
+    ]
+    if not work_after_discussion:
+        return "revise", latest_verdict
+    if not any(
+        _recovery_work_has_evidence(item, latest_verdict)
+        for item in work_after_discussion
+    ):
+        return "validate", latest_verdict
+    return None, latest_verdict
+
+
 def _open_table_available_actions(
     env,
     agent_name: str,
@@ -670,6 +746,12 @@ def _open_table_available_actions(
         and prior_agent_actions[-1].get("action") == "work"
     ):
         allowed.discard("work")
+    recovery_stage, _ = _failed_submission_recovery_stage(env)
+    if recovery_stage == "discuss":
+        allowed.discard("work")
+        allowed.discard("submit_code")
+    elif recovery_stage in {"revise", "validate"}:
+        allowed.discard("submit_code")
     if env.communication.enabled:
         per_agent = int(
             env.communication.policy.get("per_agent_message_budget", 0)
@@ -698,6 +780,38 @@ def _open_table_contestant_system_prompt(
         "These are the ONLY valid actions this turn. Return exactly ONE "
         "structured ACTION block and no other text.",
     ]
+    recovery_stage, failed_verdict = _failed_submission_recovery_stage(env)
+    if recovery_stage == "discuss":
+        lines.append(
+            f"The latest official run returned {failed_verdict}. Before any more "
+            "implementation or submission, discuss the likely cause with the team "
+            "using speak."
+        )
+    elif recovery_stage == "revise":
+        lines.append(
+            f"The latest official run returned {failed_verdict} and has now been "
+            "discussed. Produce a concrete corrected implementation and validation "
+            "record using work before another submit_code."
+        )
+    elif recovery_stage == "validate":
+        lines.append(
+            f"The latest official run returned {failed_verdict}. Prior work did not "
+            "provide the evidence required to unlock another submission. Use work "
+            "with these exact labels: "
+            + (
+                "COUNTEREXAMPLE:, CHANGE:, VALIDATION:."
+                if failed_verdict == "WA"
+                else (
+                    "COMPLEXITY BEFORE:, COMPLEXITY AFTER:, CHANGE:, STRESS TEST:."
+                    if failed_verdict == "TLE"
+                    else (
+                        "REPRODUCTION:, CHANGE:, VALIDATION:."
+                        if failed_verdict in {"CE", "RE"}
+                        else "EVIDENCE:, CHANGE:, VALIDATION:."
+                    )
+                )
+            )
+        )
     if "think" in allowed:
         lines.append(
             f"- ACTION: think | PAYLOAD: <private analysis, max {limits['think']} chars>"

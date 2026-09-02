@@ -19,6 +19,8 @@ New collaboration baseline **`open_table_coach`**: a Coach prepares the team bef
 
 **Experiment result (§12):** `Qwen/Qwen3.6-35B-A3B` · Tinker · `rules_mode=enforced` · **35.6 / 40** · `results/open_table_coach_arml_local_2009_tinker.json/`
 
+**Batch results (Sep 2026):** 32-task structured-gold + CF/ICPC pilots → [`open-table-coach-batch-results.md`](open-table-coach-batch-results.md)
+
 > **Repo note:** run all Coach experiments from **`agent-team-features-main`** only. The `agent-olympiad/` copy is an earlier prototype without rule-card enforcement.
 
 ---

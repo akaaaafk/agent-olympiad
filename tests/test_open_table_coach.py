@@ -2,12 +2,18 @@ from __future__ import annotations
 
 import sys
 import unittest
+from types import SimpleNamespace
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from collaboration import CollabConfig, run_open_table_coach  # noqa: E402
+from collaboration import (  # noqa: E402
+    CollabConfig,
+    _failed_submission_recovery_stage,
+    _open_table_available_actions,
+    run_open_table_coach,
+)
 from env import OlympiadEnvironment  # noqa: E402
 from evaluation.collaboration_score import format_agent_profiles  # noqa: E402
 from llm import mock_agent_llm  # noqa: E402
@@ -372,6 +378,224 @@ class OpenTableCoachTests(unittest.TestCase):
         )
         self.assertTrue(
             all("ACTION: work" in system for system in action_systems_by_turn[4])
+        )
+
+    def test_non_ac_requires_discussion_and_revision_before_resubmission(self) -> None:
+        policy = {
+            "contestant_turn_policy": {
+                "allowed_actions": ["work", "speak", "rest", "submit_code"],
+                "discussion_policy": {},
+            }
+        }
+        env = SimpleNamespace(
+            current_turn=8,
+            communication=SimpleNamespace(enabled=False),
+            action_log=[
+                {
+                    "turn": 7,
+                    "agent": "Agent_1",
+                    "action": "submit_code",
+                    "result": '{"verdict": "WA"}',
+                }
+            ],
+        )
+
+        self.assertEqual(
+            _failed_submission_recovery_stage(env),
+            ("discuss", "WA"),
+        )
+        self.assertEqual(
+            _open_table_available_actions(env, "Agent_2", policy),
+            {"speak", "rest"},
+        )
+
+        env.action_log.append(
+            {
+                "turn": 8,
+                "agent": "Agent_2",
+                "action": "speak",
+                "result": "shared diagnosis",
+            }
+        )
+        self.assertEqual(
+            _failed_submission_recovery_stage(env),
+            ("revise", "WA"),
+        )
+        self.assertEqual(
+            _open_table_available_actions(env, "Agent_3", policy),
+            {"work", "speak", "rest"},
+        )
+
+        env.action_log.append(
+            {
+                "turn": 8,
+                "agent": "Agent_3",
+                "action": "work",
+                "payload": (
+                    "COUNTEREXAMPLE: the prior code fails when n=1. "
+                    "CHANGE: handle the singleton case. "
+                    "VALIDATION: the old case now passes."
+                ),
+                "result": "corrected implementation",
+            }
+        )
+        self.assertEqual(
+            _failed_submission_recovery_stage(env),
+            (None, "WA"),
+        )
+        self.assertIn(
+            "submit_code",
+            _open_table_available_actions(env, "Agent_1", policy),
+        )
+
+    def test_non_ac_repeated_work_does_not_unlock_resubmission(self) -> None:
+        policy = {
+            "contestant_turn_policy": {
+                "allowed_actions": ["work", "speak", "rest", "submit_code"],
+                "discussion_policy": {},
+            }
+        }
+        env = SimpleNamespace(
+            current_turn=8,
+            communication=SimpleNamespace(enabled=False),
+            action_log=[
+                {
+                    "turn": 7,
+                    "agent": "Agent_1",
+                    "action": "submit_code",
+                    "result": '{"verdict": "WA"}',
+                },
+                {
+                    "turn": 8,
+                    "agent": "Agent_2",
+                    "action": "speak",
+                    "payload": "The same algorithm still looks correct.",
+                    "result": "shared diagnosis",
+                },
+                {
+                    "turn": 8,
+                    "agent": "Agent_3",
+                    "action": "work",
+                    "payload": "Repeat the same algorithm and submit it again.",
+                    "result": "same algorithm again",
+                },
+            ],
+        )
+
+        self.assertEqual(
+            _failed_submission_recovery_stage(env),
+            ("validate", "WA"),
+        )
+        self.assertNotIn(
+            "submit_code",
+            _open_table_available_actions(env, "Agent_1", policy),
+        )
+
+    def test_tle_requires_complexity_change_and_stress_test(self) -> None:
+        env = SimpleNamespace(
+            action_log=[
+                {
+                    "agent": "Agent_1",
+                    "action": "submit_code",
+                    "result": '{"verdict": "TLE"}',
+                },
+                {
+                    "agent": "Agent_2",
+                    "action": "speak",
+                    "payload": "The constants may be too high.",
+                    "result": "shared diagnosis",
+                },
+                {
+                    "agent": "Agent_3",
+                    "action": "work",
+                    "payload": "Use a faster implementation.",
+                    "result": "minor optimization",
+                },
+            ]
+        )
+
+        self.assertEqual(
+            _failed_submission_recovery_stage(env),
+            ("validate", "TLE"),
+        )
+
+        env.action_log[-1]["payload"] = (
+            "COMPLEXITY BEFORE: O(3^n). COMPLEXITY AFTER: O(n 2^n). "
+            "CHANGE: replace subset enumeration with one mask DP. "
+            "STRESS TEST: n=20 completes within the time limit."
+        )
+        self.assertEqual(
+            _failed_submission_recovery_stage(env),
+            (None, "TLE"),
+        )
+
+    def test_submit_failed_allows_infrastructure_retry(self) -> None:
+        policy = {
+            "contestant_turn_policy": {
+                "allowed_actions": ["work", "speak", "rest", "submit_code"],
+                "discussion_policy": {},
+            }
+        }
+        env = SimpleNamespace(
+            current_turn=8,
+            communication=SimpleNamespace(enabled=False),
+            action_log=[
+                {
+                    "turn": 7,
+                    "agent": "Agent_1",
+                    "action": "submit_code",
+                    "result": '{"verdict": "SUBMIT_FAILED"}',
+                }
+            ],
+        )
+
+        self.assertEqual(_failed_submission_recovery_stage(env), (None, None))
+        self.assertIn(
+            "submit_code",
+            _open_table_available_actions(env, "Agent_1", policy),
+        )
+
+    def test_unchanged_source_is_blocked_after_wrong_answer(self) -> None:
+        env = OlympiadEnvironment(
+            competition_id="icpc",
+            problem_id="icpc_wf_2012_bottles",
+            max_turns=8,
+            rules_mode="enforced",
+        )
+        source = "print('same solution')"
+        env.code_submissions.append(
+            {
+                "turn": 1,
+                "agent": "Agent_1",
+                "verdict": "WA",
+                "code": source,
+            }
+        )
+
+        result = env.execute_action("Agent_1", "submit_code", source)
+
+        self.assertIn("unchanged source", result.lower())
+        self.assertEqual(env.submission_attempts, 0)
+
+    def test_blocked_duplicate_does_not_hide_prior_wrong_answer(self) -> None:
+        env = SimpleNamespace(
+            action_log=[
+                {
+                    "agent": "Agent_1",
+                    "action": "submit_code",
+                    "result": '{"verdict": "WA"}',
+                },
+                {
+                    "agent": "Agent_1",
+                    "action": "submit_code",
+                    "result": "SUBMISSION BLOCKED: unchanged source after WA.",
+                },
+            ]
+        )
+
+        self.assertEqual(
+            _failed_submission_recovery_stage(env),
+            ("discuss", "WA"),
         )
 
     def test_synthesis_requires_independent_checks_and_no_visual_guessing(self) -> None:

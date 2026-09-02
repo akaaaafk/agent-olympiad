@@ -1,4 +1,5 @@
 import ast
+import hashlib
 import json
 import math
 import operator
@@ -691,6 +692,7 @@ class OlympiadEnvironment:
             "total": feedback.get("total"),
             "finalized": bool(feedback.get("finalized")),
             "code": payload.strip(),
+            "source_hash": self._source_hash(payload),
         }
         cases = feedback.get("cases") or feedback.get("tests") or []
         if cases:
@@ -704,6 +706,31 @@ class OlympiadEnvironment:
             "The full source is available in TEAM CODE SUBMISSIONS."
         )
         self.chat_history.append({"sender": "Contest_Control", "message": summary})
+
+    @staticmethod
+    def _source_hash(payload: str) -> str:
+        normalized = "\n".join(
+            line.rstrip() for line in payload.strip().splitlines()
+        )
+        return hashlib.sha256(normalized.encode("utf-8")).hexdigest()
+
+    def _unchanged_failed_source_error(self, payload: str) -> str | None:
+        if not self.code_submissions:
+            return None
+        latest = self.code_submissions[-1]
+        verdict = str(latest.get("verdict") or "").upper()
+        if verdict in {"", "AC", "PENDING", "SUBMIT_FAILED"}:
+            return None
+        prior_hash = latest.get("source_hash")
+        if prior_hash is None and latest.get("code"):
+            prior_hash = self._source_hash(str(latest["code"]))
+        if prior_hash != self._source_hash(payload):
+            return None
+        return (
+            f"SUBMISSION BLOCKED: unchanged source after {verdict}. "
+            "Diagnose the verdict, change the implementation, and validate it "
+            "before submitting again."
+        )
 
     def format_team_code_submissions(self, *, include_source: bool = True) -> str:
         if not self.code_submissions:
@@ -1016,8 +1043,11 @@ class OlympiadEnvironment:
                     self.submitted_by = agent_name
                     result = f"Submission finalized by {agent_name}."
         elif action_type == "submit_code":
-            result = self._submit_code(payload, agent_name=agent_name)
-            if not result.startswith("RULE VIOLATION"):
+            duplicate_error = self._unchanged_failed_source_error(payload)
+            if duplicate_error:
+                result = duplicate_error
+            else:
+                result = self._submit_code(payload, agent_name=agent_name)
                 self._record_shared_code_submission(agent_name, payload, result)
         elif action_type == "use_calculator":
             result = self._run_calculator(payload)
@@ -1121,10 +1151,55 @@ class OlympiadEnvironment:
         return None
 
     def _submit_code(self, payload: str, *, agent_name: str) -> str:
-        """Judge locally, then remotely when the VJudge gateway is enabled."""
-        from evaluation.programming_judge import judge_programming_submission
+        """Use the remote judge when configured, otherwise fall back locally."""
+        from judge.vjudge_gateway_client import gateway_enabled
 
         self.submission_attempts += 1
+        if gateway_enabled():
+            remote = self._maybe_vjudge_remote_submit(
+                payload,
+                local_language="python3",
+            ) or {"status": "failed", "verdict": "SUBMIT_FAILED"}
+            self.remote_submission = remote
+            self.remote_submission_source = payload.strip()
+            remote_status = str(remote.get("status") or "")
+            remote_verdict = str(remote.get("verdict") or "")
+            if remote_status == "final" and remote_verdict == "AC":
+                self.workspace["final_answer"] = payload.strip()
+                self.submitted = True
+                self.submitted_by = agent_name
+            elif remote_status == "final":
+                self.record_wrong_submission()
+            elif remote_status == "needs_human":
+                self.workspace["final_answer"] = payload.strip()
+                self.submitted = True
+                self.submitted_by = agent_name
+
+            feedback = {
+                "action": "submit_code",
+                "attempt": self.submission_attempts,
+                "verdict": remote_verdict or "PENDING",
+                "test_scope": "remote",
+                "grading_scope_label": "remote official judge",
+                "passed": 1 if remote_verdict == "AC" else 0,
+                "total": 1,
+                "finalized": self.submitted,
+                "penalty_minutes": self.penalty_minutes(),
+                "simulated_minutes": self.simulated_minutes,
+                "continue_allowed": not self.submitted and self.can_begin_turn(),
+                "remote": remote,
+            }
+            if self.submitted and remote_verdict == "AC":
+                feedback["note"] = "Remote judge AC; submission finalized."
+            elif self.submitted and remote_status == "needs_human":
+                feedback["note"] = (
+                    "Remote judge requires human verification; run paused with this "
+                    "candidate preserved."
+                )
+            return json.dumps(feedback, sort_keys=True)
+
+        from evaluation.programming_judge import judge_programming_submission
+
         judged = judge_programming_submission(
             self.problem_data,
             payload,
@@ -1133,30 +1208,8 @@ class OlympiadEnvironment:
             fetch_kattis=False,
             test_scope="sample",
         )
-        remote = None
         if judged.wrong_submission:
             self.record_wrong_submission()
-        elif judged.verdict == "AC":
-            remote = self._maybe_vjudge_remote_submit(
-                payload, local_language=judged.language
-            )
-            if remote is not None:
-                self.remote_submission = remote
-                self.remote_submission_source = payload.strip()
-                remote_status = str(remote.get("status") or "")
-                remote_verdict = str(remote.get("verdict") or "")
-                if remote_status == "final" and remote_verdict == "AC":
-                    self.workspace["final_answer"] = payload.strip()
-                    self.submitted = True
-                    self.submitted_by = agent_name
-                elif remote_status == "final":
-                    self.record_wrong_submission()
-                elif remote_status == "needs_human":
-                    # Preserve the exact candidate and pause the run. A browser
-                    # must resolve Turnstile; synthesis must not replace it.
-                    self.workspace["final_answer"] = payload.strip()
-                    self.submitted = True
-                    self.submitted_by = agent_name
         feedback = judged.to_dict()
         feedback.update(
             {
@@ -1168,16 +1221,7 @@ class OlympiadEnvironment:
                 "continue_allowed": not self.submitted and self.can_begin_turn(),
             }
         )
-        if remote is not None:
-            feedback["remote"] = remote
-        if self.submitted and remote and remote.get("verdict") == "AC":
-            feedback["note"] = "Remote judge AC; submission finalized."
-        elif self.submitted and remote and remote.get("status") == "needs_human":
-            feedback["note"] = (
-                "Remote judge requires human verification; run paused with this "
-                "candidate preserved."
-            )
-        elif judged.verdict == "AC" and remote is None:
+        if judged.verdict == "AC":
             feedback["note"] = (
                 "Sample AC only; final hidden tests may still reject this solution."
             )
@@ -1386,6 +1430,36 @@ class OlympiadEnvironment:
         if task_type in {"algorithmic_programming", "programming"} or evaluation.get(
             "evaluator_id"
         ) == "programming_judge":
+            from judge.vjudge_gateway_client import gateway_enabled
+
+            remote = (
+                self.remote_submission
+                if self.remote_submission_source == answer.strip()
+                else self._maybe_vjudge_remote_submit(
+                    answer,
+                    local_language="python3",
+                )
+                if gateway_enabled()
+                else None
+            )
+            if remote is not None:
+                status = str(remote.get("status") or "")
+                verdict = str(remote.get("verdict") or "")
+                is_final = status == "final"
+                is_ac = is_final and verdict == "AC"
+                return {
+                    "graded": is_final,
+                    "method": "vjudge_remote",
+                    "score": 1.0 if is_ac else 0.0 if is_final else None,
+                    "max_score": 1.0,
+                    "correct": is_ac,
+                    "verdict": verdict,
+                    "remote": remote,
+                    "penalty_minutes": self.penalty_minutes(),
+                    "simulated_minutes": self.simulated_minutes,
+                    "submitted_by": self.submitted_by,
+                }
+
             from evaluation.programming_judge import judge_programming_submission
 
             judged = judge_programming_submission(
@@ -1404,15 +1478,6 @@ class OlympiadEnvironment:
             if judged.verdict == "AC":
                 # Clock already includes any prior WA burns; do not add again.
                 grade["icpc_time_score"] = int(self.simulated_minutes)
-            remote = (
-                self.remote_submission
-                if self.remote_submission_source == answer.strip()
-                else self._maybe_vjudge_remote_submit(
-                    answer, local_language=judged.language
-                )
-            )
-            if remote is not None:
-                grade["remote"] = remote
             return grade
 
         if expected:
