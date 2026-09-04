@@ -1,15 +1,44 @@
-# Weekly Work Summary (2026-08-26 to 2026-09-01)
+# Weekly Work Summary (2026-08-26 to 2026-09-04)
+
+> Author: Zhongzheng  
+> Scope: `agent-team-features-main` — Open Table Coach, remote judging, evaluation metrics, contest-session gold suite  
+> Last updated: 2026-09-04
+
+## Contents
+
+1. [Overview](#1-overview)
+2. [Open Table Coach Collaboration Protocol](#2-open-table-coach-collaboration-protocol)
+3. [Open Table Coach Experiments](#3-open-table-coach-experiments)
+4. [Remote Programming Judges](#4-remote-programming-judges)
+5. [Multi-Agent Evaluation Research](#5-multi-agent-evaluation-research)
+6. [Stability and Test Fixes](#6-stability-and-test-fixes)
+7. [Contest-session Code & Gold Grading](#7-contest-session-code--gold-grading)
+8. [Contest-session Gold Suite: OTC vs Vanilla](#8-contest-session-gold-suite-otc-vs-vanilla-2026-09-0304)
+9. [Main Conclusions](#9-main-conclusions)
+10. [Next Steps](#10-next-steps)
+
 ## 1. Overview
 
 This week moved the project from “multi-agent teams can run competitions” toward “their collaboration can be constrained, observed, remotely judged, and evaluated rigorously.”
 
-The main accomplishments were:
+**Main accomplishments**
 
 1. Redesigned `open_table_coach` with private reasoning, group communication, and public communication.
 2. Introduced a private-deliberation-then-single-action turn protocol, tolerant parsing, discussion gates, and dynamic early stopping.
 3. Researched VJudge (no public write API), built a localhost gateway + web adapter, mapped CF/Kattis problems, and made remote verdicts authoritative when configured.
-4. Ran 10 ICPC problems with remote Kattis judging and reran three failed problems under a mandatory recovery protocol.
-5. Reviewed multi-agent benchmark papers, redesigned the evaluation framework, and applied the calculable metrics to existing runs.
+4. Ran 10 ICPC problems with remote Kattis judging and reran failed problems under a mandatory recovery protocol.
+5. Reviewed multi-agent benchmark papers, redesigned the evaluation framework, and applied calculable metrics to existing runs.
+6. Built the contest-session runtime (vanilla vs strategic modules, tool registry, native/emulated function calling) and gold-grading fixes (§7).
+7. Ran a **771×2** contest-session gold suite (OTC vs Vanilla) across ARML, Science Bowl, Qanta, Mystery Hunt, History Olympiad, Purple Comet, HMMT Guts, and WMTC (§8).
+8. After the suite, fixed OTC deadline non-submit and task-family routing; HMMT probe improved from 0/36 to 1/36, and a low-accuracy OTC rerun is in progress.
+
+**Companion docs**
+
+| Doc | Contents |
+|---|---|
+| [open-table-coach-batch-results.md](open-table-coach-batch-results.md) | Compact OTC task-batch tables + ICPC coach flowchart |
+| [contest-session-gold-suite-20260903.md](contest-session-gold-suite-20260903.md) | Full OTC vs Vanilla gold-suite tables and competition blurbs |
+| [`docs/contest-systems.md`](../contest-systems.md) | Operator notes for contest-session variants |
 
 ---
 
@@ -89,26 +118,6 @@ flowchart TD
 
   Done --> Grade([Task grade + CS judge])
 ```
-
-Turn-level protocol (one contestant):
-
-```mermaid
-flowchart LR
-  A[Start agent turn] --> B[Private think]
-  B --> C{Gate: allowed actions}
-  C -->|need discuss| D[speak / rest]
-  C -->|need revise| E[work / rest]
-  C -->|normal or may resubmit| F[speak / work / rest / submit_code]
-  D --> H[End turn]
-  E --> H
-  F --> G{If submit_code?}
-  G -->|no| H
-  G -->|yes| I{Remote verdict}
-  I -->|AC| H
-  I -->|non-AC| J[Arm recovery gates<br/>discuss → revise → resubmit]
-  J --> H
-```
----
 
 ### 2.1 Three-layer memory
 
@@ -193,6 +202,8 @@ The system blocks `work` / `submit_code` until the discuss step is done, and blo
 
 ---
 
+---
+
 ## 3. Open Table Coach Experiments
 
 All structured-gold runs below use `schema=open_table_coach`, `rules_mode=enforced`, task judge on, and collaboration judge on (MultiAgentBench CS, 0–5).
@@ -232,46 +243,9 @@ All structured-gold runs below use `schema=open_table_coach`, `rules_mode=enforc
 
 ARML Local and National Team performed better than Purple Comet and HMMT Guts. The same collaboration protocol does not remove limits from task difficulty, missing diagrams, or incomplete source material.
 
-#### Per-task ledger (full)
+#### Per-task ledger
 
-Source: `results/task_based_structured_gold_perplexity_20260829/competition_batch.json`.  
-`accuracy = score / max_score`. `sec` is wall-clock seconds, rounded.
-
-| competition | problem_id | score | max_score | accuracy | Communication | Planning | CS | turns | api_calls | tokens | sec |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| arml_local | arml_local_2009 | 22.22 | 40 | 55.56% | 4 | 4 | 4.0 | 16 | 183 | 19098 | 395 |
-| arml_local | arml_local_2010 | 26.67 | 40 | 66.67% | 4 | 3 | 3.5 | 22 | 255 | 28231 | 581 |
-| arml_local | arml_local_2011 | 35.00 | 40 | 87.50% | 4 | 4 | 4.0 | 10 | 111 | 9158 | 239 |
-| arml_local | arml_local_2012 | 26.67 | 40 | 66.67% | 4 | 4 | 4.0 | 11 | 123 | 13348 | 304 |
-| arml_local | arml_local_2013 | 6.67 | 40 | 16.67% | 4 | 3 | 3.5 | 16 | 183 | 21902 | 473 |
-| arml_local | arml_local_2014 | 50.00 | 60 | 83.33% | 4 | 4 | 4.0 | 17 | 195 | 23508 | 485 |
-| arml_national_team | arml_national_team_2009 | 50.00 | 50 | 100.00% | 5 | 4 | 4.5 | 11 | 303 | 28722 | 678 |
-| arml_national_team | arml_national_team_2010 | 10.00 | 50 | 20.00% | 4 | 3 | 3.5 | 11 | 303 | 27582 | 641 |
-| arml_national_team | arml_national_team_2011 | 35.00 | 50 | 70.00% | 4 | 3 | 3.5 | 11 | 303 | 31086 | 671 |
-| arml_national_team | arml_national_team_2012 | 40.00 | 50 | 80.00% | 4 | 4 | 4.0 | 10 | 273 | 24230 | 615 |
-| arml_national_team | arml_national_team_2013 | 35.00 | 50 | 70.00% | 3 | 3 | 3.0 | 10 | 273 | 30361 | 701 |
-| arml_national_team | arml_national_team_2014 | 30.00 | 50 | 60.00% | 4 | 4 | 4.0 | 10 | 273 | 26160 | 631 |
-| arml_national_team | arml_national_team_2016 | 0.00 | 50 | 0.00% | 2 | 3 | 2.5 | 10 | 273 | 31537 | 663 |
-| arml_national_team | arml_national_team_2017 | 10.00 | 50 | 20.00% | 4 | 3 | 3.5 | 10 | 273 | 29340 | 672 |
-| arml_national_team | arml_national_team_2018 | 11.11 | 50 | 22.22% | 4 | 4 | 4.0 | 11 | 303 | 32486 | 727 |
-| arml_national_team | arml_national_team_2019 | 5.00 | 50 | 10.00% | 3 | 4 | 3.5 | 11 | 303 | 34470 | 732 |
-| arml_national_team | arml_national_team_2023 | 45.00 | 50 | 90.00% | 4 | 3 | 3.5 | 23 | 663 | 38044 | 1232 |
-| hmmt_guts | hmmt_guts_2024 | 2.00 | 36 | 5.56% | 4 | 3 | 3.5 | 11 | 163 | 12584 | 343 |
-| purple_comet | purple_comet_hs_2018 | 4.00 | 30 | 13.33% | 4 | 3 | 3.5 | 20 | 231 | 25383 | 580 |
-| purple_comet | purple_comet_ms_2018 | 1.00 | 20 | 5.00% | 4 | 3 | 3.5 | 19 | 219 | 24868 | 561 |
-| purple_comet | purple_comet_hs_2019 | 3.00 | 30 | 10.00% | 3 | 4 | 3.5 | 18 | 207 | 21742 | 490 |
-| purple_comet | purple_comet_ms_2019 | 3.00 | 20 | 15.00% | 3 | 2 | 2.5 | 21 | 243 | 25743 | 597 |
-| purple_comet | purple_comet_hs_2020 | 5.00 | 30 | 16.67% | 4 | 4 | 4.0 | 19 | 219 | 23036 | 518 |
-| purple_comet | purple_comet_ms_2020 | 4.00 | 20 | 20.00% | 3 | 3 | 3.0 | 15 | 171 | 17055 | 394 |
-| purple_comet | purple_comet_hs_2021 | 4.00 | 30 | 13.33% | 3 | 3 | 3.0 | 20 | 231 | 22683 | 551 |
-| purple_comet | purple_comet_ms_2021 | 5.00 | 20 | 25.00% | 3 | 3 | 3.0 | 24 | 279 | 29740 | 682 |
-| purple_comet | purple_comet_hs_2022 | 3.00 | 30 | 10.00% | 3 | 3 | 3.0 | 18 | 207 | 19416 | 454 |
-| purple_comet | purple_comet_ms_2022 | 5.00 | 20 | 25.00% | 4 | 3 | 3.5 | 16 | 183 | 16673 | 403 |
-| purple_comet | purple_comet_hs_2023 | 2.00 | 30 | 6.67% | 4 | 3 | 3.5 | 20 | 231 | 23706 | 539 |
-| purple_comet | purple_comet_ms_2023 | 3.00 | 20 | 15.00% | 4 | 4 | 4.0 | 17 | 195 | 22480 | 483 |
-| purple_comet | purple_comet_hs_2024 | 4.00 | 30 | 13.33% | 4 | 4 | 4.0 | 19 | 219 | 21866 | 514 |
-| purple_comet | purple_comet_ms_2024 | 5.00 | 20 | 25.00% | 3 | 3 | 3.0 | 21 | 243 | 25783 | 601 |
-| **TOTAL** | **32 tasks** | **491.33** | **1196** | **macro 35.55%** | **mean 3.69** | **mean 3.38** | **mean 3.53** | **498** | **7834** | **782021** | **18150** |
+Full 32-task ledger (accuracy, CS, turns, API, tokens, wall time): [open-table-coach-batch-results.md](open-table-coach-batch-results.md) §1.3. Source: `results/task_based_structured_gold_perplexity_20260829/competition_batch.json`.
 
 ### 3.3 Tinker Qwen3.5-35B-A3B-Base (partial, 10/32)
 
@@ -297,21 +271,7 @@ Source: `results/task_based_structured_gold_perplexity_20260829/competition_batc
 
 #### Per-task ledger (completed)
 
-Source: `results/task_based_structured_gold_tinker_qwen35_35b_base_20260831/competition_batch.json`.
-
-| competition | problem_id | score | max_score | accuracy | Communication | Planning | CS | turns | api_calls | tokens | sec |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| arml_local | arml_local_2009 | 22.22 | 40 | 55.56% | 3 | 2 | 2.5 | 27 | 315 | 208911 | 3128 |
-| arml_local | arml_local_2010 | 20.00 | 40 | 50.00% | 2 | 2 | 2.0 | 14 | 159 | 472768 | 5788 |
-| arml_local | arml_local_2011 | 30.00 | 40 | 75.00% | 2 | 2 | 2.0 | 13 | 147 | 262180 | 3621 |
-| arml_local | arml_local_2012 | 31.11 | 40 | 77.78% | 4 | 2 | 3.0 | 30 | 351 | 307093 | 5592 |
-| arml_local | arml_local_2013 | 20.00 | 40 | 50.00% | 4 | 2 | 3.0 | 16 | 183 | 128370 | 2335 |
-| arml_local | arml_local_2014 | 30.00 | 60 | 50.00% | 3 | 2 | 2.5 | 11 | 123 | 304507 | 6440 |
-| arml_national_team | arml_national_team_2009 | 50.00 | 50 | 100.00% | 5 | 2 | 3.5 | 11 | 303 | 731615 | 10304 |
-| arml_national_team | arml_national_team_2010 | 35.00 | 50 | 70.00% | 3 | 1 | 2.0 | 12 | 333 | 914173 | 11250 |
-| arml_national_team | arml_national_team_2011 | 45.00 | 50 | 90.00% | 4 | 2 | 3.0 | 22 | 633 | 1120623 | 17151 |
-| arml_national_team | arml_national_team_2012 | 35.00 | 50 | 70.00% | 3 | 1 | 2.0 | 10 | 273 | 914875 | 11503 |
-| **TOTAL** | **10 tasks** | **318.33** | **460** | **macro 68.83%** | **mean 3.30** | **mean 1.80** | **mean 2.55** | **166** | **2820** | **5365115** | **77111** |
+Completed-task ledger: [open-table-coach-batch-results.md](open-table-coach-batch-results.md) §1.4. Source: `results/task_based_structured_gold_tinker_qwen35_35b_base_20260831/competition_batch.json`.
 
 #### Paired overlap with GPT-5.4-mini (same 10 tasks)
 
@@ -350,6 +310,8 @@ ARML Local 2009 early three-memory run (`results/arml_local_three_memory_gpt54mi
 A later tolerant-parser run on the same task also scored `22.22/40`, while using 21/30 turns, 243 calls, and 32,361 tokens. These runs do not share the same seed or budget, so they are descriptive comparisons rather than a valid memory ablation.
 
 More compact tables also live in [open-table-coach-batch-results.md](open-table-coach-batch-results.md).
+
+---
 
 ---
 
@@ -547,7 +509,7 @@ Same GPT-5.4-mini + `open_table_coach` + remote Kattis setup, with the non-AC re
 | icpc | icpc_wf_2012_infiltration2 | 0 | 1 | 0% | 2.5 | 30 | 82 | 16886 | 296.0 | 5 |
 | **TOTAL** | **5 tasks** | **2** | **5** | **40% AC** | **mean 3.30** | **104** | **316** | **72280** | **1264.1** | **17** |
 
-Sheet export: `results/_sheets_exports/04_icpc_kattis_5_recovery_30turn.tsv`.
+---
 
 ---
 
@@ -905,6 +867,8 @@ The smallest implementation plan is:
 
 ---
 
+---
+
 ## 6. Stability and Test Fixes
 
 Additional fixes completed this week include:
@@ -932,7 +896,146 @@ Focused tests now cover:
 
 ---
 
-## 7. Main Conclusions
+---
+
+## 7. Contest-session Code & Gold Grading
+
+Code that landed to support the §8 OTC vs Vanilla gold suite and the contest-session path more generally. Much of it remains uncommitted working-tree / new files on top of the ICPC/CCE branch.
+
+### 7.1 New contest-session stack
+
+Built an explicit multi-problem contest runtime (shared budget, shared memory, typed tools), separate from the older per-task `open_table_coach` batch path:
+
+| Module | Role |
+|---|---|
+| `src/contest_manifest.py` | Load/validate multi-task contest manifests (one year/set per run) |
+| `src/contest_session.py` | Session state, seats, submissions, checkpoints |
+| `src/contest_memory.py` | Personal / group / public memory for contest turns |
+| `src/contest_runner.py` | Shared state machine + compatibility dispatcher |
+| `src/strategic_contest_runner.py` | OTC / strategic entry (`coach_query_fn` required for coach path) |
+| `src/vanilla_contest_runner.py` | No-coach baseline; **intentionally no** `coach_query_fn` parameter |
+| `src/contest_adapters.py` | Environment task executor + `grade_contest_result` (per-`question_id` gold) |
+| `src/contest_budget.py` / `contest_rules.py` | Shared turn / API / token / clock budgets and rule cards |
+| `src/tool_registry.py` | Canonical typed actions (common + math/programming/research packs) |
+| `src/strategy.py` / `submission_policy.py` | Coach scheduling / review-gated submit policy |
+| `docs/contest-systems.md` | Operator docs for vanilla vs strategic matched runs |
+
+Matched comparisons change **only** `--system-variant` (`strategic_team` vs `vanilla_team`); tools, rules, budgets, and manifests stay fixed.
+
+### 7.2 Batch CLI + provider action transport
+
+`src/run_competition_batch.py`:
+
+- `--contest-manifest`, `--system-variant`, `--action-calling`, `--team-size`, `--max-api-calls`, `--max-total-tokens`, `--require-review`, checkpoint resume.
+- Dispatches to `run_vanilla_contest` / `run_strategic_contest` after normalizing `*_team` → `vanilla` / `strategic`.
+- Writes `contest_session.json` with grade, CS, budget, and `action_calling` transport.
+
+`src/llm.py`:
+
+- Provider-neutral `LLMRequest(tools=...)` / `LLMResponse(tool_calls=...)`.
+- **Native** function calling for Perplexity; **emulated** schema-validated tools for Tinker (prompt + validate + bounded retries, charged to budget).
+- Transport recorded as `native` / `emulated` / `prompt_json` on the session.
+
+### 7.3 Gold grading fixes (Wave1 Science Bowl regrade)
+
+`src/evaluation/gold.py` — fixed false zeros and false mismatches:
+
+1. **Single-part bare answers** — if the contest has one gradeable part and the sheet has no `1. …` line, accept the whole text or a `Final answer: …` line.
+2. **Sci-notation normalize** — unify `6.0e7` / `6.0 x 10^7` / `6.0×10^{7}` before compare; strip trailing unit-ish suffixes.
+3. **Numbered-line parsers** — require whitespace after `.` so decimals / sci-notation are not treated as part ids (`6.0e7` ≠ `Q6`).
+4. **Q-id mapping** — `Q1` / `q1` / `Problem1` look up the same parsed digit key as `1`.
+
+`src/contest_adapters.py` grading path grades each manifest task by its `question_id` against the shared answer sheet (not one blob blindly).
+
+`scripts/regrade_contest_sessions.py` — re-runs gold grading over existing `contest_session.json` trees without re-calling the LLM (used to fix Wave1 OTC/Vanilla Science Bowl after the parser change).
+
+### 7.4 Gold-suite launcher & report
+
+| Script | Role |
+|---|---|
+| `scripts/run_otc_gold_suite.py` | Resume-safe batch over gold competitions; skips `case_complete` sessions; writes `summary.tsv` |
+| `scripts/write_gold_suite_report.py` | Aggregates Wave1 + Remaining into `results/gold_suite_results_20260903.md` |
+| `scripts/run_otc_arml_science_bowl.py` | Earlier Wave1-only launcher (superseded by the suite script for Remaining) |
+
+Tests added alongside the stack: `tests/test_contest_*.py`, `test_vanilla_team.py`, `test_strategic_team.py`, `test_tool_registry.py`, `test_function_calling.py`, etc.
+
+### 7.5 Post-suite OTC fixes (after §8 baseline)
+
+Stability items already covered in §6 remain relevant. Two OTC-specific fixes landed after the §8 numbers were collected (baseline tables were **not** rewritten):
+
+1. **Deadline draft submit** — when a strategic session ends, latest non-programming drafts without a valid submission are submitted automatically (`deadline_drafts_submitted`), even if independent/final review is incomplete. Programming tasks are excluded.
+2. **Task-family routing** — contests now route by `task_family` (`programming` / `mathematics` / `short_answer` / `puzzle`) with competition-format blurbs in the manifest. Non-answer-sheet math packets no longer fall into the programming workflow by default. HMMT probe after routing: **1/36 (2.78%)** vs baseline **0/36**. A 374-session OTC rerun is in progress under `results/otc_task_routing_low_accuracy_20260904/`.
+
+---
+
+---
+
+## 8. Contest-session Gold Suite: OTC vs Vanilla (2026-09-03/04)
+
+Deterministic structured-gold competitions on the **contest-session** path (not the older task-based `open_table_coach` batch). Model: Perplexity `openai/gpt-5.4-mini`, native function calling, team size 3.
+
+- **OTC** = `strategic_team` (coach / review / scheduler; open-table coach lineage).
+- **Vanilla** = `vanilla_team` (same tools/rules, no coach).
+- Excluded: CTF/NYU, programming (ICPC/Codeforces/…), CFA. Artifacts: `results/otc_*_20260903/`, `results/vanilla_*_20260903/`, `results/gold_suite_results_20260903.md`.
+
+`accuracy` / `TaskUtility` = mean session `task_utility` = official score / max_score. CS = MultiAgentBench-style coordination score (0–5). Tokens/API/turns from contest `budget`.
+
+### 8.1 Overall
+
+| Variant | N | Accuracy (mean util) | Nonzero | Exact | Score/Max | Mean CS | Mean Comm | Mean Plan | Mean AAR | Mean AB | Σ turns | Σ API | Σ tokens | mean turns | mean API | mean tokens |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| OTC | 771 | 18.6% | 154/771 | 132/771 | 10.8% | 2.95 | 3.58 | 2.33 | 84.8% | 60.1% | 5966 | 18096 | 1604120 | 7.74 | 23.47 | 2081 |
+| Vanilla | 771 | 20.7% | 187/771 | 123/771 | 29.9% | 1.68 | 1.43 | 1.93 | 46.4% | 17.3% | 2359 | 6371 | 409055 | 3.06 | 8.26 | 531 |
+
+### 8.2 Wave1 vs Remaining
+
+| Run | N | Accuracy | Nonzero | Exact | Mean CS | Σ API | Σ tokens | mean turns | mean API | mean tokens |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| OTC Wave1 | 146 | 54.9% | 83/146 | 77/146 | 3.52 | 2107 | 221565 | 4.96 | 14.43 | 1518 |
+| Vanilla Wave1 | 146 | 45.9% | 67/146 | 67/146 | 1.55 | 578 | 28864 | 1.69 | 3.96 | 198 |
+| OTC Remaining | 625 | 10.1% | 71/625 | 55/625 | 2.82 | 15989 | 1382555 | 8.39 | 25.58 | 2212 |
+| Vanilla Remaining | 625 | 14.8% | 120/625 | 56/625 | 1.71 | 5793 | 380191 | 3.38 | 9.27 | 608 |
+
+### 8.3 By competition (paired)
+
+| Competition | N | OTC Acc | Van Acc | OTC CS | Van CS | OTC mean API | Van mean API | OTC mean tok | Van mean tok | OTC mean turns | Van mean turns | OTC nz | Van nz |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| `arml_local` | 6 | 52.3% | 0.0% | 3.25 | 2.83 | 37.00 | 36.00 | 7078 | 1761 | 12.00 | 12.00 | 6/6 | 0/6 |
+| `arml_national_team` | 11 | 15.7% | 20.0% | 2.05 | 2.23 | 13.00 | 9.27 | 2218 | 815 | 4.00 | 3.36 | 5/11 | 4/11 |
+| `history_olympiad` | 95 | 8.0% | 36.0% | 2.57 | 2.09 | 36.38 | 5.39 | 3886 | 720 | 11.83 | 2.20 | 12/95 | 58/95 |
+| `hmmt_guts` | 1 | 0.0% | 0.0% | 1.50 | 1.50 | 49.00 | 4.00 | 3291 | 1843 | 16.00 | 2.00 | 0/1 | 0/1 |
+| `mystery_hunt` | 261 | 0.4% | 0.8% | 2.26 | 2.02 | 30.14 | 16.81 | 2416 | 1034 | 9.76 | 5.82 | 1/261 | 2/261 |
+| `purple_comet` | 14 | 0.0% | 0.8% | 2.11 | 1.93 | 55.00 | 15.57 | 3260 | 884 | 18.00 | 5.43 | 0/14 | 2/14 |
+| `qanta` | 240 | 22.1% | 22.5% | 3.61 | 1.18 | 14.97 | 2.16 | 1254 | 58 | 5.09 | 1.05 | 53/240 | 54/240 |
+| `science_bowl` | 140 | 55.0% | 47.9% | 3.54 | 1.50 | 13.46 | 2.59 | 1279 | 131 | 4.66 | 1.25 | 77/140 | 67/140 |
+| `wmtc` | 3 | 0.0% | 0.0% | 2.50 | 2.00 | 37.00 | 17.33 | 2858 | 1668 | 12.00 | 6.00 | 0/3 | 0/3 |
+
+### 8.4 Why OTC loses on History Olympiad
+
+On `95` History Olympiad bowl rounds, Vanilla accuracy **36.0%** vs OTC **8.0%** (nonzero 58/95 vs 12/95).
+
+Observed failure mode (paired session dig):
+
+- **Budget burn without submit:** OTC mean turns **11.83** / API **36.38** / tokens **3886**; Vanilla mean turns **2.20** / API **5.39** / tokens **720**.
+- OTC traces show heavy `rest` / `speak` / `coach_personal_assignment` / review traffic; many high-gap sessions end with **`nsub=0`** (no graded submission) while Vanilla `select_problem → work/submit` finishes in 2 turns with large partial credit.
+- History bowls are short-answer / multi-question sheets that reward **fast sheet fill**. Coach scheduling + review gates help Science Bowl / ARML Local (OTC Wave1 accuracy **54.9%** > Vanilla Wave1 **45.9%**) but on History they displace answering under the shared clock.
+- CS is **higher** for OTC on History (2.57 vs 2.09), confirming better-looking collaboration without better TaskUtility — same CS≠utility lesson as §5.
+
+Interpretation: on quiz-style contests with many independent short answers and a tight simulated clock, open-table coach overhead can **reduce** accuracy versus a no-coach team that submits early. On Wave1 Science Bowl / ARML Local, OTC still leads.
+
+Full metric tables and regeneration notes: [contest-session-gold-suite-20260903.md](contest-session-gold-suite-20260903.md).
+
+### 8.5 Follow-up after baseline (2026-09-04)
+
+After discovering that OTC often misrouted math packets into a programming prompt,
+task-family routing and competition descriptions were added. An HMMT-only probe
+improved from **0/36** to **1/36 (2.78%)**. The low-accuracy OTC rerun
+(Mystery Hunt, History Olympiad, Purple Comet, HMMT Guts, WMTC) is ongoing;
+results will be summarized once complete.
+
+---
+
+## 9. Main Conclusions
 
 This week established that:
 
@@ -943,35 +1046,26 @@ This week established that:
 - Codeforces and Kattis submissions can select the appropriate remote backend automatically through a cookie-isolated localhost gateway.
 - VJudge is treated as an experimental remote proxy with human takeover on Turnstile; local sample AC is never reported as official AC.
 - Structured-gold and ICPC experiments now produce reviewable artifacts and remote verdicts.
+- A second contest-session path (`strategic_team` / `vanilla_team`) supports matched OTC vs Vanilla comparisons with shared tools and budgets.
 - The research question has shifted from “do the agents communicate well?” to “does information exchange produce verifiable gains beyond additional sampling and compute?”
 
-The main experimental finding is:
+Experimental findings:
 
 > Enforcing discussion can substantially change collaboration behavior, but discussion alone is insufficient to improve correctness. Matched controls and repeated-seed experiments are needed to distinguish interaction gains from sampling and compute gains.
 
----
+> Against a no-coach Vanilla control on the same tools/rules, OTC raises CS and burns far more API/tokens, wins Wave1 Science Bowl / ARML Local, but **loses overall TaskUtility** (18.6% vs 20.7%), driven largely by History Olympiad bowls where coach/review overhead often yields **zero submissions** while Vanilla fills the sheet in ~2 turns.
 
-## 8. Next Steps
-
-1. Add compute-matched `solo / independent ensemble / isolated subagent / interactive team` experiments.
-2. Run at least five seeds per condition and ten for key claims; report paired bootstrap 95% confidence intervals.
-3. Ablate memory, Coach, private chat, group chat, and the discussion gate independently.
-4. Add claim and artifact lineage IDs for adoption, challenge, verification, and correction metrics.
-5. Separate ICPC recovery logic for CE, WA, and TLE, and require revisions tied to the observed failure class.
-6. Complete the remaining Tinker structured-gold tasks before drawing model-level comparisons.
+> Deadline submit alone did not fix HMMT (still 0/36). Explicit mathematics routing did: HMMT probe **1/36 (2.78%)**, with the coach correctly treating the packet as non-programming.
 
 ---
 
-## 9. Related Documents and Artifacts
+## 10. Next Steps
 
-- [Open Table Coach batch results](open-table-coach-batch-results.md)
-- [Rule-card injection and Open Table Coach worklog](worklog-8.21.md)
-- [ICPC evaluation and leaderboard](icpc-evaluation-and-leaderboard.md)
-- [VJudge integration feasibility](../VJUDGE_INTEGRATION_FEASIBILITY.md)
-- `results/task_based_structured_gold_perplexity_20260829/`
-- `results/task_based_structured_gold_tinker_qwen35_35b_base_20260831/`
-- `results/icpc_kattis_10_perplexity_20260831/`
-- `results/icpc_kattis_3_recovery_20260831/`
-- `results/arml_local_three_memory_gpt54mini_20260828/`
-- `results/vjudge_cf_4a_three_schemas/`
-- `results/vjudge_cf_231a_open_table_coach/`
+1. Finish the task-routing OTC rerun (`results/otc_task_routing_low_accuracy_20260904/`) and update [contest-session-gold-suite-20260903.md](contest-session-gold-suite-20260903.md) with paired deltas.
+2. Add compute-matched `solo / independent ensemble / isolated subagent / interactive team` experiments.
+3. Run at least five seeds per condition and ten for key claims; report paired bootstrap 95% confidence intervals.
+4. Ablate memory, Coach, private chat, group chat, and the discussion gate independently.
+5. Add claim and artifact lineage IDs for adoption, challenge, verification, and correction metrics.
+6. Separate ICPC recovery logic for CE, WA, and TLE, and require revisions tied to the observed failure class.
+7. Complete the remaining Tinker structured-gold tasks before drawing model-level comparisons.
+8. Keep reporting gold-suite metrics with compute cost (API/tokens) alongside TaskUtility and CS.

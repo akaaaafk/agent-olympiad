@@ -2,7 +2,7 @@
 
 > Author: Zhongzheng (compiled from live runs)  
 > Scope: `agent-team-features-main` — `open_table_coach` schema  
-> Last updated: 2026-09-01
+> Last updated: 2026-09-03
 
 ## Summary
 
@@ -143,7 +143,107 @@ ICPC remote AC used VJudge problem mode (`Kattis-bottles`, etc.). See `docs/from
 
 ---
 
-## 3. Related docs
+## 3. Current Open Coach flow: ICPC World Finals 2012
+
+This is the current `strategic_team` programming workflow with the pre-contest
+Open Coach, using the 12-problem ICPC World Finals 2012 contest as an example.
+The Coach runs once, persists the team plan and private assignments, and exits.
+The three contestant Agents then solve, test, review, submit, and recover.
+
+```mermaid
+flowchart TD
+  Start([Start ICPC WF 2012<br/>12 problems / 3 agents]) --> Coach
+
+  Coach["Open Coach runs once<br/>plan, assignments, review routes,<br/>task order and switch conditions"]
+  Coach --> PublicPlan["Public event<br/>precontest_coach_guidance"]
+  Coach -. private assignment .-> A1["Agent 1"]
+  Coach -. private assignment .-> A2["Agent 2"]
+  Coach -. private assignment .-> A3["Agent 3"]
+
+  PublicPlan --> Memory
+
+  subgraph Communication["Agent communication"]
+    A1 -->|"speak: broadcast"| Memory["Shared ContestMemory<br/>public memory.events"]
+    A2 -->|"speak"| Memory
+    A3 -->|"speak"| Memory
+
+    Memory -->|"visible events in next prompt"| A1
+    Memory -->|"visible events in next prompt"| A2
+    Memory -->|"visible events in next prompt"| A3
+
+    A1 -->|"direct_message(to Agent 2)"| Direct["Private direct-message event<br/>sender + named recipient only"]
+    Direct -->|"recipient inbox in next prompt"| A2
+    A2 -->|"direct_message(to Agent 3)"| Direct
+    Direct -->|"recipient inbox in next prompt"| A3
+    A3 -->|"direct_message(to Agent 1)"| Direct
+    Direct -->|"recipient inbox in next prompt"| A1
+  end
+
+  A1 --> Work
+  A2 --> Work
+  A3 --> Work
+
+  Work["work<br/>save immutable source version"] --> Execute
+  Execute["execute_code<br/>local run + official samples"] --> Sample{"Samples AC?"}
+
+  Sample -->|no| Revise["Diagnose and revise"] --> Work
+  Sample -->|yes| Report["Author speak<br/>publish local_run_report"]
+  Report --> Memory
+  Report --> Queue["Review queue<br/>full source + sample report"]
+
+  Queue --> Reviewer["Another assigned Agent"]
+  Reviewer --> Review{"review_answer"}
+  Review -->|reject| Revise
+  Review -->|approve| History["shared_review_history<br/>approval bound to version hash"]
+  History --> Submit["submit_code<br/>use frozen approved source"]
+
+  Submit --> Kattis["Local preflight → Kattis"]
+  Kattis --> Verdict{"Remote verdict"}
+  Verdict -->|AC| Solved["Lock problem solved<br/>schedule next problem"]
+  Verdict -->|WA / TLE / RE| Recovery["Public verdict event<br/>block same hash; revise again"]
+
+  Verdict --> Memory
+  Recovery --> Revise
+  Solved --> Done{"All problems solved<br/>or budget exhausted?"}
+  Done -->|no| A1
+  Done -->|no| A2
+  Done -->|no| A3
+  Done -->|yes| Finish([Write contest_session.json])
+```
+
+Agents now have two chat channels:
+
+- Direct chat: `direct_message(recipient, content)` → private event in
+  `memory.events` → injected only into the sender and named recipient prompts;
+- Team broadcast: `speak(content)` → public event in `memory.events` →
+  injected into every agent's later prompts.
+
+Code, sample results, and reviews also share the same state:
+
+- Raw `execute_code` run details are private to the executor by default;
+- Other agents see a report only after the author publishes a `local_run_report`
+  via `speak`;
+- Frozen source and review decisions are stored in `shared_review_history`;
+- Public events such as `review_answer` and Kattis verdicts enter `memory.events`;
+- In the result file `contest_session.json`, communication lives under top-level
+  `memory.events`, and versioned reviews live under top-level
+  `shared_review_history`.
+
+Key constraints:
+
+- There is one shared active-problem cursor; Coach assignments determine which
+  problem each Agent may work on or review.
+- Local sample AC, public `speak`, and independent `review_answer` must all refer
+  to the same immutable source version before `submit_code` is available.
+- Any source revision creates a new version hash and invalidates the old review.
+- Sample failures are local and free. Remote non-AC verdicts add ranking penalty,
+  but no longer consume simulated contest time.
+- Agent communication lives in `memory.events`; source versions and decisions
+  are also materialized in `shared_review_history`.
+
+---
+
+## 4. Related docs
 
 | Doc | Contents |
 |---|---|
