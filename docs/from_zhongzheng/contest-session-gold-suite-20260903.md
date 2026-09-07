@@ -3,7 +3,8 @@
 > Scope: deterministic structured-gold competitions on the **contest-session** path  
 > Model: Perplexity `openai/gpt-5.4-mini`, native function calling, team size 3  
 > Status: structured-gold **complete** (771 OTC + 771 Vanilla); ICPC OTC+vanilla **complete** (WF 2012 + WF 2014)  
-> Last updated: 2026-09-04
+> Protocol follow-ups **complete** — National clean + low-accuracy OTC rerun: session-weighted OTC Acc **~25.9%** (was 18.6%); History **64.4%**; MH still **0.4%**. Details: [contest-session-followups-20260904.md](contest-session-followups-20260904.md)  
+> Last updated: 2026-09-07
 
 ## Setup
 
@@ -81,9 +82,32 @@ Wave1: OTC wins. Remaining: Vanilla wins (mainly History Olympiad).
 | `hmmt_guts` | 1 | 0.0% | 0.0% | 1.50 | 1.50 | 49.00 | 4.00 | 3291 | 1843 | 16.00 | 2.00 | 0/1 | 0/1 |
 | `wmtc` | 3 | 0.0% | 0.0% | 2.50 | 2.00 | 37.00 | 17.33 | 2858 | 1668 | 12.00 | 6.00 | 0/3 | 0/3 |
 
+> **Do not treat §3 as the final OTC story.** National was contaminated (answer-key leak + failed `T-1.` split). History / Purple / HMMT / WMTC OTC Acc collapsed from non-submission and wrong task-family prompts. Corrected numbers are in **§3.1** and [contest-session-followups-20260904.md](contest-session-followups-20260904.md).
+
+### 3.1 Corrected OTC after protocol fixes (2026-09-04/05)
+
+Paired Vanilla rows below stay on the **original gold** runs except `arml_national_team` (clean 50-turn Vanilla). OTC rows marked † are substituted from clean/routing reruns; other OTC rows remain original gold.
+
+| Competition | N | OTC Acc | Van Acc | OTC nz | Van nz | Notes |
+|---|---:|---:|---:|---|---|---|
+| `arml_local` | 6 | **52.3%** | 0.0% | 6/6 | 0/6 | original |
+| `science_bowl` | 140 | **55.0%** | 47.9% | 77/140 | 67/140 | original |
+| `arml_national_team` † | 11 | **22.3%** | **0.0%** | **11/11** | 0/11 | clean split, no answer leak, 50 turns |
+| `qanta` | 240 | 22.1% | **22.5%** | 53/240 | 54/240 | original |
+| `mystery_hunt` † | 261 | 0.4% | **0.8%** | 1/261 | 2/261 | routing rerun; Acc unchanged |
+| `history_olympiad` † | 95 | **64.4%** | 36.0% | **94/95** | 58/95 | routing + deadline; Van still original |
+| `purple_comet` † | 14 | **9.2%** | 0.8% | **11/14** | 2/14 | routing rerun; Van still original |
+| `hmmt_guts` † | 1 | **2.8%** | 0.0% | **1/1** | 0/1 | routing rerun; Van still original |
+| `wmtc` † | 3 | **16.7%** | 0.0% | **3/3** | 0/3 | routing rerun; Van still original |
+| **OTC session-weighted (w/ †)** | 771 | **~25.9%** | 20.4%* | **257/771** | 183/771* | *Van TOTAL uses clean National 0% |
+
+Artifacts: `results/arml_national_team_clean_50turn_{otc,vanilla}_20260904/`, `results/otc_task_routing_low_accuracy_20260904/`.
+
 ---
 
-## 4. Why OTC loses on History Olympiad
+## 4. History Olympiad — original loss, then protocol fix
+
+### 4.1 Original gold (pre-fix)
 
 On 95 History Olympiad bowl rounds: Vanilla **36.0%** vs OTC **8.0%** (nonzero 58/95 vs 12/95).
 
@@ -101,28 +125,25 @@ Failure mode (paired session dig):
 - History bowls are multi-question short-answer sheets that reward **fast sheet fill**. Coach/review helps Science Bowl / ARML Local but displaces answering here.
 - Higher CS with lower TaskUtility again: process looks better, score does not.
 
-**Post-run fix:** `contest_runner.py` now submits every latest non-programming
-draft still lacking a valid submission when a strategic session ends. This
-deadline fallback bypasses incomplete review/final-review gates, records
-`deadline_drafts_submitted`, preserves the previously active task, and does
-not affect programming submissions. The results in this document remain the
-original pre-fix measurements.
+### 4.2 Fixes and rerun outcome
 
-**2026-09-04 HMMT probe:** the fixed runner did use the deadline fallback, but
-the score remained **0/36 (0%)**. The submitted draft was a status message
-asking for an executable stdin/stdout candidate, not a mathematics answer.
-This shows that fallback submission alone is insufficient: the strategic
-prompt/workflow is still misclassifying this non-programming packet as a
-programming task. The remaining low-accuracy competitions were therefore not
-rerun from this probe.
+**Deadline draft submit:** `contest_runner.py` submits every latest non-programming draft still lacking a valid submission when a strategic session ends (`deadline_drafts_submitted`).
 
-**2026-09-04 task-routing probe:** after adding explicit programming,
-mathematics, short-answer, and puzzle workflows, HMMT improved from **0/36
-(0%)** to **1/36 (2.78%)**. The coach correctly identified a mathematics-only
-task and stopped requesting source code. This positive result triggered a new
-374-session OTC run covering Mystery Hunt, History Olympiad, Purple Comet,
-HMMT Guts, and WMTC under
-`results/otc_task_routing_low_accuracy_20260904/`.
+**HMMT probe (deadline only):** still **0/36** — drafts were “need stdin/stdout” status text because the workflow misclassified math as programming.
+
+**Task-family routing probe:** mathematics / short-answer / puzzle / programming prompts; HMMT → **1/36 (2.78%)**.
+
+**Full low-accuracy OTC rerun (374 sessions, complete):**
+
+| Competition | Gold OTC | Rerun OTC | Gold Van (unchanged) |
+|---|---:|---:|---:|
+| `history_olympiad` | 8.0% (12/95 nz) | **64.4%** (94/95 nz; 3628/5642 pts) | 36.0% |
+| `purple_comet` | 0.0% | **9.2%** (11/14 nz) | 0.8% |
+| `hmmt_guts` | 0.0% | **2.8%** | 0.0% |
+| `wmtc` | 0.0% | **16.7%** (3/3 nz) | 0.0% |
+| `mystery_hunt` | 0.4% | 0.4% (1/261) | 0.8% |
+
+History OTC now **beats** original Vanilla. Mystery Hunt did not move — incomplete media/IRL puzzle text and hard extractions; gold JSON answers are fine (only win is answer-in-prompt `mystery_hunt_00819`). Full ledgers: [contest-session-followups-20260904.md](contest-session-followups-20260904.md).
 
 ---
 
@@ -1817,6 +1838,9 @@ Reviews: 4 approve / 6 reject; 14 sample ACs. Artifact: `results/icpc_wf_2012_ot
 | `results/icpc_wf_2014_vanilla_perplexity_gpt54mini_native_20260903/` | ICPC WF 2014 vanilla (0/12) |
 | `results/gold_suite_sheets_20260903/icpc_*.tsv` | ICPC sheets (`scripts/_export_icpc_sheets.py`) |
 | `results/gold_suite_results_20260903.md` | Compact auto report |
+| `results/arml_national_team_clean_50turn_otc_20260904/` | National Team clean OTC (50 turns) |
+| `results/arml_national_team_clean_50turn_vanilla_20260904/` | National Team clean Vanilla (50 turns) |
+| `results/otc_task_routing_low_accuracy_20260904/` | Low-accuracy OTC rerun **complete** (374; History 64.4%, MH 0.4%) |
 | Each session | `contest_session.json` + `summary.tsv` at run root |
 
 ```bash
@@ -1824,4 +1848,18 @@ Reviews: 4 approve / 6 reject; 14 sample ACs. Artifact: `results/icpc_wf_2012_ot
 python scripts/write_gold_suite_report.py
 ```
 
-Weekly narrative context: [weekly-summary-2026-08-26-to-09-01.md](weekly-summary-2026-08-26-to-09-01.md) §9 (code) / §10 (metrics).
+Weekly narrative context: [weekly-summary-2026-08-26-to-09-01.md](weekly-summary-2026-08-26-to-09-01.md) §9 (code) / §10 (metrics).  
+Protocol follow-up write-up: [contest-session-followups-20260904.md](contest-session-followups-20260904.md).  
+Later protocol hardening (Docker judge, vanilla deadline parity, …): [otc-protocol-fixes-20260906.md](otc-protocol-fixes-20260906.md).
+
+## 8. Follow-ups after this suite — **done**
+
+Canonical write-up: [contest-session-followups-20260904.md](contest-session-followups-20260904.md).
+
+| Item | Result |
+|---|---|
+| National Team clean split / no-leak / 50-turn | OTC **22.3%** vs Vanilla **0%** |
+| Low-accuracy OTC (task routing + 50 turns) | History **64.4%**; Purple **9.2%**; WMTC **16.7%**; HMMT **2.8%**; MH **0.4%** |
+| Corrected session-weighted OTC Acc | **~25.9%** (original gold OTC was 18.6%) |
+
+**Still optional:** paired Vanilla under the same 50-turn + routing setup for History/math; Mystery Hunt text-solvable filter; full 50-turn re-run of Local / Science Bowl / Qanta.
