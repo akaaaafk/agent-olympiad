@@ -35,7 +35,13 @@ from collaboration import CollabConfig, SCHEMAS, run_collaboration
 from contest_adapters import EnvironmentTaskExecutor, grade_contest_result
 from contest_budget import resolve_contest_budget
 from contest_manifest import load_contest_manifest
-from contest_runner import PROTOCOL_VERSION, ContestRunConfig
+from contest_runner import (
+    BASELINE_ALIASES,
+    BASELINE_NAMES,
+    PROTOCOL_VERSION,
+    ContestRunConfig,
+    canonical_baseline,
+)
 from tool_registry import ACTION_SET_VERSION
 from contest_rules import get_contest_rules
 from env import OlympiadEnvironment, ProblemNotFoundError
@@ -1042,9 +1048,13 @@ def main() -> None:
     )
     parser.add_argument(
         "--system-variant",
-        choices=("vanilla", "strategic", "vanilla_team", "strategic_team"),
-        default="strategic_team",
-        help="Contest-session system variant (default: strategic).",
+        choices=(*BASELINE_NAMES, *BASELINE_ALIASES),
+        default="open_table_coach",
+        help=(
+            "Contest-session baseline: single_agent, decentralized, centralized, "
+            "open_table_coach, open_table_coach_memory (legacy aliases: vanilla[_team] "
+            "-> decentralized, strategic[_team] -> open_table_coach)."
+        ),
     )
     parser.add_argument(
         "--action-calling",
@@ -1232,7 +1242,7 @@ def main() -> None:
     )
 
     if args.contest_manifest:
-        system_variant = args.system_variant.removesuffix("_team")
+        system_variant = canonical_baseline(args.system_variant)
         transport = (
             provider_action_transport(args.provider)
             if args.live
@@ -1283,6 +1293,8 @@ def main() -> None:
         team_size = args.team_size or encoded_team_size or int(
             manifest.tasks[0].benchmark.get("team_size") or 3
         )
+        if system_variant == "single_agent":
+            team_size = 1
         rule_guidance = ""
         if contest_rules:
             rule_guidance = (
@@ -1354,7 +1366,7 @@ def main() -> None:
             "memory_checkpoint": memory_checkpoint,
             "checkpoint_callback": persist_contest_checkpoint,
         }
-        if system_variant == "vanilla":
+        if run_config.features.coach == "none":
             result = run_vanilla_contest(
                 manifest,
                 query_fn,
@@ -1415,7 +1427,7 @@ def main() -> None:
                     request_fn=request_fn,
                     task_text=task_text,
                     agents=agents,
-                    schema=f"{system_variant}_team",
+                    schema=system_variant,
                     chat_history=chat_history,
                     action_log=action_log,
                     task_results=task_results,
@@ -1424,7 +1436,7 @@ def main() -> None:
                     request_fn=request_fn,
                     task_text=task_text,
                     agents=agents,
-                    schema=f"{system_variant}_team",
+                    schema=system_variant,
                     chat_history=chat_history,
                     action_log=action_log,
                     final_answer=json.dumps(
@@ -1490,7 +1502,9 @@ def main() -> None:
             "mode": "live" if args.live else "mock",
             "provider": args.provider,
             "model": model if args.live else "mock",
-            "system_variant": f"{system_variant}_team",
+            "system_variant": system_variant,
+            "requested_variant": args.system_variant,
+            "baseline": result["baseline"],
             "action_calling": result["action_calling"],
             "manifest": str(args.contest_manifest),
             "start_seat": args.start_seat,
@@ -1511,7 +1525,7 @@ def main() -> None:
         utility_text = f"{utility:.3f}" if utility is not None else "unavailable"
         print(
             f"Contest session: {manifest.session_id} | "
-            f"variant={system_variant}_team | tasks={len(manifest.tasks)} | "
+            f"variant={system_variant} | tasks={len(manifest.tasks)} | "
             f"utility={utility_text} | "
             f"api={result['budget']['api_calls_used']} | "
             f"tokens={result['budget']['tokens_used']} | "

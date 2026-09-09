@@ -38,7 +38,7 @@ class ProgrammingProductivityTests(unittest.TestCase):
         m = manifest()
         s = ContestSession([TaskUnit("a"), TaskUnit("b")], ContestBudgetState(max_turns=50))
         s.select_task("a")
-        memory = ContestMemory(run_id="p:strategic", session_id="p", competition_id="icpc")
+        memory = ContestMemory(run_id="p:open_table_coach", session_id="p", competition_id="icpc")
         config = ContestRunConfig("strategic", 2, 50)
         source = "import sys\n" + "# preserve this code\n" * 500 + "print('UNIQUE_SOURCE_END')\n"
         _apply_action(action="execute_code", arguments={"code": source}, agent="Agent_1",

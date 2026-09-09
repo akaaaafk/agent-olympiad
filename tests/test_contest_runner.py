@@ -1123,19 +1123,62 @@ class ContestRunnerTests(unittest.TestCase):
         self.assertEqual(result["tasks"]["a"]["state"], "submitted")
         self.assertEqual(result["diagnostics"]["switch_count"], 0)
 
-    def test_variants_receive_identical_frozen_action_sets(self) -> None:
+    def test_baselines_share_the_core_action_set_and_differ_only_by_bundles(self) -> None:
         manifest = ContestManifest("icpc", "icpc", (task("a", programming=True),))
-        vanilla = run_contest(
-            manifest,
-            lambda _system, _user: '{"action":"finish_contest","arguments":{}}',
-            ContestRunConfig(system_variant="vanilla", team_size=1, max_turns=1),
+        core = {
+            "select_problem", "speak", "work", "request_review", "review_answer",
+            "submit", "skip_problem", "rest", "finish_contest", "execute_code",
+            "submit_code",
+        }
+        surfaces = {
+            name: set(
+                run_contest(
+                    manifest,
+                    lambda _system, _user: '{"action":"rest","arguments":{}}',
+                    ContestRunConfig(system_variant=name, team_size=size, max_turns=1),
+                )["action_names"]
+            )
+            for name, size in (
+                ("single_agent", 1),
+                ("decentralized", 3),
+                ("centralized", 3),
+                ("open_table_coach", 3),
+                ("open_table_coach_memory", 3),
+            )
+        }
+        for name, names in surfaces.items():
+            self.assertTrue(core <= names, name)
+        self.assertEqual(surfaces["single_agent"], core)
+        self.assertEqual(surfaces["decentralized"], core)
+        self.assertEqual(
+            surfaces["centralized"] - core,
+            {"inspect_problem", "triage_problem", "direct_message", "assign_problem"},
         )
-        strategic = run_contest(
-            manifest,
-            lambda _system, _user: '{"action":"finish_contest","arguments":{}}',
-            ContestRunConfig(system_variant="strategic", team_size=1, max_turns=1),
+        self.assertEqual(
+            surfaces["open_table_coach"] - core,
+            {"inspect_problem", "triage_problem", "direct_message"},
         )
-        self.assertEqual(vanilla["action_names"], strategic["action_names"])
+        self.assertEqual(
+            surfaces["open_table_coach_memory"] - surfaces["open_table_coach"],
+            {"remember", "recall", "share_note"},
+        )
+
+    def test_legacy_variant_names_are_aliases_and_team_size_rules_hold(self) -> None:
+        self.assertEqual(
+            ContestRunConfig("vanilla", 3, 1).system_variant, "decentralized"
+        )
+        self.assertEqual(
+            ContestRunConfig("strategic_team", 3, 1).system_variant, "open_table_coach"
+        )
+        self.assertFalse(ContestRunConfig("strategic", 3, 1).features.memory_actions)
+        self.assertTrue(ContestRunConfig("strategic", 3, 1).review_required)
+        self.assertFalse(ContestRunConfig("centralized", 3, 1).review_required)
+        with self.assertRaisesRegex(ValueError, "single_agent requires team_size=1"):
+            ContestRunConfig("single_agent", 3, 1)
+        with self.assertRaisesRegex(ValueError, "worker seat"):
+            ContestRunConfig("centralized", 1, 1)
+        with self.assertRaisesRegex(ValueError, "unknown system_variant"):
+            ContestRunConfig("round_table", 3, 1)
 
     def test_finish_contest_is_rejected_while_tasks_remain(self) -> None:
         manifest = ContestManifest("quiz", "quiz", (task("q1"), task("q2")))
@@ -1573,10 +1616,11 @@ class ContestRunnerTests(unittest.TestCase):
             manifest,
             lambda _system, _user: next(responses),
             ContestRunConfig(
-                system_variant="vanilla",
+                system_variant="open_table_coach",
                 team_size=1,
                 max_turns=4,
                 max_api_calls=4,
+                require_review=False,
             ),
         )
 
@@ -1601,7 +1645,8 @@ class ContestRunnerTests(unittest.TestCase):
         self.assertEqual(result["diagnostics"]["inspect_count"], 2)
         self.assertEqual(result["session_checkpoint"]["tasks"][0]["reviews"], [])
         self.assertEqual(result["protocol_version"], "contest_session_v4")
-        self.assertEqual(result["action_set_version"], 2)
+        self.assertEqual(result["action_set_version"], 3)
+        self.assertEqual(result["baseline"]["coach"], "precontest")
 
     def test_remember_recall_and_share_note_round_trip(self) -> None:
         manifest = ContestManifest("quiz", "quiz", (task("q1"), task("q2")))
@@ -1611,7 +1656,9 @@ class ContestRunnerTests(unittest.TestCase):
         )
         session.select_task("q1")
         memory = ContestMemory(run_id="run", session_id="quiz", competition_id="quiz")
-        config = ContestRunConfig(system_variant="strategic", team_size=2, max_turns=10)
+        config = ContestRunConfig(
+            system_variant="open_table_coach_memory", team_size=2, max_turns=10
+        )
 
         def apply(agent: str, action: str, arguments: dict) -> None:
             _apply_action(
@@ -1751,7 +1798,13 @@ class ContestRunnerTests(unittest.TestCase):
         result = run_contest(
             manifest,
             lambda _system, _user: next(responses),
-            ContestRunConfig(system_variant="vanilla", team_size=1, max_turns=3, max_api_calls=3),
+            ContestRunConfig(
+                system_variant="open_table_coach",
+                team_size=1,
+                max_turns=3,
+                max_api_calls=3,
+                require_review=False,
+            ),
         )
         self.assertEqual(result["submissions"]["q1"], "guess 7")
         self.assertEqual(result["diagnostics"]["items_hopeless"], 1)
@@ -1793,7 +1846,7 @@ class ContestRunnerTests(unittest.TestCase):
         self.assertIn("work_duplicate", prompts[-1])
         self.assertIn('"blank_tasks": ["q2"]', prompts[-1])
 
-    def test_desk_actions_are_available_to_both_variants_but_not_in_submit_only_phase(self) -> None:
+    def test_desk_bundles_follow_the_baseline_and_vanish_in_submit_only_phase(self) -> None:
         session = ContestSession(
             [TaskUnit("a", kind="non_programming"), TaskUnit("b", kind="non_programming")],
             ContestBudgetState(max_turns=10),
@@ -1802,26 +1855,42 @@ class ContestRunnerTests(unittest.TestCase):
         actions = frozenset(
             spec for spec in ACTION_REGISTRY.values() if spec.pack == "common"
         )
-        desk = {"inspect_problem", "triage_problem", "remember", "recall", "share_note"}
+        readonly = {"inspect_problem", "triage_problem"}
+        notes = {"remember", "recall", "share_note"}
 
-        vanilla = _actions_for_agent(
-            actions, session, ContestRunConfig("vanilla", 2, 10), "Agent_1"
-        )
-        self.assertTrue(desk <= {spec.name for spec in vanilla})
-        # Off-assignment strategic agents keep the desk but lose work/skip.
-        strategic = _actions_for_agent(
+        decentralized = {
+            spec.name
+            for spec in _actions_for_agent(
+                actions, session, ContestRunConfig("decentralized", 2, 10), "Agent_1"
+            )
+        }
+        self.assertFalse((readonly | notes | {"direct_message"}) & decentralized)
+        # Off-assignment coach agents keep the desk but lose work/skip.
+        coach = _actions_for_agent(
             actions,
             session,
-            ContestRunConfig("strategic", 2, 10),
+            ContestRunConfig("open_table_coach", 2, 10),
             "Agent_1",
             work_task_ids={"b"},
             review_task_ids=set(),
         )
-        names = {spec.name for spec in strategic}
-        self.assertTrue(desk <= names)
+        names = {spec.name for spec in coach}
+        self.assertTrue(readonly <= names)
+        self.assertFalse(notes & names)
+        self.assertIn("direct_message", names)
         self.assertNotIn("work", names)
-        inspect = next(spec for spec in strategic if spec.name == "inspect_problem")
+        inspect = next(spec for spec in coach if spec.name == "inspect_problem")
         self.assertEqual(inspect.arguments[0].enum, ("a", "b"))
+        with_memory = {
+            spec.name
+            for spec in _actions_for_agent(
+                actions,
+                session,
+                ContestRunConfig("open_table_coach_memory", 2, 10),
+                "Agent_1",
+            )
+        }
+        self.assertTrue((readonly | notes) <= with_memory)
 
         # Answer-sheet contests collapse to submit-only once the sheet is ready.
         for t in ("a", "b"):
@@ -1830,12 +1899,172 @@ class ContestRunnerTests(unittest.TestCase):
         submit_only = _actions_for_agent(
             actions,
             session,
-            ContestRunConfig("vanilla", 2, 10),
+            ContestRunConfig("decentralized", 2, 10),
             "Agent_1",
             answer_sheet_contest=True,
             required_answer_task_ids={"a", "b"},
         )
         self.assertEqual({spec.name for spec in submit_only}, {"submit"})
+
+    def test_centralized_workers_cannot_submit_and_leader_reassigns(self) -> None:
+        session = ContestSession(
+            [TaskUnit("a", kind="non_programming"), TaskUnit("b", kind="non_programming")],
+            ContestBudgetState(max_turns=10),
+        )
+        session.select_task("a")
+        actions = frozenset(
+            spec for spec in ACTION_REGISTRY.values() if spec.pack == "common"
+        )
+        config = ContestRunConfig("centralized", 3, 10)
+        leader = {spec.name: spec for spec in _actions_for_agent(actions, session, config, "Agent_1")}
+        worker = {spec.name for spec in _actions_for_agent(actions, session, config, "Agent_2")}
+        self.assertIn("assign_problem", leader)
+        self.assertIn("submit", leader)
+        self.assertEqual(leader["assign_problem"].arguments[0].enum, ("Agent_2", "Agent_3"))
+        self.assertEqual(leader["assign_problem"].arguments[1].enum, ("a", "b"))
+        self.assertFalse({"assign_problem", "submit", "submit_code", "finish_contest"} & worker)
+        self.assertFalse({"request_review", "review_answer", "remember"} & (worker | set(leader)))
+        self.assertIn("work", worker)
+
+        # Sheet complete: the leader collapses to submit, workers keep their desk.
+        for t in ("a", "b"):
+            session.select_task(t)
+            session.create_answer("draft", author="Agent_2")
+        ready_leader = _actions_for_agent(
+            actions, session, config, "Agent_1",
+            answer_sheet_contest=True, required_answer_task_ids={"a", "b"},
+        )
+        ready_worker = _actions_for_agent(
+            actions, session, config, "Agent_2",
+            answer_sheet_contest=True, required_answer_task_ids={"a", "b"},
+        )
+        self.assertEqual({spec.name for spec in ready_leader}, {"submit"})
+        self.assertIn("work", {spec.name for spec in ready_worker})
+        self.assertNotIn("submit", {spec.name for spec in ready_worker})
+
+        manifest = ContestManifest("quiz", "quiz", (task("a"), task("b")))
+        memory = ContestMemory(run_id="run", session_id="quiz", competition_id="quiz")
+        table = {"Agent_2": {"agent": "Agent_2", "work_tasks": ["a"], "review_tasks": []}}
+        common = dict(
+            manifest=manifest, session=session, memory=memory, config=config,
+            strategic_policy=StrategicPolicy(),
+            task_action_executor=lambda _task, _action, _args: {},
+            personal_assignments=table,
+        )
+        with self.assertRaisesRegex(ValueError, "only the team leader"):
+            _apply_action(action="assign_problem", agent="Agent_2",
+                          arguments={"agent": "Agent_3", "problem_ids": ["b"]}, **common)
+        with self.assertRaisesRegex(ValueError, "only Agent_1 may submit"):
+            _apply_action(action="submit", agent="Agent_2",
+                          arguments={"answer": "x"}, **common)
+        _apply_action(action="assign_problem", agent="Agent_1",
+                      arguments={"agent": "Agent_2", "problem_ids": ["b", "b", "a"]}, **common)
+        self.assertEqual(table["Agent_2"]["work_tasks"], ["b", "a"])
+        event = next(e for e in memory.view("Agent_3") if e.kind == "assign_problem")
+        self.assertEqual(event.visibility, "public")
+        self.assertEqual(event.payload["problem_ids"], ["b", "a"])
+
+    def test_centralized_leader_plans_reassigns_and_submits_for_the_team(self) -> None:
+        manifest = ContestManifest(
+            "quiz", "quiz",
+            (task("a", task_type="team_contest"), task("b", task_type="team_contest")),
+        )
+        plan = json.dumps({
+            "summary": "split",
+            "work_assignments": {"Agent_2": ["a"], "Agent_3": ["b"]},
+            "task_order": ["a", "b"],
+        })
+        responses = iter([
+            plan,
+            # turn 1: leader (first seat) reassigns Agent_3 onto a; Agent_2 drafts a
+            '{"action":"assign_problem","arguments":{"agent":"Agent_3","problem_ids":["a"]}}',
+            '{"action":"work","arguments":{"content":"draft a"}}',
+            '{"action":"rest","arguments":{}}',
+            # turn 2: leader drafts b; the sheet is complete but only the leader may submit
+            '{"action":"work","arguments":{"content":"draft b"}}',
+            '{"action":"submit","arguments":{}}',
+            '{"action":"rest","arguments":{}}',
+            # turn 3: leader hands in the whole sheet
+            '{"action":"submit","arguments":{}}',
+        ])
+        prompts: list[tuple[str, str]] = []
+
+        def query(system: str, user: str) -> str:
+            prompts.append((system, user))
+            return next(responses)
+
+        result = run_contest(
+            manifest, query,
+            ContestRunConfig("centralized", 3, 6, max_api_calls=20),
+        )
+        self.assertEqual(result["system_variant"], "centralized")
+        self.assertEqual(result["plan_author"], "Agent_1")
+        self.assertTrue(result["baseline"]["leader_submits"])
+        self.assertIn("OPENING LEADER PLAN", prompts[0][1])
+        plan_event = next(
+            e for e in result["memory"]["events"] if e["kind"] == "precontest_coach_guidance"
+        )
+        self.assertEqual(plan_event["actor"], "Agent_1")
+        self.assertEqual(plan_event["payload"]["plan"]["work_assignments"]["Agent_1"], ["a", "b"])
+        # Leader acts first each round; workers see the leader protocol.
+        self.assertIn("LEADER PROTOCOL: You are Agent_1", prompts[1][0])
+        self.assertIn("LEADER PROTOCOL: Agent_1 is the team leader", prompts[2][0])
+        # Agent_3's enforced memory reflects the live reassignment in the same round.
+        self.assertIn('"work_tasks": ["a"]', prompts[3][1])
+        # Agent_2's submit attempt on the complete sheet was rejected and logged.
+        errors = [
+            e for e in result["memory"]["events"]
+            if e["kind"] == "action_error" and e["actor"] == "Agent_2"
+        ]
+        self.assertEqual(len(errors), 1)
+        self.assertIn("submit", errors[0]["payload"]["error"])
+        self.assertEqual(plan_event["payload"]["plan"]["review_assignments"]["Agent_2"], [])
+        self.assertEqual(result["submissions"], {"a": "draft a", "b": "draft b"})
+        self.assertEqual(result["budget"]["turns_used"], 3)
+
+    def test_centralized_reassignment_survives_resume(self) -> None:
+        manifest = ContestManifest(
+            "quiz", "quiz",
+            (task("a", task_type="team_contest"), task("b", task_type="team_contest")),
+        )
+        plan = json.dumps({"work_assignments": {"Agent_2": ["a"]}, "task_order": ["a", "b"]})
+        first = iter([
+            plan,
+            '{"action":"assign_problem","arguments":{"agent":"Agent_2","problem_ids":["b"]}}',
+        ])
+        captured: dict[str, object] = {}
+
+        def interrupt(session_state: dict, memory_state: str) -> None:
+            captured["session"] = session_state
+            captured["memory"] = memory_state
+            if any(
+                e["kind"] == "assign_problem" for e in json.loads(memory_state)["events"]
+            ):
+                raise InterruptedError("simulated process stop")
+
+        config = ContestRunConfig("centralized", 2, 3, max_api_calls=8)
+        with self.assertRaises(InterruptedError):
+            run_contest(
+                manifest, lambda _s, _u: next(first), config,
+                checkpoint_callback=interrupt,
+            )
+        seen: list[str] = []
+
+        def resumed_query(_system: str, user: str) -> str:
+            seen.append(user)
+            return '{"action":"rest","arguments":{}}'
+
+        resumed = run_contest(
+            manifest, resumed_query, config,
+            session_checkpoint=captured["session"],
+            memory_checkpoint=captured["memory"],
+        )
+        # No second plan was requested, and Agent_2's live list is still ["b"].
+        self.assertEqual(
+            sum(e["kind"] == "precontest_coach_guidance" for e in resumed["memory"]["events"]), 1
+        )
+        worker_prompt = next(u for u in seen if "You are Agent_2" not in u and '"agent": "Agent_2"' in u)
+        self.assertIn('"work_tasks": ["b"]', worker_prompt)
 
     def test_sample_failure_blocks_evidence_and_reviewers_see_full_source(self) -> None:
         manifest = ContestManifest("icpc", "icpc", (task("a", programming=True),))

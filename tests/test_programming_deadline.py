@@ -23,7 +23,7 @@ class ProgrammingDeadlineTests(unittest.TestCase):
     def seeded(self, tasks):
         manifest = ContestManifest("icpc", "icpc", tuple(tasks))
         session = ContestSession([TaskUnit(t.task_id, kind="programming" if t.programming else "non_programming") for t in tasks], ContestBudgetState(max_turns=1))
-        memory = ContestMemory(run_id="icpc:strategic", session_id="icpc", competition_id="icpc")
+        memory = ContestMemory(run_id="icpc:open_table_coach", session_id="icpc", competition_id="icpc")
         return manifest, session, memory
 
     def source(self, session, memory, name, code="print(7)"):

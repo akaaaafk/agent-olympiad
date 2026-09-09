@@ -29,9 +29,9 @@ def run_strategic_contest(
     checkpoint_callback: CheckpointCallback | None = None,
 ) -> dict[str, Any]:
     """Run the Coach-planned workflow with strategic gates and recovery."""
-    if config.system_variant != "strategic":
+    if config.features.coach == "none":
         raise ValueError(
-            "run_strategic_contest requires system_variant='strategic'"
+            "run_strategic_contest requires a coach or leader baseline"
         )
     return _run_contest_engine(
         manifest,

@@ -61,13 +61,19 @@ class ContestVariantRunnerTests(unittest.TestCase):
         self.assertIs(engine.call_args.kwargs["coach_query_fn"], coach)
 
     def test_variant_modules_reject_crossed_configuration(self) -> None:
-        with self.assertRaisesRegex(ValueError, "requires system_variant='vanilla'"):
+        with self.assertRaisesRegex(ValueError, "requires a no-coach baseline"):
             run_vanilla_contest(
                 self.manifest(),
                 lambda _system, _user: "",
                 self.config("strategic"),
             )
-        with self.assertRaisesRegex(ValueError, "requires system_variant='strategic'"):
+        with self.assertRaisesRegex(ValueError, "requires a no-coach baseline"):
+            run_vanilla_contest(
+                self.manifest(),
+                lambda _system, _user: "",
+                self.config("centralized"),
+            )
+        with self.assertRaisesRegex(ValueError, "requires a coach or leader baseline"):
             run_strategic_contest(
                 self.manifest(),
                 lambda _system, _user: "",

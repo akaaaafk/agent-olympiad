@@ -28,6 +28,9 @@ from tool_registry import (
     ACTION_REGISTRY,
     ACTION_SET_VERSION,
     DESK_ACTION_NAMES,
+    DESK_READONLY_ACTION_NAMES,
+    LEADER_ACTION_NAMES,
+    MEMORY_ACTION_NAMES,
     ActionSpec,
     render_action_instructions,
     render_function_tools,
@@ -55,9 +58,97 @@ def _required_answer_sheet_task_ids(manifest: ContestManifest) -> set[str]:
     return scored or {task.task_id for task in manifest.tasks}
 
 
+CoachMode = Literal["none", "precontest", "leader"]
+
+# The centralized baseline's coordinator seat. It is an ordinary contestant
+# with two extra powers: it writes the opening plan and it alone submits.
+LEADER_AGENT = "Agent_1"
+
+
+@dataclass(frozen=True)
+class BaselineFeatures:
+    """Orthogonal switches that together define one contest baseline.
+
+    Every behavioural difference between baselines lives here; the engine
+    never branches on the baseline's name.
+    """
+
+    coach: CoachMode
+    review_workflow: bool
+    memory_actions: bool
+    desk_actions: bool
+    private_channel: bool
+    structured_context: bool
+    submission_cooldown: bool
+    mechanical_switch: bool
+    leader_submits: bool
+
+
+_NO_COACH = BaselineFeatures(
+    coach="none",
+    review_workflow=False,
+    memory_actions=False,
+    desk_actions=False,
+    private_channel=False,
+    structured_context=False,
+    submission_cooldown=False,
+    mechanical_switch=True,
+    leader_submits=False,
+)
+_OPEN_TABLE_COACH = BaselineFeatures(
+    coach="precontest",
+    review_workflow=True,
+    memory_actions=False,
+    desk_actions=True,
+    private_channel=True,
+    structured_context=True,
+    submission_cooldown=True,
+    mechanical_switch=False,
+    leader_submits=False,
+)
+BASELINES: dict[str, BaselineFeatures] = {
+    # Same environment as decentralized; team_size is pinned to 1.
+    "single_agent": _NO_COACH,
+    "decentralized": _NO_COACH,
+    "centralized": BaselineFeatures(
+        coach="leader",
+        review_workflow=False,
+        memory_actions=False,
+        desk_actions=True,
+        private_channel=True,
+        structured_context=True,
+        submission_cooldown=True,
+        mechanical_switch=False,
+        leader_submits=True,
+    ),
+    "open_table_coach": _OPEN_TABLE_COACH,
+    "open_table_coach_memory": replace(_OPEN_TABLE_COACH, memory_actions=True),
+}
+# Pre-v5 names. ``strategic`` predates memory actions, so it maps to the
+# memory-less coach baseline.
+BASELINE_ALIASES: dict[str, str] = {
+    "vanilla": "decentralized",
+    "vanilla_team": "decentralized",
+    "strategic": "open_table_coach",
+    "strategic_team": "open_table_coach",
+}
+BASELINE_NAMES: tuple[str, ...] = tuple(BASELINES)
+
+
+def canonical_baseline(name: str) -> str:
+    canonical = BASELINE_ALIASES.get(name, name)
+    if canonical not in BASELINES:
+        raise ValueError(
+            f"unknown system_variant {name!r}; expected one of "
+            f"{', '.join(BASELINE_NAMES)} or an alias "
+            f"{', '.join(BASELINE_ALIASES)}"
+        )
+    return canonical
+
+
 @dataclass(frozen=True)
 class ContestRunConfig:
-    system_variant: Literal["vanilla", "strategic"]
+    system_variant: str
     team_size: int
     max_turns: int
     max_api_calls: int | None = None
@@ -72,29 +163,50 @@ class ContestRunConfig:
     start_seat: int = 0
     rule_guidance: str = ""
     programming_deadline_submit: bool = False
+    # Filled from ``BASELINES[system_variant]`` unless given explicitly
+    # (ablations may override single switches).
+    features: BaselineFeatures | None = None
 
     def __post_init__(self) -> None:
         if self.team_size < 1 or self.max_turns < 1:
             raise ValueError("team_size and max_turns must be positive")
-        if self.system_variant not in {"vanilla", "strategic"}:
-            raise ValueError("system_variant must be vanilla or strategic")
+        canonical = canonical_baseline(self.system_variant)
+        object.__setattr__(self, "system_variant", canonical)
+        if self.features is None:
+            object.__setattr__(self, "features", BASELINES[canonical])
+        if canonical == "single_agent" and self.team_size != 1:
+            raise ValueError("single_agent requires team_size=1")
+        if self.features.coach == "leader" and self.team_size < 2:
+            raise ValueError("a leader baseline needs at least one worker seat")
         if self.minutes_per_turn < 0 or self.stall_turns < 1:
             raise ValueError("invalid scheduling limits")
 
     @property
     def review_required(self) -> bool:
-        return self.system_variant == "strategic" if self.require_review is None else self.require_review
+        return (
+            self.features.review_workflow
+            if self.require_review is None
+            else self.require_review
+        )
 
     @property
     def final_review_required(self) -> bool:
         return (
-            self.system_variant == "strategic"
+            self.features.review_workflow
             if self.require_final_review is None
             else self.require_final_review
         )
 
+    @property
+    def leader(self) -> str | None:
+        return LEADER_AGENT if self.features.coach == "leader" else None
 
-def _resolved_actions(manifest: ContestManifest) -> frozenset[ActionSpec]:
+
+def _resolved_actions(
+    manifest: ContestManifest,
+    config: ContestRunConfig | None = None,
+) -> frozenset[ActionSpec]:
+    """Baseline-level action surface; per-turn gating lives in _actions_for_agent."""
     specs: set[ActionSpec] = set()
     handlers = set(ACTION_REGISTRY)
     for task in manifest.tasks:
@@ -131,7 +243,27 @@ def _resolved_actions(manifest: ContestManifest) -> frozenset[ActionSpec]:
                 arguments=(),
             )
         )
+    if config is not None:
+        specs = _trim_to_baseline(specs, config)
     return frozenset(specs)
+
+
+def _trim_to_baseline(
+    specs: set[ActionSpec],
+    config: ContestRunConfig,
+) -> set[ActionSpec]:
+    """Drop the optional action bundles a baseline does not include."""
+    features = config.features
+    hidden: set[str] = set()
+    if not features.memory_actions:
+        hidden |= MEMORY_ACTION_NAMES
+    if not features.desk_actions:
+        hidden |= DESK_READONLY_ACTION_NAMES
+    if not features.private_channel or config.team_size < 2:
+        hidden.add("direct_message")
+    if not features.leader_submits:
+        hidden |= LEADER_ACTION_NAMES
+    return {spec for spec in specs if spec.name not in hidden}
 
 
 def _default_executor(
@@ -206,32 +338,29 @@ def _actions_for_agent(
     required_answer_task_ids: set[str] | None = None,
     programming_source_required: bool = False,
 ) -> frozenset[ActionSpec]:
-    """Hide strategic programming actions until their prerequisites are met."""
-    available = set(actions)
+    """Per-turn, per-agent gating on top of the baseline action surface."""
+    available = _trim_to_baseline(set(actions), config)
+    teammates = tuple(
+        f"Agent_{index}"
+        for index in range(1, config.team_size + 1)
+        if f"Agent_{index}" != agent
+    )
     direct_message = next(
         (spec for spec in available if spec.name == "direct_message"),
         None,
     )
     if direct_message is not None:
+        by_name = {argument.name: argument for argument in direct_message.arguments}
         available.discard(direct_message)
-        if config.system_variant == "strategic" and config.team_size > 1:
-            teammates = tuple(
-                f"Agent_{index}"
-                for index in range(1, config.team_size + 1)
-                if f"Agent_{index}" != agent
+        available.add(
+            replace(
+                direct_message,
+                arguments=(
+                    replace(by_name["recipients"], enum=teammates),
+                    by_name["content"],
+                ),
             )
-            by_name = {
-                argument.name: argument for argument in direct_message.arguments
-            }
-            available.add(
-                replace(
-                    direct_message,
-                    arguments=(
-                        replace(by_name["recipients"], enum=teammates),
-                        by_name["content"],
-                    ),
-                )
-            )
+        )
     # Desk actions that take a problem id get the concrete task list so the
     # model cannot invent identifiers.
     task_ids = tuple(task.task_id for task in session.tasks)
@@ -251,9 +380,32 @@ def _actions_for_agent(
                 ),
             )
         )
-    if config.system_variant == "vanilla":
-        # Vanilla is the no-Coach/no-review-workflow baseline. Keeping review
-        # actions visible created an accidental rewrite/review loop on one task.
+    leader = config.leader
+    if leader is not None:
+        assign_spec = next(
+            (spec for spec in available if spec.name == "assign_problem"), None
+        )
+        if assign_spec is not None:
+            available.discard(assign_spec)
+            if agent == leader and teammates:
+                by_name = {arg.name: arg for arg in assign_spec.arguments}
+                available.add(
+                    replace(
+                        assign_spec,
+                        arguments=(
+                            replace(by_name["agent"], enum=teammates),
+                            replace(by_name["problem_ids"], enum=task_ids),
+                            by_name["reason"],
+                        ),
+                    )
+                )
+        if config.features.leader_submits and agent != leader:
+            # Workers draft and report; only the leader hands anything in.
+            for name in ("submit", "submit_code", "finish_contest"):
+                available = {spec for spec in available if spec.name != name}
+    if not config.review_required:
+        # Without the review workflow, keeping review actions visible created
+        # an accidental rewrite/review loop on one task.
         available.discard(ACTION_REGISTRY["request_review"])
         available.discard(ACTION_REGISTRY["review_answer"])
     if not _contest_complete(session):
@@ -269,21 +421,19 @@ def _actions_for_agent(
             for task in session.tasks
             if required_answer_task_ids is None or task.task_id in required_answer_task_ids
         )
-        if missing_drafts or (config.system_variant == "strategic" and not answer_sheet_submit_ready):
+        if missing_drafts or (
+            config.final_review_required and not answer_sheet_submit_ready
+        ):
             available = {
                 spec for spec in available if spec.name != "submit"
             }
-        else:
+        elif any(spec.name == "submit" for spec in available):
+            # Sheet complete: the submitter's only remaining move is to hand it
+            # in. Workers under a leader keep their ordinary desk instead.
             return frozenset(
                 spec for spec in available if spec.name == "submit"
             )
-    if (
-        config.system_variant == "strategic"
-        and any(task.kind == "programming" for task in session.tasks)
-        and not _contest_complete(session)
-    ):
-        available.discard(ACTION_REGISTRY["finish_contest"])
-    if config.system_variant == "strategic" and work_task_ids is not None:
+    if work_task_ids is not None:
         active = session.active_task
         select_spec = ACTION_REGISTRY["select_problem"]
         available.discard(select_spec)
@@ -324,7 +474,7 @@ def _actions_for_agent(
             available.discard(ACTION_REGISTRY["work"])
     actions = frozenset(available)
 
-    if config.system_variant == "strategic" and (
+    if config.review_required and (
         answer_sheet_contest
         or any(task.kind == "programming" for task in session.tasks)
     ):
@@ -372,12 +522,27 @@ def _actions_for_agent(
     if answer_sheet_contest:
         return actions
     active = session.active_task
-    if (
-        config.system_variant != "strategic"
-        or not config.review_required
-        or active is None
-        or active.kind != "programming"
-    ):
+    if active is None or active.kind != "programming":
+        return actions
+    if not config.review_required:
+        if config.features.leader_submits and agent == config.leader:
+            # The leader hands in whatever source the team has frozen on the
+            # active task; it never pastes code into the submission itself.
+            available = set(actions)
+            submit_spec = ACTION_REGISTRY["submit_code"]
+            available.discard(submit_spec)
+            if active.versions and not active.locked:
+                available.add(
+                    replace(
+                        submit_spec,
+                        description=(
+                            "Submit the active problem's latest recorded source "
+                            "version to the remote judge for an official verdict."
+                        ),
+                        arguments=(),
+                    )
+                )
+            actions = frozenset(available)
         return actions
 
     available = set(actions)
@@ -451,8 +616,7 @@ def _programming_gate_guidance(
 ) -> str:
     active = session.active_task
     if (
-        config.system_variant != "strategic"
-        or not config.review_required
+        not config.review_required
         or active is None
         or active.kind != "programming"
     ):
@@ -753,10 +917,25 @@ def _precontest_coach_prompts(
         }
         for task in manifest.tasks
     ]
+    if config.leader is not None:
+        role = (
+            f"You are {config.leader}, the team leader, and you stay in the contest "
+            "afterwards. Produce a structured opening plan for your teammates. You "
+            "may assign one problem per agent, several agents to one problem, or the "
+            "whole team to one problem; you may work on any problem yourself and you "
+            "alone submit. You can change assignments later with assign_problem. "
+        )
+        plan_title = "OPENING LEADER PLAN"
+    else:
+        role = (
+            "You are Coach. Produce a structured pre-contest brief for the contestant "
+            "agents, then exit. You may assign one problem per agent, several agents to "
+            "one problem, or the whole team to one problem. "
+        )
+        plan_title = "PRE-CONTEST BRIEF"
     system = (
-        "You are Coach. Produce a structured pre-contest brief for the contestant "
-        "agents, then exit. You may assign one problem per agent, several agents to "
-        "one problem, or the whole team to one problem. Base the choice on the actual "
+        role
+        + "Base the choice on the actual "
         "task set, team size, rules, and budget. Do not solve the problems and do not "
         "call contestant actions. Respect the declared task family: never prescribe "
         "source code, stdin/stdout, sample execution, or code review for a "
@@ -768,7 +947,7 @@ def _precontest_coach_prompts(
         '"switch_conditions":["..."],"final_check":["..."]}.'
     )
     user = (
-        f"PRE-CONTEST BRIEF\nCompetition: {manifest.competition_id}\n"
+        f"{plan_title}\nCompetition: {manifest.competition_id}\n"
         f"Task family: {manifest.task_family}\n"
         "Competition format: "
         f"{manifest.metadata.get('competition_description') or 'No additional format description.'}\n"
@@ -843,6 +1022,23 @@ def _default_coach_plan(
         "switch_conditions": ["Move on after the latest draft is independently approved."],
         "final_check": ["Audit every latest version before final submission."],
     }
+
+
+def _set_work_assignment(
+    personal_assignments: dict[str, dict[str, Any]],
+    agent: str,
+    problem_ids: list[str],
+) -> None:
+    """Replace one seat's enforced work list (leader reassignment)."""
+    current = personal_assignments.get(agent) or {
+        "agent": agent,
+        "work_tasks": [],
+        "review_tasks": [],
+        "summary": "",
+        "switch_conditions": [],
+        "final_check": [],
+    }
+    personal_assignments[agent] = {**current, "work_tasks": list(problem_ids)}
 
 
 def _normalize_coach_plan(
@@ -950,34 +1146,73 @@ def _system_prompt(
             "and their latest draft is still submitted at the deadline. Desk tools "
             "consume a turn like any other action, so do not loop on them."
         )
-    if config.system_variant == "vanilla":
+    features = config.features
+    if features.coach == "none":
         if config.rule_guidance:
             return base + f"\nCONTEST RULES\n{config.rule_guidance}"
         return base
-    strategic = (
-        base
-        + "\nPRE-CONTEST COACH OPERATING PRINCIPLE: Follow the coach's assignment "
-        "and coordination guidance for this contest. The coach may assign one problem "
-        "per agent, put a group on one problem, or focus the whole team on one problem. "
-        "The active task is a shared team cursor, not an ownership lock: select the "
-        "problem assigned by the coach before acting on it. Preserve teammates' drafts "
-        "and do not overwrite a sound reviewed version without a concrete correction. "
-        "Use direct_message when one specific teammate needs a private question, "
-        "handoff, or correction; use speak when the whole team should know. "
-        + (
-            "Use work for programming analysis notes; execute_code records source. "
-            if task_family == "programming" and config.review_required
-            else "Use work only to create a substantive candidate solution or final answer, "
-                 "never a status update, request for missing work, TODO, or placeholder. "
+    reviewed_programming = task_family == "programming" and config.review_required
+    if features.coach == "leader":
+        leader = config.leader
+        if agent == leader:
+            strategic = base + (
+                f"\nLEADER PROTOCOL: You are {leader}, the team leader. Your opening "
+                "plan is enforced: each teammate may only work on the problems in "
+                "their work list, and you may change a list at any time with "
+                "assign_problem. You may work on any problem yourself. Only you can "
+                "submit: teammates draft and report, you check the latest version of "
+                "each problem and hand it in. Re-plan when a problem stalls, when a "
+                "teammate finishes early, or when the budget is running out. "
+            )
+        else:
+            strategic = base + (
+                f"\nLEADER PROTOCOL: {leader} is the team leader. Work only on the "
+                "problems in your enforced work list, report results with speak, and "
+                f"raise blockers or handoffs with direct_message to {leader}. You "
+                "cannot submit; the leader hands in the team's latest version of each "
+                "problem, so make sure your best answer is the latest recorded draft. "
+            )
+        strategic += (
+            "The active task is a shared team cursor, not an ownership lock: select "
+            "the problem you are assigned before acting on it. Preserve teammates' "
+            "drafts and do not overwrite a sound version without a concrete correction. "
         )
-        + "A different agent uses "
-        "review_answer with the exact problem_id and version_hash to approve or "
-        "reject it. After repeated failed submissions, move to another unsolved "
-        "problem and revisit later. "
-        "Inspect task status before acting: prefer review over another rewrite when "
-        "a teammate's candidate is ready."
+    else:
+        strategic = base + (
+            "\nPRE-CONTEST COACH OPERATING PRINCIPLE: Follow the coach's assignment "
+            "and coordination guidance for this contest. The coach may assign one problem "
+            "per agent, put a group on one problem, or focus the whole team on one problem. "
+            "The active task is a shared team cursor, not an ownership lock: select the "
+            "problem assigned by the coach before acting on it. Preserve teammates' drafts "
+            "and do not overwrite a sound reviewed version without a concrete correction. "
+        )
+        if features.private_channel and config.team_size > 1:
+            strategic += (
+                "Use direct_message when one specific teammate needs a private question, "
+                "handoff, or correction; use speak when the whole team should know. "
+            )
+    strategic += (
+        "Use work for programming analysis notes; execute_code records source. "
+        if reviewed_programming
+        else "Use work only to create a substantive candidate solution or final answer, "
+             "never a status update, request for missing work, TODO, or placeholder. "
     )
-    if answer_sheet_contest:
+    if config.review_required:
+        strategic += (
+            "A different agent uses "
+            "review_answer with the exact problem_id and version_hash to approve or "
+            "reject it. After repeated failed submissions, move to another unsolved "
+            "problem and revisit later. "
+            "Inspect task status before acting: prefer review over another rewrite when "
+            "a teammate's candidate is ready."
+        )
+    else:
+        strategic += (
+            "After repeated failed submissions, move to another unsolved problem and "
+            "revisit later. Inspect task status before acting so you do not redo a "
+            "teammate's finished work."
+        )
+    if answer_sheet_contest and config.review_required:
         strategic += (
             "\nANSWER-SHEET COACH PROTOCOL: Never submit an individual problem. "
             "Use work only when you have a complete candidate response for the active "
@@ -993,6 +1228,40 @@ def _system_prompt(
             "review is complete, call submit once with no arguments to atomically "
             "hand in the whole answer sheet and end the contest. Never call "
             "finish_contest."
+        )
+    elif answer_sheet_contest:
+        strategic += (
+            "\nANSWER-SHEET PROTOCOL: Never submit an individual problem. Use work "
+            "only when you have a complete candidate response for the active problem "
+            "with an explicit final answer. Never save setup notes, TODOs, or "
+            "placeholders as a candidate answer. "
+            + (
+                f"Once every problem has a draft, {config.leader} calls submit once "
+                "with no arguments to hand in the whole sheet and end the contest; "
+                "nobody else can submit. "
+                if features.leader_submits
+                else "Once every problem has a draft, call submit once with no "
+                "arguments to hand in the whole sheet and end the contest. "
+            )
+            + "Never call finish_contest."
+        )
+    elif task_family == "programming" and not config.review_required:
+        strategic += (
+            "\nPROGRAMMING WORKFLOW: An author calls execute_code with the complete "
+            "candidate source that reads stdin and writes stdout; the system runs it "
+            "on the official samples and reports expected versus actual output. Fix "
+            "the code and re-run until the samples pass, then report with speak. "
+            + (
+                f"Only {config.leader} submits: after a sample-AC report, the leader "
+                "selects that problem and calls submit_code with no arguments to send "
+                "the latest recorded source to the remote judge. "
+                if features.leader_submits
+                else "When the samples pass, call submit_code to send the source to "
+                "the remote judge. "
+            )
+            + "A WA/TLE costs a time penalty, but a sample-AC version that is never "
+            "submitted scores zero. Select another unsolved problem after a valid "
+            "submission."
         )
     elif task_family == "programming":
         strategic += (
@@ -1064,7 +1333,11 @@ def _system_prompt(
             "states that programming is required."
         )
     if coach_guidance:
-        strategic += f"\nPRE-CONTEST COACH BRIEF\n{coach_guidance}"
+        title = (
+            "OPENING LEADER PLAN" if features.coach == "leader"
+            else "PRE-CONTEST COACH BRIEF"
+        )
+        strategic += f"\n{title}\n{coach_guidance}"
     if config.rule_guidance:
         strategic += f"\nCONTEST RULES\n{config.rule_guidance}"
     return strategic
@@ -1145,7 +1418,7 @@ def _user_prompt(
         },
         ensure_ascii=False,
     )
-    if config.system_variant == "strategic" and active is not None:
+    if config.features.structured_context and active is not None:
         context: Any = memory.strategic_projection(
             viewer=agent,
             current_task_id=active.task_id,
@@ -1171,7 +1444,7 @@ def _user_prompt(
     )
     submission_rule = ""
     if _is_answer_sheet_contest(manifest):
-        if config.system_variant == "strategic":
+        if config.final_review_required:
             submission_rule = (
                 "ANSWER-SHEET RULE: work edits per-problem drafts. Do not submit "
                 "individual problems. The active problem is shared state, not exclusive "
@@ -1179,6 +1452,13 @@ def _user_prompt(
                 "to work on or review. After every draft and the full-sheet review are "
                 "complete, call submit once with no arguments; that atomically hands in "
                 "the whole sheet and ends the contest. Never use finish_contest.\n\n"
+            )
+        elif config.features.leader_submits:
+            submission_rule = (
+                "ANSWER-SHEET RULE: work edits per-problem drafts. Do not submit "
+                f"individual problems. Only {config.leader} can call submit (once, "
+                "with no arguments) to hand in the whole current answer sheet and end "
+                "the contest. Never use finish_contest.\n\n"
             )
         else:
             submission_rule = (
@@ -1194,7 +1474,7 @@ def _user_prompt(
         else ""
     )
     source_block = ""
-    if (config.system_variant == "strategic" and config.review_required
+    if (config.review_required
             and active is not None and active.kind == "programming" and active.versions):
         latest = active.versions[-1]
         source_block = (
@@ -1599,9 +1879,16 @@ def _apply_action(
     work_task_ids: set[str] | None = None,
     review_task_ids: set[str] | None = None,
     final_review_complete: bool = True,
+    personal_assignments: dict[str, dict[str, Any]] | None = None,
 ) -> tuple[bool, int]:
     task_by_id = {task.task_id: task for task in manifest.tasks}
     active = session.active_task
+    if (
+        config.features.leader_submits
+        and agent != config.leader
+        and action in {"submit", "submit_code", "finish_contest"}
+    ):
+        raise ValueError(f"only {config.leader} may {action} in this baseline")
     visibility: Literal["public", "private"] = (
         "private" if ACTION_REGISTRY[action].visibility == "private" else "public"
     )
@@ -1648,6 +1935,31 @@ def _apply_action(
             agent=agent,
             note_id=str(arguments["note_id"]),
         )
+    if action == "assign_problem":
+        if agent != config.leader:
+            raise ValueError("only the team leader may reassign problems")
+        if personal_assignments is None:
+            raise RuntimeError("assign_problem needs the live assignment table")
+        target = str(arguments["agent"])
+        if target == agent or target not in {
+            f"Agent_{index}" for index in range(1, config.team_size + 1)
+        }:
+            raise ValueError(f"unknown teammate: {target}")
+        raw_ids = arguments["problem_ids"]
+        if isinstance(raw_ids, str):
+            raw_ids = [raw_ids]
+        problem_ids: list[str] = []
+        for raw in raw_ids:
+            task_id = str(raw)
+            if task_id not in task_by_id:
+                raise ValueError(f"unknown problem: {task_id}")
+            if task_id not in problem_ids:
+                problem_ids.append(task_id)
+        if not problem_ids:
+            raise ValueError("assign_problem needs at least one problem")
+        _set_work_assignment(personal_assignments, target, problem_ids)
+        arguments = {**arguments, "agent": target, "problem_ids": problem_ids}
+        event_task_id = None
     memory.append(
         task_id=event_task_id,
         question_id=None,
@@ -1664,7 +1976,7 @@ def _apply_action(
         turn=session.budget.turns_used,
         recipients=recipients,
     )
-    if action == "remember":
+    if action in {"remember", "assign_problem"}:
         return False, 0
     if action == "recall":
         notes = memory.recall(
@@ -1779,10 +2091,7 @@ def _apply_action(
             # The work event above retains the note in team memory. It must not
             # replace executable source or invalidate its exact-version review.
             return False, 0
-        if (
-            config.system_variant == "strategic"
-            and _task_has_independent_approval(active)
-        ):
+        if config.review_required and _task_has_independent_approval(active):
             raise ValueError(
                 "preserve the independently approved version unless a review rejects it"
             )
@@ -1985,18 +2294,27 @@ def _apply_action(
                 raise ValueError(
                     "strategic code submission requires an independent review"
                 )
+        elif config.features.leader_submits:
+            if agent != config.leader:
+                raise ValueError(f"only {config.leader} may submit code")
+            if "code" in arguments:
+                raise ValueError("the leader submits the latest recorded version; do not paste source")
+            if not active.versions:
+                raise ValueError("no recorded source version to submit")
+            code = active.versions[-1].content
+            arguments = {**arguments, "code": code}
         else:
             code = str(arguments["code"])
             if not active.versions or active.versions[-1].content != code:
                 session.create_answer(code, author=agent)
 
     if (action == "execute_code" and active.kind == "programming"
-            and config.system_variant == "strategic" and config.review_required
+            and config.review_required
             and not str(arguments.get("code") or "").strip()):
         raise ValueError("execute_code requires nonempty candidate source, not an empty placeholder")
     execution_cache_key = None
     if (action == "execute_code" and active.kind == "programming"
-            and config.system_variant == "strategic" and config.review_required):
+            and config.review_required):
         execution_cache_key = execution_key(task_by_id[active.task_id], arguments, task_action_executor)
         reused = failed_execution(memory.archival_snapshot()["events"], active.task_id, execution_cache_key)
         if reused is not None:
@@ -2235,7 +2553,7 @@ def _run_contest_engine(
             SubmissionPolicy(
                 consecutive_non_ac_limit=(
                     config.consecutive_non_ac_limit
-                    if config.system_variant == "strategic"
+                    if config.features.submission_cooldown
                     else (
                         (config.max_api_calls or config.max_turns * config.team_size)
                         + 1
@@ -2274,7 +2592,7 @@ def _run_contest_engine(
             competition_id=manifest.competition_id,
         )
     )
-    actions = _resolved_actions(manifest)
+    actions = _resolved_actions(manifest, config)
     action_transport_log: list[dict[str, Any]] = []
     transport_api_calls = 0
     transport_retries = 0
@@ -2314,18 +2632,22 @@ def _run_contest_engine(
         else ""
     )
     coach_budget_exhausted = False
-    if (
-        config.system_variant == "strategic"
-        and coach_query_fn is not None
-        and not coach_guidance
-    ):
+    # Who writes the opening plan: the exiting Coach seat, or the leader who
+    # then stays in the contest as an ordinary (submitting) contestant.
+    planner: str | None = None
+    plan_query: QueryFn | None = None
+    if config.features.coach == "precontest" and coach_query_fn is not None:
+        planner, plan_query = "Pre_Contest_Coach", coach_query_fn
+    elif config.features.coach == "leader":
+        planner, plan_query = config.leader, query_llm_fn
+    if planner is not None and plan_query is not None and not coach_guidance:
         try:
             session.consume_budget(api_calls=1)
         except BudgetExceededError:
             coach_budget_exhausted = True
         else:
             coach_system, coach_user = _precontest_coach_prompts(manifest, config)
-            coach_response = coach_query_fn(coach_system, coach_user)
+            coach_response = plan_query(coach_system, coach_user)
             coach_tokens = estimate_tokens(coach_response)
             remaining_tokens = (
                 None
@@ -2343,14 +2665,25 @@ def _run_contest_engine(
             session.consume_budget(tokens=charged_tokens)
             coach_budget_exhausted = charged_tokens < coach_tokens
             coach_plan = _normalize_coach_plan(coach_response, manifest, config)
+            if config.leader is not None:
+                # The leader may touch every problem; workers keep their lists.
+                # No review workflow: review routes would only pull workers
+                # onto problems they cannot act on.
+                coach_plan["work_assignments"][config.leader] = [
+                    task.task_id for task in manifest.tasks
+                ]
+                if not config.review_required:
+                    coach_plan["review_assignments"] = {
+                        agent: [] for agent in coach_plan["review_assignments"]
+                    }
             coach_guidance = json.dumps(coach_plan, ensure_ascii=False, indent=2)
             memory.append(
                 task_id=None,
                 question_id=None,
-                actor="Pre_Contest_Coach",
+                actor=planner,
                 visibility="public",
                 kind="precontest_coach_guidance",
-                payload={"guidance": coach_guidance, "plan": coach_plan},
+                payload={"guidance": coach_guidance, "plan": coach_plan, "author": planner},
                 turn=session.budget.turns_used,
             )
             for index in range(1, config.team_size + 1):
@@ -2358,7 +2691,7 @@ def _run_contest_engine(
                 memory.append(
                     task_id=None,
                     question_id=None,
-                    actor="Pre_Contest_Coach",
+                    actor=planner,
                     visibility="private",
                     recipients=(agent,),
                     kind="coach_personal_assignment",
@@ -2401,6 +2734,15 @@ def _run_contest_engine(
                 ),
                 "final_check": list(coach_plan.get("final_check") or []),
             }
+        # Leader reassignments are ordinary public action events; replaying
+        # them over the opening plan makes the table resume-safe.
+        for event in archived_events:
+            if event["kind"] == "assign_problem" and event["actor"] == config.leader:
+                _set_work_assignment(
+                    personal_assignments,
+                    str(event["payload"]["agent"]),
+                    [str(task_id) for task_id in event["payload"]["problem_ids"]],
+                )
 
     def final_review_pending() -> list[TaskUnit]:
         required_ids = _required_answer_sheet_task_ids(manifest)
@@ -2449,7 +2791,7 @@ def _run_contest_engine(
         except BudgetExceededError:
             break
         if (
-            config.system_variant == "strategic"
+            config.features.submission_cooldown
             and session.active_task is None
             and all(task.versions or task.submissions for task in session.tasks)
         ):
@@ -2476,6 +2818,10 @@ def _run_contest_engine(
             f"Agent_{(start + offset) % config.team_size + 1}"
             for offset in range(config.team_size)
         ]
+        if config.leader is not None:
+            # The leader opens every round; workers keep the rotating order.
+            agents.remove(config.leader)
+            agents.insert(0, config.leader)
         for agent_index, agent in enumerate(agents):
             if finished:
                 break
@@ -2512,7 +2858,7 @@ def _run_contest_engine(
                 if personal_assignment is not None
                 else []
             )
-            if config.system_variant == "strategic" and config.review_required:
+            if config.review_required:
                 # Only reorder programming slots; mixed/non-programming tasks
                 # retain their original assignment order and workflow.
                 code_ids = programming_progress.ordered_tasks(agent, [
@@ -2592,7 +2938,7 @@ def _run_contest_engine(
                     ):
                         session.select_task(eligible[0].task_id)
             programming_source_required = bool(
-                config.system_variant == "strategic" and config.review_required
+                config.review_required
                 and session.active_task is not None
                 and _needs_programming_source(session.active_task)
                 and (work_task_ids is None or session.active_task.task_id in work_task_ids)
@@ -2824,6 +3170,7 @@ def _run_contest_engine(
                     work_task_ids=work_task_ids,
                     review_task_ids=review_task_ids,
                     final_review_complete=final_review_completed,
+                    personal_assignments=personal_assignments,
                 )
                 switches += switch_delta
             except (KeyError, RuntimeError, ValueError) as exc:
@@ -2886,7 +3233,7 @@ def _run_contest_engine(
                 acted_task is not None and len(acted_task.versions) > before_versions
             )
             programming_visit = bool(
-                config.system_variant == "strategic" and config.review_required
+                config.review_required
                 and acted_task is not None and acted_task.kind == "programming"
                 and (work_task_ids is None or acted_task.task_id in work_task_ids)
                 and (
@@ -2939,7 +3286,7 @@ def _run_contest_engine(
                 last_progress_turn[acted_task.task_id] = session.budget.turns_used
             if (
                 not finished
-                and config.system_variant == "vanilla"
+                and config.features.mechanical_switch
                 and _is_answer_sheet_contest(manifest)
                 and action == "work"
                 and created_version
@@ -2981,7 +3328,7 @@ def _run_contest_engine(
                         turn=session.budget.turns_used,
                     )
             if (
-                config.system_variant == "vanilla"
+                config.features.coach == "none"
                 and action == "select_problem"
                 and session.active_task is not None
             ):
@@ -2994,7 +3341,6 @@ def _run_contest_engine(
         active = session.active_task
         if (
             not finished
-            and config.system_variant in {"strategic", "vanilla"}
             and active is not None
             and not (active.kind == "programming" and config.review_required)
             and switches == switches_at_turn_start
@@ -3016,7 +3362,7 @@ def _run_contest_engine(
                 session.skip_task()
                 session.select_task(next_task.task_id)
                 switches += 1
-                if config.system_variant == "vanilla":
+                if config.features.mechanical_switch:
                     baseline_mechanical_switches += 1
                 memory.append(
                     task_id=previous_id,
@@ -3207,9 +3553,10 @@ def _run_contest_engine(
         "budget": asdict(session.budget),
         "protocol_version": PROTOCOL_VERSION,
         "action_set_version": ACTION_SET_VERSION,
+        "baseline": asdict(config.features),
+        "plan_author": planner,
         "programming_workflow_version": (
-            "programming_workflow_v4" if config.system_variant == "strategic"
-            and config.review_required and any(task.programming for task in manifest.tasks)
+            "programming_workflow_v4" if config.review_required and any(task.programming for task in manifest.tasks)
             else None
         ),
         "deadline_policy": ("collect_pending_non_programming_drafts_and_unsubmitted_candidates_v2"
@@ -3290,7 +3637,7 @@ def run_contest(
         "memory_checkpoint": memory_checkpoint,
         "checkpoint_callback": checkpoint_callback,
     }
-    if config.system_variant == "vanilla":
+    if config.features.coach == "none":
         from vanilla_contest_runner import run_vanilla_contest
 
         return run_vanilla_contest(manifest, query_llm_fn, config, **kwargs)

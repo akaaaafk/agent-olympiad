@@ -210,6 +210,7 @@ def run_pair(
     max_tokens: int,
 ) -> dict[str, Any]:
     outputs = {}
+    # Legacy pair names: vanilla -> decentralized, strategic -> open_table_coach.
     for variant in ("vanilla", "strategic"):
         agent = DeterministicContestAgent(manifest, variant)
         executor = (
@@ -248,9 +249,12 @@ def run_pair(
             "max_api_calls": max_api_calls,
             "max_tokens": max_tokens,
             "start_seat": 0,
+            # Baselines differ only by optional bundles (desk / private
+            # channel); the core contest actions must be identical.
             "action_sets_equal": (
-                outputs["vanilla_team"]["action_names"]
-                == outputs["strategic_team"]["action_names"]
+                set(outputs["vanilla_team"]["action_names"])
+                == set(outputs["strategic_team"]["action_names"])
+                - {"inspect_problem", "triage_problem", "direct_message"}
             ),
         },
         "results": outputs,

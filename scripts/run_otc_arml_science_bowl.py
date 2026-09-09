@@ -107,7 +107,6 @@ def run_one(
     max_turns: int,
     max_api_calls: int,
     system_variant: str,
-    require_review: bool,
 ) -> dict:
     problem_id = manifest.stem
     out_dir = out_root / problem_id
@@ -143,10 +142,7 @@ def run_one(
         "--output",
         str(out_dir),
     ]
-    if require_review:
-        cmd.append("--require-review")
-    else:
-        cmd.append("--no-require-review")
+    # The baseline decides the review workflow; no override is passed.
     log_path = out_dir / "run.log"
     with log_path.open("a", encoding="utf-8") as log:
         log.write(f"\n==== RUN {problem_id} ====\n")
@@ -228,7 +224,16 @@ def main() -> int:
     parser.add_argument(
         "--system-variant",
         default="strategic_team",
-        choices=["strategic_team", "vanilla_team"],
+        choices=[
+            "single_agent",
+            "decentralized",
+            "centralized",
+            "open_table_coach",
+            "open_table_coach_memory",
+            # legacy aliases
+            "strategic_team",
+            "vanilla_team",
+        ],
     )
     parser.add_argument("--team-size", type=int, default=3)
     parser.add_argument("--arml-max-turns", type=int, default=50)
@@ -248,10 +253,9 @@ def main() -> int:
         json.dumps([str(path.relative_to(REPO_ROOT)) for path in manifests], indent=2),
         encoding="utf-8",
     )
-    require_review = args.system_variant == "strategic_team"
     print(
         f"Wrote {len(manifests)} manifests under {MANIFEST_ROOT} | "
-        f"variant={args.system_variant} | require_review={require_review}",
+        f"variant={args.system_variant}",
         flush=True,
     )
 
@@ -274,7 +278,6 @@ def main() -> int:
             max_turns=max_turns,
             max_api_calls=max_api,
             system_variant=args.system_variant,
-            require_review=require_review,
         )
         print(f"  -> {result['status']}", flush=True)
         results.append(result)

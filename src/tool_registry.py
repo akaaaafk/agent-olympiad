@@ -276,6 +276,29 @@ _SPECS = (
         ),
         visibility="team",
     ),
+    # Leader-only (centralized baseline): replace one teammate's work list.
+    _action(
+        "assign_problem",
+        (
+            "Leader only: replace one teammate's enforced work list with the "
+            "given problems. The teammate is scheduled onto the first listed "
+            "problem from the next round."
+        ),
+        (
+            ArgumentSpec(
+                "agent",
+                description="Exact teammate name to reassign.",
+            ),
+            ArgumentSpec(
+                "problem_ids",
+                type="array",
+                items="string",
+                description="Problems this teammate may work on, in order.",
+            ),
+            _REASON,
+        ),
+        visibility="team",
+    ),
     _action(
         "request_review",
         "Ask a teammate to review the current active problem; this does not approve it.",
@@ -436,9 +459,13 @@ COMMON_ACTION_NAMES = frozenset(
 DESK_ACTION_NAMES = frozenset(
     {"inspect_problem", "triage_problem", "remember", "recall", "share_note"}
 )
+# Sub-bundles of the desk: baselines switch these on or off independently.
+MEMORY_ACTION_NAMES = frozenset({"remember", "recall", "share_note"})
+DESK_READONLY_ACTION_NAMES = frozenset({"inspect_problem", "triage_problem"})
+LEADER_ACTION_NAMES = frozenset({"assign_problem"})
 # Bumped whenever the canonical action surface changes shape; recorded in
 # contest results so mixed-version comparisons are visible.
-ACTION_SET_VERSION = 2
+ACTION_SET_VERSION = 3
 PACK_ACTION_NAMES: Mapping[str, frozenset[str]] = MappingProxyType(
     {
         pack: frozenset(
@@ -929,6 +956,9 @@ __all__ = [
     "ACTION_SET_VERSION",
     "COMMON_ACTION_NAMES",
     "DESK_ACTION_NAMES",
+    "DESK_READONLY_ACTION_NAMES",
+    "LEADER_ACTION_NAMES",
+    "MEMORY_ACTION_NAMES",
     "PACK_ACTION_NAMES",
     "LEGACY_ACTION_ALIASES",
     "LEGACY_ENV_ACTIONS",

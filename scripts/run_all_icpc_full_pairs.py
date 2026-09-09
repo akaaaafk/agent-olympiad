@@ -58,8 +58,10 @@ def completed(run_dir: Path, session_id: str, variant: str) -> bool:
         return False
     stored_variant = payload.get("system_variant")
     equivalent_variants = {
-        "strategic_team": {"strategic_team", "strategic"},
-        "vanilla_team": {"vanilla_team", "vanilla"},
+        "strategic_team": {"strategic_team", "strategic", "open_table_coach"},
+        "vanilla_team": {"vanilla_team", "vanilla", "decentralized"},
+        "open_table_coach": {"strategic_team", "strategic", "open_table_coach"},
+        "decentralized": {"vanilla_team", "vanilla", "decentralized"},
     }
     return payload.get("session_id") == session_id and stored_variant in equivalent_variants.get(
         variant, {variant}

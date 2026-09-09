@@ -1,4 +1,4 @@
-# Vanilla and strategic contest sessions
+# Contest sessions: five baselines on one engine
 
 Use an explicit manifest so unrelated benchmark years are never mixed into one
 contest:
@@ -7,24 +7,65 @@ contest:
 python src/run_competition_batch.py `
   --live `
   --contest-manifest data/contest_manifests/icpc_wf_2012_5.json `
-  --system-variant strategic_team `
+  --system-variant open_table_coach `
   --max-api-calls 300 `
   --max-total-tokens 80000 `
-  --output results/icpc_strategic
+  --output results/icpc_otc
 ```
 
-Run the matched baseline with the same model, manifest, team size, API limit,
-token limit, turn limit, and starting seat; change only
-`--system-variant vanilla_team`. Use `--start-seat` for repeated runs with a
-different first agent.
+Run a matched baseline with the same model, manifest, team size, API limit,
+token limit, turn limit, and starting seat; change only `--system-variant`.
+Use `--start-seat` for repeated runs with a different first agent.
 
-The two variants now have explicit Python module interfaces:
+## Baselines (2026-09-09)
 
-- `src/vanilla_contest_runner.py` is the no-Coach baseline entry point. Its
-  interface intentionally has no `coach_query_fn`, so Coach behavior cannot be
-  enabled accidentally.
-- `src/strategic_contest_runner.py` owns the strategic/Open-Coach entry point,
-  including its Coach dependency.
+`--system-variant` names one of five baselines. Each is a named preset of
+orthogonal switches (`contest_runner.BaselineFeatures`); the engine never
+branches on the baseline's name, only on these switches, so adding a sixth
+baseline is one table row, not a new set of `if` statements.
+
+| baseline | coach | review workflow | memory (`remember/recall/share_note`) | desk (`inspect/triage`) | `direct_message` | structured context | cooldown | mechanical switch | leader submits |
+|---|---|---|---|---|---|---|---|---|---|
+| `single_agent` (team_size pinned to 1) | none | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ | ✗ |
+| `decentralized` (open table, rotating seats) | none | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ | ✗ |
+| `centralized` (`Agent_1` is the leader) | leader | ✗ | ✗ | ✓ | ✓ | ✓ | ✓ | ✗ | ✓ |
+| `open_table_coach` | pre-contest Coach | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ |
+| `open_table_coach_memory` | pre-contest Coach | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ |
+
+Legacy names remain accepted and are canonicalised in results:
+`vanilla` / `vanilla_team` → `decentralized`, `strategic` / `strategic_team`
+→ `open_table_coach` (v3 strategic had no memory actions, so the alias points
+at the memory-less coach baseline). `contest_session.json` stores the canonical
+name in `system_variant`, the switches in `baseline`, the requested CLI name in
+`run.requested_variant`, and who wrote the opening plan in `plan_author`
+(`Pre_Contest_Coach`, `Agent_1`, or `null`).
+
+`single_agent` and `decentralized` share every switch; the only difference is
+the one-seat constraint. Both are the v3 vanilla environment: no desk or memory
+tools, raw 12-event context, answer-sheet drafts auto-advance to the next unseen
+problem.
+
+`centralized` is the contest-session form of the legacy `--schema centralized`:
+`Agent_1` writes the opening plan itself (same JSON schema as the Coach, event
+`precontest_coach_guidance` with `author=Agent_1`), stays in the contest as an
+ordinary contestant who may work on any problem, acts first every round, and is
+the **only** seat that can `submit` / `submit_code` / `finish_contest` (workers
+never see those actions; the leader's `submit_code` takes no arguments and
+sends the active problem's latest recorded source). The leader-only
+`assign_problem(agent, problem_ids, reason?)` replaces one worker's enforced work
+list live; it is a public event replayed on resume. There is no review
+workflow, so review routes are cleared from the plan.
+
+Ablations pass `features=BaselineFeatures(...)` (or `--require-review` /
+`--no-require-review`) on top of a preset; the label stays the preset name.
+
+Module interfaces:
+
+- `src/vanilla_contest_runner.py` runs the no-coach presets. Its interface
+  intentionally has no `coach_query_fn`, so Coach behavior cannot be enabled
+  accidentally.
+- `src/strategic_contest_runner.py` runs the coach and leader presets,
+  including the Coach dependency (the leader plan uses the contestant model).
 - `src/contest_runner.py` contains the shared contest state machine and a
   compatibility dispatcher. Session state, judge adapters, budgets, action
   transport, checkpoints, and result serialization remain shared so matched
@@ -129,23 +170,26 @@ every turn. The contest runner narrows the function list dynamically:
 - Answer-sheet `submit` is gated until required drafts and reviews exist.
   Deadline collection is done by the environment after the loop, never by an
   in-loop model action.
-- Desk actions stay available whenever the agent may act at all, including
-  off-assignment turns in strategic runs; only the two forced phases hide them
-  (answer-sheet *submit-only* and programming *source-required*).
+- Desk actions (when the baseline includes them) stay available whenever the
+  agent may act at all, including off-assignment turns in coach runs; only the
+  two forced phases hide them (answer-sheet *submit-only* and programming
+  *source-required*).
 
-`vanilla_team` has no Coach, private deliberation, review workflow, review gate,
-or cross-problem strategic summary. It makes one model call and executes at most
+The no-coach presets (`single_agent`, `decentralized`) have no Coach, private
+deliberation, review workflow, review gate, desk or memory tools, or
+cross-problem strategic summary. They make one model call and execute at most
 one public action per scheduled agent. `request_review` and `review_answer` are
-hidden from this baseline. After a new answer-sheet draft is recorded, contest
-control advances the shared cursor to the first unseen task. The common stall
-guard also moves either variant away from an unchanged task; vanilla's automatic
-moves are reported separately as `baseline_mechanical_switches`.
+hidden. After a new answer-sheet draft is recorded, contest control advances the
+shared cursor to the first unseen task. The common stall guard also moves every
+baseline away from an unchanged task; the no-coach presets' automatic moves are
+reported separately as `baseline_mechanical_switches`.
 
-Both variants receive the same contest rules and competition-specific base tool
-packs. Actions invalid under the contest's submission contract are hidden for
-both variants, including incomplete answer-sheet submissions.
+All baselines receive the same contest rules and competition-specific base tool
+packs; they differ only by the optional bundles in the table above. Actions
+invalid under the contest's submission contract are hidden for everyone,
+including incomplete answer-sheet submissions.
 
-`strategic_team` adds bounded contest memory, immutable answer versions,
+The coach presets add bounded contest memory, immutable answer versions,
 different-agent review, evidence-bound code review, stalled-task switching,
 three-non-AC cooldown, and later revisits. These are experimental system
 policies, not official ARML or ICPC rules.
@@ -174,8 +218,9 @@ end, the environment collects pending non-programming drafts for
 available for solving or revising a draft; deadline collection consumes no extra
 model call. Programming contests retain per-problem `submit_code` semantics.
 
-Results record `protocol_version=contest_session_v4`, `action_set_version=2`
-and `deadline_policy=collect_pending_non_programming_drafts`. Re-run old
+Results record `protocol_version=contest_session_v4`, `action_set_version=3`
+(3 = `assign_problem` added; 2 = desk actions) and
+`deadline_policy=collect_pending_non_programming_drafts`. Re-run old
 experiments from fresh output directories when comparing this protocol; do not
 mix old checkpoints or scores with the new submission policy.
 `run_competition_batch.py --resume` refuses a `contest_checkpoint.json` whose
@@ -399,13 +444,13 @@ per-task triage) and `ContestMemory` (event ledger); no `Workboard` or
 unchanged.
 
 - **Desk actions** `inspect_problem`, `triage_problem`, `remember`, `recall`,
-  `share_note` are in the common pack, so **both variants** receive them. This
-  changes the vanilla baseline definition: vanilla now has read access to other
-  problems, private notes and team triage, but still no Coach, review workflow
-  or `direct_message`. They are not gated by the Coach's work/review
-  assignment; only the answer-sheet submit-only phase and the programming
-  source-required phase hide them. Every desk call still costs one turn and
-  one API call.
+  `share_note` are in the common pack. Which baseline sees which bundle is
+  decided by the preset table in *Baselines* above (initially v4 gave all of
+  them to both variants; the five-baseline revision the same day split them
+  into the `desk` and `memory` switches and removed them from the no-coach
+  presets). They are not gated by the Coach's work/review assignment; only the
+  answer-sheet submit-only phase and the programming source-required phase hide
+  them. Every desk call still costs one turn and one API call.
 - `inspect_problem(problem_id?, focus?)` replaces the programming-only
   `verify`: a private `inspect_problem_result` event with statement, versions
   (content clipped to 2 000 chars, sample and author reports), reviews and
@@ -454,6 +499,8 @@ legacy `verify_problem` (`review_answer` binds a `version_hash`),
 Regression coverage: `tests/test_tool_registry.py`, `tests/test_contest_memory.py`
 (recall, recent notes, multi-recipient inbox) and `tests/test_contest_runner.py`
 (inspect without cursor move, note round trip, triage scheduling and deadline,
-duplicate-draft feedback, desk availability per variant/phase, identical frozen
-action sets). `src/run_contest_smoke.py` produces the same deterministic
-matched-pair outcomes as v3.
+duplicate-draft feedback, desk availability per baseline/phase, shared core
+action set, centralized leader/worker gating, live reassignment and its resume
+replay, alias canonicalisation and team-size rules). `src/run_contest_smoke.py`
+produces the same deterministic matched-pair outcomes as v3 and as the
+pre-refactor v4.

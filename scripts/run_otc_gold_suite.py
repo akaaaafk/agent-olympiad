@@ -10,8 +10,10 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 import subprocess
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -102,6 +104,12 @@ SPLIT_PARTS = {"arml_local", "arml_national_team"}
 # Rubric / reference-only packets still get a single-task contest session.
 RUBRIC_PACKET_COMPETITIONS = frozenset({"arml_national_power", "arml_power"})
 
+# Benchmarks whose rows are individual questions/puzzles rather than full
+# contests. Group them into the natural event represented by their metadata.
+GROUPED_QUESTION_COMPETITIONS = frozenset(
+    {"science_bowl", "qanta", "mystery_hunt"}
+)
+
 # Budget presets: (max_turns, max_api_calls)
 BUDGETS: dict[str, tuple[int, int]] = {
     competition: (50, 151)
@@ -144,6 +152,44 @@ def _gradeable_question_ids(problem: dict) -> list[str]:
     return ids
 
 
+def _safe_session_id(value: object) -> str:
+    return re.sub(r"[^a-zA-Z0-9_-]+", "_", str(value).strip()).strip("_").lower()
+
+
+def _natural_session_id(competition: str, problem: dict) -> str:
+    """Return the real contest/packet unit for a question-level benchmark row."""
+    problem_id = str(problem["problem_id"])
+    if competition == "science_bowl":
+        parent = problem.get("parent_session_id")
+        if parent:
+            return _safe_session_id(parent)
+        year = problem.get("year") or "unknown"
+        packet = problem.get("packet") or problem.get("source_file") or problem_id
+        return _safe_session_id(f"science_bowl_{year}_{packet}")
+    if competition == "qanta":
+        year = problem.get("year") or "unknown"
+        tournament = problem.get("tournament") or "unknown_tournament"
+        return _safe_session_id(f"qanta_{year}_{tournament}")
+    if competition == "mystery_hunt":
+        year = problem.get("year")
+        return (
+            _safe_session_id(f"mystery_hunt_{year}")
+            if year is not None
+            else problem_id
+        )
+    return problem_id
+
+
+def _group_problems(competition: str, problems: list[dict]) -> list[tuple[str, list[dict]]]:
+    """Group question rows into contest sessions while preserving source order."""
+    if competition not in GROUPED_QUESTION_COMPETITIONS:
+        return [(str(problem["problem_id"]), [problem]) for problem in problems]
+    groups: dict[str, list[dict]] = defaultdict(list)
+    for problem in problems:
+        groups[_natural_session_id(competition, problem)].append(problem)
+    return list(groups.items())
+
+
 def write_manifests(competitions: list[str]) -> list[Path]:
     MANIFEST_ROOT.mkdir(parents=True, exist_ok=True)
     paths: list[Path] = []
@@ -151,28 +197,43 @@ def write_manifests(competitions: list[str]) -> list[Path]:
         problems = json.loads(
             (BENCH_ROOT / competition / "benchmark.json").read_text(encoding="utf-8")
         )
-        for problem in problems:
-            problem_id = str(problem["problem_id"])
-            gradeable = _gradeable_question_ids(problem)
-            rubric_only = (
-                competition in RUBRIC_PACKET_COMPETITIONS
-                and bool(str(problem.get("problem_description") or "").strip())
-            )
-            if not gradeable and not rubric_only:
+        desired_paths: set[Path] = set()
+        for session_id, session_problems in _group_problems(competition, problems):
+            included: list[tuple[dict, list[str]]] = []
+            for problem in session_problems:
+                gradeable = _gradeable_question_ids(problem)
+                rubric_only = (
+                    competition in RUBRIC_PACKET_COMPETITIONS
+                    and bool(str(problem.get("problem_description") or "").strip())
+                )
+                if gradeable or rubric_only:
+                    included.append((problem, gradeable))
+            if not included:
                 continue
+            problem_ids = [str(problem["problem_id"]) for problem, _ in included]
+            split_parts = (
+                competition in SPLIT_PARTS
+                and len(included) == 1
+                and bool(included[0][1])
+            )
             payload: dict = {
-                "session_id": problem_id,
+                "session_id": session_id,
                 "competition_id": competition,
-                "problem_ids": [problem_id],
-                "description": f"OTC contest-session manifest for {problem_id}",
-                "split_parts": competition in SPLIT_PARTS and bool(gradeable),
+                "problem_ids": problem_ids,
+                "description": (
+                    f"OTC contest-session manifest for {session_id} "
+                    f"({len(problem_ids)} tasks)"
+                ),
+                "split_parts": split_parts,
                 "task_family": TASK_FAMILIES.get(competition, "general"),
                 "competition_description": COMPETITION_DESCRIPTIONS.get(
                     competition,
                     "Solve the provided contest task and submit its required deliverable.",
                 ),
             }
-            if competition in SPLIT_PARTS and gradeable:
+            if split_parts:
+                problem, gradeable = included[0]
+                problem_id = str(problem["problem_id"])
                 payload["question_ids"] = gradeable
                 overrides = ARML_PROMPT_OVERRIDES.get(problem_id)
                 if overrides:
@@ -181,9 +242,22 @@ def write_manifests(competitions: list[str]) -> list[Path]:
                         for key, value in overrides.items()
                         if key in gradeable
                     }
-            path = MANIFEST_ROOT / f"{problem_id}.json"
+            path = MANIFEST_ROOT / f"{session_id}.json"
             path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
             paths.append(path)
+            desired_paths.add(path)
+
+        # Remove obsolete one-question manifests for only the competitions being
+        # regenerated. Keeping them would make directory-level counts misleading.
+        for path in MANIFEST_ROOT.glob("*.json"):
+            if path in desired_paths:
+                continue
+            try:
+                existing = json.loads(path.read_text(encoding="utf-8"))
+            except (json.JSONDecodeError, OSError):
+                continue
+            if existing.get("competition_id") == competition:
+                path.unlink()
     return paths
 
 
@@ -217,7 +291,6 @@ def run_one(
     max_turns: int,
     max_api_calls: int,
     system_variant: str,
-    require_review: bool,
 ) -> dict:
     problem_id = manifest.stem
     out_dir = out_root / problem_id
@@ -253,10 +326,7 @@ def run_one(
         "--output",
         str(out_dir),
     ]
-    if require_review:
-        cmd.append("--require-review")
-    else:
-        cmd.append("--no-require-review")
+    # The baseline decides the review workflow; no override is passed.
     log_path = out_dir / "run.log"
     with log_path.open("a", encoding="utf-8") as log:
         log.write(f"\n==== RUN {problem_id} ====\n")
@@ -360,7 +430,16 @@ def main() -> int:
     parser.add_argument(
         "--system-variant",
         default="strategic_team",
-        choices=["strategic_team", "vanilla_team"],
+        choices=[
+            "single_agent",
+            "decentralized",
+            "centralized",
+            "open_table_coach",
+            "open_table_coach_memory",
+            # legacy aliases
+            "strategic_team",
+            "vanilla_team",
+        ],
     )
     parser.add_argument("--team-size", type=int, default=3)
     parser.add_argument("--limit", type=int, default=None)
@@ -383,10 +462,9 @@ def main() -> int:
         json.dumps([str(path.relative_to(REPO_ROOT)) for path in manifests], indent=2),
         encoding="utf-8",
     )
-    require_review = args.system_variant == "strategic_team"
     print(
         f"Wrote {len(manifests)} manifests under {MANIFEST_ROOT} | "
-        f"variant={args.system_variant} | require_review={require_review}",
+        f"variant={args.system_variant}",
         flush=True,
     )
 
@@ -406,7 +484,6 @@ def main() -> int:
             max_turns=max_turns,
             max_api_calls=max_api,
             system_variant=args.system_variant,
-            require_review=require_review,
         )
         print(f"  -> {result['status']}", flush=True)
         results.append(result)

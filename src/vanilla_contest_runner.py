@@ -33,8 +33,11 @@ def run_vanilla_contest(
     checkpoint_callback: CheckpointCallback | None = None,
 ) -> dict[str, Any]:
     """Run the rotating multi-agent baseline without any Coach behavior."""
-    if config.system_variant != "vanilla":
-        raise ValueError("run_vanilla_contest requires system_variant='vanilla'")
+    if config.features.coach != "none":
+        raise ValueError(
+            "run_vanilla_contest requires a no-coach baseline "
+            "(single_agent or decentralized)"
+        )
     return _run_contest_engine(
         manifest,
         query_llm_fn,

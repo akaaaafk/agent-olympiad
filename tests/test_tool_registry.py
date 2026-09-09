@@ -14,7 +14,10 @@ from tool_registry import (  # noqa: E402
     ACTION_SET_VERSION,
     COMMON_ACTION_NAMES,
     DESK_ACTION_NAMES,
+    DESK_READONLY_ACTION_NAMES,
+    LEADER_ACTION_NAMES,
     LEGACY_ACTION_ALIASES,
+    MEMORY_ACTION_NAMES,
     ActionSpec,
     Resolution,
     render_action_instructions,
@@ -49,6 +52,7 @@ class ActionRegistryTests(unittest.TestCase):
                     "remember",
                     "recall",
                     "share_note",
+                    "assign_problem",
                 }
             ),
         )
@@ -57,8 +61,30 @@ class ActionRegistryTests(unittest.TestCase):
             set(COMMON_ACTION_NAMES),
         )
         self.assertTrue(DESK_ACTION_NAMES <= COMMON_ACTION_NAMES)
-        self.assertEqual(ACTION_SET_VERSION, 2)
+        self.assertEqual(
+            MEMORY_ACTION_NAMES | DESK_READONLY_ACTION_NAMES, DESK_ACTION_NAMES
+        )
+        self.assertTrue(LEADER_ACTION_NAMES <= COMMON_ACTION_NAMES)
+        self.assertEqual(ACTION_SET_VERSION, 3)
         self.assertEqual(validate_registry(), ())
+
+    def test_assign_problem_is_a_leader_reassignment_with_a_problem_list(self) -> None:
+        spec = ACTION_REGISTRY["assign_problem"]
+        self.assertEqual(LEADER_ACTION_NAMES, frozenset({"assign_problem"}))
+        self.assertEqual([arg.name for arg in spec.arguments], ["agent", "problem_ids", "reason"])
+        self.assertEqual(spec.arguments[1].type, "array")
+        self.assertEqual(spec.arguments[1].items, "string")
+        self.assertFalse(spec.submission)
+        self.assertFalse(spec.budget.terminal)
+        self.assertEqual(
+            validate_action_payload(
+                spec, {"agent": "Agent_2", "problem_ids": ["a", "b"]}
+            ),
+            (),
+        )
+        self.assertTrue(
+            validate_action_payload(spec, {"agent": "Agent_2", "problem_ids": []})
+        )
 
     def test_desk_actions_are_read_only_or_personal(self) -> None:
         for name in DESK_ACTION_NAMES:

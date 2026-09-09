@@ -10,13 +10,13 @@
 | | 旧栈（per-problem） | 当前栈（contest session） |
 |---|---|---|
 | 入口 | `run_competition_batch.py` 不带 `--contest-manifest`；`run_exam.py`、`run_phase_a.py`、`run_phase_b_matrix.py` | `run_competition_batch.py --contest-manifest ...` |
-| 选择协作方式 | `--schema round_table / centralized / decentralized / single_agent / open_table_coach / debate / self_consistency / memory_solo / subagent / vanilla_team / liveoi_best_of_8` | `--system-variant strategic_team`（= OTC）或 `vanilla_team` |
+| 选择协作方式 | `--schema round_table / centralized / decentralized / single_agent / open_table_coach / debate / self_consistency / memory_solo / subagent / vanilla_team / liveoi_best_of_8` | `--system-variant single_agent / decentralized / centralized / open_table_coach / open_table_coach_memory`（旧名 `strategic_team` = `open_table_coach`，`vanilla_team` = `decentralized`，见 §2.0） |
 | 核心代码 | `src/env.py` + `src/collaboration.py` + `src/actions.py` | `src/contest_runner.py` + `src/contest_session.py` + `src/contest_memory.py` + `src/tool_registry.py` |
 | 动作格式 | 文本 `ACTION: speak \| PAYLOAD: ...` | typed function call（native / emulated / prompt-json） |
 | 记忆 | `MemoryStore`（remember/recall/publish）、scratchpad、workboard、三层 memory | `ContestMemory` 事件账本 + 不可变 answer version + review |
 | 一次运行 | 一道题 | 一整场比赛（多题、共享预算、答题卡、resume） |
 
-**近两周所有实验结果（gold suite、ARML 配对、ICPC full pairs）都是当前栈。** 下文说 “OTC” 一律指 `strategic_team`，不是旧的 `--schema open_table_coach`。旧栈只在最后一节附带说明。
+**近两周所有实验结果（gold suite、ARML 配对、ICPC full pairs）都是当前栈。** 下文说 “OTC” 一律指 `open_table_coach`（旧名 `strategic_team`），不是旧的 `--schema open_table_coach`。旧栈只在最后一节附带说明。
 
 ## 1. 端到端流程
 
@@ -27,15 +27,16 @@ data/raw/<comp>/*.pdf ──collectors/*.py──▶ data/benchmarks/<comp>/benc
                     data/contest_manifests/*.json ──contest_manifest.load──▶ ContestManifest(tasks[], task_family)
                                                    │
                                                    ▼
-run_competition_batch.py --contest-manifest ... --system-variant strategic_team|vanilla_team
+run_competition_batch.py --contest-manifest ... --system-variant <五个 baseline 之一，见 §2.0>
                                                    │
         ┌──────────────────────────────────────────┤
-        │ strategic 独有：Pre_Contest_Coach 一次 LLM 调用 → JSON 分工计划 → 写入每个 agent 的私有 memory
+        │ coach=precontest：Pre_Contest_Coach 一次 LLM 调用 → JSON 分工计划 → 写入每个 agent 的私有 memory
+        │ coach=leader（centralized）：同一份计划由 Agent_1 出，之后 Agent_1 留在场上、每轮先行、唯一能提交
         ▼
 _run_contest_engine（contest_runner.py）
    for turn in range(max_turns):
        for agent in Agent_1..Agent_N（固定座次）:
-           strategic: scheduler 把共享 active-task 游标移到该 agent 的下一个 work/review 目标
+           有计划时（coach ≠ none）: scheduler 把共享 active-task 游标移到该 agent 的下一个 work/review 目标
            _actions_for_agent → 该回合合法的 function 集合（动态裁剪）
            一次 LLM 调用（tool_choice=required）→ 恰好执行一个 action
            _apply_action → 写 ContestMemory 事件 + 更新 ContestSession（version/review/submission）
@@ -53,9 +54,27 @@ scripts/*export*.py → summary.tsv / paste_tabs / completed_metrics.tsv
 
 ## 2. 入口：不同竞赛怎么进来
 
+### 2.0 五个 baseline = 一张开关表（2026-09-09 下午）
+
+`contest_runner.py` 里原来只有 `vanilla | strategic` 两个值、28 处 `if system_variant == ...`。现在改成 `BaselineFeatures`（9 个正交开关）+ `BASELINES` 预设表，引擎只看开关、不看名字：
+
+| `--system-variant` | coach | review 工作流 | memory（remember/recall/share_note） | desk（inspect/triage） | direct_message | 结构化上下文投影 | 3 非 AC cooldown | 答题卡机械切题 | 只有 leader 提交 |
+|---|---|---|---|---|---|---|---|---|---|
+| `single_agent`（team_size 强制 1） | none | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ | ✗ |
+| `decentralized`（open table 轮转） | none | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ | ✗ |
+| `centralized`（Agent_1 = leader） | leader | ✗ | ✗ | ✓ | ✓ | ✓ | ✓ | ✗ | ✓ |
+| `open_table_coach`（OTC） | precontest | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ |
+| `open_table_coach_memory` | precontest | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ |
+
+- 别名：`vanilla` / `vanilla_team` → `decentralized`；`strategic` / `strategic_team` → `open_table_coach`（v3 的 strategic 没有 memory action，所以指向不带 memory 的那个）。结果里 `system_variant` 存正名，`baseline` 存开关，`run.requested_variant` 存命令行原名，`plan_author` 记谁出的计划（`Pre_Contest_Coach` / `Agent_1` / null）。
+- `single_agent` 与 `decentralized` 开关完全一样，区别只有座位数；两者就是 v3 vanilla 环境（无 desk/memory 工具、原始 12 条上下文、work 后自动跳下一道空题）。
+- `centralized` 是旧栈 `--schema centralized` 的 contest-session 版：Agent_1 用 Coach 同款 JSON 出开场计划（事件仍是 `precontest_coach_guidance`，`author=Agent_1`），自己可做任何题、每轮先行、**唯一**能 `submit / submit_code / finish_contest`（worker 看不到这三个；leader 的 `submit_code` 无参，提交活动题最新版本）。leader 独有 `assign_problem(agent, problem_ids, reason?)` 现场替换某人的 work 列表，公开事件，resume 时重放。无 review 工作流，计划里的 review 路由清空。
+- 消融：在预设上传 `features=BaselineFeatures(...)` 或 `--require-review / --no-require-review`，名字仍是预设名。
+- `action_set_version` 升到 3（加了 `assign_problem`），`protocol_version` 仍是 `contest_session_v4`。
+
 ### 2.1 只有一个通用 runner，竞赛差异靠数据驱动
 
-`src/run_competition_batch.py` 是唯一的正式入口。带 `--contest-manifest` 走当前栈：读 manifest → 解析预算和队伍 → `run_vanilla_contest` 或 `run_strategic_contest`（两个模块只是薄包装，都调 `contest_runner._run_contest_engine`；`vanilla_contest_runner.py` 的接口故意没有 `coach_query_fn`，防止误开 Coach）。
+`src/run_competition_batch.py` 是唯一的正式入口。带 `--contest-manifest` 走当前栈：读 manifest → 解析预算和队伍 → `coach == none` 走 `run_vanilla_contest`，否则 `run_strategic_contest`（两个模块只是薄包装，都调 `contest_runner._run_contest_engine`；`vanilla_contest_runner.py` 的接口故意没有 `coach_query_fn`，防止误开 Coach）。
 
 关键 flag（`run_competition_batch.py:967-1128`）：
 
@@ -64,11 +83,11 @@ scripts/*export*.py → summary.tsv / paste_tabs / completed_metrics.tsv
 | `--live` | 真实 provider；不带则 mock |
 | `--provider perplexity\|tinker`，`--model` | Perplexity 用路由名如 `openai/gpt-5.4-mini`；Tinker 用 HF repo id 如 `Qwen/Qwen3.6-35B-A3B` |
 | `--contest-manifest` | 进入 contest-session 模式 |
-| `--system-variant` | `strategic_team`（OTC）/ `vanilla_team`；`_team` 后缀在内部去掉 |
+| `--system-variant` | §2.0 的五个正名 + 四个别名；内部规范化为正名 |
 | `--action-calling auto\|native\|emulated\|prompt-json` | 见 §3.3 |
 | `--team-size` | 默认取规则卡 roster → benchmark metadata → 3 |
 | `--max-turns / --max-api-calls / --max-total-tokens / --max-simulated-minutes` | 共享预算；`--max-total-tokens` 只算 **输出** token |
-| `--require-review / --no-require-review` | 覆盖 strategic 的独立 review 门（默认 strategic 开、vanilla 关） |
+| `--require-review / --no-require-review` | 覆盖预设的 review 开关（默认两个 OTC 开、其余关） |
 | `--programming-deadline-submit` | 编程题 deadline 兜底提交（默认关） |
 | `--no-judge-task / --no-judge-collab / --no-judge-cce` | 关掉三类判分；CCE 默认关 |
 | `--rules-mode off\|prompt_only\|enforced`，`--rules-root`，`--rules-strict` | 规则卡 |
@@ -115,7 +134,7 @@ LiveOIBench 不在 `data/` 里，是外挂目录，由 `src/liveoibench_adapter.
 
 ## 3. Actions：agent 到底能干什么
 
-### 3.1 一个注册表，22 个 typed action（`contest_session_v4`，`action_set_version=2`）
+### 3.1 一个注册表，23 个 typed action（`contest_session_v4`，`action_set_version=3`）
 
 `src/tool_registry.py` 的 `_SPECS` / `ACTION_REGISTRY` 是唯一定义处。每个 `ActionSpec` 有 name、description、JSON 参数 schema、visibility、所属 capability pack、预算语义、handler。**同一份定义同时用于**：生成 provider 的 function schema、渲染到 prompt 的说明、参数校验、dispatch。
 
@@ -125,18 +144,19 @@ LiveOIBench 不在 `data/` 里，是外挂目录，由 `src/liveoibench_adapter.
 
 | action | 参数 | 干什么 |
 |---|---|---|
-| `select_problem` | `problem_id` | 切换共享 active task；strategic 下 enum 限制为 Coach 分给你的题且不含当前题 |
+| `select_problem` | `problem_id` | 切换共享 active task；有计划（coach ≠ none）时 enum 限制为分给你的题且不含当前题 |
 | `speak` | `content` | 公开广播。编程题作者对已 sample-AC 的版本 speak，同时被记为 "local run report / 请求 review" |
-| `direct_message` | `recipients[], content` | 私聊一个或多个队友（v4 由 `recipient` 改为列表，替代旧栈 `message_group`）；只在 strategic 且 team_size>1 时出现，元素 enum 限定为其他队友 |
+| `direct_message` | `recipients[], content` | 私聊一个或多个队友（v4 由 `recipient` 改为列表，替代旧栈 `message_group`）；只在 `private_channel` 开且 team_size>1 的 baseline（centralized、两个 OTC）出现，元素 enum 限定为其他队友 |
 | `work` | `content` | 记录一个 **不可变 answer version**（答题卡的某题草稿）；编程 reviewed 模式下降级为"分析笔记"，不改源代码。v4：内容与该题**任一历史版本**相同时不建版本，回一条私有 `work_duplicate`（谁在第几轮已记录、还有哪些题空着） |
-| `request_review` | `content, reviewer?` | 发 review 请求；vanilla 没有；strategic 编程题也没有（用 speak 代替） |
-| `review_answer` | `problem_id, version_hash, decision(approve/reject), content` | 独立评审某个精确版本；不能评自己写的；vanilla 没有；strategic 下 enum 限定为路由给你的待审版本 |
+| `request_review` | `content, reviewer?` | 发 review 请求；只有 `review_workflow` 开的 baseline（两个 OTC）有；编程题也没有（用 speak 代替） |
+| `review_answer` | `problem_id, version_hash, decision(approve/reject), content` | 独立评审某个精确版本；不能评自己写的；只有两个 OTC 有；enum 限定为路由给你的待审版本 |
 | `submit` | `answer` 或无参 | 非编程提交。answer-sheet 竞赛变为无参数：一次性交整张卡并结束比赛 |
 | `skip_problem` | `reason?` | 离开当前题（会触发 problem digest） |
-| `finish_contest` | `reason?` | 两个 variant 都只在所有题都有有效提交时才出现（v4 之前 vanilla 暴露但 handler 必拒）；answer-sheet 竞赛永远隐藏 |
+| `finish_contest` | `reason?` | 所有 baseline 都只在所有题都有有效提交时才出现（v4 之前 vanilla 暴露但 handler 必拒）；answer-sheet 竞赛永远隐藏；centralized 下只有 leader 有 |
 | `rest` | `reason?` | 跳过本回合 |
+| `assign_problem` | `agent, problem_ids[], reason?` | **仅 centralized 的 leader**：替换某队友的强制 work 列表（公开事件，resume 重放）；`LEADER_ACTION_NAMES` |
 
-**桌面（desk）action**（同属 common，两个 variant 都有，不受 Coach 分配限制；`DESK_ACTION_NAMES`）：
+**桌面（desk）action**（同属 common，不受 Coach 分配限制；`DESK_ACTION_NAMES` = `DESK_READONLY_ACTION_NAMES`{inspect, triage} ∪ `MEMORY_ACTION_NAMES`{remember, recall, share_note}。哪个 baseline 有哪个 bundle 见 §2.0：no-coach 两个都没有，centralized / open_table_coach 只有只读两个，open_table_coach_memory 五个全有）：
 
 | action | 参数 | 来源 | 干什么 |
 |---|---|---|---|
@@ -155,7 +175,7 @@ LiveOIBench 不在 `data/` 里，是外挂目录，由 `src/liveoibench_adapter.
 | research | `web_search(query)` | Fyziklani、MCM/ICM、IEO、Jessup、IYPT |
 | physical | `read_lab_equipment`、`read_star_chart` | 只在 benchmark 显式声明 capability 且有 handler 时才出现 |
 
-ARML / HMMT / IOL / WSC：没有任何 task tool，只有 common 十五个。
+ARML / HMMT / IOL / WSC：没有任何 task tool，只有 common 十六个（再按 baseline 裁掉不属于它的 bundle）。
 
 没搬的：`list_problems`（每回合已注入 `TASK STATUS`，v4 只补了 `versions/priority/hopeless/triaged_by` 列）、`claim_problem/release_problem`（OTC 有 Coach 分配 + runtime 强制；给 vanilla 加 claim 等于给基线加策略）、旧 `verify_problem`（`review_answer` 绑 `version_hash` 更强）、`check_budget`（`BUDGET` 已注入，v4 补 `blank_tasks`）、deliberation 五件套。
 
@@ -163,10 +183,12 @@ ARML / HMMT / IOL / WSC：没有任何 task tool，只有 common 十五个。
 
 注册表给的是上限；每次调用前 runner 再按状态裁：
 
-- 两个 variant：`finish_contest` 在任一题没有有效提交时隐藏；桌面 action 的 `problem_id` enum 填成本场全部题号。
-- vanilla：删 `request_review`、`review_answer`。
+- 先按 baseline 开关剔除不属于它的 bundle（`_trim_to_baseline`：memory / desk / direct_message / assign_problem）。
+- 所有 baseline：`finish_contest` 在任一题没有有效提交时隐藏；桌面 action 的 `problem_id` enum 填成本场全部题号。
+- `review_required` 关（no-coach、centralized）：删 `request_review`、`review_answer`。
+- centralized：worker 删 `submit` / `submit_code` / `finish_contest`；leader 的 `assign_problem` 的 `agent` enum = 其他座位、`problem_ids` 元素 enum = 全部题号；编程题 leader 的 `submit_code` 变无参。
 - answer-sheet 竞赛：删 `finish_contest`；任一必答题没草稿时删 `submit`；strategic 还要 final review 完成才给 `submit`；一旦条件满足，**只剩 `submit`**（避免在最后一题上反复重写；桌面 action 此时也没有）。
-- strategic：`select_problem` 只能选 Coach 分配内的其他题；active task 不在你的 work 分配里时，`work` / `skip_problem` / `submit_code` 全隐藏，只留 common 的沟通类 + 桌面；active 已被独立 approve 后隐藏 `work`。
+- 有计划的 baseline（centralized、两个 OTC；下文 "strategic" 均指此）：`select_problem` 只能选分配内的其他题；active task 不在你的 work 分配里时，`work` / `skip_problem` / `submit_code` 全隐藏，只留 common 的沟通类 + 桌面；active 已被独立 approve 后隐藏 `work`。
 - strategic 编程（reviewed）：`work` 描述改为"只记笔记"；`submit_code` 只在"最新版本有 sample-AC 证据 **且** 有非作者 review（approve 或 reject 都算）且该版本没提交过"时出现，且变为**无参数**，提交的是冻结源码；`request_review` 删除；连续两次无产出动作（桌面 action 也算无产出）后，**只剩 `execute_code`**（source-required 门）。
 
 ### 3.3 Function call 的三种传输（`--action-calling`）
@@ -185,7 +207,7 @@ ARML / HMMT / IOL / WSC：没有任何 task tool，只有 common 十五个。
 
 1. 外层 `for turn`：消耗 1 turn + 模拟分钟数（250 分钟标准钟，`minutes_per_turn` 由官方时长和 50 turn 反推）。
 2. 内层按固定座次 `Agent_1..N`（`--start-seat` 只改首发，不逐轮轮转）。
-3. strategic：`_scheduled_agent_task` 把共享游标移到该 agent 的目标（§5.2）。
+3. 有计划的 baseline：`_scheduled_agent_task` 把共享游标移到该 agent 的目标（§5.2）；centralized 下 leader 永远排第一位。
 4. `_actions_for_agent` 算合法 function 集。
 5. 预扣 1 次 API call → 调模型。超 token 余额则扣完余额后不执行动作。
 6. **只执行第一个 function call**，多余的记 `extra_function_calls_ignored`。
@@ -334,7 +356,9 @@ Coach 用的模型和 contestants 相同（`run_competition_batch.py:1342-1355` 
 | shared active | 全队一个游标（§5.2） |
 | staged / forced pipeline | 编程四步 + answer-sheet 的 draft→review→final review→submit 强制阶段，不是独立 variant |
 | protocol v3 | 9/6 把 vanilla 和 OTC review 工作流拆开的那次修订（§6.3） |
-| protocol v4 / desk actions | 9/9 接入 `inspect_problem` / `triage_problem` / `remember` / `recall` / `share_note`、多收件人 DM、`work` 重复反馈（§3.1）；结果记 `protocol_version=contest_session_v4`、`action_set_version=2` |
+| protocol v4 / desk actions | 9/9 接入 `inspect_problem` / `triage_problem` / `remember` / `recall` / `share_note`、多收件人 DM、`work` 重复反馈（§3.1）；结果记 `protocol_version=contest_session_v4` |
+| 五个 baseline / `BaselineFeatures` | 9/9 下午把 `vanilla|strategic` 二元变量拆成 9 个开关 + 5 个预设（§2.0）；`action_set_version=3`（加 `assign_problem`） |
+| leader / `assign_problem` | `centralized` 预设里的 Agent_1：出计划、每轮先行、唯一提交、可现场改派（§2.0） |
 | programming_workflow_v2/v3/v4 | 编程流水线三次修订（§3.5） |
 
 ### 5.5 与旧 `--schema open_table_coach` 的区别
@@ -347,13 +371,14 @@ Coach 用的模型和 contestants 相同（`run_competition_batch.py:1342-1355` 
 
 当前栈所有 contestant 用同一 base prompt：`You are {agent}, one contestant in a {N}-agent team. You decide which provided function best advances the contest. Choose exactly one function and call it once.`（`contest_runner.py:885-909`）。没有代数/几何/coder/scribe 之类固定角色。**差异化来自三处**：Coach 分给谁哪些题、谁被路由去审谁的版本、当前回合动态裁剪后剩下哪些 function。
 
-规则卡（`data/rules/<comp>/collaboration.json`）里 ARML Local 和 ICPC 都故意定义了对等的 `contestant` 角色，并写明"临时专长应保持动态"。旧栈的 `centralized` 才有 `Group_Leader`；规则卡的 fallback 角色（captain/primary solver/verifier）只在旧栈 `--rules-mode enforced` 下注入。
+规则卡（`data/rules/<comp>/collaboration.json`）里 ARML Local 和 ICPC 都故意定义了对等的 `contestant` 角色，并写明"临时专长应保持动态"。当前栈唯一的固定角色是 `centralized` 预设里的 leader（`Agent_1`，见 §2.0）；旧栈的 `centralized` 用 `Group_Leader`；规则卡的 fallback 角色（captain/primary solver/verifier）只在旧栈 `--rules-mode enforced` 下注入。
 
-system prompt 按 variant 和 family 拼接（`contest_runner.py:910-1028`）：
+system prompt 按开关和 family 拼接（`_system_prompt`）：
 
-- 两个 variant：base 后面有一段 `DESK TOOLS`（v4）：说明 `inspect_problem` 不动游标、`remember` 是笔记 / `work` 才是候选答案、`triage_problem` 影响调度、hopeless 仍会 deadline 提交、桌面动作也消耗回合。
-- vanilla：base + DESK TOOLS（+ 规则卡文字）。就这些。
-- strategic：base + DESK TOOLS + `PRE-CONTEST COACH OPERATING PRINCIPLE`（跟随 Coach 分配；active task 是共享游标不是锁；不要覆盖已审过的好版本；私事用 direct_message、公事用 speak；`work` 只放实质候选答案，不放 TODO/状态）+ family 段（`ANSWER-SHEET COACH PROTOCOL` / `MANDATORY PROGRAMMING WORKFLOW` / `MATHEMATICS WORKFLOW` / `SHORT-ANSWER WORKFLOW` / `PUZZLE WORKFLOW` / general）+ `PRE-CONTEST COACH BRIEF` 全文 + 规则卡。
+- 有桌面 action 的 baseline：base 后面有一段 `DESK TOOLS`：说明 `inspect_problem` 不动游标、`remember` 是笔记 / `work` 才是候选答案、`triage_problem` 影响调度、hopeless 仍会 deadline 提交、桌面动作也消耗回合。
+- `coach == none`（single_agent / decentralized）：base（+ 规则卡文字）。就这些。
+- `coach == precontest`（两个 OTC）：base + DESK TOOLS + `PRE-CONTEST COACH OPERATING PRINCIPLE`（跟随 Coach 分配；active task 是共享游标不是锁；不要覆盖已审过的好版本；私事用 direct_message、公事用 speak；`work` 只放实质候选答案）+ review 段（`review_required` 时）+ family 段（`ANSWER-SHEET COACH PROTOCOL` / `MANDATORY PROGRAMMING WORKFLOW` / `MATHEMATICS WORKFLOW` / `SHORT-ANSWER WORKFLOW` / `PUZZLE WORKFLOW` / general）+ `PRE-CONTEST COACH BRIEF` 全文 + 规则卡。
+- `coach == leader`（centralized）：base + DESK TOOLS + `LEADER PROTOCOL`（leader 版：计划被强制执行、可 `assign_problem`、只有你能提交；worker 版：只做自己列表里的题、用 speak 报告、用 direct_message 找 leader、你不能提交）+ 无 review 的 family 段（`ANSWER-SHEET PROTOCOL` / `PROGRAMMING WORKFLOW`）+ `OPENING LEADER PLAN` 全文 + 规则卡。
 
 ### 6.2 分工怎么落地
 
@@ -363,23 +388,24 @@ system prompt 按 variant 和 family 拼接（`contest_runner.py:910-1028`）：
 - **最终整合**：无投票、无 Coach 终裁。answer-sheet：所有必答题有草稿 + 普通 review + final review → 一次无参 `submit`。编程：每题各自 `submit_code()` 冻结源码。deadline 兜底见 §5.2。
 - **卡住怎么办**：stall 3 轮切题；3 次官方非 AC 冷却；2 次 reject 进 rescue 放开分配；编程 2 次无产出动作后只剩 `execute_code`。
 
-### 6.3 Vanilla 到底有什么、没什么（protocol v4 之后）
+### 6.3 五个 baseline 各自有什么、没什么
 
-| | vanilla_team | strategic_team (OTC) |
-|---|---|---|
-| Coach / 私有分配 | 无 | 有 |
-| 可见 actions | common（去掉 `request_review`、`review_answer`）+ 桌面五个 + 竞赛 pack | 全部，按状态动态裁剪 |
-| 桌面 action（`inspect_problem` / `triage_problem` / `remember` / `recall` / `share_note`） | 有（v4 起；这改变了基线定义，比较新旧结果要看 `protocol_version`） | 有，不受 Coach 分配限制 |
-| 每回合 | 每人 1 次调用、1 个公开 action | 同（Coach 调用在循环外） |
-| memory 视图 | 最后 12 条可见事件（含自己的 note） | 6000 字符 strategic projection（含 recent_notes）+ personal coach memory + pinned source |
-| `direct_message` | 无 | 有，可多收件人 |
-| review / 不可变版本 | 有版本（`work` 仍建 version），无 review；与任一历史版本相同的 `work` 不建版本并回私有 `work_duplicate` | 版本 + review + final review；重复 `work` 同样反馈 |
-| 游标移动 | `work` 后自动跳到第一个未看过的题（按 priority 排序）；stall guard（计 `baseline_mechanical_switches`） | scheduler 按分配 + priority + stall + cooldown |
-| 提交 | 所有必答题有草稿后只剩 `submit` | final review 完成后只剩 `submit` |
-| deadline 收集 | 有 | 有 |
-| 判分、预算、规则、Docker、远程 judge | 完全相同 | 完全相同 |
+开关表见 §2.0；这里按行为对照：
+
+| | single_agent / decentralized | centralized | open_table_coach | open_table_coach_memory |
+|---|---|---|---|---|
+| 计划 / 私有分配 | 无 | Agent_1 开场出计划，赛中 `assign_problem` 改派；runtime 强制 | Pre_Contest_Coach 一次性计划；runtime 强制 | 同左 |
+| 可见 actions | common 去掉 `request_review`/`review_answer`/桌面/DM + 竞赛 pack | + `inspect_problem`/`triage_problem`/`direct_message`；leader 多 `assign_problem`，worker 无 `submit`/`submit_code`/`finish_contest` | + 桌面只读 + DM + review 两个 | + `remember`/`recall`/`share_note` |
+| 每回合 | 每人 1 次调用、1 个公开 action | 同；leader 先行 | 同（Coach 调用在循环外） | 同 |
+| memory 视图 | 最后 12 条可见事件 | 6000 字符 projection + personal memory | 同 + pinned source | 同 + recent_notes |
+| review / 不可变版本 | 有版本无 review；重复 `work` 回 `work_duplicate` | 同左 | 版本 + review + final review | 同 |
+| 游标移动 | `work` 后自动跳下一道空题；stall guard（计 `baseline_mechanical_switches`） | scheduler 按分配 + priority + stall + cooldown | 同 | 同 |
+| 提交 | 所有必答题有草稿后只剩 `submit` | 同，但只有 leader 看到 `submit`；编程题 leader `submit_code` 无参 | final review 完成后只剩 `submit`；编程题走四步 | 同 |
+| deadline 收集 / 判分 / 预算 / 规则 / Docker / 远程 judge | 完全相同 | 完全相同 | 完全相同 | 完全相同 |
 
 预算是**相同上限**而非相同消耗：OTC 的 Coach 和 review 调用都吃共享预算。实测 OTC 输出 token 约为 vanilla 的 3×（ICPC 2012 v4 配对），API 调用约 10×（ARML Local 五年配对）。
+
+历史口径：`arml_all_protocol_v3_*`、`icpc_all_full_pairs_20260909` 是 v3 的 `vanilla_team` / `strategic_team`，对应今天的 `decentralized` / `open_table_coach`，但 OTC 那一侧多了 `inspect_problem` / `triage_problem`，严格比较要用新目录重跑。
 
 ## 7. 判分与产物
 
