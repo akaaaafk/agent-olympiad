@@ -421,6 +421,15 @@ def _validate_emulated_tool_call(
         enum = field.get("enum")
         if isinstance(enum, list) and enum and value not in enum:
             return f"argument {name!r} must be one of {enum}"
+        items = field.get("items")
+        if field.get("type") == "array" and isinstance(items, dict):
+            if not value:
+                return f"argument {name!r} must contain at least one item"
+            item_enum = items.get("enum")
+            if isinstance(item_enum, list) and item_enum and any(
+                item not in item_enum for item in value
+            ):
+                return f"argument {name!r} items must be one of {item_enum}"
     return None
 
 

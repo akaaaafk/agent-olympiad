@@ -35,7 +35,8 @@ from collaboration import CollabConfig, SCHEMAS, run_collaboration
 from contest_adapters import EnvironmentTaskExecutor, grade_contest_result
 from contest_budget import resolve_contest_budget
 from contest_manifest import load_contest_manifest
-from contest_runner import ContestRunConfig
+from contest_runner import PROTOCOL_VERSION, ContestRunConfig
+from tool_registry import ACTION_SET_VERSION
 from contest_rules import get_contest_rules
 from env import OlympiadEnvironment, ProblemNotFoundError
 from evaluation.collaboration_score import (
@@ -1296,6 +1297,15 @@ def main() -> None:
         memory_checkpoint = None
         if args.resume and checkpoint_path.is_file():
             restored = json.loads(checkpoint_path.read_text(encoding="utf-8"))
+            restored_protocol = restored.get("protocol_version")
+            if restored_protocol != PROTOCOL_VERSION:
+                # Action surface and diagnostics changed; mixing protocols inside
+                # one session would make the result uninterpretable.
+                raise SystemExit(
+                    f"Cannot resume {checkpoint_path}: checkpoint protocol "
+                    f"{restored_protocol or 'unversioned (<= contest_session_v3)'} "
+                    f"does not match {PROTOCOL_VERSION}. Start a fresh run."
+                )
             session_checkpoint = restored.get("session")
             memory_checkpoint = restored.get("memory")
 
@@ -1305,7 +1315,12 @@ def main() -> None:
         ) -> None:
             _write_json_atomic(
                 checkpoint_path,
-                {"session": session_state, "memory": memory_state},
+                {
+                    "protocol_version": PROTOCOL_VERSION,
+                    "action_set_version": ACTION_SET_VERSION,
+                    "session": session_state,
+                    "memory": memory_state,
+                },
             )
 
         run_config = ContestRunConfig(

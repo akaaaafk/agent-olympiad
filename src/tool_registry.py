@@ -25,12 +25,21 @@ class ArgumentSpec:
     description: str = ""
     required: bool = True
     enum: tuple[Any, ...] = ()
+    # Element type for ``array`` arguments. ``enum`` then constrains elements.
+    items: JsonType | None = None
 
     def to_schema(self) -> dict[str, Any]:
         schema: dict[str, Any] = {"type": self.type}
         if self.description:
             schema["description"] = self.description
-        if self.enum:
+        if self.type == "array":
+            items: dict[str, Any] = {"type": self.items or "string"}
+            if self.enum:
+                items["enum"] = list(self.enum)
+            # Non-emptiness is enforced by validate_action_payload rather than
+            # ``minItems`` so provider strict-schema support is never a question.
+            schema["items"] = items
+        elif self.enum:
             schema["enum"] = list(self.enum)
         return schema
 
@@ -119,9 +128,19 @@ _REASON = ArgumentSpec(
 _PROBLEM_ID = ArgumentSpec(
     "problem_id", description="Identifier of the problem to select."
 )
-_RECIPIENT = ArgumentSpec(
-    "recipient",
-    description="Exact teammate name that should privately receive the message.",
+_RECIPIENTS = ArgumentSpec(
+    "recipients",
+    type="array",
+    items="string",
+    description=(
+        "Exact teammate names that should privately receive the message; "
+        "one name for a point-to-point message, several for a sub-group."
+    ),
+)
+_OPTIONAL_PROBLEM_ID = ArgumentSpec(
+    "problem_id",
+    description="Problem identifier; defaults to the active problem.",
+    required=False,
 )
 
 
@@ -168,14 +187,94 @@ _SPECS = (
     _action("speak", "Broadcast a message to the team.", (_TEXT,)),
     _action(
         "direct_message",
-        "Send a private point-to-point message to one teammate.",
-        (_RECIPIENT, _TEXT),
+        "Send a private message to one teammate or a named sub-group of teammates.",
+        (_RECIPIENTS, _TEXT),
         visibility="private",
     ),
     _action(
         "work",
         "Record durable work for the team.",
         (_TEXT,),
+    ),
+    # Desk actions: read-only inspection, personal notes, and team triage.
+    # They are the contestant's desk, not contest-specific instruments, so
+    # every task family and both system variants receive them.
+    _action(
+        "inspect_problem",
+        (
+            "Read one problem's statement plus its complete answer-version, "
+            "review, and submission history without changing the team's "
+            "active problem. Self-verification context only; it never counts "
+            "as an independent review."
+        ),
+        (
+            _OPTIONAL_PROBLEM_ID,
+            ArgumentSpec(
+                "focus",
+                description="Optional aspect to re-check, such as edge cases.",
+                required=False,
+            ),
+        ),
+        visibility="private",
+    ),
+    _action(
+        "triage_problem",
+        (
+            "Set the team's working priority for one problem, or mark it "
+            "hopeless. Hopeless problems stay on the sheet and their latest "
+            "draft is still submitted at the deadline."
+        ),
+        (
+            _PROBLEM_ID,
+            ArgumentSpec(
+                "priority",
+                description="Team priority for this problem.",
+                enum=("high", "normal", "low", "hopeless"),
+            ),
+            _REASON,
+        ),
+        visibility="team",
+    ),
+    _action(
+        "remember",
+        (
+            "Store a private note that survives outside the visible transcript, "
+            "optionally tagged to one problem. Use work for candidate answers, "
+            "remember for intermediate results, dead ends, and reminders."
+        ),
+        (_TEXT, _OPTIONAL_PROBLEM_ID),
+        visibility="private",
+    ),
+    _action(
+        "recall",
+        (
+            "Search your own notes and notes teammates have shared, ranked by "
+            "problem tag, query match, and recency."
+        ),
+        (
+            ArgumentSpec(
+                "query",
+                description="Optional keywords to match.",
+                required=False,
+            ),
+            ArgumentSpec(
+                "problem_id",
+                description="Optional problem tag to prioritise.",
+                required=False,
+            ),
+        ),
+        visibility="private",
+    ),
+    _action(
+        "share_note",
+        "Publish one of your stored notes to the whole team.",
+        (
+            ArgumentSpec(
+                "note_id",
+                description="Event id of the note returned by remember or recall.",
+            ),
+        ),
+        visibility="team",
     ),
     _action(
         "request_review",
@@ -331,6 +430,15 @@ ACTION_REGISTRY: Mapping[str, ActionSpec] = MappingProxyType(
 COMMON_ACTION_NAMES = frozenset(
     name for name, spec in ACTION_REGISTRY.items() if spec.pack == "common"
 )
+# Read-only or personal bookkeeping actions that never mutate answers or
+# submissions. Contest runners keep these available whenever the agent may
+# act at all, regardless of coach assignment or workflow gates.
+DESK_ACTION_NAMES = frozenset(
+    {"inspect_problem", "triage_problem", "remember", "recall", "share_note"}
+)
+# Bumped whenever the canonical action surface changes shape; recorded in
+# contest results so mixed-version comparisons are visible.
+ACTION_SET_VERSION = 2
 PACK_ACTION_NAMES: Mapping[str, frozenset[str]] = MappingProxyType(
     {
         pack: frozenset(
@@ -688,6 +796,22 @@ def validate_action_payload(
             errors.append(
                 f"argument {name} must have JSON type {argument.type}"
             )
+        elif argument.type == "array":
+            if not value:
+                errors.append(f"argument {name} must contain at least one item")
+            element_type = _PYTHON_TYPES[argument.items or "string"]
+            for item in value:
+                if not isinstance(item, element_type):
+                    errors.append(
+                        f"argument {name} items must have JSON type "
+                        f"{argument.items or 'string'}"
+                    )
+                    break
+                if argument.enum and item not in argument.enum:
+                    errors.append(
+                        f"argument {name} items must be one of {list(argument.enum)!r}"
+                    )
+                    break
         elif argument.enum and value not in argument.enum:
             errors.append(
                 f"argument {name} must be one of {list(argument.enum)!r}"
@@ -802,7 +926,9 @@ def dispatch_environment_action(
 
 __all__ = [
     "ACTION_REGISTRY",
+    "ACTION_SET_VERSION",
     "COMMON_ACTION_NAMES",
+    "DESK_ACTION_NAMES",
     "PACK_ACTION_NAMES",
     "LEGACY_ACTION_ALIASES",
     "LEGACY_ENV_ACTIONS",

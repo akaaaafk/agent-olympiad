@@ -17,6 +17,9 @@ _FORBIDDEN_KINDS = {
     "judge_feedback",
     "oracle",
 }
+# Personal (``note``) and team-published (``note_shared``) bookkeeping events
+# written by the ``remember`` / ``share_note`` actions.
+_NOTE_KINDS = {"note", "note_shared"}
 _FORBIDDEN_KEYS = {
     "answer_key",
     "expected_output",
@@ -340,6 +343,7 @@ class ContestMemory:
         max_recent_digests: int = 4,
         max_procedural_lessons: int = 6,
         max_direct_messages: int = 8,
+        max_recent_notes: int = 4,
         max_chars: int = 8000,
     ) -> dict[str, Any]:
         """Build a bounded working-memory view, never the full archive."""
@@ -348,6 +352,7 @@ class ContestMemory:
             max_recent_digests,
             max_procedural_lessons,
             max_direct_messages,
+            max_recent_notes,
         )
         if any(limit < 0 for limit in limits) or max_chars < 256:
             raise ValueError("Projection limits must be non-negative; max_chars >= 256.")
@@ -396,7 +401,7 @@ class ContestMemory:
                 "task_id": event.task_id,
                 "turn": event.turn,
                 "actor": event.actor,
-                "recipient": event.recipients[0] if event.recipients else None,
+                "recipients": list(event.recipients),
                 "payload": event.payload,
             }
             for event in visible
@@ -407,6 +412,15 @@ class ContestMemory:
             for digest in self._digests
             if digest.created_by == viewer and digest.task_id != current_task_id
         ][-max_recent_digests:] if max_recent_digests else []
+        # Notes on the current task already appear in current_task_events;
+        # recent_notes carries the viewer's notes from elsewhere so cross-task
+        # reminders survive without a recall call.
+        current_ids = {row["event_id"] for row in current}
+        notes = [
+            self._note_row(event)
+            for event in visible
+            if self._is_note(event) and event.event_id not in current_ids
+        ][-max_recent_notes:] if max_recent_notes else []
         projection = {
             "scope": dict(self.scope),
             "contest_capsule": _json_copy(capsule),
@@ -414,11 +428,78 @@ class ContestMemory:
             "current_task_id": current_task_id,
             "current_task_events": current,
             "recent_digests": digests,
+            "recent_notes": notes,
             "procedural_lessons": lessons,
             "direct_messages": direct_messages,
         }
         self._shrink_to_budget(projection, max_chars)
         return projection
+
+    @staticmethod
+    def _is_note(event: ContestEvent) -> bool:
+        """True for ``remember`` / ``share_note`` events (dict payload with content)."""
+        return (
+            event.kind in _NOTE_KINDS
+            and isinstance(event.payload, dict)
+            and bool(str(event.payload.get("content") or "").strip())
+        )
+
+    @staticmethod
+    def _note_row(event: ContestEvent) -> dict[str, Any]:
+        payload = event.payload if isinstance(event.payload, dict) else {}
+        return {
+            "note_id": event.event_id,
+            "kind": event.kind,
+            "task_id": event.task_id,
+            "turn": event.turn,
+            "author": str(payload.get("author") or event.actor),
+            "shared": event.kind == "note_shared",
+            "content": str(payload.get("content") or ""),
+        }
+
+    def recall(
+        self,
+        viewer: str,
+        *,
+        query: str = "",
+        problem_id: str | None = None,
+        groups: Iterable[str] = (),
+        top_k: int | None = 8,
+    ) -> list[dict[str, Any]]:
+        """Rank the viewer's own notes and team-shared notes.
+
+        Ordering mirrors the legacy ``MemoryStore.recall``: exact problem tag
+        first, then query-term hits, then recency; identical contents are
+        collapsed so a shared copy does not shadow its private original.
+        """
+        viewer = self._required_id("viewer", viewer)
+        terms = {term.lower() for term in str(query or "").split() if len(term) > 1}
+        wanted = str(problem_id or "").strip().lower()
+        candidates = [
+            self._note_row(event)
+            for event in self.view(viewer, groups=groups)
+            if self._is_note(event)
+        ]
+        candidates.sort(
+            key=lambda row: (
+                bool(wanted) and str(row["task_id"] or "").lower() == wanted,
+                sum(term in row["content"].lower() for term in terms),
+                row["turn"],
+                row["note_id"],
+            ),
+            reverse=True,
+        )
+        selected: list[dict[str, Any]] = []
+        seen: set[str] = set()
+        for row in candidates:
+            key = row["content"].strip()
+            if key in seen:
+                continue
+            seen.add(key)
+            selected.append(row)
+            if top_k is not None and len(selected) >= max(1, int(top_k)):
+                break
+        return selected
 
     @staticmethod
     def _shrink_to_budget(projection: dict[str, Any], max_chars: int) -> None:
@@ -428,6 +509,7 @@ class ContestMemory:
         lists = (
             projection["current_task_events"],
             projection["recent_digests"],
+            projection["recent_notes"],
             projection["procedural_lessons"],
             projection["direct_messages"],
         )

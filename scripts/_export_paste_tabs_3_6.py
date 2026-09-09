@@ -75,6 +75,29 @@ def pct(a: float) -> str:
     return f"{a * 100:.2f}%"
 
 
+# contest_session_v4 desk-action diagnostics (blank for older sessions).
+DESK_COLUMNS = {
+    "protocol": None,
+    "inspect": "inspect_count",
+    "notes": "notes_recorded",
+    "notes_shared": "notes_shared",
+    "recalls": "recall_count",
+    "triage": "triage_changes",
+    "hopeless": "items_hopeless",
+    "repeat_drafts": "repeat_draft_attempts",
+}
+
+
+def desk_columns(d: dict) -> dict:
+    diagnostics = d.get("diagnostics") or {}
+    columns = {"protocol": d.get("protocol_version") or ""}
+    for column, key in DESK_COLUMNS.items():
+        if key is not None:
+            value = diagnostics.get(key)
+            columns[column] = "" if value is None else value
+    return columns
+
+
 def session_metrics(path: Path) -> dict:
     d = json.loads(path.read_text(encoding="utf-8"))
     grade = d.get("grade") or {}
@@ -138,6 +161,7 @@ def session_metrics(path: Path) -> dict:
         "turns_n": float(budget.get("turns_used") or 0),
         "api_n": float(budget.get("api_calls_used") or 0),
         "tok_n": float(budget.get("tokens_used") or 0),
+        **desk_columns(d),
     }
 
 
@@ -185,6 +209,7 @@ def load_summary_rows(
                 "turns_n": f(r.get("turns_used")),
                 "api_n": f(r.get("api_calls_used")),
                 "tok_n": 0.0,
+                **{column: "" for column in DESK_COLUMNS},
             }
         rows.append(
             {
@@ -204,6 +229,7 @@ def load_summary_rows(
                         "api_calls",
                         "tokens",
                         "sec",
+                        *DESK_COLUMNS,
                     ]
                 },
                 "_util": m["util"],
@@ -359,7 +385,7 @@ def main() -> None:
     header3 = [
         "Competition",
         "Description",
-        "N",
+        "sessions",
         "total_questions",
         "Acc",
         "CS",
@@ -424,6 +450,7 @@ def main() -> None:
         "api_calls",
         "tokens",
         "sec",
+        *DESK_COLUMNS,
     ]
     tab4 = [h4] + [[r.get(k, "") for k in h4] for r in otc_rows]
     write_tsv(out / "tab4_otc_per_session.tsv", tab4)

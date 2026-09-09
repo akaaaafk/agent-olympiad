@@ -85,6 +85,10 @@ class ContestBudgetState:
         self.penalty_minutes += minutes
 
 
+TaskPriority = Literal["high", "normal", "low", "hopeless"]
+PRIORITY_RANK: dict[str, int] = {"high": 0, "normal": 1, "low": 2, "hopeless": 3}
+
+
 @dataclass(frozen=True)
 class AnswerVersion:
     task_id: str
@@ -129,6 +133,33 @@ class TaskUnit:
     consecutive_non_ac: int = 0
     blocked_until_turn: int | None = None
     locked: bool = False
+    # Team triage set during the contest via ``triage_problem``. ``hopeless``
+    # only demotes scheduling; the latest draft is still collected at deadline.
+    priority: TaskPriority = "normal"
+    triage_reason: str = ""
+    triaged_by: str | None = None
+    triaged_turn: int | None = None
+
+    @property
+    def hopeless(self) -> bool:
+        return self.priority == "hopeless"
+
+    @property
+    def priority_rank(self) -> int:
+        return PRIORITY_RANK[self.priority]
+
+    def find_duplicate_answer(
+        self, content: str, *, part: str | None = None
+    ) -> AnswerVersion | None:
+        """Return the earliest version whose content already equals ``content``."""
+        return next(
+            (
+                version
+                for version in self.versions
+                if version.content == content and version.part == part
+            ),
+            None,
+        )
 
     @property
     def latest_valid_submission(self) -> SubmissionRecord | None:
@@ -255,6 +286,33 @@ class ContestSession:
         self._active_task_id = None
         self._append_event("task_skipped", task_id=task.task_id)
         return task
+
+    def set_triage(
+        self,
+        task_id: str,
+        priority: TaskPriority,
+        *,
+        reason: str = "",
+        actor: str | None = None,
+        turn: int | None = None,
+    ) -> tuple[TaskUnit, TaskPriority]:
+        """Record team triage for a task; returns the task and its previous priority."""
+        if priority not in PRIORITY_RANK:
+            raise ValueError(f"priority must be one of {list(PRIORITY_RANK)!r}")
+        task = self.task(task_id)
+        previous = task.priority
+        task.priority = priority
+        task.triage_reason = reason
+        task.triaged_by = actor
+        task.triaged_turn = turn
+        self._append_event(
+            "task_triaged",
+            task_id=task_id,
+            priority=priority,
+            previous_priority=previous,
+            actor=actor,
+        )
+        return task, previous
 
     def create_answer(
         self,
@@ -506,6 +564,10 @@ class ContestSession:
                     "consecutive_non_ac": task.consecutive_non_ac,
                     "blocked_until_turn": task.blocked_until_turn,
                     "locked": task.locked,
+                    "priority": task.priority,
+                    "triage_reason": task.triage_reason,
+                    "triaged_by": task.triaged_by,
+                    "triaged_turn": task.triaged_turn,
                 }
                 for task in self._tasks.values()
             ],
@@ -540,6 +602,10 @@ class ContestSession:
                 consecutive_non_ac=data["consecutive_non_ac"],
                 blocked_until_turn=data["blocked_until_turn"],
                 locked=data["locked"],
+                priority=data.get("priority", "normal"),
+                triage_reason=data.get("triage_reason", ""),
+                triaged_by=data.get("triaged_by"),
+                triaged_turn=data.get("triaged_turn"),
             )
             tasks.append(task)
         session = cls(

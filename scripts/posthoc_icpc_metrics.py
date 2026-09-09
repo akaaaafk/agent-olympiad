@@ -120,6 +120,7 @@ def main() -> int:
         )
         metrics = payload["metrics"]
         budget = payload["budget"]
+        diagnostics = payload.get("diagnostics") or {}
         rows.append(
             {
                 "model": args.model,
@@ -140,6 +141,15 @@ def main() -> int:
                 "sec": round(float(metrics["elapsed_seconds"]), 3),
                 "remote_attempts": remote_attempts,
                 "valid_remote_results": len(valid_results),
+                # contest_session_v4 desk-action counters; blank for older runs.
+                "protocol": payload.get("protocol_version") or "",
+                "inspect": diagnostics.get("inspect_count", ""),
+                "notes": diagnostics.get("notes_recorded", ""),
+                "notes_shared": diagnostics.get("notes_shared", ""),
+                "recalls": diagnostics.get("recall_count", ""),
+                "triage": diagnostics.get("triage_changes", ""),
+                "hopeless": diagnostics.get("items_hopeless", ""),
+                "repeat_drafts": diagnostics.get("repeat_draft_attempts", ""),
                 "artifact": str(run_dir.relative_to(REPO)).replace("\\", "/"),
             }
         )

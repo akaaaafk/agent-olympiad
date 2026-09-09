@@ -11,7 +11,9 @@ sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from tool_registry import (  # noqa: E402
     ACTION_REGISTRY,
+    ACTION_SET_VERSION,
     COMMON_ACTION_NAMES,
+    DESK_ACTION_NAMES,
     LEGACY_ACTION_ALIASES,
     ActionSpec,
     Resolution,
@@ -42,6 +44,11 @@ class ActionRegistryTests(unittest.TestCase):
                     "skip_problem",
                     "finish_contest",
                     "rest",
+                    "inspect_problem",
+                    "triage_problem",
+                    "remember",
+                    "recall",
+                    "share_note",
                 }
             ),
         )
@@ -49,7 +56,57 @@ class ActionRegistryTests(unittest.TestCase):
             {name for name, spec in ACTION_REGISTRY.items() if spec.pack == "common"},
             set(COMMON_ACTION_NAMES),
         )
+        self.assertTrue(DESK_ACTION_NAMES <= COMMON_ACTION_NAMES)
+        self.assertEqual(ACTION_SET_VERSION, 2)
         self.assertEqual(validate_registry(), ())
+
+    def test_desk_actions_are_read_only_or_personal(self) -> None:
+        for name in DESK_ACTION_NAMES:
+            spec = ACTION_REGISTRY[name]
+            self.assertFalse(spec.submission, name)
+            self.assertFalse(spec.evaluator, name)
+            self.assertFalse(spec.budget.terminal, name)
+        self.assertEqual(
+            ACTION_REGISTRY["triage_problem"].arguments[1].enum,
+            ("high", "normal", "low", "hopeless"),
+        )
+        self.assertFalse(ACTION_REGISTRY["inspect_problem"].arguments[0].required)
+        self.assertFalse(ACTION_REGISTRY["recall"].arguments[0].required)
+
+    def test_direct_message_takes_a_recipient_list(self) -> None:
+        spec = ACTION_REGISTRY["direct_message"]
+        schema = dict(spec.argument_schema)
+        self.assertEqual(schema["properties"]["recipients"]["type"], "array")
+        self.assertEqual(schema["properties"]["recipients"]["items"], {"type": "string"})
+        self.assertNotIn("minItems", schema["properties"]["recipients"])
+        self.assertEqual(
+            validate_action_payload(
+                spec, {"recipients": ["Agent_2", "Agent_3"], "content": "hi"}
+            ),
+            (),
+        )
+        self.assertTrue(
+            validate_action_payload(spec, {"recipients": [], "content": "hi"})
+        )
+        self.assertTrue(
+            validate_action_payload(spec, {"recipients": "Agent_2", "content": "hi"})
+        )
+        restricted = dataclasses.replace(
+            spec,
+            arguments=(
+                dataclasses.replace(spec.arguments[0], enum=("Agent_2",)),
+                spec.arguments[1],
+            ),
+        )
+        self.assertTrue(
+            validate_action_payload(
+                restricted, {"recipients": ["Agent_9"], "content": "hi"}
+            )
+        )
+        self.assertEqual(
+            dict(restricted.argument_schema)["properties"]["recipients"]["items"],
+            {"type": "string", "enum": ["Agent_2"]},
+        )
 
     def test_specs_and_registry_are_immutable(self) -> None:
         spec = ACTION_REGISTRY["submit"]
@@ -192,7 +249,7 @@ class ActionRegistryTests(unittest.TestCase):
         )
         self.assertEqual(
             direct_message["parameters"]["required"],
-            ["recipient", "content"],
+            ["recipients", "content"],
         )
 
         self.assertEqual(

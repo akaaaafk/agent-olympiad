@@ -16,6 +16,7 @@ from contest_runner import (  # noqa: E402
     _apply_action,
     _actions_for_agent,
     _scheduled_agent_task,
+    _task_rows,
     run_contest,
 )
 from contest_session import (  # noqa: E402
@@ -81,7 +82,7 @@ class ContestRunnerTests(unittest.TestCase):
         _apply_action(
             action="direct_message",
             arguments={
-                "recipient": "Agent_2",
+                "recipients": ["Agent_2"],
                 "content": "Please review the overflow case.",
             },
             agent="Agent_1",
@@ -101,6 +102,45 @@ class ContestRunnerTests(unittest.TestCase):
         self.assertEqual(recipient[0].recipients, ("Agent_2",))
         self.assertEqual(outsider, [])
 
+    def test_direct_message_reaches_every_named_recipient_only(self) -> None:
+        manifest = ContestManifest("icpc", "session", (task("q1"),))
+        session = ContestSession(
+            [TaskUnit("q1")],
+            ContestBudgetState(max_turns=10),
+        )
+        session.select_task("q1")
+        memory = ContestMemory(run_id="run", session_id="session", competition_id="icpc")
+        config = ContestRunConfig(system_variant="strategic", team_size=4, max_turns=10)
+        apply = lambda arguments: _apply_action(  # noqa: E731
+            action="direct_message",
+            arguments=arguments,
+            agent="Agent_1",
+            manifest=manifest,
+            session=session,
+            memory=memory,
+            config=config,
+            strategic_policy=StrategicPolicy(),
+            task_action_executor=lambda _task, _action, _args: {},
+        )
+
+        apply({"recipients": ["Agent_2", "Agent_4", "Agent_2"], "content": "sub-group"})
+
+        for viewer in ("Agent_1", "Agent_2", "Agent_4"):
+            inbox = memory.view(viewer)
+            self.assertEqual([event.kind for event in inbox], ["direct_message"], viewer)
+            self.assertEqual(inbox[0].recipients, ("Agent_2", "Agent_4"))
+            self.assertEqual(inbox[0].payload["recipients"], ["Agent_2", "Agent_4"])
+        self.assertEqual(memory.view("Agent_3"), [])
+        projection = memory.strategic_projection(viewer="Agent_4", current_task_id="q1")
+        self.assertEqual(projection["direct_messages"][0]["recipients"], ["Agent_2", "Agent_4"])
+
+        with self.assertRaises(ValueError):
+            apply({"recipients": ["Agent_1"], "content": "to myself"})
+        with self.assertRaises(ValueError):
+            apply({"recipients": ["Agent_9"], "content": "unknown"})
+        with self.assertRaises(ValueError):
+            apply({"recipients": [], "content": "nobody"})
+
     def test_direct_message_is_strategic_and_excludes_sender(self) -> None:
         session = ContestSession(
             [TaskUnit("q1")],
@@ -119,10 +159,15 @@ class ContestRunnerTests(unittest.TestCase):
             "Agent_2",
         )
         direct = next(spec for spec in strategic if spec.name == "direct_message")
-        recipient = next(
-            argument for argument in direct.arguments if argument.name == "recipient"
+        recipients = next(
+            argument for argument in direct.arguments if argument.name == "recipients"
         )
-        self.assertEqual(recipient.enum, ("Agent_1", "Agent_3"))
+        self.assertEqual(recipients.type, "array")
+        self.assertEqual(recipients.enum, ("Agent_1", "Agent_3"))
+        self.assertEqual(
+            dict(direct.argument_schema)["properties"]["recipients"]["items"]["enum"],
+            ["Agent_1", "Agent_3"],
+        )
 
         vanilla = _actions_for_agent(
             actions,
@@ -340,7 +385,9 @@ class ContestRunnerTests(unittest.TestCase):
             action_request_fn=request_fn,
         )
 
-        expected = set(result["action_names"])
+        # finish_contest is the only gated common action: its handler rejects it
+        # until every task holds a valid submission, so it stays hidden here.
+        expected = set(result["action_names"]) - {"finish_contest"}
         self.assertTrue(
             all({tool["name"] for tool in request.tools} == expected for request in requests)
         )
@@ -1117,9 +1164,13 @@ class ContestRunnerTests(unittest.TestCase):
             for event in result["memory"]["events"]
             if event["kind"] == "action_error"
         ]
-        self.assertIn(
-            "cannot finish contest while 2 tasks lack valid submissions",
-            errors,
+        # The action is hidden (not merely rejected) while tasks remain, for
+        # both variants; the turn is still lost but no finish event is written.
+        self.assertEqual(len(errors), 1)
+        self.assertIn("finish_contest", errors[0])
+        self.assertNotIn(
+            "finish_contest",
+            [event["kind"] for event in result["memory"]["events"]],
         )
 
     def test_strategic_code_review_binds_local_evidence_before_remote_submit(self) -> None:
@@ -1507,14 +1558,14 @@ class ContestRunnerTests(unittest.TestCase):
         # Turn 4, Agent_1: guidance offers submission as a valid path after a reject.
         self.assertIn("submit_code", prompts[6])
 
-    def test_verify_returns_code_version_and_visible_task_history_without_approval(self) -> None:
-        manifest = ContestManifest("icpc", "icpc", (task("a", programming=True),))
+    def test_inspect_problem_returns_history_without_approval_or_cursor_move(self) -> None:
+        manifest = ContestManifest("icpc", "icpc", (task("a", programming=True), task("b", programming=True)))
         responses = iter(
             [
                 '{"action":"select_problem","arguments":{"problem_id":"a"}}',
                 '{"action":"work","arguments":{"content":"print(1)"}}',
-                '{"action":"verify","arguments":{"focus":"edge cases"}}',
-                '{"action":"finish_contest","arguments":{"reason":"checked"}}',
+                '{"action":"inspect_problem","arguments":{"focus":"edge cases"}}',
+                '{"action":"inspect_problem","arguments":{"problem_id":"b"}}',
             ]
         )
 
@@ -1529,19 +1580,262 @@ class ContestRunnerTests(unittest.TestCase):
             ),
         )
 
-        verify_result = next(
+        self.assertNotIn("verify", result["action_names"])
+        self.assertIn("inspect_problem", result["action_names"])
+        inspections = [
             event
             for event in result["memory"]["events"]
-            if event["kind"] == "verify_result"
+            if event["kind"] == "inspect_problem_result"
+        ]
+        self.assertEqual([event["task_id"] for event in inspections], ["a", "b"])
+        own = inspections[0]["payload"]
+        self.assertEqual(own["focus"], "edge cases")
+        self.assertEqual(own["statement"], "Solve a")
+        self.assertEqual([v["content"] for v in own["versions"]], ["print(1)"])
+        self.assertFalse(own["independent_approval"])
+        self.assertEqual(inspections[1]["payload"]["versions"], [])
+        self.assertEqual(inspections[0]["visibility"], "private")
+        # Inspecting b never moved the shared cursor away from a.
+        self.assertEqual(result["active_task_id"], "a")
+        self.assertEqual(result["diagnostics"]["switch_count"], 0)
+        self.assertEqual(result["diagnostics"]["inspect_count"], 2)
+        self.assertEqual(result["session_checkpoint"]["tasks"][0]["reviews"], [])
+        self.assertEqual(result["protocol_version"], "contest_session_v4")
+        self.assertEqual(result["action_set_version"], 2)
+
+    def test_remember_recall_and_share_note_round_trip(self) -> None:
+        manifest = ContestManifest("quiz", "quiz", (task("q1"), task("q2")))
+        session = ContestSession(
+            [TaskUnit("q1", kind="non_programming"), TaskUnit("q2", kind="non_programming")],
+            ContestBudgetState(max_turns=10),
         )
-        self.assertEqual(verify_result["payload"]["latest_code"], "print(1)")
-        self.assertEqual(verify_result["payload"]["focus"], "edge cases")
-        self.assertEqual(len(verify_result["payload"]["version_history"]), 1)
-        self.assertTrue(verify_result["payload"]["visible_history"])
+        session.select_task("q1")
+        memory = ContestMemory(run_id="run", session_id="quiz", competition_id="quiz")
+        config = ContestRunConfig(system_variant="strategic", team_size=2, max_turns=10)
+
+        def apply(agent: str, action: str, arguments: dict) -> None:
+            _apply_action(
+                action=action,
+                arguments=arguments,
+                agent=agent,
+                manifest=manifest,
+                session=session,
+                memory=memory,
+                config=config,
+                strategic_policy=StrategicPolicy(),
+                task_action_executor=lambda _task, _action, _args: {},
+                work_task_ids={"q1"},
+            )
+
+        # Notes are desk actions: they ignore the coach's work assignment.
+        apply("Agent_1", "remember", {"content": "q2 looks like a telescoping sum", "problem_id": "q2"})
+        apply("Agent_1", "remember", {"content": "q1 parity argument fails at n=3"})
+        note_events = [event for event in memory.view("Agent_1") if event.kind == "note"]
+        self.assertEqual([event.task_id for event in note_events], ["q2", "q1"])
+        self.assertEqual(note_events[0].visibility, "private")
+        self.assertEqual(memory.view("Agent_2"), [])
+        self.assertEqual(session.active_task.task_id, "q1")
+        self.assertEqual(session.task("q1").versions, [])
+
+        apply("Agent_1", "recall", {"problem_id": "q2"})
+        recall_result = next(e for e in memory.view("Agent_1") if e.kind == "recall_result")
+        self.assertEqual(recall_result.payload["notes"][0]["content"], "q2 looks like a telescoping sum")
+        self.assertEqual(recall_result.payload["notes"][0]["note_id"], note_events[0].event_id)
+        self.assertEqual(len(recall_result.payload["notes"]), 2)
+
+        with self.assertRaises(ValueError):
+            apply("Agent_2", "share_note", {"note_id": note_events[0].event_id})
+        apply("Agent_1", "share_note", {"note_id": note_events[0].event_id})
+        shared = next(e for e in memory.view("Agent_2") if e.kind == "note_shared")
+        self.assertEqual(shared.visibility, "public")
+        self.assertEqual(shared.task_id, "q2")
+        self.assertEqual(shared.payload["source_event_id"], note_events[0].event_id)
+        self.assertEqual(shared.payload["author"], "Agent_1")
+        with self.assertRaises(ValueError):
+            apply("Agent_1", "share_note", {"note_id": note_events[0].event_id})
+
+        teammate = memory.recall("Agent_2", query="telescoping")
+        self.assertEqual([row["shared"] for row in teammate], [True])
+        projection = memory.strategic_projection(viewer="Agent_1", current_task_id="q1")
         self.assertEqual(
-            result["session_checkpoint"]["tasks"][0]["reviews"],
-            [],
+            {row["note_id"] for row in projection["recent_notes"]},
+            {note_events[0].event_id, shared.event_id},
         )
+
+    def test_triage_problem_reorders_scheduler_and_keeps_hopeless_on_sheet(self) -> None:
+        manifest = ContestManifest("quiz", "quiz", (task("a"), task("b"), task("c")))
+        session = ContestSession(
+            [TaskUnit(t, kind="non_programming") for t in ("a", "b", "c")],
+            ContestBudgetState(max_turns=10),
+        )
+        session.select_task("a")
+        memory = ContestMemory(run_id="run", session_id="quiz", competition_id="quiz")
+        config = ContestRunConfig(system_variant="strategic", team_size=2, max_turns=10)
+
+        def schedule() -> str | None:
+            scheduled = _scheduled_agent_task(
+                session,
+                agent="Agent_1",
+                work_task_ids=["a", "b", "c"],
+                review_task_ids=set(),
+                reported_version_hashes=set(),
+            )
+            return scheduled.task_id if scheduled else None
+
+        self.assertEqual(schedule(), "a")
+        _apply_action(
+            action="triage_problem",
+            arguments={"problem_id": "c", "priority": "high", "reason": "easy points"},
+            agent="Agent_2",
+            manifest=manifest,
+            session=session,
+            memory=memory,
+            config=config,
+            strategic_policy=StrategicPolicy(),
+            task_action_executor=lambda _task, _action, _args: {},
+            work_task_ids={"a"},  # triage is a desk action: assignment does not gate it
+        )
+        self.assertEqual(schedule(), "c")
+        self.assertEqual(session.active_task.task_id, "a")  # cursor untouched
+        triaged = next(e for e in memory.view("Agent_1") if e.kind == "task_triaged")
+        self.assertEqual(triaged.visibility, "public")
+        self.assertEqual(triaged.payload["previous_priority"], "normal")
+        self.assertEqual(session.task("c").triaged_by, "Agent_2")
+
+        _apply_action(
+            action="triage_problem",
+            arguments={"problem_id": "a", "priority": "hopeless"},
+            agent="Agent_1",
+            manifest=manifest,
+            session=session,
+            memory=memory,
+            config=config,
+            strategic_policy=StrategicPolicy(),
+            task_action_executor=lambda _task, _action, _args: {},
+        )
+        self.assertEqual(schedule(), "c")
+        for task_id in ("c", "b"):
+            session.select_task(task_id)
+            session.create_answer(f"draft {task_id}", author="Agent_2")
+        # a is hopeless, but still the only remaining blank task -> scheduled last, not dropped.
+        self.assertEqual(schedule(), "a")
+        rows = {row["task_id"]: row for row in _task_rows(session)}
+        self.assertTrue(rows["a"]["hopeless"])
+        self.assertEqual(rows["c"]["priority"], "high")
+        with self.assertRaises(ValueError):
+            _apply_action(
+                action="triage_problem",
+                arguments={"problem_id": "zz", "priority": "low"},
+                agent="Agent_1",
+                manifest=manifest,
+                session=session,
+                memory=memory,
+                config=config,
+                strategic_policy=StrategicPolicy(),
+                task_action_executor=lambda _task, _action, _args: {},
+            )
+
+        restored = ContestSession.from_checkpoint(session.checkpoint())
+        self.assertEqual(restored.task("a").priority, "hopeless")
+        self.assertEqual(restored.task("c").triage_reason, "easy points")
+
+    def test_hopeless_draft_is_still_collected_at_deadline(self) -> None:
+        manifest = ContestManifest("quiz", "quiz", (task("q1"), task("q2")))
+        responses = iter(
+            [
+                '{"action":"select_problem","arguments":{"problem_id":"q1"}}',
+                '{"action":"work","arguments":{"content":"guess 7"}}',
+                '{"action":"triage_problem","arguments":{"problem_id":"q1","priority":"hopeless"}}',
+            ]
+        )
+        result = run_contest(
+            manifest,
+            lambda _system, _user: next(responses),
+            ContestRunConfig(system_variant="vanilla", team_size=1, max_turns=3, max_api_calls=3),
+        )
+        self.assertEqual(result["submissions"]["q1"], "guess 7")
+        self.assertEqual(result["diagnostics"]["items_hopeless"], 1)
+        self.assertEqual(result["diagnostics"]["triage_changes"], 1)
+
+    def test_repeated_work_draft_gets_private_feedback_instead_of_silence(self) -> None:
+        manifest = ContestManifest("quiz", "quiz", (task("q1"), task("q2")))
+        responses = iter(
+            [
+                '{"action":"select_problem","arguments":{"problem_id":"q1"}}',
+                '{"action":"work","arguments":{"content":"first"}}',
+                '{"action":"work","arguments":{"content":"second"}}',
+                '{"action":"work","arguments":{"content":"first"}}',
+                '{"action":"rest","arguments":{}}',
+            ]
+        )
+        prompts: list[str] = []
+
+        def query(system: str, user: str) -> str:
+            prompts.append(user)
+            return next(responses)
+
+        result = run_contest(
+            manifest,
+            query,
+            ContestRunConfig(system_variant="vanilla", team_size=1, max_turns=5, max_api_calls=5),
+        )
+        versions = result["session_checkpoint"]["tasks"][0]["versions"]
+        self.assertEqual([v["content"] for v in versions], ["first", "second"])
+        duplicate = next(e for e in result["memory"]["events"] if e["kind"] == "work_duplicate")
+        self.assertEqual(duplicate["visibility"], "private")
+        self.assertEqual(duplicate["recipients"], ["Agent_1"])
+        self.assertEqual(duplicate["payload"]["version_hash"], versions[0]["version_hash"])
+        self.assertFalse(duplicate["payload"]["is_latest"])
+        self.assertEqual(duplicate["payload"]["blank_task_ids"], ["q2"])
+        self.assertEqual(duplicate["payload"]["recorded_turn"], 2)
+        self.assertEqual(result["diagnostics"]["repeat_draft_attempts"], 1)
+        # The feedback reaches the author's next prompt.
+        self.assertIn("work_duplicate", prompts[-1])
+        self.assertIn('"blank_tasks": ["q2"]', prompts[-1])
+
+    def test_desk_actions_are_available_to_both_variants_but_not_in_submit_only_phase(self) -> None:
+        session = ContestSession(
+            [TaskUnit("a", kind="non_programming"), TaskUnit("b", kind="non_programming")],
+            ContestBudgetState(max_turns=10),
+        )
+        session.select_task("a")
+        actions = frozenset(
+            spec for spec in ACTION_REGISTRY.values() if spec.pack == "common"
+        )
+        desk = {"inspect_problem", "triage_problem", "remember", "recall", "share_note"}
+
+        vanilla = _actions_for_agent(
+            actions, session, ContestRunConfig("vanilla", 2, 10), "Agent_1"
+        )
+        self.assertTrue(desk <= {spec.name for spec in vanilla})
+        # Off-assignment strategic agents keep the desk but lose work/skip.
+        strategic = _actions_for_agent(
+            actions,
+            session,
+            ContestRunConfig("strategic", 2, 10),
+            "Agent_1",
+            work_task_ids={"b"},
+            review_task_ids=set(),
+        )
+        names = {spec.name for spec in strategic}
+        self.assertTrue(desk <= names)
+        self.assertNotIn("work", names)
+        inspect = next(spec for spec in strategic if spec.name == "inspect_problem")
+        self.assertEqual(inspect.arguments[0].enum, ("a", "b"))
+
+        # Answer-sheet contests collapse to submit-only once the sheet is ready.
+        for t in ("a", "b"):
+            session.select_task(t)
+            session.create_answer("draft", author="Agent_2")
+        submit_only = _actions_for_agent(
+            actions,
+            session,
+            ContestRunConfig("vanilla", 2, 10),
+            "Agent_1",
+            answer_sheet_contest=True,
+            required_answer_task_ids={"a", "b"},
+        )
+        self.assertEqual({spec.name for spec in submit_only}, {"submit"})
 
     def test_sample_failure_blocks_evidence_and_reviewers_see_full_source(self) -> None:
         manifest = ContestManifest("icpc", "icpc", (task("a", programming=True),))

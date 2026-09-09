@@ -202,18 +202,22 @@ class ContestMemoryTests(unittest.TestCase):
         self.assertNotIn("old-history", rendered)
         self.assertLessEqual(len(rendered), 1600)
 
-    def test_direct_message_inbox_follows_recipient_across_tasks(self) -> None:
+    def test_direct_message_inbox_follows_recipients_across_tasks(self) -> None:
         message = self.append(
             actor="alice",
             visibility="private",
-            recipients=("bob",),
+            recipients=("bob", "dave"),
             kind="direct_message",
-            payload={"recipient": "bob", "content": "Review task-a first."},
+            payload={"recipients": ["bob", "dave"], "content": "Review task-a first."},
             task_id="task-a",
         )
 
         bob = self.memory.strategic_projection(
             viewer="bob",
+            current_task_id="task-b",
+        )
+        dave = self.memory.strategic_projection(
+            viewer="dave",
             current_task_id="task-b",
         )
         carol = self.memory.strategic_projection(
@@ -226,8 +230,70 @@ class ContestMemoryTests(unittest.TestCase):
             [message.event_id],
         )
         self.assertEqual(bob["direct_messages"][0]["actor"], "alice")
-        self.assertEqual(bob["direct_messages"][0]["recipient"], "bob")
+        self.assertEqual(bob["direct_messages"][0]["recipients"], ["bob", "dave"])
+        self.assertEqual(
+            [item["event_id"] for item in dave["direct_messages"]],
+            [message.event_id],
+        )
         self.assertEqual(carol["direct_messages"], [])
+
+    def test_recall_ranks_problem_tag_then_query_then_recency(self) -> None:
+        self.memory.append(
+            task_id="task-a", question_id=None, actor="alice", visibility="private",
+            recipients=("alice",), kind="note", turn=1,
+            payload={"content": "task-a: parity argument fails for n=3", "problem_id": "task-a"},
+        )
+        self.memory.append(
+            task_id="task-b", question_id=None, actor="alice", visibility="private",
+            recipients=("alice",), kind="note", turn=2,
+            payload={"content": "task-b: try generating function", "problem_id": "task-b"},
+        )
+        shared = self.memory.append(
+            task_id="task-b", question_id=None, actor="bob", visibility="public",
+            kind="note_shared", turn=3,
+            payload={"content": "task-b: try generating function", "problem_id": "task-b",
+                     "author": "bob", "source_event_id": "event-000099"},
+        )
+        self.memory.append(
+            task_id=None, question_id=None, actor="carol", visibility="private",
+            recipients=("carol",), kind="note", turn=4,
+            payload={"content": "carol private", "problem_id": None},
+        )
+
+        by_tag = self.memory.recall("alice", problem_id="task-a")
+        self.assertEqual(by_tag[0]["content"], "task-a: parity argument fails for n=3")
+        # Identical content collapses to the most recent copy (the shared one).
+        self.assertEqual(len(by_tag), 2)
+        self.assertEqual(by_tag[1]["note_id"], shared.event_id)
+        self.assertTrue(by_tag[1]["shared"])
+        by_query = self.memory.recall("alice", query="generating function")
+        self.assertEqual(by_query[0]["note_id"], shared.event_id)
+        # Private notes of other agents never leak.
+        self.assertFalse(any("carol" in row["content"] for row in by_query))
+        self.assertEqual(self.memory.recall("alice", top_k=1), [by_query[0]])
+
+    def test_projection_carries_recent_notes_from_other_tasks(self) -> None:
+        here = self.memory.append(
+            task_id="task-b", question_id=None, actor="alice", visibility="private",
+            recipients=("alice",), kind="note", turn=1,
+            payload={"content": "on current task", "problem_id": "task-b"},
+        )
+        elsewhere = self.memory.append(
+            task_id="task-a", question_id=None, actor="alice", visibility="private",
+            recipients=("alice",), kind="note", turn=2,
+            payload={"content": "from another task", "problem_id": "task-a"},
+        )
+        projection = self.memory.strategic_projection(
+            viewer="alice", current_task_id="task-b"
+        )
+        current_ids = {row["event_id"] for row in projection["current_task_events"]}
+        self.assertIn(here.event_id, current_ids)
+        self.assertEqual(
+            [row["note_id"] for row in projection["recent_notes"]],
+            [elsewhere.event_id],
+        )
+        digest = self.memory.create_problem_digest("task-a", viewer="alice")
+        self.assertIn(elsewhere.event_id, digest.source_event_ids)
 
     def test_checkpoint_rejects_scope_override(self) -> None:
         encoded = self.memory.to_checkpoint_json()

@@ -49,18 +49,18 @@ calls, retries, and terminal transport failures.
 
 ## Canonical tools: common versus specialized
 
-`src/tool_registry.py` contains one canonical registry of 17 typed actions.
-Every action has a name, description, JSON-compatible argument schema,
-visibility, capability pack, budget semantics, and runtime handler marker.
-The same definitions are used for provider function schemas, prompt
-instructions, validation, and dispatch.
+`src/tool_registry.py` contains one canonical registry of 22 typed actions
+(`ACTION_SET_VERSION = 2`). Every action has a name, description,
+JSON-compatible argument schema, visibility, capability pack, budget semantics,
+and runtime handler marker. The same definitions are used for provider function
+schemas, prompt instructions, validation, and dispatch.
 
 All task families initially receive the **common** collaboration pack:
 
 - `select_problem(problem_id)` selects or switches the shared active problem.
 - `speak(content)` broadcasts a message to the team.
-- `direct_message(recipient, content)` privately sends a message to one named
-  teammate.
+- `direct_message(recipients, content)` privately sends a message to one
+  teammate or a named sub-group of teammates.
 - `work(content)` records a durable answer or code draft.
 - `request_review(content, reviewer?)` asks for review but does not approve a
   version.
@@ -71,11 +71,23 @@ All task families initially receive the **common** collaboration pack:
 - `finish_contest(reason?)` ends a contest only when completion gates permit it.
 - `rest(reason?)` passes the current agent action.
 
+and the **desk** subset of the common pack (see *contest_session_v4* below):
+
+- `inspect_problem(problem_id?, focus?)` reads any problem's statement and full
+  version/review/submission history without moving the shared cursor.
+- `triage_problem(problem_id, priority, reason?)` sets the team priority
+  (`high | normal | low | hopeless`) used by the scheduler.
+- `remember(content, problem_id?)` stores a private note.
+- `recall(query?, problem_id?)` ranks the agent's notes and team-shared notes.
+- `share_note(note_id)` publishes one of the agent's notes to the team.
+
 Specialized actions are grouped into capability packs:
 
 - **Math:** `use_calculator(expression)`.
 - **Programming:** `execute_code(code, language?)`, `verify(focus?)`, and
-  `submit_code(code, language?)`.
+  `submit_code(code, language?)`. `verify` stays registered for the legacy
+  per-problem environment; contest sessions drop it from the frozen action set
+  because `inspect_problem` covers self-verification for every family.
 - **Research:** `web_search(query)`.
 - **Physical resources:** `read_lab_equipment(resource?)` and
   `read_star_chart(resource?)`.
@@ -102,9 +114,9 @@ every turn. The contest runner narrows the function list dynamically:
 - `select_problem` is restricted to the acting agent's coach assignment and
   excludes the already-active problem.
 - `direct_message` is available to multi-agent strategic teams, with the
-  recipient enum restricted to actual teammates other than the sender. The
-  recipient receives it in the `direct_messages` inbox of their next prompt;
-  `speak` remains the public broadcast channel.
+  `recipients` item enum restricted to actual teammates other than the sender.
+  Every named recipient receives it in the `direct_messages` inbox of their
+  next prompt; `speak` remains the public broadcast channel.
 - `review_answer` is exposed only for eligible non-author versions routed to
   that reviewer.
 - Strategic programming removes `request_review`; authors must report a
@@ -112,9 +124,14 @@ every turn. The contest runner narrows the function list dynamically:
 - Strategic `submit_code` appears only after local evidence and independent
   approval, and submits the frozen reviewed source without asking the model to
   reproduce it.
-- `finish_contest` is hidden while required tasks remain incomplete.
-- Answer-sheet `submit` is gated until required drafts and reviews exist,
-  except for the explicit deadline fallback.
+- `finish_contest` is hidden for both variants while any task lacks a valid
+  submission (its handler would reject it anyway).
+- Answer-sheet `submit` is gated until required drafts and reviews exist.
+  Deadline collection is done by the environment after the loop, never by an
+  in-loop model action.
+- Desk actions stay available whenever the agent may act at all, including
+  off-assignment turns in strategic runs; only the two forced phases hide them
+  (answer-sheet *submit-only* and programming *source-required*).
 
 `vanilla_team` has no Coach, private deliberation, review workflow, review gate,
 or cross-problem strategic summary. It makes one model call and executes at most
@@ -133,10 +150,11 @@ different-agent review, evidence-bound code review, stalled-task switching,
 three-non-AC cooldown, and later revisits. These are experimental system
 policies, not official ARML or ICPC rules.
 
-Programming tasks also expose `verify(focus?)`. It returns the latest code,
-version chain, visible run/submission history, and review history so the acting
-Agent can re-check its work on the next step. `verify` is self-verification
-context only and never satisfies the independent-review gate.
+Every family exposes `inspect_problem(problem_id?, focus?)`. It returns the
+statement, version chain (with sample reports for programming), review history
+and submissions of the requested problem (default: the active one) as a private
+tool event. It is self-verification context only, never satisfies the
+independent-review gate, and never moves the shared cursor.
 
 Every run writes `contest_session.json` and `contest_checkpoint.json`. The
 result includes the frozen action set, shared budget ledger, task timeline,
@@ -156,10 +174,12 @@ end, the environment collects pending non-programming drafts for
 available for solving or revising a draft; deadline collection consumes no extra
 model call. Programming contests retain per-problem `submit_code` semantics.
 
-Results record `protocol_version=contest_session_v3` and
-`deadline_policy=collect_pending_non_programming_drafts`. Re-run old experiments
-from fresh output directories when comparing this protocol; do not mix old
-checkpoints or scores with the new submission policy.
+Results record `protocol_version=contest_session_v4`, `action_set_version=2`
+and `deadline_policy=collect_pending_non_programming_drafts`. Re-run old
+experiments from fresh output directories when comparing this protocol; do not
+mix old checkpoints or scores with the new submission policy.
+`run_competition_batch.py --resume` refuses a `contest_checkpoint.json` whose
+`protocol_version` differs from the running code.
 
 ### OTC programming workflow v2 (2026-09-08)
 
@@ -362,3 +382,78 @@ are changed; task-wide budget limits and counterexample tools are not added.
 
 Regression coverage: `tests/test_programming_gap_repairs.py` and the existing
 deadline, productivity, contest-family and variant suites.
+
+### contest_session_v4: desk actions (2026-09-09)
+
+Results now record `protocol_version=contest_session_v4` and
+`action_set_version=2`; the on-disk `contest_checkpoint.json` carries the same
+stamps and `--resume` refuses a mismatch. Start fresh output directories.
+
+This revision ports the useful interface ideas of the legacy workboard /
+workspace actions (`open_problem`, `mark_hopeless` + `set_priority`,
+`remember` / `recall` / `publish_memory`, `message_group`, the duplicate
+`submit_problem` rejection) into the contest session as typed actions. State
+stays in `ContestSession` (immutable versions, reviews, submissions, now also
+per-task triage) and `ContestMemory` (event ledger); no `Workboard` or
+`MemoryStore` object is introduced, and the legacy `--schema` stack is
+unchanged.
+
+- **Desk actions** `inspect_problem`, `triage_problem`, `remember`, `recall`,
+  `share_note` are in the common pack, so **both variants** receive them. This
+  changes the vanilla baseline definition: vanilla now has read access to other
+  problems, private notes and team triage, but still no Coach, review workflow
+  or `direct_message`. They are not gated by the Coach's work/review
+  assignment; only the answer-sheet submit-only phase and the programming
+  source-required phase hide them. Every desk call still costs one turn and
+  one API call.
+- `inspect_problem(problem_id?, focus?)` replaces the programming-only
+  `verify`: a private `inspect_problem_result` event with statement, versions
+  (content clipped to 2 000 chars, sample and author reports), reviews and
+  submissions. It never moves the shared cursor, so agents can look at a
+  teammate's problem without `select_problem`.
+- `triage_problem(problem_id, priority, reason?)` writes `TaskUnit.priority /
+  triage_reason / triaged_by / triaged_turn` and a public `task_triaged` event.
+  `_scheduled_agent_task` stable-sorts the agent's work list by priority
+  (high → normal → low → hopeless) inside the Coach's `task_order`; `_next_task`
+  and the vanilla next-unseen pick use the same order. Hopeless problems are
+  never removed: their latest draft is still collected at the deadline.
+- `remember(content, problem_id?)` is the note itself (private `note` event
+  tagged with the problem). `recall(query?, problem_id?)` returns a private
+  `recall_result` ranked exactly like the legacy `MemoryStore.recall`: problem
+  tag → query-term hits → recency, deduplicated by content. `share_note(note_id)`
+  copies one of the caller's notes to a public `note_shared` event
+  (`source_event_id` kept); sharing someone else's note or sharing twice is an
+  `action_error`. The strategic projection gains `recent_notes` (≤ 4, notes not
+  already shown under the current task), problem digests include notes, and
+  vanilla sees notes through its ordinary 12-event window.
+- `direct_message(recipients: [Agent_N, …], content)` accepts one or more
+  teammates (deduplicated, sender excluded); the projection field is now
+  `direct_messages[].recipients`.
+- A `work` whose content equals **any** earlier version of the task no longer
+  silently no-ops: no version is created and the author gets a private
+  `work_duplicate` event naming the existing version, its author, the turn it
+  was recorded and the still-blank task ids. `BUDGET` in the prompt also lists
+  `blank_tasks`; `TASK STATUS` rows add `versions`, `priority`, `hopeless`,
+  `triaged_by`.
+- Housekeeping: `finish_contest` is hidden for both variants until every task
+  is complete (previously vanilla exposed it and the handler rejected it), and
+  the dead in-loop `deadline_submit` branch is removed; deadline collection
+  remains the environment's job after the loop.
+- Diagnostics add `inspect_count`, `notes_recorded`, `notes_shared`,
+  `recall_count`, `triage_changes`, `items_hopeless`, `repeat_draft_attempts`;
+  `scripts/_export_paste_tabs_3_6.py` (per-session tabs) and
+  `scripts/posthoc_icpc_metrics.py` export them as
+  `protocol, inspect, notes, notes_shared, recalls, triage, hopeless,
+  repeat_drafts`.
+
+Not ported, by design: `list_problems` (TASK STATUS already injected),
+`claim_problem` / `release_problem` (Coach assignment + runtime enforcement),
+legacy `verify_problem` (`review_answer` binds a `version_hash`),
+`check_budget` (BUDGET injected), and the deliberation actions.
+
+Regression coverage: `tests/test_tool_registry.py`, `tests/test_contest_memory.py`
+(recall, recent notes, multi-recipient inbox) and `tests/test_contest_runner.py`
+(inspect without cursor move, note round trip, triage scheduling and deadline,
+duplicate-draft feedback, desk availability per variant/phase, identical frozen
+action sets). `src/run_contest_smoke.py` produces the same deterministic
+matched-pair outcomes as v3.

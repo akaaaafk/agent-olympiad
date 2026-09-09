@@ -26,11 +26,15 @@ from submission_policy import SubmissionPolicy
 from strategy import StrategicPolicy
 from tool_registry import (
     ACTION_REGISTRY,
+    ACTION_SET_VERSION,
+    DESK_ACTION_NAMES,
     ActionSpec,
     render_action_instructions,
     render_function_tools,
     resolve_actions,
 )
+
+PROTOCOL_VERSION = "contest_session_v4"
 
 QueryFn = Callable[[str, str], str]
 TaskActionExecutor = Callable[[ManifestTask, str, dict[str, Any]], dict[str, Any]]
@@ -111,6 +115,9 @@ def _resolved_actions(manifest: ContestManifest) -> frozenset[ActionSpec]:
                 registered_handlers=handlers,
             )
         )
+    # ``inspect_problem`` covers self-verification for every family; the
+    # programming-only ``verify`` remains registered for the legacy stack.
+    specs.discard(ACTION_REGISTRY["verify"])
     if _is_answer_sheet_contest(manifest):
         submit = ACTION_REGISTRY["submit"]
         specs.discard(submit)
@@ -159,9 +166,13 @@ def _task_rows(session: ContestSession) -> list[dict[str, Any]]:
             "attempts": len(task.submissions),
             "locked": task.locked,
             "has_draft": bool(task.versions),
+            "versions": len(task.versions),
             "latest_author": task.versions[-1].author if task.versions else None,
             "independent_approval": _task_has_independent_approval(task),
             "valid_submission": task.latest_valid_submission is not None,
+            "priority": task.priority,
+            "hopeless": task.hopeless,
+            "triaged_by": task.triaged_by,
         }
         for task in session.tasks
     ]
@@ -192,7 +203,6 @@ def _actions_for_agent(
     work_task_ids: set[str] | None = None,
     review_task_ids: set[str] | None = None,
     answer_sheet_submit_ready: bool = False,
-    deadline_submit: bool = False,
     required_answer_task_ids: set[str] | None = None,
     programming_source_required: bool = False,
 ) -> frozenset[ActionSpec]:
@@ -217,21 +227,40 @@ def _actions_for_agent(
                 replace(
                     direct_message,
                     arguments=(
-                        replace(by_name["recipient"], enum=teammates),
+                        replace(by_name["recipients"], enum=teammates),
                         by_name["content"],
                     ),
                 )
             )
+    # Desk actions that take a problem id get the concrete task list so the
+    # model cannot invent identifiers.
+    task_ids = tuple(task.task_id for task in session.tasks)
+    for name in ("inspect_problem", "triage_problem", "remember", "recall"):
+        spec = next((spec for spec in available if spec.name == name), None)
+        if spec is None:
+            continue
+        available.discard(spec)
+        available.add(
+            replace(
+                spec,
+                arguments=tuple(
+                    replace(argument, enum=task_ids)
+                    if argument.name == "problem_id"
+                    else argument
+                    for argument in spec.arguments
+                ),
+            )
+        )
     if config.system_variant == "vanilla":
         # Vanilla is the no-Coach/no-review-workflow baseline. Keeping review
         # actions visible created an accidental rewrite/review loop on one task.
         available.discard(ACTION_REGISTRY["request_review"])
         available.discard(ACTION_REGISTRY["review_answer"])
+    if not _contest_complete(session):
+        # The handler rejects finish_contest until every task holds a valid
+        # submission, so exposing it earlier only burns a turn (both variants).
+        available.discard(ACTION_REGISTRY["finish_contest"])
     if answer_sheet_contest:
-        if deadline_submit:
-            return frozenset(
-                spec for spec in available if spec.name == "submit"
-            )
         available = {
             spec for spec in available if spec.name != "finish_contest"
         }
@@ -907,6 +936,20 @@ def _system_prompt(
             "Do not include Markdown or a second action.\n"
             f"{render_action_instructions(actions)}"
         )
+    if any(spec.name in DESK_ACTION_NAMES for spec in actions):
+        base += (
+            "\nDESK TOOLS: inspect_problem reads any problem's statement and full "
+            "version/review/submission history without moving the team's active "
+            "problem; use it to check another problem or to self-verify before you "
+            "act. remember stores a private note (intermediate result, dead end, "
+            "reminder) that survives outside the visible transcript; recall searches "
+            "your notes and shared notes; share_note publishes one note to the team. "
+            "work is only for a candidate answer, never for notes. triage_problem "
+            "sets the team priority of a problem (high/normal/low/hopeless) so the "
+            "scheduler reorders remaining work; hopeless problems stay on the sheet "
+            "and their latest draft is still submitted at the deadline. Desk tools "
+            "consume a turn like any other action, so do not loop on them."
+        )
     if config.system_variant == "vanilla":
         if config.rule_guidance:
             return base + f"\nCONTEST RULES\n{config.rule_guidance}"
@@ -1036,7 +1079,6 @@ def _user_prompt(
     *,
     final_review_phase: bool = False,
     personal_assignment: dict[str, Any] | None = None,
-    deadline_submit: bool = False,
     programming_source_required: bool = False,
 ) -> str:
     active = session.active_task
@@ -1096,7 +1138,13 @@ def _user_prompt(
             row["sample_report"] = sample_reports.get(version.version_hash)
             row["author_report"] = local_run_reports.get(version.version_hash)
     pending_reviews = json.dumps(pending_rows, ensure_ascii=False)
-    budget = json.dumps(asdict(session.budget), ensure_ascii=False)
+    budget = json.dumps(
+        {
+            **asdict(session.budget),
+            "blank_tasks": [task.task_id for task in session.tasks if not task.versions],
+        },
+        ensure_ascii=False,
+    )
     if config.system_variant == "strategic" and active is not None:
         context: Any = memory.strategic_projection(
             viewer=agent,
@@ -1119,13 +1167,6 @@ def _user_prompt(
         "Call review_answer with its exact problem_id and version_hash. Approve with "
         "concise evidence if correct; reject and explain the defect if wrong.\n\n"
         if final_review_phase
-        else ""
-    )
-    deadline = (
-        "DEADLINE ACTION: This is the final available contest action. Submit the "
-        "entire current answer sheet now; incomplete or unreviewed drafts are "
-        "submitted as best-effort answers and missing tasks remain blank.\n\n"
-        if deadline_submit
         else ""
     )
     submission_rule = ""
@@ -1189,7 +1230,6 @@ def _user_prompt(
         "answers remain blank. You may use your last action to improve a draft.\n\n"
         f"{personal_block}"
         f"{submission_rule}"
-        f"{deadline}"
         f"{phase}"
         f"{_programming_gate_guidance(session, config, agent, set(local_run_reports), sample_reports)}"
         f"{active_text}\n\n"
@@ -1225,6 +1265,9 @@ def _next_task(
             )
         )
     ]
+    # Team triage reorders within the manifest order; hopeless tasks still
+    # qualify, they simply come last.
+    candidates.sort(key=lambda task: task.priority_rank)
     unseen = [task for task in candidates if not task.versions and not task.submissions]
     return (unseen or candidates or [None])[0]
 
@@ -1242,6 +1285,13 @@ def _scheduled_agent_task(
             task.state is not TaskState.BLOCKED
             or session.budget.turns_used >= (task.blocked_until_turn or 0)
         )
+
+    # Live triage (triage_problem) outranks the Coach's frozen task_order:
+    # stable sort keeps the Coach order inside each priority band and pushes
+    # hopeless tasks to the end without dropping them.
+    work_task_ids = sorted(
+        work_task_ids, key=lambda task_id: session.task(task_id).priority_rank
+    )
 
     # A sample-AC candidate must finish its review/submission pipeline before
     # reviewers or authors are sent back to untouched assignments. Otherwise
@@ -1433,6 +1483,108 @@ def _participation_metrics(
     )
 
 
+_INSPECT_STATEMENT_CHARS = 6000
+_INSPECT_VERSION_CHARS = 2000
+
+
+def _clip(text: str, limit: int) -> str:
+    text = str(text)
+    if len(text) <= limit:
+        return text
+    return text[:limit] + f"... [truncated {len(text) - limit} chars]"
+
+
+def _inspect_problem_payload(
+    manifest_task: ManifestTask,
+    task: TaskUnit,
+    memory: ContestMemory,
+    *,
+    focus: str = "",
+) -> dict[str, Any]:
+    """Read-only snapshot of one task for ``inspect_problem``."""
+    sample_reports = _sample_reports(memory)
+    local_reports = _local_run_reports(memory)
+    return {
+        "problem_id": task.task_id,
+        "focus": focus,
+        "statement": _clip(manifest_task.prompt, _INSPECT_STATEMENT_CHARS),
+        "task_type": manifest_task.task_type,
+        "programming": manifest_task.programming,
+        "max_score": manifest_task.max_score,
+        "state": task.state.value,
+        "priority": task.priority,
+        "triage_reason": task.triage_reason,
+        "locked": task.locked,
+        "versions": [
+            {
+                "version_hash": version.version_hash,
+                "parent_hash": version.parent_hash,
+                "author": version.author,
+                "evidence_refs": list(version.evidence_refs),
+                "content": _clip(version.content, _INSPECT_VERSION_CHARS),
+                "sample_report": sample_reports.get(version.version_hash),
+                "author_report": local_reports.get(version.version_hash),
+            }
+            for version in task.versions
+        ],
+        "reviews": [asdict(review) for review in task.reviews],
+        "submissions": [asdict(submission) for submission in task.submissions],
+        "independent_approval": _task_has_independent_approval(task),
+        "note": (
+            "Self-verification context only; this does not create or replace "
+            "an independent review, and the team's active problem is unchanged."
+        ),
+    }
+
+
+def _share_note(
+    *,
+    memory: ContestMemory,
+    session: ContestSession,
+    agent: str,
+    note_id: str,
+) -> tuple[bool, int]:
+    """Publish one of the agent's private notes as a public ``note_shared`` event."""
+    source = next(
+        (
+            event
+            for event in memory.view(agent)
+            if event.event_id == note_id
+            and event.kind == "note"
+            and event.actor == agent
+        ),
+        None,
+    )
+    if source is None:
+        raise ValueError(
+            f"{note_id} is not one of your notes; use recall to list note ids"
+        )
+    already = any(
+        event.kind == "note_shared"
+        and isinstance(event.payload, dict)
+        and event.payload.get("source_event_id") == note_id
+        for event in memory.view(agent)
+    )
+    if already:
+        raise ValueError(f"{note_id} has already been shared with the team")
+    payload = source.payload if isinstance(source.payload, dict) else {}
+    memory.append(
+        task_id=source.task_id,
+        question_id=None,
+        actor=agent,
+        visibility="public",
+        kind="note_shared",
+        payload={
+            "content": str(payload.get("content") or ""),
+            "problem_id": source.task_id,
+            "author": agent,
+            "source_event_id": note_id,
+        },
+        turn=session.budget.turns_used,
+    )
+    return False, 0
+
+
 def _apply_action(
     *,
     action: str,
@@ -1447,7 +1599,6 @@ def _apply_action(
     work_task_ids: set[str] | None = None,
     review_task_ids: set[str] | None = None,
     final_review_complete: bool = True,
-    deadline_submit: bool = False,
 ) -> tuple[bool, int]:
     task_by_id = {task.task_id: task for task in manifest.tasks}
     active = session.active_task
@@ -1456,32 +1607,131 @@ def _apply_action(
     )
     recipients: tuple[str, ...] = ()
     if action == "direct_message":
-        recipient = str(arguments["recipient"])
+        raw_recipients = arguments["recipients"]
+        if isinstance(raw_recipients, str):
+            raw_recipients = [raw_recipients]
         teammates = {
             f"Agent_{index}" for index in range(1, config.team_size + 1)
         }
-        if recipient not in teammates:
-            raise ValueError(f"unknown direct-message recipient: {recipient}")
-        if recipient == agent:
-            raise ValueError("direct_message recipient must be a teammate")
-        recipients = (recipient,)
-    event_task_id = (
-        str(arguments.get("problem_id"))
-        if action in {"select_problem", "review_answer"}
-        else active.task_id
-        if active
-        else None
-    )
+        ordered: list[str] = []
+        for recipient in raw_recipients:
+            recipient = str(recipient)
+            if recipient not in teammates:
+                raise ValueError(f"unknown direct-message recipient: {recipient}")
+            if recipient == agent:
+                raise ValueError("direct_message recipients must be teammates")
+            if recipient not in ordered:
+                ordered.append(recipient)
+        if not ordered:
+            raise ValueError("direct_message needs at least one recipient")
+        recipients = tuple(ordered)
+        arguments = {**arguments, "recipients": ordered}
+    if action in DESK_ACTION_NAMES:
+        # Desk actions target an explicit problem or fall back to the shared
+        # cursor; they never move it.
+        requested = str(arguments.get("problem_id") or "").strip()
+        if requested and requested not in task_by_id:
+            raise ValueError(f"unknown problem: {requested}")
+        event_task_id = requested or (active.task_id if active else None)
+    else:
+        event_task_id = (
+            str(arguments.get("problem_id"))
+            if action in {"select_problem", "review_answer"}
+            else active.task_id
+            if active
+            else None
+        )
+    if action == "share_note":
+        return _share_note(
+            memory=memory,
+            session=session,
+            agent=agent,
+            note_id=str(arguments["note_id"]),
+        )
     memory.append(
         task_id=event_task_id,
         question_id=None,
         actor=agent,
         visibility=visibility,
-        kind=action,
-        payload=arguments,
+        # ``remember`` is the note itself; other desk actions log the request
+        # and append their result as a private tool event.
+        kind="note" if action == "remember" else action,
+        payload=(
+            {"content": str(arguments["content"]), "problem_id": event_task_id}
+            if action == "remember"
+            else arguments
+        ),
         turn=session.budget.turns_used,
         recipients=recipients,
     )
+    if action == "remember":
+        return False, 0
+    if action == "recall":
+        notes = memory.recall(
+            agent,
+            query=str(arguments.get("query") or ""),
+            problem_id=str(arguments.get("problem_id") or "") or None,
+        )
+        memory.append(
+            task_id=event_task_id,
+            question_id=None,
+            actor="Tool",
+            visibility="private",
+            recipients=(agent,),
+            kind="recall_result",
+            payload={
+                "query": str(arguments.get("query") or ""),
+                "problem_id": str(arguments.get("problem_id") or "") or None,
+                "notes": notes,
+                "note": "Empty means no matching note; use remember to store one.",
+            },
+            turn=session.budget.turns_used,
+        )
+        return False, 0
+    if action == "inspect_problem":
+        if event_task_id is None:
+            raise RuntimeError("pass problem_id or select a problem before inspect_problem")
+        memory.append(
+            task_id=event_task_id,
+            question_id=None,
+            actor="Tool",
+            visibility="private",
+            recipients=(agent,),
+            kind="inspect_problem_result",
+            payload=_inspect_problem_payload(
+                task_by_id[event_task_id],
+                session.task(event_task_id),
+                memory,
+                focus=str(arguments.get("focus") or ""),
+            ),
+            turn=session.budget.turns_used,
+        )
+        return False, 0
+    if action == "triage_problem":
+        assert event_task_id is not None
+        priority = str(arguments["priority"])
+        task, previous = session.set_triage(
+            event_task_id,
+            priority,  # type: ignore[arg-type]
+            reason=str(arguments.get("reason") or ""),
+            actor=agent,
+            turn=session.budget.turns_used,
+        )
+        memory.append(
+            task_id=event_task_id,
+            question_id=None,
+            actor=agent,
+            visibility="public",
+            kind="task_triaged",
+            payload={
+                "problem_id": event_task_id,
+                "priority": priority,
+                "previous_priority": previous,
+                "reason": task.triage_reason,
+            },
+            turn=session.budget.turns_used,
+        )
+        return False, 0
 
     if action == "select_problem":
         task_id = str(arguments["problem_id"])
@@ -1536,7 +1786,46 @@ def _apply_action(
             raise ValueError(
                 "preserve the independently approved version unless a review rejects it"
             )
-        session.create_answer(str(arguments["content"]), author=agent)
+        content = str(arguments["content"])
+        duplicate = active.find_duplicate_answer(content)
+        if duplicate is not None:
+            # Same draft already on the sheet: no new version, tell the author
+            # where it is and what is still blank instead of failing silently.
+            recorded_turn = next(
+                (
+                    event.turn
+                    for event in memory.view(agent, task_id=active.task_id)
+                    if event.kind == "work"
+                    and isinstance(event.payload, dict)
+                    and event.payload.get("content") == content
+                ),
+                None,
+            )
+            blank = [task.task_id for task in session.tasks if not task.versions]
+            memory.append(
+                task_id=active.task_id,
+                question_id=None,
+                actor="Contest_Control",
+                visibility="private",
+                recipients=(agent,),
+                kind="work_duplicate",
+                payload={
+                    "version_hash": duplicate.version_hash,
+                    "recorded_by": duplicate.author,
+                    "recorded_turn": recorded_turn,
+                    "is_latest": duplicate is active.versions[-1],
+                    "blank_task_ids": blank,
+                    "note": (
+                        f"This draft is already recorded on {active.task_id}"
+                        f" by {duplicate.author or 'a teammate'}"
+                        + (f" at turn {recorded_turn}" if recorded_turn is not None else "")
+                        + f"; {len(blank)} tasks still have no draft."
+                    ),
+                },
+                turn=session.budget.turns_used,
+            )
+            return False, 0
+        session.create_answer(content, author=agent)
         return False, 0
     if action == "request_review":
         if active is None or not active.versions:
@@ -1584,31 +1873,6 @@ def _apply_action(
             required_tasks = [
                 task for task in session.tasks if task.task_id in required_ids
             ]
-            if deadline_submit:
-                submitted_ids = []
-                for task in required_tasks:
-                    if not task.versions:
-                        continue
-                    session.select_task(task.task_id)
-                    session.submit("SUBMITTED", score=0.0, valid=True)
-                    submitted_ids.append(task.task_id)
-                memory.append(
-                    task_id=None,
-                    question_id=None,
-                    actor="Contest_Control",
-                    visibility="public",
-                    kind="deadline_answer_sheet_submitted",
-                    payload={
-                        "submitted_task_ids": submitted_ids,
-                        "blank_task_ids": [
-                            task.task_id
-                            for task in required_tasks
-                            if not task.versions
-                        ],
-                    },
-                    turn=session.budget.turns_used,
-                )
-                return True, 0
             missing = [task for task in required_tasks if not task.versions]
             if missing:
                 raise ValueError(
@@ -1706,39 +1970,6 @@ def _apply_action(
             f"coach assignment does not allow {agent} to use task tools on "
             f"{active.task_id}"
         )
-
-    if action == "verify":
-        visible_history = [
-            event.to_dict()
-            for event in memory.view(agent, task_id=active.task_id)
-        ][-20:]
-        latest = active.versions[-1] if active.versions else None
-        memory.append(
-            task_id=active.task_id,
-            question_id=None,
-            actor="Tool",
-            visibility="private",
-            recipients=(agent,),
-            kind="verify_result",
-            payload={
-                "focus": str(arguments.get("focus") or ""),
-                "latest_code": latest.content if latest else "",
-                "latest_version_hash": latest.version_hash if latest else None,
-                "version_history": [asdict(version) for version in active.versions],
-                "submission_history": [
-                    asdict(submission) for submission in active.submissions
-                ],
-                "review_history": [asdict(review) for review in active.reviews],
-                "visible_history": visible_history,
-                "independent_approval": session.has_independent_approval(),
-                "note": (
-                    "Self-verification context only; this does not create or "
-                    "replace an independent review."
-                ),
-            },
-            turn=session.budget.turns_used,
-        )
-        return False, 0
 
     if action == "submit_code":
         if config.review_required:
@@ -2250,7 +2481,6 @@ def _run_contest_engine(
                 break
             # Both variants retain their last action for useful work. The
             # environment collects pending drafts after the shared loop ends.
-            deadline_submit = False
             personal_assignment = personal_assignments.get(agent)
             rescue_task_ids = {
                 task.task_id
@@ -2382,7 +2612,6 @@ def _run_contest_engine(
                     final_review_completed
                     and answer_sheet_ready_for_final_review()
                 ),
-                deadline_submit=deadline_submit,
                 programming_source_required=programming_source_required,
                 review_targets=(
                     [
@@ -2437,7 +2666,6 @@ def _run_contest_engine(
                 final_review_phase=final_review_started
                 and not final_review_completed,
                 personal_assignment=personal_assignment,
-                deadline_submit=deadline_submit,
                 programming_source_required=programming_source_required,
             )
             if action_request_fn is not None:
@@ -2596,13 +2824,8 @@ def _run_contest_engine(
                     work_task_ids=work_task_ids,
                     review_task_ids=review_task_ids,
                     final_review_complete=final_review_completed,
-                    deadline_submit=deadline_submit,
                 )
                 switches += switch_delta
-                deadline_submission_used = (
-                    deadline_submission_used
-                    or (deadline_submit and action == "submit")
-                )
             except (KeyError, RuntimeError, ValueError) as exc:
                 _append_action_error(memory, session, agent, str(exc))
                 _persist_checkpoint()
@@ -2666,8 +2889,11 @@ def _run_contest_engine(
                 config.system_variant == "strategic" and config.review_required
                 and acted_task is not None and acted_task.kind == "programming"
                 and (work_task_ids is None or acted_task.task_id in work_task_ids)
-                and action in {"work", "execute_code", "verify", "rest", "speak", "submit_code",
+                and (
+                    action in {"work", "execute_code", "rest", "speak", "submit_code",
                                "select_problem", "skip_problem", "direct_message"}
+                    or action in DESK_ACTION_NAMES
+                )
             )
             if programming_visit:
                 new_events = memory.archival_snapshot()["events"][before_events:]
@@ -2720,13 +2946,18 @@ def _run_contest_engine(
                 and acted_task is not None
             ):
                 next_unseen = next(
-                    (
-                        task
-                        for task in session.tasks
-                        if task.task_id != acted_task.task_id
-                        and not task.locked
-                        and not task.versions
-                        and not task.submissions
+                    iter(
+                        sorted(
+                            (
+                                task
+                                for task in session.tasks
+                                if task.task_id != acted_task.task_id
+                                and not task.locked
+                                and not task.versions
+                                and not task.submissions
+                            ),
+                            key=lambda task: task.priority_rank,
+                        )
                     ),
                     None,
                 )
@@ -2921,6 +3152,19 @@ def _run_contest_engine(
         for task in session.tasks
         if task.kind == "programming"
     }
+    all_events = memory.archival_snapshot()["events"]
+    event_kind_counts: dict[str, int] = {}
+    for event in all_events:
+        event_kind_counts[event["kind"]] = event_kind_counts.get(event["kind"], 0) + 1
+    desk_diagnostics = {
+        "inspect_count": event_kind_counts.get("inspect_problem", 0),
+        "notes_recorded": event_kind_counts.get("note", 0),
+        "notes_shared": event_kind_counts.get("note_shared", 0),
+        "recall_count": event_kind_counts.get("recall", 0),
+        "triage_changes": event_kind_counts.get("task_triaged", 0),
+        "items_hopeless": sum(task.hopeless for task in session.tasks),
+        "repeat_draft_attempts": event_kind_counts.get("work_duplicate", 0),
+    }
     segment_seconds = time.perf_counter() - wall_t0
     ended_at = datetime.now(timezone.utc).isoformat()
     session.budget.wall_seconds_used = prior_wall_seconds + segment_seconds
@@ -2961,7 +3205,8 @@ def _run_contest_engine(
         "submissions": submissions,
         "shared_review_history": _shared_review_history(session),
         "budget": asdict(session.budget),
-        "protocol_version": "contest_session_v3",
+        "protocol_version": PROTOCOL_VERSION,
+        "action_set_version": ACTION_SET_VERSION,
         "programming_workflow_version": (
             "programming_workflow_v4" if config.system_variant == "strategic"
             and config.review_required and any(task.programming for task in manifest.tasks)
@@ -2993,18 +3238,15 @@ def _run_contest_engine(
             "attempts": sum(len(task.submissions) for task in session.tasks),
             "attempts_to_ac": attempts_to_ac,
             "stalled_turns": stalled_turns,
-            "programming_repair_yields": sum(
-                e["kind"] == "programming_repair_yield"
-                for e in memory.archival_snapshot()["events"]
-            ),
-            "programming_source_required_actions": sum(
-                e["kind"] == "programming_source_required"
-                for e in memory.archival_snapshot()["events"]
+            "programming_repair_yields": event_kind_counts.get("programming_repair_yield", 0),
+            "programming_source_required_actions": event_kind_counts.get(
+                "programming_source_required", 0
             ),
             "programming_duplicate_executions_avoided": sum(
                 e["kind"] == "execute_code_result" and bool(e["payload"].get("execution_reused"))
-                for e in memory.archival_snapshot()["events"]
+                for e in all_events
             ),
+            **desk_diagnostics,
             "active_agent_rate": active_agent_rate,
             "action_balance": action_balance,
             "transport_api_calls": transport_api_calls,
