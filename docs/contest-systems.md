@@ -203,10 +203,35 @@ isolation. Only the submitted source is mounted; test input is streamed on stdin
 and expected answers remain in the host evaluator. Containers have no network,
 host environment, repository mount, or write access to the image. Time, memory,
 process, and output limits apply. There is no automatic host fallback when
-Docker is unavailable. Install the pinned `PYTHON_IMAGE` from
-`src/isolated_python.py` before running code-enabled contests. The judge's
-`trusted_python=True` option is exclusively for explicitly trusted fixtures;
-benchmark adapters do not use it.
+Docker is unavailable. The judge's `trusted_python=True` option is exclusively
+for explicitly trusted fixtures; benchmark adapters do not use it.
+
+### Docker isolation prerequisites
+
+Code-enabled contests require a running Docker daemon and the pinned image
+defined as `PYTHON_IMAGE` in `src/isolated_python.py`. Isolated runs invoke
+`docker run --pull=never`, so the image must already be present on the host;
+contest scripts do not start Docker Desktop and do not pull images at runtime.
+
+Install the pinned image once per machine (or after the local image cache is
+cleared):
+
+```powershell
+docker pull python:3.11-slim@sha256:9534e5a8e315485d4061ed659af0fd78a284c015f9b73661b41d6bab25604534
+```
+
+Confirm the daemon and image before a live run:
+
+```powershell
+docker info
+docker image inspect python:3.11-slim@sha256:9534e5a8e315485d4061ed659af0fd78a284c015f9b73661b41d6bab25604534
+e:\agent_olympiad\.venv\Scripts\python.exe -c "from isolated_python import run_python_isolated; print(run_python_isolated('print(42)').stdout)"
+```
+
+The smoke check must print `42`. If the digest in `PYTHON_IMAGE` changes, pull
+that revision instead; do not substitute an unpinned `python:3.11-slim` tag.
+Operational notes for the monorepo interpreter and remote-judge gateway live in
+`docs/PYTHON_ENV.md`.
 
 `--max-total-tokens` continues to mean a shared **output-token** budget, as its
 CLI help states. It does not match total input-plus-output cost across systems.
