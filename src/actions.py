@@ -1,6 +1,8 @@
 import json
 import re
-from typing import Optional
+from typing import Any, Iterable, Optional
+
+from tool_registry import ActionSpec, validate_action_payload
 
 ACTION_INSTRUCTIONS = """\
 Respond with ONE of these formats:
@@ -100,6 +102,43 @@ def parse_agent_response(response: str) -> list[tuple[str, str]]:
         payload = match.group("payload").strip()
         actions.append((action, payload))
     return actions
+
+
+def parse_typed_action(
+    response: str,
+    allowed_actions: Iterable[ActionSpec],
+) -> tuple[str | None, dict[str, Any], str | None]:
+    """Parse one strict registry-backed JSON action."""
+    text = (response or "").strip()
+    if not text:
+        return None, {}, "empty response"
+    try:
+        payload = json.loads(text)
+    except json.JSONDecodeError as exc:
+        return None, {}, f"response must be exactly one JSON action object: {exc.msg}"
+    if not isinstance(payload, dict) or set(payload) != {"action", "arguments"}:
+        return None, {}, "action object must contain only action and arguments"
+    action = payload.get("action")
+    arguments = payload.get("arguments")
+    if not isinstance(action, str):
+        return None, {}, "action must be a string"
+    return validate_action_invocation(action, arguments, allowed_actions)
+
+
+def validate_action_invocation(
+    action: str,
+    arguments: Any,
+    allowed_actions: Iterable[ActionSpec],
+) -> tuple[str | None, dict[str, Any], str | None]:
+    """Validate either a parsed JSON action or a provider-native function call."""
+    specs = {spec.name: spec for spec in allowed_actions}
+    spec = specs.get(action)
+    if spec is None:
+        return None, {}, f"action '{action}' is not available"
+    errors = validate_action_payload(spec, arguments)
+    if errors:
+        return None, {}, "; ".join(errors)
+    return action, dict(arguments), None
 
 
 def parse_single_structured_action(

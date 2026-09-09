@@ -32,12 +32,18 @@ load_repo_dotenv(REPO_ROOT / ".env")
 
 _RUNS: dict[str, dict[str, Any]] = {}
 _LOCK = threading.Lock()
+_REMOTE_CALL_LOCK = threading.Lock()
+_REMOTE_CLIENTS: dict[str, Any] = {}
 
 
 def _remote_client(oj: str):
-    if (oj or "").strip().lower() == "kattis":
-        return KattisClient()
-    return VJudgeClient()
+    key = (oj or "").strip().lower()
+    with _LOCK:
+        client = _REMOTE_CLIENTS.get(key)
+        if client is None:
+            client = KattisClient() if key == "kattis" else VJudgeClient()
+            _REMOTE_CLIENTS[key] = client
+        return client
 
 
 def _json_response(handler: BaseHTTPRequestHandler, code: int, payload: dict[str, Any]) -> None:
@@ -88,7 +94,8 @@ class GatewayHandler(BaseHTTPRequestHandler):
                 return
             if row.get("status") in {"submitted", "polling", "queued"} and row.get("vjudge_run_id"):
                 client = _remote_client(str(row.get("oj") or "CodeForces"))
-                remote = client.get_result(str(row["vjudge_run_id"]))
+                with _REMOTE_CALL_LOCK:
+                    remote = client.get_result(str(row["vjudge_run_id"]))
                 row = {**row, **remote.to_dict(), "gateway_run_id": run_id}
                 with _LOCK:
                     _RUNS[run_id] = row
@@ -125,10 +132,11 @@ class GatewayHandler(BaseHTTPRequestHandler):
             poll = bool(data.get("poll", True))
             client = _remote_client(request.oj)
             gateway_run_id = uuid.uuid4().hex
-            if poll:
-                remote = client.submit_and_poll(request)
-            else:
-                remote = client.submit(request)
+            with _REMOTE_CALL_LOCK:
+                if poll:
+                    remote = client.submit_and_poll(request)
+                else:
+                    remote = client.submit(request)
             row = {
                 "gateway_run_id": gateway_run_id,
                 "idempotency_key": request.idempotency_key,

@@ -32,6 +32,10 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from collaboration import CollabConfig, SCHEMAS, run_collaboration
+from contest_adapters import EnvironmentTaskExecutor, grade_contest_result
+from contest_budget import resolve_contest_budget
+from contest_manifest import load_contest_manifest
+from contest_runner import ContestRunConfig
 from contest_rules import get_contest_rules
 from env import OlympiadEnvironment, ProblemNotFoundError
 from evaluation.collaboration_score import (
@@ -44,9 +48,12 @@ from env_config import load_repo_dotenv
 from llm import (
     make_perplexity_caller,
     make_tinker_caller,
+    provider_action_transport,
     resolve_query_fn,
     resolve_request_fn,
 )
+from strategic_contest_runner import run_strategic_contest
+from vanilla_contest_runner import run_vanilla_contest
 from rules import RulesMode
 from run_smoke_batch import SMOKE_CASES
 
@@ -819,6 +826,69 @@ def main() -> None:
         help="Exact benchmark problem id; requires exactly one competition",
     )
     parser.add_argument(
+        "--contest-manifest",
+        type=Path,
+        default=None,
+        help="Run one explicit multi-problem contest manifest under a shared budget.",
+    )
+    parser.add_argument(
+        "--system-variant",
+        choices=("vanilla", "strategic", "vanilla_team", "strategic_team"),
+        default="strategic_team",
+        help="Contest-session system variant (default: strategic).",
+    )
+    parser.add_argument(
+        "--action-calling",
+        choices=("auto", "native", "emulated", "prompt-json"),
+        default="auto",
+        help=(
+            "Contest action transport: provider-native functions, schema-validated "
+            "emulation, or strict prompt JSON fallback (default: auto)."
+        ),
+    )
+    parser.add_argument(
+        "--team-size",
+        type=int,
+        default=None,
+        help="Override contest-session team size.",
+    )
+    parser.add_argument(
+        "--max-api-calls",
+        type=int,
+        default=None,
+        help="Shared contest-session API-call limit.",
+    )
+    parser.add_argument(
+        "--max-total-tokens",
+        type=int,
+        default=None,
+        help="Shared contest-session output-token limit.",
+    )
+    parser.add_argument(
+        "--max-simulated-minutes",
+        type=float,
+        default=None,
+        help="Override the contest-session simulated clock limit.",
+    )
+    parser.add_argument(
+        "--start-seat",
+        type=int,
+        default=0,
+        help="Rotate the first acting seat for matched-pair repetitions.",
+    )
+    parser.add_argument(
+        "--programming-deadline-submit",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+        help="At contest end, force one recorded source per never-officially-submitted programming task (waives sample/review gates; may incur WA penalties).",
+    )
+    parser.add_argument(
+        "--require-review",
+        action=argparse.BooleanOptionalAction,
+        default=None,
+        help="Override the strategic mandatory-review gate.",
+    )
+    parser.add_argument(
         "--structured-gold",
         action="store_true",
         help="Run every benchmark problem with at least one deterministic scored gold part",
@@ -847,12 +917,23 @@ def main() -> None:
             if args.live
             else (args.model or DEFAULT_MODEL)
         )
-        cases = _select_cases(
-            args.competitions,
-            args.problem_id,
-            args.limit,
-            structured_gold=args.structured_gold,
+        cases = (
+            []
+            if args.contest_manifest
+            else _select_cases(
+                args.competitions,
+                args.problem_id,
+                args.limit,
+                structured_gold=args.structured_gold,
+            )
         )
+        if args.contest_manifest and (
+            args.problem_id or args.competitions or args.structured_gold
+        ):
+            raise ValueError(
+                "--contest-manifest cannot be combined with --problem-id, "
+                "--competitions, or --structured-gold."
+            )
         if args.resume and args.output is None:
             raise ValueError("--resume requires an explicit --output directory.")
         if args.max_output_tokens <= 0:
@@ -875,7 +956,17 @@ def main() -> None:
     tsv_path = out_dir / "competition_batch.tsv"
     summary_tsv_path = out_dir / "competition_summary.tsv"
 
-    need_request = args.live and (judge_task or judge_collab or args.judge_cce)
+    need_request = (
+        args.live
+        and (
+            args.judge_cce
+            or judge_collab
+            or (
+                not args.contest_manifest
+                and judge_task
+            )
+        )
+    )
     if need_request:
         key_name = _judge_api_key_name(judge_provider)
         if not os.environ.get(key_name):
@@ -916,6 +1007,282 @@ def main() -> None:
         if args.live and args.judge_cce
         else None
     )
+
+    if args.contest_manifest:
+        system_variant = args.system_variant.removesuffix("_team")
+        transport = (
+            provider_action_transport(args.provider)
+            if args.live
+            else "prompt_json"
+        )
+        if args.action_calling == "prompt-json":
+            transport = "prompt_json"
+        elif args.action_calling == "native" and transport != "native":
+            parser.error(
+                f"--provider {args.provider} does not expose native tool calling; "
+                "use --action-calling auto or emulated."
+            )
+        elif args.action_calling == "emulated":
+            if not args.live:
+                parser.error("--action-calling emulated requires --live.")
+            if provider_action_transport(args.provider) != "emulated":
+                parser.error(
+                    f"--provider {args.provider} has no emulated tool adapter."
+                )
+            transport = "emulated"
+        request_actions = transport in {"native", "emulated"}
+        action_request_fn = (
+            resolve_request_fn(
+                provider=args.provider,
+                model=model,
+                max_output_tokens=args.max_output_tokens,
+                temperature=args.temperature,
+            )
+            if request_actions
+            else None
+        )
+        manifest = load_contest_manifest(
+            args.contest_manifest,
+            benchmark_root=REPO_ROOT / "data" / "benchmarks",
+        )
+        contest_budget = resolve_contest_budget(
+            manifest.competition_id,
+            max_turns=args.max_turns,
+            max_api_calls=args.max_api_calls,
+            max_total_tokens=args.max_total_tokens,
+        )
+        contest_rules = get_contest_rules(manifest.competition_id)
+        encoded_team_size = (
+            int(contest_rules.team_size)
+            if contest_rules and contest_rules.team_size.isdigit()
+            else 0
+        )
+        team_size = args.team_size or encoded_team_size or int(
+            manifest.tasks[0].benchmark.get("team_size") or 3
+        )
+        rule_guidance = ""
+        if contest_rules:
+            rule_guidance = (
+                f"Team: {contest_rules.team_size}; duration: {contest_rules.duration}; "
+                f"tools: {contest_rules.tools_official}; scoring: "
+                f"{contest_rules.scoring_official}; penalties: "
+                f"{contest_rules.penalties_official}; search: "
+                f"{contest_rules.search_policy}."
+            )
+        checkpoint_path = out_dir / "contest_checkpoint.json"
+        session_checkpoint = None
+        memory_checkpoint = None
+        if args.resume and checkpoint_path.is_file():
+            restored = json.loads(checkpoint_path.read_text(encoding="utf-8"))
+            session_checkpoint = restored.get("session")
+            memory_checkpoint = restored.get("memory")
+
+        def persist_contest_checkpoint(
+            session_state: dict,
+            memory_state: str,
+        ) -> None:
+            _write_json_atomic(
+                checkpoint_path,
+                {"session": session_state, "memory": memory_state},
+            )
+
+        run_config = ContestRunConfig(
+            system_variant=system_variant,
+            team_size=team_size,
+            max_turns=contest_budget.max_turns,
+            max_api_calls=contest_budget.max_api_calls,
+            max_tokens=contest_budget.max_total_tokens,
+            max_simulated_minutes=(
+                args.max_simulated_minutes
+                if args.max_simulated_minutes is not None
+                else max(
+                    contest_budget.duration_minutes or 0,
+                    contest_budget.max_turns * contest_budget.minutes_per_turn,
+                )
+            ),
+            minutes_per_turn=contest_budget.minutes_per_turn,
+            require_review=args.require_review,
+            start_seat=args.start_seat,
+            rule_guidance=rule_guidance,
+            programming_deadline_submit=args.programming_deadline_submit,
+        )
+        run_kwargs = {
+            "action_request_fn": action_request_fn,
+            "action_transport": transport,
+            "task_action_executor": EnvironmentTaskExecutor(
+                manifest,
+                benchmark_root=REPO_ROOT / "data" / "benchmarks",
+            ),
+            "session_checkpoint": session_checkpoint,
+            "memory_checkpoint": memory_checkpoint,
+            "checkpoint_callback": persist_contest_checkpoint,
+        }
+        if system_variant == "vanilla":
+            result = run_vanilla_contest(
+                manifest,
+                query_fn,
+                run_config,
+                **run_kwargs,
+            )
+        else:
+            result = run_strategic_contest(
+                manifest,
+                query_fn,
+                run_config,
+                coach_query_fn=query_fn,
+                **run_kwargs,
+            )
+        result["grade"] = grade_contest_result(manifest, result)
+        result["metrics"]["task_utility"] = result["grade"]["task_utility"]
+        if judge_collab and request_fn is not None:
+            events = result["memory"]["events"]
+            agents = [f"Agent_{index + 1}" for index in range(team_size)]
+            chat_history = [
+                {
+                    "sender": event["actor"],
+                    "content": str(
+                        event.get("payload", {}).get("content")
+                        or event.get("payload", {}).get("report")
+                        or event.get("payload", {})
+                    ),
+                }
+                for event in events
+                if event.get("actor") in agents
+                and event.get("kind")
+                in {
+                    "speak",
+                    "direct_message",
+                    "request_review",
+                    "review_answer",
+                }
+            ]
+            action_log = [
+                {
+                    "agent": event["actor"],
+                    "action": event["kind"],
+                    "payload": event.get("payload", {}),
+                }
+                for event in events
+                if event.get("actor") in agents
+            ]
+            task_text = "\n\n".join(
+                f"{task.task_id}\n{task.prompt}" for task in manifest.tasks
+            )
+            task_results = (
+                f"submitted={any(result['submissions'].values())} "
+                f"grade_method={result['grade']['method']} "
+                f"score={result['grade']['score']}/{result['grade']['max_score']}"
+            )
+            try:
+                coordination = score_coordination(
+                    request_fn=request_fn,
+                    task_text=task_text,
+                    agents=agents,
+                    schema=f"{system_variant}_team",
+                    chat_history=chat_history,
+                    action_log=action_log,
+                    task_results=task_results,
+                ).to_dict()
+                interaction = score_interaction_helpfulness(
+                    request_fn=request_fn,
+                    task_text=task_text,
+                    agents=agents,
+                    schema=f"{system_variant}_team",
+                    chat_history=chat_history,
+                    action_log=action_log,
+                    final_answer=json.dumps(
+                        result["submissions"],
+                        ensure_ascii=False,
+                    ),
+                    task_results=task_results,
+                ).to_dict()
+                result["coordination"] = coordination
+                result["interaction"] = interaction
+                result["metrics"].update(
+                    {
+                        "communication_score": coordination[
+                            "communication_score"
+                        ],
+                        "planning_score": coordination["planning_score"],
+                        "coordination_score": coordination[
+                            "coordination_score"
+                        ],
+                    }
+                )
+            except Exception as exc:
+                result["coordination_error"] = _sanitize_exception(exc)
+        if cce_request_fn is not None:
+            cce_rows = {}
+            events = result["memory"]["events"]
+            agents = [f"Agent_{index + 1}" for index in range(team_size)]
+            for task in manifest.tasks:
+                utility = result["grade"]["tasks"][task.task_id]["utility"]
+                if utility is None:
+                    continue
+                action_log = [
+                    {
+                        "turn": event["turn"],
+                        "agent": event["actor"],
+                        "action": event["kind"],
+                        "payload": event["payload"],
+                    }
+                    for event in events
+                    if event.get("task_id") == task.task_id
+                ]
+                cce_rows[task.task_id] = score_cce(
+                    request_fn=cce_request_fn,
+                    task_text=task.prompt,
+                    action_log=action_log,
+                    task_utility=utility,
+                    task_outcome=json.dumps(
+                        result["grade"]["tasks"][task.task_id],
+                        ensure_ascii=False,
+                    ),
+                    agents=agents,
+                    trace_partial_credit=0 < utility < 1,
+                ).to_dict()
+            result["cce"] = cce_rows
+            result["metrics"]["cce"] = (
+                sum(row["cce"] for row in cce_rows.values()) / len(cce_rows)
+                if cce_rows
+                else None
+            )
+            result["diagnostics"]["cce"] = result["metrics"]["cce"]
+            result["diagnostics"]["cce_status"] = "scored" if cce_rows else "grading_unavailable"
+        result["run"] = {
+            "mode": "live" if args.live else "mock",
+            "provider": args.provider,
+            "model": model if args.live else "mock",
+            "system_variant": f"{system_variant}_team",
+            "action_calling": result["action_calling"],
+            "manifest": str(args.contest_manifest),
+            "start_seat": args.start_seat,
+            "elapsed_seconds": (result.get("timing") or {}).get("elapsed_seconds"),
+            "started_at": (result.get("timing") or {}).get("started_at"),
+            "ended_at": (result.get("timing") or {}).get("ended_at"),
+        }
+        persist_contest_checkpoint(
+            result["session_checkpoint"],
+            json.dumps(result["memory"], ensure_ascii=False),
+        )
+        _write_json_atomic(out_dir / "contest_session.json", result)
+        elapsed = (result.get("timing") or {}).get("elapsed_seconds")
+        elapsed_text = (
+            f"{float(elapsed):.1f}s" if elapsed is not None else "N/A"
+        )
+        utility = result["grade"]["task_utility"]
+        utility_text = f"{utility:.3f}" if utility is not None else "unavailable"
+        print(
+            f"Contest session: {manifest.session_id} | "
+            f"variant={system_variant}_team | tasks={len(manifest.tasks)} | "
+            f"utility={utility_text} | "
+            f"api={result['budget']['api_calls_used']} | "
+            f"tokens={result['budget']['tokens_used']} | "
+            f"wall={elapsed_text} | "
+            f"CS={result.get('metrics', {}).get('coordination_score', 'N/A')}"
+        )
+        print(f"Saved: {out_dir / 'contest_session.json'}")
+        return
 
     print(
         f"Competition batch: {len(cases)} contests | schema={args.schema} | "

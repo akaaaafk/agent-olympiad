@@ -23,6 +23,7 @@ SchemaName = Literal[
     "centralized",
     "decentralized",
     "single_agent",
+    "vanilla_team",
     "open_table_coach",
     "debate",
     "self_consistency",
@@ -2006,6 +2007,111 @@ def run_open_table_coach(
     return result
 
 
+def _vanilla_system_prompt(env, agent_name: str, allowed_actions: set[str]) -> str:
+    actions = ", ".join(sorted(allowed_actions))
+    return (
+        f"You are {agent_name}, one member of a {env.team_size}-agent team. "
+        "Work with the team to solve the current problem.\n"
+        f"Available actions: {actions}.\n"
+        "Return exactly one structured action and no other text:\n"
+        "ACTION: <action> | PAYLOAD: <content>"
+    )
+
+
+def _vanilla_user_prompt(env, agent_name: str) -> str:
+    discussion = _discussion_history(env, max_entries=12)
+    shared_work = env.format_shared_work(max_entries=12) or "(empty)"
+    return (
+        f"PROBLEM\n{env._problem_statement()}\n\n"
+        f"PUBLIC DISCUSSION\n{discussion}\n\n"
+        f"PUBLIC WORK\n{shared_work}\n\n"
+        f"TURN {env.current_turn}/{env.max_turns}; "
+        f"API {env.api_calls}/{env.max_api_calls or 'unlimited'}; "
+        f"TOKENS {env.tokens_used}/{env.max_total_tokens or 'unlimited'}\n"
+        f"You are {agent_name}. Choose one action."
+    )
+
+
+def _apply_vanilla_response(
+    env,
+    agent_name: str,
+    response: str,
+    allowed_actions: set[str],
+) -> None:
+    action_type, _target, payload, error = parse_scoped_single_action(
+        response,
+        allowed_actions=allowed_actions,
+    )
+    if error:
+        env.record_rest(
+            agent_name,
+            "invalid single-action response",
+            metadata={"protocol_error": error},
+        )
+        return
+    assert action_type is not None
+    if action_type == "work":
+        env.record_work_artifact(agent_name, payload)
+    elif action_type == "rest":
+        env.record_rest(agent_name, payload)
+    else:
+        env.execute_action(agent_name, action_type, payload)
+
+
+def run_vanilla_team(
+    env, query_llm_fn: QueryFn, config: CollabConfig | None = None
+) -> dict:
+    """Minimal rules-off team baseline with one public action per model call."""
+    if env.rule_card is not None or env.rules_mode is not RulesMode.OFF:
+        raise ValueError("vanilla_team requires rules_mode=off")
+    config = config or CollabConfig()
+    _apply_budget_config(env, config)
+    query = _budgeted_query(env, query_llm_fn, config)
+    agents = [f"Agent_{index + 1}" for index in range(env.team_size)]
+    allowed_actions = {
+        "speak",
+        "work",
+        "rest",
+        "submit_final",
+        *env.get_available_tools(),
+    }
+    if _is_programming_contest(env):
+        allowed_actions.add("submit_code")
+
+    while not _should_stop(env) and env.can_begin_turn():
+        scheduled_turn = env.begin_turn()
+        for agent in agents:
+            if _should_stop(env) or env.current_turn != scheduled_turn:
+                break
+            try:
+                response = query(
+                    _vanilla_system_prompt(env, agent, allowed_actions),
+                    _vanilla_user_prompt(env, agent),
+                )
+            except TurnLimitExceededError:
+                break
+            _apply_vanilla_response(env, agent, response, allowed_actions)
+            if _should_stop(env):
+                break
+
+    if config.synthesize and not env.submitted and not env.api_budget_exhausted():
+        try:
+            answer = query(
+                "You are Agent_1. Return only the team's final answer, with no commentary.",
+                (
+                    f"PROBLEM\n{env._problem_statement()}\n\n"
+                    f"PUBLIC DISCUSSION\n{_discussion_history(env, max_entries=12)}\n\n"
+                    f"PUBLIC WORK\n{env.format_shared_work(max_entries=12) or '(empty)'}"
+                ),
+            )
+        except TurnLimitExceededError:
+            answer = ""
+        if answer.strip():
+            env.execute_action("Agent_1", "submit_final", answer.strip())
+
+    return _result(env, "vanilla_team")
+
+
 def _result(env, schema: str) -> dict:
     fallback_roster = [
         {
@@ -2054,6 +2160,7 @@ SCHEMAS: dict[SchemaName, Callable] = {
     "centralized": run_centralized,
     "decentralized": run_decentralized,
     "single_agent": run_single_agent,
+    "vanilla_team": run_vanilla_team,
     "open_table_coach": run_open_table_coach,
     "debate": run_debate,
     "self_consistency": run_self_consistency,

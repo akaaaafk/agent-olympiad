@@ -19,6 +19,12 @@ from contest_budget import (
 from contest_rules import get_contest_rules
 from deliberation import DELIBERATION_ACTIONS, DeliberationLedger
 from rules import RuleCardError, RulesBaseline, RulesMode
+from tool_registry import (
+    ACTION_REGISTRY,
+    COMPETITION_ACTION_REGISTRY,
+    COMPETITION_TOOL_REGISTRY,
+    dispatch_environment_action,
+)
 from tools_search import live_web_search, looks_like_answer_lookup
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -48,35 +54,6 @@ TEAM_SIZE_MATRIX = {
     "codeforces": 3,
 }
 
-COMPETITION_TOOL_REGISTRY = {
-    "purple_comet": ["use_calculator"],
-    "fyziklani": ["use_calculator", "web_search"],
-    "iiot": ["execute_code"],
-    "icpc": ["execute_code"],
-    "codeforces": ["execute_code"],
-    "mcm": ["execute_code", "web_search"],
-    "icm": ["execute_code", "web_search"],
-    "ieo_business_case": ["web_search"],
-    "jessup": ["web_search"],
-    "iypt": ["web_search", "execute_code", "use_calculator"],
-    "ijso_practical": ["use_calculator", "read_lab_equipment"],
-    "ioaa_group": ["use_calculator", "read_star_chart"],
-    "iol_team": [],
-    "arml_power": [],
-    "arml_national_team": [],
-    "arml_national_power": [],
-    "arml_local": [],
-    "hmmt_team": [],
-    "hmmt_guts": [],
-    "wsc_writing": [],
-}
-
-COMPETITION_ACTION_REGISTRY = {
-    "icpc": ["submit_code"],
-    "iiot": ["submit_code"],
-    "codeforces": ["submit_code"],
-}
-
 ALL_ACTIONS = {
     "speak",
     "write_scratchpad",
@@ -87,8 +64,11 @@ ALL_ACTIONS = {
     "use_calculator",
     "execute_code",
     "web_search",
-    "read_lab_equipment",
-    "read_star_chart",
+    *{
+        name
+        for name, spec in ACTION_REGISTRY.items()
+        if spec.pack != "common"
+    },
     "query_rules",
 } | DELIBERATION_ACTIONS
 
@@ -208,17 +188,31 @@ class OlympiadEnvironment:
         self.remote_submission_source: str | None = None
         self.rule_violations: list[str] = []
         self.contest_rules = get_contest_rules(competition_id)
+        self.problem_data = self._load_problem()
 
         if self.rule_card is not None and self.rules_mode is RulesMode.ENFORCED:
             self.unavailable_declared_tools = sorted(
-                set(self.rule_card.allowed_tools) - TOOL_ACTIONS
+                {
+                    tool
+                    for tool in self.rule_card.allowed_tools
+                    if tool not in TOOL_ACTIONS
+                    or not self._tool_has_runtime_resource(tool)
+                }
             )
             self.allowed_tools = [
-                tool for tool in self.rule_card.allowed_tools if tool in TOOL_ACTIONS
+                tool
+                for tool in self.rule_card.allowed_tools
+                if tool in TOOL_ACTIONS and self._tool_has_runtime_resource(tool)
             ]
         else:
             self.unavailable_declared_tools = []
-            self.allowed_tools = list(COMPETITION_TOOL_REGISTRY.get(competition_id, []))
+            candidates = list(COMPETITION_TOOL_REGISTRY.get(competition_id, ()))
+            self.allowed_tools = [
+                tool for tool in candidates if self._tool_has_runtime_resource(tool)
+            ]
+            self.unavailable_declared_tools = sorted(
+                set(candidates) - set(self.allowed_tools)
+            )
         # Prefer tools declared in the rules audit when registry is empty but
         # rules list encoded tools (keeps DATA_COLLECTION + contest_rules aligned).
         if (
@@ -227,9 +221,19 @@ class OlympiadEnvironment:
             and self.contest_rules
             and self.contest_rules.encoded_tools
         ):
-            self.allowed_tools = list(self.contest_rules.encoded_tools)
-        self.problem_data = self._load_problem()
-
+            encoded = list(self.contest_rules.encoded_tools)
+            self.allowed_tools = [
+                tool for tool in encoded if self._tool_has_runtime_resource(tool)
+            ]
+            self.unavailable_declared_tools = sorted(
+                set(encoded) - set(self.allowed_tools)
+            )
+        # verify is an internal history/introspection action, not an external
+        # contest resource. Any task that can execute code can re-open that
+        # code and its visible execution/submission history.
+        if "execute_code" in self.allowed_tools and "verify" not in self.allowed_tools:
+            execute_index = self.allowed_tools.index("execute_code")
+            self.allowed_tools.insert(execute_index + 1, "verify")
         problem_team_size = self.problem_data.get("team_size")
         self.team_size = self._resolve_team_size(
             problem_team_size,
@@ -299,6 +303,28 @@ class OlympiadEnvironment:
 
     def get_available_tools(self) -> list[str]:
         return list(self.allowed_tools)
+
+    def _tool_has_runtime_resource(self, tool: str) -> bool:
+        role = {
+            "read_lab_equipment": "lab",
+            "read_star_chart": "star",
+        }.get(tool)
+        if role is None:
+            return True
+        fixtures = self.problem_data.get("tool_fixtures") or {}
+        if role in fixtures or any(role in str(key).lower() for key in fixtures):
+            return True
+        for asset in self.problem_data.get("assets") or []:
+            if not isinstance(asset, dict):
+                continue
+            path_text = str(asset.get("path") or "")
+            label = f"{asset.get('role', '')} {path_text}".lower()
+            path = Path(path_text)
+            if not path.is_absolute():
+                path = Path(REPO_ROOT) / path
+            if role in label and path.is_file():
+                return True
+        return False
 
     def rules_metadata(self) -> dict[str, Any]:
         metadata = self.rules_baseline.metadata()
@@ -1042,43 +1068,19 @@ class OlympiadEnvironment:
                     self.submitted = True
                     self.submitted_by = agent_name
                     result = f"Submission finalized by {agent_name}."
-        elif action_type == "submit_code":
-            duplicate_error = self._unchanged_failed_source_error(payload)
-            if duplicate_error:
-                result = duplicate_error
-            else:
-                result = self._submit_code(payload, agent_name=agent_name)
-                self._record_shared_code_submission(agent_name, payload, result)
-        elif action_type == "use_calculator":
-            result = self._run_calculator(payload)
-        elif action_type == "execute_code":
-            result = self._run_code(payload)
-        elif action_type == "web_search":
-            result = self._run_web_search(payload)
-        elif action_type == "read_lab_equipment":
-            loaded = self._tool_asset_text("lab", payload)
-            result = (
-                f"[read_lab_equipment]\n{loaded}"
-                if loaded
-                else (
-                    f"[read_lab_equipment] No fixture for {payload!r}. "
-                    "Add problem assets/tool_fixtures with lab readings."
-                )
-            )
-        elif action_type == "read_star_chart":
-            loaded = self._tool_asset_text("star", payload)
-            result = (
-                f"[read_star_chart]\n{loaded}"
-                if loaded
-                else (
-                    f"[read_star_chart] No fixture for {payload!r}. "
-                    "Add problem assets/tool_fixtures with chart data."
-                )
-            )
-        elif action_type == "query_rules":
-            result = self.query_rules(agent_name)
         else:
-            result = f"Operational error: action '{action_type}' not implemented."
+            dispatched = dispatch_environment_action(
+                self,
+                agent_name=agent_name,
+                action_name=action_type,
+                payload=payload,
+            )
+            if dispatched is not NotImplemented:
+                result = str(dispatched)
+            elif action_type == "query_rules":
+                result = self.query_rules(agent_name)
+            else:
+                result = f"Operational error: action '{action_type}' not implemented."
 
         if not result.startswith("Deliberation error:"):
             self.communication.record(agent_name=agent_name, action_type=action_type)
@@ -1364,23 +1366,20 @@ class OlympiadEnvironment:
         return f"Calculator output: {self._safe_calculate(payload)}"
 
     def _run_code(self, payload: str) -> str:
+        from isolated_python import IsolationUnavailable, run_python_isolated
         try:
-            proc = subprocess.run(
-                [sys.executable, "-c", payload],
-                capture_output=True,
-                text=True,
-                timeout=5,
-                cwd=REPO_ROOT,
-            )
+            proc = run_python_isolated(payload)
+            if proc.timed_out:
+                return "Code error: execution timed out after 5 seconds."
+            if proc.output_limited:
+                return "Code error: output limit exceeded."
             if proc.returncode == 0:
                 output = (proc.stdout or "").strip() or "(no stdout)"
                 return f"Code output:\n{output}"
             stderr = (proc.stderr or proc.stdout or "unknown error").strip()
             return f"Code error (exit {proc.returncode}):\n{stderr}"
-        except subprocess.TimeoutExpired:
-            return "Code error: execution timed out after 5 seconds."
-        except OSError as exc:
-            return f"Code error: {exc}"
+        except IsolationUnavailable as exc:
+            return f"Operational error: {exc}"
 
     @staticmethod
     def _normalize_answer(text: str) -> str:

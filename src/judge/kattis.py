@@ -36,12 +36,15 @@ class KattisClient:
         config_path: str | Path | None = None,
         session: Any | None = None,
         timeout: float = 10.0,
+        min_submit_interval: float = 2.0,
     ) -> None:
         self.config = config or self._load_config(config_path)
         self.session = session or requests.Session()
         self.timeout = timeout
+        self.min_submit_interval = max(0.0, min_submit_interval)
         self.headers = {"User-Agent": "agent-olympiad-kattis/1.0"}
         self._logged_in = False
+        self._last_submit_at = 0.0
 
     @staticmethod
     def _load_config(path: str | Path | None) -> configparser.ConfigParser:
@@ -90,6 +93,11 @@ class KattisClient:
         try:
             self._login()
             language, filename = self._language(request.language)
+            wait = self.min_submit_interval - (
+                time.monotonic() - self._last_submit_at
+            )
+            if wait > 0:
+                time.sleep(wait)
             response = self.session.post(
                 self.config["kattis"]["submissionurl"],
                 data={
@@ -111,13 +119,23 @@ class KattisClient:
                 headers=self.headers,
                 timeout=self.timeout,
             )
+            self._last_submit_at = time.monotonic()
             if response.status_code != 200:
                 raise RuntimeError(
                     f"Kattis submission failed with HTTP {response.status_code}"
                 )
             match = re.search(r"Submission ID:\s*(\d+)", response.text)
             if match is None:
-                raise RuntimeError("Kattis response did not include a submission ID")
+                response_summary = re.sub(r"<[^>]+>", " ", response.text)
+                response_summary = " ".join(response_summary.split())[:300]
+                detail = (
+                    f": {response_summary}"
+                    if response_summary
+                    else " (empty response)"
+                )
+                raise RuntimeError(
+                    "Kattis response did not include a submission ID" + detail
+                )
             run_id = match.group(1)
             return RemoteRun(
                 run_id=run_id,

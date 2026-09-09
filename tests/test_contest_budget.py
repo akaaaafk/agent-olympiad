@@ -18,12 +18,12 @@ class ContestBudgetTests(unittest.TestCase):
     def test_arml_uses_standardized_turn_budget(self):
         budget = resolve_contest_budget("arml_local")
         self.assertEqual(budget.duration_minutes, 60)
-        self.assertEqual(budget.max_turns, 30)
+        self.assertEqual(budget.max_turns, 50)
 
     def test_icpc_has_output_cap_and_five_hour_clock(self):
         budget = resolve_contest_budget("icpc")
         self.assertEqual(budget.duration_minutes, 300)
-        self.assertEqual(budget.max_turns, 30)
+        self.assertEqual(budget.max_turns, 50)
         self.assertEqual(budget.max_output_tokens_per_call, 4096)
 
     def test_runtime_override(self):

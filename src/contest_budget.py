@@ -1,6 +1,6 @@
 """Per-competition time / API / token budgets.
 
-All competitions use a standardized 30-turn experimental budget. Official
+All competitions use a standardized 50-turn experimental budget. Official
 durations remain metadata for simulated-clock reporting, not a second stop.
 An explicit max_turns still overrides the standardized default.
 """
@@ -9,7 +9,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, replace
 
-STANDARD_MAX_TURNS = 30
+STANDARD_MAX_TURNS = 50
 
 
 @dataclass(frozen=True)
