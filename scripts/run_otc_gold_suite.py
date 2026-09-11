@@ -8,7 +8,6 @@ packets). Excludes CTF / NYU / programming contests by default.
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import re
 import subprocess
@@ -20,6 +19,14 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 BENCH_ROOT = REPO_ROOT / "data" / "benchmarks"
 MANIFEST_ROOT = REPO_ROOT / "data" / "contest_manifests" / "generated"
 PYTHON = Path(r"e:\agent_olympiad\.venv\Scripts\python.exe")
+
+sys.path.insert(0, str(REPO_ROOT / "src"))
+from contest_config import BASELINE_NAMES, BASELINE_ALIASES, canonical_baseline
+from contest_batch_summary import summarize
+from contest_budget import resolve_contest_budget  # noqa: E402
+from rules.loader import load_rule_card  # noqa: E402
+from run_competition_batch import inspect_contest_run  # noqa: E402
+from contest_run_identity import RunCompatibilityError, inspect_contest_output  # noqa: E402
 
 # Deterministic structured gold; no CTF / NYU / code contests.
 DEFAULT_COMPETITIONS = (
@@ -110,12 +117,45 @@ GROUPED_QUESTION_COMPETITIONS = frozenset(
     {"science_bowl", "qanta", "mystery_hunt"}
 )
 
-# Budget presets: (max_turns, max_api_calls)
-BUDGETS: dict[str, tuple[int, int]] = {
-    competition: (50, 151)
-    for competition in TASK_FAMILIES
-}
-DEFAULT_BUDGET = (50, 151)
+def budget_for(
+    competition: str, team_size: int, system_variant: str = "otc"
+) -> tuple[int, int]:
+    """(max_turns, max_api_calls) for one competition.
+
+    Turns come from the official clock (5 min/turn, cap 90, see
+    contest_budget.py); API calls allow one call per agent per turn plus the
+    single coach call. The rule-card ``otc`` baseline spends one private think
+    call plus one action per seat per turn and one turn-0 Coach call.
+    """
+    max_turns = resolve_contest_budget(competition).max_turns
+    if canonical_baseline(system_variant) == "otc":
+        card = load_rule_card(competition)
+        think_calls = 1
+        if card is not None:
+            turn_policy = (
+                (card.simulation.get("open_table_coach") or {}).get("contestant_turn_policy")
+                or {}
+            )
+            think_calls = int(turn_policy.get("private_think_calls_per_turn") or 1)
+        return max_turns, max_turns * team_size * (1 + think_calls) + 1
+    return max_turns, max_turns * team_size + 1
+
+
+def team_size_for(competition: str, requested: int | None, system_variant: str) -> int:
+    """``otc`` runs the card's default roster unless --team-size is inside its range."""
+    if canonical_baseline(system_variant) != "otc":
+        return requested or 3
+    card = load_rule_card(competition)
+    if card is None:
+        raise SystemExit(f"otc needs data/rules/{competition}/collaboration.json")
+    if requested is None:
+        return card.team_size_default
+    if not card.team_size_min <= requested <= card.team_size_max:
+        raise SystemExit(
+            f"--team-size {requested} is outside the {competition} card range "
+            f"{card.team_size_min}-{card.team_size_max}"
+        )
+    return requested
 
 # Known OCR/diagram repairs for ARML Local packets.
 ARML_PROMPT_OVERRIDES: dict[str, dict[str, str]] = {
@@ -261,26 +301,8 @@ def write_manifests(competitions: list[str]) -> list[Path]:
     return paths
 
 
-def case_complete(out_dir: Path) -> bool:
-    session = out_dir / "contest_session.json"
-    if not session.is_file():
-        return False
-    try:
-        payload = json.loads(session.read_text(encoding="utf-8"))
-    except json.JSONDecodeError:
-        return False
-    grade = payload.get("grade") or {}
-    metrics = payload.get("metrics") or {}
-    if "task_utility" not in metrics:
-        return False
-    if grade.get("graded"):
-        return True
-    # Finished rubric-only / unsupported-gold sessions still count as complete.
-    tasks = grade.get("tasks") or {}
-    return bool(tasks) and all(
-        (not item.get("graded")) and item.get("status") == "unavailable"
-        for item in tasks.values()
-    )
+def case_complete(out_dir: Path, expected_identity: dict) -> bool:
+    return inspect_contest_output(out_dir, expected_identity) == "complete"
 
 
 def run_one(
@@ -294,10 +316,6 @@ def run_one(
 ) -> dict:
     problem_id = manifest.stem
     out_dir = out_root / problem_id
-    out_dir.mkdir(parents=True, exist_ok=True)
-    if case_complete(out_dir):
-        return {"problem_id": problem_id, "status": "skipped_complete", "out_dir": str(out_dir)}
-
     cmd = [
         str(PYTHON),
         "-u",
@@ -326,6 +344,19 @@ def run_one(
         "--output",
         str(out_dir),
     ]
+    try:
+        output_state, expected_identity = inspect_contest_run(cmd[3:])
+    except (ValueError, SystemExit) as exc:
+        return {
+            "problem_id": problem_id, "status": "blocked",
+            "reason": str(exc), "out_dir": str(out_dir),
+        }
+    if output_state == "complete":
+        return {"problem_id": problem_id, "status": "skipped_complete",
+                "out_dir": str(out_dir), "run_identity": expected_identity}
+    if output_state == "resume":
+        cmd.append("--resume")
+    out_dir.mkdir(parents=True, exist_ok=True)
     # The baseline decides the review workflow; no override is passed.
     log_path = out_dir / "run.log"
     with log_path.open("a", encoding="utf-8") as log:
@@ -338,81 +369,20 @@ def run_one(
             stderr=subprocess.STDOUT,
             check=False,
         )
-    status = "ok" if proc.returncode == 0 and case_complete(out_dir) else "error"
+    reason = ""
+    try:
+        status = "ok" if proc.returncode == 0 and case_complete(out_dir, expected_identity) else "error"
+    except RunCompatibilityError as exc:
+        status, reason = "error", str(exc)
     return {
         "problem_id": problem_id,
         "status": status,
+        "run_identity": expected_identity,
         "returncode": proc.returncode,
+        "reason": reason,
         "out_dir": str(out_dir),
     }
 
-
-def summarize(out_root: Path, problem_ids: list[str]) -> Path:
-    rows = []
-    for problem_id in problem_ids:
-        session_path = out_root / problem_id / "contest_session.json"
-        competition = ""
-        manifest_path = MANIFEST_ROOT / f"{problem_id}.json"
-        if manifest_path.is_file():
-            try:
-                competition = json.loads(manifest_path.read_text(encoding="utf-8")).get(
-                    "competition_id", ""
-                )
-            except json.JSONDecodeError:
-                competition = ""
-        row = {
-            "competition_id": competition,
-            "problem_id": problem_id,
-            "status": "missing",
-            "score": "",
-            "max_score": "",
-            "task_utility": "",
-            "coordination_score": "",
-            "turns_used": "",
-            "api_calls_used": "",
-            "wall_seconds": "",
-            "started_at": "",
-            "ended_at": "",
-            "deadline_submission": "",
-        }
-        if session_path.is_file():
-            try:
-                payload = json.loads(session_path.read_text(encoding="utf-8"))
-                grade = payload.get("grade") or {}
-                metrics = payload.get("metrics") or {}
-                diag = payload.get("diagnostics") or {}
-                budget = payload.get("budget") or {}
-                timing = payload.get("timing") or {}
-                wall = timing.get("elapsed_seconds")
-                if wall is None:
-                    wall = budget.get("wall_seconds_used")
-                row.update(
-                    {
-                        "status": "ok" if grade.get("graded") else "ungraded",
-                        "score": grade.get("score", ""),
-                        "max_score": grade.get("max_score", ""),
-                        "task_utility": metrics.get("task_utility", ""),
-                        "coordination_score": metrics.get("coordination_score", ""),
-                        "turns_used": budget.get("turns_used", ""),
-                        "api_calls_used": budget.get("api_calls_used", ""),
-                        "wall_seconds": wall if wall is not None else "",
-                        "started_at": timing.get("started_at")
-                        or budget.get("wall_started_at")
-                        or "",
-                        "ended_at": timing.get("ended_at") or "",
-                        "deadline_submission": diag.get("deadline_submission", ""),
-                    }
-                )
-            except json.JSONDecodeError:
-                row["status"] = "corrupt"
-        rows.append(row)
-    path = out_root / "summary.tsv"
-    fields = list(rows[0].keys()) if rows else ["problem_id", "status"]
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields, delimiter="\t")
-        writer.writeheader()
-        writer.writerows(rows)
-    return path
 
 
 def main() -> int:
@@ -425,32 +395,32 @@ def main() -> int:
     parser.add_argument(
         "--output",
         type=Path,
-        default=REPO_ROOT / "results" / "otc_gold_suite_20260903",
+        default=REPO_ROOT / "results" / "otc_gold_suite_v5",
     )
     parser.add_argument(
         "--system-variant",
-        default="strategic_team",
-        choices=[
-            "single_agent",
-            "decentralized",
-            "centralized",
-            "open_table_coach",
-            "open_table_coach_memory",
-            # legacy aliases
-            "strategic_team",
-            "vanilla_team",
-        ],
+        default="otc",
+        choices=(*BASELINE_NAMES, *BASELINE_ALIASES),
     )
-    parser.add_argument("--team-size", type=int, default=3)
+    parser.add_argument(
+        "--team-size",
+        type=int,
+        default=None,
+        help="Seats per team (default 3; for otc the rule card's default roster).",
+    )
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument(
         "--skip-existing-roots",
-        default="",
-        help="Comma-separated result roots whose completed cases should be skipped "
-        "(copied/linked by problem_id presence via case_complete in --output only; "
-        "use same --output to resume).",
+        default=None,
+        help="Retired option; reuse requires the same --output and matching run identity.",
     )
     args = parser.parse_args()
+    if args.skip_existing_roots is not None:
+        parser.error(
+            "--skip-existing-roots is retired: cross-root skipping was not implemented. "
+            "Use the same --output to resume identity-matched runs, or a fresh directory."
+        )
+    args.system_variant = canonical_baseline(args.system_variant)
 
     competitions = [item.strip() for item in args.competitions.split(",") if item.strip()]
     manifests = write_manifests(competitions)
@@ -471,25 +441,29 @@ def main() -> int:
     results = []
     for index, manifest in enumerate(manifests, start=1):
         competition = json.loads(manifest.read_text(encoding="utf-8"))["competition_id"]
-        max_turns, max_api = BUDGETS.get(competition, DEFAULT_BUDGET)
+        team_size = team_size_for(competition, args.team_size, args.system_variant)
+        max_turns, max_api = budget_for(competition, team_size, args.system_variant)
         print(
             f"[{index}/{len(manifests)}] {manifest.stem} "
-            f"variant={args.system_variant} (turns={max_turns}, api={max_api})",
+            f"variant={args.system_variant} (team={team_size}, turns={max_turns}, api={max_api})",
             flush=True,
         )
         result = run_one(
             manifest,
             out_root=args.output,
-            team_size=args.team_size,
+            team_size=team_size,
             max_turns=max_turns,
             max_api_calls=max_api,
             system_variant=args.system_variant,
         )
-        print(f"  -> {result['status']}", flush=True)
+        print(f"  -> {result['status']} {result.get('reason', '')}", flush=True)
         results.append(result)
-        summarize(args.output, [path.stem for path in manifests])
+        summarize(args.output, [path.stem for path in manifests], run_results=results)
+        if result["status"] == "blocked":
+            # Do not export incompatible old sessions as this batch's results.
+            return 2
 
-    summary = summarize(args.output, [path.stem for path in manifests])
+    summary = summarize(args.output, [path.stem for path in manifests], run_results=results)
     ok = sum(1 for row in results if row["status"] in {"ok", "skipped_complete"})
     print(f"DONE {ok}/{len(results)} complete | summary={summary}", flush=True)
     return 0 if ok == len(results) else 1

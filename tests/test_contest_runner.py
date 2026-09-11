@@ -60,6 +60,8 @@ def answer_hash(task_id: str, content: str, parent_hash: str = "") -> str:
     return hashlib.sha256(value.encode("utf-8")).hexdigest()
 
 
+from contest_feature_fixtures import review_ablation_config, run_with_test_plan
+
 class ContestRunnerTests(unittest.TestCase):
     def test_direct_message_is_delivered_only_to_sender_and_recipient(self) -> None:
         manifest = ContestManifest("icpc", "session", (task("q1"),))
@@ -73,8 +75,7 @@ class ContestRunnerTests(unittest.TestCase):
             session_id="session",
             competition_id="icpc",
         )
-        config = ContestRunConfig(
-            system_variant="strategic",
+        config = review_ablation_config(
             team_size=3,
             max_turns=10,
         )
@@ -110,7 +111,7 @@ class ContestRunnerTests(unittest.TestCase):
         )
         session.select_task("q1")
         memory = ContestMemory(run_id="run", session_id="session", competition_id="icpc")
-        config = ContestRunConfig(system_variant="strategic", team_size=4, max_turns=10)
+        config = review_ablation_config(team_size=4, max_turns=10)
         apply = lambda arguments: _apply_action(  # noqa: E731
             action="direct_message",
             arguments=arguments,
@@ -151,8 +152,7 @@ class ContestRunnerTests(unittest.TestCase):
         strategic = _actions_for_agent(
             actions,
             session,
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=3,
                 max_turns=10,
             ),
@@ -279,7 +279,7 @@ class ContestRunnerTests(unittest.TestCase):
                 tool_calls=(next(calls),),
             )
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: self.fail("prompt fallback was used"),
             ContestRunConfig(
@@ -330,7 +330,7 @@ class ContestRunnerTests(unittest.TestCase):
                 ),
             )
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: self.fail("prompt fallback was used"),
             ContestRunConfig(
@@ -372,11 +372,10 @@ class ContestRunnerTests(unittest.TestCase):
                 tool_calls=(next(calls),),
             )
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: self.fail("prompt fallback was used"),
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=2,
                 max_turns=2,
                 max_api_calls=4,
@@ -407,7 +406,7 @@ class ContestRunnerTests(unittest.TestCase):
             prompts.append(system + "\n" + user)
             return next(responses)
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             query,
             ContestRunConfig(
@@ -439,7 +438,7 @@ class ContestRunnerTests(unittest.TestCase):
             ]
         )
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
             ContestRunConfig(
@@ -464,11 +463,10 @@ class ContestRunnerTests(unittest.TestCase):
             systems.append(system)
             return '{"action":"rest","arguments":{"reason":"plan"}}'
 
-        run_contest(
+        run_with_test_plan(
             manifest,
             query,
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=1,
                 max_turns=1,
                 max_api_calls=1,
@@ -506,12 +504,11 @@ class ContestRunnerTests(unittest.TestCase):
             coach_prompts.append(f"{system}\n{user}")
             return "{}"
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             query,
-            ContestRunConfig(
-                system_variant="strategic",
-                team_size=1,
+            review_ablation_config(
+                team_size=2,
                 max_turns=1,
                 max_api_calls=2,
             ),
@@ -537,14 +534,13 @@ class ContestRunnerTests(unittest.TestCase):
         )
         systems: list[str] = []
 
-        run_contest(
+        run_with_test_plan(
             manifest,
             lambda system, _user: (
                 systems.append(system)
                 or '{"action":"rest","arguments":{"reason":"plan"}}'
             ),
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=1,
                 max_turns=1,
                 max_api_calls=1,
@@ -555,7 +551,7 @@ class ContestRunnerTests(unittest.TestCase):
         self.assertIn("SHORT-ANSWER WORKFLOW", systems[0])
         self.assertNotIn("MANDATORY PROGRAMMING WORKFLOW", systems[0])
 
-    def test_dynamic_coach_brief_is_shared_persisted_and_budgeted(self) -> None:
+    def test_leader_plan_is_shared_persisted_and_budgeted(self) -> None:
         manifest = ContestManifest("math", "arml_local", (task("q1"), task("q2")))
         coach_calls: list[str] = []
         agent_prompts: list[str] = []
@@ -566,12 +562,12 @@ class ContestRunnerTests(unittest.TestCase):
                 {
                     "summary": "Split drafting and cross-review.",
                     "work_assignments": {
-                        "Agent_1": ["q1"],
+                        "Agent_1": ["q1", "q2"],
                         "Agent_2": ["q2"],
                     },
                     "review_assignments": {
                         "Agent_1": ["q2"],
-                        "Agent_2": ["q1"],
+                        "Agent_2": ["q1", "q2"],
                     },
                     "task_order": ["q1", "q2"],
                     "switch_conditions": ["Switch after approval."],
@@ -583,11 +579,10 @@ class ContestRunnerTests(unittest.TestCase):
             agent_prompts.append(f"{system}\n{user}")
             return '{"action":"rest","arguments":{"reason":"follow coach"}}'
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             query,
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=2,
                 max_turns=1,
                 max_api_calls=3,
@@ -597,17 +592,17 @@ class ContestRunnerTests(unittest.TestCase):
 
         self.assertEqual(len(coach_calls), 1)
         self.assertIn('"problem_id": "q1"', coach_calls[0])
-        self.assertIn('"work_tasks": ["q1"]', agent_prompts[0])
+        self.assertIn('"work_tasks": ["q1", "q2"]', agent_prompts[0])
         self.assertEqual(
             result["precontest_coach_plan"]["work_assignments"]["Agent_1"],
-            ["q1"],
+            ["q1", "q2"],
         )
         self.assertEqual(result["budget"]["api_calls_used"], 3)
         self.assertTrue(
             any(
                 event["kind"] == "coach_personal_assignment"
                 and event["payload"]["agent"] == "Agent_1"
-                and event["payload"]["work_tasks"] == ["q1"]
+                and event["payload"]["work_tasks"] == ["q1", "q2"]
                 for event in result["memory"]["events"]
             )
         )
@@ -649,11 +644,10 @@ class ContestRunnerTests(unittest.TestCase):
             ]
         )
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=2,
                 max_turns=3,
                 max_api_calls=7,
@@ -688,14 +682,13 @@ class ContestRunnerTests(unittest.TestCase):
             }
         )
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: (
                 '{"action":"work","arguments":{"content":"best available answer"}}'
             ),
-            ContestRunConfig(
-                system_variant="strategic",
-                team_size=1,
+            review_ablation_config(
+                team_size=2,
                 max_turns=1,
                 max_api_calls=2,
             ),
@@ -746,11 +739,10 @@ class ContestRunnerTests(unittest.TestCase):
                 tool_calls=(next(calls),),
             )
 
-        run_contest(
+        run_with_test_plan(
             manifest,
             lambda _system, _user: self.fail("prompt fallback was used"),
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=2,
                 max_turns=1,
                 max_api_calls=3,
@@ -778,7 +770,7 @@ class ContestRunnerTests(unittest.TestCase):
             ]
         )
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
             ContestRunConfig(
@@ -814,7 +806,7 @@ class ContestRunnerTests(unittest.TestCase):
             ]
         )
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
             ContestRunConfig(
@@ -851,11 +843,10 @@ class ContestRunnerTests(unittest.TestCase):
             ]
         )
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=2,
                 max_turns=5,
                 max_api_calls=9,
@@ -888,11 +879,10 @@ class ContestRunnerTests(unittest.TestCase):
             ]
         )
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=2,
                 max_turns=2,
                 max_api_calls=4,
@@ -917,11 +907,10 @@ class ContestRunnerTests(unittest.TestCase):
             ]
         )
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=1,
                 max_turns=3,
                 max_api_calls=3,
@@ -949,11 +938,10 @@ class ContestRunnerTests(unittest.TestCase):
                 '{"action":"submit","arguments":{"answer":"42"}}',
             ]
         )
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=2,
                 max_turns=4,
                 max_api_calls=7,
@@ -993,11 +981,10 @@ class ContestRunnerTests(unittest.TestCase):
             prompts.append(user)
             return next(responses)
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             query,
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=2,
                 max_turns=3,
                 max_api_calls=5,
@@ -1030,11 +1017,10 @@ class ContestRunnerTests(unittest.TestCase):
             ]
         )
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=2,
                 max_turns=4,
                 max_api_calls=6,
@@ -1070,11 +1056,10 @@ class ContestRunnerTests(unittest.TestCase):
             self.assertEqual(action, "submit_code")
             return {"verdict": "WA", "valid": True}
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=1,
                 max_turns=7,
                 max_api_calls=7,
@@ -1105,7 +1090,7 @@ class ContestRunnerTests(unittest.TestCase):
                 '{"action":"submit_code","arguments":{"code":"code-3"}}',
             ]
         )
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
             ContestRunConfig(
@@ -1132,7 +1117,7 @@ class ContestRunnerTests(unittest.TestCase):
         }
         surfaces = {
             name: set(
-                run_contest(
+                run_with_test_plan(
                     manifest,
                     lambda _system, _user: '{"action":"rest","arguments":{}}',
                     ContestRunConfig(system_variant=name, team_size=size, max_turns=1),
@@ -1142,8 +1127,6 @@ class ContestRunnerTests(unittest.TestCase):
                 ("single_agent", 1),
                 ("decentralized", 3),
                 ("centralized", 3),
-                ("open_table_coach", 3),
-                ("open_table_coach_memory", 3),
             )
         }
         for name, names in surfaces.items():
@@ -1154,24 +1137,20 @@ class ContestRunnerTests(unittest.TestCase):
             surfaces["centralized"] - core,
             {"inspect_problem", "triage_problem", "direct_message", "assign_problem"},
         )
-        self.assertEqual(
-            surfaces["open_table_coach"] - core,
-            {"inspect_problem", "triage_problem", "direct_message"},
-        )
-        self.assertEqual(
-            surfaces["open_table_coach_memory"] - surfaces["open_table_coach"],
-            {"remember", "recall", "share_note"},
-        )
 
     def test_legacy_variant_names_are_aliases_and_team_size_rules_hold(self) -> None:
         self.assertEqual(
             ContestRunConfig("vanilla", 3, 1).system_variant, "decentralized"
         )
-        self.assertEqual(
-            ContestRunConfig("strategic_team", 3, 1).system_variant, "open_table_coach"
-        )
-        self.assertFalse(ContestRunConfig("strategic", 3, 1).features.memory_actions)
-        self.assertTrue(ContestRunConfig("strategic", 3, 1).review_required)
+        from contest_config import canonical_baseline
+        from rules.loader import load_rule_card
+        for name in ("otc", "OTC", "strategic", "strategic_team", "open_table_coach", "open_table_coach_memory"):
+            self.assertEqual(canonical_baseline(name), "otc")
+            config = ContestRunConfig(name, 3, 1, rule_card=load_rule_card("icpc"))
+            self.assertEqual(config.system_variant, "otc")
+            self.assertEqual(config.features.coach, "card")
+            self.assertTrue(config.features.memory_actions)
+            self.assertTrue(config.review_required)
         self.assertFalse(ContestRunConfig("centralized", 3, 1).review_required)
         with self.assertRaisesRegex(ValueError, "single_agent requires team_size=1"):
             ContestRunConfig("single_agent", 3, 1)
@@ -1190,7 +1169,7 @@ class ContestRunnerTests(unittest.TestCase):
             ]
         )
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
             ContestRunConfig(
@@ -1246,11 +1225,10 @@ class ContestRunnerTests(unittest.TestCase):
                 "valid": True,
             }
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=2,
                 max_turns=5,
                 max_api_calls=9,
@@ -1305,11 +1283,10 @@ class ContestRunnerTests(unittest.TestCase):
                 return {"result": "1", "valid": True}
             return {"verdict": "AC", "valid": True}
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: self.fail("prompt fallback was used"),
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=2,
                 max_turns=5,
                 max_api_calls=9,
@@ -1370,11 +1347,10 @@ class ContestRunnerTests(unittest.TestCase):
                 '{"action":"finish_contest","arguments":{}}',
             ]
         )
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=1,
                 max_turns=5,
                 max_api_calls=5,
@@ -1399,11 +1375,10 @@ class ContestRunnerTests(unittest.TestCase):
                 '{"action":"speak","arguments":{"content":"continue working"}}',
             ]
         )
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=2,
                 max_turns=2,
                 max_api_calls=4,
@@ -1430,7 +1405,7 @@ class ContestRunnerTests(unittest.TestCase):
             raise InterruptedError("simulated process stop")
 
         with self.assertRaises(InterruptedError):
-            run_contest(
+            run_with_test_plan(
                 manifest,
                 lambda _system, _user: (
                     '{"action":"select_problem","arguments":{"problem_id":"q1"}}'
@@ -1450,7 +1425,7 @@ class ContestRunnerTests(unittest.TestCase):
                 '{"action":"submit","arguments":{"answer":"final"}}',
             ]
         )
-        resumed = run_contest(
+        resumed = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
             ContestRunConfig(
@@ -1486,7 +1461,7 @@ class ContestRunnerTests(unittest.TestCase):
                 raise RuntimeError("interrupt after first checkpoint")
 
         with self.assertRaises(RuntimeError):
-            run_contest(
+            run_with_test_plan(
                 manifest,
                 lambda _system, _user: (
                     '{"action":"select_problem","arguments":{"problem_id":"q1"}}'
@@ -1511,7 +1486,7 @@ class ContestRunnerTests(unittest.TestCase):
                 '{"action":"submit","arguments":{"answer":"final"}}',
             ]
         )
-        resumed = run_contest(
+        resumed = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
             ContestRunConfig(
@@ -1578,11 +1553,10 @@ class ContestRunnerTests(unittest.TestCase):
             remote_submits.append(arguments["code"])
             return {"verdict": "AC", "valid": True}
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             query,
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=2,
                 max_turns=4,
                 max_api_calls=8,
@@ -1612,11 +1586,10 @@ class ContestRunnerTests(unittest.TestCase):
             ]
         )
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
-            ContestRunConfig(
-                system_variant="open_table_coach",
+            review_ablation_config(
                 team_size=1,
                 max_turns=4,
                 max_api_calls=4,
@@ -1644,9 +1617,9 @@ class ContestRunnerTests(unittest.TestCase):
         self.assertEqual(result["diagnostics"]["switch_count"], 0)
         self.assertEqual(result["diagnostics"]["inspect_count"], 2)
         self.assertEqual(result["session_checkpoint"]["tasks"][0]["reviews"], [])
-        self.assertEqual(result["protocol_version"], "contest_session_v4")
-        self.assertEqual(result["action_set_version"], 3)
-        self.assertEqual(result["baseline"]["coach"], "precontest")
+        self.assertEqual(result["protocol_version"], "contest_session_v6")
+        self.assertEqual(result["action_set_version"], 5)
+        self.assertEqual(result["baseline"]["coach"], "none")
 
     def test_remember_recall_and_share_note_round_trip(self) -> None:
         manifest = ContestManifest("quiz", "quiz", (task("q1"), task("q2")))
@@ -1656,8 +1629,8 @@ class ContestRunnerTests(unittest.TestCase):
         )
         session.select_task("q1")
         memory = ContestMemory(run_id="run", session_id="quiz", competition_id="quiz")
-        config = ContestRunConfig(
-            system_variant="open_table_coach_memory", team_size=2, max_turns=10
+        config = review_ablation_config(memory=True,
+            team_size=2, max_turns=10
         )
 
         def apply(agent: str, action: str, arguments: dict) -> None:
@@ -1717,7 +1690,7 @@ class ContestRunnerTests(unittest.TestCase):
         )
         session.select_task("a")
         memory = ContestMemory(run_id="run", session_id="quiz", competition_id="quiz")
-        config = ContestRunConfig(system_variant="strategic", team_size=2, max_turns=10)
+        config = review_ablation_config(team_size=2, max_turns=10)
 
         def schedule() -> str | None:
             scheduled = _scheduled_agent_task(
@@ -1795,11 +1768,10 @@ class ContestRunnerTests(unittest.TestCase):
                 '{"action":"triage_problem","arguments":{"problem_id":"q1","priority":"hopeless"}}',
             ]
         )
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             lambda _system, _user: next(responses),
-            ContestRunConfig(
-                system_variant="open_table_coach",
+            review_ablation_config(
                 team_size=1,
                 max_turns=3,
                 max_api_calls=3,
@@ -1827,7 +1799,7 @@ class ContestRunnerTests(unittest.TestCase):
             prompts.append(user)
             return next(responses)
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             query,
             ContestRunConfig(system_variant="vanilla", team_size=1, max_turns=5, max_api_calls=5),
@@ -1869,7 +1841,7 @@ class ContestRunnerTests(unittest.TestCase):
         coach = _actions_for_agent(
             actions,
             session,
-            ContestRunConfig("open_table_coach", 2, 10),
+            review_ablation_config(2, 10),
             "Agent_1",
             work_task_ids={"b"},
             review_task_ids=set(),
@@ -1886,7 +1858,7 @@ class ContestRunnerTests(unittest.TestCase):
             for spec in _actions_for_agent(
                 actions,
                 session,
-                ContestRunConfig("open_table_coach_memory", 2, 10),
+                review_ablation_config(2, 10, memory=True),
                 "Agent_1",
             )
         }
@@ -1993,7 +1965,7 @@ class ContestRunnerTests(unittest.TestCase):
             prompts.append((system, user))
             return next(responses)
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest, query,
             ContestRunConfig("centralized", 3, 6, max_api_calls=20),
         )
@@ -2044,7 +2016,7 @@ class ContestRunnerTests(unittest.TestCase):
 
         config = ContestRunConfig("centralized", 2, 3, max_api_calls=8)
         with self.assertRaises(InterruptedError):
-            run_contest(
+            run_with_test_plan(
                 manifest, lambda _s, _u: next(first), config,
                 checkpoint_callback=interrupt,
             )
@@ -2054,7 +2026,7 @@ class ContestRunnerTests(unittest.TestCase):
             seen.append(user)
             return '{"action":"rest","arguments":{}}'
 
-        resumed = run_contest(
+        resumed = run_with_test_plan(
             manifest, resumed_query, config,
             session_checkpoint=captured["session"],
             memory_checkpoint=captured["memory"],
@@ -2129,11 +2101,10 @@ class ContestRunnerTests(unittest.TestCase):
             self.assertEqual(arguments["code"], "print(2)")
             return {"verdict": "WA", "valid": True}
 
-        result = run_contest(
+        result = run_with_test_plan(
             manifest,
             query,
-            ContestRunConfig(
-                system_variant="strategic",
+            review_ablation_config(
                 team_size=2,
                 max_turns=6,
                 max_api_calls=12,

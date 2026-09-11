@@ -10,6 +10,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from contest_manifest import ContestManifest  # noqa: E402
+from rules.loader import load_rule_card
 from contest_runner import ContestRunConfig  # noqa: E402
 from strategic_contest_runner import run_strategic_contest  # noqa: E402
 from vanilla_contest_runner import run_vanilla_contest  # noqa: E402
@@ -21,6 +22,7 @@ class ContestVariantRunnerTests(unittest.TestCase):
             system_variant=variant,
             team_size=3,
             max_turns=10,
+            rule_card=load_rule_card("icpc") if variant == "strategic" else None,
         )
 
     def manifest(self) -> ContestManifest:

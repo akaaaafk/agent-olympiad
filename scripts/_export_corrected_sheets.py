@@ -214,7 +214,7 @@ def main() -> None:
     header = [
         "Competition",
         "Description",
-        "N",
+        "sessions",
         "total_questions",
         "Acc",
         "CS",

@@ -28,6 +28,11 @@ def normalize_answer(value: str) -> str:
     text = text.replace("√", "sqrt")
     text = re.sub(r"sqrt\s*\(", "sqrt(", text)
     text = re.sub(r"\\sqrt\s*\{([^}]+)\}", r"sqrt(\1)", text)
+    # Treat the compact radical spelling ``sqrt3`` (including the form
+    # produced by replacing Unicode ``√3`` above) as ``sqrt(3)``.  Without
+    # this, otherwise equivalent answers such as ``3+√3/2`` and
+    # ``3+sqrt(3)/2`` normalize to different strings.
+    text = re.sub(r"\bsqrt\s*([A-Za-z0-9]+)", r"sqrt(\1)", text)
     text = re.sub(r"\\frac\s*\{([^}]+)\}\s*\{([^}]+)\}", r"(\1)/(\2)", text)
     text = text.replace("$", "").replace("\\", "")
     # Collapse common scientific-notation spellings before stripping spaces.

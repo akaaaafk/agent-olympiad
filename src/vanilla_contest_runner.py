@@ -10,13 +10,13 @@ from __future__ import annotations
 from typing import Any, Literal
 
 from contest_manifest import ContestManifest
-from contest_runner import (
+from contest_config import (
     CheckpointCallback,
     ContestRunConfig,
     QueryFn,
     TaskActionExecutor,
-    _run_contest_engine,
 )
+from contest_engine import _run_contest_engine
 from llm import RequestFn
 
 

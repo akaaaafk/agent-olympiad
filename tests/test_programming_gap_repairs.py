@@ -17,6 +17,8 @@ from judge.checkers import check_output
 from strategy import StrategicPolicy
 
 
+from contest_feature_fixtures import review_ablation_config, run_with_test_plan
+
 class GapRepairTests(unittest.TestCase):
     def seed(self, programming=True, variant="strategic", review=None):
         self.task = ManifestTask("a", "a", None, "Solve", "algorithmic_programming" if programming else "quiz", 1, programming, {})
@@ -24,7 +26,7 @@ class GapRepairTests(unittest.TestCase):
         self.session = ContestSession([TaskUnit("a", kind="programming" if programming else "non_programming")], ContestBudgetState(max_turns=20))
         self.session.select_task("a")
         self.memory = ContestMemory(run_id="r", session_id="s", competition_id="icpc")
-        self.config = ContestRunConfig(variant, 2, 20, require_review=review)
+        self.config = (review_ablation_config(2, 20, require_review=review) if variant == "strategic" else ContestRunConfig(variant, 2, 20, require_review=review))
 
     def execute(self, code, executor, agent="Agent_1", **arguments):
         _apply_action(action="execute_code", arguments={"code": code, **arguments}, agent=agent,
@@ -103,9 +105,9 @@ class GapRepairTests(unittest.TestCase):
         def executor(*args):
             calls.append(args)
             return {"valid": True, "sample_verdict": "WA"}
-        result = run_contest(self.manifest,
+        result = run_with_test_plan(self.manifest,
                              lambda *_: json.dumps({"action": "execute_code", "arguments": {"code": "print(0)"}}),
-                             ContestRunConfig("strategic", 1, 4, stall_turns=10), task_action_executor=executor,
+                             review_ablation_config(1, 4, stall_turns=10), task_action_executor=executor,
                              session_checkpoint=self.session.checkpoint())
         self.assertEqual(len(calls), 1)
         self.assertEqual(result["diagnostics"]["programming_duplicate_executions_avoided"], 3)

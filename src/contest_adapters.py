@@ -13,6 +13,7 @@ from typing import Any
 
 from contest_manifest import ContestManifest, ManifestTask
 from env import OlympiadEnvironment
+from tool_registry import ACTION_REGISTRY, TOOL_PACKS
 from evaluation.gold import GoldAnswerEvaluator, answers_match, load_gold_parts
 from evaluation.programming_judge import (
     _extract_source,
@@ -194,17 +195,10 @@ class EnvironmentTaskExecutor:
         force_submit: bool = False,
     ) -> dict[str, Any]:
         env = self._environment(task)
-        payload_key = {
-            "use_calculator": "expression",
-            "execute_code": "code",
-            "submit_code": "code",
-            "web_search": "query",
-            "read_lab_equipment": "resource",
-            "read_star_chart": "resource",
-        }.get(action)
-        if payload_key is None:
+        spec = ACTION_REGISTRY.get(action)
+        if spec is None or spec.pack not in TOOL_PACKS:
             return {"valid": False, "error": f"Unsupported task action: {action}"}
-        payload = str(arguments.get(payload_key) or "")
+        payload = str(arguments.get(spec.primary_argument or "") or "")
         sample_report: dict[str, Any] | None = None
         if action in {"execute_code", "submit_code"} and task.programming and not force_submit:
             sample_report = run_sample_report(
@@ -230,7 +224,10 @@ class EnvironmentTaskExecutor:
                 },
                 **sample_report,
             }
-        raw = env.execute_action("Team", action, payload)
+        # Typed arguments go straight through the environment's registry-driven
+        # dispatcher: the same gate (tool allowlist) and the same tool
+        # implementation the legacy protocol uses, with no text re-encoding.
+        raw = env.execute_action("Team", action, {spec.primary_argument: payload})
         if action != "submit_code":
             response: dict[str, Any] = {
                 "valid": not raw.startswith(("RULE VIOLATION", "Operational error")),
@@ -266,8 +263,17 @@ class GradingUnavailable(ValueError):
     """A task lacks a supported answer key; this is not an incorrect answer."""
 
 
-def _grade_non_programming(task: ManifestTask, answer: str) -> tuple[float, float]:
+def _grade_non_programming(task: ManifestTask, answer: str, competition_id: str = '') -> tuple[float, float]:
     gold = task.benchmark.get("gold_label") or {}
+    def match(expected, actual, aliases=()):
+        if competition_id != 'qanta':
+            return answers_match(expected, actual, aliases)
+        # QANTA braces mark answerline emphasis, not literal answer characters.
+        # Exact text only: do not infer surnames, fuzzy spelling or new aliases.
+        def clean(value):
+            return ' '.join(value.replace('{', '').replace('}', '').casefold().split())
+        normalized = clean(actual)
+        return bool(normalized) and any(normalized == clean(value) for value in (expected, *aliases))
     final_markers = re.findall(
         r"(?im)\bfinal\s+answer\s*:\s*([^\r\n]+)",
         answer,
@@ -289,7 +295,7 @@ def _grade_non_programming(task: ManifestTask, answer: str) -> tuple[float, floa
         if part is None or part.get("match_mode") == "reference_llm" or not str(part.get("expected") or "").strip():
             raise GradingUnavailable("No supported exact gold for this question")
         maximum = float(part.get("points", part.get("max_score", task.max_score)))
-        correct = bool(candidate) and answers_match(
+        correct = bool(candidate) and match(
             str(part.get("expected") or ""),
             candidate,
             tuple(str(alias) for alias in part.get("aliases") or ()),
@@ -309,7 +315,7 @@ def _grade_non_programming(task: ManifestTask, answer: str) -> tuple[float, floa
         if len(gradeable) == 1:
             part = gradeable[0]
             maximum = float(part.get("points", part.get("max_score", task.max_score)))
-            correct = bool(candidate) and answers_match(
+            correct = bool(candidate) and match(
                 str(part.get("expected") or ""),
                 candidate,
                 tuple(str(alias) for alias in part.get("aliases") or ()),
@@ -321,7 +327,7 @@ def _grade_non_programming(task: ManifestTask, answer: str) -> tuple[float, floa
     if not expected.strip():
         raise GradingUnavailable("No supported gold answer or evaluator")
     maximum = float(task.max_score)
-    correct = bool(candidate) and bool(expected) and answers_match(expected, candidate)
+    correct = bool(candidate) and bool(expected) and match(expected, candidate, tuple(gold.get('aliases') or ()))
     return (maximum if correct else 0.0), maximum
 
 
@@ -346,6 +352,7 @@ def grade_contest_result(
                 score, maximum = _grade_non_programming(
                     task,
                     str(submissions.get(task.task_id) or ""),
+                    manifest.competition_id,
                 )
             except GradingUnavailable as exc:
                 rows[task.task_id] = {
@@ -363,9 +370,8 @@ def grade_contest_result(
         total_max += maximum
         normalized.append(rows[task.task_id]["utility"])
     all_supported = bool(rows) and len(normalized) == len(rows)
-    all_unsupported = bool(rows) and len(normalized) == 0
     return {
-        "graded": all_supported or all_unsupported,
+        "graded": all_supported,
         "evaluation_coverage": len(normalized) / len(rows) if rows else 0.0,
         "graded_tasks": len(normalized),
         "ungraded_tasks": len(rows) - len(normalized),

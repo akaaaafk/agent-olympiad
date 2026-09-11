@@ -202,7 +202,7 @@ def parse_response_tool_calls(data: dict[str, Any]) -> tuple[LLMToolCall, ...]:
     return tuple(calls)
 
 
-def make_openai_responses_caller(model: str = "gpt-4.1") -> RequestFn:
+def make_openai_responses_caller(model: str = "gpt-4.1", *, max_output_tokens: int = 8192) -> RequestFn:
     """Create a file-capable OpenAI Responses API caller (PDF + images)."""
     api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
@@ -216,6 +216,7 @@ def make_openai_responses_caller(model: str = "gpt-4.1") -> RequestFn:
         kwargs: dict[str, Any] = {
             "model": model,
             "instructions": request.system_prompt,
+            "max_output_tokens": max_output_tokens,
             "input": [{"role": "user", "content": _openai_style_content(request)}],
         }
         if request.tools:
@@ -561,7 +562,7 @@ def resolve_request_fn(
             temperature=temperature,
         )
     if provider in {"openai", "oai"}:
-        return make_openai_responses_caller(model=model or "gpt-4.1")
+        return make_openai_responses_caller(model=model or "gpt-4.1", max_output_tokens=max_output_tokens)
     if provider in {"tinker", "tml"}:
         resolved_model = (
             model or os.environ.get("TINKER_MODEL") or "Qwen/Qwen3.6-35B-A3B"

@@ -1,17 +1,17 @@
-"""Strategic multi-agent contest runner with the pre-contest Open Coach."""
+"""Coached contest interface for rule-card OTC and the centralized leader."""
 
 from __future__ import annotations
 
 from typing import Any, Literal
 
 from contest_manifest import ContestManifest
-from contest_runner import (
+from contest_config import (
     CheckpointCallback,
     ContestRunConfig,
     QueryFn,
     TaskActionExecutor,
-    _run_contest_engine,
 )
+from contest_engine import _run_contest_engine
 from llm import RequestFn
 
 
@@ -28,7 +28,7 @@ def run_strategic_contest(
     memory_checkpoint: str | None = None,
     checkpoint_callback: CheckpointCallback | None = None,
 ) -> dict[str, Any]:
-    """Run the Coach-planned workflow with strategic gates and recovery."""
+    """Run OTC or centralized with an explicit Coach/leader dependency."""
     if config.features.coach == "none":
         raise ValueError(
             "run_strategic_contest requires a coach or leader baseline"

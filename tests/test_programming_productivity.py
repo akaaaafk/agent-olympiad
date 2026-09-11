@@ -20,6 +20,8 @@ def manifest(ids=("a", "b")):
                            "algorithmic_programming", 1, True, {}) for t in ids))
 
 
+from contest_feature_fixtures import review_ablation_config, run_with_test_plan
+
 class ProgrammingProductivityTests(unittest.TestCase):
     def test_empty_source_is_not_a_progress_artifact(self):
         m = manifest()
@@ -29,7 +31,7 @@ class ProgrammingProductivityTests(unittest.TestCase):
         called = []
         with self.assertRaisesRegex(ValueError, "nonempty candidate source"):
             _apply_action(action="execute_code", arguments={"code": "  \n"}, agent="Agent_1",
-                          manifest=m, session=s, memory=memory, config=ContestRunConfig("strategic", 2, 10),
+                          manifest=m, session=s, memory=memory, config=review_ablation_config(2, 10),
                           strategic_policy=StrategicPolicy(), task_action_executor=lambda *args: called.append(args))
         self.assertEqual(called, [])
         self.assertEqual(s.active_task.versions, [])
@@ -39,7 +41,7 @@ class ProgrammingProductivityTests(unittest.TestCase):
         s = ContestSession([TaskUnit("a"), TaskUnit("b")], ContestBudgetState(max_turns=50))
         s.select_task("a")
         memory = ContestMemory(run_id="p:open_table_coach", session_id="p", competition_id="icpc")
-        config = ContestRunConfig("strategic", 2, 50)
+        config = review_ablation_config(2, 50)
         source = "import sys\n" + "# preserve this code\n" * 500 + "print('UNIQUE_SOURCE_END')\n"
         _apply_action(action="execute_code", arguments={"code": source}, agent="Agent_1",
                       manifest=m, session=s, memory=memory, config=config, strategic_policy=StrategicPolicy(),
@@ -83,7 +85,7 @@ class ProgrammingProductivityTests(unittest.TestCase):
                 self.assertIn("SOURCE ACTION REQUIRED", request.user_prompt)
                 call = LLMToolCall("execute_code", {"code": "print(0)"})
             return LLMResponse("", "mock", "mock", tool_calls=(call,))
-        result = run_contest(m, lambda *_: "", ContestRunConfig("strategic", 2, 18),
+        result = run_with_test_plan(m, lambda *_: "", review_ablation_config(2, 18),
             coach_query_fn=lambda *_: plan, action_request_fn=model,
             task_action_executor=lambda *_: {"valid": True, "sample_verdict": "WA"})
         executed = Counter(e["task_id"] for e in result["memory"]["events"] if e["kind"] == "execute_code_result")
@@ -120,7 +122,7 @@ class ProgrammingProductivityTests(unittest.TestCase):
                 s = ContestSession([TaskUnit("a", kind="programming" if programming else "non_programming")], ContestBudgetState(max_turns=5))
                 s.select_task("a")
                 s.create_answer("42", author="Agent_1")
-                config = ContestRunConfig(variant, 2, 5, require_review=review)
+                config = (review_ablation_config(2, 5, require_review=review) if variant == "strategic" else ContestRunConfig(variant, 2, 5, require_review=review))
                 actions = _resolved_actions(m)
                 before = _actions_for_agent(actions, s, config, "Agent_1")
                 after = _actions_for_agent(actions, s, config, "Agent_1", programming_source_required=True)
@@ -133,7 +135,7 @@ class ProgrammingProductivityTests(unittest.TestCase):
         s = ContestSession([TaskUnit("a"), TaskUnit("b")], ContestBudgetState(max_turns=10))
         s.select_task("a")
         s.create_answer("print(42)", author="Agent_1", evidence_refs=("sample-ac",))
-        config = ContestRunConfig("strategic", 2, 10)
+        config = review_ablation_config(2, 10)
         actions = _resolved_actions(m)
         names = {a.name for a in _actions_for_agent(actions, s, config, "Agent_1", programming_source_required=True)}
         self.assertIn("speak", names)
@@ -150,9 +152,9 @@ class ProgrammingProductivityTests(unittest.TestCase):
             if session["budget"]["turns_used"] == 2 and session["budget"]["api_calls_used"] == 5:
                 saved.update(session=session, memory=memory)
                 raise RuntimeError("pause test")
-        config = ContestRunConfig("strategic", 2, 6)
+        config = review_ablation_config(2, 6)
         with self.assertRaisesRegex(RuntimeError, "pause test"):
-            run_contest(m, lambda *_: json.dumps({"action": "rest", "arguments": {"reason": "thinking"}}), config,
+            run_with_test_plan(m, lambda *_: json.dumps({"action": "rest", "arguments": {"reason": "thinking"}}), config,
                         coach_query_fn=lambda *_: plan, checkpoint_callback=checkpoint)
         seen = []
         def model(request):
@@ -161,7 +163,7 @@ class ProgrammingProductivityTests(unittest.TestCase):
             call = (LLMToolCall("execute_code", {"code": "print(0)"}) if names == {"execute_code"}
                     else LLMToolCall("rest", {"reason": "thinking"}))
             return LLMResponse("", "mock", "mock", tool_calls=(call,))
-        result = run_contest(m, lambda *_: "", config, action_request_fn=model,
+        result = run_with_test_plan(m, lambda *_: "", config, action_request_fn=model,
                             task_action_executor=lambda *_: {"valid": True, "sample_verdict": "WA"},
                             session_checkpoint=saved["session"], memory_checkpoint=saved["memory"])
         self.assertEqual(seen[:2], [{"execute_code"}, {"execute_code"}])

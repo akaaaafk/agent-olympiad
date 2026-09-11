@@ -17,6 +17,8 @@ def task(name, programming=True, task_type="algorithmic_programming"):
     return ManifestTask(name, name, None, "Solve " + name, task_type, 1, programming, {})
 
 
+from contest_feature_fixtures import review_ablation_config, run_with_test_plan
+
 class ProgrammingWorkflowRegressions(unittest.TestCase):
     def test_unreported_ac_precedes_unseen_and_failed_assignments(self):
         for other_drafted in (False, True):
@@ -36,7 +38,7 @@ class ProgrammingWorkflowRegressions(unittest.TestCase):
         s.select_task("a")
         original = s.create_answer("print(42)", author="Agent_1", evidence_refs=("sample-ac",))
         memory = ContestMemory(run_id="r", session_id="icpc", competition_id="icpc")
-        _apply_action(action="work", arguments={"content": "Sample AC achieved; waiting for independent review."}, agent="Agent_1", manifest=m, session=s, memory=memory, config=ContestRunConfig("strategic", 3, 10), strategic_policy=StrategicPolicy(), task_action_executor=lambda *_: {})
+        _apply_action(action="work", arguments={"content": "Sample AC achieved; waiting for independent review."}, agent="Agent_1", manifest=m, session=s, memory=memory, config=review_ablation_config(3, 10), strategic_policy=StrategicPolicy(), task_action_executor=lambda *_: {})
         self.assertIs(s.active_task.versions[-1], original)
         self.assertTrue(any(e.payload.get("content", "").startswith("Sample AC") for e in memory.view("Agent_1")))
 
@@ -45,7 +47,7 @@ class ProgrammingWorkflowRegressions(unittest.TestCase):
         s = ContestSession([TaskUnit("a")], ContestBudgetState(max_turns=10))
         s.select_task("a")
         memory = ContestMemory(run_id="r", session_id="icpc", competition_id="icpc")
-        _apply_action(action="work", arguments={"content": "I will derive the recurrence."}, agent="Agent_1", manifest=m, session=s, memory=memory, config=ContestRunConfig("strategic", 3, 10), strategic_policy=StrategicPolicy(), task_action_executor=lambda *_: {})
+        _apply_action(action="work", arguments={"content": "I will derive the recurrence."}, agent="Agent_1", manifest=m, session=s, memory=memory, config=review_ablation_config(3, 10), strategic_policy=StrategicPolicy(), task_action_executor=lambda *_: {})
         self.assertEqual(s.active_task.versions, [])
 
     def test_math_short_answer_and_vanilla_work_still_create_answers(self):
@@ -59,7 +61,7 @@ class ProgrammingWorkflowRegressions(unittest.TestCase):
                 s = ContestSession([TaskUnit("a", kind="programming" if programming else "non_programming")], ContestBudgetState(max_turns=10))
                 s.select_task("a")
                 memory = ContestMemory(run_id="r", session_id=competition, competition_id=competition)
-                _apply_action(action="work", arguments={"content": "42"}, agent="Agent_1", manifest=m, session=s, memory=memory, config=ContestRunConfig(variant, 3, 10), strategic_policy=StrategicPolicy(), task_action_executor=lambda *_: {})
+                _apply_action(action="work", arguments={"content": "42"}, agent="Agent_1", manifest=m, session=s, memory=memory, config=(review_ablation_config(3, 10) if variant == "strategic" else ContestRunConfig(variant, 3, 10)), strategic_policy=StrategicPolicy(), task_action_executor=lambda *_: {})
                 self.assertEqual(s.active_task.versions[-1].content, "42")
 
     def run_failed_samples(self, max_turns=10, session_checkpoint=None, memory_checkpoint=None, checkpoint_callback=None):
@@ -71,7 +73,7 @@ class ProgrammingWorkflowRegressions(unittest.TestCase):
             nonlocal calls
             calls += 1
             return json.dumps({"action": "execute_code", "arguments": {"code": "print(" + str(calls) + ")"}})
-        return run_contest(m, query, ContestRunConfig("strategic", 3, max_turns, stall_turns=3), coach_query_fn=lambda *_: plan, task_action_executor=lambda *_: {"valid": True, "sample_verdict": "WA", "result": "0"}, session_checkpoint=session_checkpoint, memory_checkpoint=memory_checkpoint, checkpoint_callback=checkpoint_callback)
+        return run_with_test_plan(m, query, review_ablation_config(3, max_turns, stall_turns=3), coach_query_fn=lambda *_: plan, task_action_executor=lambda *_: {"valid": True, "sample_verdict": "WA", "result": "0"}, session_checkpoint=session_checkpoint, memory_checkpoint=memory_checkpoint, checkpoint_callback=checkpoint_callback)
 
     def test_three_agents_repeated_wa_rotate_without_official_penalty(self):
         result = self.run_failed_samples()
@@ -115,7 +117,7 @@ class ProgrammingWorkflowRegressions(unittest.TestCase):
                 return {"valid": True, "sample_verdict": "AC", "result": "42"}
             submitted.append((t.task_id, args["code"]))
             return {"valid": True, "verdict": "AC"}
-        result = run_contest(m, lambda *_: json.dumps(next(responses)), ContestRunConfig("strategic", 2, 3), coach_query_fn=lambda *_: plan, task_action_executor=execute)
+        result = run_with_test_plan(m, lambda *_: json.dumps(next(responses)), review_ablation_config(2, 3), coach_query_fn=lambda *_: plan, task_action_executor=execute)
         self.assertEqual(submitted, [("good", source)])
         self.assertEqual(result["tasks"]["good"]["state"], "solved")
         self.assertFalse(any(e["kind"] == "action_error" for e in result["memory"]["events"]))

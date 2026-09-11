@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
 from contest_manifest import ContestManifest, ManifestTask, load_contest_manifest
 from contest_adapters import grade_contest_result
+from contest_feature_fixtures import review_ablation_config
 from contest_runner import ContestRunConfig, _resolved_actions, _scheduled_agent_task, _actions_for_agent, run_contest
 from contest_session import ContestSession, ContestBudgetState, TaskUnit
 
@@ -74,7 +75,7 @@ class ProtocolRegressionTests(unittest.TestCase):
         s.select_task('q1'); s.create_answer('42',author='Agent_1')
         for variant in ('vanilla','strategic'):
             with self.subTest(variant=variant):
-                actions=_actions_for_agent(_resolved_actions(m),s,ContestRunConfig(variant,3,5),'Agent_2',answer_sheet_contest=True)
+                actions=_actions_for_agent(_resolved_actions(m),s,(review_ablation_config(3,5) if variant == "strategic" else ContestRunConfig(variant,3,5)),'Agent_2',answer_sheet_contest=True)
                 self.assertNotIn('submit',{a.name for a in actions})
 
     def test_complete_vanilla_sheet_exposes_only_submit(self):
@@ -93,7 +94,7 @@ class ProtocolRegressionTests(unittest.TestCase):
                     '{"action":"select_problem","arguments":{"problem_id":"q1"}}',
                     '{"action":"work","arguments":{"content":"Final answer: 42"}}',
                 ])
-                result = run_contest(m, lambda *_: next(responses), ContestRunConfig(variant, 1, 2))
+                result = run_contest(m, lambda *_: next(responses), (review_ablation_config(1, 2) if variant == "strategic" else ContestRunConfig(variant, 1, 2)))
                 self.assertEqual(result['submissions']['q1'], 'Final answer: 42')
                 self.assertEqual(result['submissions']['q2'], '')
                 self.assertTrue(result['diagnostics']['deadline_submission'])
@@ -116,6 +117,23 @@ class ProtocolRegressionTests(unittest.TestCase):
         self.assertEqual(result['task_utility'], 1)
         self.assertEqual(result['evaluation_coverage'], 0.5)
         self.assertIsNone(result['tasks']['unknown']['score'])
+
+    def test_empty_or_wholly_unavailable_grades_are_not_complete(self):
+        for tasks in ((), (task('unknown'),)):
+            with self.subTest(task_count=len(tasks)):
+                result = grade_contest_result(ContestManifest('grading', 'custom', tasks), {})
+                self.assertFalse(result['graded'])
+                self.assertEqual(result['evaluation_coverage'], 0.0)
+                self.assertEqual(result['graded_tasks'], 0)
+                self.assertIsNone(result['score'])
+                self.assertIsNone(result['task_utility'])
+
+    def test_all_supported_grades_are_complete(self):
+        manifest = ContestManifest('grading', 'custom', (task('known', {'expected_answer': '42'}),))
+        result = grade_contest_result(manifest, {'submissions': {'known': '42'}})
+        self.assertTrue(result['graded'])
+        self.assertEqual(result['evaluation_coverage'], 1.0)
+        self.assertEqual(result['task_utility'], 1.0)
 
     def test_reference_only_gold_is_unavailable(self):
         m = ContestManifest('grading', 'custom', (task('report', {'parts':[{'id':'1','expected':'long reference','points':10,'match_mode':'reference_llm'}]}),))

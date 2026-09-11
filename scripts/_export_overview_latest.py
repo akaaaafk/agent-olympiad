@@ -206,7 +206,7 @@ def emit(title: str, data: dict[str, dict]) -> list[list]:
         [
             "Competition",
             "Description",
-            "N",
+            "sessions",
             "total_questions",
             "Acc",
             "CS",

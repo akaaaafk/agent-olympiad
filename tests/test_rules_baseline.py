@@ -73,7 +73,7 @@ class RulesModeTests(unittest.TestCase):
         env = OlympiadEnvironment("icpc", ICPC_PROBLEM)
         self.assertIs(env.rules_mode, RulesMode.OFF)
         self.assertIsNone(env.rule_card)
-        self.assertEqual(env.get_available_tools(), ["execute_code", "verify"])
+        self.assertEqual(env.get_available_tools(), ["execute_code"])
         self.assertNotIn("CONTESTANT-VISIBLE COMPETITION RULES", _system_prompt(env, "Agent_1"))
 
     def test_prompt_only_injects_rules_without_enforcing_card_constraints(self):

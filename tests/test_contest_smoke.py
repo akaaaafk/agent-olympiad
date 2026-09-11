@@ -12,7 +12,7 @@ from run_contest_smoke import run_pair  # noqa: E402
 
 
 class ContestMatchedSmokeTests(unittest.TestCase):
-    def test_hard_first_problem_preserves_strategic_switch_under_same_limits(self) -> None:
+    def test_latest_otc_and_vanilla_keep_matched_resources(self) -> None:
         full = load_contest_manifest(
             REPO_ROOT / "data" / "contest_manifests" / "icpc_wf_2012_5.json",
             benchmark_root=REPO_ROOT / "data" / "benchmarks",
@@ -28,16 +28,23 @@ class ContestMatchedSmokeTests(unittest.TestCase):
             max_api_calls=30,
             max_tokens=10000,
         )
-        vanilla = pair["results"]["vanilla_team"]
-        strategic = pair["results"]["strategic_team"]
+        vanilla = pair["results"]["decentralized"]
+        strategic = pair["results"]["otc"]
 
-        self.assertTrue(pair["matched_constraints"]["action_sets_equal"])
+        self.assertEqual(strategic["baseline"]["coach"], "card")
+        self.assertEqual(vanilla["baseline"]["coach"], "none")
+        self.assertFalse(vanilla["baseline"]["memory_actions"])
         self.assertEqual(
             vanilla["budget"]["max_api_calls"],
             strategic["budget"]["max_api_calls"],
         )
-        self.assertEqual(vanilla["diagnostics"]["switch_count"], 0)
-        self.assertGreater(strategic["diagnostics"]["switch_count"], 0)
+        for result in (vanilla, strategic):
+            self.assertLessEqual(result["budget"]["api_calls_used"], 30)
+            self.assertFalse([e for e in result["memory"]["events"] if e["kind"] == "action_error"])
+        kinds = {e["kind"] for e in strategic["memory"]["events"]}
+        self.assertIn("think", kinds)
+        self.assertNotIn("coach_opening_summary", kinds)
+        self.assertEqual(strategic["diagnostics"]["otc"]["coach_calls"], 1)
 
 
 if __name__ == "__main__":

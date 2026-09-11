@@ -19,11 +19,13 @@ def task(name, programming=True):
                         1, programming, {})
 
 
+from contest_feature_fixtures import review_ablation_config, run_with_test_plan
+
 class ProgrammingDeadlineTests(unittest.TestCase):
     def seeded(self, tasks):
         manifest = ContestManifest("icpc", "icpc", tuple(tasks))
         session = ContestSession([TaskUnit(t.task_id, kind="programming" if t.programming else "non_programming") for t in tasks], ContestBudgetState(max_turns=1))
-        memory = ContestMemory(run_id="icpc:open_table_coach", session_id="icpc", competition_id="icpc")
+        memory = ContestMemory(run_id="icpc:decentralized", session_id="icpc", competition_id="icpc")
         return manifest, session, memory
 
     def source(self, session, memory, name, code="print(7)"):
@@ -43,9 +45,9 @@ class ProgrammingDeadlineTests(unittest.TestCase):
                 return {"valid": True, "sample_verdict": "WA"}
             submitted.append((t.task_id, args["code"]))
             return {"valid": True, "verdict": "WA"}
-        result = run_contest(
+        result = run_with_test_plan(
             manifest, lambda *_: json.dumps({"action": "execute_code", "arguments": {"code": "print(7)"}}),
-            ContestRunConfig("strategic", 1, 1, programming_deadline_submit=True),
+            review_ablation_config(1, 1, programming_deadline_submit=True),
             session_checkpoint=session.checkpoint(), task_action_executor=execute)
         self.assertEqual(submitted, [("a", "print(7)")])
         self.assertEqual(result["budget"]["turns_used"], 1)
@@ -60,8 +62,8 @@ class ProgrammingDeadlineTests(unittest.TestCase):
         self.source(session, memory, "a")
         session.budget.turns_used = 1
         execute = Mock(side_effect=AssertionError("must not submit"))
-        result = run_contest(manifest, Mock(side_effect=AssertionError("no budget")),
-                             ContestRunConfig("strategic", 1, 1), task_action_executor=execute,
+        result = run_with_test_plan(manifest, Mock(side_effect=AssertionError("no budget")),
+                             review_ablation_config(1, 1), task_action_executor=execute,
                              session_checkpoint=session.checkpoint(), memory_checkpoint=memory.to_checkpoint_json())
         self.assertEqual(len(result["session_checkpoint"]["tasks"][0]["versions"]), 1)
         self.assertEqual(result["diagnostics"]["attempts"], 0)
@@ -140,7 +142,7 @@ class ProgrammingDeadlineTests(unittest.TestCase):
         self.source(session, memory, "a")
         session.finalize()
         with self.assertRaisesRegex(ValueError, "finalized checkpoint"):
-            run_contest(manifest, Mock(), ContestRunConfig("strategic", 1, 1, programming_deadline_submit=True),
+            run_with_test_plan(manifest, Mock(), review_ablation_config(1, 1, programming_deadline_submit=True),
                         session_checkpoint=session.checkpoint(), memory_checkpoint=memory.to_checkpoint_json())
 
     def test_adapter_deadline_bypasses_only_the_local_sample_gate(self):
@@ -158,7 +160,7 @@ class ProgrammingDeadlineTests(unittest.TestCase):
             forced = executor.submit_at_deadline(manifest.tasks[0], "print(7)")
         self.assertTrue(forced["valid"])
         self.assertEqual(forced["verdict"], "WA")
-        env.execute_action.assert_called_once_with("Team", "submit_code", "print(7)")
+        env.execute_action.assert_called_once_with("Team", "submit_code", {"code": "print(7)"})
 
 
 if __name__ == "__main__":

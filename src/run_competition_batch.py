@@ -25,6 +25,7 @@ import sys
 import tempfile
 import traceback
 import time
+from dataclasses import replace
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -34,14 +35,19 @@ sys.path.insert(0, str(REPO_ROOT / "src"))
 from collaboration import CollabConfig, SCHEMAS, run_collaboration
 from contest_adapters import EnvironmentTaskExecutor, grade_contest_result
 from contest_budget import resolve_contest_budget
+from contest_run_identity import build_run_identity, inspect_contest_output, RunCompatibilityError
 from contest_manifest import load_contest_manifest
 from contest_runner import (
     BASELINE_ALIASES,
     BASELINE_NAMES,
+    BASELINES,
     PROTOCOL_VERSION,
     ContestRunConfig,
     canonical_baseline,
 )
+from rulecard_policy import open_table_policy
+from rules.loader import load_rule_card
+from rules.views import agent_view, assert_agent_view_hides_eval
 from tool_registry import ACTION_SET_VERSION
 from contest_rules import get_contest_rules
 from env import OlympiadEnvironment, ProblemNotFoundError
@@ -106,6 +112,17 @@ MATH_CONTESTS = frozenset(
 )
 DEFAULT_RULES_ROOT = REPO_ROOT / "data" / "rules"
 DEFAULT_BENCHMARK_ROOT = REPO_ROOT / "data" / "benchmarks"
+
+
+class ContestRulesUnavailable(ValueError):
+    """A non-strict rule request cannot run because its card is missing."""
+
+    def __init__(self, competition: str, mode: str, root: Path):
+        self.metadata = {
+            "status": "rules_baseline_unavailable", "competition_id": competition,
+            "rules_mode": mode, "rules_root": str(root), "rules_available": False,
+        }
+        super().__init__(f"rules_baseline_unavailable: no rule card for {competition!r} under {root}")
 
 
 def _write_json_atomic(path: Path, payload: dict) -> None:
@@ -313,7 +330,8 @@ def summarize_action_log(action_log: list[dict] | None) -> dict[str, int | str]:
         "tool_errors": tool_errors,
         "tool_usage_summary": "; ".join(used_bits) if used_bits else "",
         "speak_count": counts.get("speak", 0),
-        "scratchpad_count": counts.get("write_scratchpad", 0),
+        # Canonical ``work`` since action set v5; older logs say ``write_scratchpad``.
+        "scratchpad_count": counts.get("work", 0) + counts.get("write_scratchpad", 0),
     }
 
 
@@ -700,8 +718,6 @@ def _agent_names(env: OlympiadEnvironment, schema: str) -> list[str]:
         workers = [f"Agent_{i}" for i in range(2, env.team_size + 1)]
         return ["Group_Leader", *workers]
     agents = [f"Agent_{i}" for i in range(1, env.team_size + 1)]
-    if schema == "open_table_coach":
-        return [*agents, "Coach"]
     return agents
 
 
@@ -971,8 +987,187 @@ def run_one(
     }
 
 
-def main() -> None:
+def _prepare_contest_run(args: argparse.Namespace) -> tuple:
+    """Resolve the same effective contest settings for execution and reuse."""
+    system_variant = canonical_baseline(args.system_variant)
+    transport = (
+        provider_action_transport(args.provider)
+        if args.live
+        else "prompt_json"
+    )
+    if args.action_calling == "prompt-json":
+        transport = "prompt_json"
+    elif args.action_calling == "native" and transport != "native":
+        raise ValueError(
+            f"--provider {args.provider} does not expose native tool calling; "
+            "use --action-calling auto or emulated."
+        )
+    elif args.action_calling == "emulated":
+        if not args.live:
+            raise ValueError("--action-calling emulated requires --live.")
+        if provider_action_transport(args.provider) != "emulated":
+            raise ValueError(
+                f"--provider {args.provider} has no emulated tool adapter."
+            )
+        transport = "emulated"
+    manifest = load_contest_manifest(
+        args.contest_manifest,
+        benchmark_root=REPO_ROOT / "data" / "benchmarks",
+    )
+    contest_budget = resolve_contest_budget(
+        manifest.competition_id,
+        max_turns=args.max_turns,
+        max_api_calls=args.max_api_calls,
+        max_total_tokens=args.max_total_tokens,
+    )
+    if args.max_output_tokens is None:
+        args.max_output_tokens = contest_budget.max_output_tokens_per_call or TINKER_DEFAULT_MAX_TOKENS
+    if args.max_output_tokens <= 0:
+        raise ValueError("--max-output-tokens must be positive.")
+    contest_rules = get_contest_rules(manifest.competition_id)
+    encoded_team_size = (
+        int(contest_rules.team_size)
+        if contest_rules and contest_rules.team_size.isdigit()
+        else 0
+    )
+    team_size = args.team_size or encoded_team_size or int(
+        manifest.tasks[0].benchmark.get("team_size") or 3
+    )
+    if system_variant == "single_agent":
+        team_size = 1
+    # Rule-card baselines: the card is mandatory and it also fixes the
+    # roster. Without --team-size the card's default roster is used; an
+    # explicit size outside the card's range is a configuration error.
+    contest_rule_card = None
+    baseline_features = BASELINES[system_variant]
+    rules_mode = args.rules_mode or baseline_features.rule_card
+    if baseline_features.coach == "card" and rules_mode != "enforced":
+        raise ValueError("otc requires --rules-mode enforced; off/prompt_only would change its protocol")
+    if rules_mode == "enforced" and baseline_features.coach != "card":
+        raise ValueError("--rules-mode enforced is supported only by the otc contest baseline; use prompt_only for other baselines")
+    if rules_mode == "off" and (args.rules_root is not None or args.rules_strict):
+        raise ValueError("--rules-root/--rules-strict require an enabled --rules-mode")
+    baseline_features = replace(baseline_features, rule_card=rules_mode)
+    if baseline_features.rule_card != "off":
+        contest_rule_card = load_rule_card(manifest.competition_id, rules_root=args.rules_root)
+        if contest_rule_card is None:
+            unavailable = ContestRulesUnavailable(
+                manifest.competition_id, rules_mode, args.rules_root or DEFAULT_RULES_ROOT
+            )
+            if args.rules_strict:
+                raise ValueError(str(unavailable))
+            raise unavailable
+        if not args.team_size and rules_mode == "enforced":
+            team_size = contest_rule_card.team_size_default
+        elif rules_mode == "enforced" and not (
+            contest_rule_card.team_size_min
+            <= team_size
+            <= contest_rule_card.team_size_max
+        ):
+            raise SystemExit(
+                f"--team-size {team_size} is outside the {manifest.competition_id} "
+                f"rule card range {contest_rule_card.team_size_min}-"
+                f"{contest_rule_card.team_size_max}."
+            )
+        if args.max_api_calls is None and baseline_features.coach == "card":
+            # Card turn = private think call(s) + one action per seat, plus
+            # the Coach's single turn-0 brief.
+            policy_probe = open_table_policy(
+                contest_rule_card, team_size=team_size, programming=True
+            )
+            contest_budget = resolve_contest_budget(
+                manifest.competition_id,
+                max_turns=args.max_turns,
+                max_api_calls=(
+                    contest_budget.max_turns
+                    * team_size
+                    * (1 + policy_probe.private_think_calls_per_turn)
+                    + 1
+                ),
+                max_total_tokens=args.max_total_tokens,
+            )
+    rule_guidance = ""
+    if contest_rules:
+        rule_guidance = (
+            f"Team: {contest_rules.team_size}; duration: {contest_rules.duration}; "
+            f"tools: {contest_rules.tools_official}; scoring: "
+            f"{contest_rules.scoring_official}; penalties: "
+            f"{contest_rules.penalties_official}; search: "
+            f"{contest_rules.search_policy}."
+        )
+    if rules_mode == "prompt_only":
+        # Prompt-only exposes the card's roster without enforcing its size on
+        # the experiment's active seats.
+        visible = agent_view(contest_rule_card)
+        assert_agent_view_hides_eval(visible)
+        # The selected card is authoritative for this condition; do not append
+        # the legacy static guidance, which may describe different constraints.
+        rule_guidance = "RULE CARD (prompt_only)\n" + json.dumps(visible, ensure_ascii=False)
+    run_config = ContestRunConfig(
+        system_variant=system_variant,
+        team_size=team_size,
+        max_turns=contest_budget.max_turns,
+        max_api_calls=contest_budget.max_api_calls,
+        max_tokens=contest_budget.max_total_tokens,
+        max_simulated_minutes=(
+            args.max_simulated_minutes
+            if args.max_simulated_minutes is not None
+            else max(
+                contest_budget.duration_minutes or 0,
+                contest_budget.max_turns * contest_budget.minutes_per_turn,
+            )
+        ),
+        minutes_per_turn=contest_budget.minutes_per_turn,
+        require_review=args.require_review,
+        require_final_review=args.require_final_review,
+        start_seat=args.start_seat,
+        rule_guidance=rule_guidance,
+        programming_deadline_submit=args.programming_deadline_submit,
+        rule_card=contest_rule_card,
+        features=baseline_features,
+    )
+    if run_config.otc_policy is not None:
+        from artifact_contract import delivery_route
+        route = delivery_route(contest_rule_card)
+        if route in {"slides", "document", "artifact_bundle"}:
+            raise ValueError(f"{manifest.competition_id} requires the {route} delivery pipeline; "
+                             "use src/run_otc_artifact.py, not a text-only contest run")
+    model = _resolve_model(args.provider, args.model) if args.live else "mock"
+    judge_provider = _resolve_judge_provider(args.provider, args.judge_provider)
+    judge_model = _resolve_judge_model(judge_provider, args.provider, model, args.judge_model)
+    judge_collab = bool(args.live and (args.judge_collab if args.judge_collab is not None else True))
+    judge_cce = bool(args.live and args.judge_cce)
+    identity = build_run_identity(
+        manifest, run_config,
+        execution={
+            "mode": "live" if args.live else "mock",
+            "provider": args.provider if args.live else "mock",
+            "model": model,
+            "action_calling": transport,
+            "max_output_tokens": args.max_output_tokens if args.live else None,
+            "temperature": args.temperature if args.live else None,
+        },
+        evaluation={
+            "judge_collab": judge_collab,
+            "judge_cce": judge_cce,
+            "provider": judge_provider if judge_collab or judge_cce else None,
+            "model": judge_model if judge_collab or judge_cce else None,
+        },
+    )
+    return manifest, run_config, transport, identity
+
+
+def inspect_contest_run(argv: list[str]) -> tuple[str, dict]:
+    """Read-only batch preflight using the CLI's parser and resolved defaults."""
     load_repo_dotenv(REPO_ROOT / ".env")
+    args = _build_parser().parse_args(argv)
+    if args.output is None or args.contest_manifest is None:
+        raise ValueError("Contest reuse checks require --output and --contest-manifest")
+    _manifest, _config, _transport, identity = _prepare_contest_run(args)
+    return inspect_contest_output(args.output, identity), identity
+
+
+def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--live", action="store_true")
     parser.add_argument("--provider", choices=PROVIDERS, default="perplexity")
@@ -980,8 +1175,8 @@ def main() -> None:
     parser.add_argument(
         "--max-output-tokens",
         type=int,
-        default=TINKER_DEFAULT_MAX_TOKENS,
-        help="Maximum generated tokens per Tinker sample (default: 8192)",
+        default=None,
+        help="Maximum generated tokens per model call: explicit value, else contest registry (ICPC/IIOT 4096), else 8192. Legacy per-problem default: 8192.",
     )
     parser.add_argument(
         "--temperature",
@@ -994,7 +1189,10 @@ def main() -> None:
         "--max-turns",
         type=int,
         default=None,
-        help="Override contest turn budget (default: registry, usually 50)",
+        help=(
+            "Override contest turn budget (default: official duration / 5 min "
+            "per turn, e.g. ARML 1h = 12 turns; hard cap 90)"
+        ),
     )
     parser.add_argument("--no-synthesize", action="store_true")
     parser.add_argument(
@@ -1049,11 +1247,14 @@ def main() -> None:
     parser.add_argument(
         "--system-variant",
         choices=(*BASELINE_NAMES, *BASELINE_ALIASES),
-        default="open_table_coach",
+        default="otc",
         help=(
             "Contest-session baseline: single_agent, decentralized, centralized, "
-            "open_table_coach, open_table_coach_memory (legacy aliases: vanilla[_team] "
-            "-> decentralized, strategic[_team] -> open_table_coach)."
+            "otc (rule-card Open Table "
+            "Coach: data/rules/<competition>/collaboration.json drives the coach "
+            "stages, think call, limits, budgets and roster; team size defaults to "
+            "the card's) (legacy aliases: vanilla[_team] -> decentralized, "
+            "strategic[_team] and open_table_coach[_memory] -> otc)."
         ),
     )
     parser.add_argument(
@@ -1099,13 +1300,24 @@ def main() -> None:
         "--programming-deadline-submit",
         action=argparse.BooleanOptionalAction,
         default=False,
-        help="At contest end, force one recorded source per never-officially-submitted programming task (waives sample/review gates; may incur WA penalties).",
+        help=(
+            "At contest end, submit one eligible recorded source per "
+            "never-officially-submitted programming task. OTC still requires "
+            "current independent approval and sample evidence; other variants "
+            "may waive those gates. May incur WA penalties."
+        ),
     )
     parser.add_argument(
         "--require-review",
         action=argparse.BooleanOptionalAction,
         default=None,
-        help="Override the strategic mandatory-review gate.",
+        help="Override review workflow and, unless separately specified, final review.",
+    )
+    parser.add_argument(
+        "--require-final-review",
+        action=argparse.BooleanOptionalAction,
+        default=None,
+        help="Contest-session final-review override (default: follows --require-review / baseline).",
     )
     parser.add_argument(
         "--structured-gold",
@@ -1131,12 +1343,25 @@ def main() -> None:
     )
     parser.add_argument(
         "--rules-mode",
-        default=RulesMode.OFF.value,
+        default=None,
         choices=[mode.value for mode in RulesMode],
+        help="Default: enforced for otc; off otherwise. Contest enforcement is supported only by otc.",
     )
     parser.add_argument("--rules-root", type=Path, default=None)
     parser.add_argument("--rules-strict", action="store_true")
+    return parser
+
+
+def main() -> None:
+    load_repo_dotenv(REPO_ROOT / ".env")
+    parser = _build_parser()
     args = parser.parse_args()
+
+    if not args.contest_manifest:
+        args.max_output_tokens = args.max_output_tokens if args.max_output_tokens is not None else TINKER_DEFAULT_MAX_TOKENS
+        args.rules_mode = args.rules_mode or RulesMode.OFF.value
+        if args.require_review is not None or args.require_final_review is not None:
+            parser.error("--require-review/--require-final-review require --contest-manifest")
 
     judge_task = args.judge_task if args.judge_task is not None else bool(args.live)
     judge_collab = args.judge_collab if args.judge_collab is not None else bool(args.live)
@@ -1169,7 +1394,7 @@ def main() -> None:
             )
         if args.resume and args.output is None:
             raise ValueError("--resume requires an explicit --output directory.")
-        if args.max_output_tokens <= 0:
+        if args.max_output_tokens is not None and args.max_output_tokens <= 0:
             raise ValueError("--max-output-tokens must be positive.")
         if args.temperature < 0:
             raise ValueError("--temperature must be non-negative.")
@@ -1184,7 +1409,33 @@ def main() -> None:
 
     timestamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
     out_dir = args.output or (REPO_ROOT / "results" / "competition_batch" / timestamp)
+    prepared_contest = None
+    output_state = "new"
+    if args.contest_manifest:
+        try:
+            prepared_contest = _prepare_contest_run(args)
+            output_state = inspect_contest_output(out_dir, prepared_contest[3])
+            if output_state != "new" and not args.resume:
+                raise RunCompatibilityError(
+                    f"{out_dir} already contains a matching {output_state} run. "
+                    "Use --resume to reuse it or choose a fresh --output directory."
+                )
+        except ContestRulesUnavailable as exc:
+            if any((out_dir / name).exists() for name in (
+                "run_config.json", "contest_checkpoint.json", "contest_session.json"
+            )):
+                parser.error(f"{exc}. Use a fresh --output directory for this unavailable condition.")
+            _write_json_atomic(out_dir / "rules_status.json", exc.metadata)
+            print(json.dumps(exc.metadata, ensure_ascii=False))
+            return
+        except ValueError as exc:
+            parser.error(str(exc))
+        if output_state == "complete":
+            print(f"Skipped verified complete contest: {out_dir}")
+            return
     out_dir.mkdir(parents=True, exist_ok=True)
+    if prepared_contest is not None:
+        _write_json_atomic(out_dir / "run_config.json", prepared_contest[3])
     out_path = out_dir / "competition_batch.json"
     tsv_path = out_dir / "competition_batch.tsv"
     summary_tsv_path = out_dir / "competition_summary.tsv"
@@ -1242,27 +1493,9 @@ def main() -> None:
     )
 
     if args.contest_manifest:
-        system_variant = canonical_baseline(args.system_variant)
-        transport = (
-            provider_action_transport(args.provider)
-            if args.live
-            else "prompt_json"
-        )
-        if args.action_calling == "prompt-json":
-            transport = "prompt_json"
-        elif args.action_calling == "native" and transport != "native":
-            parser.error(
-                f"--provider {args.provider} does not expose native tool calling; "
-                "use --action-calling auto or emulated."
-            )
-        elif args.action_calling == "emulated":
-            if not args.live:
-                parser.error("--action-calling emulated requires --live.")
-            if provider_action_transport(args.provider) != "emulated":
-                parser.error(
-                    f"--provider {args.provider} has no emulated tool adapter."
-                )
-            transport = "emulated"
+        manifest, run_config, transport, run_identity = prepared_contest
+        system_variant = run_config.system_variant
+        team_size = run_config.team_size
         request_actions = transport in {"native", "emulated"}
         action_request_fn = (
             resolve_request_fn(
@@ -1274,52 +1507,13 @@ def main() -> None:
             if request_actions
             else None
         )
-        manifest = load_contest_manifest(
-            args.contest_manifest,
-            benchmark_root=REPO_ROOT / "data" / "benchmarks",
-        )
-        contest_budget = resolve_contest_budget(
-            manifest.competition_id,
-            max_turns=args.max_turns,
-            max_api_calls=args.max_api_calls,
-            max_total_tokens=args.max_total_tokens,
-        )
-        contest_rules = get_contest_rules(manifest.competition_id)
-        encoded_team_size = (
-            int(contest_rules.team_size)
-            if contest_rules and contest_rules.team_size.isdigit()
-            else 0
-        )
-        team_size = args.team_size or encoded_team_size or int(
-            manifest.tasks[0].benchmark.get("team_size") or 3
-        )
-        if system_variant == "single_agent":
-            team_size = 1
-        rule_guidance = ""
-        if contest_rules:
-            rule_guidance = (
-                f"Team: {contest_rules.team_size}; duration: {contest_rules.duration}; "
-                f"tools: {contest_rules.tools_official}; scoring: "
-                f"{contest_rules.scoring_official}; penalties: "
-                f"{contest_rules.penalties_official}; search: "
-                f"{contest_rules.search_policy}."
-            )
         checkpoint_path = out_dir / "contest_checkpoint.json"
         session_checkpoint = None
         memory_checkpoint = None
-        if args.resume and checkpoint_path.is_file():
+        if output_state == "resume":
             restored = json.loads(checkpoint_path.read_text(encoding="utf-8"))
-            restored_protocol = restored.get("protocol_version")
-            if restored_protocol != PROTOCOL_VERSION:
-                # Action surface and diagnostics changed; mixing protocols inside
-                # one session would make the result uninterpretable.
-                raise SystemExit(
-                    f"Cannot resume {checkpoint_path}: checkpoint protocol "
-                    f"{restored_protocol or 'unversioned (<= contest_session_v3)'} "
-                    f"does not match {PROTOCOL_VERSION}. Start a fresh run."
-                )
-            session_checkpoint = restored.get("session")
-            memory_checkpoint = restored.get("memory")
+            session_checkpoint = restored["session"]
+            memory_checkpoint = restored["memory"]
 
         def persist_contest_checkpoint(
             session_state: dict,
@@ -1328,6 +1522,7 @@ def main() -> None:
             _write_json_atomic(
                 checkpoint_path,
                 {
+                    "run_identity": run_identity,
                     "protocol_version": PROTOCOL_VERSION,
                     "action_set_version": ACTION_SET_VERSION,
                     "session": session_state,
@@ -1335,26 +1530,6 @@ def main() -> None:
                 },
             )
 
-        run_config = ContestRunConfig(
-            system_variant=system_variant,
-            team_size=team_size,
-            max_turns=contest_budget.max_turns,
-            max_api_calls=contest_budget.max_api_calls,
-            max_tokens=contest_budget.max_total_tokens,
-            max_simulated_minutes=(
-                args.max_simulated_minutes
-                if args.max_simulated_minutes is not None
-                else max(
-                    contest_budget.duration_minutes or 0,
-                    contest_budget.max_turns * contest_budget.minutes_per_turn,
-                )
-            ),
-            minutes_per_turn=contest_budget.minutes_per_turn,
-            require_review=args.require_review,
-            start_seat=args.start_seat,
-            rule_guidance=rule_guidance,
-            programming_deadline_submit=args.programming_deadline_submit,
-        )
         run_kwargs = {
             "action_request_fn": action_request_fn,
             "action_transport": transport,
@@ -1498,6 +1673,7 @@ def main() -> None:
             )
             result["diagnostics"]["cce"] = result["metrics"]["cce"]
             result["diagnostics"]["cce_status"] = "scored" if cce_rows else "grading_unavailable"
+        result["run_identity"] = run_identity
         result["run"] = {
             "mode": "live" if args.live else "mock",
             "provider": args.provider,
@@ -1506,6 +1682,13 @@ def main() -> None:
             "requested_variant": args.system_variant,
             "baseline": result["baseline"],
             "action_calling": result["action_calling"],
+            "max_output_tokens": args.max_output_tokens if args.live else None,
+            "temperature": args.temperature if args.live else None,
+            "rules_mode": run_config.features.rule_card,
+            "rules_root": str(args.rules_root or DEFAULT_RULES_ROOT) if run_config.rule_card else None,
+            "rules_strict": args.rules_strict,
+            "review_required": run_config.review_required,
+            "final_review_required": run_config.final_review_required,
             "manifest": str(args.contest_manifest),
             "start_seat": args.start_seat,
             "elapsed_seconds": (result.get("timing") or {}).get("elapsed_seconds"),
@@ -1537,7 +1720,7 @@ def main() -> None:
 
     print(
         f"Competition batch: {len(cases)} contests | schema={args.schema} | "
-        f"max_turns={args.max_turns or 'standard(30)'} | "
+        f"max_turns={args.max_turns or 'duration/5min (cap 90)'} | "
         f"mode={'live' if args.live else 'mock'} | provider={args.provider} | "
         f"judge_provider={judge_provider} | "
         f"task_judge={'on' if judge_task else 'off'} | "

@@ -20,6 +20,9 @@ from tool_registry import (  # noqa: E402
     MEMORY_ACTION_NAMES,
     ActionSpec,
     Resolution,
+    action_matches,
+    action_name_variants,
+    actions_for_runtime,
     render_action_instructions,
     render_function_tools,
     render_action_schema,
@@ -65,7 +68,17 @@ class ActionRegistryTests(unittest.TestCase):
             MEMORY_ACTION_NAMES | DESK_READONLY_ACTION_NAMES, DESK_ACTION_NAMES
         )
         self.assertTrue(LEADER_ACTION_NAMES <= COMMON_ACTION_NAMES)
-        self.assertEqual(ACTION_SET_VERSION, 3)
+        # v4 added the rule-card ``deliberation`` pack; v5 unified the legacy
+        # environment surface (aliases + runtime tags). Neither is common.
+        self.assertEqual(ACTION_SET_VERSION, 5)
+        self.assertEqual(
+            {name for name, spec in ACTION_REGISTRY.items() if spec.pack == "deliberation"},
+            {"propose", "challenge", "provide_evidence", "revise", "decide"},
+        )
+        self.assertFalse(
+            {"propose", "challenge", "provide_evidence", "revise", "decide"}
+            & COMMON_ACTION_NAMES
+        )
         self.assertEqual(validate_registry(), ())
 
     def test_assign_problem_is_a_leader_reassignment_with_a_problem_list(self) -> None:
@@ -155,8 +168,12 @@ class ActionRegistryTests(unittest.TestCase):
     def test_pack_membership(self) -> None:
         self.assertEqual(ACTION_REGISTRY["use_calculator"].pack, "math")
         self.assertEqual(ACTION_REGISTRY["execute_code"].pack, "programming")
-        self.assertEqual(ACTION_REGISTRY["verify"].pack, "programming")
+        # ``verify`` folded into the desk's ``inspect_problem``.
+        self.assertNotIn("verify", ACTION_REGISTRY)
+        self.assertEqual(LEGACY_ACTION_ALIASES["verify"], "inspect_problem")
         self.assertEqual(ACTION_REGISTRY["submit_code"].pack, "programming")
+        self.assertEqual(ACTION_REGISTRY["verify_problem"].pack, "workboard")
+        self.assertEqual(ACTION_REGISTRY["check_budget"].pack, "workspace")
         self.assertEqual(ACTION_REGISTRY["web_search"].pack, "research")
         self.assertEqual(ACTION_REGISTRY["read_lab_equipment"].pack, "resources")
         self.assertEqual(ACTION_REGISTRY["read_star_chart"].pack, "resources")
@@ -179,7 +196,7 @@ class ActionRegistryTests(unittest.TestCase):
         self.assertEqual(vanilla, strategic)
         self.assertEqual(
             {spec.name for spec in vanilla} - COMMON_ACTION_NAMES,
-            {"execute_code", "verify", "submit_code"},
+            {"execute_code", "submit_code"},
         )
         self.assertEqual(
             vanilla,
@@ -309,7 +326,41 @@ class ActionRegistryTests(unittest.TestCase):
     def test_legacy_aliases_are_adapter_only(self) -> None:
         self.assertEqual(LEGACY_ACTION_ALIASES["submit_final"], "submit")
         self.assertEqual(LEGACY_ACTION_ALIASES["sleep"], "rest")
-        self.assertNotIn("submit_final", ACTION_REGISTRY)
+        self.assertEqual(LEGACY_ACTION_ALIASES["publish_memory"], "share_note")
+        self.assertEqual(LEGACY_ACTION_ALIASES["message_group"], "direct_message")
+        self.assertEqual(LEGACY_ACTION_ALIASES["set_priority"], "triage_problem")
+        self.assertEqual(LEGACY_ACTION_ALIASES["mark_hopeless"], "triage_problem")
+        self.assertEqual(LEGACY_ACTION_ALIASES["submit_problem"], "work")
+        for alias in LEGACY_ACTION_ALIASES:
+            self.assertNotIn(alias, ACTION_REGISTRY)
+
+    def test_runtime_tags_split_the_surface_without_forking_common(self) -> None:
+        env_names = actions_for_runtime("env")
+        session_names = actions_for_runtime("session")
+        # Both runtimes implement every common action except the session-only
+        # coordination verbs the environment has no equivalent for.
+        self.assertEqual(
+            COMMON_ACTION_NAMES - env_names,
+            {"assign_problem", "request_review", "finish_contest"},
+        )
+        self.assertTrue(COMMON_ACTION_NAMES <= session_names)
+        self.assertEqual(
+            env_names - session_names,
+            {"verify_problem", "check_budget", "query_rules", "write_private_notes"},
+        )
+        env_icpc = resolve_action_names("icpc", runtime="env")
+        session_icpc = resolve_action_names("icpc", runtime="session")
+        self.assertIn("check_budget", env_icpc)
+        self.assertNotIn("check_budget", session_icpc)
+        self.assertNotIn("assign_problem", env_icpc)
+        # Without a runtime the canonical (non-desk-legacy) surface is returned.
+        self.assertNotIn("check_budget", resolve_action_names("icpc"))
+        self.assertTrue(action_matches("write_scratchpad", {"work"}))
+        self.assertTrue(action_matches("work", {"write_scratchpad"}))
+        self.assertEqual(
+            action_name_variants("inspect_problem"),
+            {"inspect_problem", "verify", "list_problems", "open_problem"},
+        )
 
 
 if __name__ == "__main__":

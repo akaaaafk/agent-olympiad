@@ -4,16 +4,19 @@
 from __future__ import annotations
 
 import argparse
-import csv
 import json
-import subprocess
 import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 BENCH_ROOT = REPO_ROOT / "data" / "benchmarks"
 MANIFEST_ROOT = REPO_ROOT / "data" / "contest_manifests" / "generated"
-PYTHON = Path(r"e:\agent_olympiad\.venv\Scripts\python.exe")
+
+sys.path.insert(0, str(REPO_ROOT / "src"))
+from contest_config import BASELINE_NAMES, BASELINE_ALIASES, canonical_baseline
+from contest_batch_summary import summarize
+from contest_budget import resolve_contest_budget  # noqa: E402
+from run_otc_gold_suite import budget_for, team_size_for, run_one  # noqa: E402
 
 # Known OCR/diagram repairs for ARML Local packets.
 ARML_PROMPT_OVERRIDES: dict[str, dict[str, str]] = {
@@ -87,127 +90,6 @@ def write_manifests(competitions: list[str]) -> list[Path]:
     return paths
 
 
-def case_complete(out_dir: Path) -> bool:
-    session = out_dir / "contest_session.json"
-    if not session.is_file():
-        return False
-    try:
-        payload = json.loads(session.read_text(encoding="utf-8"))
-    except json.JSONDecodeError:
-        return False
-    grade = payload.get("grade") or {}
-    return bool(grade.get("graded")) and "task_utility" in (payload.get("metrics") or {})
-
-
-def run_one(
-    manifest: Path,
-    *,
-    out_root: Path,
-    team_size: int,
-    max_turns: int,
-    max_api_calls: int,
-    system_variant: str,
-) -> dict:
-    problem_id = manifest.stem
-    out_dir = out_root / problem_id
-    out_dir.mkdir(parents=True, exist_ok=True)
-    if case_complete(out_dir):
-        return {"problem_id": problem_id, "status": "skipped_complete", "out_dir": str(out_dir)}
-
-    cmd = [
-        str(PYTHON),
-        "-u",
-        str(REPO_ROOT / "src" / "run_competition_batch.py"),
-        "--live",
-        "--provider",
-        "perplexity",
-        "--model",
-        "openai/gpt-5.4-mini",
-        "--contest-manifest",
-        str(manifest),
-        "--system-variant",
-        system_variant,
-        "--action-calling",
-        "native",
-        "--team-size",
-        str(team_size),
-        "--max-turns",
-        str(max_turns),
-        "--max-api-calls",
-        str(max_api_calls),
-        "--max-total-tokens",
-        "220000",
-        "--no-judge-task",
-        "--no-judge-cce",
-        "--output",
-        str(out_dir),
-    ]
-    # The baseline decides the review workflow; no override is passed.
-    log_path = out_dir / "run.log"
-    with log_path.open("a", encoding="utf-8") as log:
-        log.write(f"\n==== RUN {problem_id} ====\n")
-        log.flush()
-        proc = subprocess.run(
-            cmd,
-            cwd=str(REPO_ROOT),
-            stdout=log,
-            stderr=subprocess.STDOUT,
-            check=False,
-        )
-    status = "ok" if proc.returncode == 0 and case_complete(out_dir) else "error"
-    return {
-        "problem_id": problem_id,
-        "status": status,
-        "returncode": proc.returncode,
-        "out_dir": str(out_dir),
-    }
-
-
-def summarize(out_root: Path, problem_ids: list[str]) -> Path:
-    rows = []
-    for problem_id in problem_ids:
-        session_path = out_root / problem_id / "contest_session.json"
-        row = {
-            "problem_id": problem_id,
-            "status": "missing",
-            "score": "",
-            "max_score": "",
-            "task_utility": "",
-            "coordination_score": "",
-            "turns_used": "",
-            "api_calls_used": "",
-            "deadline_submission": "",
-        }
-        if session_path.is_file():
-            try:
-                payload = json.loads(session_path.read_text(encoding="utf-8"))
-                grade = payload.get("grade") or {}
-                metrics = payload.get("metrics") or {}
-                diag = payload.get("diagnostics") or {}
-                budget = payload.get("budget") or {}
-                row.update(
-                    {
-                        "status": "ok" if grade.get("graded") else "ungraded",
-                        "score": grade.get("score", ""),
-                        "max_score": grade.get("max_score", ""),
-                        "task_utility": metrics.get("task_utility", ""),
-                        "coordination_score": metrics.get("coordination_score", ""),
-                        "turns_used": budget.get("turns_used", ""),
-                        "api_calls_used": budget.get("api_calls_used", ""),
-                        "deadline_submission": diag.get("deadline_submission", ""),
-                    }
-                )
-            except json.JSONDecodeError:
-                row["status"] = "corrupt"
-        rows.append(row)
-    path = out_root / "summary.tsv"
-    fields = list(rows[0].keys()) if rows else ["problem_id", "status"]
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields, delimiter="\t")
-        writer.writeheader()
-        writer.writerows(rows)
-    return path
-
 
 def main() -> int:
     parser = argparse.ArgumentParser()
@@ -219,29 +101,23 @@ def main() -> int:
     parser.add_argument(
         "--output",
         type=Path,
-        default=REPO_ROOT / "results" / "otc_arml_science_bowl_20260903",
+        default=REPO_ROOT / "results" / "otc_arml_science_bowl_v5",
     )
     parser.add_argument(
         "--system-variant",
-        default="strategic_team",
-        choices=[
-            "single_agent",
-            "decentralized",
-            "centralized",
-            "open_table_coach",
-            "open_table_coach_memory",
-            # legacy aliases
-            "strategic_team",
-            "vanilla_team",
-        ],
+        default="otc",
+        choices=(*BASELINE_NAMES, *BASELINE_ALIASES),
     )
-    parser.add_argument("--team-size", type=int, default=3)
-    parser.add_argument("--arml-max-turns", type=int, default=50)
-    parser.add_argument("--arml-max-api-calls", type=int, default=151)
-    parser.add_argument("--sb-max-turns", type=int, default=50)
-    parser.add_argument("--sb-max-api-calls", type=int, default=151)
+    parser.add_argument("--team-size", type=int, default=None)
+    # Default None = official clock / 5 min per turn (cap 90), API calls =
+    # turns * team_size + 1 coach call. See src/contest_budget.py.
+    parser.add_argument("--arml-max-turns", type=int, default=None)
+    parser.add_argument("--arml-max-api-calls", type=int, default=None)
+    parser.add_argument("--sb-max-turns", type=int, default=None)
+    parser.add_argument("--sb-max-api-calls", type=int, default=None)
     parser.add_argument("--limit", type=int, default=None)
     args = parser.parse_args()
+    args.system_variant = canonical_baseline(args.system_variant)
 
     competitions = [item.strip() for item in args.competitions.split(",") if item.strip()]
     manifests = write_manifests(competitions)
@@ -263,9 +139,15 @@ def main() -> int:
     for index, manifest in enumerate(manifests, start=1):
         competition = json.loads(manifest.read_text(encoding="utf-8"))["competition_id"]
         if competition == "arml_local":
-            max_turns, max_api = args.arml_max_turns, args.arml_max_api_calls
+            turns_override, api_override = args.arml_max_turns, args.arml_max_api_calls
         else:
-            max_turns, max_api = args.sb_max_turns, args.sb_max_api_calls
+            turns_override, api_override = args.sb_max_turns, args.sb_max_api_calls
+        max_turns = resolve_contest_budget(competition, max_turns=turns_override).max_turns
+        team_size = team_size_for(competition, args.team_size, args.system_variant)
+        default_turns, default_api = budget_for(competition, team_size, args.system_variant)
+        coach_calls = 2 if args.system_variant == "otc" else 1
+        calls_per_turn = (default_api - coach_calls) // default_turns
+        max_api = api_override if api_override is not None else max_turns * calls_per_turn + coach_calls
         print(
             f"[{index}/{len(manifests)}] {manifest.stem} "
             f"variant={args.system_variant} (turns={max_turns}, api={max_api})",
@@ -274,16 +156,18 @@ def main() -> int:
         result = run_one(
             manifest,
             out_root=args.output,
-            team_size=args.team_size,
+            team_size=team_size,
             max_turns=max_turns,
             max_api_calls=max_api,
             system_variant=args.system_variant,
         )
-        print(f"  -> {result['status']}", flush=True)
+        print(f"  -> {result['status']} {result.get('reason', '')}", flush=True)
         results.append(result)
-        summarize(args.output, [path.stem for path in manifests])
+        summarize(args.output, [path.stem for path in manifests], run_results=results)
+        if result["status"] == "blocked":
+            return 2
 
-    summary = summarize(args.output, [path.stem for path in manifests])
+    summary = summarize(args.output, [path.stem for path in manifests], run_results=results)
     ok = sum(1 for row in results if row["status"] in {"ok", "skipped_complete"})
     print(f"DONE {ok}/{len(results)} complete | summary={summary}", flush=True)
     return 0 if ok == len(results) else 1

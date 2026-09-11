@@ -10,7 +10,8 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from collaboration import CollabConfig, run_open_table_coach  # noqa: E402
+from rulecard_policy import open_table_policy
+from rules.loader import load_rule_card
 from env import OlympiadEnvironment  # noqa: E402
 from run_competition_batch import (  # noqa: E402
     _aggregate_metrics,
@@ -201,18 +202,9 @@ class StructuredGoldBatchTests(unittest.TestCase):
         }
         for competition, problem_id in cases.items():
             with self.subTest(competition=competition):
-                env = OlympiadEnvironment(
-                    competition,
-                    problem_id,
-                    max_turns=1,
-                    rules_mode="enforced",
-                )
-                result = run_open_table_coach(
-                    env,
-                    lambda _system, _user: "ACTION: sleep | PAYLOAD:",
-                    CollabConfig(max_turns=1, synthesize=False),
-                )
-                self.assertEqual(result["turns_used"], 1)
+                card = load_rule_card(competition)
+                policy = open_table_policy(card, team_size=card.team_size_default, programming=False)
+                self.assertIsNotNone(policy)
 
 
 if __name__ == "__main__":

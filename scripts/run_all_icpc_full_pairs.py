@@ -1,7 +1,7 @@
 """Run fresh full-contest OTC/Vanilla pairs for every remaining ICPC WF year.
 
 The batch is resumable: a run is skipped only when its contest_session.json
-exists and matches the requested session and variant. Generated manifests,
+exists and matches the resolved experiment fingerprint. Generated manifests,
 per-run logs, and batch_status.json live under the selected output root.
 """
 
@@ -18,13 +18,13 @@ from pathlib import Path
 
 
 REPO = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO / "src"))
+from run_competition_batch import inspect_contest_run
+from contest_run_identity import RunCompatibilityError, inspect_contest_output
+from contest_budget import resolve_contest_budget
+
 BENCHMARK = REPO / "data" / "benchmarks" / "icpc" / "benchmark.json"
-TRACE_RUNNER = (
-    REPO
-    / "results"
-    / "icpc_2012_low_score_diagnosis_20260908"
-    / "run_with_context_trace.py"
-)
+RUNNER = REPO / "src" / "run_competition_batch.py"
 PYTHON = REPO.parent / ".venv" / "Scripts" / "python.exe"
 GATEWAY_HEALTH = "http://127.0.0.1:8787/v1/health"
 
@@ -48,24 +48,8 @@ def gateway_ready() -> bool:
         return False
 
 
-def completed(run_dir: Path, session_id: str, variant: str) -> bool:
-    result = run_dir / "contest_session.json"
-    if not result.exists():
-        return False
-    try:
-        payload = json.loads(result.read_text(encoding="utf-8"))
-    except Exception:
-        return False
-    stored_variant = payload.get("system_variant")
-    equivalent_variants = {
-        "strategic_team": {"strategic_team", "strategic", "open_table_coach"},
-        "vanilla_team": {"vanilla_team", "vanilla", "decentralized"},
-        "open_table_coach": {"strategic_team", "strategic", "open_table_coach"},
-        "decentralized": {"vanilla_team", "vanilla", "decentralized"},
-    }
-    return payload.get("session_id") == session_id and stored_variant in equivalent_variants.get(
-        variant, {variant}
-    )
+def completed(run_dir: Path, expected_identity: dict) -> bool:
+    return inspect_contest_output(run_dir, expected_identity) == "complete"
 
 
 def main() -> int:
@@ -73,7 +57,7 @@ def main() -> int:
     parser.add_argument(
         "--output-root",
         type=Path,
-        default=REPO / "results" / "icpc_all_full_pairs_20260909",
+        default=REPO / "results" / "icpc_all_full_pairs_v5",
     )
     parser.add_argument("--start-year", type=int, default=2012)
     parser.add_argument("--end-year", type=int, default=2025)
@@ -125,8 +109,8 @@ def main() -> int:
                 ),
             },
         )
-        for variant in ("strategic_team", "vanilla_team"):
-            short = "otc" if variant == "strategic_team" else "vanilla"
+        for variant in ("otc", "decentralized"):
+            short = "otc" if variant == "otc" else "vanilla"
             run_dir = output_root / "runs" / f"{session_id}_{short}"
             jobs.append((year, session_id, manifest_path, variant, run_dir))
 
@@ -138,7 +122,7 @@ def main() -> int:
             "provider": "perplexity",
             "model": "openai/gpt-5.4-mini",
             "team_size": 3,
-            "max_turns": 50,
+            "max_turns": "registry (300 min / 5 min per turn = 60)",
             "max_simulated_minutes": 300,
             "programming_deadline_submit": True,
             "skipped_verified_years": sorted(set(args.skip_year)),
@@ -160,21 +144,8 @@ def main() -> int:
     for year, session_id, manifest_path, variant, run_dir in jobs:
         key = (year, variant)
         entry = job_state.get(key, {"year": year, "variant": variant})
-        if completed(run_dir, session_id, variant):
-            entry.update(status="completed", skipped_on_resume=True, updated_at=now())
-            job_state[key] = entry
-            continue
-        if not gateway_ready():
-            entry.update(status="blocked", reason="gateway health check failed", updated_at=now())
-            job_state[key] = entry
-            state.update(status="blocked", updated_at=now(), jobs=list(job_state.values()))
-            write_json(status_path, state)
-            return 2
-
-        run_dir.mkdir(parents=True, exist_ok=True)
         log_path = log_dir / f"{session_id}_{variant}.log"
-        resuming = (run_dir / "contest_checkpoint.json").is_file()
-        runner_path = REPO / "src" / "run_competition_batch.py" if resuming else TRACE_RUNNER
+        runner_path = RUNNER
         command = [
             str(PYTHON),
             "-u",
@@ -192,8 +163,9 @@ def main() -> int:
             "native",
             "--team-size",
             "3",
-            "--max-turns",
-            "50",
+            # No --max-turns: registry derives 5h / 5 min = 60 turns.
+            "--max-api-calls",
+            str(resolve_contest_budget("icpc").max_turns * 3 * 2 + 2),
             "--start-seat",
             "0",
             "--max-simulated-minutes",
@@ -205,9 +177,28 @@ def main() -> int:
             "--output",
             str(run_dir),
         ]
+        try:
+            output_state, expected_identity = inspect_contest_run(command[3:])
+        except (ValueError, SystemExit) as exc:
+            entry.update(status="blocked", reason=str(exc), updated_at=now())
+            job_state[key] = entry
+            state.update(status="blocked", updated_at=now(), jobs=list(job_state.values()))
+            write_json(status_path, state)
+            return 2
+        if output_state == "complete":
+            entry.update(status="completed", skipped_on_resume=True, updated_at=now())
+            job_state[key] = entry
+            continue
+        if not gateway_ready():
+            entry.update(status="blocked", reason="gateway health check failed", updated_at=now())
+            job_state[key] = entry
+            state.update(status="blocked", updated_at=now(), jobs=list(job_state.values()))
+            write_json(status_path, state)
+            return 2
+        run_dir.mkdir(parents=True, exist_ok=True)
         # Preserve a partially completed contest after a transient provider
         # failure. The contest runner validates checkpoint compatibility.
-        if resuming:
+        if output_state == "resume":
             command.append("--resume")
         entry.update(
             status="running",
@@ -223,18 +214,27 @@ def main() -> int:
             log.flush()
             result = subprocess.run(command, cwd=REPO, stdout=log, stderr=subprocess.STDOUT)
             log.write(f"[{now()}] EXIT {result.returncode}\n")
+        exit_code = result.returncode
+        if exit_code == 0:
+            try:
+                if not completed(run_dir, expected_identity):
+                    exit_code = 1
+                    entry["reason"] = "Process exited without a verified complete result"
+            except RunCompatibilityError as exc:
+                exit_code = 1
+                entry["reason"] = str(exc)
         entry.update(
-            status="completed" if result.returncode == 0 else "failed",
-            exit_code=result.returncode,
+            status="completed" if exit_code == 0 else "failed",
+            exit_code=exit_code,
             finished_at=now(),
             updated_at=now(),
         )
         state.update(updated_at=now(), jobs=list(job_state.values()))
         write_json(status_path, state)
-        if result.returncode != 0:
+        if exit_code != 0:
             state["status"] = "failed"
             write_json(status_path, state)
-            return result.returncode
+            return exit_code
         time.sleep(15)
 
     state.update(status="completed", updated_at=now(), jobs=list(job_state.values()))

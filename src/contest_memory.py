@@ -20,6 +20,17 @@ _FORBIDDEN_KINDS = {
 # Personal (``note``) and team-published (``note_shared``) bookkeeping events
 # written by the ``remember`` / ``share_note`` actions.
 _NOTE_KINDS = {"note", "note_shared"}
+# Public team talk surfaced by ``strategic_projection(max_team_messages=...)``.
+_TEAM_MESSAGE_KINDS = {
+    "speak",
+    "note_shared",
+    "propose",
+    "challenge",
+    "provide_evidence",
+    "revise",
+    "decide",
+    "coach_opening_summary",
+}
 _FORBIDDEN_KEYS = {
     "answer_key",
     "expected_output",
@@ -344,15 +355,23 @@ class ContestMemory:
         max_procedural_lessons: int = 6,
         max_direct_messages: int = 8,
         max_recent_notes: int = 4,
+        max_team_messages: int = 0,
         max_chars: int = 8000,
     ) -> dict[str, Any]:
-        """Build a bounded working-memory view, never the full archive."""
+        """Build a bounded working-memory view, never the full archive.
+
+        ``max_team_messages`` (off by default) adds a ``team_messages`` slice:
+        the latest public ``speak`` / shared-note / deliberation events across
+        every task, so a rule card's ``public_messages`` allowance can be
+        honoured without widening the per-task event window.
+        """
         limits = (
             max_current_events,
             max_recent_digests,
             max_procedural_lessons,
             max_direct_messages,
             max_recent_notes,
+            max_team_messages,
         )
         if any(limit < 0 for limit in limits) or max_chars < 256:
             raise ValueError("Projection limits must be non-negative; max_chars >= 256.")
@@ -384,8 +403,22 @@ class ContestMemory:
                 "programming_worker_progress",
                 "programming_source_recorded",
                 "programming_source_required",
+                # Private deliberation is surfaced through its own ledger.
+                "think",
             }
         ][-max_current_events:] if max_current_events else []
+        team_messages = [
+            {
+                "event_id": event.event_id,
+                "task_id": event.task_id,
+                "turn": event.turn,
+                "actor": event.actor,
+                "kind": event.kind,
+                "payload": event.payload,
+            }
+            for event in visible
+            if event.visibility == "public" and event.kind in _TEAM_MESSAGE_KINDS
+        ][-max_team_messages:] if max_team_messages else []
         lessons = [
             {
                 "event_id": event.event_id,
@@ -432,6 +465,8 @@ class ContestMemory:
             "procedural_lessons": lessons,
             "direct_messages": direct_messages,
         }
+        if max_team_messages:
+            projection["team_messages"] = team_messages
         self._shrink_to_budget(projection, max_chars)
         return projection
 
@@ -512,6 +547,7 @@ class ContestMemory:
             projection["recent_notes"],
             projection["procedural_lessons"],
             projection["direct_messages"],
+            projection.get("team_messages", []),
         )
         while size() > max_chars and any(lists):
             largest = max((items for items in lists if items), key=lambda items: len(
