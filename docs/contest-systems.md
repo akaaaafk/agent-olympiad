@@ -1,4 +1,4 @@
-# Contest sessions: five baselines on one engine
+# Contest sessions: four baselines on one engine
 
 Use an explicit manifest so unrelated benchmark years are never mixed into one
 contest:
@@ -7,7 +7,7 @@ contest:
 python src/run_competition_batch.py `
   --live `
   --contest-manifest data/contest_manifests/icpc_wf_2012_5.json `
-  --system-variant open_table_coach `
+  --system-variant otc `
   --max-api-calls 300 `
   --max-total-tokens 80000 `
   --output results/icpc_otc
@@ -17,28 +17,88 @@ Run a matched baseline with the same model, manifest, team size, API limit,
 token limit, turn limit, and starting seat; change only `--system-variant`.
 Use `--start-seat` for repeated runs with a different first agent.
 
-## Baselines (2026-09-09)
+## Baselines (2026-09-10)
 
-`--system-variant` names one of five baselines. Each is a named preset of
-orthogonal switches (`contest_runner.BaselineFeatures`); the engine never
-branches on the baseline's name, only on these switches, so adding a sixth
-baseline is one table row, not a new set of `if` statements.
+`--system-variant` names one of four baselines. Each is a named preset of
+orthogonal switches (`contest_config.BaselineFeatures`); the engine never
+branches on the baseline's name, only on these switches, so adding a baseline
+is one table row, not a new set of `if` statements.
 
-| baseline | coach | review workflow | memory (`remember/recall/share_note`) | desk (`inspect/triage`) | `direct_message` | structured context | cooldown | mechanical switch | leader submits |
-|---|---|---|---|---|---|---|---|---|---|
-| `single_agent` (team_size pinned to 1) | none | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ | ✗ |
-| `decentralized` (open table, rotating seats) | none | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ | ✗ |
-| `centralized` (`Agent_1` is the leader) | leader | ✗ | ✗ | ✓ | ✓ | ✓ | ✓ | ✗ | ✓ |
-| `open_table_coach` | pre-contest Coach | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ |
-| `open_table_coach_memory` | pre-contest Coach | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ |
+| baseline | coach | review workflow | memory (`remember/recall/share_note`) | desk (`inspect/triage`) | `direct_message` | structured context | cooldown | mechanical switch | leader submits | rule card |
+|---|---|---|---|---|---|---|---|---|---|---|
+| `single_agent` (team_size pinned to 1) | none | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ | ✗ | off |
+| `decentralized` (open table, rotating seats) | none | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ | ✗ | off |
+| `centralized` (`Agent_1` is the leader) | leader | ✗ | ✗ | ✓ | ✓ | ✓ | ✓ | ✗ | ✓ | off |
+| `otc` (rule-card Open Table Coach) | card (turn 0 only) | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ | enforced |
 
-Legacy names remain accepted and are canonicalised in results:
-`vanilla` / `vanilla_team` → `decentralized`, `strategic` / `strategic_team`
-→ `open_table_coach` (v3 strategic had no memory actions, so the alias points
-at the memory-less coach baseline). `contest_session.json` stores the canonical
-name in `system_variant`, the switches in `baseline`, the requested CLI name in
-`run.requested_variant`, and who wrote the opening plan in `plan_author`
-(`Pre_Contest_Coach`, `Agent_1`, or `null`).
+### `otc`: the rule card drives the session
+
+`otc` is the Open Table Coach method as written in
+`data/rules/<competition>/collaboration.json`, run on the contest-session
+engine. It is the only baseline with `rule_card="enforced"`; the card is
+loaded by `run_competition_batch.py` (missing card fails closed; see
+[reuse and settings](contest-run-reuse.md)), validated by `src/rulecard_policy.py`, and its `rule_id` / SHA-256 / mode are recorded in
+`contest_session.json["rule_card"]`. What the card decides:
+
+| card block | runtime behaviour |
+|---|---|
+| `team_size_min/default/max`, `agent_roles[].may_submit` | roster defaults to the card's (`--team-size` outside the range is an error); only `may_submit` roles see `submit` / `submit_code` / `finish_contest` |
+| `simulation.open_table_coach.precontest_brief` (`turn=0`, `problem_access=false`) | Exactly one blind Coach brief before the clock: one API call, zero contestant turns/minutes. Resume restores that event, never calls Coach again |
+| `opening_discussion.enabled=false` | No second Coach call, summary, or problem assignment |
+| `contestant_turn_policy.private_think_calls_per_turn` | each seat makes N private think calls (text, event `think`, private ledger of `memory_entries.private_think_per_agent` entries shown back) then exactly one typed action; API budget default = `turns × team × (1+N) + 1` |
+| `max_chars_by_action` | `work/speak/direct_message/rest/deliberation` content is clipped at the card limit (event `card_content_clipped`); `think` likewise |
+| `memory_entries` | `strategic_projection(max_current_events=shared_work, max_direct_messages=group_messages, max_team_messages=public_messages)` |
+| `discussion_policy` | `report_after_work` / `conflicts_require_targeted_speak` in the prompt; `silent_work_turn_requires_discussion`: after 2 consecutive work-only turns only discussion actions (+ desk read-only) remain for that turn |
+| `communication` (`limited`: team / per-agent budget, `max_message_chars`) | `speak` / `direct_message` / `share_note` (+ deliberation actions) are counted; a message longer than `max_message_chars` is clipped (the effective limit is `min(card max_chars, max_message_chars)`); once the message *count* is exhausted → action error, turn spent |
+| `deliberation.mode == "structured"` (`min_challenges`, `decision_maker`) | adds the competition-specific **deliberation pack** `propose / challenge / provide_evidence / revise / decide` (ledger replayed from events; `decide` only for the decision maker); the four follow-up actions are offered only while a proposal is open and their `proposal_id` is pinned to the open ids; the protocol line lists the open proposals; the answer sheet cannot be submitted before `min_challenges` challenges |
+| `min_turns` | contest-ending actions (`submit` on an answer sheet, `finish_contest`) are withheld before that turn |
+| `exclusive_workstation_lease: enforced` (ICPC) | One team-global keyboard; the last executor/submitter holds it for 2 turns across all problems. Other seats can analyse/review but cannot execute/submit by switching problems |
+| `run_judging_latency_turns` | The actual verdict is controller-private; all contestant surfaces see only PENDING until delivery. No early score/lock/penalty/reopen. Pending source is frozen. Queue and exactly-once delivery survive checkpoints; final collection flushes pending verdicts |
+| `repair_budget_after_rejected_run` (default 2) | after an official rejection, N executions without a sample-AC on *new* source lower the problem to `low` priority (event `programming_repair_budget_exhausted`) |
+
+Actions are organised as one **common set** every competition gets
+(`select_problem / speak / direct_message / work / rest / skip_problem /
+finish_contest / submit` + desk `inspect_problem / triage_problem / remember /
+recall / share_note`) plus **competition-specific bundles** switched on by the
+manifest and the card: `programming` (`execute_code / submit_code`, ICPC-style
+lease and latency), `math` (`use_calculator`), `research` / `resources`, and
+the card-only `deliberation` pack. Cards declare `action_surface=registry_bundles_v1`
+and the exact bundle list; `allowed_actions` names the core work/talk/rest bundle,
+not the complete registry surface. `review_answer` is enabled; candidate versions
+automatically enter the shared review queue, so no separate `request_review` action
+is needed. `assign_problem` is unavailable. Approval must be by a different author
+and match the current hash; a current rejection vetoes submission. Revision stales
+previous reviews. Deadline collection does not bypass this gate (or programming
+sample evidence). There is no extra whole-contest final-review pass by default.
+
+Focus under `otc` is per seat, not the shared cursor: a seat's own latest
+`select_problem` stands until it switches; otherwise it considers the scheduler's
+next blank problem and its own recent focus. There are no Coach-generated assignments. Because the card allows exactly one action per turn,
+`work` carries an optional `problem_id`: `work(problem_id=X, content=...)`
+switches to X and records the draft in the same move (logged as a
+`select_problem` event with `via: "work"` so the focus follows on later turns).
+
+The protocol is now `contest_session_v6` (`otc_turn0_review_v1` in the cards).
+This is the user-maintained OTC, not a restoration of Selin\'s old OTC engine.
+Do not resume v5/older results under v6; identity validation rejects that mismatch.
+ARML Local defaults to its competition card\'s 45 minutes / 9 rounds; national team
+is 20 minutes / 4 rounds, with `min_turns <= max_turns`. Explicit experimental
+budget overrides remain possible and are recorded, not relabeled as official runs.
+
+Old spellings `OTC`, `open_table_coach`, `open_table_coach_memory`,
+`strategic`, and `strategic_team` all resolve to `otc`.
+`vanilla` / `vanilla_team` still resolve to `decentralized`.
+Results store the canonical name in `system_variant` and the requested spelling
+in `run.requested_variant`. Legacy `--schema open_table_coach` is retired:
+use `--contest-manifest ... --system-variant otc`.
+Historical outputs retain their original names and protocol metadata.
+
+Configuration lives in `src/contest_config.py`; action effects and card gates
+live in `src/contest_actions.py`; lifecycle orchestration now lives in
+`src/contest_engine.py`. `src/contest_runner.py` is a compatibility facade:
+the old runner imports remain compatible re-exports,
+not duplicate implementations. The ICPC batch now uses the official CLI for both
+fresh and resumed runs, not a script inside a historical result directory.
 
 `single_agent` and `decentralized` share every switch; the only difference is
 the one-seat constraint. Both are the v3 vanilla environment: no desk or memory
@@ -66,10 +126,23 @@ Module interfaces:
   accidentally.
 - `src/strategic_contest_runner.py` runs the coach and leader presets,
   including the Coach dependency (the leader plan uses the contestant model).
-- `src/contest_runner.py` contains the shared contest state machine and a
-  compatibility dispatcher. Session state, judge adapters, budgets, action
-  transport, checkpoints, and result serialization remain shared so matched
-  comparisons do not drift.
+- `src/contest_runner.py` retains the compatibility dispatcher and helper imports.
+- `src/contest_engine.py` owns one run's private state and orders setup, Coach,
+  rounds, seat phases, deadline collection, and result construction. Per-seat
+  state is isolated in `_AgentTurn`, not leaked across seats.
+- `src/contest_prompts.py` owns agent-visible prompts and review projections;
+  `src/contest_policy.py` owns action gating and routing;
+  `src/contest_lifecycle.py` owns environment defaults and deadline helpers.
+  These modules do not import the facade. All presets still use the same
+  mechanics, budgets, checkpoint representation, and result representation.
+
+The structural refactor originally kept protocol v5 behavior unchanged; the
+current contract is v6. Twelve fixed-clock replays compare complete
+prompt/event/checkpoint/result fingerprints for
+decentralized, centralized, and OTC runs, covering math/programming and
+fresh/resumed execution. As usual, source fingerprints change after edits,
+so previously written experiment identities cannot be resumed as current code.
+See [the original six-item repair checklist](pipeline-repair-checklist.md).
 
 Contest actions use one provider-neutral `LLMRequest(tools=...)` /
 `LLMResponse(tool_calls=...)` interface. With `--action-calling auto`,
@@ -90,11 +163,15 @@ calls, retries, and terminal transport failures.
 
 ## Canonical tools: common versus specialized
 
-`src/tool_registry.py` contains one canonical registry of 22 typed actions
-(`ACTION_SET_VERSION = 2`). Every action has a name, description,
+`src/tool_registry.py` contains one canonical registry of 31 typed actions
+(`ACTION_SET_VERSION = 5`). Every action has a name, description,
 JSON-compatible argument schema, visibility, capability pack, budget semantics,
-and runtime handler marker. The same definitions are used for provider function
-schemas, prompt instructions, validation, and dispatch.
+runtime handler marker, and a `runtimes` tag (`session`, `env`, or both). The
+same definitions are used for provider function schemas, prompt instructions,
+validation, and dispatch in **both** execution paths: the contest-session
+runtime described in this document and the legacy per-problem
+`OlympiadEnvironment` used by the `--schema` stack (see
+*action_set_version=5* below and `docs/WORKBOARD_AND_TOOLS.md`).
 
 All task families initially receive the **common** collaboration pack:
 
@@ -102,7 +179,8 @@ All task families initially receive the **common** collaboration pack:
 - `speak(content)` broadcasts a message to the team.
 - `direct_message(recipients, content)` privately sends a message to one
   teammate or a named sub-group of teammates.
-- `work(content)` records a durable answer or code draft.
+- `work(content, problem_id?)` records a durable answer or code draft; the
+  optional `problem_id` switches to that task first when the agent may work it.
 - `request_review(content, reviewer?)` asks for review but does not approve a
   version.
 - `review_answer(problem_id, version_hash, decision, content)` independently
@@ -125,10 +203,10 @@ and the **desk** subset of the common pack (see *contest_session_v4* below):
 Specialized actions are grouped into capability packs:
 
 - **Math:** `use_calculator(expression)`.
-- **Programming:** `execute_code(code, language?)`, `verify(focus?)`, and
-  `submit_code(code, language?)`. `verify` stays registered for the legacy
-  per-problem environment; contest sessions drop it from the frozen action set
-  because `inspect_problem` covers self-verification for every family.
+- **Programming:** `execute_code(code, language?)` and
+  `submit_code(code, language?)`. The former `verify(focus?)` is no longer a
+  registered action; it is a legacy alias of `inspect_problem`, which covers
+  self-verification for every family in both runtimes.
 - **Research:** `web_search(query)`.
 - **Physical resources:** `read_lab_equipment(resource?)` and
   `read_star_chart(resource?)`.
@@ -189,12 +267,14 @@ packs; they differ only by the optional bundles in the table above. Actions
 invalid under the contest's submission contract are hidden for everyone,
 including incomplete answer-sheet submissions.
 
-The coach presets add bounded contest memory, immutable answer versions,
-different-agent review, evidence-bound code review, stalled-task switching,
-three-non-AC cooldown, and later revisits. These are experimental system
-policies, not official ARML or ICPC rules.
+The structured presets add bounded contest memory, immutable answer versions,
+stalled-task switching, and later revisits. OTC adds mandatory different-agent
+review and evidence-bound code review. Centralized, but not OTC, enables the
+three-non-AC cooldown; OTC instead uses its card's repair-demotion policy.
+These are experimental system policies, not official ARML or ICPC rules.
 
-Every family exposes `inspect_problem(problem_id?, focus?)`. It returns the
+Every task family can resolve `inspect_problem(problem_id?, focus?)`, but only
+baselines with desk actions (`centralized` and `otc`) expose it. It returns the
 statement, version chain (with sample reports for programming), review history
 and submissions of the requested problem (default: the active one) as a private
 tool event. It is self-verification context only, never satisfies the
@@ -209,22 +289,27 @@ and coordination score (CS) by default; `--no-judge-collab` disables this.
 `--judge-cce` adds CCE for live runs.
 
 Multi-problem non-programming contests use answer-sheet semantics: `work`
-updates a per-problem draft, the strategic variant reviews every draft and then
-the complete sheet, and one argument-free `submit` atomically submits all latest
-drafts and terminates the contest. Individual math problems are never submitted
-mid-contest. Strategic `submit` remains gated on review completion. At session
-end, the environment collects pending non-programming drafts for
-**both** variants, leaving missing tasks blank. The last model action remains
-available for solving or revising a draft; deadline collection consumes no extra
-model call. Programming contests retain per-problem `submit_code` semantics.
+updates a per-problem draft and one argument-free `submit` atomically submits
+the sheet and terminates the contest. Individual math problems are never
+submitted mid-contest. OTC requires independent approval of every current
+submitted version but no redundant whole-sheet final-review pass by default.
+At session end, eligible pending non-programming drafts are collected without
+another model call; OTC's approval gate is not bypassed and missing tasks remain
+blank. Programming contests retain per-problem `submit_code` semantics.
 
-Results record `protocol_version=contest_session_v4`, `action_set_version=3`
-(3 = `assign_problem` added; 2 = desk actions) and
-`deadline_policy=collect_pending_non_programming_drafts`. Re-run old
-experiments from fresh output directories when comparing this protocol; do not
-mix old checkpoints or scores with the new submission policy.
+Results record `protocol_version=contest_session_v6`,
+`action_set_version=5`, and the effective deadline policy. Re-run old
+experiments from fresh output directories when comparing protocols; do not mix
+old checkpoints or scores with current results.
 `run_competition_batch.py --resume` refuses a `contest_checkpoint.json` whose
 `protocol_version` differs from the running code.
+
+## Historical implementation notes (v2–v5)
+
+The dated sections below document earlier implementations, not the current OTC
+contract. For v6, the table above takes precedence: one turn-0 Coach, mandatory
+current-version approval, and no review bypass at deadline or after rejection.
+Vanilla and explicitly selected review-only ablations retain their own behavior.
 
 ### OTC programming workflow v2 (2026-09-08)
 
@@ -428,7 +513,7 @@ are changed; task-wide budget limits and counterexample tools are not added.
 Regression coverage: `tests/test_programming_gap_repairs.py` and the existing
 deadline, productivity, contest-family and variant suites.
 
-### contest_session_v4: desk actions (2026-09-09)
+### contest_session_v4: desk actions (2026-09-10)
 
 Results now record `protocol_version=contest_session_v4` and
 `action_set_version=2`; the on-disk `contest_checkpoint.json` carries the same
@@ -450,7 +535,8 @@ unchanged.
   into the `desk` and `memory` switches and removed them from the no-coach
   presets). They are not gated by the Coach's work/review assignment; only the
   answer-sheet submit-only phase and the programming source-required phase hide
-  them. Every desk call still costs one turn and one API call.
+  them. Every desk call uses one seat action and one API call inside the already
+  charged global contest round; turns are charged once per round, not per seat.
 - `inspect_problem(problem_id?, focus?)` replaces the programming-only
   `verify`: a private `inspect_problem_result` event with statement, versions
   (content clipped to 2 000 chars, sample and author reports), reviews and
@@ -504,3 +590,54 @@ action set, centralized leader/worker gating, live reassignment and its resume
 replay, alias canonicalisation and team-size rules). `src/run_contest_smoke.py`
 produces the same deterministic matched-pair outcomes as v3 and as the
 pre-refactor v4.
+
+### action_set_version=5: one registry for both runtimes (2026-09-10)
+
+Results now record `action_set_version=5`. The contest-session protocol itself
+is unchanged (replay fingerprints in `tests/test_contest_engine_replay.py` were
+recaptured only because `work` gained an optional `problem_id` argument in
+every variant); the revision unifies the legacy `OlympiadEnvironment` action
+set with this registry so that the `--schema` stack and the contest-session
+stack share one action vocabulary.
+
+- **Runtime tags.** Each `ActionSpec` carries `runtimes`; `actions_for_runtime`
+  yields 27 actions for `session` and 28 for `env`, 24 shared. Session-only:
+  `assign_problem`, `request_review`, `finish_contest`. Env-only packs
+  `workboard` (`verify_problem`) and `workspace` (`check_budget`,
+  `query_rules`, `write_private_notes`) exist because the session runtime
+  injects TASK STATUS / BUDGET and pins reviews to a version hash instead.
+- **Legacy names are aliases, not actions.** `LEGACY_ALIASES` maps
+  `sleep→rest`, `submit_final→submit`, `write_scratchpad`/`submit_problem→work`,
+  `claim_problem→select_problem`, `release_problem→skip_problem`,
+  `list_problems`/`open_problem`/`verify→inspect_problem`,
+  `set_priority`/`mark_hopeless→triage_problem`, `publish_memory→share_note`,
+  `message_group→direct_message`, including positional field mapping for the
+  `a | b | c` text payload. Old rule cards, transcripts and mock outputs still
+  parse; logs record the canonical `action` plus `invoked_as`.
+- **One wire parser.** `src/action_wire.normalize_invocation` turns a typed
+  dict or a text payload into the same `Invocation`; `env.execute_action`
+  accepts both.
+- **Handler tables replace the if-chains.** `OlympiadEnvironment._HANDLERS`
+  and `contest_actions.SESSION_HANDLERS` are keyed by canonical name;
+  `env.unimplemented_actions()` must stay empty.
+- **Env gains session semantics.** `review_answer` is implemented against
+  `Workboard.answer_hash` (`inspect_problem` prints `Recorded version:`);
+  `inspect_problem` without a `problem_id` returns the board overview, or the
+  code / run history in a programming contest.
+- **Prompts are rendered from the registry** (`actions.build_action_instructions`),
+  so the legacy prompt now advertises `work`, `rest`, `submit` and the desk
+  actions under their canonical names.
+
+## Verification and retired coverage
+
+The removed per-problem OTC tests targeted a retired protocol (including its
+turn-2 exit and legacy synthesis). Current stage/access/action/lease/latency
+coverage lives in `tests/test_otc_rulecard.py`; canonical aliases, fail-closed
+migration, and module boundaries are covered by `tests/test_otc_migration.py`.
+Shared review/cooldown/source-gate tests remain as explicit feature ablations
+in `tests/contest_feature_fixtures.py`, using the centralized planner where an
+opening plan is needed. They are not OTC or Vanilla benchmark presets.
+
+`grade.graded` means every task was evaluable. Partial or wholly unsupported
+grading reports `graded=false`; unavailable tasks do not enter the score
+denominator, and wholly unsupported sessions keep `task_utility=null`.

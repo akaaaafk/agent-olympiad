@@ -65,12 +65,14 @@ scripts/*export*.py → summary.tsv / paste_tabs / completed_metrics.tsv
 | `centralized`（Agent_1 = leader） | leader | ✗ | ✗ | ✓ | ✓ | ✓ | ✓ | ✗ | ✓ |
 | `open_table_coach`（OTC） | precontest | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ |
 | `open_table_coach_memory` | precontest | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ |
+| `otc`（rule card 版 OTC，2026-09-09 晚新增） | card（两阶段） | ✗ | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |
 
+- **`otc`**：第 10 个开关 `rule_card="enforced"`，只有它打开。`data/rules/<比赛>/collaboration.json` 决定一切：队伍人数（ARML Local 卡是 6 人，所以默认 6 座）、Coach 两阶段（turn 0 盲简报，在开钟前、不占比赛 turn，只花 1 次 API；turn 1 contestants 先动、Coach 读公开事件出总结 + **建议性**分组后退场）、每回合 1 次私有 think 调用 + 1 个 action（API 默认 = turns × team × 2 + 2，ARML 即 146）、`max_chars_by_action` 截断、`memory_entries` → 投影窗口、`discussion_policy`（连续 2 个只 work 不说的回合后只剩讨论动作）、`communication` 预算（超了记 action_error）、`deliberation.mode=structured` 时加 `propose/challenge/provide_evidence/revise/decide` 五件套并要求 ≥ `min_challenges` 次 challenge 才能交卷、`min_turns` 前不能结束、ICPC 的 `exclusive_workstation_lease`（谁最后跑/交了代码谁持键盘 2 回合）与 `run_judging_latency_turns`（verdict 延迟一回合可见、期间不能重交）、`repair_budget_after_rejected_run`（官方 WA 后 2 次执行仍没有新源码的 sample AC → 题目降 low）。不带 review 工作流、不强制分配、不 cooldown。细表见 `docs/contest-systems.md`。
 - 别名：`vanilla` / `vanilla_team` → `decentralized`；`strategic` / `strategic_team` → `open_table_coach`（v3 的 strategic 没有 memory action，所以指向不带 memory 的那个）。结果里 `system_variant` 存正名，`baseline` 存开关，`run.requested_variant` 存命令行原名，`plan_author` 记谁出的计划（`Pre_Contest_Coach` / `Agent_1` / null）。
 - `single_agent` 与 `decentralized` 开关完全一样，区别只有座位数；两者就是 v3 vanilla 环境（无 desk/memory 工具、原始 12 条上下文、work 后自动跳下一道空题）。
 - `centralized` 是旧栈 `--schema centralized` 的 contest-session 版：Agent_1 用 Coach 同款 JSON 出开场计划（事件仍是 `precontest_coach_guidance`，`author=Agent_1`），自己可做任何题、每轮先行、**唯一**能 `submit / submit_code / finish_contest`（worker 看不到这三个；leader 的 `submit_code` 无参，提交活动题最新版本）。leader 独有 `assign_problem(agent, problem_ids, reason?)` 现场替换某人的 work 列表，公开事件，resume 时重放。无 review 工作流，计划里的 review 路由清空。
 - 消融：在预设上传 `features=BaselineFeatures(...)` 或 `--require-review / --no-require-review`，名字仍是预设名。
-- `action_set_version` 升到 3（加了 `assign_problem`），`protocol_version` 仍是 `contest_session_v4`。
+- `action_set_version` 升到 3（加了 `assign_problem`），再升到 4（加了 `deliberation` pack 五件，只有 `otc` 且卡是 structured 才解析），`protocol_version` 仍是 `contest_session_v4`。
 
 ### 2.1 只有一个通用 runner，竞赛差异靠数据驱动
 
@@ -83,10 +85,10 @@ scripts/*export*.py → summary.tsv / paste_tabs / completed_metrics.tsv
 | `--live` | 真实 provider；不带则 mock |
 | `--provider perplexity\|tinker`，`--model` | Perplexity 用路由名如 `openai/gpt-5.4-mini`；Tinker 用 HF repo id 如 `Qwen/Qwen3.6-35B-A3B` |
 | `--contest-manifest` | 进入 contest-session 模式 |
-| `--system-variant` | §2.0 的五个正名 + 四个别名；内部规范化为正名 |
+| `--system-variant` | §2.0 的六个正名 + 四个别名；内部规范化为正名 |
 | `--action-calling auto\|native\|emulated\|prompt-json` | 见 §3.3 |
-| `--team-size` | 默认取规则卡 roster → benchmark metadata → 3 |
-| `--max-turns / --max-api-calls / --max-total-tokens / --max-simulated-minutes` | 共享预算；`--max-total-tokens` 只算 **输出** token |
+| `--team-size` | 默认取规则卡 roster → benchmark metadata → 3；`otc` 默认取卡的 `team_size_default`，给了但超出卡的范围直接报错 |
+| `--max-turns / --max-api-calls / --max-total-tokens / --max-simulated-minutes` | 共享预算；`--max-total-tokens` 只算 **输出** token。`--max-turns` 不给时按官方时长推：1 turn = 5 分钟，ARML 1h → 12、Purple Comet 90m → 18、ICPC 5h → 60，上限 90（MCM 99h 按 60 分钟/turn 也只给 90）；显式给的值同样被夹到 ≤ 90（`src/contest_budget.py`） |
 | `--require-review / --no-require-review` | 覆盖预设的 review 开关（默认两个 OTC 开、其余关） |
 | `--programming-deadline-submit` | 编程题 deadline 兜底提交（默认关） |
 | `--no-judge-task / --no-judge-collab / --no-judge-cce` | 关掉三类判分；CCE 默认关 |
@@ -97,9 +99,13 @@ scripts/*export*.py → summary.tsv / paste_tabs / completed_metrics.tsv
 
 ```
 --live --provider perplexity --model openai/gpt-5.4-mini --action-calling native
---team-size 3 --max-turns 50 --max-api-calls 151 --max-total-tokens 220000
---no-judge-task --no-judge-cce [--require-review]
+--team-size 3 --max-total-tokens 220000 --no-judge-task --no-judge-cce
+# 不传 --max-turns：按官方时长 / 5 分钟推（ARML 12、ICPC 60，上限 90）
+# 脚本里 --max-api-calls = turns × team_size + 1（Coach 那一次），ARML 三人队即 37
+# otc：不传 --team-size 用卡的默认 roster；--max-api-calls 默认 turns × team × (1 + think 次数) + 2，ARML 6 人队即 146
 ```
+
+9/9 之前的所有结果都是固定 `--max-turns 50 --max-api-calls 151` 跑的，和新预算不直接可比。
 
 ### 2.2 Manifest 与 task family 路由
 
@@ -205,7 +211,7 @@ ARML / HMMT / IOL / WSC：没有任何 task tool，只有 common 十六个（再
 
 ### 3.4 一个回合发生什么（`contest_runner.py:2206-2609`）
 
-1. 外层 `for turn`：消耗 1 turn + 模拟分钟数（250 分钟标准钟，`minutes_per_turn` 由官方时长和 50 turn 反推）。
+1. 外层 `for turn`：消耗 1 turn + 5 分钟模拟钟（`minutes_per_turn`，默认 5）；`max_turns` = 官方时长 ÷ 5，上限 90，所以模拟钟走满正好等于官方时长。
 2. 内层按固定座次 `Agent_1..N`（`--start-seat` 只改首发，不逐轮轮转）。
 3. 有计划的 baseline：`_scheduled_agent_task` 把共享游标移到该 agent 的目标（§5.2）；centralized 下 leader 永远排第一位。
 4. `_actions_for_agent` 算合法 function 集。
@@ -431,18 +437,18 @@ system prompt 按开关和 family 拼接（`_system_prompt`）：
 ## 9. 常用命令
 
 ```powershell
-# 单场 OTC（ARML National Power 2013，当前正在跑的配置）
+# 单场 OTC + memory（ARML National Power 2013）；不传 --max-turns → 1h/5min = 12 turn，api = 12×3+1
 ..\.venv\Scripts\python.exe -u src\run_competition_batch.py --live --provider perplexity --model openai/gpt-5.4-mini `
   --contest-manifest data\contest_manifests\generated\arml_national_power_2013.json `
-  --system-variant strategic_team --action-calling native --team-size 3 `
-  --max-turns 50 --max-api-calls 151 --max-total-tokens 220000 --no-judge-task --no-judge-cce --require-review `
+  --system-variant open_table_coach_memory --action-calling native --team-size 3 `
+  --max-api-calls 37 --max-total-tokens 220000 --no-judge-task --no-judge-cce `
   --output results\<run>\arml_national_power_2013
 
-# 配对基线：同上，只改 --system-variant vanilla_team，去掉 --require-review
+# 配对基线：同上，只改 --system-variant decentralized（review 开关由 baseline 决定，不用再传 --require-review）
 
-# ARML 全部 protocol v3 sweep
+# ARML 全部 sweep（turn / api 预算脚本按比赛自动算）
 python -u scripts\run_otc_gold_suite.py --competitions arml_local,arml_national_team,arml_national_power,arml_power `
-  --system-variant strategic_team --output results\arml_all_protocol_v3_otc_20260909
+  --system-variant open_table_coach --output results\arml_all_otc_<date>
 
 # ICPC 全年配对（需 vjudge_gateway 在本地跑）
 python -u scripts\run_all_icpc_full_pairs.py
