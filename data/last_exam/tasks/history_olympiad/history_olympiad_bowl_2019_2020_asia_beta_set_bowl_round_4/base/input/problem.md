@@ -1,5 +1,3 @@
-# 2019-2020-Asia-Beta-Set_Bowl-Round-4
-
 [Q1] IHBB Asian Beta Set Bowl Round 4 2019-2020 History Bowl Round 4 First Quarter 1.This scientist’s namesake ﬁeld equations can be used to calculate spacetime geometry and include the cosmological constant, which is referred to as this scientist’s “biggest blunder.” In 1952, this scientist was offered the presidency of Israel. For ten points, name this scientist who developed the theory of relativity and the equation E equals m c squared.
 
 [Q2] 2.According to Al-Tabari, this man healed the son of Phillip the Tetrarch and created birds from clay to entertain children. Several Hadith testimonials and the Quran claim that this man was a product of a virgin birth. For ten points, name this penultimate prophet of Islam and son of Maryam who is considered the Messiah of the Old Testament.

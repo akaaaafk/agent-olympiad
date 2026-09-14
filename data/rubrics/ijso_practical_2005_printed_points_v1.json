@@ -1,0 +1,277 @@
+{
+  "rubric_id": "ijso_practical_2005_printed_points_v1",
+  "dataset": "ijso_practical",
+  "title": "IJSO 2005 experiment - printed point allocation, not a recovered marking scheme",
+  "visibility": "judge_only",
+  "rubric_type": "printed_point_allocation_only",
+  "grading_validation_status": "not_validated",
+  "total_points": 20,
+  "criteria": [
+    {
+      "id": "I-2.measurements",
+      "name": "I-2 measurements",
+      "max_score": 1.0,
+      "source_page": 10,
+      "section": "I",
+      "description": "Printed point allocation only; no marking reference or experimental observations are supplied.",
+      "requires_original_measurements": true,
+      "answer_sheet_choices_missing": false
+    },
+    {
+      "id": "I-2.plot",
+      "name": "I-2 plot",
+      "max_score": 1.5,
+      "source_page": 10,
+      "section": "I",
+      "description": "Printed point allocation only; no marking reference or experimental observations are supplied.",
+      "requires_original_measurements": true,
+      "answer_sheet_choices_missing": false
+    },
+    {
+      "id": "I-3.measurements",
+      "name": "I-3 measurements",
+      "max_score": 1.0,
+      "source_page": 10,
+      "section": "I",
+      "description": "Printed point allocation only; no marking reference or experimental observations are supplied.",
+      "requires_original_measurements": true,
+      "answer_sheet_choices_missing": false
+    },
+    {
+      "id": "I-3.plot",
+      "name": "I-3 plot",
+      "max_score": 1.5,
+      "source_page": 10,
+      "section": "I",
+      "description": "Printed point allocation only; no marking reference or experimental observations are supplied.",
+      "requires_original_measurements": true,
+      "answer_sheet_choices_missing": false
+    },
+    {
+      "id": "I-4.conclusion_choice",
+      "name": "I-4 conclusion_choice",
+      "max_score": 0.5,
+      "source_page": 10,
+      "section": "I",
+      "description": "Printed point allocation only; no marking reference or experimental observations are supplied.",
+      "requires_original_measurements": true,
+      "answer_sheet_choices_missing": true
+    },
+    {
+      "id": "II-2.measurements",
+      "name": "II-2 measurements",
+      "max_score": 1.0,
+      "source_page": 11,
+      "section": "II",
+      "description": "Printed point allocation only; no marking reference or experimental observations are supplied.",
+      "requires_original_measurements": true,
+      "answer_sheet_choices_missing": false
+    },
+    {
+      "id": "II-2.plot",
+      "name": "II-2 plot",
+      "max_score": 1.5,
+      "source_page": 11,
+      "section": "II",
+      "description": "Printed point allocation only; no marking reference or experimental observations are supplied.",
+      "requires_original_measurements": true,
+      "answer_sheet_choices_missing": false
+    },
+    {
+      "id": "II-3.conclusion_choice",
+      "name": "II-3 conclusion_choice",
+      "max_score": 0.5,
+      "source_page": 11,
+      "section": "II",
+      "description": "Printed point allocation only; no marking reference or experimental observations are supplied.",
+      "requires_original_measurements": true,
+      "answer_sheet_choices_missing": true
+    },
+    {
+      "id": "III-3.measurements",
+      "name": "III-3 measurements",
+      "max_score": 1.0,
+      "source_page": 11,
+      "section": "III",
+      "description": "Printed point allocation only; no marking reference or experimental observations are supplied.",
+      "requires_original_measurements": true,
+      "answer_sheet_choices_missing": false
+    },
+    {
+      "id": "III-3.plot",
+      "name": "III-3 plot",
+      "max_score": 1.5,
+      "source_page": 11,
+      "section": "III",
+      "description": "Printed point allocation only; no marking reference or experimental observations are supplied.",
+      "requires_original_measurements": true,
+      "answer_sheet_choices_missing": false
+    },
+    {
+      "id": "III-4.conclusion_choice",
+      "name": "III-4 conclusion_choice",
+      "max_score": 0.5,
+      "source_page": 11,
+      "section": "III",
+      "description": "Printed point allocation only; no marking reference or experimental observations are supplied.",
+      "requires_original_measurements": true,
+      "answer_sheet_choices_missing": true
+    },
+    {
+      "id": "E-1",
+      "name": "Question 1",
+      "max_score": 0.75,
+      "source_page": 12,
+      "section": "E",
+      "description": "Printed multiple-choice question weight; official correct option has not been recovered.",
+      "answer_key_available": false
+    },
+    {
+      "id": "E-2",
+      "name": "Question 2",
+      "max_score": 0.75,
+      "source_page": 12,
+      "section": "E",
+      "description": "Printed multiple-choice question weight; official correct option has not been recovered.",
+      "answer_key_available": false
+    },
+    {
+      "id": "E-3",
+      "name": "Question 3",
+      "max_score": 1,
+      "source_page": 12,
+      "section": "E",
+      "description": "Printed multiple-choice question weight; official correct option has not been recovered.",
+      "answer_key_available": false
+    },
+    {
+      "id": "E-4",
+      "name": "Question 4",
+      "max_score": 0.5,
+      "source_page": 13,
+      "section": "E",
+      "description": "Printed multiple-choice question weight; official correct option has not been recovered.",
+      "answer_key_available": false
+    },
+    {
+      "id": "E-5",
+      "name": "Question 5",
+      "max_score": 0.5,
+      "source_page": 13,
+      "section": "E",
+      "description": "Printed multiple-choice question weight; official correct option has not been recovered.",
+      "answer_key_available": false
+    },
+    {
+      "id": "E-6",
+      "name": "Question 6",
+      "max_score": 0.5,
+      "source_page": 13,
+      "section": "E",
+      "description": "Printed multiple-choice question weight; official correct option has not been recovered.",
+      "answer_key_available": false
+    },
+    {
+      "id": "E-7",
+      "name": "Question 7",
+      "max_score": 0.5,
+      "source_page": 13,
+      "section": "E",
+      "description": "Printed multiple-choice question weight; official correct option has not been recovered.",
+      "answer_key_available": false
+    },
+    {
+      "id": "E-8",
+      "name": "Question 8",
+      "max_score": 0.5,
+      "source_page": 14,
+      "section": "E",
+      "description": "Printed multiple-choice question weight; official correct option has not been recovered.",
+      "answer_key_available": false
+    },
+    {
+      "id": "E-9",
+      "name": "Question 9",
+      "max_score": 0.5,
+      "source_page": 14,
+      "section": "E",
+      "description": "Printed multiple-choice question weight; official correct option has not been recovered.",
+      "answer_key_available": false
+    },
+    {
+      "id": "E-10",
+      "name": "Question 10",
+      "max_score": 0.5,
+      "source_page": 14,
+      "section": "E",
+      "description": "Printed multiple-choice question weight; official correct option has not been recovered.",
+      "answer_key_available": false
+    },
+    {
+      "id": "E-11",
+      "name": "Question 11",
+      "max_score": 0.5,
+      "source_page": 14,
+      "section": "E",
+      "description": "Printed multiple-choice question weight; official correct option has not been recovered.",
+      "answer_key_available": false
+    },
+    {
+      "id": "E-12",
+      "name": "Question 12",
+      "max_score": 0.5,
+      "source_page": 14,
+      "section": "E",
+      "description": "Printed multiple-choice question weight; official correct option has not been recovered.",
+      "answer_key_available": false
+    },
+    {
+      "id": "E-13",
+      "name": "Question 13",
+      "max_score": 0.5,
+      "source_page": 15,
+      "section": "E",
+      "description": "Printed multiple-choice question weight; official correct option has not been recovered.",
+      "answer_key_available": false
+    },
+    {
+      "id": "E-14",
+      "name": "Question 14",
+      "max_score": 0.5,
+      "source_page": 15,
+      "section": "E",
+      "description": "Printed multiple-choice question weight; official correct option has not been recovered.",
+      "answer_key_available": false
+    },
+    {
+      "id": "E-15",
+      "name": "Question 15",
+      "max_score": 0.5,
+      "source_page": 15,
+      "section": "E",
+      "description": "Printed multiple-choice question weight; official correct option has not been recovered.",
+      "answer_key_available": false
+    }
+  ],
+  "section_totals": {
+    "I": 5.5,
+    "II": 3.0,
+    "III": 3.0,
+    "E": 8.5
+  },
+  "answer_key_available": false,
+  "observed_data_available": false,
+  "source_file": "data/raw/ijso/2005/recovered_20260913/experiment.pdf",
+  "source_sha256": "ebba0db4802a4bcc1d3c78d30960c9c6d76e7b7992e4c429bc1a5d6e2b8eb369",
+  "source_url": "https://www.ijso.com.br/downloads/provas/2005/2005.pdf",
+  "limitations": [
+    "Only experimental booklet pages 8-15 are contestant input; the complete 24-page archive is preserved outside contestant input.",
+    "Printed allocations sum to 20 points (5.5 + 3 + 3 + 8.5). They are not a recovered answer key or a validated grading rubric.",
+    "Original measured observations and an edition-specific marking packet remain unavailable; no measurements or correct options are invented.",
+    "Separately referenced answer sheets have not been recovered, including the conclusion choices for I-4, II-3 and III-4.",
+    "The existing three-agent roster is retained as a benchmark adaptation; historical team equivalence and physical execution are not validated."
+  ],
+  "not_observable_from_deck": [
+    "Original physical measurements and laboratory execution"
+  ]
+}

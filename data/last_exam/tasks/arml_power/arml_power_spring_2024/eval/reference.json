@@ -1,10 +1,30 @@
 {
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/arml_power/benchmark.json#arml_power_spring_2024.gold_label",
-  "has_gold_answer": false,
+  "has_gold_answer": true,
   "evaluator_id": "rubric_llm_v1",
-  "evaluator_status": "ready",
-  "rubric_path": "data/rubrics/team_power_proof_40_v1.json",
-  "deliverable": "proof_packet",
-  "solution_file": null
+  "evaluator_status": "ready_with_limitations",
+  "solution_file": "data/raw/arml/Spring_2024/ARMLPower_Spring_2024_Solution_verified.pdf",
+  "evaluation": {
+    "evaluator_id": "rubric_llm_v1",
+    "status": "ready_with_limitations",
+    "rubric_path": "data/rubrics/arml_power_spring_2024_official_reference_v2.json",
+    "deliverable": "proof_packet",
+    "limitations": [
+      "Official solutions and printed maxima are available; partial credit uses a reference-anchored benchmark rubric, not official detailed marking.",
+      "PDF notation, tables, and diagrams remain authoritative; live LLM and image-aware end-to-end scoring were not tested."
+    ],
+    "scorecard_path": "data/rubrics/task_scorecards/arml_power.json",
+    "scorecard_key": "arml_power_spring_2024",
+    "judge_assets": [
+      "data/raw/arml/Spring_2024/ARMLPower_Spring_2024_Solution_verified.pdf"
+    ],
+    "score_basis": "Official printed per-problem maxima with reference-anchored proof assessment.",
+    "source_repair": {
+      "reviewed_on": "2026-09-13",
+      "source_report": "data/benchmarks/not_ready_cleanup_report.json"
+    }
+  },
+  "rubric_path": "data/rubrics/arml_power_spring_2024_official_reference_v2.json",
+  "deliverable": "proof_packet"
 }

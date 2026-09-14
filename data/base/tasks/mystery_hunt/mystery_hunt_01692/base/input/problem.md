@@ -1,3 +1,5 @@
-# 2013/coinheist.com/feynman/space_monkey_mafia/index.html
+# Space Monkey Mafia
 
-Richard Feynman -- COINHEIST Physics 101 Professor R. Feynman Space Monkey Mafia: Q.E.D. PDF Status: Name: Manic Sages Options: 0 (100 options = 1 free answer) (Options increase up to 200 with time) To next unlock: None hour(s) or fewer Home Notes Event Schedule Solution Contact HQ
+Open `puzzle.html` and its explicitly linked original attachment.
+
+Archive limitation: The original three-page music score is preserved, including all notes, syllables and empty staves; PDF text extraction is not a substitute for its musical notation. Archive solved status and solution navigation are removed; other navigation is inert. Original LESS is compiled offline with version 1.3.0. Fonts and surviving image dependencies are localized; current Google font binaries are not certified as historical revisions. Missing Feynman page-decoration gptile.jpg retains the source grey fallback; missing evilfg.png only appears in rules whose IDs are absent. Gold, benchmark points, membership and readiness are unchanged, not recertified.

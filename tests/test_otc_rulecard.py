@@ -198,7 +198,7 @@ class ConfigAndActionSurfaceTests(unittest.TestCase):
             system_variant="otc", team_size=6, max_turns=12, rule_card=ARML
         )
         self.assertIsNotNone(config.otc_policy)
-        self.assertEqual(ACTION_SET_VERSION, 8)
+        self.assertEqual(ACTION_SET_VERSION, 10)
 
     def test_common_actions_plus_card_bundle(self) -> None:
         arml = ContestRunConfig(
@@ -357,7 +357,7 @@ class ArmlEndToEndTests(unittest.TestCase):
             {
                 "Agent_1": [
                     action("speak", content="I open q1."),
-                    action("work", content="q1 answer: 42 because 6*7."),
+                    action("work", content="q1 answer: 42 because 6*7.", problem_id="q1"),
                     action("propose", content="q1 = 42"),
                 ],
                 "Agent_2": [
@@ -449,16 +449,18 @@ class ArmlEndToEndTests(unittest.TestCase):
     def test_work_with_problem_id_switches_in_one_move_and_focus_advances(self) -> None:
         result, llm = self.run_arml(
             {
-                # Assigned q1 then q2: after the q1 draft the focus must move to
-                # q2 by itself, so the second plain work lands on q2.
+                # Bind each draft explicitly: the common round rotation can
+                # suggest another blank task after the initial speech.
                 "Agent_1": [
                     action("speak", content="starting q1"),
-                    action("work", content="q1 answer: 42."),
+                    action("work", content="q1 answer: 42.", problem_id="q1"),
                     action("work", content="q2 answer: 7.", problem_id="q2"),
                 ],
-                # Assigned nothing, so the scheduler points it at q1 (still
-                # blank at turn 2); it switches to q2 and drafts in one move.
-                "Agent_2": [action("work", content="q2 alt: 8.", problem_id="q2")],
+                # Pin q1 explicitly: the scheduler can now distribute blank
+                # tasks/peer checks. The following work must still switch to
+                # q2 and draft in one move under that explicit focus.
+                "Agent_2": [action("select_problem", problem_id="q1"),
+                            action("work", content="q2 alt: 8.", problem_id="q2")],
             },
             work_assignments={"Agent_1": ["q1", "q2"]},
         )
@@ -471,14 +473,15 @@ class ArmlEndToEndTests(unittest.TestCase):
         self.assertEqual(len(agent2), 1)
         self.assertEqual(agent2[0]["task_id"], "q2")
         self.assertNotIn("problem_id", agent2[0]["payload"])
-        switch = [e for e in events_of(result, "select_problem") if e["actor"] == "Agent_2"]
+        switch = [e for e in events_of(result, "select_problem") if e["actor"] == "Agent_2"
+                  and e['payload'].get('via') == 'work']
         self.assertEqual(len(switch), 1)
         self.assertEqual(switch[0]["payload"], {"problem_id": "q2", "via": "work"})
         self.assertFalse(events_of(result, "action_error"))
-        # Once every problem holds a draft, an assigned seat stays on its own
-        # last suggestion for verification instead of following the cursor.
+        # A fresh work choice remains the initial verification focus. Repeated
+        # status-only visits subsequently yield to the other pending task.
         agent1_rest = [e for e in events_of(result, "rest") if e["actor"] == "Agent_1"]
-        self.assertTrue(agent1_rest and all(e["task_id"] == "q2" for e in agent1_rest))
+        self.assertEqual([e["task_id"] for e in agent1_rest[:3]], ["q2", "q2", "q1"])
         # The protocol tells seats which proposals are open (none here), and
         # the follow-up deliberation actions are not even offered until then.
         protocol = [c for c in llm.calls if c["kind"] == "action"][-1]["system"]

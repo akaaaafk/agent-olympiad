@@ -1,5 +1,3 @@
-# PUMaC Power Round 2021
-
 PUMaC 2021 Power Round:
 Mixed Volumes and Convex Bodies
 Alan Yan
@@ -379,9 +377,9 @@ Remark 1.3.1. In the correspondence between matrices and linear maps, whenever w
 down a m × n matrix, we will implicitly assume that it is representing a map T : Rn → Rm
 with respect to the standard bases.
 Example 1.3.2. The matrix
-1 2
+(1 2
 3 4
-
+)
 represents the map T : R2 → R2 defined by T (e1) =
 e1 + 3e2 and T (e2) = 2e1 + 4e2.
 Given a map T : V → W , there are two associated vector subspaces.
@@ -542,22 +540,22 @@ matrix M to be the determinant of some smaller square matrix which we obtain by 
 rows and columns.
 To give an example, consider the matrix
 A =
-1 2 3
+(1 2 3
 4 5 6
-
+)
 .
 The minors of A will be the determinants of the following matrices
-1 2
+(1 2
 4 5
-
+)
 ,
-1 3
+(1 3
 4 6
-
+)
 ,
-2 3
+(2 3
 5 6
-
+)
 and each individual entry in A.
 Definition 1.5.3. Let M be a matrix. We say M is unimodular if all of its minors are
 in {−1, 0, 1}.
@@ -643,20 +641,7 @@ k=1
 |xk − yk|.
 (a) (5 points) Prove that dTV is a metric.
 (b) (10 points) Prove that
-dTV(x, y) = max
-A⊂[d]
-
-X
-n∈A
-(xn − yn)
- = 1
-2 sup
-( dX
-k=1
-fk(xk − yk) : max
-i∈[d]
-|fi| ≤1
-)
+dTV(x, y) = max_{A⊂[d]} |∑_{n∈A}(x_n − y_n)| = (1/2) sup{∑_{k=1}^d f_k(x_k − y_k) : max_{i∈[d]} |f_i| ≤ 1}
 Now back to the regularly scheduled programming.
 1.8 Topology of Metric Spaces
 Definition 1.8.1. Let ( X, d) be a metric space. For r > 0, we can define the following

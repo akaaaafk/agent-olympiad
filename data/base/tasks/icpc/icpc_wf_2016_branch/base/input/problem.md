@@ -1,5 +1,3 @@
-# Branch Assignment
-
 Hide 
  Branch Assignment 
 

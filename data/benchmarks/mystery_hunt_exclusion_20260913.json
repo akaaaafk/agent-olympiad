@@ -1,0 +1,122 @@
+{
+  "operation": "user_requested_reversible_mystery_hunt_selection_exclusion",
+  "status": "completed_reversible_exclusion_and_score_membership_sync",
+  "timestamp_utc": "20260913T155934Z",
+  "backup": "data/excluded/integrity_repair_20260913T155934Z",
+  "exclusion_manifest": "data/excluded/mystery_hunt_curated_exclusion_20260913/manifest.json",
+  "excluded_ids": [
+    "mystery_hunt_00002",
+    "mystery_hunt_00003",
+    "mystery_hunt_00004",
+    "mystery_hunt_00006",
+    "mystery_hunt_00007",
+    "mystery_hunt_00014",
+    "mystery_hunt_00028",
+    "mystery_hunt_00032",
+    "mystery_hunt_00033",
+    "mystery_hunt_00035",
+    "mystery_hunt_00036",
+    "mystery_hunt_00038",
+    "mystery_hunt_00044",
+    "mystery_hunt_00819"
+  ],
+  "old_records": 1741,
+  "new_records": 1727,
+  "before_mystery_hunt_weight_sum": 261.0,
+  "after_mystery_hunt_weight_sum": 247.0,
+  "score_summary": "data/rubrics/mystery_hunt_active_score_summary.json",
+  "original_source_repair_report": "data/benchmarks/mystery_hunt_source_repair_20260913.json",
+  "score_change_policy": "Remove excluded IDs from BOTH earned and possible score membership; keep surviving one-point weights. No old result numerator is reused with a smaller denominator.",
+  "validation": {
+    "active_global_records": 1727,
+    "active_tracks": 43,
+    "active_mystery_hunt_records": 247,
+    "excluded_records": 14,
+    "active_weight_sum": 247.0,
+    "excluded_weight_sum": 14.0,
+    "runtime_manifest_maxima": {
+      "1999": {
+        "records": 2,
+        "max_score": 2.0
+      },
+      "2000": {
+        "records": 17,
+        "max_score": 17.0
+      },
+      "2001": {
+        "records": 16,
+        "max_score": 16.0
+      },
+      "2002": {
+        "records": 7,
+        "max_score": 7.0
+      },
+      "2003": {
+        "records": 17,
+        "max_score": 17.0
+      },
+      "2004": {
+        "records": 2,
+        "max_score": 2.0
+      },
+      "2005": {
+        "records": 20,
+        "max_score": 20.0
+      },
+      "2006": {
+        "records": 13,
+        "max_score": 13.0
+      },
+      "2007": {
+        "records": 19,
+        "max_score": 19.0
+      },
+      "2008": {
+        "records": 1,
+        "max_score": 1.0
+      },
+      "2009": {
+        "records": 16,
+        "max_score": 16.0
+      },
+      "2010": {
+        "records": 20,
+        "max_score": 20.0
+      },
+      "2011": {
+        "records": 20,
+        "max_score": 20.0
+      },
+      "2012": {
+        "records": 20,
+        "max_score": 20.0
+      },
+      "2013": {
+        "records": 20,
+        "max_score": 20.0
+      },
+      "2015": {
+        "records": 20,
+        "max_score": 20.0
+      },
+      "2016": {
+        "records": 17,
+        "max_score": 17.0
+      }
+    },
+    "raw_source_files_preserved": 1655,
+    "archived_generated_files": 218,
+    "retained_generated_files_unchanged": 2717,
+    "other_canonical_tracks_unchanged": 42,
+    "readiness_status_counts": {
+      "ready_with_limitations": 196,
+      "not_ready": 702,
+      "ready": 669,
+      "remote_judge_ready": 158,
+      "sample_tests_ready": 2
+    },
+    "readiness_promotions": 0,
+    "historical_scores_modified": false,
+    "live_evaluation_performed": false
+  }
+}

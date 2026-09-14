@@ -1,5 +1,3 @@
-# NCCDC 2020 — Hylian
-
 Presented by 
  
  

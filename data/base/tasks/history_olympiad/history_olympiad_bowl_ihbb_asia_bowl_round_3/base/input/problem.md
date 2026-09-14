@@ -1,5 +1,3 @@
-# IHBB-Asia-Bowl-Round-3
-
 [Q1] This country’s government published the 1995 report “Bringing Them Home ”, detailing a genocidal 20th century campaign to remove native children from their homes. Though reconciliation efforts of the “Stolen Generations” included “National Sorry Day” in 1998, it wasn’t until John Howard was succeeded by Kevin Rudd that this country’s Prime Minister apologized. For ten points, name this country where hundreds of thousands of Aboriginal children were kidnapped by a government based in Canberra.
 
 [Q2] This man rose to prominence as a subordinate of John Jervis (JAR-vis) at the Battle of Cape St. Vincent. This man’s forces intercepted Pierre -Charles Villeneuve after they left Cadiz. This man, who lost an arm while leading an attack on Copenhagen, ordered that the message “England expects that every man will do his duty” be sent aboard his flagship, the HMS Victory. For ten points, name this British admiral who won the Battle of Trafalgar.

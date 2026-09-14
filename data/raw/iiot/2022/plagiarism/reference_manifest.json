@@ -1,0 +1,56 @@
+{
+  "schema_version": "iiot-reference-archive/v1",
+  "problem_id": "iiot_2022_06",
+  "task_code": "plagiarism",
+  "round": "international_final",
+  "archive_url": "https://iio.team/competition/tasks/2022",
+  "source_links": {
+    "Statement": "https://drive.google.com/file/d/1wwlh0MbCAaG8Twv9BOGu8Zfh7SPGH_io/view?usp=drive_link",
+    "Solutions": "https://drive.google.com/file/d/1bdYsL_M80aduoyTdFG-bTB6pdPR92XMb/view?usp=drive_link",
+    "Test cases": "https://drive.google.com/drive/folders/1vCUueEz3l6SRc-nMBdAyZg-lYuVRfWZS?usp=drive_link"
+  },
+  "reference": {
+    "path": "data/raw/iiot/2022/plagiarism/references/plagiarism.cpp",
+    "source_url": "https://drive.google.com/uc?id=1bdYsL_M80aduoyTdFG-bTB6pdPR92XMb&export=download",
+    "sha256": "baa422400198278ef8489c5319b7273ac612aac681786cf18396f2a0341e241f",
+    "bytes": 1945,
+    "classification": "publisher_reference_source",
+    "execution_validation": "not_run"
+  },
+  "official_scoring": {
+    "total_points": 100,
+    "subtasks": [
+      {
+        "id": 1,
+        "points": 0
+      },
+      {
+        "id": 2,
+        "points": 20
+      },
+      {
+        "id": 3,
+        "points": 15
+      },
+      {
+        "id": 4,
+        "points": 25
+      },
+      {
+        "id": 5,
+        "points": 10
+      },
+      {
+        "id": 6,
+        "points": 30
+      }
+    ],
+    "mode": "all_cases_required_per_subtask",
+    "test_to_subtask_mapping": "not_archived"
+  },
+  "public_test_listing": {
+    "status": "no_testcase_link_in_publisher_archive"
+  },
+  "readiness": "not_ready",
+  "license_policy": "No redistribution permission inferred."
+}

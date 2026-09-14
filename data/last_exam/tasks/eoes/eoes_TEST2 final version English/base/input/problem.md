@@ -1,5 +1,3 @@
-# TEST2 final version English
-
 1 
  
  
@@ -123,13 +121,13 @@ bubble/sec in suction bottle A.
  
 4. During this time proceed to the titration of the initial solution of barium 
 hydroxide: 
- fill a buret with the oxalic acid solution 
- with a second buret pour 200 mL of barium hydroxide in 
+▪ fill a buret with the oxalic acid solution 
+▪ with a second buret pour 200 mL of barium hydroxide in 
 erlenmeyer G.   
- add a few drops of phenolphtalein in erlenmeyer G 
- neutralise by dropping in oxalic acid into the barium hydroxide 
+▪ add a few drops of phenolphtalein in erlenmeyer G 
+▪ neutralise by dropping in oxalic acid into the barium hydroxide 
 solution until decoloration. 
- note the volume of oxalic acid used and indicate it in the 
+▪ note the volume of oxalic acid used and indicate it in the 
 appropriate box V
 0 in table of experimental results under heading C. 
  
@@ -276,7 +274,7 @@ ask an assistant to verify the assembly
 2. Switch on the TI-84 Plus (calculator) and press the [APPS] button and 
 select option “4:DATAMATE” to start the application. A few seconds 
 later appears the screen below. (if not 
- ask an assistant to help you 
+→ ask an assistant to help you 
 setup the application) 
  
  
@@ -287,7 +285,7 @@ Initially the pressure equals the atmospheric pressure.
  
 b. MODE : EVENTS WITH ENTRY 
 (if not 
- ask an assistant to setup the application) 
+→ ask an assistant to setup the application) 
  
 The equipment is ready to start measuring 
  
@@ -449,7 +447,7 @@ of the piston: between 10 mL and 20 mL on the scale of the syringe)
 3. tighten the tube again, you can start the experiment  
  
 4. Press the [APPS] button and select option “4:DataMate” to start the 
-application. A few seconds later appears the screen below. (if not  ask an 
+application. A few seconds later appears the screen below. (if not → ask an 
 assistant to help you setup the application) 
  
  

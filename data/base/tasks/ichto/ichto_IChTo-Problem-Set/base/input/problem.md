@@ -1,5 +1,3 @@
-# IChTo-Problem-Set
-
 Problems of the International 
 Chemistry Tournament 2017 
  

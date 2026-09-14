@@ -1,3 +1,5 @@
-# 2011/puzzles/katamari_damacy/a_representative_sampling/
+# A Representative Sampling
 
-A Representative Sampling Back to Katamari Info > Introduction Contact HQ Events Answer Board Achievements Updates View solution A Representative Sampling 129644790 Man decides to run for office against his wife to save the career of a beloved mentally unstable teacher. &#1508 59 A businessman's political aspirations are dashed after an employee's wife serves him local cuisine.
+Open `puzzle.html` for the original styled visual packet and linked images. A text preview does not replace the diagrams or blank cells.
+
+Archive limitation: Original standalone text, layout, diagrams, repeated entries and published worked examples are preserved. The exact YUI 3.2.0 reset is recovered from its publisher and checked against the same official release. Archive navigation, answer checking and points scripts are removed. Historical claims are not modernized; shared-page answer variants are not merged and host or cross-task protocols are not reconstructed.

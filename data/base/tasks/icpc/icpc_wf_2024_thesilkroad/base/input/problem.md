@@ -1,5 +1,3 @@
-# The Silk Road ... with Robots!
-
 Hide 
  The Silk Road ... with Robots! 
 

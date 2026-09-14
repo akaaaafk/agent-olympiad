@@ -1,0 +1,478 @@
+{
+  "schema_version": "1.1",
+  "dataset": "ccdc",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "ccdc_2007-NCCDC-TeamPacket",
+      "year": 2007,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+          "sha256": "a98a258a8d499017abd169d79e72e2930a4f46defad6a143f5f08fecf9f044e1",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "ccdc_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": [
+        "A static team packet cannot reproduce the live red-team injects, service checks, availability scoring, or judge observations required for an official CCDC score."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ccdc_2011-NCCDC-TeamPacket",
+      "year": 2011,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+          "sha256": "a98a258a8d499017abd169d79e72e2930a4f46defad6a143f5f08fecf9f044e1",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "ccdc_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": [
+        "A static team packet cannot reproduce the live red-team injects, service checks, availability scoring, or judge observations required for an official CCDC score.",
+        "Automatic English OCR transcription of the attached scanned PDF. Text may contain recognition errors; consult the original PDF for exact wording, IP addresses, tables and network diagrams. Empty OCR pages are not evidence that the PDF pages are blank."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ccdc_2013-NCCDC-TeamPacket",
+      "year": 2013,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+          "sha256": "a98a258a8d499017abd169d79e72e2930a4f46defad6a143f5f08fecf9f044e1",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "ccdc_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": [
+        "A static team packet cannot reproduce the live red-team injects, service checks, availability scoring, or judge observations required for an official CCDC score."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ccdc_2014-NCCDC-TeamPacket",
+      "year": 2014,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+          "sha256": "a98a258a8d499017abd169d79e72e2930a4f46defad6a143f5f08fecf9f044e1",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "ccdc_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": [
+        "A static team packet cannot reproduce the live red-team injects, service checks, availability scoring, or judge observations required for an official CCDC score."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ccdc_2015-NCCDC-TeamPacket",
+      "year": 2015,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+          "sha256": "a98a258a8d499017abd169d79e72e2930a4f46defad6a143f5f08fecf9f044e1",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "ccdc_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": [
+        "A static team packet cannot reproduce the live red-team injects, service checks, availability scoring, or judge observations required for an official CCDC score.",
+        "Automatic English OCR transcription of the attached scanned PDF. Text may contain recognition errors; consult the original PDF for exact wording, IP addresses, tables and network diagrams. Empty OCR pages are not evidence that the PDF pages are blank."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ccdc_2016-NCCDC-TeamPacket",
+      "year": 2016,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+          "sha256": "a98a258a8d499017abd169d79e72e2930a4f46defad6a143f5f08fecf9f044e1",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "ccdc_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": [
+        "A static team packet cannot reproduce the live red-team injects, service checks, availability scoring, or judge observations required for an official CCDC score.",
+        "Automatic English OCR transcription of the attached scanned PDF. Text may contain recognition errors; consult the original PDF for exact wording, IP addresses, tables and network diagrams. Empty OCR pages are not evidence that the PDF pages are blank."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ccdc_2017-NCCDC-TeamPacket",
+      "year": 2017,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+          "sha256": "a98a258a8d499017abd169d79e72e2930a4f46defad6a143f5f08fecf9f044e1",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "ccdc_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": [
+        "A static team packet cannot reproduce the live red-team injects, service checks, availability scoring, or judge observations required for an official CCDC score.",
+        "Automatic English OCR transcription of the attached scanned PDF. Text may contain recognition errors; consult the original PDF for exact wording, IP addresses, tables and network diagrams. Empty OCR pages are not evidence that the PDF pages are blank."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ccdc_2018-NCCDC-TeamPacket",
+      "year": 2018,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+          "sha256": "a98a258a8d499017abd169d79e72e2930a4f46defad6a143f5f08fecf9f044e1",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "ccdc_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": [
+        "A static team packet cannot reproduce the live red-team injects, service checks, availability scoring, or judge observations required for an official CCDC score.",
+        "Automatic English OCR transcription of the attached scanned PDF. Text may contain recognition errors; consult the original PDF for exact wording, IP addresses, tables and network diagrams. Empty OCR pages are not evidence that the PDF pages are blank."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ccdc_2019-NCCDC-TeamPacket",
+      "year": 2019,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+          "sha256": "a98a258a8d499017abd169d79e72e2930a4f46defad6a143f5f08fecf9f044e1",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "ccdc_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": [
+        "A static team packet cannot reproduce the live red-team injects, service checks, availability scoring, or judge observations required for an official CCDC score.",
+        "Automatic English OCR transcription of the attached scanned PDF. Text may contain recognition errors; consult the original PDF for exact wording, IP addresses, tables and network diagrams. Empty OCR pages are not evidence that the PDF pages are blank."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ccdc_2020-NCCDC-TeamPacket",
+      "year": 2020,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+          "sha256": "a98a258a8d499017abd169d79e72e2930a4f46defad6a143f5f08fecf9f044e1",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "ccdc_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": [
+        "A static team packet cannot reproduce the live red-team injects, service checks, availability scoring, or judge observations required for an official CCDC score."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ccdc_2021-NCCDC-TeamPacket",
+      "year": 2021,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+          "sha256": "a98a258a8d499017abd169d79e72e2930a4f46defad6a143f5f08fecf9f044e1",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "ccdc_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": [
+        "A static team packet cannot reproduce the live red-team injects, service checks, availability scoring, or judge observations required for an official CCDC score."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ccdc_2022-NCCDC-TeamPacket-missing-page13-network-map",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+          "sha256": "a98a258a8d499017abd169d79e72e2930a4f46defad6a143f5f08fecf9f044e1",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "ccdc_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": [
+        "A static team packet cannot reproduce the live red-team injects, service checks, availability scoring, or judge observations required for an official CCDC score.",
+        "The archived 2022 PDF has no network map on page 13; that page contains only its footer."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ccdc_2025-NCCDC-TeamPacket",
+      "year": 2025,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+          "sha256": "a98a258a8d499017abd169d79e72e2930a4f46defad6a143f5f08fecf9f044e1",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "ccdc_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": [
+        "A static team packet cannot reproduce the live red-team injects, service checks, availability scoring, or judge observations required for an official CCDC score."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ccdc_2026-NCCDC-TeamPacket",
+      "year": 2026,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+          "sha256": "a98a258a8d499017abd169d79e72e2930a4f46defad6a143f5f08fecf9f044e1",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "ccdc_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": [
+        "A static team packet cannot reproduce the live red-team injects, service checks, availability scoring, or judge observations required for an official CCDC score."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ccdc_2026-NCCDC-Wildcard",
+      "year": 2026,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+          "sha256": "a98a258a8d499017abd169d79e72e2930a4f46defad6a143f5f08fecf9f044e1",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "ccdc_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": [
+        "A static team packet cannot reproduce the live red-team injects, service checks, availability scoring, or judge observations required for an official CCDC score."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ccdc_Wildcard26_Readme_http",
+      "year": 2026,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+          "sha256": "a98a258a8d499017abd169d79e72e2930a4f46defad6a143f5f08fecf9f044e1",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "ccdc_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": [
+        "A static team packet cannot reproduce the live red-team injects, service checks, availability scoring, or judge observations required for an official CCDC score."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

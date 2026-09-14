@@ -1,0 +1,30 @@
+{
+  "status": "completed",
+  "plan_path": "data/.cache/eoes_2025_score_metadata_20260913/plan.json",
+  "backup": "data/excluded/integrity_repair_20260913T193150Z",
+  "selected_records": 2,
+  "new_files": 2,
+  "record_count_change": 0,
+  "programs_executed": false,
+  "readiness_changed": false,
+  "score_changes": [
+    {
+      "problem_id": "eoes_EOES2025_Task1_TaskSheet-final",
+      "before": null,
+      "after": 120,
+      "basis": "printed section maxima"
+    },
+    {
+      "problem_id": "eoes_EOES2025_Task2_TaskSheet_final",
+      "before": null,
+      "after": 125,
+      "basis": "printed section maxima"
+    }
+  ],
+  "protected_files_unchanged": 74,
+  "old_assets_unchanged": 6,
+  "other_records_and_scorecards_unchanged": true,
+  "new_assets_verified": true,
+  "public_inputs_unchanged": true,
+  "summary": "Two 2025 task totals recovered as 120 and 125; not an executable lab grading rubric."
+}

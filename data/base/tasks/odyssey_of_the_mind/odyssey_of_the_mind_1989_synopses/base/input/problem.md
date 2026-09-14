@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 1989
-
 # Odyssey of the Mind — 1989 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -16,3 +14,4 @@ Note: These are public synopses. Full problem packets require membership.
 6. Mannerly Moppets PrimaryCreate a performance illustrating the need for a certain rule of etiquette. Time limit: 7 min. Cost limit: $35 USD.
 7. Division IV: Meteor Busters
 8. Ye’ Gods
+

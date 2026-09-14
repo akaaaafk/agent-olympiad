@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2005
-
 # Odyssey of the Mind — 2005 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Crazy ColumnsDivisions I, II, III & IVTeams will use only balsa wood and glue to create a structure that will be tested for its ability to balance and support as much weight as possible, but here’s the twist: The parts of the structure do not have to be connected, although they can be if the team wishes. The “structure” will rest on surfaces at three different heights, but the top of the structure will be at least 8 inches from the tester base. The two outer surfaces will be 10′ apart. Placement of the third surface will be determined by the team, but within a specified area. Cost limit: $125 USD.
 5. Laugh-a-thonDivisions I, II, III & IVIn this problem, teams will create and present a humorous performance that has team members portraying a puppet, a mime, and an image and its reflection. The performance will also include a comedy routine or humorous sketch and the effect of something happening much faster than usual. Teams will add two humorous features of their own that are meant to entertain others. Cost limit: $125 USD.
 6. Fable-us!Primary: Grades K-2For this non-competitive problem, teams will create and present a performance that includes an original fable that has a moral. There will be no “humans” in the performance, only animals and inanimate objects with human characteristics. The moral will teach a lesson or provide advice to help one or more characters in the performance. Cost limit: $50 USD.
+

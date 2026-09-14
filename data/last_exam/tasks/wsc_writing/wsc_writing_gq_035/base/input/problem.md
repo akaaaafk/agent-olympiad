@@ -1,5 +1,3 @@
-# wsc_writing_gq_035
-
 Dubai barely has them; in New York they’re bustling with people and halal food stands. Research the history of the sidewalk—that liminal gap between street and building that serves as a gathering place for some and a bike path for others. Where did they first emerge—and when were the first modern sidewalks built? How different are they from place to place? 
 
  In the once-futuristic world of the Jetsons, the sidewalks don’t just sit there: they whisk people along to their destinations. Something like this still happens at many airports and even some amusement parks. Learn more about historical efforts to popularize moving sidewalks. Discuss with your team: why didn’t they catch on more widely? Where would you install them today, if you could? 

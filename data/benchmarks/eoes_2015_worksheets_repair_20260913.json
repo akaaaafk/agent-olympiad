@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "backup": "data/excluded/integrity_repair_20260914T011423Z",
+  "records": 3,
+  "record_count_change": 0,
+  "readiness_promotions": 0,
+  "removed_from_initial_inputs": [],
+  "summary": "3 EOES 2015 records: original participant worksheets and Challenge 1 graph-paper template restored; one source-verified Rf formula repaired. Printed scores, gold, readiness and original PDF bytes unchanged.",
+  "protected_files_unchanged": 178,
+  "verification": {
+    "records": 3,
+    "original_pdfs": 3,
+    "worksheet_pages_reviewed": 54,
+    "template_pages_reviewed": 1,
+    "formula_pages_reviewed": [
+      13
+    ],
+    "scores_and_gold_unchanged": true
+  }
+}

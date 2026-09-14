@@ -1,5 +1,3 @@
-# NCCDC 2022 Team Packet
-
 2022 NCCDC 
  
  

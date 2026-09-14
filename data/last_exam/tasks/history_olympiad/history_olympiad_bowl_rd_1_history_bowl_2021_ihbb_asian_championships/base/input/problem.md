@@ -1,5 +1,3 @@
-# Rd.-1-History-Bowl-2021-IHBB-Asian-Championships
-
 [Q1] Some of this man's last words before reaching the Banqueting House were to his children, Henry of Oatlands and Elizabeth Stuart. Colonel Francis Hacker took this man to his death, before which this man cryptically uttered "remember." Either William Hulet or Richard Brandon were responsible for beheading, for ten points, what English king, the only one to be executed?
 
 [Q2] This city’s leader, Peisistratus, funded its Dionysia festivals, during which Thespis became the first named man to represent a character on stage. In a namesake play, a resident of this city-state named Lysistrata plots to halt the ongoing Peloponnesian War by convincing Greek wives to stop sleeping with their husbands. For ten points, nam e this city -state, the home of Aristophanes, whose Theatre of Dionysus was built on its Acropolis.

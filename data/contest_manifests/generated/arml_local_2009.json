@@ -4,7 +4,7 @@
   "problem_ids": [
     "arml_local_2009"
   ],
-  "description": "OTC contest-session manifest for arml_local_2009",
+  "description": "OTC contest-session manifest for arml_local_2009 (1 tasks)",
   "split_parts": true,
   "task_family": "mathematics",
   "competition_description": "ARML local mathematics team rounds: solve a numbered set of contest problems and submit one shared answer sheet.",
@@ -17,6 +17,7 @@
     "6",
     "7",
     "8",
-    "9"
+    "9",
+    "10"
   ]
 }

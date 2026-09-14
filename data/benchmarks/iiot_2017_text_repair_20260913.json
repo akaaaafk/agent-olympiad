@@ -1,0 +1,233 @@
+{
+  "status": "completed",
+  "backup": "data/excluded/integrity_repair_20260913T204453Z",
+  "changes": [
+    {
+      "task_id": "iiot/iiot_2017_01",
+      "source_file": "data/raw/iiot/2017/iiot_2017_problem_01.pdf",
+      "source_sha256": "cf5a0d5e12436117bec23c6042df95816b73079ac9e21db33d6d08a5758087c4",
+      "reviewed_pages": [
+        1,
+        2
+      ],
+      "edits": [
+        {
+          "before": "III OOO III ((( ))) ;;; +++ TTT",
+          "after": "[IOI in Teams logo]"
+        },
+        {
+          "before": "III OOO III ((( ))) ;;; +++ TTT",
+          "after": "[IOI in Teams logo]"
+        },
+        {
+          "before": "Examples input.txt output.txt 4 1 2 20 15 3 70 0 0 10 10 1 50 0 70 6 3 2 40 30 4 90 70 0 75 10 5 20 0 1 80 80 3 50 50 225 ",
+          "after": "\n\nExamples\n\nSample 1 input:\n```text\n4 1\n2 20 15\n3 70 0\n0 10 10\n1 50 0\n```\n\nSample 1 output:\n```text\n70\n```\n\nSample 2 input:\n```text\n6 3\n2 40 30\n4 90 70\n0 75 10\n5 20 0\n1 80 80\n3 50 50\n```\n\nSample 2 output:\n```text\n225\n```\n\n"
+        },
+        {
+          "before": "Fi̸= i",
+          "after": "Fi ≠ i"
+        }
+      ],
+      "samples": 2
+    },
+    {
+      "task_id": "iiot/iiot_2017_02",
+      "source_file": "data/raw/iiot/2017/iiot_2017_problem_02.pdf",
+      "source_sha256": "0e4f0d6bd8eea576dc0d9ae9b4f801d41008a471b04a91cca0ac3b0dc62f6ec3",
+      "reviewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "edits": [
+        {
+          "before": "III OOO III ((( ))) ;;; +++ TTT",
+          "after": "[IOI in Teams logo]"
+        },
+        {
+          "before": "III OOO III ((( ))) ;;; +++ TTT",
+          "after": "[IOI in Teams logo]"
+        },
+        {
+          "before": "III OOO III ((( ))) ;;; +++ TTT",
+          "after": "[IOI in Teams logo]"
+        },
+        {
+          "before": "Examples input.txt output.txt 2 3 4 4 0 1 2 3 2 1 0 3 0 3 . 1 2 . 4 4 11 10 1 4 0 1 7 2 8 6 6 10 5 7 4 2 3 10 10 9 6 0 1 0 7 5 4 . 2 . 8 6 10 9 . . 3 . 4 4 11 10 1 4 0 1 7 2 8 6 6 10 5 7 4 2 3 10 10 9 6 0 1 0 7 5 4 . 2 . 6 . 10 . . . 3 9 ",
+          "after": "\n\nExamples\n\nSample 1 input:\n```text\n2 3\n4 4\n0 1\n2 3\n2 1\n0 3\n```\n\nSample 1 output:\n```text\n0 3 .\n1 2 .\n```\n\nSample 2 input:\n```text\n4 4\n11 10\n1 4\n0 1\n7 2\n8 6\n6 10\n5 7\n4 2\n3 10\n10 9\n6 0\n```\n\nSample 2 output:\n```text\n1 0 7 5\n4 . 2 .\n8 6 10 9\n. . 3 .\n```\n\nSample 3 input:\n```text\n4 4\n11 10\n1 4\n0 1\n7 2\n8 6\n6 10\n5 7\n4 2\n3 10\n10 9\n6 0\n```\n\nSample 3 output:\n```text\n1 0 7 5\n4 . 2 .\n6 . 10 .\n. . 3 9\n```\n\n"
+        },
+        {
+          "before": "M−∆ out M + 10∆ out",
+          "after": "(M − Δ_out) / (M + 10 Δ_out)"
+        },
+        {
+          "before": "10−3 10 + 10·3 = 7 40 = 0.175",
+          "after": "(10 − 3) / (10 + 10·3) = 7/40 = 0.175"
+        }
+      ],
+      "samples": 3
+    },
+    {
+      "task_id": "iiot/iiot_2017_03",
+      "source_file": "data/raw/iiot/2017/iiot_2017_problem_03.pdf",
+      "source_sha256": "62f648c580443c5538945c94c63740f88dd110fe21cd6789a9c4e78bfbc6634f",
+      "reviewed_pages": [
+        1,
+        2
+      ],
+      "edits": [
+        {
+          "before": "III OOO III ((( ))) ;;; +++ TTT",
+          "after": "[IOI in Teams logo]"
+        },
+        {
+          "before": "III OOO III ((( ))) ;;; +++ TTT",
+          "after": "[IOI in Teams logo]"
+        },
+        {
+          "before": "Examples input.txt output.txt 100 5 3 15 80 20 50 18 100 10 5 34 30 16 9 18 14 27 10 15 5415 ",
+          "after": "\n\nExamples\n\nSample 1 input:\n```text\n100\n5 3\n15 80 20 50\n```\n\nSample 1 output:\n```text\n18\n```\n\nSample 2 input:\n```text\n100\n10 5\n34 30 16 9 18 14 27 10 15\n```\n\nSample 2 output:\n```text\n5415\n```\n\n"
+        },
+        {
+          "before": "0 1 2 3 4 15 20 50 ⋆ 80 20 15 50 ⋆ 80 20 50 15 ⋆ 80 15 50 20 ⋆ 80 50 15 20 ⋆ 80 50 20 15 ⋆ 80",
+          "after": "\n```text\nposition: 0  1  2  3  4\n         15 20 50  ⋆ 80\n         20 15 50  ⋆ 80\n         20 50 15  ⋆ 80\n         15 50 20  ⋆ 80\n         50 15 20  ⋆ 80\n         50 20 15  ⋆ 80\n```\n"
+        }
+      ],
+      "samples": 2
+    },
+    {
+      "task_id": "iiot/iiot_2017_04",
+      "source_file": "data/raw/iiot/2017/iiot_2017_problem_04.pdf",
+      "source_sha256": "955eee45ec2239cc6aa3a13d8c1c19256ca31d9d145ba3b5cfb7dee967cdca82",
+      "reviewed_pages": [
+        1,
+        2
+      ],
+      "edits": [
+        {
+          "before": "III OOO III ((( ))) ;;; +++ TTT",
+          "after": "[IOI in Teams logo]"
+        },
+        {
+          "before": "III OOO III ((( ))) ;;; +++ TTT",
+          "after": "[IOI in Teams logo]"
+        },
+        {
+          "before": "Examples input.txt output.txt @dd10 v1cin* 0 v@d1ci*n 6 caro vicino vuoi smetterla di fare casino Il caro vita sale ancora: se sei mancino vuoi smettere di comprare oggetti appositi, per esempio. Fare cassa e’ sempre piu’ difficile; parola di fiscalista. 5 ",
+          "after": "\n\nExamples\n\nSample 1 input:\n```text\n@dd10 v1cin*\n0 v@d1ci*n\n```\n\nSample 1 output:\n```text\n6\n```\n\nSample 2 input:\n```text\ncaro vicino vuoi smetterla di fare casino\nIl caro vita sale ancora: se sei mancino vuoi smettere di comprare oggetti appositi, per esempio. Fare cassa e' sempre piu' difficile; parola di fiscalista.\n```\n\nSample 2 output:\n```text\n5\n```\n\n"
+        },
+        {
+          "before": "∆ max−∆ out ∆ max + 10∆ out",
+          "after": "(Δ_max − Δ_out) / (Δ_max + 10 Δ_out)"
+        }
+      ],
+      "samples": 2
+    },
+    {
+      "task_id": "iiot/iiot_2017_05",
+      "source_file": "data/raw/iiot/2017/iiot_2017_problem_05.pdf",
+      "source_sha256": "5865a19f2300b4bdc70526fd1ae7e0fab04efa7585afdb11c1c6730d90499897",
+      "reviewed_pages": [
+        1,
+        2
+      ],
+      "edits": [
+        {
+          "before": "III OOO III ((( ))) ;;; +++ TTT",
+          "after": "[IOI in Teams logo]"
+        },
+        {
+          "before": "III OOO III ((( ))) ;;; +++ TTT",
+          "after": "[IOI in Teams logo]"
+        },
+        {
+          "before": "Examples input.txt output.txt 10 3 20 19 2 2 17 15 1 10 5 11 13 4 15 12 14 9 7 5 8 2 ",
+          "after": "\n\nExamples\n\nSample 1 input:\n```text\n10\n3\n20 19\n2 2\n17 15\n```\n\nSample 1 output:\n```text\n1\n```\n\nSample 2 input:\n```text\n10\n5\n11 13\n4 15\n12 14\n9 7\n5 8\n```\n\nSample 2 output:\n```text\n2\n```\n\n"
+        },
+        {
+          "before": "Ai̸= H and Bi̸= H",
+          "after": "Ai ≠ H and Bi ≠ H"
+        }
+      ],
+      "samples": 2
+    },
+    {
+      "task_id": "iiot/iiot_2017_06",
+      "source_file": "data/raw/iiot/2017/iiot_2017_problem_06.pdf",
+      "source_sha256": "431ef6be3ae00e8a98d61ffa91b2c1dbed2196eda7115681641c75cd17c2cb1e",
+      "reviewed_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "edits": [
+        {
+          "before": "III OOO III ((( ))) ;;; +++ TTT",
+          "after": "[IOI in Teams logo]"
+        },
+        {
+          "before": "III OOO III ((( ))) ;;; +++ TTT",
+          "after": "[IOI in Teams logo]"
+        },
+        {
+          "before": "III OOO III ((( ))) ;;; +++ TTT",
+          "after": "[IOI in Teams logo]"
+        },
+        {
+          "before": "III OOO III ((( ))) ;;; +++ TTT",
+          "after": "[IOI in Teams logo]"
+        },
+        {
+          "before": "Examples input.txt output.txt 3 5 -1 0 0 0 2 1 2 3 0 2 2 4 3 1 1 0 6 5 4 2 3 1 5 10c 8 4 -1 0 0 2 2 2 2 1 2 3 5 6 7 2 2 5 4 8 2 6 7 1 0 1010 ",
+          "after": "\n\nExamples\n\nSample 1 input:\n```text\n3 5\n-1 0 0\n0 2 1 2\n3 0\n2 2 4 3\n1 1 0\n6 5 4 2 3 1 5\n```\n\nSample 1 output:\n```text\n10c\n```\n\nSample 2 input:\n```text\n8 4\n-1 0 0 2 2 2 2 1\n2 3 5 6 7\n2 2 5 4\n8 2 6 7\n1 0\n```\n\nSample 2 output:\n```text\n1010\n```\n\n"
+        },
+        {
+          "before": "0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 8 In this case",
+          "after": "\n[Graph transcription: arrows point from a slave to its master; parent arrays list nodes in ascending ID order, with −1 for the root.]\nBefore: [-1,0,0,2,2,2,2,1]. After adding node 8: [-1,0,0,2,2,8,8,8,2].\nIn this case"
+        },
+        {
+          "before": "0 1 2 0 1 2 3 0 1 2 3 4 0 1 2 3 4 5",
+          "after": "\n[Sample 1 diagram sequence, slave-to-master parent arrays:]\nInitial: [-1,0,0]. Step 1: [-1,3,3,0]. Step 2: [-1,3,3,0,3]. Step 3: [-1,3,3,5,5,2], showing the directed cycle 2→3→5→2.\n"
+        },
+        {
+          "before": "0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 8 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 10 0 1 2 3 4 5 6 7 8 9 10 11",
+          "after": "\n[Sample 2 diagram sequence, slave-to-master parent arrays:]\nInitial: [-1,0,0,2,2,2,2,1].\nStep 1: [-1,0,0,2,2,8,8,8,2].\nStep 2: [-1,0,0,2,9,9,8,8,2,2].\nStep 3: [-1,0,0,2,9,9,10,10,2,2,8].\nStep 4: [-1,0,0,2,9,9,10,10,2,2,8,1].\n"
+        }
+      ],
+      "samples": 2
+    },
+    {
+      "task_id": "iiot/iiot_2017_07",
+      "source_file": "data/raw/iiot/2017/iiot_2017_problem_07.pdf",
+      "source_sha256": "884741adc0475cf57c52971eb2dffe7153618bc747e385881b23d59cc21df81e",
+      "reviewed_pages": [
+        1,
+        2
+      ],
+      "edits": [
+        {
+          "before": "III OOO III ((( ))) ;;; +++ TTT",
+          "after": "[IOI in Teams logo]"
+        },
+        {
+          "before": "III OOO III ((( ))) ;;; +++ TTT",
+          "after": "[IOI in Teams logo]"
+        },
+        {
+          "before": "Examples input.txt output.txt 3 dollars invest enlarge 4 scientific paper deadline professor 3 6 hey giorgio send me the paper 8 now is the time to invest in bitcoin 11 i wonder why we dont invest more for the scientific advancement 1 1 1 yikes 1 yummy 5 2 yummy yummy 2 likes bikes 2 yummy bikes 2 yummy yikes 2 bikes yikes 1 2 ",
+          "after": "\n\nExamples\n\nSample 1 input:\n```text\n3\ndollars invest enlarge\n4\nscientific paper deadline professor\n3\n6\nhey giorgio send me the paper\n8\nnow is the time to invest in bitcoin\n11\ni wonder why we dont invest more for the scientific advancement\n```\n\nSample 1 output:\n```text\n1 1\n```\n\nSample 2 input:\n```text\n1\nyikes\n1\nyummy\n5\n2\nyummy yummy\n2\nlikes bikes\n2\nyummy bikes\n2\nyummy yikes\n2\nbikes yikes\n```\n\nSample 2 output:\n```text\n1 2\n```\n\n"
+        }
+      ],
+      "samples": 2
+    }
+  ],
+  "validation": {
+    "records": 7,
+    "content_files": 17,
+    "sample_pairs": 15,
+    "reviewed_pages": 17,
+    "protected_files_unchanged": 587,
+    "sources_tests_scores_readiness_unchanged": true
+  }
+}

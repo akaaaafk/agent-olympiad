@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2004
-
 # Odyssey of the Mind — 2004 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Balancing ActDivisions I, II, III & IVThis problem calls for the team to design, build and test a structure made of balsa wood and glue. The structure will be wider at its top than at its base. The structure will be tested by balancing and supporting as much weight as possible. The team will also create a container that will transport the structure a maximum distance of 20 feet. The container and structure may not be touched while they are traveling. Time limit: 8 min. Cost limit: $135 USD.
 5. Featured CreatureDivisions I, II & IIIThe problem is to create and present an original performance about mythological creatures. The team will choose a mythological creature from a list and make the audience aware of its characteristics. The team will also create its own “mythological” creature and present a legend that includes that creature and its unique physical characteristics and special power. The performance will include a stage set that changes. Time limit: 8 min. Cost limit: $125 USD.
 6. Rewind With Humor Primary: Grades K-2The team will create a performance that tells a story in reverse — from the end to the beginning. The story will have a beginning, a middle, and an end, but the team will present it backwards. Therefore, the performance will start out with the ending of the story, then show the middle, and end with the beginning. The team will tell at least three jokes during its performance. Time limit: 8 min. Cost limit: $50 USD.
+

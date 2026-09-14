@@ -44,7 +44,8 @@ LEADER_ACTION_NAMES = frozenset({"assign_problem"})
 DELIBERATION_ACTION_NAMES = frozenset(
     {"propose", "challenge", "provide_evidence", "revise", "decide"}
 )
-# v8 separates tool execution from module ownership and adds render_pdf.
+# v9 adds 43 competition-bound preparation tools. v8 separated tool execution
+# from module ownership and added render_pdf. Existing argument schemas remain.
 # Bumped whenever the canonical action surface changes shape; recorded in
 # contest results so mixed-version comparisons are visible.
 # v4: added the ``deliberation`` pack (five actions) for rule-card baselines.
@@ -60,7 +61,7 @@ DELIBERATION_ACTION_NAMES = frozenset(
 #     the wire; ``sleep``, ``submit_final``, ``write_scratchpad``,
 #     ``write_private_notes``, ``verify_problem``, ``message_group`` and the
 #     old workboard verbs are unknown actions. Rule cards were rewritten.
-ACTION_SET_VERSION = 8
+ACTION_SET_VERSION = 10
 # Ownership and render availability changed; existing 29 argument schemas remain.
 ACTION_MODULE_VERSION = 3
 PACK_NAMES: tuple[str, ...] = (
@@ -71,6 +72,8 @@ PACK_NAMES: tuple[str, ...] = (
     "research",
     "resources",
     "artifacts",
+    "contest_preparation",
+    "contest_flow",
 )
 PACK_ACTION_NAMES: Mapping[str, frozenset[str]] = MappingProxyType(
     {
@@ -116,6 +119,11 @@ def competition_permissions(competition: str, *, rule_card=None, task_type: str 
         or any(marker in task_type.lower() for marker in ("program", "coding", "algorithm"))
     ):
         permitted.add("submit_code")
+    from action_modules.competition_tools import BY_NAME
+    permitted.difference_update(name for name, profile in BY_NAME.items()
+                                if profile.competition != competition)
+    from action_modules.competition_flow import OWNERS
+    permitted.difference_update(name for name, owner in OWNERS.items() if owner != competition)
     return permitted
 
 
@@ -230,6 +238,12 @@ def _requested_names(
     if permitted is not None:
         resources &= permitted
     names.update(resources)
+    # A forged capability or card must not export another competition's tool.
+    from action_modules.competition_tools import BY_NAME
+    names.difference_update(name for name, profile in BY_NAME.items()
+                            if profile.competition != competition_key)
+    from action_modules.competition_flow import OWNERS
+    names.difference_update(name for name, owner in OWNERS.items() if owner != competition_key)
     return names & implemented, tokens
 
 
@@ -488,8 +502,11 @@ def validate_registry(
             errors.append(f"submission budget on non-submission action: {name}")
         if not spec.runtimes or not spec.runtimes <= ALL_RUNTIMES:
             errors.append(f"invalid runtimes for action {name}: {sorted(spec.runtimes)}")
-        elif spec.runtimes != ALL_RUNTIMES:
-            # v6 invariant: one action vocabulary, implemented on both paths.
+        elif spec.runtimes != ALL_RUNTIMES and not (
+            spec.pack == "contest_flow" and spec.runtimes == frozenset({"session"})
+        ):
+            # Versioned multi-task flows require ContestSession state. Legacy
+            # single-task env must not advertise a fake stateful handler.
             errors.append(f"action {name} is not implemented by every runtime")
         if spec.pack not in PACK_NAMES:
             errors.append(f"unknown pack {spec.pack!r} on action {name}")

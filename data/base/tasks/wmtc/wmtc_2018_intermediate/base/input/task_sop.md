@@ -1,30 +1,13 @@
-# Task SOP
+# Task
 
-## Reference Environment
-- Competition: World Mathematics Team Championship
-- Competition id: `wmtc`
-- Problem id: `wmtc_2018_intermediate`
-- Task type: `team_contest`
-- Team size: 6
-- Year / edition: 2018
-- Source: https://wmtc.international/problems
+Competition: wmtc
 
-## Goal
-As a multi-agent team, solve the olympiad-style team task using only the materials under `base/input`. Produce the required deliverable (`team_submission`).
+Task: wmtc_2018_intermediate
 
-## Task directory
-- Variant root: `base`
-- Input directory: `base/input`
+Edition: 2018
 
-## Inputs
-- `problem.md`
-- `2018_Intermediate_Indivi_Relay_Team_Problems.pdf`
+Team size: 6
 
-## Title
-WMTC 2018 Intermediate — Team Round
+Deliverable: numbered_answer_sheet
 
-## Deterministic Evaluation Rule
-Gold answers and official solution booklets are not provided in `input/`. Scoring uses the evaluator declared on the task card (gold match, rubric LLM judge, slide judge, or deferred sandbox).
-
-## Deliverables
-Return the team `team_submission` expected by this competition.
+Use the attached problem materials and the inherited competition and collaboration instructions.

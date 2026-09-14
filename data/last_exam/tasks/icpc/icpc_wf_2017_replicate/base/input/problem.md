@@ -1,5 +1,3 @@
-# Replicate Replicate Rfplicbte
-
 Hide 
  Replicate Replicate Rfplicbte 
 

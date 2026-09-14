@@ -1,9 +1,6 @@
-# HMMT November 2023 — Guts Round
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
-
-[Page 1]
-HMMT November 2023, November 11, 2023 — GUTS ROUND
+         HMMT November 2023, November 11, 2023 — GUTS ROUND
 
 Organization                      Team                      Team ID#
 
@@ -22,6 +19,11 @@ Organization                      Team                      Team ID#
 3. [5] Let ABCD be a rectangle with AB = 20 and AD = 23. Let M be the midpoint of CD, and let X be
    the reflection of M across point A. Compute the area of triangle XBD.
 
+
+
+
+
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
          HMMT November 2023, November 11, 2023 — GUTS ROUND
 
@@ -42,8 +44,9 @@ Organization                      Team                      Team ID#
    independently and uniformly at random and point at them. Compute the probability that there exists a
    group of three people such that each of them is pointing at the other two in the group.
 
-[Page 2]
-HMMT November 2023, November 11, 2023 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2023, November 11, 2023 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -61,6 +64,11 @@ HMMT November 2023, November 11, 2023 — GUTS ROUND
  9. [7] The largest prime factor of 101 101 101 101 is a four-digit number N. Compute N.
 
 
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
           HMMT November 2023, November 11, 2023 — GUTS ROUND
 
  Organization                      Team                      Team ID#
@@ -77,8 +85,9 @@ HMMT November 2023, November 11, 2023 — GUTS ROUND
     puts his marbles back, Jerry draws two marbles from the jar with replacement. Compute the probability
     that the marbles that Jerry draws are the same color.
 
-[Page 3]
-HMMT November 2023, November 11, 2023 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2023, November 11, 2023 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -99,6 +108,11 @@ HMMT November 2023, November 11, 2023 — GUTS ROUND
    on the board.
 
 
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
           HMMT November 2023, November 11, 2023 — GUTS ROUND
 
  Organization                      Team                      Team ID#
@@ -118,8 +132,9 @@ HMMT November 2023, November 11, 2023 — GUTS ROUND
 
    compute the sum of all possible values of x2 + y2.
 
-[Page 4]
-HMMT November 2023, November 11, 2023 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2023, November 11, 2023 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -142,6 +157,11 @@ HMMT November 2023, November 11, 2023 — GUTS ROUND
                                        gcd(nn + 50, n + 1) = 1.
 
 
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
           HMMT November 2023, November 11, 2023 — GUTS ROUND
 
  Organization                      Team                      Team ID#
@@ -155,8 +175,9 @@ HMMT November 2023, November 11, 2023 — GUTS ROUND
 
 24. [12] Compute the smallest positive integer k such that 49 divides  2kk  .
 
-[Page 5]
-HMMT November 2023, November 11, 2023 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2023, November 11, 2023 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -170,6 +191,11 @@ HMMT November 2023, November 11, 2023 — GUTS ROUND
     rotations and reflections distinct) such that no isosceles triangle whose vertices are vertices of the heptagon
     has all three vertices the same color.
 
+
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
           HMMT November 2023, November 11, 2023 — GUTS ROUND
 
@@ -188,8 +214,9 @@ HMMT November 2023, November 11, 2023 — GUTS ROUND
     friends and 8 Harvard friends, and every Harvard student has 7 MIT enemies and 10 Harvard enemies,
    compute how many pairs of friends there are at the party.
 
-[Page 6]
-HMMT November 2023, November 11, 2023 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2023, November 11, 2023 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -216,6 +243,11 @@ HMMT November 2023, November 11, 2023 — GUTS ROUND
 
    Compute the distance between the centers of ω1 and ω2.
 
+
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
           HMMT November 2023, November 11, 2023 — GUTS ROUND
 

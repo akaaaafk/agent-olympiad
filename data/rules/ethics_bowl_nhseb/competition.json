@@ -60,7 +60,8 @@
     "second_case_role_reversal": "specified_only"
   },
   "allowed_tools": [
-    "query_rules"
+    "query_rules",
+    "prepare_nhseb_case_response"
   ],
   "resources": {
     "internet": "forbidden",

@@ -1,5 +1,3 @@
-# Pirate Chest
-
 Hide 
  Pirate Chest 
 

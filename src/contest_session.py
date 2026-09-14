@@ -209,6 +209,10 @@ class ContestSession:
         self._active_task_id: str | None = None
         self._events: list[dict[str, Any]] = []
         self._final_summary: dict[str, Any] | None = None
+        self.competition_flow = None
+        self._competition_flow_checkpoint = None
+        self._flow_committing = False
+        self.current_turn_only = False
 
     @property
     def active_task(self) -> TaskUnit | None:
@@ -219,6 +223,15 @@ class ContestSession:
     @property
     def tasks(self) -> tuple[TaskUnit, ...]:
         return tuple(self._tasks.values())
+
+    @property
+    def visible_tasks(self) -> tuple[TaskUnit, ...]:
+        return tuple(task for task in self.tasks if self.competition_flow is None
+                     or self.competition_flow.is_visible(task.task_id))
+
+    def require_visible_task(self, task_id: str) -> None:
+        if self.competition_flow is not None:
+            self.competition_flow.require_visible(task_id)
 
     @property
     def events(self) -> tuple[dict[str, Any], ...]:
@@ -255,6 +268,7 @@ class ContestSession:
         self._append_event("penalty_added", minutes=minutes)
 
     def select_task(self, task_id: str) -> TaskUnit:
+        self.require_visible_task(task_id)
         selected = self.task(task_id)
         if selected.locked:
             raise TaskLockedError(f"task {task_id!r} is locked")
@@ -299,6 +313,7 @@ class ContestSession:
         """Record team triage for a task; returns the task and its previous priority."""
         if priority not in PRIORITY_RANK:
             raise ValueError(f"priority must be one of {list(PRIORITY_RANK)!r}")
+        self.require_visible_task(task_id)
         task = self.task(task_id)
         previous = task.priority
         task.priority = priority
@@ -324,6 +339,10 @@ class ContestSession:
         evidence_refs: tuple[str, ...] = (),
     ) -> AnswerVersion:
         task = self._require_active_task()
+        self.require_visible_task(task.task_id)
+        if (self.competition_flow is not None and not self._flow_committing
+                and self.competition_flow.state["phase"] in {"tossup_open", "tossup_buzzed"}):
+            raise ValueError("tossup answers must use the recognized spoken-answer action")
         if task.locked:
             raise TaskLockedError(f"task {task.task_id!r} is locked")
         self._validate_part(task, part)
@@ -334,6 +353,7 @@ class ContestSession:
                 and latest.part == part
                 and latest.method_summary == method_summary
                 and latest.evidence_refs == tuple(evidence_refs)
+                and (not self.current_turn_only or self.version_created_this_turn(latest.version_hash))
             ):
                 return latest
         if (
@@ -399,6 +419,8 @@ class ContestSession:
         if not task.versions:
             raise ValueError("an answer version is required before review")
         version = task.versions[-1]
+        if self.current_turn_only and not self.version_created_this_turn(version.version_hash):
+            raise ValueError("current-turn-only context: review requires a draft created in this round")
         if version_hash is not None and version.version_hash != version_hash:
             raise ValueError("review must target the current answer version")
         if version.author and reviewer == version.author:
@@ -459,6 +481,8 @@ class ContestSession:
         valid: bool = True,
         part: str | None = None,
     ) -> SubmissionRecord:
+        if (self.competition_flow is not None or self._competition_flow_checkpoint is not None) and not self._flow_committing:
+            raise ValueError("use the competition-specific hand-in action")
         task = self._require_active_task()
         if task.locked:
             raise TaskLockedError(f"task {task.task_id!r} is locked")
@@ -582,6 +606,11 @@ class ContestSession:
             "active_task_id": self._active_task_id,
             "events": [dict(event) for event in self._events],
             "final_summary": self._final_summary,
+            **({"current_turn_only": True} if self.current_turn_only else {}),
+            **({"competition_flow": self.competition_flow.checkpoint()}
+               if self.competition_flow is not None else
+               {"competition_flow": self._competition_flow_checkpoint}
+               if self._competition_flow_checkpoint is not None else {}),
         }
 
     @classmethod
@@ -624,6 +653,9 @@ class ContestSession:
         session._active_task_id = checkpoint["active_task_id"]
         session._events = [dict(event) for event in checkpoint["events"]]
         session._final_summary = checkpoint["final_summary"]
+        session.current_turn_only = bool(checkpoint.get("current_turn_only", False))
+        from copy import deepcopy
+        session._competition_flow_checkpoint = deepcopy(checkpoint.get("competition_flow"))
         return session
 
     def _require_active_task(self) -> TaskUnit:
@@ -657,12 +689,17 @@ class ContestSession:
             return TaskState.CANDIDATE
         return TaskState.UNSEEN
 
+    def version_created_this_turn(self, version_hash: str) -> bool:
+        return any(event["type"] == "answer_created" and event.get("version_hash") == version_hash
+                   and event.get("turn") == self.budget.turns_used for event in self._events)
+
     def _append_event(self, event_type: str, **payload: Any) -> None:
         self._events.append(
             {
                 "event_id": f"session-event-{len(self._events) + 1:06d}",
                 "sequence": len(self._events) + 1,
                 "type": event_type,
+                **({"turn": self.budget.turns_used} if self.current_turn_only else {}),
                 **payload,
             }
         )

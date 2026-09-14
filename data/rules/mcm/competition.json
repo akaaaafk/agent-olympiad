@@ -23,7 +23,8 @@
     "use_calculator",
     "execute_code",
     "work",
-    "render_pdf"
+    "render_pdf",
+    "prepare_mcm_model_record"
   ],
   "resources": {
     "internet": "allowed_with_citation",

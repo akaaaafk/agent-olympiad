@@ -1,5 +1,3 @@
-# 2018-2019-IHBB-Asia-Alpha-Set-Bowl-Round-7
-
 [Q1] The British Legions under Miguel de la Torre lost to Jose Antonio Paez, who led this nation’s forces at the Battle of Carabobo. Simon Bolivar’s Decree of War to the Death primarily pertained to this country. For ten points, name this South American country that gained independence after the Battle of Lake Maracaibo and which has been the site of recent political unrest against the Maduro regime in Caracas.
 
 [Q2] The fall of the Famagusta colony preceded this battle, which brought an end to one side’s attempt to rescue Cyprus. The Real [ray--AHL] rammed the flagship of Uluc Ali Pasha at the height of this battle. Miguel Cervantes lost an arm in this battle, which was a decisive victory for Don Juan of Austria. For ten points, name this 1571 battle where the Holy League defeated the Ottomans.

@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2014
-
 # Odyssey of the Mind — 2014 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -19,3 +17,4 @@ For this problem, teams will design, build, and drive a vehicle that will travel
 3. The Stackable Structure Divisions I, II, III & IVTeams will design and build a structure made up of separate components stacked on top of one another. The structure components will be made of only balsa wood and glue, and will be tested by balancing and supporting weights after they are stacked. Teams will be scored for the number of components they use in their final structure. Before they are stacked, the separate components will be integrated into an artistic representation of Earth. The team will include the stacking of the components, placement of the weights, and Earth into the theme of its performance.Cost limit: $145 USD.Sponsored by NASA.
 4. Seeing is Believing Divisions I, II, III & IVIn this problem teams are to create and present an original performance about a community that feels threatened by something in a location it has never visited. The community townspeople will use a creative method to select one or more Travelers to visit and explore the location. While at the location, a Traveler will use a means of communication to send a message home to convince the community that there is nothing to fear. The performance will also include a narrator character, two rhymes about the travels, and a moving set piece.Cost limit: $125 USD.
 5. The World’s First Art FestivalGrades K-2The team’s problem is to create and present an original humorous performance about a prehistoric art festival. The festival will include artwork, dance, music, song, and — of course — a team-created audience to experience it all. The team will also create a backdrop that is a replica of a cave painting.Cost limit: $125 USD.
+

@@ -1,23 +1,75 @@
-# Method — `wsc_writing`
+# Team method
 
-How this benchmark's agents are asked to work. Projected from `data/rules/wsc_writing/collaboration.json`.
-
-## Agent constraints
-
-- Apply this competition's own roster, timing, tool, collaboration, submission, and scoring rules; do not import rules from another contest.
-- Collaborate only within the team under contest rules.
-- Banned during the contest: internet access, calculators, running code and personal electronics. Paper and pencil are always available. Work only from the materials provided with the problem.
-- Treat private reasoning and notes as unknown to teammates until you communicate the decision-relevant content.
-- Do not access hidden solutions, answer keys, evaluator internals, or unauthorized outside problem-solving help.
-- Respect the event's shared-planning, private-writing, and review stages; do not transfer text or edits across a stage boundary unless that stage permits it.
-- Do not reveal one writer's private drafting state to another writer during the individual-writing stage unless the selected event rules explicitly reopen collaboration.
-- Only designated submitters may make the shared submission: Agent_1.
-- Use only the official mechanisms that the current task actually exposes; do not claim physical, oral, live-opponent, judge, or environment actions that were not observed.
-
-## Information / deliberation / communication
+## Collaboration configuration
 
 ```json
 {
+  "agent_constraints": [
+    "Apply this competition's own roster, timing, tool, collaboration, submission, and scoring rules; do not import rules from another contest.",
+    "Collaborate only within the team under contest rules.",
+    "Banned during the contest: internet access, calculators, running code and personal electronics. Paper and pencil are always available. Work only from the materials provided with the problem.",
+    "Treat private reasoning and notes as unknown to teammates until you communicate the decision-relevant content.",
+    "Do not access hidden solutions, answer keys, evaluator internals, or unauthorized outside problem-solving help.",
+    "Respect the event's shared-planning, private-writing, and review stages; do not transfer text or edits across a stage boundary unless that stage permits it.",
+    "Do not reveal one writer's private drafting state to another writer during the individual-writing stage unless the selected event rules explicitly reopen collaboration.",
+    "Only designated submitters may make the shared submission: Agent_1.",
+    "Use only the official mechanisms that the current task actually exposes; do not claim physical, oral, live-opponent, judge, or environment actions that were not observed."
+  ],
+  "agent_roles": [
+    {
+      "name": "Agent_1",
+      "title": "writer / captain / final submitter",
+      "may_submit": true,
+      "duties": [
+        "Draft one complete response to a distinct prompt during the individual-writing stage.",
+        "Coordinate the planning stage without drafting another teammate's response.",
+        "Join the peer-review stage and submit only after all three complete responses pass the format and rule checks."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": [
+        "resource_policy",
+        "timeline",
+        "collaboration_protocol",
+        "deliverable_format"
+      ]
+    },
+    {
+      "name": "Agent_2",
+      "title": "writer A",
+      "may_submit": false,
+      "duties": [
+        "Draft one complete response to a distinct prompt in full prose, not notes.",
+        "Write independently after team preparation and join peer review only in the final stage."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": [
+        "resource_policy",
+        "deliverable_format",
+        "evaluation_criteria"
+      ]
+    },
+    {
+      "name": "Agent_3",
+      "title": "writer B",
+      "may_submit": false,
+      "duties": [
+        "Draft one complete response to a distinct prompt in full prose, not notes.",
+        "Write independently after team preparation and join peer review only in the final stage."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": [
+        "resource_policy",
+        "deliverable_format",
+        "evaluation_criteria"
+      ]
+    }
+  ],
   "information_policy": {
     "mode": "role_specialized",
     "shared": [
@@ -27,6 +79,55 @@ How this benchmark's agents are asked to work. Projected from `data/rules/wsc_wr
       "scratchpad"
     ],
     "coordination_requirement": "All teammates may consult the complete public contest rules. Private reasoning becomes shared state only when communicated; assigned rule expertise creates tracking responsibility, not exclusive access."
+  },
+  "rule_sections": {
+    "competition_format": [
+      "Competition model: The team plans together, writes under the event's individual-work stage, and completes the permitted review stage.",
+      "The source-recorded active team has 3 members.",
+      "Source-recorded competition rule: Each of the three teammates answers a different prompt.",
+      "Source-recorded competition rule: Responses may use a form appropriate to the prompt, including creative pieces, persuasive arguments, poems, or essays.",
+      "Each of the three teammates answers a different prompt.",
+      "Responses may use a form appropriate to the prompt, including creative pieces, persuasive arguments, poems, or essays."
+    ],
+    "timeline": [
+      "Benchmark adaptation: no official numeric duration is encoded in the available primary-source record; simulation.max_turns is only a runner safety budget.",
+      "The event runs in team-preparation, individual-writing, and final peer-review stages.",
+      "No official numeric stage schedule is encoded from the available primary sources."
+    ],
+    "resource_policy": [
+      "Source-recorded resource policy: Banned during the contest: internet access, calculators, running code and personal electronics. Paper and pencil are always available. Work only from the materials provided with the problem.",
+      "Source-recorded competition rule: Write the response with pen or pencil.",
+      "Write the response with pen or pencil.",
+      "No electronic devices; treat the writing as handwritten."
+    ],
+    "collaboration_protocol": [
+      "Source-recorded collaboration rule: Collaborate only within the team under contest rules.",
+      "Source-recorded competition rule: The team receives three to four prompts drawn from the six World Scholar's Cup subject areas.",
+      "Source-recorded competition rule: The team answers exactly three prompts.",
+      "The team receives three to four prompts drawn from the six World Scholar's Cup subject areas.",
+      "The team answers exactly three prompts.",
+      "Prepare with teammates without devices before individual writing begins.",
+      "Each teammate writes independently, then teammates review one another's work at the end."
+    ],
+    "integrity_and_compliance": [
+      "Benchmark safety rule: do not use hidden solutions, evaluator internals, unauthorized outside assistance, or resources forbidden by this competition."
+    ],
+    "deliverable_format": [
+      "Runner answer contract: Submit three written responses, one per teammate, with each response answering a different prompt.",
+      "Official deliverable: written essay.",
+      "Source-recorded competition rule: First prepare with teammates without using devices, then write independently, then review one another's work at the end.",
+      "Source-recorded competition rule: Write the response with pen or pencil.",
+      "First prepare with teammates without using devices, then write independently, then review one another's work at the end.",
+      "Write the response with pen or pencil.",
+      "Submit three essays or the staged portfolio required by the prompt."
+    ],
+    "evaluation_criteria": [
+      "Repository evaluation status: Task performance is evaluated per artifact in rubric mode by rubric_llm_v1; repository evaluator status is ready."
+    ],
+    "runtime_limitations": [
+      "Runtime limitation: Neither the fetched official events page nor the official rubric PDF states a numeric stage schedule.",
+      "Runtime limitation: The rubric PDF contains evaluation questions only; it does not establish a rule that peer editors may not finish an incomplete response."
+    ]
   },
   "deliberation": {
     "mode": "structured",
@@ -47,77 +148,108 @@ How this benchmark's agents are asked to work. Projected from `data/rules/wsc_wr
     "max_message_chars": 1200,
     "counted_actions": [
       "speak",
-      "write_scratchpad",
+      "work",
       "propose",
       "challenge",
       "provide_evidence",
       "revise",
       "decide"
     ]
+  },
+  "simulation": {
+    "max_turns": 30,
+    "scheduler": "src_collaboration_draft",
+    "turn_budget_basis": "standardized experiment budget: 30 global turns; official contest timing is recorded separately",
+    "open_table_coach": {
+      "enabled": true,
+      "status": "counterfactual_otc_collaboration_overlay_not_official_competition_rule",
+      "may_submit": false,
+      "allowed_tools": [],
+      "counts_toward_shared_api_and_token_budget": true,
+      "contestant_turn_policy": {
+        "mode": "private_deliberation_then_single_action",
+        "allowed_actions": [
+          "work",
+          "speak",
+          "rest"
+        ],
+        "exactly_one_action": true,
+        "unstructured_response": "rest",
+        "final_submission": "reviewed_answer_sheet",
+        "visibility": {
+          "think": "private",
+          "work": "shared",
+          "speak": "team",
+          "rest": "private"
+        },
+        "max_chars_by_action": {
+          "think": 2400,
+          "work": 60000,
+          "speak": 1000,
+          "rest": 80
+        },
+        "memory_entries": {
+          "private_think_per_agent": 3,
+          "shared_work": 18,
+          "group_messages": 12,
+          "public_messages": 24
+        },
+        "private_think_calls_per_turn": 1,
+        "discussion_policy": {
+          "report_after_work": true,
+          "silent_work_turn_requires_discussion": true,
+          "conflicts_require_targeted_speak": true
+        }
+      },
+      "precontest_brief": {
+        "turn": 0,
+        "problem_access": false,
+        "allowed_actions": [
+          "speak",
+          "rest"
+        ],
+        "advice_scope": [
+          "time allocation within the rule card",
+          "team coordination and handoffs",
+          "independent verification",
+          "reconciling the required final deliverable"
+        ]
+      },
+      "opening_discussion": {
+        "enabled": false,
+        "problem_access": false,
+        "allowed_actions": [],
+        "purpose": "Coach exits permanently after the single turn-0 blind brief."
+      },
+      "after_opening_access": false,
+      "min_turns": 3,
+      "protocol_version": "otc_turn0_review_v1",
+      "review_required": true,
+      "action_surface": "registry_bundles_v1",
+      "action_bundles": [
+        "common",
+        "desk",
+        "memory",
+        "independent_review",
+        "competition_tools",
+        "deliberation_if_structured"
+      ]
+    },
+    "deliverable_pipeline": {
+      "version": "otc_artifact_v1",
+      "kind": "document",
+      "source_format": "text",
+      "render_format": "pdf",
+      "min_pages": 1,
+      "max_pages": 20,
+      "max_source_chars": 60000,
+      "max_file_size_mb": 20,
+      "review_rendered_version": true,
+      "post_review_synthesis": false,
+      "grading_status": "rubric_configured_validate_at_preflight",
+      "fidelity": "benchmark_adaptation_not_official_equivalence"
+    }
   }
 }
 ```
 
-## Simulation
-
-```json
-{
-  "max_turns": 24,
-  "scheduler": "src_collaboration_draft",
-  "turn_budget_basis": "official clock n/a turns vs floor 11 (3 teammates x 2 turns + 1 answer parts + 4 for synthesis)"
-}
-```
-
-## Rule sections
-
-```json
-{
-  "competition_format": [
-    "Competition model: The team plans together, writes under the event's individual-work stage, and completes the permitted review stage.",
-    "The source-recorded active team has 3 members.",
-    "Source-recorded competition rule: Each of the three teammates answers a different prompt.",
-    "Source-recorded competition rule: Responses may use a form appropriate to the prompt, including creative pieces, persuasive arguments, poems, or essays.",
-    "Each of the three teammates answers a different prompt.",
-    "Responses may use a form appropriate to the prompt, including creative pieces, persuasive arguments, poems, or essays."
-  ],
-  "timeline": [
-    "Benchmark adaptation: no official numeric duration is encoded in the available primary-source record; simulation.max_turns is only a runner safety budget.",
-    "The event runs in team-preparation, individual-writing, and final peer-review stages.",
-    "No official numeric stage schedule is encoded from the available primary sources."
-  ],
-  "resource_policy": [
-    "Source-recorded resource policy: Banned during the contest: internet access, calculators, running code and personal electronics. Paper and pencil are always available. Work only from the materials provided with the problem.",
-    "Source-recorded competition rule: Write the response with pen or pencil.",
-    "Write the response with pen or pencil.",
-    "No electronic devices; treat the writing as handwritten."
-  ],
-  "collaboration_protocol": [
-    "Source-recorded collaboration rule: Collaborate only within the team under contest rules.",
-    "Source-recorded competition rule: The team receives three to four prompts drawn from the six World Scholar's Cup subject areas.",
-    "Source-recorded competition rule: The team answers exactly three prompts.",
-    "The team receives three to four prompts drawn from the six World Scholar's Cup subject areas.",
-    "The team answers exactly three prompts.",
-    "Prepare with teammates without devices before individual writing begins.",
-    "Each teammate writes independently, then teammates review one another's work at the end."
-  ],
-  "integrity_and_compliance": [
-    "Benchmark safety rule: do not use hidden solutions, evaluator internals, unauthorized outside assistance, or resources forbidden by this competition."
-  ],
-  "deliverable_format": [
-    "Runner answer contract: Submit three written responses, one per teammate, with each response answering a different prompt.",
-    "Official deliverable: written essay.",
-    "Source-recorded competition rule: First prepare with teammates without using devices, then write independently, then review one another's work at the end.",
-    "Source-recorded competition rule: Write the response with pen or pencil.",
-    "First prepare with teammates without using devices, then write independently, then review one another's work at the end.",
-    "Write the response with pen or pencil.",
-    "Submit three essays or the staged portfolio required by the prompt."
-  ],
-  "evaluation_criteria": [
-    "Repository evaluation status: Task performance is evaluated per artifact in rubric mode by rubric_llm_v1; repository evaluator status is ready."
-  ],
-  "runtime_limitations": [
-    "Runtime limitation: Neither the fetched official events page nor the official rubric PDF states a numeric stage schedule.",
-    "Runtime limitation: The rubric PDF contains evaluation questions only; it does not establish a rule that peer editors may not finish an incomplete response."
-  ]
-}
-```

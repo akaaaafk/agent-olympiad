@@ -1,5 +1,3 @@
-# IHBB-Championships-History-Bowl-Round-6-Varsity-and-JV
-
 [Q1] This settlement was abandoned after the loss of a trade network centered on Kilwa, leading its inhabitants to settle Mutapa. Sites at this settlement include the Great Enclosure and the Hill Complex, where eight birds carved of soapstone were once supposed to have stood. It was constructed by the Shona people, who protected themselves with high walls built without mortar. For ten points, name this Iron Age settlement that lends its name to an African country with capital Harare.
 
 [Q2] This country attempted to recreate a Six Day War strategy by launching Operation Chengiz Khan, disabling a rival's air force in retaliation for their support of Mukti Bahini. Under Yahya Khan, this country launched Operation Searchlight to suppress the Awami League, a nationalist movement in a breakaway state. This country fought the Kargil War and frequently contests the region of Kashmir with its eastern neighbor. Bangladesh gained its independence from, for ten points, what northwestern neighbor of India?

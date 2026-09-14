@@ -3,8 +3,23 @@
   "gold_pointer": "data/benchmarks/ioai_team/benchmark.json#ioai_team_2024_practical.gold_label",
   "has_gold_answer": false,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": "data/raw/ioai/Team-Challenge/2024/Practical-round-best-solutions.zip"
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/ioai/Team-Challenge/2024/Practical-round-best-solutions.zip",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/ioai_team_2024_official_scoring_v1.json",
+    "deliverable": "cover_image_and_music_video_with_process_documentation",
+    "reason": "Historical source contract restored; required execution and final scoring remain unvalidated.",
+    "scorecard_path": "data/rubrics/task_scorecards/ioai_team.json",
+    "scorecard_key": "ioai_team_2024_practical",
+    "task_contract_path": "data/raw/ioai/Team-Challenge/recovered_20260913/2024/task_contract.json",
+    "limitations": [
+      "Creative-tool accounts and multimodal judging have not been reproduced.",
+      "The raw 40+40 criterion sum is not the final ranking: image/video weights are 40:60 and full jury/peer aggregation is unresolved."
+    ],
+    "score_basis": "raw_criterion_sum_not_official_final_ranking"
+  },
+  "rubric_path": "data/rubrics/ioai_team_2024_official_scoring_v1.json",
+  "deliverable": "cover_image_and_music_video_with_process_documentation"
 }

@@ -15,7 +15,8 @@
     "official_minutes": null
   },
   "allowed_tools": [
-    "query_rules"
+    "query_rules",
+    "prepare_ma_case_record"
   ],
   "resources": {
     "internet": "unknown_not_verified",

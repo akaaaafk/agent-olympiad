@@ -1,5 +1,3 @@
-# Cutting Cheese
-
 Hide 
  Cutting Cheese 
 

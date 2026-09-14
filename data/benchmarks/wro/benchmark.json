@@ -16,7 +16,50 @@
       "grading_rubric": "Official WRO Future Innovators judging (project documentation, presentation, robot demonstration).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "assets": [
+      {
+        "path": "data/raw/wro/2022/WRO-2022-Future-Innovators-Mission.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "8291214e2d33516b7286307aeba6129e81b5e65a57b57c0bf116c7f735c0e25b"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2022_future_innovators",
+      "deliverable": "physical_robot_project_and_presentation",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2022_future_innovators"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/",
+      "source_file": "data/raw/wro/2022/WRO-2022-Future-Innovators-Mission.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2022/WRO-2022-Future-Innovators-Mission.pdf",
+          "role": "agent_visible",
+          "sha256": "8291214e2d33516b7286307aeba6129e81b5e65a57b57c0bf116c7f735c0e25b"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2022_robomission_elementary",
@@ -35,7 +78,62 @@
       "grading_rubric": "Official WRO RoboMission scoring tables in season game rules (mission points + penalties).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "general_rules_file": "data/raw/wro/2022/WRO-2022-RoboMission-General-Rules.pdf",
+    "assets": [
+      {
+        "path": "data/raw/wro/2022/WRO-2022-RoboMission-Elementary.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "682ac2b642bf78dda7127147539511205f59c12e7f352f3801027c039e89d051"
+      },
+      {
+        "path": "data/raw/wro/2022/WRO-2022-RoboMission-General-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "3bf33798e6a0a64abbb205441cd7b2613052f0dabc21b460d06bf7532807abe1"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2022_robomission_elementary",
+      "deliverable": "observed_physical_robot_attempt",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2022_robomission_elementary"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/competition/2022-season/",
+      "source_file": "data/raw/wro/2022/WRO-2022-RoboMission-Elementary.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2022/WRO-2022-RoboMission-Elementary.pdf",
+          "role": "agent_visible",
+          "sha256": "682ac2b642bf78dda7127147539511205f59c12e7f352f3801027c039e89d051"
+        },
+        {
+          "path": "data/raw/wro/2022/WRO-2022-RoboMission-General-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "3bf33798e6a0a64abbb205441cd7b2613052f0dabc21b460d06bf7532807abe1"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2022_robomission_junior",
@@ -54,7 +152,62 @@
       "grading_rubric": "Official WRO RoboMission scoring tables in season game rules (mission points + penalties).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "general_rules_file": "data/raw/wro/2022/WRO-2022-RoboMission-General-Rules.pdf",
+    "assets": [
+      {
+        "path": "data/raw/wro/2022/WRO-2022-RoboMission-Junior.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "82ff8568e293fc58053e9d6b9db449b5a927e088f847bc710922feab3fc197ee"
+      },
+      {
+        "path": "data/raw/wro/2022/WRO-2022-RoboMission-General-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "3bf33798e6a0a64abbb205441cd7b2613052f0dabc21b460d06bf7532807abe1"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2022_robomission_junior",
+      "deliverable": "observed_physical_robot_attempt",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2022_robomission_junior"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/competition/2022-season/",
+      "source_file": "data/raw/wro/2022/WRO-2022-RoboMission-Junior.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2022/WRO-2022-RoboMission-Junior.pdf",
+          "role": "agent_visible",
+          "sha256": "82ff8568e293fc58053e9d6b9db449b5a927e088f847bc710922feab3fc197ee"
+        },
+        {
+          "path": "data/raw/wro/2022/WRO-2022-RoboMission-General-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "3bf33798e6a0a64abbb205441cd7b2613052f0dabc21b460d06bf7532807abe1"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2022_robomission_senior",
@@ -73,7 +226,62 @@
       "grading_rubric": "Official WRO RoboMission scoring tables in season game rules (mission points + penalties).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "general_rules_file": "data/raw/wro/2022/WRO-2022-RoboMission-General-Rules.pdf",
+    "assets": [
+      {
+        "path": "data/raw/wro/2022/WRO-2022-RoboMission-Senior.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "ae027a55a461739a957b3707ce955a62d3baa7d35687343ba50f320b32f7ebcc"
+      },
+      {
+        "path": "data/raw/wro/2022/WRO-2022-RoboMission-General-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "3bf33798e6a0a64abbb205441cd7b2613052f0dabc21b460d06bf7532807abe1"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2022_robomission_senior",
+      "deliverable": "observed_physical_robot_attempt",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2022_robomission_senior"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/competition/2022-season/",
+      "source_file": "data/raw/wro/2022/WRO-2022-RoboMission-Senior.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2022/WRO-2022-RoboMission-Senior.pdf",
+          "role": "agent_visible",
+          "sha256": "ae027a55a461739a957b3707ce955a62d3baa7d35687343ba50f320b32f7ebcc"
+        },
+        {
+          "path": "data/raw/wro/2022/WRO-2022-RoboMission-General-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "3bf33798e6a0a64abbb205441cd7b2613052f0dabc21b460d06bf7532807abe1"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2023_future_innovators",
@@ -92,7 +300,50 @@
       "grading_rubric": "Official WRO Future Innovators judging (project documentation, presentation, robot demonstration).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "assets": [
+      {
+        "path": "data/raw/wro/2023/WRO-2023-Future-Innovators-Mission.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "c6aeb6a5e6f889b0aa645ac4fb2da68de002234aa9d370231ad3061de5dc033e"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2023_future_innovators",
+      "deliverable": "physical_robot_project_and_presentation",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2023_future_innovators"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/",
+      "source_file": "data/raw/wro/2023/WRO-2023-Future-Innovators-Mission.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2023/WRO-2023-Future-Innovators-Mission.pdf",
+          "role": "agent_visible",
+          "sha256": "c6aeb6a5e6f889b0aa645ac4fb2da68de002234aa9d370231ad3061de5dc033e"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2023_robomission_elementary",
@@ -111,7 +362,62 @@
       "grading_rubric": "Official WRO RoboMission scoring tables in season game rules (mission points + penalties).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "general_rules_file": "data/raw/wro/2023/WRO-2023-RoboMission-General-Rules.pdf",
+    "assets": [
+      {
+        "path": "data/raw/wro/2023/WRO-2023-RoboMission-Elementary.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "8c55e3e3542128856aa0b9cc830e37b0d54f7ebd37e1517e6c0664f003399b45"
+      },
+      {
+        "path": "data/raw/wro/2023/WRO-2023-RoboMission-General-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "b502cf376f2a757350fbce1a8074acd3902e6f60b3155770a7323bc8da1ce9a4"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2023_robomission_elementary",
+      "deliverable": "observed_physical_robot_attempt",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2023_robomission_elementary"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/competition/2023-season/",
+      "source_file": "data/raw/wro/2023/WRO-2023-RoboMission-Elementary.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2023/WRO-2023-RoboMission-Elementary.pdf",
+          "role": "agent_visible",
+          "sha256": "8c55e3e3542128856aa0b9cc830e37b0d54f7ebd37e1517e6c0664f003399b45"
+        },
+        {
+          "path": "data/raw/wro/2023/WRO-2023-RoboMission-General-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "b502cf376f2a757350fbce1a8074acd3902e6f60b3155770a7323bc8da1ce9a4"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2023_robomission_junior",
@@ -130,7 +436,62 @@
       "grading_rubric": "Official WRO RoboMission scoring tables in season game rules (mission points + penalties).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "general_rules_file": "data/raw/wro/2023/WRO-2023-RoboMission-General-Rules.pdf",
+    "assets": [
+      {
+        "path": "data/raw/wro/2023/WRO-2023-RoboMission-Junior.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "7c1ce280b87fa7a1ce41e33671ed5535c8cd5c28fc208d0af672a832d8c73b44"
+      },
+      {
+        "path": "data/raw/wro/2023/WRO-2023-RoboMission-General-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "b502cf376f2a757350fbce1a8074acd3902e6f60b3155770a7323bc8da1ce9a4"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2023_robomission_junior",
+      "deliverable": "observed_physical_robot_attempt",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2023_robomission_junior"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/competition/2023-season/",
+      "source_file": "data/raw/wro/2023/WRO-2023-RoboMission-Junior.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2023/WRO-2023-RoboMission-Junior.pdf",
+          "role": "agent_visible",
+          "sha256": "7c1ce280b87fa7a1ce41e33671ed5535c8cd5c28fc208d0af672a832d8c73b44"
+        },
+        {
+          "path": "data/raw/wro/2023/WRO-2023-RoboMission-General-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "b502cf376f2a757350fbce1a8074acd3902e6f60b3155770a7323bc8da1ce9a4"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2023_robomission_senior",
@@ -149,7 +510,62 @@
       "grading_rubric": "Official WRO RoboMission scoring tables in season game rules (mission points + penalties).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "general_rules_file": "data/raw/wro/2023/WRO-2023-RoboMission-General-Rules.pdf",
+    "assets": [
+      {
+        "path": "data/raw/wro/2023/WRO-2023-RoboMission-Senior.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "543c06c222a2ef3f08d859c976cfa43e6191bdc7f3b67a5c7c5e32d7bec706e7"
+      },
+      {
+        "path": "data/raw/wro/2023/WRO-2023-RoboMission-General-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "b502cf376f2a757350fbce1a8074acd3902e6f60b3155770a7323bc8da1ce9a4"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2023_robomission_senior",
+      "deliverable": "observed_physical_robot_attempt",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2023_robomission_senior"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/competition/2023-season/",
+      "source_file": "data/raw/wro/2023/WRO-2023-RoboMission-Senior.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2023/WRO-2023-RoboMission-Senior.pdf",
+          "role": "agent_visible",
+          "sha256": "543c06c222a2ef3f08d859c976cfa43e6191bdc7f3b67a5c7c5e32d7bec706e7"
+        },
+        {
+          "path": "data/raw/wro/2023/WRO-2023-RoboMission-General-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "b502cf376f2a757350fbce1a8074acd3902e6f60b3155770a7323bc8da1ce9a4"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2024_future_innovators",
@@ -168,7 +584,50 @@
       "grading_rubric": "Official WRO Future Innovators judging (project documentation, presentation, robot demonstration).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "assets": [
+      {
+        "path": "data/raw/wro/2024/WRO-2024-Future-Innovators-Mission.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "512acfac648aeeff5df44b9466ee16950aee5c6e08adccbeb25f1d6df4423422"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2024_future_innovators",
+      "deliverable": "physical_robot_project_and_presentation",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2024_future_innovators"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/",
+      "source_file": "data/raw/wro/2024/WRO-2024-Future-Innovators-Mission.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2024/WRO-2024-Future-Innovators-Mission.pdf",
+          "role": "agent_visible",
+          "sha256": "512acfac648aeeff5df44b9466ee16950aee5c6e08adccbeb25f1d6df4423422"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2024_robomission_elementary",
@@ -187,7 +646,62 @@
       "grading_rubric": "Official WRO RoboMission scoring tables in season game rules (mission points + penalties).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "general_rules_file": "data/raw/wro/2024/WRO-2024-RoboMission-General-Rules.pdf",
+    "assets": [
+      {
+        "path": "data/raw/wro/2024/WRO-2024-RoboMission-Elementary.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "c4285262a2e8b8d9b686ddbf858890191af628630ea078935116d14ff4b4881e"
+      },
+      {
+        "path": "data/raw/wro/2024/WRO-2024-RoboMission-General-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "c1a53cd128bb25f097b30e63a76cdb0bea2648aa266c8c8e6f97a80edb242b21"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2024_robomission_elementary",
+      "deliverable": "observed_physical_robot_attempt",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2024_robomission_elementary"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/competition/2024-season/",
+      "source_file": "data/raw/wro/2024/WRO-2024-RoboMission-Elementary.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2024/WRO-2024-RoboMission-Elementary.pdf",
+          "role": "agent_visible",
+          "sha256": "c4285262a2e8b8d9b686ddbf858890191af628630ea078935116d14ff4b4881e"
+        },
+        {
+          "path": "data/raw/wro/2024/WRO-2024-RoboMission-General-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "c1a53cd128bb25f097b30e63a76cdb0bea2648aa266c8c8e6f97a80edb242b21"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2024_robomission_junior",
@@ -206,7 +720,62 @@
       "grading_rubric": "Official WRO RoboMission scoring tables in season game rules (mission points + penalties).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "general_rules_file": "data/raw/wro/2024/WRO-2024-RoboMission-General-Rules.pdf",
+    "assets": [
+      {
+        "path": "data/raw/wro/2024/WRO-2024-RoboMission-Junior.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "2887df20e011d8613e6ced7c2e4691746ea3f76e71828a63019e065a109526e2"
+      },
+      {
+        "path": "data/raw/wro/2024/WRO-2024-RoboMission-General-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "c1a53cd128bb25f097b30e63a76cdb0bea2648aa266c8c8e6f97a80edb242b21"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2024_robomission_junior",
+      "deliverable": "observed_physical_robot_attempt",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2024_robomission_junior"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/competition/2024-season/",
+      "source_file": "data/raw/wro/2024/WRO-2024-RoboMission-Junior.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2024/WRO-2024-RoboMission-Junior.pdf",
+          "role": "agent_visible",
+          "sha256": "2887df20e011d8613e6ced7c2e4691746ea3f76e71828a63019e065a109526e2"
+        },
+        {
+          "path": "data/raw/wro/2024/WRO-2024-RoboMission-General-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "c1a53cd128bb25f097b30e63a76cdb0bea2648aa266c8c8e6f97a80edb242b21"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2024_robomission_senior",
@@ -225,7 +794,62 @@
       "grading_rubric": "Official WRO RoboMission scoring tables in season game rules (mission points + penalties).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "general_rules_file": "data/raw/wro/2024/WRO-2024-RoboMission-General-Rules.pdf",
+    "assets": [
+      {
+        "path": "data/raw/wro/2024/WRO-2024-RoboMission-Senior.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "0d1cb4d11c489e156028af1df0ded66e03d68546895c2962810e0aa73e6facf9"
+      },
+      {
+        "path": "data/raw/wro/2024/WRO-2024-RoboMission-General-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "c1a53cd128bb25f097b30e63a76cdb0bea2648aa266c8c8e6f97a80edb242b21"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2024_robomission_senior",
+      "deliverable": "observed_physical_robot_attempt",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2024_robomission_senior"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/competition/2024-season/",
+      "source_file": "data/raw/wro/2024/WRO-2024-RoboMission-Senior.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2024/WRO-2024-RoboMission-Senior.pdf",
+          "role": "agent_visible",
+          "sha256": "0d1cb4d11c489e156028af1df0ded66e03d68546895c2962810e0aa73e6facf9"
+        },
+        {
+          "path": "data/raw/wro/2024/WRO-2024-RoboMission-General-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "c1a53cd128bb25f097b30e63a76cdb0bea2648aa266c8c8e6f97a80edb242b21"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2025_future_innovators",
@@ -244,7 +868,50 @@
       "grading_rubric": "Official WRO Future Innovators judging (project documentation, presentation, robot demonstration).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "assets": [
+      {
+        "path": "data/raw/wro/2025/WRO-2025-Future-Innovators-Mission.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "4a62904543251f03c5feec62798c34f6edbcd2cdbbc7a808bd9c6f40605a02b7"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2025_future_innovators",
+      "deliverable": "physical_robot_project_and_presentation",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2025_future_innovators"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/",
+      "source_file": "data/raw/wro/2025/WRO-2025-Future-Innovators-Mission.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2025/WRO-2025-Future-Innovators-Mission.pdf",
+          "role": "agent_visible",
+          "sha256": "4a62904543251f03c5feec62798c34f6edbcd2cdbbc7a808bd9c6f40605a02b7"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2025_robomission_elementary",
@@ -263,7 +930,62 @@
       "grading_rubric": "Official WRO RoboMission scoring tables in season game rules (mission points + penalties).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "general_rules_file": "data/raw/wro/2025/WRO-2025-RoboMission-General-Rules.pdf",
+    "assets": [
+      {
+        "path": "data/raw/wro/2025/WRO-2025-RoboMission-Elementary-Game-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "84c5dac43b43e46394125d4dbb1358ccaa3754b97901fe3e0c2ad6a6c971d16a"
+      },
+      {
+        "path": "data/raw/wro/2025/WRO-2025-RoboMission-General-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "03f232e4e9f7928b34c3ce45113711330fb0d176ffcf74d4b4143365c7d014fa"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2025_robomission_elementary",
+      "deliverable": "observed_physical_robot_attempt",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2025_robomission_elementary"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/competition/2025-season/",
+      "source_file": "data/raw/wro/2025/WRO-2025-RoboMission-Elementary-Game-Rules.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2025/WRO-2025-RoboMission-Elementary-Game-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "84c5dac43b43e46394125d4dbb1358ccaa3754b97901fe3e0c2ad6a6c971d16a"
+        },
+        {
+          "path": "data/raw/wro/2025/WRO-2025-RoboMission-General-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "03f232e4e9f7928b34c3ce45113711330fb0d176ffcf74d4b4143365c7d014fa"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2025_robomission_junior",
@@ -282,7 +1004,62 @@
       "grading_rubric": "Official WRO RoboMission scoring tables in season game rules (mission points + penalties).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "general_rules_file": "data/raw/wro/2025/WRO-2025-RoboMission-General-Rules.pdf",
+    "assets": [
+      {
+        "path": "data/raw/wro/2025/WRO-2025-RoboMission-Junior-Game-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "2d2df822bb36733c69c59c1ed9fbd3eec6dbb374167de1f7c0d8c5d3760e0756"
+      },
+      {
+        "path": "data/raw/wro/2025/WRO-2025-RoboMission-General-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "03f232e4e9f7928b34c3ce45113711330fb0d176ffcf74d4b4143365c7d014fa"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2025_robomission_junior",
+      "deliverable": "observed_physical_robot_attempt",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2025_robomission_junior"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/competition/2025-season/",
+      "source_file": "data/raw/wro/2025/WRO-2025-RoboMission-Junior-Game-Rules.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2025/WRO-2025-RoboMission-Junior-Game-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "2d2df822bb36733c69c59c1ed9fbd3eec6dbb374167de1f7c0d8c5d3760e0756"
+        },
+        {
+          "path": "data/raw/wro/2025/WRO-2025-RoboMission-General-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "03f232e4e9f7928b34c3ce45113711330fb0d176ffcf74d4b4143365c7d014fa"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2025_robomission_senior",
@@ -301,7 +1078,62 @@
       "grading_rubric": "Official WRO RoboMission scoring tables in season game rules (mission points + penalties).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "general_rules_file": "data/raw/wro/2025/WRO-2025-RoboMission-General-Rules.pdf",
+    "assets": [
+      {
+        "path": "data/raw/wro/2025/WRO-2025-RoboMission-Senior-Game-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "56b09b4fe29163224967adc04d45107cb174cbcc6c8d945648a99113e9624049"
+      },
+      {
+        "path": "data/raw/wro/2025/WRO-2025-RoboMission-General-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "03f232e4e9f7928b34c3ce45113711330fb0d176ffcf74d4b4143365c7d014fa"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2025_robomission_senior",
+      "deliverable": "observed_physical_robot_attempt",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2025_robomission_senior"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/competition/2025-season/",
+      "source_file": "data/raw/wro/2025/WRO-2025-RoboMission-Senior-Game-Rules.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2025/WRO-2025-RoboMission-Senior-Game-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "56b09b4fe29163224967adc04d45107cb174cbcc6c8d945648a99113e9624049"
+        },
+        {
+          "path": "data/raw/wro/2025/WRO-2025-RoboMission-General-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "03f232e4e9f7928b34c3ce45113711330fb0d176ffcf74d4b4143365c7d014fa"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2026_future_innovators",
@@ -320,7 +1152,50 @@
       "grading_rubric": "Official WRO Future Innovators judging (project documentation, presentation, robot demonstration).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "assets": [
+      {
+        "path": "data/raw/wro/2026/WRO-2026-Future-Innovators-Mission.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "16512a09be58bcb7dca86d50715afe49e5c960c6a1c02fa42a8255a3c7c2ccaa"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2026_future_innovators",
+      "deliverable": "physical_robot_project_and_presentation",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2026_future_innovators"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/",
+      "source_file": "data/raw/wro/2026/WRO-2026-Future-Innovators-Mission.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2026/WRO-2026-Future-Innovators-Mission.pdf",
+          "role": "agent_visible",
+          "sha256": "16512a09be58bcb7dca86d50715afe49e5c960c6a1c02fa42a8255a3c7c2ccaa"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2026_robomission_elementary",
@@ -339,7 +1214,62 @@
       "grading_rubric": "Official WRO RoboMission scoring tables in season game rules (mission points + penalties).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "general_rules_file": "data/raw/wro/2026/WRO-2026-RoboMission-General-Rules.pdf",
+    "assets": [
+      {
+        "path": "data/raw/wro/2026/WRO-2026-RoboMission-Elementary-Game-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "3ec1bb2b16c298676f180da0b664963a4ab4e36a85408ab4b54fb4c8b187877f"
+      },
+      {
+        "path": "data/raw/wro/2026/WRO-2026-RoboMission-General-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "90a28d8bf77f628227e5f544ec57b5230d620f3ae581f092bed1fda23de9e795"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2026_robomission_elementary",
+      "deliverable": "observed_physical_robot_attempt",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2026_robomission_elementary"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/competition/2026-season/",
+      "source_file": "data/raw/wro/2026/WRO-2026-RoboMission-Elementary-Game-Rules.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2026/WRO-2026-RoboMission-Elementary-Game-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "3ec1bb2b16c298676f180da0b664963a4ab4e36a85408ab4b54fb4c8b187877f"
+        },
+        {
+          "path": "data/raw/wro/2026/WRO-2026-RoboMission-General-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "90a28d8bf77f628227e5f544ec57b5230d620f3ae581f092bed1fda23de9e795"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2026_robomission_junior",
@@ -358,7 +1288,62 @@
       "grading_rubric": "Official WRO RoboMission scoring tables in season game rules (mission points + penalties).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "general_rules_file": "data/raw/wro/2026/WRO-2026-RoboMission-General-Rules.pdf",
+    "assets": [
+      {
+        "path": "data/raw/wro/2026/WRO-2026-RoboMission-Junior-Game-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "cd15ae7d9c2694a8c08f2c7f833e69304e7c071803c77fd6f831db5acf08f808"
+      },
+      {
+        "path": "data/raw/wro/2026/WRO-2026-RoboMission-General-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "90a28d8bf77f628227e5f544ec57b5230d620f3ae581f092bed1fda23de9e795"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2026_robomission_junior",
+      "deliverable": "observed_physical_robot_attempt",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2026_robomission_junior"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/competition/2026-season/",
+      "source_file": "data/raw/wro/2026/WRO-2026-RoboMission-Junior-Game-Rules.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2026/WRO-2026-RoboMission-Junior-Game-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "cd15ae7d9c2694a8c08f2c7f833e69304e7c071803c77fd6f831db5acf08f808"
+        },
+        {
+          "path": "data/raw/wro/2026/WRO-2026-RoboMission-General-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "90a28d8bf77f628227e5f544ec57b5230d620f3ae581f092bed1fda23de9e795"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "wro_2026_robomission_senior",
@@ -377,6 +1362,61 @@
       "grading_rubric": "Official WRO RoboMission scoring tables in season game rules (mission points + penalties).",
       "human_baseline": null
     },
-    "status": "collected"
+    "status": "partial",
+    "competition_id": "wro",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "general_rules_file": "data/raw/wro/2026/WRO-2026-RoboMission-General-Rules.pdf",
+    "assets": [
+      {
+        "path": "data/raw/wro/2026/WRO-2026-RoboMission-Senior-Game-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "e57eb5f1550128c50bc68bc76dc0bffd2a642f351def283213554bca46652af3"
+      },
+      {
+        "path": "data/raw/wro/2026/WRO-2026-RoboMission-General-Rules.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "90a28d8bf77f628227e5f544ec57b5230d620f3ae581f092bed1fda23de9e795"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/wro_official_rubrics.json",
+      "rubric_variant": "wro_2026_robomission_senior",
+      "deliverable": "observed_physical_robot_attempt",
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+      "scorecard_key": "wro_2026_robomission_senior"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://wro-association.org/competition/2026-season/",
+      "source_file": "data/raw/wro/2026/WRO-2026-RoboMission-Senior-Game-Rules.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/wro/2026/WRO-2026-RoboMission-Senior-Game-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "e57eb5f1550128c50bc68bc76dc0bffd2a642f351def283213554bca46652af3"
+        },
+        {
+          "path": "data/raw/wro/2026/WRO-2026-RoboMission-General-Rules.pdf",
+          "role": "agent_visible",
+          "sha256": "90a28d8bf77f628227e5f544ec57b5230d620f3ae581f092bed1fda23de9e795"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   }
 ]

@@ -1,6 +1,6 @@
 {
   "rubric_id": "arml_power_fall_2020_v1",
-  "title": "Power Round \u2014 Fall 2020 \u2014 ARML Power sub-problem rubric",
+  "title": "Power Round — Fall 2020 — ARML Power sub-problem rubric",
   "total_points": 40.0,
   "criteria": [
     {
@@ -43,7 +43,7 @@
       "name": "Problem 5",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 5 (2 pts). Statement: Problem 5. Prove that if b = ka where k\u2265 2 is an integer, then there is no program P"
+      "description": "Correct, justified solution to Problem 5 (2 pts). Statement: Problem 5. Prove that if b = ka where k≥ 2 is an integer, then there is no program P"
     },
     {
       "id": "problem_06",
@@ -92,14 +92,14 @@
       "name": "Problem 11b",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 11b (2 pts). Statement: (b) Otherwise, n1 = 2 a\u221213b11. In the next phase of the sequence, only the \ufb01rst three"
+      "description": "Correct, justified solution to Problem 11b (2 pts). Statement: (b) Otherwise, n1 = 2 a−13b11. In the next phase of the sequence, only the ﬁrst three"
     },
     {
       "id": "problem_11c",
       "name": "Problem 11c",
       "max_score": 1.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 11c (1 pt). Statement: fractions of the program are used. In terms of a and b, what is the value of the term of the sequence just before any fraction other than the \ufb01rst three is about to be used? (c) In the next phase, only the fourth fraction is used. What is the value of the sequence"
+      "description": "Correct, justified solution to Problem 11c (1 pt). Statement: fractions of the program are used. In terms of a and b, what is the value of the term of the sequence just before any fraction other than the ﬁrst three is about to be used? (c) In the next phase, only the fourth fraction is used. What is the value of the sequence"
     },
     {
       "id": "problem_11d",
@@ -113,7 +113,7 @@
       "name": "Problem 12",
       "max_score": 8.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 12 (8 pts). Statement: Problem 12. Let P = ( 3\u00b711 22\u00b75 , 5 11 , 13 2\u00b75 , 1 5 , 2 3 , 2\u00b75 7 , 7 2 ) . Prove that when started with 2 a, the"
+      "description": "Correct, justified solution to Problem 12 (8 pts). Statement: Problem 12. Let P = ( 3·11 22·5 , 5 11 , 13 2·5 , 1 5 , 2 3 , 2·5 7 , 7 2 ) . Prove that when started with 2 a, the"
     }
   ],
   "not_observable_from_deck": [

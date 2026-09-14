@@ -1,0 +1,13 @@
+# Task
+
+Competition: ichto
+
+Task: ichto_IChTo-2025-problem-set
+
+Edition: 2025
+
+Team size: 4
+
+Deliverable: chemistry_theory_answer_packet
+
+Use the attached problem materials and the inherited competition and collaboration instructions.

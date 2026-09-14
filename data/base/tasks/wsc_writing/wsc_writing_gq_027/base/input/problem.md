@@ -1,5 +1,3 @@
-# wsc_writing_gq_027
-
 During a difficult conversation, you look down and see what looks like a giraffe in the carpet. This phenomenon—the human brain’s ability to find patterns and images even where none exist—is called pareidolia. Research how pareidolia works. Then discuss with your team: would humanity be better off if we only saw what was literally in front of us? When does pareidolia most hurt us—and when does it most help us? 
 
  Are some settings better for creativity? “Beginnings are contagious there, they’re always setting stages there”—the song “ Once Upon a Time in New York City ” praises the Big Apple as a place for dreamers, fervent with opportunities for reinvention. Ernest Hemingway and Scott Fitzgerald, among many other writers of their era, hung out with other writers in Paris. Explore the history of the salon , or gatherings where creative and intellectual spirits meet frequently to share and develop ideas, then discuss with your team: is there a place in your country that beckons to the creatively-minded? Has the salon been replaced in the modern world by the Internet—and if so, how? 

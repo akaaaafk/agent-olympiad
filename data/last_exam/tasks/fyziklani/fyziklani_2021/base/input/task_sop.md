@@ -1,0 +1,13 @@
+# Task
+
+Competition: fyziklani
+
+Task: fyziklani_2021
+
+Edition: 2021
+
+Team size: 5
+
+Deliverable: numbered_worked_answers
+
+Use the attached problem materials and the inherited competition and collaboration instructions.

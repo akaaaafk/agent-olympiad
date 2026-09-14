@@ -1,4 +1,4 @@
-# Environment — `wharton_investment`
+# Environment
 
 ## Roster
 
@@ -14,10 +14,14 @@
 
 ## Allowed tools
 
-- query_rules
-- use_calculator
-- execute_code
-- web_search
+```json
+[
+  "query_rules",
+  "use_calculator",
+  "execute_code",
+  "web_search"
+]
+```
 
 ## Resources
 
@@ -53,9 +57,10 @@
   "task_types": [
     "investment_case"
   ],
-  "official_deliverable": "investment_policy_statement_and_final_report",
+  "official_deliverable": "investment_report",
   "official_mime_types": [
     "application/pdf"
   ]
 }
 ```
+

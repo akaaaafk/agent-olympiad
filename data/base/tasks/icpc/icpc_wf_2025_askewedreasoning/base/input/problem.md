@@ -1,5 +1,3 @@
-# A-Skew-ed Reasoning
-
 Hide 
  A-Skew-ed Reasoning 
 

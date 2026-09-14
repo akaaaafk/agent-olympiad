@@ -16,6 +16,7 @@ from contest_session import ContestSession, TaskUnit
 from tool_registry import DESK_ACTION_NAMES, ActionSpec, render_action_instructions
 
 from contest_config import ContestRunConfig
+from contest_observation import GUIDANCE, observe
 
 
 def _task_rows(session: ContestSession) -> list[dict[str, Any]]:
@@ -34,7 +35,7 @@ def _task_rows(session: ContestSession) -> list[dict[str, Any]]:
             "hopeless": task.hopeless,
             "triaged_by": task.triaged_by,
         }
-        for task in session.tasks
+        for task in session.visible_tasks
     ]
 
 
@@ -176,7 +177,7 @@ def _shared_review_history(
 ) -> dict[str, list[dict[str, Any]]]:
     """Build shared review history grouped by task and immutable answer version."""
     history: dict[str, list[dict[str, Any]]] = {}
-    for task in session.tasks:
+    for task in session.visible_tasks:
         versions = (
             task.versions[-max_versions_per_task:]
             if max_versions_per_task is not None
@@ -228,7 +229,7 @@ def _pending_review_queue(
             "version_hash": task.versions[-1].version_hash,
             "author": task.versions[-1].author,
         }
-        for task in session.tasks
+        for task in session.visible_tasks
         if task.versions
         and (allowed_task_ids is None or task.task_id in allowed_task_ids)
         and task.versions[-1].author != reviewer
@@ -357,6 +358,8 @@ def _system_prompt(
     action_names = {spec.name for spec in actions}
     if config.modules.memory and 'recall' in action_names:
         base += '\n' + decision_guidance()
+    elif config.current_turn_only:
+        base += '\nOPTIONAL MEMORY MODULE: disabled. ' + GUIDANCE
     elif not config.modules.memory:
         base += ('\nOPTIONAL MEMORY MODULE: disabled. remember, recall and share_note '
                  'are unavailable. Normal shared drafts, conversation and current task state remain available.')
@@ -375,6 +378,10 @@ def _system_prompt(
             "scheduler reorders remaining work; hopeless problems stay on the sheet "
             "and can be revisited.",
         }
+        if config.current_turn_only:
+            desk_guidance['inspect_problem'] = (
+                "inspect_problem reads a statement and this round's drafts and reviews only; "
+                "it cannot retrieve earlier rounds or change the active task.")
         base += "\nDESK TOOLS: " + " ".join(
             guidance for name, guidance in desk_guidance.items() if name in action_names
         )
@@ -623,12 +630,14 @@ def _system_prompt(
             else "PRE-CONTEST COACH BRIEF"
         )
         strategic += f"\n{title}\n{coach_guidance}"
-    if opening_summary:
+    if opening_summary and not config.current_turn_only:
         strategic += f"\nCOACH OPENING SUMMARY (after the opening turn; the coach has left)\n{opening_summary}"
     if card_block:
         strategic += f"\n{card_block}"
     elif config.rule_guidance:
         strategic += f"\nCONTEST RULES\n{config.rule_guidance}"
+    if config.current_turn_only:
+        strategic += "\n" + GUIDANCE
     return strategic
 
 
@@ -644,6 +653,9 @@ def _user_prompt(
     programming_source_required: bool = False,
     think_ledger: list[dict[str, Any]] | None = None,
 ) -> str:
+    session, memory = observe(session, memory, config)
+    if config.current_turn_only:
+        personal_assignment = None
     active = session.active_task
     policy = config.otc_policy
     allowed_reviews = (
@@ -692,7 +704,7 @@ def _user_prompt(
         if version.author != agent and (allowed_reviews is None or active.task_id in allowed_reviews):
             if not any(row["problem_id"] == active.task_id for row in pending_rows):
                 pending_rows.append({"problem_id": active.task_id, "version_hash": version.version_hash, "author": version.author})
-    session_task_by_id = {task.task_id: task for task in session.tasks}
+    session_task_by_id = {task.task_id: task for task in session.visible_tasks}
     for row in pending_rows:
         task = session_task_by_id[row["problem_id"]]
         version = next(
@@ -717,7 +729,7 @@ def _user_prompt(
         {
             **asdict(session.budget),
             **session_computer_state(memory, session.budget.turns_used, config.computer_capacity),
-            "blank_tasks": [task.task_id for task in session.tasks if not task.versions],
+            "blank_tasks": [task.task_id for task in session.visible_tasks if not task.versions],
         },
         ensure_ascii=False,
     )
@@ -725,6 +737,7 @@ def _user_prompt(
         memory, viewer=agent, enabled=config.modules.memory,
         current_task_id=active.task_id if active is not None else None,
         entries=policy.memory_entries if policy is not None else None,
+        session=session,
     )
     if not config.modules.memory and think_ledger:
         think_ledger = [
@@ -739,6 +752,17 @@ def _user_prompt(
         else ""
     )
     submission_rule = ""
+    if session.competition_flow is not None:
+        submission_rule = (
+            "COMPETITION FLOW (enforced for every baseline): "
+            + json.dumps(session.competition_flow.public_state(), ensure_ascii=False)
+            + "\nUse only the phase-specific hand-in actions; generic submit and automatic "
+            "deadline collection are disabled. Guts: work on current-set drafts, then submit_set "
+            "and collect_next_set. Science Bowl: buzz, then the recognized contestant alone "
+            "uses answer_tossup; only a correct tossup releases a bonus. The captain uses "
+            "answer_bonus after permitted team consultation. No shared work, messages, review "
+            "or memory sharing during tossups. Empty spoken answers explicitly pass.\n\n"
+        )
     if _is_answer_sheet_contest(manifest):
         if config.final_review_required:
             submission_rule = (
@@ -844,9 +868,13 @@ def _user_prompt(
         f"{manifest.metadata.get('competition_description') or 'No additional format description.'}\n"
         f"TASK STATUS {status}\n"
         f"BUDGET {budget}\n\n"
+        + ("DEADLINE POLICY: Only explicit competition hand-ins count. Pending drafts "
+           "and unspoken answers remain unsubmitted when the session ends.\n\n"
+           if session.competition_flow is not None else
         "DEADLINE POLICY: When the session ends, the environment automatically "
         "hands in pending non-programming drafts for both team variants. Missing "
-        "answers remain blank. You may use your last action to improve a draft.\n\n"
+        "answers remain blank. You may use your last action to improve a draft.\n\n")
+        +
         f"{personal_block}"
         f"{think_block}"
         f"{submission_rule}"

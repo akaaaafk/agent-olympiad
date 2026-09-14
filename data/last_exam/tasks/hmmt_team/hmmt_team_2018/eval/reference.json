@@ -1,0 +1,43 @@
+{
+  "visibility": "hidden_until_grade",
+  "gold_pointer": "data/benchmarks/hmmt_team/benchmark.json#hmmt_team_2018.gold_label",
+  "has_gold_answer": false,
+  "evaluator_id": "rubric_llm_v1",
+  "evaluator_status": "ready_with_limitations",
+  "solution_file": "data/raw/hmmt/2018/hmmt_team_2018_solutions.pdf",
+  "evaluation": {
+    "evaluator_id": "rubric_llm_v1",
+    "status": "ready_with_limitations",
+    "rubric_path": "data/rubrics/hmmt_team/2018_official_proofs_v1.json",
+    "deliverable": "numbered_proof_packet",
+    "limitations": [
+      "Proof grading uses an LLM and benchmark-defined partial credit, not deterministic answer matching or a recovered official partial-credit marking scheme. No live LLM grading accuracy was validated.",
+      "Official PDFs are authoritative. Extracted text may flatten mathematical notation or omit diagrams. The current text-only judge does not attach official solution PDFs; ambiguous formulas or diagram-dependent arguments require PDF-aware or manual review.",
+      "The current text judge clips submission text at 16000 characters. Longer proof submissions require a compatible PDF-aware or manual evaluation path.",
+      "Official timing, proctoring, hand-in procedures and human grading are not reproduced. Printed raw marks are not sweepstakes-normalized scores."
+    ],
+    "scorecard_path": "data/rubrics/task_scorecards/hmmt_team.json",
+    "scorecard_key": "hmmt_team_2018",
+    "judge_assets": [
+      "data/raw/hmmt/2018/hmmt_team_2018_solutions.pdf",
+      "data/rubrics/hmmt_team/2018_official_proofs_v1.json"
+    ],
+    "score_basis": "Printed official per-problem raw marks, summed without normalization. Proof partial credit is benchmark-defined, not official deterministic scoring.",
+    "official_problem_points": {
+      "1": 20,
+      "2": 25,
+      "3": 30,
+      "4": 30,
+      "5": 30,
+      "6": 35,
+      "7": 50,
+      "8": 60,
+      "9": 60,
+      "10": 60
+    },
+    "reference_delivery": "Full extracted per-problem references embedded in rubric criterion descriptions, outside the separate 12000-character reference-text cap.",
+    "source_verification_plan": "data/rubrics/hmmt_team/official_reference_plan_20260912.json"
+  },
+  "rubric_path": "data/rubrics/hmmt_team/2018_official_proofs_v1.json",
+  "deliverable": "numbered_proof_packet"
+}

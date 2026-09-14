@@ -3,8 +3,18 @@
   "gold_pointer": "data/benchmarks/mystery_hunt/benchmark.json#mystery_hunt_00082.gold_label",
   "has_gold_answer": true,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+    "short_answer_source": "data/rubrics/mystery_hunt_short_answers.json",
+    "deliverable": "puzzle_answer",
+    "limitations": "Static HTML/media packet recovered; legacy answer targets, historical rules and end-to-end evaluator behavior are not recertified. Flight itineraries refer to January 2000; current schedules are not a substitute for historical information.",
+    "scorecard_path": "data/rubrics/task_scorecards/mystery_hunt.json",
+    "scorecard_key": "mystery_hunt_00082"
+  },
+  "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+  "deliverable": "puzzle_answer"
 }

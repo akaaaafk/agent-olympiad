@@ -1,5 +1,3 @@
-# 2019-IHBB-Asian-Championships-International-History-Bowl-Round-4
-
 [Q1] This person created a polar area diagram divided into months, known as the “Rose” diagram. The run--down facilities at Selimiye prompted this person to work with Isambard Brunel to create Renkioi, a facility that lessened mortality rates by 90%. At this person’s request, Scutari hospital was investigated by the Sanitary Commission. This person’s treatment of wounded soldiers led her to be known as the “Lady with the Lamp.” For ten points, name this nurse active in the Crimean War.
 
 [Q2] After forming the “Unholy Alliance” with Francis I, this man sent the corsair Hayreddin Barbarossa to patrol European waters. This man worked with Ebussuud Effendi in order to reconcile the Kanun code with Sha’ria, earning the title Lawgiver. For ten points, identify this longest reigning Ottoman sultan who brought the empire to its territorial height.

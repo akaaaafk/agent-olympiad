@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2006
-
 # Odyssey of the Mind — 2006 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Geometry StructureDivisions I, II, III & IVThe team’s problem is to design and build a structure of balsa wood and glue. The team will build geometric shapes into the structure’s design and attach colored paper to the shapes. The type and number of required shapes varies according to division. The team will test the structure for its ability to balance and support as much weight as possible. The team’s stage set will include some type of replica of the structure.Cost limit: $125 USD.
 5. The Jungle BlokeDivisions I, II, III & IVTeams will create and present a performance about a “bloke,” a person who has the ability to talk with and understand animals from a jungle. Part or all of the performance will take place in a jungle selected from a list. The animals will tell the Bloke about a problem that exists there and get the Bloke to help. The animals will also help the Bloke in some way. The Bloke will convince someone else that he has the ability to talk with the animals. The presentation will include an original song and dance.Cost limit: $125 USD.Sponsored by NASA.
 6. Space TrekGrades K-2For this non-competitive problem, the team will create and present an original performance about traveling through outer space. On its trip, the team will overcome an obstacle or difficulty, encounter another space traveler, and discover an unknown planet. The team will name the planet and retrieve two samples using a team-created device.Cost limit: $50 USD.
+

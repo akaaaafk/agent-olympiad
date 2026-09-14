@@ -1,5 +1,3 @@
-# Flipping Container
-
 Hide 
  Flipping Container 
 

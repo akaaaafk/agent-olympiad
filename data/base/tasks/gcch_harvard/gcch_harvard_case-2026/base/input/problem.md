@@ -1,5 +1,3 @@
-# case-2026
-
 H A R V A R D
 T h e  c o m p e t i t i o n  i s  b r o u g h t  t o  y o u  b y  t h e  I F S A  N e t w o r k
 2 0 2 6  C A S E

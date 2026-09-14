@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1240, user-scalable=yes"></meta>
+  
+  <link rel="icon" href="../../static/hunt/images/icon32.png" type="image/x-icon" />
+  <title>Thinking Caps &mdash; Dreamtime &mdash; MIT Mystery Hunt 2016</title>
+  <link rel="stylesheet" href="../../static/stylesheets/puzzle.css" />
+  <link rel="stylesheet" href="../../static/spoilr/css/extra.css" />
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  
+
+<link rel="stylesheet" href="../../static/round/dreamtime/stylesheets/puzzle.css" />
+
+<link rel="stylesheet" href="puzzle.css" />
+
+
+  <style>
+  .navtooltip.hover {
+    display: block;
+  }
+  .navtooltip {
+    display: none;
+    position: absolute;
+    background-color: rgba(20,20,20, 1);
+    border: 1px solid #888;
+    padding: 10px 10px;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 7px black;
+    width: 13em;
+    margin: 10px 10px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body class="puzzle-page">
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation" id="nav">
+  <div class="container">
+    <div class="navbar-header">
+      <!-- mobile toggle -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-left">
+        <li><a class="navbar-link visible-xs" href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b class="caret"></b></a>
+          <ul class="dropdown-menu inverse-dropdown">
+            <li><a href="../../toc.html">All Puzzles</a></li>
+            <li><a href="../../faq.html">FAQ</a></li>
+          </ul>
+        </li>
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        
+        
+        
+        <li class="dropdown">
+
+          
+            
+            <!--<a href="../../submit/puzzle/thinking_caps/">Call in Answer</a>-->
+            <a href="solution/">Solution</a>
+            
+          
+
+        </li>
+      </ul>
+
+      
+        
+          <a class="navbar-brand logo" href="../../"></a>
+        
+      
+    </div><!-- /.navbar-collapse -->
+  </div>
+</nav>
+
+  
+
+<div class="back">
+  <div class="main">
+    <a class="btn back-to-round" href="../../round/dreamtime"><span class="glyphicon glyphicon-menu-left"></span></a>
+    
+    <img id="bg-desat" src="../../static/round/dreamtime/images/bg-desat.jpg"/>
+    
+  </div>
+  <div class="puzzle">
+    <div class="header">
+      
+      <h2>Thinking Caps</h2>
+      
+    </div>
+    <div class="content">
+      <p><i>When poor Thomas sang the scholastic blues, it led to quite an argument.</i></p>
+<br>
+<table border=0 cellspacing=0 cellpadding=0 width=421 style="margin-left:12">
+ <tr height=20>
+  <td width=127 nowrap>
+   <p>_ _ ? _</p>
+  </td>
+  <td width=294 nowrap>
+   <p>A universalist snoozing</p>
+  </td>
+ </tr height=20>
+ <tr>
+  <td width=127 nowrap>
+   <p>? _ _ _ _</p>
+  </td>
+  <td width=294 nowrap>
+   <p>A teleologic surface</p>
+  </td>
+ </tr>
+ <tr height=20>
+  <td width=127 nowrap>
+   <p>_ _ _ ? _</p>
+  </td>
+  <td width=294 nowrap>
+   <p>Monopsychist states</p>
+  </td>
+ </tr>
+ <tr height=20>
+  <td width=127 nowrap>
+   <p>? _ _ _</p>
+  </td>
+  <td width=294 nowrap>
+   <p>A grammarian Adriatic city</p>
+  </td>
+ </tr>
+ <tr height=20>
+  <td width=127 nowrap>
+   <p>_ _ _ ?</p>
+  </td>
+  <td width=294 nowrap>
+   <p>A scholastic matter</p>
+  </td>
+ </tr>
+ <tr height=20>
+  <td width=127 nowrap>
+   <p>_ _ _ _ _ ? _</p>
+  </td>
+  <td width=294 nowrap>
+   <p>An idealist feast</p>
+  </td>
+ </tr>
+ <tr height=20>
+  <td width=127 nowrap>
+   <p>_ _ ?</p>
+  </td>
+  <td width=294 nowrap>
+   <p>A nominalist breadstuff</p>
+  </td>
+ </tr>
+ <tr height=20>
+  <td width=127 nowrap>
+   <p>? _ _</p>
+  </td>
+  <td width=294 nowrap>
+   <p>A reformational ass</p>
+  </td>
+ </tr>
+ <tr height=20>
+  <td width=127 nowrap>
+   <p>? _ _ _</p>
+  </td>
+  <td width=294 nowrap>
+   <p>An evidentialist line</p>
+  </td>
+ </tr>
+ <tr height=20>
+  <td width=127 nowrap>
+   <p>_ _ _ ?</p>
+  </td>
+  <td width=294 nowrap>
+   <p>Humanist time periods</p>
+  </td>
+ </tr>
+ <tr height=20>
+  <td width=127 nowrap>
+   <p>? _ _ _</p>
+  </td>
+  <td width=294 nowrap>
+   <p>Realist tools</p>
+  </td>
+ </tr>
+ <tr height=20>
+  <td width=127 nowrap>
+   <p>_ _ _ _ ? _</p>
+  </td>
+  <td width=294 nowrap>
+   <p>An epicurean death eater</p>
+  </td>
+ </tr>
+ <tr height=20>
+  <td width=127 nowrap>
+   <p>_ _ _ ? _</p>
+  </td>
+  <td width=294 nowrap>
+   <p>Apophatic wounds</p>
+  </td>
+ </tr>
+ <tr height=20>
+  <td width=127 nowrap>
+   <p>_ ? _</p>
+  </td>
+  <td width=294 nowrap>
+   <p>A rationalist resort</p>
+  </td>
+ </tr>
+ <tr height=20>
+  <td width=127 nowrap>
+   <p>_ _ ?</p>
+  </td>
+  <td width=294 nowrap>
+   <p>A pyrrhonist weight</p>
+  </td>
+ </tr>
+ <tr height=20>
+  <td width=127 nowrap>
+   <p>_ _ ? _</p>
+  </td>
+  <td width=294 nowrap>
+   <p>A deist rodent</p>
+  </td>
+ </tr>
+ <tr height=20>
+  <td width=127 nowrap>
+   <p>_ ? _ _</p>
+  </td>
+  <td width=294 nowrap>
+   <p>A feminist drift</p>
+  </td>
+ </tr>
+</table>
+
+    </div>
+  </div>
+</div>
+
+
+
+  <script src="../../static/bootstrap/javascript/bootstrap.js"></script>
+  <!--<script src="../..//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>-->
+  <script>
+    $(document).ready(function(){
+
+      $.getJSON('../../sheep.json')
+        .done(function(data) {
+          $('span.current-sheep').html(data.sheep);
+          $('span.next-update').html(data.update);
+        });
+
+      $("#nextupdate").hover(function(){
+        $('#navtooltip').addClass('hover');
+      }, function(){
+        $('#navtooltip').removeClass('hover');
+      });
+    });
+  </script>
+  
+
+
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

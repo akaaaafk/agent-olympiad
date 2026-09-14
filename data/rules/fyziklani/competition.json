@@ -26,7 +26,8 @@
   },
   "allowed_tools": [
     "query_rules",
-    "use_calculator"
+    "use_calculator",
+    "check_physics_answer_units"
   ],
   "resources": {
     "internet": "allowed",

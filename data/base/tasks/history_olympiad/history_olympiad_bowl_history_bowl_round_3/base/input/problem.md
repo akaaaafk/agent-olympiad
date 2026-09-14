@@ -1,5 +1,3 @@
-# History-Bowl-Round-3
-
 [Q1] Court painter Daniel Maclise depicted this monarch meeting a noblewoman At Hampton Court in one painting. This monarch appears on the bottom left approaching the royal party of Francis I in the landscape painting Field of the Cloth of Gold. This man employed foreigner Hans Holbein the Younger, who depicted this king in a portrait situated next to one of Jane Seymour and this man's father Henry VII [[the Seventh]]. For ten points, name this English king who is depicted in several portraits with his six wives.
 
 [Q2] In this nation, the "No to Capitulation!" protes ts occurred in response to its government's implementation of the Steinmeier Formula. A man who played the president of this nation on the TV program Servant of the People later formed a party with that same name and won the 2019 presidential elections. Th at head of state openly criticized Joe Biden and NATO for not taking the late 2021 Russian build -up on this state's border seriously. Volodymyr Zelensky leads, for ten points, what nation on the Crimea?

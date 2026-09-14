@@ -1,5 +1,3 @@
-# 2024-regional-case-set
-
 2024 Regional Case Set
 Intercollegiate Ethics Bowl
 FALL 2024

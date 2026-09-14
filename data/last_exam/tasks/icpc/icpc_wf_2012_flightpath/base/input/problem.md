@@ -1,5 +1,3 @@
-# Shortest Flight Path
-
 Hide 
  Shortest Flight Path 
 

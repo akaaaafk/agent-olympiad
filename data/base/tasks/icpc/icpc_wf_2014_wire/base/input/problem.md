@@ -1,5 +1,3 @@
-# Wire Crossing
-
 Hide 
  Wire Crossing 
 

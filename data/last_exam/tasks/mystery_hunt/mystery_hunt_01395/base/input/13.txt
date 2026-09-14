@@ -1,0 +1,111 @@
+> new game
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> south
+> eat dot
+> eat dot
+> eat dot
+> west
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> south
+> eat dot
+> eat dot
+> eat dot
+> east
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> north
+> eat dot
+> eat dot
+> eat dot
+> west
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> north
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> south
+> west
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> north
+> eat dot
+> eat dot
+> eat dot
+> west
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> south
+> eat dot
+> eat dot
+> eat ??????????? (4)
+> north
+> eat ghost
+> eat ghost
+> eat dot
+> east
+> south
+> east
+> eat ghost
+> north
+> eat dot
+> eat dot
+> eat dot
+> east
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> eat dot
+> north
+> eat dot
+> eat dot
+> eat ghost

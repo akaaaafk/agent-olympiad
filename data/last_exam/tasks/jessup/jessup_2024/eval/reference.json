@@ -4,7 +4,16 @@
   "has_gold_answer": false,
   "evaluator_id": "rubric_llm_v1",
   "evaluator_status": "ready",
-  "rubric_path": "data/rubrics/moot_memorial_100_v1.json",
-  "deliverable": "written_memorial",
-  "solution_file": null
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": "rubric_llm_v1",
+    "status": "ready",
+    "rubric_path": "data/rubrics/jessup_memorial_100_v1.json",
+    "deliverable": "written_memorial",
+    "limitations": "Evaluates the written memorial only; oral advocacy is not scored.",
+    "scorecard_path": "data/rubrics/task_scorecards/jessup.json",
+    "scorecard_key": "jessup_2024"
+  },
+  "rubric_path": "data/rubrics/jessup_memorial_100_v1.json",
+  "deliverable": "written_memorial"
 }

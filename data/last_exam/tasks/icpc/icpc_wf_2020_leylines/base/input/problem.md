@@ -1,5 +1,3 @@
-# Ley Lines
-
 Hide 
  Ley Lines 
 

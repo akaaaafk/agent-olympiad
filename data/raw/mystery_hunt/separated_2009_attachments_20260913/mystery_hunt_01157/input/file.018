@@ -1,0 +1,21 @@
+(define ccc call-with-current-continuation)
+(define str1 "talcum horse jig")
+(define str2 "GHDPBOCFCMGKAJHILNOBJFGMDLILEJJHKAL")
+
+(display
+ (list->string
+  (ccc
+   (lambda (x) 
+     (let* ((z (map (lambda (c) 
+		      (reverse (cons c (ccc (lambda (k) (list k 0))))))
+                    (string->list str1)))
+            (i (apply max (map car z)))
+            (d (cddr (assoc i z)))
+            (g (append (string->list (if (= i 35) (x d) "")) d))
+            (k (cadr (list-ref (map (lambda (i) (list-ref z i))
+                                    (map (lambda (c) (- (char->integer c) 65)) 
+                                         (string->list str2)))
+                               i))))
+       (k `(,@g ,k ,(+ i 1))))))))
+(newline)
+

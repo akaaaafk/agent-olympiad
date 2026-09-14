@@ -1,0 +1,994 @@
+{
+  "operation": "source_verified_eoes_iiot_prompt_repair",
+  "backup": "data/excluded/integrity_repair_20260913T191608Z",
+  "changes": [
+    {
+      "task_id": "eoes/eoes_EOES2025_Task1_TaskSheet-final",
+      "source_file": "data/raw/eoes/eoes/2025/EOES2025_Task1_TaskSheet-final.pdf",
+      "source_sha256": "32d9fb7a2497b4e4ea8a7383b7cde6bfa5dd3e82be3405f8d113a2c1263689dc",
+      "reviewed_pages": [
+        10,
+        11,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "controls_before": 166,
+      "edits": [
+        {
+          "before": "\u0001\u0002 \u0003 \n\u0005 (\u0007\b ) + 5\u0001\u0005(\u0007\b ) +  6\r\u000e(\u0007\b )  →  3\u0001\u0011  (\u0007\b ) +  3\r\u0011\u0002 (\u0012)",
+          "after": "IO_3^−(aq) + 5I^−(aq) + 6H^+(aq) → 3I_2(aq) + 3H_2O(l)"
+        },
+        {
+          "before": "\u0001\u0002 \u0003 \n\u0005 \u0006\u0007\b\t  \n 5\u0001 \u0005\u0006\u0007\b\t \n  6\r \u000e\u0006\u0007\b\t  →  3\u0001 \u0011  \u0006\u0007\b\t \n  3\r\u0011\u0002 \u0006\u0012\t",
+          "after": "IO_3^−(aq) + 5I^−(aq) + 6H^+(aq) → 3I_2(aq) + 3H_2O(l)"
+        },
+        {
+          "before": "\u0001\u0002 \u0003 \n\u0005 \u0006\u0007\b\t  \n 5\u0001 \u0005\u0006\u0007\b\t \n  6\r \u000e\u0006\u0007\b\t  →  3\u0001 \u0011  \u0006\u0007\b\t \n  3\r\u0011\u0002 \u0006\u0012\t",
+          "after": "IO_3^−(aq) + 5I^−(aq) + 6H^+(aq) → 3I_2(aq) + 3H_2O(l)"
+        },
+        {
+          "before": "2\u0014\u0015 \u0003\u000e (\u0007\b ) + 2\u0001\u0005 (\u0007\b ) →  2\u0014\u0015 \u0011\u000e (\u0007\b ) + \u0001\u0011 (\u0007\b )",
+          "after": "2Fe^{3+}(aq) + 2I^−(aq) → 2Fe^{2+}(aq) + I_2(aq)"
+        },
+        {
+          "before": "\u0001\u0011 \u0006\u0007\b \t \n  2\u0016\u0011\u0002\u0003\n\u0011\u0005 \u0006\u0007\b \t →  2\u0001 \u0005 \u0006\u0007\b \t \n  \u0016\u0017\u0002\u0018\n\u0011\u0005 \u0006\u0007\b\t",
+          "after": "I_2(aq) + 2S_2O_3^{2−}(aq) → 2I^−(aq) + S_4O_6^{2−}(aq)"
+        },
+        {
+          "before": "form free iodine. \n \n",
+          "after": "form free iodine.\nI^−(aq) + 3ClO^−(aq) → IO_3^−(aq) + 3Cl^−(aq)\n\n"
+        },
+        {
+          "before": "\u0019\n\u001a",
+          "after": "n_1"
+        },
+        {
+          "before": "\u0019\n\u001a",
+          "after": "n_1"
+        },
+        {
+          "before": "\u0019\u001a",
+          "after": "n_1"
+        },
+        {
+          "before": "\u0019\u0011",
+          "after": "n_2"
+        },
+        {
+          "before": "\u0019\u0011",
+          "after": "n_2"
+        },
+        {
+          "before": "\u001b\u001a",
+          "after": "α_1"
+        },
+        {
+          "before": "\u001b\u0011",
+          "after": "α_2"
+        },
+        {
+          "before": "\u001b*",
+          "after": "α_i"
+        },
+        {
+          "before": "\u0019air",
+          "after": "n_air"
+        },
+        {
+          "before": ", \u001f ,\u0006-\t",
+          "after": "Y = Y(X)"
+        },
+        {
+          "before": ", \u001f ,\u0006-\t",
+          "after": "Y = Y(X)"
+        },
+        {
+          "before": ", \u001f ,\u0006-\t",
+          "after": "Y = Y(X)"
+        },
+        {
+          "before": "\u0006-*, ,*)",
+          "after": "(X_i, Y_i)"
+        },
+        {
+          "before": "\u0006-*, ,*)",
+          "after": "(X_i, Y_i)"
+        },
+        {
+          "before": "\u0019",
+          "after": "n"
+        },
+        {
+          "before": "\u0019",
+          "after": "n"
+        },
+        {
+          "before": "\u0019",
+          "after": "n"
+        },
+        {
+          "before": "\u0019",
+          "after": "n"
+        },
+        {
+          "before": "\u0019",
+          "after": "n"
+        },
+        {
+          "before": "\u0019",
+          "after": "n"
+        },
+        {
+          "before": "\u001b",
+          "after": "α"
+        },
+        {
+          "before": "\u001b",
+          "after": "α"
+        },
+        {
+          "before": "\u001b",
+          "after": "α"
+        },
+        {
+          "before": "\u001b",
+          "after": "α"
+        },
+        {
+          "before": "\u001b",
+          "after": "α"
+        },
+        {
+          "before": "\u001b",
+          "after": "α"
+        },
+        {
+          "before": "\u001b",
+          "after": "α"
+        },
+        {
+          "before": "\u001b",
+          "after": "α"
+        },
+        {
+          "before": "\u001b",
+          "after": "α"
+        },
+        {
+          "before": "\u001b",
+          "after": "α"
+        },
+        {
+          "before": "\u001b",
+          "after": "α"
+        },
+        {
+          "before": "\u001b",
+          "after": "α"
+        },
+        {
+          "before": "\u001b",
+          "after": "α"
+        },
+        {
+          "before": "\u001f",
+          "after": "="
+        },
+        {
+          "before": "\u001f",
+          "after": "="
+        },
+        {
+          "before": "\u0006",
+          "after": "("
+        },
+        {
+          "before": "\u0006",
+          "after": "("
+        },
+        {
+          "before": "\u0006",
+          "after": "("
+        },
+        {
+          "before": "\t",
+          "after": ")"
+        },
+        {
+          "before": "\t",
+          "after": ")"
+        },
+        {
+          "before": "\t",
+          "after": ")"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "$",
+          "after": "d"
+        },
+        {
+          "before": "&",
+          "after": "y"
+        },
+        {
+          "before": "&",
+          "after": "y"
+        },
+        {
+          "before": "&",
+          "after": "y"
+        },
+        {
+          "before": "&",
+          "after": "y"
+        },
+        {
+          "before": "&",
+          "after": "y"
+        },
+        {
+          "before": "&",
+          "after": "y"
+        },
+        {
+          "before": "&",
+          "after": "y"
+        },
+        {
+          "before": "&",
+          "after": "y"
+        },
+        {
+          "before": "&",
+          "after": "y"
+        },
+        {
+          "before": "&",
+          "after": "y"
+        },
+        {
+          "before": "%",
+          "after": "x"
+        },
+        {
+          "before": "%",
+          "after": "x"
+        },
+        {
+          "before": "%",
+          "after": "x"
+        },
+        {
+          "before": "%",
+          "after": "x"
+        },
+        {
+          "before": "%",
+          "after": "x"
+        },
+        {
+          "before": "%",
+          "after": "x"
+        },
+        {
+          "before": "%",
+          "after": "x"
+        },
+        {
+          "before": "%",
+          "after": "x"
+        },
+        {
+          "before": "(%, y)",
+          "after": "(x, y)"
+        },
+        {
+          "before": "(%, y)",
+          "after": "(x, y)"
+        },
+        {
+          "before": "(the index \n ) indicates",
+          "after": "(the index i indicates"
+        },
+        {
+          "before": "and + is outer width",
+          "after": "and w is outer width"
+        },
+        {
+          "before": "Figure 3.1. The propagation",
+          "after": "Snell's law: n_1 sin(α_1) = n_2 sin(α_2).\nFigure 3.1. The propagation"
+        },
+        {
+          "before": " (3. 1) ",
+          "after": "d(α; n) = w sin(α) / sqrt(n^2 − sin^2(α))  (3.1) "
+        },
+        {
+          "before": "\n(3.2)  ",
+          "after": "\nsin(α_i) sqrt(w^2 + d_i^2) = n d_i  (3.2)  "
+        },
+        {
+          "before": "\n(3.3)  ",
+          "after": "\nX_i = d_i; Y_i = sin(α_i) sqrt(w^2 + d_i^2)  (3.3)  "
+        },
+        {
+          "before": "\n (3.4)  ",
+          "after": "\nY_i = n X_i  (3.4)  "
+        },
+        {
+          "before": "",
+          "after": "☒"
+        },
+        {
+          "before": "n_1and",
+          "after": "n_1 and"
+        },
+        {
+          "before": "n_1and",
+          "after": "n_1 and"
+        }
+      ]
+    },
+    {
+      "task_id": "eoes/eoes_EOES2025_Task2_TaskSheet_final",
+      "source_file": "data/raw/eoes/eoes/2025/EOES2025_Task2_TaskSheet_final.pdf",
+      "source_sha256": "12241b5e4d903f50c90dbd092ca88f330bb0d6fe94872686acdd77bf416b9fce",
+      "reviewed_pages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "controls_before": 98,
+      "edits": [
+        {
+          "before": "\u0001CV = \u0005\u0006\u0007 \b\tBL \n\tCV \n\f",
+          "after": ""
+        },
+        {
+          "before": "[CV ] = \u0001CV \n\u0014 ∙ \u0005 =\n\u0005\u0006\u0007 \u0016\tBL \n\tCV \n\u0017\n\u0014 ∙ \u0005",
+          "after": ""
+        },
+        {
+          "before": "\u0005\u0018 \u0019\n[CV ]\u001a\n[CV ]0\n\u001c = −\r′\u001a",
+          "after": ""
+        },
+        {
+          "before": "\u0005\u0018 \u0019[CV ]\u001a\n[CV ]0\n\u001c = \u0005\u0018 \n\u0001\u001a\n\u0014 ∙ \u0005\n\u00010\n\u0014 ∙ \u0005\n= \u0005\u0018 \b\u0001\u001a\n\u00010\n\f = \u0005\u0018 \u001d\u0001\u001a\u001e − \u0005\u0018 \u001d\u00010\u001e",
+          "after": ""
+        },
+        {
+          "before": "\u0005\u0018 \u001d\u0001\u001a\u001e = \u0005\u0018 \u001d\u00010\u001e − \r′\u001a",
+          "after": ""
+        },
+        {
+          "before": "\r′ = \r[OH −]",
+          "after": ""
+        },
+        {
+          "before": "  (2)",
+          "after": "A_CV = log(U_BL / U_CV)  (2)"
+        },
+        {
+          "before": "    (3)",
+          "after": "[CV] = A_CV / (ε · l) = log(U_BL / U_CV) / (ε · l)  (3)"
+        },
+        {
+          "before": "    (4)",
+          "after": "ln([CV]_t / [CV]_0) = −k′t  (4)"
+        },
+        {
+          "before": "     (5)",
+          "after": "k′ = k[OH^−]  (5)"
+        },
+        {
+          "before": "  (6)",
+          "after": "ln([CV]_t / [CV]_0) = ln((A_t / (ε · l)) / (A_0 / (ε · l))) = ln(A_t / A_0) = ln(A_t) − ln(A_0)  (6)"
+        },
+        {
+          "before": "    (7)",
+          "after": "ln(A_t) = ln(A_0) − k′t  (7)"
+        },
+        {
+          "before": "\t\u001f !!!!!",
+          "after": "mean(U_BL)"
+        },
+        {
+          "before": "\t\u001f !!!!!",
+          "after": "mean(U_BL)"
+        },
+        {
+          "before": "\"# \u001d$%\u001e",
+          "after": "ln(A_t)"
+        },
+        {
+          "before": "\u0005\u0018 \u001d\u0001&\u001e",
+          "after": "ln(A_t)"
+        },
+        {
+          "before": "solu\u001eon",
+          "after": "solution"
+        },
+        {
+          "before": "omiJed",
+          "after": "omitted"
+        },
+        {
+          "before": "equaKons",
+          "after": "equations"
+        },
+        {
+          "before": "reacKon",
+          "after": "reaction"
+        },
+        {
+          "before": "PlasKc",
+          "after": "Plastic"
+        },
+        {
+          "before": "PlasKc",
+          "after": "Plastic"
+        },
+        {
+          "before": "PlasKc",
+          "after": "Plastic"
+        },
+        {
+          "before": "PlasKc",
+          "after": "Plastic"
+        },
+        {
+          "before": "shaU",
+          "after": "shaft"
+        },
+        {
+          "before": "mulKple",
+          "after": "multiple"
+        },
+        {
+          "before": "calcula.ons",
+          "after": "calculations"
+        },
+        {
+          "before": "calcula.ons",
+          "after": "calculations"
+        },
+        {
+          "before": "calcula.ons",
+          "after": "calculations"
+        },
+        {
+          "before": "calcula.ons",
+          "after": "calculations"
+        },
+        {
+          "before": "calcula.ons",
+          "after": "calculations"
+        },
+        {
+          "before": "calcula.on",
+          "after": "calculation"
+        },
+        {
+          "before": "calcula.on",
+          "after": "calculation"
+        },
+        {
+          "before": "reac.on",
+          "after": "reaction"
+        },
+        {
+          "before": "s.cker",
+          "after": "sticker"
+        },
+        {
+          "before": "s.cker",
+          "after": "sticker"
+        },
+        {
+          "before": "(\u001d\u001a\u001e = (\u001d0\u001e *+,&",
+          "after": "θ(t) = θ(0) exp(−γt)"
+        },
+        {
+          "before": ". = 2230\n\u0007",
+          "after": "T = 2π sqrt(R/g)"
+        },
+        {
+          "before": "ln (\u001d\u001a\u001e = ln (\u001d0\u001e − - \u001a",
+          "after": "ln θ(t) = ln θ(0) − γt"
+        },
+        {
+          "before": "- = 7\n \n8 ,",
+          "after": "γ = C L/m,"
+        },
+        {
+          "before": "/9\n             \n:⎯⎯< /9\n6=\n69\n= /9\n6=\n6= + 69,@A@BC \n= /CBD ,9",
+          "after": "L_i → L_i m_0/m_i = L_i m_0/(m_0 + m_{i,paper}) = L_{ren,i}"
+        },
+        {
+          "before": "- = \b 7\n6=\n\f \u0019/9\n6=\n6= + 69,@A@BC \n\u001c = \b 7\n6=\n\f /CBD ,9",
+          "after": "γ = (C/m_0)(L_i m_0/(m_0 + m_{i,paper})) = (C/m_0)L_{ren,i}"
+        },
+        {
+          "before": "displacement ( decreases",
+          "after": "displacement θ decreases"
+        },
+        {
+          "before": "displace ment ( without",
+          "after": "displacement θ without"
+        },
+        {
+          "before": "((0)",
+          "after": "θ(0)"
+        },
+        {
+          "before": "((0)",
+          "after": "θ(0)"
+        },
+        {
+          "before": "time \u001a = 0",
+          "after": "time t = 0"
+        },
+        {
+          "before": "( \u0004 0",
+          "after": "θ = 0"
+        },
+        {
+          "before": "angle \n( comment",
+          "after": "angle θ comment"
+        },
+        {
+          "before": "angle ( ln  ()",
+          "after": "angle (ln θ)"
+        },
+        {
+          "before": "Period . is",
+          "after": "Period T is"
+        },
+        {
+          "before": "period . of",
+          "after": "period T of"
+        },
+        {
+          "before": "period . of",
+          "after": "period T of"
+        },
+        {
+          "before": "p eriod .,",
+          "after": "period T,"
+        },
+        {
+          "before": "length 0,",
+          "after": "length R,"
+        },
+        {
+          "before": "where 0 is",
+          "after": "where R is"
+        },
+        {
+          "before": "\u0007",
+          "after": "g"
+        },
+        {
+          "before": "\u0007",
+          "after": "g"
+        },
+        {
+          "before": "and - is",
+          "after": "and γ is"
+        },
+        {
+          "before": "constant -).",
+          "after": "constant γ)."
+        },
+        {
+          "before": "constants - for",
+          "after": "constants γ for"
+        },
+        {
+          "before": "factor - to",
+          "after": "factor γ to"
+        },
+        {
+          "before": "constant - is",
+          "after": "constant γ is"
+        },
+        {
+          "before": "of - as",
+          "after": "of γ as"
+        },
+        {
+          "before": "slope '–-'",
+          "after": "slope '−γ'"
+        },
+        {
+          "before": "mass 6 of",
+          "after": "mass m of"
+        },
+        {
+          "before": "mass 6 of",
+          "after": "mass m of"
+        },
+        {
+          "before": "on 6,",
+          "after": "on m,"
+        },
+        {
+          "before": "6\n0 is",
+          "after": "m_0 is"
+        },
+        {
+          "before": "where 7 is",
+          "after": "where C is"
+        },
+        {
+          "before": "constant 7 and",
+          "after": "constant C and"
+        },
+        {
+          "before": "/",
+          "after": "L"
+        },
+        {
+          "before": "/",
+          "after": "L"
+        },
+        {
+          "before": "/",
+          "after": "L"
+        },
+        {
+          "before": "/",
+          "after": "L"
+        },
+        {
+          "before": "/",
+          "after": "L"
+        },
+        {
+          "before": "/",
+          "after": "L"
+        },
+        {
+          "before": "/",
+          "after": "L"
+        },
+        {
+          "before": "/",
+          "after": "L"
+        },
+        {
+          "before": "/",
+          "after": "L"
+        },
+        {
+          "before": "/",
+          "after": "L"
+        },
+        {
+          "before": "/",
+          "after": "L"
+        },
+        {
+          "before": "/",
+          "after": "L"
+        },
+        {
+          "before": "/",
+          "after": "L"
+        },
+        {
+          "before": "m/s 2",
+          "after": "m/s^2"
+        },
+        {
+          "before": "L\nE",
+          "after": "L_i"
+        },
+        {
+          "before": "Lren, E",
+          "after": "L_{ren,i}"
+        },
+        {
+          "before": "L\nren, E",
+          "after": "L_{ren,i}"
+        }
+      ]
+    },
+    {
+      "task_id": "eoes/eoes_EUSO_I_2004_TaskB",
+      "source_file": "data/raw/eoes/euso/2004/EUSO_I_2004_TaskB.pdf",
+      "source_sha256": "939faec2296e85126b096a7812a9ff6b6198ca437069f42a26aba54870b982fe",
+      "reviewed_pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "controls_before": 8,
+      "edits": [
+        {
+          "before": "\u0014",
+          "after": "[PDF page 2]"
+        },
+        {
+          "before": "\u0015",
+          "after": "[PDF page 3]"
+        },
+        {
+          "before": "\u0016",
+          "after": "[PDF page 4]"
+        },
+        {
+          "before": "\u0017",
+          "after": "[PDF page 5]"
+        },
+        {
+          "before": "\u0018",
+          "after": "[PDF page 6]"
+        },
+        {
+          "before": "\u0019",
+          "after": "[PDF page 7]"
+        },
+        {
+          "before": "\u001a",
+          "after": "[PDF page 8]"
+        },
+        {
+          "before": "\u001b",
+          "after": "[PDF page 9]"
+        }
+      ]
+    },
+    {
+      "task_id": "eoes/eoes_TEST2 final version English",
+      "source_file": "data/raw/eoes/euso/2006/TEST2 final version English.pdf",
+      "source_sha256": "cd7d778f8b2351919f5f3f0f0e562d6e1963ed8c07dc3eb15f0e4b7afcae6680",
+      "reviewed_pages": [
+        5,
+        9,
+        13
+      ],
+      "controls_before": 8,
+      "edits": [
+        {
+          "before": "\u0001",
+          "after": "▪"
+        },
+        {
+          "before": "\u0001",
+          "after": "▪"
+        },
+        {
+          "before": "\u0001",
+          "after": "▪"
+        },
+        {
+          "before": "\u0001",
+          "after": "▪"
+        },
+        {
+          "before": "\u0001",
+          "after": "▪"
+        },
+        {
+          "before": "\u0002",
+          "after": "→"
+        },
+        {
+          "before": "\u0002",
+          "after": "→"
+        },
+        {
+          "before": "\u0002",
+          "after": "→"
+        }
+      ]
+    },
+    {
+      "task_id": "eoes/eoes_P1Tasks",
+      "source_file": "data/raw/eoes/euso/2011/P1Tasks.pdf",
+      "source_sha256": "4f246c302ebb82dce7b28d0b2598b70b48dcf08092a6dc6ade938c89468a4339",
+      "reviewed_pages": [
+        8
+      ],
+      "controls_before": 1,
+      "edits": [
+        {
+          "before": "24 \u0001h",
+          "after": "24 h [spacing glyph is unreadable in the original PDF]"
+        }
+      ]
+    },
+    {
+      "task_id": "eoes/eoes_additionalfileschallenge1",
+      "source_file": "data/raw/eoes/euso/2015/additionalfileschallenge1.pdf",
+      "source_sha256": "acb21b4406c039beeb56c7eaf0a486c79bedcab9ed75db6ee7c8ba934e0871ce",
+      "reviewed_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "controls_before": 471,
+      "edits": [
+        {
+          "before": "CHALLENGE 1   \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0004\u0018\u0018/d/KE\u0004>\u0003&/>\u001c TASK  A ",
+          "after": "Challenge 1 Task A [original header contains unreadable glyphs]"
+        },
+        {
+          "before": "Challenge 1 Task A \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0004\u0018\u0018/d/KE\u0004>\u0003&/>\u001c\u0003d\u0004^<\u0003\u0004  \u0003",
+          "after": "Challenge 1 Task A [original header contains unreadable glyphs]"
+        },
+        {
+          "before": "Challenge 1 Task A \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0004\u0018\u0018/d/KE\u0004>\u0003&/>\u001c\u0003d\u0004^<\u0003\u0004  \u0003",
+          "after": "Challenge 1 Task A [original header contains unreadable glyphs]"
+        },
+        {
+          "before": "Challenge 1 Task A \u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0004\u0018\u0018/d/KE\u0004>\u0003&/>\u001c\u0003d\u0004^<\u0003\u0004  \u0003",
+          "after": "Challenge 1 Task A [original header contains unreadable glyphs]"
+        }
+      ]
+    },
+    {
+      "task_id": "iiot/iiot_2021_05",
+      "source_file": "data/raw/iiot/2021/iiot_2021_problem_05.pdf",
+      "source_sha256": "9ce103da1da32f2da89ef16fc6c914be98ae1a79897d70f4eeb121255c7453da",
+      "reviewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "controls_before": 7,
+      "edits": [
+        {
+          "before": "0≤Ti≤109",
+          "after": "0≤Ti≤10^9"
+        },
+        {
+          "before": "III ((( OOO TTT +++ III ))) ;;;",
+          "after": "IIOT"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[five-book difficulty indicator; see original colors]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[five-book difficulty indicator; see original colors]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[five-book difficulty indicator; see original colors]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[five-book difficulty indicator; see original colors]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[five-book difficulty indicator; see original colors]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[five-book difficulty indicator; see original colors]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[five-book difficulty indicator; see original colors]"
+        },
+        {
+          "before": "Examples input.txt output.txt 5 2 3 10 4 1 3 5 -1 20 3 2 5 7 2 1 10 -1 1 3 10 1 3 1 7 0 7 5 9 14 Explanation ",
+          "after": "Examples\n\nSample 1 input:\n```text\n5 2\n3 10\n4 1\n3 5\n-1 20\n3 2\n```\nSample 1 output: `5`\n\nSample 2 input:\n```text\n7 2\n1 10\n-1 1\n3 10\n1 3\n1 7\n0 7\n5 9\n```\nSample 2 output: `14`\n\nExplanation "
+        },
+        {
+          "before": "0\u001a\u001a10 0 11 25 3\u001a\u001a20 0 42",
+          "after": "[First example diagram: root 3; edges 3→0, 3→4, 3→2, 4→1. Durations: task 0 = 10, task 1 = 1, task 2 = 5, task 3 = 20, task 4 = 2 hours. Tasks 0 and 3 are skipped, so their durations become 0.]"
+        },
+        {
+          "before": "0\u001a\u001a10 0 11 210 33 47 5\u00017 0 69",
+          "after": "[Second example diagram: root 1; edges 1→0, 1→3, 1→4, 0→5, 3→2, 5→6. Durations: task 0 = 10, task 1 = 1, task 2 = 10, task 3 = 3, task 4 = 7, task 5 = 7, task 6 = 9 hours. Tasks 0 and 5 are skipped, so their durations become 0.]"
+        }
+      ]
+    }
+  ],
+  "status": "completed",
+  "validation": {
+    "records": 7,
+    "control_characters_repaired": 759,
+    "content_files": 16,
+    "task_prompt_copies": 14,
+    "protected_files_unchanged": 582,
+    "original_sources_unchanged": true,
+    "answers_scores_readiness_unchanged": true
+  }
+}

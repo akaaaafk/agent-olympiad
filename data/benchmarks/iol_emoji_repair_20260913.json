@@ -1,0 +1,59 @@
+{
+  "operation": "iol_2017_emoji_input_and_partial_reference_repair",
+  "status": "completed_source_repair_partial_reference_and_score_sync",
+  "backup": "data/excluded/integrity_repair_20260913T180454Z",
+  "timestamp_utc": "20260913T180454Z",
+  "validation": {
+    "active_tracks": 43,
+    "active_records": 1720,
+    "active_iol_records": 18,
+    "no_years_excluded": true,
+    "repaired_years": [
+      2017
+    ],
+    "iol_status_counts": {
+      "not_ready": 9,
+      "ready": 8,
+      "ready_with_limitations": 1
+    },
+    "global_status_counts": {
+      "ready_with_limitations": 193,
+      "not_ready": 706,
+      "ready": 661,
+      "remote_judge_ready": 158,
+      "sample_tests_ready": 2
+    },
+    "official_label_matches": 93,
+    "matched_unique_emoji": 83,
+    "unmatched_emoji_descriptions": 4,
+    "public_original_page_images": 2,
+    "official_score_unknown": true,
+    "old_proxy_disabled": true,
+    "source_pages_visually_reviewed": 7,
+    "unchanged_iol_rows_and_scorecards": 17,
+    "other_tracks_unchanged": 42,
+    "protected_files_unchanged": 1165,
+    "archived_generated_files": 13,
+    "historical_results_modified": false,
+    "end_to_end_runtime_or_grading_validated": false
+  },
+  "new_task_file_hashes": {
+    "data/base/tasks/iol_team/iol_team_2017/base/input/collaboration.md": "560ab79343764338024bc8969456101a1b867fa3b1a25695fe31dbc719975ea5",
+    "data/base/tasks/iol_team/iol_team_2017/base/input/ground_rules.md": "5731fda6b153d380ed3e389bf08900d590ea0b552b865a4804488c108cde2b6f",
+    "data/base/tasks/iol_team/iol_team_2017/base/input/input_environment_spec.md": "c67d25cae07934f1f50e0208a69d174ab2c3ad1a66e34426eecee973b0f1b2f3",
+    "data/base/tasks/iol_team/iol_team_2017/base/input/iol-2017-team-prob.en.pdf": "fadec98495be3282049e806fb44eb652f3528585b35b41c1f8e265d46aac9c9c",
+    "data/base/tasks/iol_team/iol_team_2017/base/input/problem.md": "a04c76b8087a2a0d4e82107d3ac8778ff48c1abf9a67761c06a0b69913dd58e8",
+    "data/base/tasks/iol_team/iol_team_2017/base/input/task_sop.md": "8d416994e1d1d53963a47a8df2f97a1d51ba176b105ab556a01a4c793879b9df",
+    "data/base/tasks/iol_team/iol_team_2017/base/input/emoji_20260913/input/iol_2017_emoji_page_3.png": "d26f652048a5132ac5b3599a721f63c950466c3479073c4b2ab7485e39aa3908",
+    "data/base/tasks/iol_team/iol_team_2017/base/input/emoji_20260913/input/iol_2017_emoji_page_4.png": "1318d934d034aa65199bdd051c76145e7769ec9302ea62f887be723070e43a52",
+    "data/last_exam/tasks/iol_team/iol_team_2017/eval/reference.json": "707a58fab2be902b7de2b064741085dfe1e0261e1b136865d7a96a90ed5cf9f2",
+    "data/last_exam/tasks/iol_team/iol_team_2017/base/input/collaboration.md": "560ab79343764338024bc8969456101a1b867fa3b1a25695fe31dbc719975ea5",
+    "data/last_exam/tasks/iol_team/iol_team_2017/base/input/ground_rules.md": "5731fda6b153d380ed3e389bf08900d590ea0b552b865a4804488c108cde2b6f",
+    "data/last_exam/tasks/iol_team/iol_team_2017/base/input/input_environment_spec.md": "c67d25cae07934f1f50e0208a69d174ab2c3ad1a66e34426eecee973b0f1b2f3",
+    "data/last_exam/tasks/iol_team/iol_team_2017/base/input/iol-2017-team-prob.en.pdf": "fadec98495be3282049e806fb44eb652f3528585b35b41c1f8e265d46aac9c9c",
+    "data/last_exam/tasks/iol_team/iol_team_2017/base/input/problem.md": "a04c76b8087a2a0d4e82107d3ac8778ff48c1abf9a67761c06a0b69913dd58e8",
+    "data/last_exam/tasks/iol_team/iol_team_2017/base/input/task_sop.md": "8d416994e1d1d53963a47a8df2f97a1d51ba176b105ab556a01a4c793879b9df",
+    "data/last_exam/tasks/iol_team/iol_team_2017/base/input/emoji_20260913/input/iol_2017_emoji_page_3.png": "d26f652048a5132ac5b3599a721f63c950466c3479073c4b2ab7485e39aa3908",
+    "data/last_exam/tasks/iol_team/iol_team_2017/base/input/emoji_20260913/input/iol_2017_emoji_page_4.png": "1318d934d034aa65199bdd051c76145e7769ec9302ea62f887be723070e43a52"
+  }
+}

@@ -1,0 +1,3 @@
+# Competition rules
+
+IOAI historical team tasks. Apply the task_contract.json for the selected problem_id and year, together with that edition's original task PDF. In 2024, teams have four hours to produce a cover image, a music video and the required process documentation using the task's creative-tool permissions. In 2025, teams program Galbot for warehouse navigation and manipulation; the historical runtime and exact submission interface remain unresolved. A prose report does not substitute for the required media or robot program. Never import a different edition's tool restrictions, timing, scoring or submission format. Do not access judge-only solutions or claim unobserved execution.

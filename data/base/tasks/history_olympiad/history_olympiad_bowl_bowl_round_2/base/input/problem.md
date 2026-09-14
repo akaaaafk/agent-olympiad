@@ -1,5 +1,3 @@
-# Bowl-Round-2
-
 [Q1] This man appointed Michigan senator Zachariah Chandler to Secretary of the Interior in order to fight corruption within the Bureau of Indian Affairs. This man’s Secretary of the Treasury, Benjamin Bristow, cracked down on a scandal during this president’s tenure that culminated in the indictment of John McDonald and this president’s private secretary, Orville Babcock. The Whiskey Ring scandal occurred during the presidency of, for ten points, w hat Civil War general who succeeded Andrew Johnson as president?
 
 [Q2] In 1791, the HMS Pandora broke on this geographical feature, killing 35 sailors. Discovered in 1768 by French explorer Louis de Bougainville, this geographic feature was the site of a major shipwreck for the HMS Endeavour, captained by James Cook, which was only able to break away due to a high tide. In 2018, the National Geographic said half of this place was dead, “Akin to a forest after a dev astating fire.” For thousands of years, Torres Islanders and Aboriginal peoples have been using, for ten points, what coral system off the coast of Queensland, Australia?

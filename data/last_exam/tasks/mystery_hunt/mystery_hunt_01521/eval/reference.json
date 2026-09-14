@@ -3,8 +3,19 @@
   "gold_pointer": "data/benchmarks/mystery_hunt/benchmark.json#mystery_hunt_01521.gold_label",
   "has_gold_answer": true,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/mystery_hunt/verified_solutions/2011_execution_grounds.html",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+    "short_answer_source": "data/rubrics/mystery_hunt_short_answers.json",
+    "deliverable": "puzzle_answer",
+    "limitations": "Original standalone text, layout, diagrams, repeated entries and published worked examples are preserved. The exact YUI 3.2.0 reset is recovered from its publisher and checked against the same official release. Archive navigation, answer checking and points scripts are removed. Historical claims are not modernized; shared-page answer variants are not merged and host or cross-task protocols are not reconstructed. Gold, scores and readiness unchanged, not recertified. Prior limitations: The official solution verifies this answer variant; it is not an accidental duplicate. Contestant media/input separation and any hunt-specific training or host interaction still require integration. Do not treat variants as independent puzzles. The second of three distinct answers to the original puzzle.",
+    "scorecard_path": "data/rubrics/task_scorecards/mystery_hunt.json",
+    "scorecard_key": "mystery_hunt_01521",
+    "answer_variant": "answer_2_of_3"
+  },
+  "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+  "deliverable": "puzzle_answer"
 }

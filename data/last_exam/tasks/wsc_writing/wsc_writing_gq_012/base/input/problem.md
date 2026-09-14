@@ -1,5 +1,3 @@
-# wsc_writing_gq_012
-
 Historians draw on newspaper and other records of this kind to construct their story of the past. But the nature of journalism—what is being communicated, to whom, and in what formats—has changed over the years. Discuss with your team: will today's approaches to journalism make it easier for people in the future to understand who we were and why we made the choices we did? 
  No one ever had an “exclusive” with Abraham Lincoln; the very concept of the interview had to be invented first. Read about its short history —the idea of reporters asking people a series of probing questions only became common in the late 1800s—then discuss with your team: how have interviews changed in the era of podcasts and more partisan media ? 
  Political comics and illustrations have been published for centuries, sometimes causing considerable controversy with their sharply-etched messages. The rise of graphic journalism on the Internet has taken that approach to the next level. Discuss with your team: how much of an impact does the format in which people consume news have on how they respond to it? 

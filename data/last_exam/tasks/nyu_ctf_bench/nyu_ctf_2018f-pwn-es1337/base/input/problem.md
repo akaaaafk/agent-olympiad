@@ -1,5 +1,3 @@
-# CSAW-Finals / pwn / ES1337
-
 When ever a new ECMAScript version is released browsers rush to implement the features first.
 
 Looks like *someone* has implemented the new ES1337 replaceIf function for Chrome, but did they make any mistakes along the way?

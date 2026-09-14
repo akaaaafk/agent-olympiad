@@ -1,5 +1,3 @@
-# A-Set-Bowl-Round-6
-
 [Q1] An anarchist accusedof startingthisevent, LouisLingg, killedhimself injail withablastcapconcealedinacigar. AhomemadedynamitebombmayhavebeenthrownbycovertPinkertonagentstobegintheviolenceat thisevent. Thisriot, whichbeganasaprotest fortheeight-hour workday, includedaclashbetweenmembersoftheFederationofOrganizedTrades and Labor Unions against the Chicago Police. For tenpoints, namethis1886labordemonstration-turned riot which occurred on May Day.
 
 [Q2] This Europeanethnicgroupwasdiscoveredwhalingoff thecoast of Newfoundlandby French explorers during the 16th Century. Thefirst circumnavigator of theworld, JuanSebastian Elcano, was amember of thisgroup, aswerethefoundersof theJesuits, FrancisXavier and Ignatius of Loyola. A separatist group representing these people was falselyaccused of the 2004 Madrid train bombings after havingplottedsimilar attacksinBilbao.For ten points, name these speakers of Euskara fromSpain and France.

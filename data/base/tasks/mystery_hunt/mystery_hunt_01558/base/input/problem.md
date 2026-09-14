@@ -1,3 +1,5 @@
-# 2012/puzzles/ben_bitdiddle/investigators_report/
+# Investigator’s Report
 
-Investigator’s Report Investigator’s Report Ben Bitdiddle edits theater reviews written by his fleet of critic bots, who are sent out for the tedious meatspace part of the job. Contact HQ to obtain some components he recently posted on reuse@mit.edu . The following guidelines should help you assemble your components properly. If you don&rsquo;t follow the guidelines, replacements are available, but we will be cranky. You need to assemble all of the components. Plan your assembly order accordingly. Don&rsquo;t solder the 8-pin IC directly to anything. Ben Bitdiddle Ben Bitdiddle
+Open `puzzle.html` for the original standalone page and its images.
+
+Archive limitation: This restores only the explicit archived Investigator report, photograph and diagram. The original task requires physical electronic components from HQ. Those components, firmware, observations and host interactions have not been recovered, synthesized or executed; the page alone does not make the task runnable. The original CSS and named font families are localized; current publisher font binaries are not certified historical revisions. Archive navigation and points/answer-checking scripts are inactive.

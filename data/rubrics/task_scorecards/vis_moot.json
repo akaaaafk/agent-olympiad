@@ -1,0 +1,427 @@
+{
+  "schema_version": "1.1",
+  "dataset": "vis_moot",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "vis_moot_26th-2019-problem-incl-PO2",
+      "year": 2019,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/vis_moot_memorial_100_v1.json",
+          "sha256": "7b19ecb24fa730d8a0ce0b273f12319b79e4282f76dc660fbc7468de8c32465f",
+          "format": "numeric_rubric",
+          "rubric_id": "vis_moot_memorial_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "legal_analysis",
+              "name": "Legal analysis",
+              "max_score": 35,
+              "observable": true,
+              "description": "Accurate, issue-spotting legal analysis grounded in international law."
+            },
+            {
+              "id": "argumentation",
+              "name": "Argumentation",
+              "max_score": 30,
+              "observable": true,
+              "description": "Persuasive Applicant/Respondent arguments with coherent structure."
+            },
+            {
+              "id": "authorities",
+              "name": "Authorities & citation",
+              "max_score": 20,
+              "observable": true,
+              "description": "Relevant authorities are cited and used appropriately."
+            },
+            {
+              "id": "writing",
+              "name": "Written memorial quality",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarity, organization, and professional memorial style."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral advocacy",
+            "rebuttal performance",
+            "courtroom demeanor"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Evaluates the written memorial; oral pleading, tribunal questions, rebuttal, and award-panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "vis_moot_28th-2021-problem-incl-appendix",
+      "year": 2021,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/vis_moot_memorial_100_v1.json",
+          "sha256": "7b19ecb24fa730d8a0ce0b273f12319b79e4282f76dc660fbc7468de8c32465f",
+          "format": "numeric_rubric",
+          "rubric_id": "vis_moot_memorial_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "legal_analysis",
+              "name": "Legal analysis",
+              "max_score": 35,
+              "observable": true,
+              "description": "Accurate, issue-spotting legal analysis grounded in international law."
+            },
+            {
+              "id": "argumentation",
+              "name": "Argumentation",
+              "max_score": 30,
+              "observable": true,
+              "description": "Persuasive Applicant/Respondent arguments with coherent structure."
+            },
+            {
+              "id": "authorities",
+              "name": "Authorities & citation",
+              "max_score": 20,
+              "observable": true,
+              "description": "Relevant authorities are cited and used appropriately."
+            },
+            {
+              "id": "writing",
+              "name": "Written memorial quality",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarity, organization, and professional memorial style."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral advocacy",
+            "rebuttal performance",
+            "courtroom demeanor"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Evaluates the written memorial; oral pleading, tribunal questions, rebuttal, and award-panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "vis_moot_29th-2022-problem-incl-PO2",
+      "year": 2022,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/vis_moot_memorial_100_v1.json",
+          "sha256": "7b19ecb24fa730d8a0ce0b273f12319b79e4282f76dc660fbc7468de8c32465f",
+          "format": "numeric_rubric",
+          "rubric_id": "vis_moot_memorial_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "legal_analysis",
+              "name": "Legal analysis",
+              "max_score": 35,
+              "observable": true,
+              "description": "Accurate, issue-spotting legal analysis grounded in international law."
+            },
+            {
+              "id": "argumentation",
+              "name": "Argumentation",
+              "max_score": 30,
+              "observable": true,
+              "description": "Persuasive Applicant/Respondent arguments with coherent structure."
+            },
+            {
+              "id": "authorities",
+              "name": "Authorities & citation",
+              "max_score": 20,
+              "observable": true,
+              "description": "Relevant authorities are cited and used appropriately."
+            },
+            {
+              "id": "writing",
+              "name": "Written memorial quality",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarity, organization, and professional memorial style."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral advocacy",
+            "rebuttal performance",
+            "courtroom demeanor"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Evaluates the written memorial; oral pleading, tribunal questions, rebuttal, and award-panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "vis_moot_30th-2023-problem",
+      "year": 2023,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/vis_moot_memorial_100_v1.json",
+          "sha256": "7b19ecb24fa730d8a0ce0b273f12319b79e4282f76dc660fbc7468de8c32465f",
+          "format": "numeric_rubric",
+          "rubric_id": "vis_moot_memorial_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "legal_analysis",
+              "name": "Legal analysis",
+              "max_score": 35,
+              "observable": true,
+              "description": "Accurate, issue-spotting legal analysis grounded in international law."
+            },
+            {
+              "id": "argumentation",
+              "name": "Argumentation",
+              "max_score": 30,
+              "observable": true,
+              "description": "Persuasive Applicant/Respondent arguments with coherent structure."
+            },
+            {
+              "id": "authorities",
+              "name": "Authorities & citation",
+              "max_score": 20,
+              "observable": true,
+              "description": "Relevant authorities are cited and used appropriately."
+            },
+            {
+              "id": "writing",
+              "name": "Written memorial quality",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarity, organization, and professional memorial style."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral advocacy",
+            "rebuttal performance",
+            "courtroom demeanor"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Evaluates the written memorial; oral pleading, tribunal questions, rebuttal, and award-panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "vis_moot_31st-2024-problem-incl-PO2",
+      "year": 2024,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/vis_moot_memorial_100_v1.json",
+          "sha256": "7b19ecb24fa730d8a0ce0b273f12319b79e4282f76dc660fbc7468de8c32465f",
+          "format": "numeric_rubric",
+          "rubric_id": "vis_moot_memorial_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "legal_analysis",
+              "name": "Legal analysis",
+              "max_score": 35,
+              "observable": true,
+              "description": "Accurate, issue-spotting legal analysis grounded in international law."
+            },
+            {
+              "id": "argumentation",
+              "name": "Argumentation",
+              "max_score": 30,
+              "observable": true,
+              "description": "Persuasive Applicant/Respondent arguments with coherent structure."
+            },
+            {
+              "id": "authorities",
+              "name": "Authorities & citation",
+              "max_score": 20,
+              "observable": true,
+              "description": "Relevant authorities are cited and used appropriately."
+            },
+            {
+              "id": "writing",
+              "name": "Written memorial quality",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarity, organization, and professional memorial style."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral advocacy",
+            "rebuttal performance",
+            "courtroom demeanor"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Evaluates the written memorial; oral pleading, tribunal questions, rebuttal, and award-panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "vis_moot_32nd-2025-problem-incl-PO2",
+      "year": 2025,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/vis_moot_memorial_100_v1.json",
+          "sha256": "7b19ecb24fa730d8a0ce0b273f12319b79e4282f76dc660fbc7468de8c32465f",
+          "format": "numeric_rubric",
+          "rubric_id": "vis_moot_memorial_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "legal_analysis",
+              "name": "Legal analysis",
+              "max_score": 35,
+              "observable": true,
+              "description": "Accurate, issue-spotting legal analysis grounded in international law."
+            },
+            {
+              "id": "argumentation",
+              "name": "Argumentation",
+              "max_score": 30,
+              "observable": true,
+              "description": "Persuasive Applicant/Respondent arguments with coherent structure."
+            },
+            {
+              "id": "authorities",
+              "name": "Authorities & citation",
+              "max_score": 20,
+              "observable": true,
+              "description": "Relevant authorities are cited and used appropriately."
+            },
+            {
+              "id": "writing",
+              "name": "Written memorial quality",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarity, organization, and professional memorial style."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral advocacy",
+            "rebuttal performance",
+            "courtroom demeanor"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Evaluates the written memorial; oral pleading, tribunal questions, rebuttal, and award-panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "vis_moot_33rd-2026-problem-incl-PO2",
+      "year": 2026,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/vis_moot_memorial_100_v1.json",
+          "sha256": "7b19ecb24fa730d8a0ce0b273f12319b79e4282f76dc660fbc7468de8c32465f",
+          "format": "numeric_rubric",
+          "rubric_id": "vis_moot_memorial_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "legal_analysis",
+              "name": "Legal analysis",
+              "max_score": 35,
+              "observable": true,
+              "description": "Accurate, issue-spotting legal analysis grounded in international law."
+            },
+            {
+              "id": "argumentation",
+              "name": "Argumentation",
+              "max_score": 30,
+              "observable": true,
+              "description": "Persuasive Applicant/Respondent arguments with coherent structure."
+            },
+            {
+              "id": "authorities",
+              "name": "Authorities & citation",
+              "max_score": 20,
+              "observable": true,
+              "description": "Relevant authorities are cited and used appropriately."
+            },
+            {
+              "id": "writing",
+              "name": "Written memorial quality",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarity, organization, and professional memorial style."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral advocacy",
+            "rebuttal performance",
+            "courtroom demeanor"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Evaluates the written memorial; oral pleading, tribunal questions, rebuttal, and award-panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

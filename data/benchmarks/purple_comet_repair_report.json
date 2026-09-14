@@ -1,0 +1,479 @@
+{
+  "operation": "purple_comet_readiness_repair",
+  "timestamp_utc": "20260912T204047Z",
+  "status": "completed",
+  "packages": {
+    "n_tasks": 1761,
+    "n_competitions": 43,
+    "staged_assets": 770
+  },
+  "validation": {
+    "records": 1761,
+    "tracks": 43,
+    "scorecards": "matched",
+    "package_ids": "matched",
+    "input_assets": "hash_verified",
+    "iypt_years": "matched",
+    "hmmt_2024_perfect_score": 400.0
+  },
+  "competition_id": "purple_comet",
+  "records": 44,
+  "promoted_records": [
+    "purple_comet_hs_2005",
+    "purple_comet_ms_2005",
+    "purple_comet_hs_2006",
+    "purple_comet_ms_2006",
+    "purple_comet_hs_2007",
+    "purple_comet_ms_2007",
+    "purple_comet_hs_2008",
+    "purple_comet_ms_2008",
+    "purple_comet_hs_2009",
+    "purple_comet_ms_2009",
+    "purple_comet_hs_2010",
+    "purple_comet_ms_2010",
+    "purple_comet_hs_2011",
+    "purple_comet_ms_2011",
+    "purple_comet_hs_2012",
+    "purple_comet_ms_2012",
+    "purple_comet_hs_2013",
+    "purple_comet_ms_2013",
+    "purple_comet_hs_2014",
+    "purple_comet_ms_2014",
+    "purple_comet_hs_2015",
+    "purple_comet_ms_2015",
+    "purple_comet_hs_2016",
+    "purple_comet_ms_2016",
+    "purple_comet_hs_2017",
+    "purple_comet_ms_2017",
+    "purple_comet_hs_2025",
+    "purple_comet_ms_2025",
+    "purple_comet_hs_2026",
+    "purple_comet_ms_2026"
+  ],
+  "newly_added_answers": 700,
+  "total_answer_parts": 1050,
+  "edition_total_corrections": [
+    {
+      "problem_id": "purple_comet_hs_2005",
+      "before": 30,
+      "after": 25
+    },
+    {
+      "problem_id": "purple_comet_ms_2005",
+      "before": 20,
+      "after": 15
+    },
+    {
+      "problem_id": "purple_comet_hs_2006",
+      "before": 30,
+      "after": 25
+    },
+    {
+      "problem_id": "purple_comet_ms_2006",
+      "before": 20,
+      "after": 15
+    },
+    {
+      "problem_id": "purple_comet_hs_2007",
+      "before": 30,
+      "after": 25
+    },
+    {
+      "problem_id": "purple_comet_ms_2007",
+      "before": 20,
+      "after": 15
+    },
+    {
+      "problem_id": "purple_comet_hs_2008",
+      "before": 30,
+      "after": 25
+    },
+    {
+      "problem_id": "purple_comet_ms_2008",
+      "before": 20,
+      "after": 15
+    },
+    {
+      "problem_id": "purple_comet_hs_2009",
+      "before": 30,
+      "after": 25
+    },
+    {
+      "problem_id": "purple_comet_ms_2009",
+      "before": 20,
+      "after": 15
+    }
+  ],
+  "grader_checks": [
+    {
+      "problem_id": "purple_comet_hs_2005",
+      "max_score": 25,
+      "perfect_score": 25.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 24.0,
+      "thousands_separator_score": 25.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2005",
+      "max_score": 15,
+      "perfect_score": 15.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 14.0,
+      "thousands_separator_score": 15.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2006",
+      "max_score": 25,
+      "perfect_score": 25.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 24.0,
+      "thousands_separator_score": 25.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2006",
+      "max_score": 15,
+      "perfect_score": 15.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 14.0,
+      "thousands_separator_score": 15.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2007",
+      "max_score": 25,
+      "perfect_score": 25.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 24.0,
+      "thousands_separator_score": 25.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2007",
+      "max_score": 15,
+      "perfect_score": 15.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 14.0,
+      "thousands_separator_score": 15.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2008",
+      "max_score": 25,
+      "perfect_score": 25.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 24.0,
+      "thousands_separator_score": 25.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2008",
+      "max_score": 15,
+      "perfect_score": 15.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 14.0,
+      "thousands_separator_score": 15.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2009",
+      "max_score": 25,
+      "perfect_score": 25.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 24.0,
+      "thousands_separator_score": 25.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2009",
+      "max_score": 15,
+      "perfect_score": 15.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 14.0,
+      "thousands_separator_score": 15.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2010",
+      "max_score": 30,
+      "perfect_score": 30.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 29.0,
+      "thousands_separator_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2010",
+      "max_score": 20,
+      "perfect_score": 20.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 19.0,
+      "thousands_separator_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2011",
+      "max_score": 30,
+      "perfect_score": 30.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 29.0,
+      "thousands_separator_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2011",
+      "max_score": 20,
+      "perfect_score": 20.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 19.0,
+      "thousands_separator_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2012",
+      "max_score": 30,
+      "perfect_score": 30.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 29.0,
+      "thousands_separator_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2012",
+      "max_score": 20,
+      "perfect_score": 20.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 19.0,
+      "thousands_separator_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2013",
+      "max_score": 30,
+      "perfect_score": 30.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 29.0,
+      "thousands_separator_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2013",
+      "max_score": 20,
+      "perfect_score": 20.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 19.0,
+      "thousands_separator_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2014",
+      "max_score": 30,
+      "perfect_score": 30.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 29.0,
+      "thousands_separator_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2014",
+      "max_score": 20,
+      "perfect_score": 20.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 19.0,
+      "thousands_separator_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2015",
+      "max_score": 30,
+      "perfect_score": 30.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 29.0,
+      "thousands_separator_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2015",
+      "max_score": 20,
+      "perfect_score": 20.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 19.0,
+      "thousands_separator_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2016",
+      "max_score": 30,
+      "perfect_score": 30.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 29.0,
+      "thousands_separator_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2016",
+      "max_score": 20,
+      "perfect_score": 20.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 19.0,
+      "thousands_separator_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2017",
+      "max_score": 30,
+      "perfect_score": 30.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 29.0,
+      "thousands_separator_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2017",
+      "max_score": 20,
+      "perfect_score": 20.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 19.0,
+      "thousands_separator_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2018",
+      "max_score": 30,
+      "perfect_score": 30.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 29.0,
+      "thousands_separator_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2018",
+      "max_score": 20,
+      "perfect_score": 20.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 19.0,
+      "thousands_separator_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2019",
+      "max_score": 30,
+      "perfect_score": 30.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 29.0,
+      "thousands_separator_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2019",
+      "max_score": 20,
+      "perfect_score": 20.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 19.0,
+      "thousands_separator_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2020",
+      "max_score": 30,
+      "perfect_score": 30.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 29.0,
+      "thousands_separator_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2020",
+      "max_score": 20,
+      "perfect_score": 20.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 19.0,
+      "thousands_separator_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2021",
+      "max_score": 30,
+      "perfect_score": 30.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 29.0,
+      "thousands_separator_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2021",
+      "max_score": 20,
+      "perfect_score": 20.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 19.0,
+      "thousands_separator_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2022",
+      "max_score": 30,
+      "perfect_score": 30.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 29.0,
+      "thousands_separator_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2022",
+      "max_score": 20,
+      "perfect_score": 20.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 19.0,
+      "thousands_separator_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2023",
+      "max_score": 30,
+      "perfect_score": 30.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 29.0,
+      "thousands_separator_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2023",
+      "max_score": 20,
+      "perfect_score": 20.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 19.0,
+      "thousands_separator_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2024",
+      "max_score": 30,
+      "perfect_score": 30.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 29.0,
+      "thousands_separator_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2024",
+      "max_score": 20,
+      "perfect_score": 20.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 19.0,
+      "thousands_separator_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2025",
+      "max_score": 30,
+      "perfect_score": 30.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 29.0,
+      "thousands_separator_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2025",
+      "max_score": 20,
+      "perfect_score": 20.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 19.0,
+      "thousands_separator_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2026",
+      "max_score": 30,
+      "perfect_score": 30.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 29.0,
+      "thousands_separator_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2026",
+      "max_score": 20,
+      "perfect_score": 20.0,
+      "all_wrong_score": 0.0,
+      "first_answer_missing_score": 19.0,
+      "thousands_separator_score": 20.0
+    }
+  ],
+  "before_evaluation_status_counts": {
+    "ready_with_limitations": 179,
+    "not_ready": 782,
+    "ready": 640,
+    "remote_judge_ready": 158,
+    "sample_tests_ready": 2
+  },
+  "after_evaluation_status_counts": {
+    "ready_with_limitations": 179,
+    "not_ready": 752,
+    "ready": 670,
+    "remote_judge_ready": 158,
+    "sample_tests_ready": 2
+  },
+  "original_problem_pdfs_modified": 0,
+  "split_and_license_changes": 0,
+  "backup": "data/excluded/integrity_repair_20260912T204047Z",
+  "unresolved_purple_comet_records": []
+}

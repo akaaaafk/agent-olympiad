@@ -7,62 +7,72 @@
     "official_url": "https://puzzles.mit.edu/",
     "benchmark_source": "data/benchmarks/mystery_hunt/benchmark.json",
     "method": "Exact answer strings carried from the upstream answers.tsv into the promoted task-bearing puzzle records.",
-    "upstream_artifact": "benchmark/MIT_Mystery_Hunt/answers.tsv"
-  },
-  "coverage": {
-    "benchmark_records": 261,
-    "mapped_records": 261,
-    "unmapped_records": [],
-    "limitations": [
-      "Only the 261 task-bearing promoted records are covered; answer-only, solution-only, navigation, stub, empty, and image-only rows excluded upstream are not restored.",
-      "No punctuation, spacing, case-folding, extraction-stage, or alternate-answer aliases are asserted."
+    "upstream_artifact": "benchmark/MIT_Mystery_Hunt/answers.tsv",
+    "verified_solution_groups": [
+      {
+        "group": "set_match_2003",
+        "records": [
+          "mystery_hunt_00408",
+          "mystery_hunt_00409"
+        ],
+        "variants": [
+          "original",
+          "trained"
+        ],
+        "official_url": "https://puzzles.mit.edu/2003/www.acme-corp.com/solutions/set-match.html",
+        "local_solution": "data/raw/mystery_hunt/verified_solutions/2003_set_match.html",
+        "sha256": "f1f8164b6be6f7112d1d7c1d9f8fcb85ac1fe9c1d0bdea870bcfa53d446ac611",
+        "action": "retained_with_disambiguated_answer_targets"
+      },
+      {
+        "group": "the_baddest_man_2011",
+        "records": [
+          "mystery_hunt_01431",
+          "mystery_hunt_01432"
+        ],
+        "variants": [
+          "intermediate_instruction",
+          "post_interaction_final"
+        ],
+        "official_url": "https://puzzles.mit.edu/2011/puzzles/katamari_damacy/the_baddest_man/answer/",
+        "local_solution": "data/raw/mystery_hunt/verified_solutions/2011_the_baddest_man.html",
+        "sha256": "7b8888f08377fdac95e155bd562b505108237725bfa25be0e3d182b62c6a6d64",
+        "action": "retained_with_disambiguated_answer_targets"
+      },
+      {
+        "group": "execution_grounds_2011",
+        "records": [
+          "mystery_hunt_01521",
+          "mystery_hunt_01523"
+        ],
+        "variants": [
+          "answer_2_of_3",
+          "answer_3_of_3"
+        ],
+        "official_url": "https://puzzles.mit.edu/2011/puzzles/zelda/execution_grounds/answer/",
+        "local_solution": "data/raw/mystery_hunt/verified_solutions/2011_execution_grounds.html",
+        "sha256": "8d891eae8067fbb5e789765d1ede996f7694f1b67dc6382caa3f8cdaa6ee5aaf",
+        "action": "retained_with_disambiguated_answer_targets"
+      }
     ]
   },
+  "coverage": {
+    "benchmark_records": 247,
+    "mapped_records": 247,
+    "unmapped_records": [],
+    "limitations": [
+      "Only the 247 active task-bearing records are covered; answer-only, solution-only, navigation, stub, empty, and image-only rows excluded upstream are not restored.",
+      "No punctuation, spacing, case-folding, extraction-stage, or alternate-answer aliases are asserted."
+    ],
+    "excluded_selection_manifest": "data/excluded/mystery_hunt_curated_exclusion_20260913/manifest.json",
+    "benchmark_score_summary": "data/rubrics/mystery_hunt_active_score_summary.json"
+  },
   "answers": {
-    "mystery_hunt_00002": {
-      "expected": "BOSTON UNIVERSITY"
-    },
-    "mystery_hunt_00003": {
-      "expected": "NET"
-    },
-    "mystery_hunt_00004": {
-      "expected": "TANGLE"
-    },
-    "mystery_hunt_00006": {
-      "expected": "LAST"
-    },
-    "mystery_hunt_00007": {
-      "expected": "HENCE"
-    },
     "mystery_hunt_00009": {
       "expected": "ARTIFICIAL INTELLIGENCE"
     },
-    "mystery_hunt_00014": {
-      "expected": "STEREO"
-    },
     "mystery_hunt_00015": {
       "expected": "BILLIARDS"
-    },
-    "mystery_hunt_00028": {
-      "expected": "JAM"
-    },
-    "mystery_hunt_00032": {
-      "expected": "DAME"
-    },
-    "mystery_hunt_00033": {
-      "expected": "RUNE"
-    },
-    "mystery_hunt_00035": {
-      "expected": "GENERIC"
-    },
-    "mystery_hunt_00036": {
-      "expected": "VALERIE"
-    },
-    "mystery_hunt_00038": {
-      "expected": "PENULTIMATE MYSTERY HUNT COIN OF THIS MILLENIUM"
-    },
-    "mystery_hunt_00044": {
-      "expected": "LOW"
     },
     "mystery_hunt_00068": {
       "expected": "APPROACH ROOM BAUM COIN BENEATH GREENERY"
@@ -215,10 +225,14 @@
       "expected": "ONE HUNDRED FIFTY"
     },
     "mystery_hunt_00408": {
-      "expected": "SECOND PERSON PLURAL"
+      "expected": "SECOND PERSON PLURAL",
+      "answer_variant": "original",
+      "solution_file": "data/raw/mystery_hunt/verified_solutions/2003_set_match.html"
     },
     "mystery_hunt_00409": {
-      "expected": "JAYHAWKS"
+      "expected": "JAYHAWKS",
+      "answer_variant": "trained",
+      "solution_file": "data/raw/mystery_hunt/verified_solutions/2003_set_match.html"
     },
     "mystery_hunt_00412": {
       "expected": "JAYHAWKS"
@@ -327,9 +341,6 @@
     },
     "mystery_hunt_00810": {
       "expected": "COVALENTBOND"
-    },
-    "mystery_hunt_00819": {
-      "expected": "SNIFF"
     },
     "mystery_hunt_00833": {
       "expected": "DEBAUCHERY"
@@ -533,10 +544,14 @@
       "expected": "DIVERGED"
     },
     "mystery_hunt_01431": {
-      "expected": "WRITE HOW HE SOLVED WHO GRABBED PEACH"
+      "expected": "WRITE HOW HE SOLVED WHO GRABBED PEACH",
+      "answer_variant": "intermediate_instruction",
+      "solution_file": "data/raw/mystery_hunt/verified_solutions/2011_the_baddest_man.html"
     },
     "mystery_hunt_01432": {
-      "expected": "CUL DE SAC"
+      "expected": "CUL DE SAC",
+      "answer_variant": "post_interaction_final",
+      "solution_file": "data/raw/mystery_hunt/verified_solutions/2011_the_baddest_man.html"
     },
     "mystery_hunt_01446": {
       "expected": "FAMILY NAME"
@@ -566,10 +581,14 @@
       "expected": "WEBISMS"
     },
     "mystery_hunt_01521": {
-      "expected": "KEGELSTATT TRIO"
+      "expected": "KEGELSTATT TRIO",
+      "answer_variant": "answer_2_of_3",
+      "solution_file": "data/raw/mystery_hunt/verified_solutions/2011_execution_grounds.html"
     },
     "mystery_hunt_01523": {
-      "expected": "FLAG DAY"
+      "expected": "FLAG DAY",
+      "answer_variant": "answer_3_of_3",
+      "solution_file": "data/raw/mystery_hunt/verified_solutions/2011_execution_grounds.html"
     },
     "mystery_hunt_01543": {
       "expected": "ELEPHANT IN A TUTU"

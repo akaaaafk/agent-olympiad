@@ -715,7 +715,8 @@ def _make_live_query(
             max_output_tokens=max_output_tokens,
             temperature=temperature,
         )
-    return make_perplexity_caller(model=model)
+    return make_perplexity_caller(model=model, max_output_tokens=max_output_tokens,
+                                  temperature=temperature)
 
 
 def _agent_names(env: OlympiadEnvironment, schema: str) -> list[str]:
@@ -1097,6 +1098,11 @@ def _prepare_contest_run(args: argparse.Namespace) -> tuple:
         # The selected card is authoritative for this condition; do not append
         # the legacy static guidance, which may describe different constraints.
         rule_guidance = "RULE CARD (prompt_only)\n" + json.dumps(visible, ensure_ascii=False)
+    brief_file = getattr(args, "coach_brief_file", None)
+    try:
+        shared_brief = brief_file.read_text(encoding="utf-8-sig").strip() if brief_file is not None else None
+    except OSError as exc:
+        raise ValueError(f"Cannot read --coach-brief-file: {brief_file}") from exc
     run_config = ContestRunConfig(
         system_variant=system_variant,
         team_size=team_size,
@@ -1120,6 +1126,7 @@ def _prepare_contest_run(args: argparse.Namespace) -> tuple:
         computer_capacity=getattr(args, "computer_capacity", None),
         rule_card=contest_rule_card,
         features=baseline_features,
+        precontest_brief=shared_brief,
     )
     # Delivery is an environment contract, not an OTC strategy feature.
     # Inspect the card without attaching it to rule-card-off contestants.
@@ -1181,8 +1188,10 @@ def _build_parser() -> argparse.ArgumentParser:
         "--temperature",
         type=float,
         default=TINKER_DEFAULT_TEMPERATURE,
-        help="Tinker sampling temperature (default: 0.2)",
+        help="Sampling temperature for live thinking and action calls (default: 0.2)",
     )
+    parser.add_argument("--coach-brief-file", type=Path, default=None,
+                        help="Use a shared, frozen, problem-blind OTC pre-contest brief; no Coach API call.")
     parser.add_argument("--schema", default="centralized", choices=list(SCHEMAS.keys()))
     parser.add_argument(
         "--max-turns",
@@ -1463,6 +1472,8 @@ def main() -> None:
     args = parser.parse_args()
 
     if not args.contest_manifest:
+        if args.coach_brief_file is not None:
+            parser.error("--coach-brief-file requires --contest-manifest and an OTC baseline")
         args.max_output_tokens = args.max_output_tokens if args.max_output_tokens is not None else TINKER_DEFAULT_MAX_TOKENS
         args.rules_mode = args.rules_mode or RulesMode.OFF.value
         if args.require_review is not None or args.require_final_review is not None:

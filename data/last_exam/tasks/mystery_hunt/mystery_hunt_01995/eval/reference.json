@@ -3,8 +3,18 @@
   "gold_pointer": "data/benchmarks/mystery_hunt/benchmark.json#mystery_hunt_01995.gold_label",
   "has_gold_answer": true,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+    "short_answer_source": "data/rubrics/mystery_hunt_short_answers.json",
+    "deliverable": "puzzle_answer",
+    "limitations": "Only the original standalone archived body and its explicit visual dependencies are restored. Archive solution links, answer-reveal header and gold-bearing scripts, navigation and scripts are removed. Original published CSS, images and font files are preserved or mechanically relinked; original CSS font query/fragment suffixes are retained. Puzzles are not solved, historical wording is not modernized, and blank cells, geometry, colors and deliberately misspelled words are not corrected. Gold, scores, splits, license and grading/runtime readiness are unchanged and not recertified. This archived meta page contains only an instruction to call in a submarine upgrade. Other-puzzle answers, physical components and host interaction are absent; this input packet does not make the meta independently solvable. Prior limitations: The answer key exists, but the contestant puzzle page has not been separated from embedded answers and media dependencies.",
+    "scorecard_path": "data/rubrics/task_scorecards/mystery_hunt.json",
+    "scorecard_key": "mystery_hunt_01995"
+  },
+  "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+  "deliverable": "puzzle_answer"
 }

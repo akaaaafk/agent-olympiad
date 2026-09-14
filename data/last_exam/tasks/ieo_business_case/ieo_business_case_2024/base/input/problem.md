@@ -1,5 +1,3 @@
-# Business Case — Housing Challenges in Hong Kong
-
 Housing challenges in Hong Kong introducing solutions to be used by Hong Kong Government IEO 2024 Business Case Task Supporting organization:
 
 Hong Kong has been facing a severe housing crisis for years, characterized by high property prices, long waiting times for public housing significant shortage of affordable homes. International Economics Olympiad 2024 Page 2 Background The HKSAR Government has implemented various policies and initiatives to tackle the housing issue, but the problem persists, affecting the quality of life and social stability in the city. The government recognizes the urgent need to develop effective and sustainable solutions to address the housing crisis and ensure that all residents have access to adequate and affordable housing.

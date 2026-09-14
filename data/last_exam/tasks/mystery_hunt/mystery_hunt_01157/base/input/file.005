@@ -1,0 +1,130 @@
+000020 Identification Division.
+000030 Program-Id.  MHuntOhNine.
+000042 Environment Division.
+000050 Configuration Section.
+000060 Source-Computer.  Linux.
+000070 Object-Computer.  Linux.
+000080 Data Division.
+000090 Working-Storage Section.
+000252 01  The-Number            Pic 9(9) Value Zeros.
+000253 01  Another-Number        Pic 9v9(17) Value Zeros.
+000254 01  Text-Field            Pic X(200) Value Spaces.
+000255 01  Number-Descriptions.
+000256     03  Table-Area-Low.
+000257         05  Filler Pic X(15) Value "I".
+000258         05  Filler Pic X(15) Value "can't".
+000259         05  Filler Pic X(15) Value "really".
+000260         05  Filler Pic X(15) Value "count".
+000261         05  Filler Pic X(15) Value "to".
+000262         05  Filler Pic X(15) Value "sixteen".
+000263         05  Filler Pic X(15) Value "in".
+000264         05  Filler Pic X(15) Value "casinospeak".
+000265         05  Filler Pic X(15) Value "so".
+000266         05  Filler Pic X(15) Value "keep".
+000267         05  Filler Pic X(15) Value "the".
+000268         05  Filler Pic X(15) Value "whiskies".
+000269         05  Filler Pic X(15) Value "coming".
+000270     03  Low-Numbers Redefines Table-Area-Low.
+000271         05  Low-Number Pic X(15) Occurs 13 Times.
+000272     03  Table-Area-Secondary.
+000273         05  Filler Pic X(7) Value Spaces.
+000274         05  Filler Pic X(7) Value "Dont".
+000275         05  Filler Pic X(7) Value "go".
+000276         05  Filler Pic X(7) Value "all". 
+000277         05  Filler Pic X(7) Value "in".
+000278         05  Filler Pic X(7) Value "with".
+000279         05  Filler Pic X(7) Value "just".
+000280         05  Filler Pic X(7) Value "two".
+000281         05  Filler Pic X(7) Value "fours".
+000282     03  Secondary-Numbers Redefines Table-Area-Secondary.
+000283         05  Secondary-Number Pic X(7) Occurs 9 Times.
+000284     03  Table-Area-Ante.
+000285         05  Filler Pic X(15) Value Spaces.
+000286         05  Filler Pic X(15) Value "milling".
+000287         05  Filler Pic X(15) Value Spaces.
+000288         05  Filler Pic X(15) Value "dowsing".
+000289         05  Filler Pic X(15) Value Spaces.
+000290         05  Filler Pic X(15) Value Spaces.
+000292     03  Ante-Numbers Redefines Table-Area-Ante.
+000293         05  Ante-Number Pic X(15) Occurs 6 Times.
+000294 01  Cntr Pic 99 Value Zeros.
+000295 01  String-Pointer Pic 99 Value 1.
+000296 01  Digits Pic 9 Value Zeros.
+000297 01  Offset Pic 9 Value Zeros.
+000298 01  Offset-Value Pic 9v9 Value Zeros.
+000299 01  Test-Num Pic 99 Value Zeros.
+000300 01  Second-Num Pic 99 Value Zeros.
+000301 01  Ante-Flag Pic X Value Spaces.
+000302     88 Print-Ante Value "Y".
+000303     88 No-Print-Ante Value Spaces.
+000313 Procedure Division.
+000314 MHuntOhNine-Start.
+000315     Compute Another-Number = Function ACOS(0.896938). 
+000320     Multiply Another-Number By 1000 Giving The-Number.
+000324     Perform Varying Cntr From 1 By 1 Until Cntr > 6
+000325       If Digits = 2
+000326          Subtract 1 From Digits
+000327       Else
+000328          Add 1 To Digits
+000329       End-If
+000330       Move Offset-Value to Offset
+000331       Add .5 to Offset-Value
+000332       Compute Test-Num = 
+000334        Function Numval (The-Number (Cntr + Offset:Digits))
+000335       Evaluate Digits Also Test-Num
+000338          When 1 Also 1 Thru 9
+000339            String Low-Number (Test-Num)
+000340              Delimited By Space 
+000341              " " Delimited By Size
+000342              Into Text-Field
+000343              Pointer String-Pointer
+000344            Set Print-Ante To True
+000345          When 2 Also 1 Thru 9
+000346            String Low-Number (Test-Num)
+000347              Delimited by Space
+000348              Space Delimited by Size
+000349              Into Text-Field
+000350              Pointer String-Pointer
+000351            Set Print-Ante To True
+000352          When 2 Also 10 Thru 13
+000353            String Low-Number (Test-Num)
+000354              Delimited By Space
+000355              Space Delimited By Size
+000356              Into Text-Field
+000357              Pointer String-Pointer
+000358            Set Print-Ante To True
+000359          When 2 Also 14 Thru 19
+000360              Compute Second-Num = 
+000361                 Function Rem (Test-Num 10)
+000362              String Low-Number (Second-Num)
+000363                 "teen" Delimited By Space
+000364                 Space Delimited by Size
+000365                 Into Text-Field
+000366                 Pointer String-Pointer
+000367              Set Print-Ante To True
+000368          When 2 Also 20 Thru 99     
+000369              Move Test-Num To Second-Num
+000370              Move "0" To Second-Num (2:1)
+000371              Subtract Second-Num From Test-Num
+000372              Divide Second-Num By 10 Giving Second-Num
+000373              String Secondary-Number (Second-Num) 
+000374                 Delimited by Space
+000375                 " " Delimited By Size
+000376                 Low-Number (Test-Num)
+000377                 Delimited By Space
+000378                 Space Delimited By Size
+000379                 Into Text-Field
+000380                 Pointer String-Pointer
+000381              Set Print-Ante To True
+000390       End-Evaluate
+000391       If Digits = 2 And Print-Ante
+000392        String Ante-Number (Cntr)
+000393         Delimited By Space
+000394         Space Delimited By Size
+000395         Into Text-Field
+000396         Pointer String-Pointer 
+000397        Set No-Print-Ante To True
+000398       End-if   
+000399     End-Perform
+000400     Display Text-Field
+000460     Stop Run.

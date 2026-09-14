@@ -3,8 +3,63 @@
   "gold_pointer": "data/benchmarks/debatebench/benchmark.json#debatebench_Astana Open Round 5.gold_label",
   "has_gold_answer": false,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Astana Open Round 5.txt",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+    "deliverable": "bp_debate_speeches",
+    "limitations": [
+      "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+      "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+      "The original transcript has incomplete, inconsistent or out-of-order speaker-role tags; no speech-label alignment was guessed.",
+      "Source-review limitation: the published Round 5 page pairs this motion with a toy-history background slide whose relevance to the motion is unverified. That slide is withheld from the active task input and retained in the judge-only original archive. This does not establish that the original round had no background slide; no replacement slide is invented. This task remains not_ready for evaluation."
+    ],
+    "pre_reuse_evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+      "deliverable": "bp_debate_speeches",
+      "limitations": "The motion/infoslide and a verified transcript-to-score mapping are missing. The completed transcript cannot serve as both prompt and contestant output."
+    },
+    "rubric_reuse": {
+      "source_competition": "debatebench",
+      "target_competition": "debatebench",
+      "target_year": 2023,
+      "source_rubric_paths": [
+        "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+      ],
+      "source_editions": [
+        "existing same-competition rubric; edition unspecified"
+      ],
+      "official_year_equivalence": false,
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+    },
+    "scorecard_path": "data/rubrics/task_scorecards/debatebench.json",
+    "scorecard_key": "debatebench_Astana Open Round 5",
+    "historical_reference_path": "data/raw/debatebench/recovered_20260913/cf02c5db3783/historical_scores.json",
+    "historical_score_identity": "matched",
+    "infoslide_scope_review": {
+      "status": "published_semantic_mismatch_quarantined",
+      "original_source_file": "data/raw/debatebench/recovered_20260913/cf02c5db3783/motion.txt",
+      "original_sha256": "3b1c79b5f3362887b40ad5e9105cf9c57c5ac3bf3229fc29ee219393225f4218",
+      "original_published_slide": "Barbie was first introduced in 1959 and has since undergone notable development. Designed by Ruth Handler, Barbie's evolution has adapted to reflect shifting societal norms. Mattel expanded Barbie's line to include a more diverse range of family and friends, incorporating various ethnicities and body types. Furthermore, Barbie embraced technology, integrating interactive features to engage modern audiences. Throughout her history, Barbie has remained a popular and influential toy, sparking imaginative play and leaving a lasting impact on the toy industry.",
+      "replacement_inferred": false,
+      "original_round_had_no_slide_inferred": false,
+      "evidence": {
+        "source_url": "https://astanaopen.calicotab.com/_/motions/",
+        "round_heading": "Round 5",
+        "modal_id": "info_32018",
+        "archived_snapshot": "data/raw/debatebench/recovered_20260913/sources/e47e085852a88fc4.html",
+        "archived_sha256": "e47e085852a88fc47dceb6255d0b5b5b3797ac4564c3acd3fc8228449fbc0559",
+        "current_snapshot": "data/.cache/debate_infoslide_scope_20260913/current_source.html",
+        "current_sha256": "3cbcd9b6cb4bb605d38397e1b9fdc73880cefeef65dc67a318b4e49d133e0f28",
+        "checked_at_utc": "20260914T011905Z"
+      },
+      "reasoning": "The motion concerns national ethnic representation in neighbourhoods, whereas the published slide describes the history of a toy. Same-round extraction is verified; contextual suitability is not."
+    }
+  },
+  "rubric_path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+  "deliverable": "bp_debate_speeches"
 }

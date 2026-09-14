@@ -1,5 +1,3 @@
-# PUMaC Power Round 2012
-
 2012 PUMaC Power Round
 Princeton University
 Why are numbers beautiful? It’s like asking why is

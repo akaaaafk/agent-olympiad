@@ -1,5 +1,3 @@
-# 2019-IHBB-Asian-Championships-International-History-Bowl-Round-3
-
 [Q1] After beating Red Star Belgrade in the 1958 European Cup quarterfinals, this team suffered 11 casualties in a plane crash in Munich; survivors included Ray Wood, Bobby Charlton, and manager Matt Busby. A memorial to the Munich disaster is on display at this team’s home stadium, Old Trafford, where one of its stands is named for legendary manager Sir Alex Ferguson. For ten points, name this English football club whose 13 titles are the most in Premier League history.
 
 [Q2] The Batwa people are often called the “forgotten victims” of this event, which was spurred by propaganda from the RTLM radio station. Romeo Dallaire’s UNAMIR failed to prevent this event, which began after the death of President Habyarimana. This event was mainly perpetuated by the Interahamwe militia and came to an end when RPF forces captured Kigali. For ten points, name this 1994 genocide of Tutsis by Hutus.

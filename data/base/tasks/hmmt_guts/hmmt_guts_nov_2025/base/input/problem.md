@@ -1,9 +1,6 @@
-# HMMT November 2025 — Guts Round
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
-
-[Page 1]
-HMMT November 2025, November 08, 2025 — GUTS ROUND
+         HMMT November 2025, November 08, 2025 — GUTS ROUND
 
 Organization                      Team                      Team ID#
 
@@ -18,6 +15,11 @@ Organization                      Team                      Team ID#
 
 ©2025 HMMT
 
+
+
+
+
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
          HMMT November 2025, November 08, 2025 — GUTS ROUND
 
@@ -40,8 +42,9 @@ Organization                      Team                      Team ID#
 
 ©2025 HMMT
 
-[Page 2]
-HMMT November 2025, November 08, 2025 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2025, November 08, 2025 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -60,6 +63,11 @@ HMMT November 2025, November 08, 2025 — GUTS ROUND
  ©2025 HMMT
 
 
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
           HMMT November 2025, November 08, 2025 — GUTS ROUND
 
  Organization                      Team                      Team ID#
@@ -76,8 +84,9 @@ HMMT November 2025, November 08, 2025 — GUTS ROUND
 
  ©2025 HMMT
 
-[Page 3]
-HMMT November 2025, November 08, 2025 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2025, November 08, 2025 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -97,6 +106,9 @@ HMMT November 2025, November 08, 2025 — GUTS ROUND
    One example of a valid path is shown below:
 
 
+
+
+
 15. [9] Compute
               ∞
                              1           1           1           1
@@ -106,8 +118,9 @@ HMMT November 2025, November 08, 2025 — GUTS ROUND
 
  ©2025 HMMT
 
-[Page 4]
-HMMT November 2025, November 08, 2025 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2025, November 08, 2025 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -121,6 +134,11 @@ HMMT November 2025, November 08, 2025 — GUTS ROUND
 
  ©2025 HMMT
 
+
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
           HMMT November 2025, November 08, 2025 — GUTS ROUND
 
@@ -139,8 +157,9 @@ HMMT November 2025, November 08, 2025 — GUTS ROUND
 
  ©2025 HMMT
 
-[Page 5]
-HMMT November 2025, November 08, 2025 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2025, November 08, 2025 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -163,6 +182,11 @@ HMMT November 2025, November 08, 2025 — GUTS ROUND
  ©2025 HMMT
 
 
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
           HMMT November 2025, November 08, 2025 — GUTS ROUND
 
  Organization                      Team                      Team ID#
@@ -181,8 +205,9 @@ HMMT November 2025, November 08, 2025 — GUTS ROUND
 
  ©2025 HMMT
 
-[Page 6]
-HMMT November 2025, November 08, 2025 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2025, November 08, 2025 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -198,6 +223,11 @@ HMMT November 2025, November 08, 2025 — GUTS ROUND
 
  ©2025 HMMT
 
+
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
           HMMT November 2025, November 08, 2025 — GUTS ROUND
 
@@ -215,8 +245,9 @@ HMMT November 2025, November 08, 2025 — GUTS ROUND
 
  ©2025 HMMT
 
-[Page 7]
-HMMT November 2025, November 08, 2025 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2025, November 08, 2025 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 

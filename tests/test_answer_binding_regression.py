@@ -98,6 +98,7 @@ class AnswerBindingTests(unittest.TestCase):
         ):
             with self.subTest(content=content):
                 manifest, session, memory, config = state("decentralized")
+                session.select_task("arml_local_2009:7")
                 self.apply(manifest, session, memory, config, content, "arml_local_2009:7")
                 self.assertEqual(session.active_task.task_id, "arml_local_2009:7")
                 self.assertEqual(session.active_task.versions[-1].content, content)
@@ -109,6 +110,7 @@ class AnswerBindingTests(unittest.TestCase):
                 with self.subTest(baseline=baseline, event=case["overwriting_event"]):
                     manifest, _, _, config = state(baseline, case["task_id"])
                     requests = []
+                    initial_content = f"Problem {case['task_id']}:\n{case['initial_content']}"
                     plan = {"work_assignments": {f"Agent_{i}": [t.task_id for t in manifest.tasks]
                                                 for i in range(1, config.team_size + 1)}}
 
@@ -122,7 +124,7 @@ class AnswerBindingTests(unittest.TestCase):
                             requests.append(req.user_prompt)
                             if len(requests) in (1, 3):
                                 name, args = "work", {"problem_id": case["task_id"], "content":
-                                    case["initial_content"] if len(requests) == 1 else case["overwriting_content"]}
+                                    initial_content if len(requests) == 1 else case["overwriting_content"]}
                             elif len(requests) == 2:
                                 name, args = "speak", {"content": "Draft recorded; available for the team."}
                         return LLMResponse("", "mock", "binding", tool_calls=(LLMToolCall(name, args),),
@@ -133,8 +135,9 @@ class AnswerBindingTests(unittest.TestCase):
                     errors = [e for e in result["memory"]["events"] if e["kind"] == "action_error"]
                     self.assertEqual(len(errors), 1, errors)
                     self.assertIn("answer task mismatch", json.dumps(errors[0]))
-                    self.assertTrue(any("answer task mismatch" in text for text in requests[3:]))
-                    self.assertEqual(result["submissions"][case["task_id"]], case["initial_content"])
+                    self.assertEqual(any("answer task mismatch" in text for text in requests[3:]),
+                                     not config.current_turn_only)
+                    self.assertEqual(result["submissions"][case["task_id"]], initial_content)
                     task = next(t for t in result["session_checkpoint"]["tasks"] if t["task_id"] == case["task_id"])
                     self.assertEqual(len(task["versions"]), 1)
 

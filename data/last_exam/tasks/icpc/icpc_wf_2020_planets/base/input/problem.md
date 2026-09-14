@@ -1,5 +1,3 @@
-# Which Planet is This?!
-
 Hide 
  Which Planet is This?! 
 

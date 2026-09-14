@@ -1,5 +1,3 @@
-# Stacking Plates
-
 Hide 
  Stacking Plates 
 

@@ -1,5 +1,3 @@
-# IChTo-2025-problem-set
-
 International Chemistry Tournament  
 8th Edition
 PROBLEM SET

@@ -1,5 +1,3 @@
-# Circular DNA
-
 Hide 
  Circular DNA 
 

@@ -1,0 +1,1350 @@
+{
+  "visibility": "maintainer_only",
+  "publisher_snapshots": {
+    "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Freetown/freetown.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Freetown/freetown.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Freetown/freetown.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/359d0471ef4983823e4ce80c16ad9715dec9cfe59ce0c7713ca72cb23aa21d7d.bin",
+      "sha256": "c7e80f6bcf0db6aaa78191c623d9650cd3fa5a335837ab31d7a4c97005dcc3c4",
+      "bytes": 501,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153646Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Freetown/freetown.pdf": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Freetown/freetown.pdf",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Freetown/freetown.pdf",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/c17536706cba3c92b4595110cfcf4bf31a5257e0e0f5f5da5d56c42fad173566.bin",
+      "sha256": "37b9b82c626e3f516f4c128e833a96a79206359b0f788e3062553b1a20ffbfe6",
+      "bytes": 34303,
+      "content_type": "application/pdf",
+      "retrieved_at_utc": "20260913T153646Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Freetown/solution.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Freetown/solution.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Freetown/solution.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/d1b52d98350ba14adb8d07504e8882189043f270404b9af02a26c0fe22e130f4.bin",
+      "sha256": "4c8ec2be749855252d0bc9e49ba18747723f27261caebafeeab8aee270c58451",
+      "bytes": 653,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153646Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/HoChiMinh/ho_chi_minh_city.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/HoChiMinh/ho_chi_minh_city.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/HoChiMinh/ho_chi_minh_city.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/e8a904e720a3f99bd6c6245e1fd9298369258b1a4ca72eed5d346bbabc4d3e2b.bin",
+      "sha256": "b93bff79df39cf1196b31663d1f1f8513e1c40fa0ded08658dd8219c2bba86da",
+      "bytes": 428,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153646Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/HoChiMinh/solution.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/HoChiMinh/solution.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/HoChiMinh/solution.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/41adb177c89dae072f08e21794b7295cded3cc296b925d676980f3c423db4792.bin",
+      "sha256": "561b47f0dd12211bf758459113cb86c44423089f146550951eaa57b77bd9f307",
+      "bytes": 900,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153646Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Istanbul/istanbul.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Istanbul/istanbul.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Istanbul/istanbul.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/48f6cfad7fb08e8eb17263ccc803c16b4a17cd90dc1054e3263ec6ea00b126cd.bin",
+      "sha256": "b2c36d3d3f40545ccc29386695f11f58de95c5c5009b35b0c0314106c4251b44",
+      "bytes": 1045,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153646Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Istanbul/solution.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Istanbul/solution.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Istanbul/solution.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/fe153d7e4a2eb3828bbac23074cd7202fd1455b60d6f020eabbc75cd3de19d1a.bin",
+      "sha256": "a3e76f56c3f3cbda67d0c6613b2c429acd328e864b161a659153acb234cb0898",
+      "bytes": 1233,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153646Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewOrleans/new_orleans.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewOrleans/new_orleans.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewOrleans/new_orleans.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/828a8357321a75d41ad6717e22bedd52c2544d76d5f063efdbf11db58b7f61a4.bin",
+      "sha256": "7892d8b38699932c14710df0bf8c62205727cc5783a8e0606ec5cc14f95345ed",
+      "bytes": 1315,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153646Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewOrleans/solution.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewOrleans/solution.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewOrleans/solution.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/f3c7d58ec71609fab9f287474bce0a9a7e09a6fec47c76f26d1412ba45aaa486.bin",
+      "sha256": "856169c6e8e252bb76786dddb8620eddaf50de55b923752ab7ec2eb64b9aa503",
+      "bytes": 1586,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153646Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewYorkCity/new_york_city.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewYorkCity/new_york_city.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewYorkCity/new_york_city.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/8575183965876cea37d5d0dd4e596a685a74090164794f850c415a755624e834.bin",
+      "sha256": "af5eb15c46d05d7d8cdf8262bea57d93c7a73995882c1dd10fd5774a6a9be8d1",
+      "bytes": 3078,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153646Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewYorkCity/solution.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewYorkCity/solution.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewYorkCity/solution.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/13289b6e1ef469862d2ba1e3254b3092fb25ecbde754d60538afd4225e816dea.bin",
+      "sha256": "494ac46358819eb7eb55ab1a4b69b01f40e4375ec43b66f40323b3b3399fe8a9",
+      "bytes": 166,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153646Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Warrants1/w1.3/solution.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Warrants1/w1.3/solution.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Warrants1/w1.3/solution.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/0ca56d2d84056d8f0185c94ab3f334b8f67826644f02ca5412bd6a56a361f2e3.bin",
+      "sha256": "b2741b784a353b0ba18a1734b3c2344f459f7e7bb6b9b028ace8c34a6f29b67f",
+      "bytes": 280,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153646Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Warrants1/w1.3/w1.3.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Warrants1/w1.3/w1.3.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Warrants1/w1.3/w1.3.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/278033baf0295540b5b9ef04f7a861975da3fbec6292062dbb98927fe58b67c0.bin",
+      "sha256": "55e9a2d6a4798430d74a277a9690e75180e5b376a8367a7a7fceafb536b047af",
+      "bytes": 5495,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153647Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/capetown.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/capetown.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/capetown.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/f23efb8d974a8780559f9a5e6ede96403d8021413debb852dc3fc80a3d9392d7.bin",
+      "sha256": "8eee3c8816c94a19ed8a487d4be6c5bd9e097b87e4cd770bb10270c956f5e333",
+      "bytes": 5061,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153647Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze1.jpg": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze1.jpg",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze1.jpg",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/aba8cecb0b7f716a619b90b4d98d695a787ae4e0fe7e2de006559ddcb18c16ff.bin",
+      "sha256": "51cca96bd35272a90013cb7ea2b5727e510156b0d2f52248a2808aa238fea237",
+      "bytes": 21316,
+      "content_type": "image/jpeg",
+      "retrieved_at_utc": "20260913T153647Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze2.jpg": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze2.jpg",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze2.jpg",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/e2fe66b745875e135841b8a2e0828b9d9f8d05d769393223f1dd1fa011fd6e9b.bin",
+      "sha256": "b2a19786a07089b899851a6a22dd42a5bcabd728e88b0fc47765b69c7e240108",
+      "bytes": 34253,
+      "content_type": "image/jpeg",
+      "retrieved_at_utc": "20260913T153647Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze3.jpg": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze3.jpg",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze3.jpg",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/932b2f13977b168c744265bec97d58b15fda923e39e69780a55318114ce7c3f6.bin",
+      "sha256": "5c56311e4982a440334ee319bc3d6ee94f2c194833363a200f6f60f375e3919c",
+      "bytes": 26158,
+      "content_type": "image/jpeg",
+      "retrieved_at_utc": "20260913T153647Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze4.jpg": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze4.jpg",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze4.jpg",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/415900075288f560260b0f40e0337c53987ad1b0a61293e3df7d2752bada78db.bin",
+      "sha256": "09b27a49514e7b4a3c302d278fc626cab43c278904fe74d573ba95dd1e6a97a0",
+      "bytes": 23455,
+      "content_type": "image/jpeg",
+      "retrieved_at_utc": "20260913T153647Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze5.jpg": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze5.jpg",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze5.jpg",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/cc1174a553cf2e49f65dc90b5e8d8751f3ed4aa6f9cb85fc01e3925278b99792.bin",
+      "sha256": "523759471fb968427c8c9c8163b6f2f03619b79b2f2663c58519175ff392070f",
+      "bytes": 28100,
+      "content_type": "image/jpeg",
+      "retrieved_at_utc": "20260913T153647Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/mice1.jpg": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/mice1.jpg",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/mice1.jpg",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/51f78ffd5f718b78552b51a8ecb463e81b9a12517a54cc5e2197f81ec46424e7.bin",
+      "sha256": "d12c40ed30c58a73a8e68c129b369f35e90702501884b83b11898998ff99c042",
+      "bytes": 10893,
+      "content_type": "image/jpeg",
+      "retrieved_at_utc": "20260913T153647Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/solution.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/solution.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/solution.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/f67220fdb471018345059082e5dd42497574b988b36e5da76cd3c34b4c87f042.bin",
+      "sha256": "57afbffc94571a78e5d43b79e72b6b43d1442bbdf6ac587e67034c8f05f3aa5c",
+      "bytes": 3165,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153647Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/3Inspector/Stuttgart/solution.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Stuttgart/solution.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Stuttgart/solution.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/7ea4e7693ccfd71f2e2f391fba932a5fee0a520308430fbd6a3785865b444747.bin",
+      "sha256": "0f3befde014af8305693cee2e89943baf0ea5fc25df4961f4f5e428b0dc3ee3f",
+      "bytes": 837,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153647Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/3Inspector/Stuttgart/stuttgart.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Stuttgart/stuttgart.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Stuttgart/stuttgart.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/d5e9a7a76a0e47879b5bca597c1bf581596d8a3435d20063fd0be8ecb4d6de86.bin",
+      "sha256": "8b4c7e7094aad9549b79a13336b48ea6f919a70aeb35fbf09578c1dcb63da273",
+      "bytes": 1753,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153647Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/3Inspector/Taipei/solution.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Taipei/solution.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Taipei/solution.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/91f2054786de0ff6cf4a17f96c29bf1022e9c6a9d0ae195152bda2930aa0ff09.bin",
+      "sha256": "f3981757e0925e6ebae08cef95967a48a605c6670cfce18de0cdc899f8f9cd3f",
+      "bytes": 1295,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153647Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/3Inspector/Taipei/taipei.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Taipei/taipei.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Taipei/taipei.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/8ff65939312bebeeae2cacd77c9b7aca7740711622565bd628050989075ef714.bin",
+      "sha256": "ded2c6ef8ccf50234e20f5e7d8910a0d3aa6d0283e7b61d157e5923c7b55df08",
+      "bytes": 239,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153648Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/3Inspector/Taipei/taipei.jpg": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Taipei/taipei.jpg",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Taipei/taipei.jpg",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/4360500e37287edf08a16492df4ed53db236a723fffe8f39e16049cf34915ab8.bin",
+      "sha256": "fb231a628c980224b99fdcc1019a1e641fd415e0d7e5ed9bbd28f4a9dbc7fc24",
+      "bytes": 161469,
+      "content_type": "image/jpeg",
+      "retrieved_at_utc": "20260913T153648Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.1/solution.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.1/solution.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.1/solution.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/7ac8931f7f1695cd56f095362a077c57d0a6dbdce7a1955e74664c39b7ff29d3.bin",
+      "sha256": "663f2255a9bb863a4f6a44ce5d32b9111e5155ed323ce569bb5232267c51e680",
+      "bytes": 161,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153648Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.1/w3.1.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.1/w3.1.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.1/w3.1.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/107e2c19489ba013a4db65d7b84bdb222bf04de58e30ee69d1ae4b3ae6780df9.bin",
+      "sha256": "a49e15eda828a83ebaf29eb9cec57fa5a2e4cd3000ff13b44ad2d951c4964965",
+      "bytes": 922,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153648Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.2/solution.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.2/solution.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.2/solution.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/3d33d8b82461fe6d3939584a0af4c0c31f72475dc295791c3c0829885739f56e.bin",
+      "sha256": "01feffa023ec25747de2455160a6ed9a24bb153f847434b33f9433d0a6536184",
+      "bytes": 175,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153648Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.2/w3.2.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.2/w3.2.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.2/w3.2.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/097e16eb95d357da1d5a12e26de6f372452305b07e7cbdd1df889928f0479fe0.bin",
+      "sha256": "913d401d993a217ff9d6e5946c155529d644d80774a7d9cbacf628a5ba09050f",
+      "bytes": 3569,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153648Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/4Detective/Cambridge/cambridge.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Cambridge/cambridge.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Cambridge/cambridge.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/586bc48ef504ff0d082e63e794cfae0355a41f59b64fd933f8523fb44f13c473.bin",
+      "sha256": "59248d60cd116f013a16abe06286d2f2fa431b06f56493d04fb9013716b433f1",
+      "bytes": 755,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153648Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/4Detective/Cambridge/solution.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Cambridge/solution.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Cambridge/solution.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/96112cb4d6e266c3d00556b3116590d443bde9cb120e316ad6f94a2f5aff7cfa.bin",
+      "sha256": "1a1fe659f4c17e069a013fe47ec2bcf0485a3eea1442c86f29b3d0e91582b10c",
+      "bytes": 3166,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153648Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/nairobi-hunttime.pdf": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/nairobi-hunttime.pdf",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/nairobi-hunttime.pdf",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/8f1df3b019638d78ead01ffef6fe45f221f450b1a677ab596473bb7db0068a5a.bin",
+      "sha256": "d47ea785ca63b7b018c347be3acc9087b2123cb809f933525e438805eadb1413",
+      "bytes": 450697,
+      "content_type": "application/pdf",
+      "retrieved_at_utc": "20260913T153648Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/nairobi.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/nairobi.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/nairobi.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/7eca2e56d9201c1cc156df54fc5c95a016214fc36733f30f82dd1ebb326afd6c.bin",
+      "sha256": "233846920ca6fc38e0dd13a56e97bc832b8cba51437f48f5becc1345baa3e320",
+      "bytes": 4129,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153648Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/pie.jpg": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/pie.jpg",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/pie.jpg",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/5f0dfd5f0030b057f8f4bb9284740170d625871a29d4fcaf826bdf4f25681ab9.bin",
+      "sha256": "f6991e53f4683cfe1f55efa9dd81153d728ecdbf87e5967bc814160261c8a79e",
+      "bytes": 9841,
+      "content_type": "image/jpeg",
+      "retrieved_at_utc": "20260913T153648Z"
+    },
+    "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/solution.html": {
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/solution.html",
+      "final_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/solution.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/f632254efac69e0c8f35f11121e54a2ec469b33f4a169daaeb777a17c35146cd.bin",
+      "sha256": "28b8b1a047d4dc0d83fbbe5ca8f8eb7d0223e1bd9d112b72d0cf5b0c11758e05",
+      "bytes": 1613,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153649Z"
+    },
+    "https://puzzles.mit.edu/2006/puzzles/logo.png": {
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/logo.png",
+      "final_url": "https://puzzles.mit.edu/2006/puzzles/logo.png",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/d7af35745b7bd21ba2eb9a73e7f8e7217e91ff8a9a58ddf6d351414331b1ac11.bin",
+      "sha256": "d9191c7f793507c0e40af840d821b0430d30fe082f11b7038015da25a0ab3f77",
+      "bytes": 1527,
+      "content_type": "image/png",
+      "retrieved_at_utc": "20260913T153649Z"
+    },
+    "https://puzzles.mit.edu/2006/puzzles/moscow/line-background.jpg": {
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/line-background.jpg",
+      "final_url": "https://puzzles.mit.edu/2006/puzzles/moscow/line-background.jpg",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/c5f4f51f1588033779452a890a16f887f5bc2b8d76b912a3e528fe7161e8557a.bin",
+      "sha256": "b3e3ba5d8ffd50d9eaae16353e04f29d2920d20401575dc69a1ed318ce413311",
+      "bytes": 871,
+      "content_type": "image/jpeg",
+      "retrieved_at_utc": "20260913T153649Z"
+    },
+    "https://puzzles.mit.edu/2006/puzzles/moscow/marble-background.jpg": {
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/marble-background.jpg",
+      "final_url": "https://puzzles.mit.edu/2006/puzzles/moscow/marble-background.jpg",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/59e142690eef139b696eb82db47dcad3623d247195c0d3a34f8843f60656b4cc.bin",
+      "sha256": "39542e8899e663a964894a81da4be5f287e158ba2d50ebedbda8eda66d2de6b4",
+      "bytes": 15892,
+      "content_type": "image/jpeg",
+      "retrieved_at_utc": "20260913T153649Z"
+    },
+    "https://puzzles.mit.edu/2006/puzzles/moscow/name-background.gif": {
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/name-background.gif",
+      "final_url": "https://puzzles.mit.edu/2006/puzzles/moscow/name-background.gif",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/fad9b3385b337e038cc21833bf7f86f3a813cb3fe8dfbb68e0c4824f8979ad2c.bin",
+      "sha256": "6eff2001277ab178d19a69da1e28fe3b1ee8b63d457c0345132cdb5c6a83d623",
+      "bytes": 24318,
+      "content_type": "image/gif",
+      "retrieved_at_utc": "20260913T153649Z"
+    },
+    "https://puzzles.mit.edu/2006/puzzles/moscow/puzzle.css": {
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/puzzle.css",
+      "final_url": "https://puzzles.mit.edu/2006/puzzles/moscow/puzzle.css",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/a29a1d71cdbf602f8207dfcc9b265b963d78c7120ae2e371507cee2e799a04f6.bin",
+      "sha256": "c2b1b34cbf89e066f0e06f7bc1645486be703c653442f67b187806c0b5254c5a",
+      "bytes": 1570,
+      "content_type": "text/css",
+      "retrieved_at_utc": "20260913T153649Z"
+    },
+    "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/": {
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/",
+      "final_url": "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/64353f8aa1989f42725d9fcccba5d54878b588bbe511f8acf0f2ce1ae8116637.bin",
+      "sha256": "b69477d90c300242221cb43f6b562361e248e71ca02cbdff4b44ef86c9da3b03",
+      "bytes": 1281,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153649Z"
+    },
+    "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/answer/solution.html": {
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/answer/solution.html",
+      "final_url": "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/answer/solution.html",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/203226f295c8b20c794b91fdae7a90b6c28a74bb74dc40dbff3dc5b23345f513.bin",
+      "sha256": "1b7b4770fa832bd5f1c148661e49d56f48809c86adb13644faa6bda299487c18",
+      "bytes": 929,
+      "content_type": "text/html",
+      "retrieved_at_utc": "20260913T153649Z"
+    },
+    "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/invitation.jpg": {
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/invitation.jpg",
+      "final_url": "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/invitation.jpg",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/6e1a2e269178ea60c3774d033fa052b216685d06eda4fbb9bf6bbae697bcbd63.bin",
+      "sha256": "e804f72acc72f3ee3214c732840cc50fbebf3ff89f82662e00ebc699e66df5e8",
+      "bytes": 125442,
+      "content_type": "image/jpeg",
+      "retrieved_at_utc": "20260913T153649Z"
+    },
+    "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/line.gif": {
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/line.gif",
+      "final_url": "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/line.gif",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/df344412238ba929cc0b8f7d7dcae9962b90fe63310e9cb8ffd0b0e3b5d2e411.bin",
+      "sha256": "191668d4cbe47013b7dd0ca34a4c18d95b73f1b0eb04cb3ecf5f9b1ed5e64720",
+      "bytes": 1937,
+      "content_type": "image/gif",
+      "retrieved_at_utc": "20260913T153649Z"
+    },
+    "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/name.gif": {
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/name.gif",
+      "final_url": "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/name.gif",
+      "path": "data/.cache/mystery_hunt_repair_20260913/publisher/380f7157ce6b940545be9f2bdd7a1bfc6ddff2ed03510e6b25832bb21fab4101.bin",
+      "sha256": "55a62846557d401dc3ecad522e0d9c232385ccff17064f59c894446cde6f1e64",
+      "bytes": 5759,
+      "content_type": "image/gif",
+      "retrieved_at_utc": "20260913T153649Z"
+    }
+  },
+  "reviews": {
+    "mystery_hunt_00002": {
+      "puzzle_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Freetown/freetown.html",
+      "solution_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Freetown/solution.html",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_1Gumshoe_Freetown_freetown.html/freetown.html",
+      "answer_verified": true,
+      "edits": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ],
+      "public_files": 2,
+      "direct_answer_disclosure_removed": false
+    },
+    "mystery_hunt_00003": {
+      "puzzle_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/HoChiMinh/ho_chi_minh_city.html",
+      "solution_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/HoChiMinh/solution.html",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_1Gumshoe_HoChiMinh_ho_chi_minh_city.html/ho_chi_minh_city.html",
+      "answer_verified": true,
+      "edits": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ],
+      "public_files": 1,
+      "direct_answer_disclosure_removed": false
+    },
+    "mystery_hunt_00004": {
+      "puzzle_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Istanbul/istanbul.html",
+      "solution_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Istanbul/solution.html",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_1Gumshoe_Istanbul_istanbul.html/istanbul.html",
+      "answer_verified": true,
+      "edits": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ],
+      "public_files": 1,
+      "direct_answer_disclosure_removed": false
+    },
+    "mystery_hunt_00006": {
+      "puzzle_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewOrleans/new_orleans.html",
+      "solution_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewOrleans/solution.html",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_1Gumshoe_NewOrleans_new_orleans.html/new_orleans.html",
+      "answer_verified": true,
+      "edits": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ],
+      "public_files": 1,
+      "direct_answer_disclosure_removed": false
+    },
+    "mystery_hunt_00007": {
+      "puzzle_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewYorkCity/new_york_city.html",
+      "solution_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewYorkCity/solution.html",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_1Gumshoe_NewYorkCity_new_york_city.html/new_york_city.html",
+      "answer_verified": true,
+      "edits": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ],
+      "public_files": 1,
+      "direct_answer_disclosure_removed": false
+    },
+    "mystery_hunt_00014": {
+      "puzzle_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Warrants1/w1.3/w1.3.html",
+      "solution_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Warrants1/w1.3/solution.html",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_1Gumshoe_Warrants1_w1.3_w1.3.html/w1.3.html",
+      "answer_verified": true,
+      "edits": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ],
+      "public_files": 1,
+      "direct_answer_disclosure_removed": false
+    },
+    "mystery_hunt_00028": {
+      "puzzle_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/capetown.html",
+      "solution_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/solution.html",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_3Inspector_Capetown_capetown.html/capetown.html",
+      "answer_verified": true,
+      "edits": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ],
+      "public_files": 7,
+      "direct_answer_disclosure_removed": false
+    },
+    "mystery_hunt_00032": {
+      "puzzle_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Stuttgart/stuttgart.html",
+      "solution_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Stuttgart/solution.html",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_3Inspector_Stuttgart_stuttgart.html/stuttgart.html",
+      "answer_verified": true,
+      "edits": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ],
+      "public_files": 1,
+      "direct_answer_disclosure_removed": false
+    },
+    "mystery_hunt_00033": {
+      "puzzle_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Taipei/taipei.html",
+      "solution_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Taipei/solution.html",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_3Inspector_Taipei_taipei.html/taipei.html",
+      "answer_verified": true,
+      "edits": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ],
+      "public_files": 2,
+      "direct_answer_disclosure_removed": false
+    },
+    "mystery_hunt_00035": {
+      "puzzle_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.1/w3.1.html",
+      "solution_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.1/solution.html",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_3Inspector_Warrants3_w3.1_w3.1.html/w3.1.html",
+      "answer_verified": true,
+      "edits": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ],
+      "public_files": 1,
+      "direct_answer_disclosure_removed": false
+    },
+    "mystery_hunt_00036": {
+      "puzzle_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.2/w3.2.html",
+      "solution_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.2/solution.html",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_3Inspector_Warrants3_w3.2_w3.2.html/w3.2.html",
+      "answer_verified": true,
+      "edits": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ],
+      "public_files": 1,
+      "direct_answer_disclosure_removed": false
+    },
+    "mystery_hunt_00038": {
+      "puzzle_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Cambridge/cambridge.html",
+      "solution_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Cambridge/solution.html",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_4Detective_Cambridge_cambridge.html/cambridge.html",
+      "answer_verified": true,
+      "edits": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ],
+      "public_files": 1,
+      "direct_answer_disclosure_removed": false
+    },
+    "mystery_hunt_00044": {
+      "puzzle_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/nairobi.html",
+      "solution_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/solution.html",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_4Detective_Nairobi_nairobi.html/nairobi.html",
+      "answer_verified": true,
+      "edits": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ],
+      "public_files": 3,
+      "direct_answer_disclosure_removed": false
+    },
+    "mystery_hunt_00819": {
+      "puzzle_url": "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/",
+      "solution_url": "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/answer/solution.html",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/2006/2006_puzzles_moscow_russian_brunch/index.html",
+      "answer_verified": true,
+      "edits": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive navigation and answer/solution controls",
+          "removed": "<div id=\"nav\">\r\r\n<a href=\"../\"><img src=\"../citylink.gif\" alt=\"City Map\" /></a>\r\r\n<a href=\"../../\"><img src=\"../../worldlink.gif\" alt=\"World Map\" /></a>\r\r\n<a href=\"answer/\"><img src=\"../../checklink.gif\" alt=\"Check Answer\" /></a>\r\n<a href=\"answer/solution.html\"><img src=\"../../solution.gif\" alt=\"Solution\" /></a>\r\r\n</div>",
+          "replacement": ""
+        },
+        {
+          "reason": "post-event final-answer disclosure",
+          "removed": "<p class=\"text\"><b>This event has occured.  The answer is SNIFF.</b></p>",
+          "replacement": ""
+        },
+        {
+          "reason": "local stylesheet path",
+          "removed": "href=\"../puzzle.css\"",
+          "replacement": "href=\"media/puzzle.css\""
+        },
+        {
+          "reason": "local image path",
+          "removed": "src=\"line.gif\"",
+          "replacement": "src=\"media/line.gif\""
+        },
+        {
+          "reason": "local image path",
+          "removed": "src=\"name.gif\"",
+          "replacement": "src=\"media/name.gif\""
+        },
+        {
+          "reason": "local image path",
+          "removed": "src=\"invitation.jpg\"",
+          "replacement": "src=\"media/invitation.jpg\""
+        }
+      ],
+      "public_files": 9,
+      "direct_answer_disclosure_removed": true
+    }
+  },
+  "files": [
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00002/input/puzzle.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00002/input/puzzle.html",
+      "sha256": "ef25e8ba4b0f0603966c7bbf295217608ea28a96cc021f3a45e68eefa40fb7fa",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_1Gumshoe_Freetown_freetown.html/freetown.html",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Freetown/freetown.html",
+      "derivation": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00002/input/freetown.pdf",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00002/input/freetown.pdf",
+      "sha256": "37b9b82c626e3f516f4c128e833a96a79206359b0f788e3062553b1a20ffbfe6",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_1Gumshoe_Freetown_freetown.html/freetown.pdf",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Freetown/freetown.pdf",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00002/judge/solution.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00002/judge/solution.html",
+      "sha256": "4c8ec2be749855252d0bc9e49ba18747723f27261caebafeeab8aee270c58451",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/d1b52d98350ba14adb8d07504e8882189043f270404b9af02a26c0fe22e130f4.bin",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Freetown/solution.html",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00003/input/puzzle.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00003/input/puzzle.html",
+      "sha256": "4c0bb49306008b283afeb74edaabf2a0f70db8b4401cb1f5a713137e15d01924",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_1Gumshoe_HoChiMinh_ho_chi_minh_city.html/ho_chi_minh_city.html",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/HoChiMinh/ho_chi_minh_city.html",
+      "derivation": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00003/judge/solution.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00003/judge/solution.html",
+      "sha256": "561b47f0dd12211bf758459113cb86c44423089f146550951eaa57b77bd9f307",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/41adb177c89dae072f08e21794b7295cded3cc296b925d676980f3c423db4792.bin",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/HoChiMinh/solution.html",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00004/input/puzzle.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00004/input/puzzle.html",
+      "sha256": "349f48573ee63b729f32fa3c2af410aa6070d43a53445ad6b6ee8287b78625c8",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_1Gumshoe_Istanbul_istanbul.html/istanbul.html",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Istanbul/istanbul.html",
+      "derivation": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00004/judge/solution.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00004/judge/solution.html",
+      "sha256": "a3e76f56c3f3cbda67d0c6613b2c429acd328e864b161a659153acb234cb0898",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/fe153d7e4a2eb3828bbac23074cd7202fd1455b60d6f020eabbc75cd3de19d1a.bin",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Istanbul/solution.html",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00006/input/puzzle.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00006/input/puzzle.html",
+      "sha256": "08441fbe7c0b6112352fe35c616b61efb109084c2a8f6945485b1e29007e9caf",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_1Gumshoe_NewOrleans_new_orleans.html/new_orleans.html",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewOrleans/new_orleans.html",
+      "derivation": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00006/judge/solution.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00006/judge/solution.html",
+      "sha256": "856169c6e8e252bb76786dddb8620eddaf50de55b923752ab7ec2eb64b9aa503",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/f3c7d58ec71609fab9f287474bce0a9a7e09a6fec47c76f26d1412ba45aaa486.bin",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewOrleans/solution.html",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00007/input/puzzle.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00007/input/puzzle.html",
+      "sha256": "677bf848f0ae3de5d72d4ec79835461d944e1d795d9cb6c5abce5baf335b2294",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_1Gumshoe_NewYorkCity_new_york_city.html/new_york_city.html",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewYorkCity/new_york_city.html",
+      "derivation": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00007/judge/solution.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00007/judge/solution.html",
+      "sha256": "494ac46358819eb7eb55ab1a4b69b01f40e4375ec43b66f40323b3b3399fe8a9",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/13289b6e1ef469862d2ba1e3254b3092fb25ecbde754d60538afd4225e816dea.bin",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/NewYorkCity/solution.html",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00014/input/puzzle.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00014/input/puzzle.html",
+      "sha256": "1dc88a41489f792206134e4c003c93a6355728494b04d374fd01ec0acdc3fc64",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_1Gumshoe_Warrants1_w1.3_w1.3.html/w1.3.html",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Warrants1/w1.3/w1.3.html",
+      "derivation": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00014/judge/solution.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00014/judge/solution.html",
+      "sha256": "b2741b784a353b0ba18a1734b3c2344f459f7e7bb6b9b028ace8c34a6f29b67f",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/0ca56d2d84056d8f0185c94ab3f334b8f67826644f02ca5412bd6a56a361f2e3.bin",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/1Gumshoe/Warrants1/w1.3/solution.html",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00028/input/puzzle.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00028/input/puzzle.html",
+      "sha256": "d1db8ea133bf89fd1ee7c14a2ba74e08f25c5e27abca60fed8e6136dd7ab9d61",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_3Inspector_Capetown_capetown.html/capetown.html",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/capetown.html",
+      "derivation": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00028/input/mice1.jpg",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00028/input/mice1.jpg",
+      "sha256": "d12c40ed30c58a73a8e68c129b369f35e90702501884b83b11898998ff99c042",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_3Inspector_Capetown_capetown.html/mice1.jpg",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/mice1.jpg",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00028/input/maze3.jpg",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00028/input/maze3.jpg",
+      "sha256": "5c56311e4982a440334ee319bc3d6ee94f2c194833363a200f6f60f375e3919c",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_3Inspector_Capetown_capetown.html/maze3.jpg",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze3.jpg",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00028/input/maze2.jpg",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00028/input/maze2.jpg",
+      "sha256": "b2a19786a07089b899851a6a22dd42a5bcabd728e88b0fc47765b69c7e240108",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_3Inspector_Capetown_capetown.html/maze2.jpg",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze2.jpg",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00028/input/maze4.jpg",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00028/input/maze4.jpg",
+      "sha256": "09b27a49514e7b4a3c302d278fc626cab43c278904fe74d573ba95dd1e6a97a0",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_3Inspector_Capetown_capetown.html/maze4.jpg",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze4.jpg",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00028/input/maze1.jpg",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00028/input/maze1.jpg",
+      "sha256": "51cca96bd35272a90013cb7ea2b5727e510156b0d2f52248a2808aa238fea237",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_3Inspector_Capetown_capetown.html/maze1.jpg",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze1.jpg",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00028/input/maze5.jpg",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00028/input/maze5.jpg",
+      "sha256": "523759471fb968427c8c9c8163b6f2f03619b79b2f2663c58519175ff392070f",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_3Inspector_Capetown_capetown.html/maze5.jpg",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/maze5.jpg",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00028/judge/solution.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00028/judge/solution.html",
+      "sha256": "57afbffc94571a78e5d43b79e72b6b43d1442bbdf6ac587e67034c8f05f3aa5c",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/f67220fdb471018345059082e5dd42497574b988b36e5da76cd3c34b4c87f042.bin",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Capetown/solution.html",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00032/input/puzzle.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00032/input/puzzle.html",
+      "sha256": "c377f6782a62d8a6bcc134d8dc3779170806c3b6c14138432290f474df894cf5",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_3Inspector_Stuttgart_stuttgart.html/stuttgart.html",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Stuttgart/stuttgart.html",
+      "derivation": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00032/judge/solution.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00032/judge/solution.html",
+      "sha256": "0f3befde014af8305693cee2e89943baf0ea5fc25df4961f4f5e428b0dc3ee3f",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/7ea4e7693ccfd71f2e2f391fba932a5fee0a520308430fbd6a3785865b444747.bin",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Stuttgart/solution.html",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00033/input/puzzle.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00033/input/puzzle.html",
+      "sha256": "7981310a8a938bb271f06a1aa30e5c0751594a0bd2dea37eb71f4995fe5756f4",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_3Inspector_Taipei_taipei.html/taipei.html",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Taipei/taipei.html",
+      "derivation": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00033/input/taipei.jpg",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00033/input/taipei.jpg",
+      "sha256": "fb231a628c980224b99fdcc1019a1e641fd415e0d7e5ed9bbd28f4a9dbc7fc24",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_3Inspector_Taipei_taipei.html/taipei.jpg",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Taipei/taipei.jpg",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00033/judge/solution.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00033/judge/solution.html",
+      "sha256": "f3981757e0925e6ebae08cef95967a48a605c6670cfce18de0cdc899f8f9cd3f",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/91f2054786de0ff6cf4a17f96c29bf1022e9c6a9d0ae195152bda2930aa0ff09.bin",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Taipei/solution.html",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00035/input/puzzle.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00035/input/puzzle.html",
+      "sha256": "9efb52f543b5dbc706d9abc88a3ffa5d5a69d87c591e9084f02e13559925f897",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_3Inspector_Warrants3_w3.1_w3.1.html/w3.1.html",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.1/w3.1.html",
+      "derivation": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00035/judge/solution.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00035/judge/solution.html",
+      "sha256": "663f2255a9bb863a4f6a44ce5d32b9111e5155ed323ce569bb5232267c51e680",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/7ac8931f7f1695cd56f095362a077c57d0a6dbdce7a1955e74664c39b7ff29d3.bin",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.1/solution.html",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00036/input/puzzle.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00036/input/puzzle.html",
+      "sha256": "2775b02a31ba378aa2e7d5e00c3fa772d4016297ded9346e44b086b97c7f53c1",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_3Inspector_Warrants3_w3.2_w3.2.html/w3.2.html",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.2/w3.2.html",
+      "derivation": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00036/judge/solution.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00036/judge/solution.html",
+      "sha256": "01feffa023ec25747de2455160a6ed9a24bb153f847434b33f9433d0a6536184",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/3d33d8b82461fe6d3939584a0af4c0c31f72475dc295791c3c0829885739f56e.bin",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/3Inspector/Warrants3/w3.2/solution.html",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00038/input/puzzle.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00038/input/puzzle.html",
+      "sha256": "fb19d5de96d127db48153471eb502ca0d03ef3bf581b1dbbec81f026b9b70643",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_4Detective_Cambridge_cambridge.html/cambridge.html",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Cambridge/cambridge.html",
+      "derivation": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00038/judge/solution.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00038/judge/solution.html",
+      "sha256": "1a1fe659f4c17e069a013fe47ec2bcf0485a3eea1442c86f29b3d0e91582b10c",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/96112cb4d6e266c3d00556b3116590d443bde9cb120e316ad6f94a2f5aff7cfa.bin",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Cambridge/solution.html",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00044/input/puzzle.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00044/input/puzzle.html",
+      "sha256": "d5d0fe382f9eeaca613ef7eddcdb98969903cd7e06108032a2344bfcbe76f090",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_4Detective_Nairobi_nairobi.html/nairobi.html",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/nairobi.html",
+      "derivation": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive solution navigation",
+          "removed": "<a href=\"solution.html\">Solution</a>",
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00044/input/pie.jpg",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00044/input/pie.jpg",
+      "sha256": "f6991e53f4683cfe1f55efa9dd81153d728ecdbf87e5967bc814160261c8a79e",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_4Detective_Nairobi_nairobi.html/pie.jpg",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/pie.jpg",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00044/input/nairobi-hunttime.pdf",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00044/input/nairobi-hunttime.pdf",
+      "sha256": "d47ea785ca63b7b018c347be3acc9087b2123cb809f933525e438805eadb1413",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/1999/1999_puzzles_4Detective_Nairobi_nairobi.html/nairobi-hunttime.pdf",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/nairobi-hunttime.pdf",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00044/judge/solution.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00044/judge/solution.html",
+      "sha256": "28b8b1a047d4dc0d83fbbe5ca8f8eb7d0223e1bd9d112b72d0cf5b0c11758e05",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/f632254efac69e0c8f35f11121e54a2ec469b33f4a169daaeb777a17c35146cd.bin",
+      "source_url": "https://puzzles.mit.edu/1999/puzzles/4Detective/Nairobi/solution.html",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00819/input/puzzle.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/puzzle.html",
+      "sha256": "cf230b2e068b94b7cf2e258fb95b679f2dfb6f924e235a4cece1b30574e07431",
+      "original_source": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/2006/2006_puzzles_moscow_russian_brunch/index.html",
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/",
+      "derivation": [
+        {
+          "reason": "archive answer-checking script",
+          "removed": "<script type=\"module\" src=\"/checkanswer.js\"></script>",
+          "replacement": ""
+        },
+        {
+          "reason": "archive navigation and answer/solution controls",
+          "removed": "<div id=\"nav\">\r\r\n<a href=\"../\"><img src=\"../citylink.gif\" alt=\"City Map\" /></a>\r\r\n<a href=\"../../\"><img src=\"../../worldlink.gif\" alt=\"World Map\" /></a>\r\r\n<a href=\"answer/\"><img src=\"../../checklink.gif\" alt=\"Check Answer\" /></a>\r\n<a href=\"answer/solution.html\"><img src=\"../../solution.gif\" alt=\"Solution\" /></a>\r\r\n</div>",
+          "replacement": ""
+        },
+        {
+          "reason": "post-event final-answer disclosure",
+          "removed": "<p class=\"text\"><b>This event has occured.  The answer is SNIFF.</b></p>",
+          "replacement": ""
+        },
+        {
+          "reason": "local stylesheet path",
+          "removed": "href=\"../puzzle.css\"",
+          "replacement": "href=\"media/puzzle.css\""
+        },
+        {
+          "reason": "local image path",
+          "removed": "src=\"line.gif\"",
+          "replacement": "src=\"media/line.gif\""
+        },
+        {
+          "reason": "local image path",
+          "removed": "src=\"name.gif\"",
+          "replacement": "src=\"media/name.gif\""
+        },
+        {
+          "reason": "local image path",
+          "removed": "src=\"invitation.jpg\"",
+          "replacement": "src=\"media/invitation.jpg\""
+        }
+      ]
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00819/input/media/line.gif",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/media/line.gif",
+      "sha256": "191668d4cbe47013b7dd0ca34a4c18d95b73f1b0eb04cb3ecf5f9b1ed5e64720",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/df344412238ba929cc0b8f7d7dcae9962b90fe63310e9cb8ffd0b0e3b5d2e411.bin",
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/line.gif",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00819/input/media/name.gif",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/media/name.gif",
+      "sha256": "55a62846557d401dc3ecad522e0d9c232385ccff17064f59c894446cde6f1e64",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/380f7157ce6b940545be9f2bdd7a1bfc6ddff2ed03510e6b25832bb21fab4101.bin",
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/name.gif",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00819/input/media/invitation.jpg",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/media/invitation.jpg",
+      "sha256": "e804f72acc72f3ee3214c732840cc50fbebf3ff89f82662e00ebc699e66df5e8",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/6e1a2e269178ea60c3774d033fa052b216685d06eda4fbb9bf6bbae697bcbd63.bin",
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/invitation.jpg",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00819/input/media/puzzle.css",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/media/puzzle.css",
+      "sha256": "8e105aed9cea1c0e57e9046b45aeaf11b3bc4cb15f599caca90922681a024a28",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/a29a1d71cdbf602f8207dfcc9b265b963d78c7120ae2e371507cee2e799a04f6.bin",
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/puzzle.css",
+      "derivation": "Relink the original logo dependency within the local media directory; all style declarations retained."
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00819/input/media/marble-background.jpg",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/media/marble-background.jpg",
+      "sha256": "39542e8899e663a964894a81da4be5f287e158ba2d50ebedbda8eda66d2de6b4",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/59e142690eef139b696eb82db47dcad3623d247195c0d3a34f8843f60656b4cc.bin",
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/marble-background.jpg",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00819/input/media/line-background.jpg",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/media/line-background.jpg",
+      "sha256": "b3e3ba5d8ffd50d9eaae16353e04f29d2920d20401575dc69a1ed318ce413311",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/c5f4f51f1588033779452a890a16f887f5bc2b8d76b912a3e528fe7161e8557a.bin",
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/line-background.jpg",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00819/input/media/name-background.gif",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/media/name-background.gif",
+      "sha256": "6eff2001277ab178d19a69da1e28fe3b1ee8b63d457c0345132cdb5c6a83d623",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/fad9b3385b337e038cc21833bf7f86f3a813cb3fe8dfbb68e0c4824f8979ad2c.bin",
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/name-background.gif",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00819/input/media/logo.png",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/media/logo.png",
+      "sha256": "d9191c7f793507c0e40af840d821b0430d30fe082f11b7038015da25a0ab3f77",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/d7af35745b7bd21ba2eb9a73e7f8e7217e91ff8a9a58ddf6d351414331b1ac11.bin",
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/logo.png",
+      "derivation": null
+    },
+    {
+      "source": "data/.cache/mystery_hunt_repair_20260913/prepared/mystery_hunt_00819/judge/solution.html",
+      "destination": "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/judge/solution.html",
+      "sha256": "1b7b4770fa832bd5f1c148661e49d56f48809c86adb13644faa6bda299487c18",
+      "original_source": "data/.cache/mystery_hunt_repair_20260913/publisher/203226f295c8b20c794b91fdae7a90b6c28a74bb74dc40dbff3dc5b23345f513.bin",
+      "source_url": "https://puzzles.mit.edu/2006/puzzles/moscow/russian_brunch/answer/solution.html",
+      "derivation": null
+    }
+  ],
+  "excluded_staged_puzzles": {
+    "mystery_hunt_00009": "Prague needs staged physical pickups and historical executable handling; not opened as an all-at-start packet.",
+    "mystery_hunt_00015": "Charlotte Amalie gives each team one of five scripts; not flattened into a shared all-role packet."
+  },
+  "preserved_answer_word_hits": {
+    "mystery_hunt_00112": "ISOLATION is a source clue word in the scrambled text.",
+    "mystery_hunt_00113": "RISING is a source list entry, not a disclosed result."
+  },
+  "visual_review": {
+    "status": "reviewed",
+    "html_records": [
+      "mystery_hunt_00002",
+      "mystery_hunt_00003",
+      "mystery_hunt_00004",
+      "mystery_hunt_00006",
+      "mystery_hunt_00007",
+      "mystery_hunt_00014",
+      "mystery_hunt_00028",
+      "mystery_hunt_00032",
+      "mystery_hunt_00033",
+      "mystery_hunt_00035",
+      "mystery_hunt_00036",
+      "mystery_hunt_00038",
+      "mystery_hunt_00044",
+      "mystery_hunt_00819"
+    ],
+    "pdf_pages_inspected": 4,
+    "pdf_sources_unchanged": true,
+    "html_renderer": "Google Chrome headless; isolated task-specific profile; local sanitized files",
+    "pdf_renderer": "Poppler pdftoppm 110 DPI",
+    "reviewed_asset_hashes": {
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00002/input/puzzle.html": "ef25e8ba4b0f0603966c7bbf295217608ea28a96cc021f3a45e68eefa40fb7fa",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00002/input/freetown.pdf": "37b9b82c626e3f516f4c128e833a96a79206359b0f788e3062553b1a20ffbfe6",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00003/input/puzzle.html": "4c0bb49306008b283afeb74edaabf2a0f70db8b4401cb1f5a713137e15d01924",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00004/input/puzzle.html": "349f48573ee63b729f32fa3c2af410aa6070d43a53445ad6b6ee8287b78625c8",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00006/input/puzzle.html": "08441fbe7c0b6112352fe35c616b61efb109084c2a8f6945485b1e29007e9caf",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00007/input/puzzle.html": "677bf848f0ae3de5d72d4ec79835461d944e1d795d9cb6c5abce5baf335b2294",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00014/input/puzzle.html": "1dc88a41489f792206134e4c003c93a6355728494b04d374fd01ec0acdc3fc64",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00028/input/puzzle.html": "d1db8ea133bf89fd1ee7c14a2ba74e08f25c5e27abca60fed8e6136dd7ab9d61",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00028/input/mice1.jpg": "d12c40ed30c58a73a8e68c129b369f35e90702501884b83b11898998ff99c042",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00028/input/maze3.jpg": "5c56311e4982a440334ee319bc3d6ee94f2c194833363a200f6f60f375e3919c",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00028/input/maze2.jpg": "b2a19786a07089b899851a6a22dd42a5bcabd728e88b0fc47765b69c7e240108",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00028/input/maze4.jpg": "09b27a49514e7b4a3c302d278fc626cab43c278904fe74d573ba95dd1e6a97a0",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00028/input/maze1.jpg": "51cca96bd35272a90013cb7ea2b5727e510156b0d2f52248a2808aa238fea237",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00028/input/maze5.jpg": "523759471fb968427c8c9c8163b6f2f03619b79b2f2663c58519175ff392070f",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00032/input/puzzle.html": "c377f6782a62d8a6bcc134d8dc3779170806c3b6c14138432290f474df894cf5",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00033/input/puzzle.html": "7981310a8a938bb271f06a1aa30e5c0751594a0bd2dea37eb71f4995fe5756f4",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00033/input/taipei.jpg": "fb231a628c980224b99fdcc1019a1e641fd415e0d7e5ed9bbd28f4a9dbc7fc24",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00035/input/puzzle.html": "9efb52f543b5dbc706d9abc88a3ffa5d5a69d87c591e9084f02e13559925f897",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00036/input/puzzle.html": "2775b02a31ba378aa2e7d5e00c3fa772d4016297ded9346e44b086b97c7f53c1",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00038/input/puzzle.html": "fb19d5de96d127db48153471eb502ca0d03ef3bf581b1dbbec81f026b9b70643",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00044/input/puzzle.html": "d5d0fe382f9eeaca613ef7eddcdb98969903cd7e06108032a2344bfcbe76f090",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00044/input/pie.jpg": "f6991e53f4683cfe1f55efa9dd81153d728ecdbf87e5967bc814160261c8a79e",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00044/input/nairobi-hunttime.pdf": "d47ea785ca63b7b018c347be3acc9087b2123cb809f933525e438805eadb1413",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/puzzle.html": "cf230b2e068b94b7cf2e258fb95b679f2dfb6f924e235a4cece1b30574e07431",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/media/line.gif": "191668d4cbe47013b7dd0ca34a4c18d95b73f1b0eb04cb3ecf5f9b1ed5e64720",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/media/name.gif": "55a62846557d401dc3ecad522e0d9c232385ccff17064f59c894446cde6f1e64",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/media/invitation.jpg": "e804f72acc72f3ee3214c732840cc50fbebf3ff89f82662e00ebc699e66df5e8",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/media/puzzle.css": "8e105aed9cea1c0e57e9046b45aeaf11b3bc4cb15f599caca90922681a024a28",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/media/marble-background.jpg": "39542e8899e663a964894a81da4be5f287e158ba2d50ebedbda8eda66d2de6b4",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/media/line-background.jpg": "b3e3ba5d8ffd50d9eaae16353e04f29d2920d20401575dc69a1ed318ce413311",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/media/name-background.gif": "6eff2001277ab178d19a69da1e28fe3b1ee8b63d457c0345132cdb5c6a83d623",
+      "data/raw/mystery_hunt/separated_20260913/mystery_hunt_00819/input/media/logo.png": "d9191c7f793507c0e40af840d821b0430d30fe082f11b7038015da25a0ab3f77"
+    },
+    "findings": [
+      "All fourteen rendered HTML pages inspected. No broken images, clipped final content or archive answer controls in the selected packets.",
+      "Freetown: both original PDF sides inspected; rotated letters and pentomino outlines retained without edits.",
+      "Nairobi: both original PDF pages inspected. The printed circle/spokes and ciphertext differ from the HTML variant; preserve both, including the publisher warning.",
+      "New Orleans: original two-column date table and numbered blank cells retained.",
+      "Warrant 1.3 and Capetown: preformatted character/positional layouts retained. No claim of solving or validating the stereoscopic perception task.",
+      "Taipei: both rows of thirteen tarot cards retained.",
+      "Russian Brunch: original invitation and Russian/English header graphics restored; the post-event answer paragraph and archive navigation removed.",
+      "Original tight HTML table spacing, historic source typos and scanned-page artifacts are retained; this is a source-fidelity repair, not a visual redesign."
+    ]
+  }
+}

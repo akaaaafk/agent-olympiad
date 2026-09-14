@@ -1,5 +1,3 @@
-# wsc_writing_gq_030
-
 Before 1985, you’d have had no idea how long it would take to install a program on your computer—or to save a file, or to complete an online form. (To be fair, there were no online forms.) Consider the history of the progress bar , then discuss with your team: what other activities and interactions in life would benefit from a progress bar? 
 
  Bars are not the only way to pass time. Explore the following alternatives to the standard progress bar, then discuss with your team: what are the advantages and disadvantages of each approach? 

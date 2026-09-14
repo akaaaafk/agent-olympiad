@@ -1,5 +1,3 @@
-# Maze Reduction
-
 Hide 
  Maze Reduction 
 

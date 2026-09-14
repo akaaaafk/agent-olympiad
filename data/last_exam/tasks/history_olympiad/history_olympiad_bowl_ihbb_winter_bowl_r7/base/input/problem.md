@@ -1,5 +1,3 @@
-# IHBB-Winter_Bowl-R7
-
 [Q1] The name for this object was suggested by an eleven -year old, and other suggested names for it were Zeus and Percival. When this heavenly body was discovered by Clyde Tombaugh in 1930, it disproved Percival Lowell's Planet X theory. Neil deGrasse Tyson said that allowing this object to be a planet would be an "insult" to the other planets. For ten points, name this trans -Neptunian dwarf planet in the Kuiper [[KY -per]] Belt that was once called the "Ninth Planet".
 
 [Q2] This country was governed by flight lieutenant Jerry Rawlings following a 1981 coup against the Convention People's Party. This country became the first colony in sub -Saharan Africa to achieve sovereignty under the regime of Kwame Nkrumah [[KWAH -meh en-KROO- muh]]. The only Black Secretary General of the United Nations, Kofi Annan [[KOH -fee ah- NAHN]], was originally from this country. The Ashanti once dominated, for ten points, what West African country ruled by Britain as the Gold Coast colony?

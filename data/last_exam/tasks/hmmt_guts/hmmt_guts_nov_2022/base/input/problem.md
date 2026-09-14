@@ -1,9 +1,9 @@
-# HMMT November 2022 — Guts Round
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
 
-[Page 1]
-HMMT November 2022, November 12, 2022 — GUTS ROUND
+
+
+                 HMMT November 2022, November 12, 2022 — GUTS ROUND
 
    Organization                         Team                         Team ID#
               √
@@ -16,6 +16,11 @@ HMMT November 2022, November 12, 2022 — GUTS ROUND
              3. [5] A polygon P is drawn on the 2D coordinate plane. Each side of P is either parallel to the x axis or
              the y axis (the vertices of P do not have to be lattice points). Given that the interior of P includes the
                interior of the circle x2 + y2 = 2022, find the minimum possible perimeter of P.
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
 
 
                  HMMT November 2022, November 12, 2022 — GUTS ROUND
@@ -40,6 +45,11 @@ HMMT November 2022, November 12, 2022 — GUTS ROUND
              with vertices of all the same color?
 
 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
                  HMMT November 2022, November 12, 2022 — GUTS ROUND
 
    Organization                         Team                         Team ID#
@@ -55,8 +65,12 @@ HMMT November 2022, November 12, 2022 — GUTS ROUND
              9. [7] Let ABCD be a trapezoid such that AB ∥CD, ∠BAC = 25◦, ∠ABC = 125◦, and AB + AD = CD.
            Compute ∠ADC.
 
-[Page 2]
-HMMT November 2022, November 12, 2022 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
+                 HMMT November 2022, November 12, 2022 — GUTS ROUND
 
    Organization                         Team                         Team ID#
 
@@ -74,6 +88,11 @@ HMMT November 2022, November 12, 2022 — GUTS ROUND
               miles per hour, is always a positive integer. Candice drives for 2/3 of a mile in total. She drives for a
             whole number of minutes, and arrives at her house driving slower than when she left. What time is it
            when she gets home?
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
 
 
                  HMMT November 2022, November 12, 2022 — GUTS ROUND
@@ -98,6 +117,11 @@ HMMT November 2022, November 12, 2022 — GUTS ROUND
               value of k −l.
 
 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
                  HMMT November 2022, November 12, 2022 — GUTS ROUND
 
    Organization                         Team                         Team ID#
@@ -117,8 +141,12 @@ HMMT November 2022, November 12, 2022 — GUTS ROUND
 
              (For example, the shadow of a sphere with radius 1 onto a flat surface is a disk of radius 1.)
 
-[Page 3]
-HMMT November 2022, November 12, 2022 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
+                 HMMT November 2022, November 12, 2022 — GUTS ROUND
 
    Organization                         Team                         Team ID#
 
@@ -134,6 +162,12 @@ HMMT November 2022, November 12, 2022 — GUTS ROUND
 
           21. [11] Let P(x) be a quadratic polynomial with real coefficients. Suppose that P(1) = 20, P(−1) = 22,
            and P(P(0)) = 400. Compute the largest possible value of P(10).
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
 
 
                  HMMT November 2022, November 12, 2022 — GUTS ROUND
@@ -154,6 +188,12 @@ HMMT November 2022, November 12, 2022 — GUTS ROUND
                (x, y, z).
 
 
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
                  HMMT November 2022, November 12, 2022 — GUTS ROUND
 
    Organization                         Team                         Team ID#
@@ -169,8 +209,12 @@ HMMT November 2022, November 12, 2022 — GUTS ROUND
               require cutting the square in different locations. In particular, rotations and reflections are considered
                 distinct.
 
-[Page 4]
-HMMT November 2022, November 12, 2022 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
+                 HMMT November 2022, November 12, 2022 — GUTS ROUND
 
    Organization                         Team                         Team ID#
 
@@ -190,6 +234,11 @@ HMMT November 2022, November 12, 2022 — GUTS ROUND
              the internal angle bisector of ∠BAC with the circumcircle of ABC. Let ω be the circle centered at M
              tangent to AB and AC. The tangents to ω from B and C, other than AB and AC respectively, intersect
               at a point D. Compute AD.
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
 
 
                  HMMT November 2022, November 12, 2022 — GUTS ROUND
@@ -213,6 +262,12 @@ HMMT November 2022, November 12, 2022 — GUTS ROUND
              candidate A or B with equal probability. If X Dalmathians voted for the winning candidate, the expected
               value of X2 can be expressed as ab for positive integers a, b with gcd(a, b) = 1. Find the unique positive
                integer k ≤103 such that 103 | a −bk.
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
 
 
                  HMMT November 2022, November 12, 2022 — GUTS ROUND

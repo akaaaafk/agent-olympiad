@@ -1,5 +1,3 @@
-# Hobson's Trains
-
 Hide 
  Hobson's Trains 
 

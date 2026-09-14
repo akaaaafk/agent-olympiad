@@ -6,6 +6,7 @@ problems, or acts after the contest starts. Audit storage remains always on.
 from __future__ import annotations
 
 import json
+import hashlib
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, Callable
 
@@ -65,7 +66,11 @@ def coach_brief_prompts(
         f"Budget: turns={max_turns}, api_calls={max_api_calls}; every contestant "
         f"turn is one private think call plus one action.\n"
         f"Optional memory module: {'enabled' if memory_enabled else 'disabled'}. "
-        "Normal shared drafts and conversation are available in either case. "
+        + ("Normal shared drafts and conversation are available in either case. "
+           if memory_enabled else
+           "No cross-round memory: only the current team round's thoughts, messages, "
+           "drafts and reviews are visible. Private, group and public history expire. ")
+        +
         "Recommend remember/recall/share_note only when the memory module is enabled.\n"
         + (
             "This brief happens before the clock starts (turn 0) and costs the team "
@@ -85,6 +90,7 @@ def prepare_brief(
     team_size: int, max_turns: int, max_api_calls: int | None,
     query: Callable[[str, str], str], charge_tokens: Callable[[str], bool],
     memory_enabled: bool = True,
+    supplied_brief: str | None = None,
 ) -> CoachBrief:
     """Restore an existing brief or create one at turn zero within shared budget."""
     if not enabled:
@@ -94,11 +100,25 @@ def prepare_brief(
     existing = next((event for event in reversed(memory.view(COACH_AGENT))
                      if event.kind == BRIEF_EVENT and event.actor == COACH_AGENT), None)
     if existing is not None:
+        if supplied_brief is not None and existing.payload.get("guidance") != supplied_brief:
+            raise ValueError("The supplied Coach brief differs from the checkpoint")
         return CoachBrief(guidance=str(existing.payload.get("guidance") or ""))
     if session.budget.turns_used != 0:
         raise ValueError("Coach cannot be introduced after the contest has started")
     from contest_session import BudgetExceededError
     from rulecard_policy import clip_text
+    if supplied_brief is not None:
+        if not supplied_brief.strip() or len(supplied_brief) > (policy.char_limit("work") or 2400):
+            raise ValueError("The supplied Coach brief must fit the nonempty opening-brief character limit")
+        memory.append(
+            task_id=None, question_id=None, actor=COACH_AGENT, visibility="public",
+            kind=BRIEF_EVENT, payload={
+                "guidance": supplied_brief, "plan": None, "author": COACH_AGENT,
+                "stage": "precontest_brief", "source": "provided",
+                "sha256": hashlib.sha256(supplied_brief.encode()).hexdigest(),
+            }, turn=0,
+        )
+        return CoachBrief(supplied_brief, False, True)
     try:
         session.consume_budget(api_calls=1)
     except BudgetExceededError:

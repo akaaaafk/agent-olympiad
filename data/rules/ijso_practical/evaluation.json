@@ -118,12 +118,20 @@
     },
     "benchmark_readiness_source": "data/benchmarks/ijso_practical/benchmark.json",
     "evaluation_status_counts": {
-      "ready_with_limitations": 13,
-      "not_ready": 7
+      "ready_with_limitations": 11,
+      "not_ready": 4
     },
     "evaluator_selection": "Use each benchmark record's evaluation; rule values are defaults only.",
     "record_evaluator_overrides": {},
-    "record_rubric_overrides": {}
+    "record_rubric_overrides": {},
+    "record_score_basis_overrides": {},
+    "active_score_membership": {
+      "records": 15,
+      "path": "data/rubrics/ijso_practical_active_score_membership.json",
+      "exclusion_manifest": "data/excluded/ijso_answerless_years_20260913/manifest.json",
+      "official_aggregate_max_score": null,
+      "remaining_per_record_scoring_unchanged": true
+    }
   },
   "submission": {
     "max_count": 1

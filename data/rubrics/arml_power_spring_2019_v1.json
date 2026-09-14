@@ -1,6 +1,6 @@
 {
   "rubric_id": "arml_power_spring_2019_v1",
-  "title": "Power Round \u2014 Spring 2019 \u2014 ARML Power sub-problem rubric",
+  "title": "Power Round — Spring 2019 — ARML Power sub-problem rubric",
   "total_points": 40.0,
   "criteria": [
     {
@@ -85,7 +85,7 @@
       "name": "Problem 11",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 11 (2 pts). Statement: Problem 11. If space k remains empty, explain why at least one driver\u2019s preferred space"
+      "description": "Correct, justified solution to Problem 11 (2 pts). Statement: Problem 11. If space k remains empty, explain why at least one driver’s preferred space"
     },
     {
       "id": "problem_12",
@@ -113,14 +113,14 @@
       "name": "Problem 14",
       "max_score": 3.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 14 (3 pts). Statement: Problem 14. Prove that there are exactly ( n + 1)n\u22121 parking sequences of length n."
+      "description": "Correct, justified solution to Problem 14 (3 pts). Statement: Problem 14. Prove that there are exactly ( n + 1)n−1 parking sequences of length n."
     },
     {
       "id": "problem_15",
       "name": "Problem 15",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 15 (2 pts). Statement: Problem 15. Use the result of the previous problem to prove that ( n + 1)n\u22121 > n! for all"
+      "description": "Correct, justified solution to Problem 15 (2 pts). Statement: Problem 15. Use the result of the previous problem to prove that ( n + 1)n−1 > n! for all"
     },
     {
       "id": "problem_16",

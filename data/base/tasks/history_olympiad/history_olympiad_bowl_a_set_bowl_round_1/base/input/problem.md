@@ -1,5 +1,3 @@
-# A-Set-Bowl-Round-1
-
 [Q1] This war included the first U.S. use of the terms "D-day" and "H-hour" inmilitarycombat at Saint-Mihiel [[SANH-mee-HYEL]]. Omar Bundyhelpedleadmeninthiswar at abattle at which Lloyd Williams quipped, "Retreat? Hell, wejust got here." ThepigeonCherAmi [[SHEHR ah-MEE]] helped save the Lost Battalioninthiswar duringtheBattleof theArgonneForest. Theideaof theDevil Dogcamefromthiswar'sBattleofBelleauWood. TheHarlem Hellfighters fought in, for ten points, what"war to end all wars"?
 
 [Q2] An 1802 JamesGilraycartoonprotestingtheuseof thesethingsdepictedthe"CowPock," with cows emerging frompeople's bodies. The first one of these things was madeusing sores that appeared on the hands of milkmaids. Recent examples of these thingsutilizemRNAtoprogramcellstoproduceacertain"spikeprotein."JonasSalkisbestknownfor developing an inactivated one of thesethingstofight polio. For tenpoints, namethesethings which are typically injected to prevent a patientfrom contracting a disease.

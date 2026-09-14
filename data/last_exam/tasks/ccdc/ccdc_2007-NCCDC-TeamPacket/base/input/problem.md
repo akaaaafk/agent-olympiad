@@ -1,5 +1,3 @@
-# NCCDC 2007 — Burnsodyne
-
 2007 National Collegiate Cyber Defense Competition 
  
 April 13 – 15, 2007 

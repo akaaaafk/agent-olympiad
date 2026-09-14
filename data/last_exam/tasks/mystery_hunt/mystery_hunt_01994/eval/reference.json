@@ -3,8 +3,18 @@
   "gold_pointer": "data/benchmarks/mystery_hunt/benchmark.json#mystery_hunt_01994.gold_label",
   "has_gold_answer": true,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+    "short_answer_source": "data/rubrics/mystery_hunt_short_answers.json",
+    "deliverable": "puzzle_answer",
+    "limitations": "Only explicitly linked original inputs and their static publisher dependencies are restored. Archive solution navigation, answer-reveal header and gold-bearing scripts are removed; no puzzle code is run. Fonts and CSS dependencies are original publisher files or mechanical local URL rewrites. Gold, total points, splits, licensing and grading/runtime readiness are unchanged, not recertified. The original MP4 and WebM retain their published bytes, order and embedded audio. Both audio/video streams decode to EOF (about 91 seconds); this does not certify complete viewing/listening, semantic equivalence or equal visual quality between formats. Native playback controls are retained with preload disabled; no transcript or inferred subtitles are added. Prior limitations: The answer key exists, but the contestant puzzle page has not been separated from embedded answers and media dependencies.",
+    "scorecard_path": "data/rubrics/task_scorecards/mystery_hunt.json",
+    "scorecard_key": "mystery_hunt_01994"
+  },
+  "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+  "deliverable": "puzzle_answer"
 }

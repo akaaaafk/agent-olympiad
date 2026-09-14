@@ -1,5 +1,3 @@
-# Philosophy
-
 In this work, one character pretends to be Epicurus defending his religious beliefs. In an earlier section,
  the author of this work declares that mathematical sciences are Relations of Idea, which are distinct from
  Matters of Fact. Largely a reaction to the inductive reasoning of Locke, this work considers cause and

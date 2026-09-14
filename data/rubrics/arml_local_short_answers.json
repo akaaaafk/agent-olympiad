@@ -1,5 +1,5 @@
 {
-  "_comment": "Hand-curated short answers for ARML Local Team Rounds where the official final is a clear short value. Problems that need diagrams or are ambiguous stay omitted (left as reference_llm).",
+  "_comment": "Official ARML Local Team Round short answers transcribed from the Answers to ARML Local pages in ARML_2009_2014.pdf. All Team Round questions are included; diagrams remain available in the agent-visible problem PDFs.",
   "arml_local_2009": {
     "1": {
       "expected": "(-6, 13)",
@@ -56,6 +56,13 @@
         "\\frac{3\\sqrt{3}}{10}",
         "3\\sqrt{3}/10"
       ]
+    },
+    "10": {
+      "expected": "2, 1, 4, 2, 2",
+      "aliases": [
+        "2,1,4,2,2",
+        "(2, 1, 4, 2, 2)"
+      ]
     }
   },
   "arml_local_2010": {
@@ -76,8 +83,28 @@
         "\\frac{63}{100}"
       ]
     },
+    "4": {
+      "expected": "81"
+    },
     "5": {
       "expected": "3535"
+    },
+    "6": {
+      "expected": "√31",
+      "aliases": [
+        "\\sqrt{31}",
+        "sqrt(31)"
+      ]
+    },
+    "7": {
+      "expected": "(√21-3)/4",
+      "aliases": [
+        "\\frac{\\sqrt{21}-3}{4}",
+        "(sqrt(21)-3)/4"
+      ]
+    },
+    "8": {
+      "expected": "1"
     },
     "9": {
       "expected": "3√2",
@@ -127,6 +154,19 @@
         "a+c=10"
       ]
     },
+    "8": {
+      "expected": "181π/60",
+      "aliases": [
+        "181*pi/60",
+        "\\frac{181\\pi}{60}"
+      ]
+    },
+    "9": {
+      "expected": "1055/2011",
+      "aliases": [
+        "\\frac{1055}{2011}"
+      ]
+    },
     "10": {
       "expected": "55"
     }
@@ -154,6 +194,13 @@
       "expected": "(8, 10, 12, 13, 16)",
       "aliases": [
         "(8,10,12,13,16)"
+      ]
+    },
+    "6": {
+      "expected": "36√3+40π/3",
+      "aliases": [
+        "36\\sqrt{3}+\\frac{40\\pi}{3}",
+        "36*sqrt(3)+40*pi/3"
       ]
     },
     "7": {
@@ -205,6 +252,30 @@
         "194/1000"
       ]
     },
+    "6": {
+      "expected": "125"
+    },
+    "7": {
+      "expected": "√3/6",
+      "aliases": [
+        "\\frac{\\sqrt{3}}{6}",
+        "sqrt(3)/6"
+      ]
+    },
+    "8": {
+      "expected": "68°",
+      "aliases": [
+        "68",
+        "68 degrees"
+      ]
+    },
+    "9": {
+      "expected": "-32/3",
+      "aliases": [
+        "−32/3",
+        "-\\frac{32}{3}"
+      ]
+    },
     "10": {
       "expected": "10"
     }
@@ -233,12 +304,41 @@
     "5": {
       "expected": "125"
     },
+    "6": {
+      "expected": "43"
+    },
+    "7": {
+      "expected": "30"
+    },
+    "8": {
+      "expected": "186"
+    },
     "9": {
-      "expected": "91/128",
+      "expected": "48/7",
       "aliases": [
-        "\\frac{91}{128}",
-        "182/256"
+        "\\frac{48}{7}"
       ]
+    },
+    "10": {
+      "expected": "720"
+    },
+    "11": {
+      "expected": "90"
+    },
+    "12": {
+      "expected": "1/3",
+      "aliases": [
+        "\\frac{1}{3}"
+      ]
+    },
+    "13": {
+      "expected": "850"
+    },
+    "14": {
+      "expected": "157482"
+    },
+    "15": {
+      "expected": "36"
     }
   }
 }

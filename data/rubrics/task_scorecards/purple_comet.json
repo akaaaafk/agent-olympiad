@@ -1,0 +1,5747 @@
+{
+  "schema_version": "1.1",
+  "dataset": "purple_comet",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "purple_comet_hs_2005",
+      "year": 2005,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2005/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "90ae2a884b91cde6111509fdbdeb3c88b1d49b39ede0e5f6d2358a588e121a51"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 25.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2005",
+      "year": 2005,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2005/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "b7875b6ee44e6548c040357c294ac5fac1ec9e6641ab80a207d21e0dd4f3fa50"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 15.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2006",
+      "year": 2006,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2006/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "2d02249a52bf6359e1bc2c734558dc58a2699f763797f4d866413c1137502973"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 25.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2006",
+      "year": 2006,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2006/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "4c46c1ccdcecc32dfd97d4712e47debd694574f5f800a528286818b028a3858e"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 15.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2007",
+      "year": 2007,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2007/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "92c85f5506b63228b8e434698e14ebbf78afd30fe36218c87626307a284dc279"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 25.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2007",
+      "year": 2007,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2007/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "02b2a7883265d605d0f00a13ab1d5e1187d5ca2570ae9c4660342c9be37c8843"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 15.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2008",
+      "year": 2008,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2008/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "2041ba5d10e727d9418a51d3f2560788833c7a6e1d094bdccccbc3aba3ec818f"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 25.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2008",
+      "year": 2008,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2008/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "b9c9de77aa0914d225d435aa597e25629d2690de784536b88ae69c7abe45a4fb"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 15.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2009",
+      "year": 2009,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2009/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "147b6b31c5f3919786eb4bff1e59dabf99de666d61bcf110e4a1c69aaf1c1184"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 25.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2009",
+      "year": 2009,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2009/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "8fdf8e0729a9167067261f4a2b4bf7eea95118ad44b73a559dcae0bfca025294"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 15.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2010",
+      "year": 2010,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2010/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "a38884b70f3cf263a982f8e79beecd93a2921cd047fd99badb28262945942c70"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        },
+        {
+          "id": "26",
+          "points": 1
+        },
+        {
+          "id": "27",
+          "points": 1
+        },
+        {
+          "id": "28",
+          "points": 1
+        },
+        {
+          "id": "29",
+          "points": 1
+        },
+        {
+          "id": "30",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2010",
+      "year": 2010,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2010/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "ab2a5dea2397f738730fe3b538a7705955b2e822d71fd2852e0565bc240b5a5a"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2011",
+      "year": 2011,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2011/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "cf73df6272cae30aff2375b98aeda946df9a275a19b81a90b6f6a0c7ed4d3796"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        },
+        {
+          "id": "26",
+          "points": 1
+        },
+        {
+          "id": "27",
+          "points": 1
+        },
+        {
+          "id": "28",
+          "points": 1
+        },
+        {
+          "id": "29",
+          "points": 1
+        },
+        {
+          "id": "30",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2011",
+      "year": 2011,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2011/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "04c53d9ff9234acd2362f3b617070761b899375c32612441de58f8b55d2ec014"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2012",
+      "year": 2012,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2012/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "2d141dfba12371bb0a859f94b764d3aa14983e2421f5edf8d07df8cba6efc578"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        },
+        {
+          "id": "26",
+          "points": 1
+        },
+        {
+          "id": "27",
+          "points": 1
+        },
+        {
+          "id": "28",
+          "points": 1
+        },
+        {
+          "id": "29",
+          "points": 1
+        },
+        {
+          "id": "30",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2012",
+      "year": 2012,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2012/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "8ce42a06527dd7c49c4479514f14ce2feef397fe4501861e295b2d40eca75c33"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2013",
+      "year": 2013,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2013/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "46dd9eab848a89f47e92e007748abd43aec3a90eece452380600e138c3f34007"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        },
+        {
+          "id": "26",
+          "points": 1
+        },
+        {
+          "id": "27",
+          "points": 1
+        },
+        {
+          "id": "28",
+          "points": 1
+        },
+        {
+          "id": "29",
+          "points": 1
+        },
+        {
+          "id": "30",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2013",
+      "year": 2013,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2013/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "d1b6f9399c246b3f438ff27b793ebce4175ef609f35f9ec02752e572d2a8cfdb"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2014",
+      "year": 2014,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2014/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "b4f5e6cfc7c22fc47be88677ad1a20d11cc5a92c3aab92165d4283d3f4cb1ad0"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        },
+        {
+          "id": "26",
+          "points": 1
+        },
+        {
+          "id": "27",
+          "points": 1
+        },
+        {
+          "id": "28",
+          "points": 1
+        },
+        {
+          "id": "29",
+          "points": 1
+        },
+        {
+          "id": "30",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2014",
+      "year": 2014,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2014/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "82cbd05112ef8905b34c1e2098a98da0b09b2fe89f79fadb98d8cf1602c9ab09"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2015",
+      "year": 2015,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2015/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "c3f3ae1845a1c8358653e62ac0ad3263c1cdcc55f44387562a72fbd90dd80bf9"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        },
+        {
+          "id": "26",
+          "points": 1
+        },
+        {
+          "id": "27",
+          "points": 1
+        },
+        {
+          "id": "28",
+          "points": 1
+        },
+        {
+          "id": "29",
+          "points": 1
+        },
+        {
+          "id": "30",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2015",
+      "year": 2015,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2015/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "da60d08a10f5553ed8d7cd5b1f81cf97f7db80374ad7489101b34764d0b44294"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2016",
+      "year": 2016,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2016/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "7f2b5d99bda853bb28be4f0301d48dcd4137e2f9ee56cf8fc8f98bc86b1f9478"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        },
+        {
+          "id": "26",
+          "points": 1
+        },
+        {
+          "id": "27",
+          "points": 1
+        },
+        {
+          "id": "28",
+          "points": 1
+        },
+        {
+          "id": "29",
+          "points": 1
+        },
+        {
+          "id": "30",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2016",
+      "year": 2016,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2016/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "57ba3eae119694576faefadc386ebf9a03cdd2d347f99a8a5a1b82061ffcf01d"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2017",
+      "year": 2017,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2017/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "961ad49b4d1fb76d42fc4c7b595da993db71a1f93d3b12e888d26a6e8454ec8e"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        },
+        {
+          "id": "26",
+          "points": 1
+        },
+        {
+          "id": "27",
+          "points": 1
+        },
+        {
+          "id": "28",
+          "points": 1
+        },
+        {
+          "id": "29",
+          "points": 1
+        },
+        {
+          "id": "30",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2017",
+      "year": 2017,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2017/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "2bd64f0e5025cf3b9bfc7a1f0565e62afff20a2471a778245a71ed8d84f072d1"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2018",
+      "year": 2018,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2018/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "e61e78c0f0a2491dd4aca7797a022bdeb9eae0555a65d825e2cca74bb5b3641c"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        },
+        {
+          "id": "26",
+          "points": 1
+        },
+        {
+          "id": "27",
+          "points": 1
+        },
+        {
+          "id": "28",
+          "points": 1
+        },
+        {
+          "id": "29",
+          "points": 1
+        },
+        {
+          "id": "30",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2018",
+      "year": 2018,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2018/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "fede7015ef07515c1468d9c7feec49e1e45aa4452bdb58de2c95ff78f9666490"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2019",
+      "year": 2019,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2019/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "6251a83da1fef3502ea82d21264d8604df191debd90890daf3a503a97360c180"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        },
+        {
+          "id": "26",
+          "points": 1
+        },
+        {
+          "id": "27",
+          "points": 1
+        },
+        {
+          "id": "28",
+          "points": 1
+        },
+        {
+          "id": "29",
+          "points": 1
+        },
+        {
+          "id": "30",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2019",
+      "year": 2019,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2019/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "c39c72642a8cb11202c473f0c6cd94992dce83919ddbecae74c16b486551830b"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2020",
+      "year": 2020,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2020/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "613a23b054f0fe13ff2e4066334d69f14da09d2efd610e7423c611c7b7acf522"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        },
+        {
+          "id": "26",
+          "points": 1
+        },
+        {
+          "id": "27",
+          "points": 1
+        },
+        {
+          "id": "28",
+          "points": 1
+        },
+        {
+          "id": "29",
+          "points": 1
+        },
+        {
+          "id": "30",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2020",
+      "year": 2020,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2020/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "83500c380b02479cd90e230e1098e86d567d928582950888060f4844e8b941a7"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2021",
+      "year": 2021,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2021/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "a2a84dc3e3cfcb76b01b7ba5a175ca50ee16711c58822bfad2913b3d7febf83d"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        },
+        {
+          "id": "26",
+          "points": 1
+        },
+        {
+          "id": "27",
+          "points": 1
+        },
+        {
+          "id": "28",
+          "points": 1
+        },
+        {
+          "id": "29",
+          "points": 1
+        },
+        {
+          "id": "30",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2021",
+      "year": 2021,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2021/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "588db83869ae7ead79f5da307dd1a0eb4c6b49a9391fcb1748de6cc0013200a5"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2022",
+      "year": 2022,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2022/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "350999bc0b4bed4237d252ef7a76ef6118e26d3b490e830cb1e2b1dcb139ffaa"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        },
+        {
+          "id": "26",
+          "points": 1
+        },
+        {
+          "id": "27",
+          "points": 1
+        },
+        {
+          "id": "28",
+          "points": 1
+        },
+        {
+          "id": "29",
+          "points": 1
+        },
+        {
+          "id": "30",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2022",
+      "year": 2022,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2022/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "e7df8866f42dbf3e718677d732a1d95b8ff5328c88a82b0e5a6058bbce1a87b2"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2023",
+      "year": 2023,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2023/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "6dff4f0ce8ef427dd6c2d3e6596001a5c4c928bf3096d0caf0c24abca33b4486"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        },
+        {
+          "id": "26",
+          "points": 1
+        },
+        {
+          "id": "27",
+          "points": 1
+        },
+        {
+          "id": "28",
+          "points": 1
+        },
+        {
+          "id": "29",
+          "points": 1
+        },
+        {
+          "id": "30",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2023",
+      "year": 2023,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2023/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "bf78121d0996f8b01621c40b6c006828acbf635a0516e5c013f4979893043cf8"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2024",
+      "year": 2024,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2024/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "ed5f26cd93d51894091bb1c42cee35fe0dd9d21a7c3e61e4d625147f3998149b"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        },
+        {
+          "id": "26",
+          "points": 1
+        },
+        {
+          "id": "27",
+          "points": 1
+        },
+        {
+          "id": "28",
+          "points": 1
+        },
+        {
+          "id": "29",
+          "points": 1
+        },
+        {
+          "id": "30",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2024",
+      "year": 2024,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2024/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "40323f5c9f1a93929c85e7b31c2b23e49ef60653b4fd49024308926830231f51"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2025",
+      "year": 2025,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2025/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "477636b486ccdaf0745d842dc6d651b2f59537fbb856f2ae7c7b6371909e4887"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        },
+        {
+          "id": "26",
+          "points": 1
+        },
+        {
+          "id": "27",
+          "points": 1
+        },
+        {
+          "id": "28",
+          "points": 1
+        },
+        {
+          "id": "29",
+          "points": 1
+        },
+        {
+          "id": "30",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2025",
+      "year": 2025,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2025/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "30b5a49c04badcfa77dd3900312020c4eb48eeb08e25b0f203d6d759bc2280ca"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 20.0
+    },
+    {
+      "problem_id": "purple_comet_hs_2026",
+      "year": 2026,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2026/hs_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "ec36a540a86c26719082f9c976b70c3c242b3d5bdc8ec14bbaffa75682f2c1f7"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        },
+        {
+          "id": "21",
+          "points": 1
+        },
+        {
+          "id": "22",
+          "points": 1
+        },
+        {
+          "id": "23",
+          "points": 1
+        },
+        {
+          "id": "24",
+          "points": 1
+        },
+        {
+          "id": "25",
+          "points": 1
+        },
+        {
+          "id": "26",
+          "points": 1
+        },
+        {
+          "id": "27",
+          "points": 1
+        },
+        {
+          "id": "28",
+          "points": 1
+        },
+        {
+          "id": "29",
+          "points": 1
+        },
+        {
+          "id": "30",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 30.0
+    },
+    {
+      "problem_id": "purple_comet_ms_2026",
+      "year": 2026,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+          "sha256": "512ccb97f4c2acfa9022730b7288b8192a93c46495f3856552ddde4e984b7403",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "purple_comet_verified_answer_key_20260912",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/purple_comet/official_answers/2026/ms_answers.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "0a9d1f40c56b64097dce85063667dc05dced2f840fae69589f32f99412d30b02"
+        }
+      ],
+      "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 1
+        },
+        {
+          "id": "2",
+          "points": 1
+        },
+        {
+          "id": "3",
+          "points": 1
+        },
+        {
+          "id": "4",
+          "points": 1
+        },
+        {
+          "id": "5",
+          "points": 1
+        },
+        {
+          "id": "6",
+          "points": 1
+        },
+        {
+          "id": "7",
+          "points": 1
+        },
+        {
+          "id": "8",
+          "points": 1
+        },
+        {
+          "id": "9",
+          "points": 1
+        },
+        {
+          "id": "10",
+          "points": 1
+        },
+        {
+          "id": "11",
+          "points": 1
+        },
+        {
+          "id": "12",
+          "points": 1
+        },
+        {
+          "id": "13",
+          "points": 1
+        },
+        {
+          "id": "14",
+          "points": 1
+        },
+        {
+          "id": "15",
+          "points": 1
+        },
+        {
+          "id": "16",
+          "points": 1
+        },
+        {
+          "id": "17",
+          "points": 1
+        },
+        {
+          "id": "18",
+          "points": 1
+        },
+        {
+          "id": "19",
+          "points": 1
+        },
+        {
+          "id": "20",
+          "points": 1
+        }
+      ],
+      "gold_max_score": 20.0
+    }
+  ]
+}

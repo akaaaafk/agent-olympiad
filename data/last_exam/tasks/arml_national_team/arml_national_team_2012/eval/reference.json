@@ -4,7 +4,17 @@
   "has_gold_answer": true,
   "evaluator_id": "gold_answer_v1",
   "evaluator_status": "ready",
+  "solution_file": "data/raw/arml_national/2012/arml_national_team_2012_solutions.pdf",
+  "evaluation": {
+    "evaluator_id": "gold_answer_v1",
+    "status": "ready",
+    "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json",
+    "fallback_evaluator_id": "rubric_llm_v1",
+    "deliverable": "answer_sheet",
+    "short_answer_source": "data\\rubrics\\arml_national_team_short_answers.json",
+    "scorecard_path": "data/rubrics/task_scorecards/arml_national_team.json",
+    "scorecard_key": "arml_national_team_2012"
+  },
   "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json",
-  "deliverable": "answer_sheet",
-  "solution_file": null
+  "deliverable": "answer_sheet"
 }

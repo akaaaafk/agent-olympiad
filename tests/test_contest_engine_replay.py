@@ -106,6 +106,65 @@ V11_REVIEW_SNAPSHOT = ROOT / "tests" / "fixtures" / "contest_engine_replay_revie
 V11_CURSOR_SNAPSHOT = ROOT / "tests" / "fixtures" / "contest_engine_replay_checkpoint_cursor_v11.json"
 V11_MEMORY_ACTIVATION_SNAPSHOT = ROOT / "tests" / "fixtures" / "contest_engine_replay_memory_activation_v11.json"
 V11_PLAIN_BOUNDARY_SNAPSHOT = ROOT / "tests" / "fixtures" / "contest_engine_replay_plain_boundary_v11.json"
+V11_COMPETITION_TOOLS_SNAPSHOT = ROOT / "tests" / "fixtures" / "contest_engine_replay_competition_tools_v11.json"
+AUTOMATIC_MEMORY_SNAPSHOT = ROOT / "tests" / "fixtures" / "contest_engine_replay_automatic_memory_v1.json"
+MEMORY_V2_SNAPSHOT = ROOT / "tests" / "fixtures" / "contest_engine_replay_automatic_memory_v2.json"
+MEMORY_V3_SNAPSHOT = ROOT / "tests" / "fixtures" / "contest_engine_replay_automatic_memory_v3.json"
+STRICT_NO_MEMORY_SNAPSHOT = ROOT / "tests" / "fixtures" / "contest_engine_replay_strict_no_memory_v1.json"
+OTC_CONTROLS_SNAPSHOT = ROOT / "tests" / "fixtures" / "contest_engine_replay_otc_controls_v3.json"
+
+
+def without_focus_version(value):
+    if isinstance(value, dict):
+        return {key: without_focus_version(item) for key, item in value.items()
+                if key != 'otc_focus_version'}
+    if isinstance(value, list):
+        return [without_focus_version(item) for item in value]
+    return value
+
+
+def normalize_repaired_help(value):
+    """Normalize only reviewed help changes; preserve the historical full hash.
+
+    test_live_failure_regressions checks the actual repaired native contract.
+    This replay still pins every event, answer, budget, checkpoint and other
+    prompt byte to the preceding snapshot; no new fingerprints are recorded.
+    """
+    replacements = (
+        ("Record durable work for the team: a candidate answer or draft for "
+         "one problem. Pass problem_id to record against a specific problem "
+         "(and make it your current one); without it the work goes to your "
+         "current problem. For short-answer tasks, keep reasoning above a "
+         "separate final line: Final answer: <value>. Never substitute a "
+         "different problem's answer for this problem.",
+         "Record durable work for the team on your current problem, "
+         "or pass problem_id to switch to another problem and record "
+         "the work there in the same turn."),
+        ("Record programming analysis notes without replacing candidate source. "
+         "Use execute_code for complete source; use speak to report sample AC.",
+         "Record durable work for the team on your current problem, "
+         "or pass problem_id to switch to another problem and record "
+         "the work there in the same turn."),
+        ("Nonempty query requires a whole-keyword match; omit query only to browse. "
+         "An explicit problem_id restricts results to that task; omit it for "
+         "cross-task methods. Results rank by keyword hits and recency.",
+         "Nonempty query requires a keyword match; "
+         "omit query only to browse. Prefer matching problem tags, then hits and recency."),
+        ("Optional exact problem id to filter; omit to search across tasks.",
+         "Optional problem tag to prioritise."),
+        ("query keywords and use problem_id to restrict results to the relevant task. "
+         "Omit problem_id only when seeking a method across tasks. Avoid ",
+         "query keywords and use problem_id to prioritise the relevant task. Avoid "),
+    )
+    if isinstance(value, str):
+        for current, previous in replacements:
+            value = value.replace(current, previous)
+        return value
+    if isinstance(value, list):
+        return [normalize_repaired_help(item) for item in value]
+    if isinstance(value, dict):
+        return {key: normalize_repaired_help(item) for key, item in value.items()}
+    return value
 
 
 class EngineReplayTests(unittest.TestCase):
@@ -134,10 +193,37 @@ class EngineReplayTests(unittest.TestCase):
         for key, fingerprint in previous["cases"].items():
             if key.split("/")[0] in {"otc", "vallina_otc"}:
                 self.assertEqual(expected["cases"][key], fingerprint)
+        # Action set v9 only adds the competition's preparation tool to prompts
+        # and permissions. The capture separately compared full before/after
+        # runs: events, submissions, budgets and baseline behavior are unchanged.
+        expected = json.loads(V11_COMPETITION_TOOLS_SNAPSHOT.read_text(encoding="utf-8"))
+        self.assertEqual(expected["action_set_version"], 9)
         self.assertEqual(expected["protocol_version"], "contest_session_v11")
         self.assertEqual(set(expected["cases"]), {
             f"{variant}/{family}/{mode}" for variant in BASELINE_NAMES
             for family in ("math", "code") for mode in ("fresh", "resume")})
+        # The automatic-memory change deliberately changes only OTC memory-on.
+        # Keep every memory-off full fingerprint from the historical fixture.
+        automatic = json.loads(AUTOMATIC_MEMORY_SNAPSHOT.read_text(encoding="utf-8"))
+        self.assertEqual(set(automatic["cases"]), {
+            f"otc/{family}/{mode}" for family in ("math", "code") for mode in ("fresh", "resume")})
+        # v2 separates summary scope and failure receipts. Work binding/help
+        # changes all baselines equally. Pin full new payloads, including the
+        # opt-in flow registry envelope; keep all historical fixtures intact.
+        previous_v2 = json.loads(MEMORY_V2_SNAPSHOT.read_text(encoding="utf-8"))
+        previous_v3 = json.loads(MEMORY_V3_SNAPSHOT.read_text(encoding="utf-8"))
+        strict = json.loads(STRICT_NO_MEMORY_SNAPSHOT.read_text(encoding="utf-8"))
+        self.assertEqual(strict['current_turn_context_version'], 1)
+        for key, fingerprint in strict['cases'].items():
+            if not key.startswith('vallina_otc/'):
+                self.assertEqual(fingerprint, previous_v3['cases'][key])
+        self.assertEqual(strict['otc_focus_version'], 2)
+        current = json.loads(OTC_CONTROLS_SNAPSHOT.read_text(encoding="utf-8"))
+        self.assertEqual(current['current_turn_context_version'], 1)
+        self.assertEqual(current['automatic_memory_version'], 3)
+        self.assertEqual(current['otc_focus_version'], 3)
+        self.assertEqual(current['work_task_binding_version'], 1)
+        self.assertEqual(set(current['cases']), set(expected['cases']))
         for key, fingerprint in expected["cases"].items():
             variant, family, mode = key.split("/")
             with self.subTest(case=key):
@@ -152,7 +238,7 @@ class EngineReplayTests(unittest.TestCase):
                                  3 if variant == "otc" else 0)
                 self.assertIn("answer_extractions", result)
                 self.assertEqual(result['deadline_policy'], 'attempt_available_candidates_v1')
-                self.assertEqual(result["action_set_version"], 8)
+                self.assertEqual(result["action_set_version"], 10)
                 self.assertEqual(result["module_version"], 3)
                 self.assertTrue(CORE_ACTION_NAMES <= set(result["action_names"]))
                 self.assertEqual(result["modules"], {
@@ -170,8 +256,25 @@ class EngineReplayTests(unittest.TestCase):
                 self.assertEqual(len(coach_events), int(variant in {"otc", "vallina_otc"}))
                 if variant != "otc":
                     self.assertFalse({"remember", "recall", "share_note"} & set(result["action_names"]))
+                if variant in {"otc", "vallina_otc"}:
+                    if family == "code":
+                        self.assertIn("Record programming analysis notes without replacing candidate source.",
+                                      json.dumps(payload[1]))
+                if variant == "otc":
+                    self.assertGreater(result["memory_action_policy"]["automatic_records"], 0)
+                    self.assertEqual(result["memory_action_policy"]["automatic_extra_api_calls"], 0)
+                fingerprint = current["cases"][key]
+                if variant not in {'otc', 'vallina_otc'}:
+                    self.assertEqual(fingerprint, previous_v2['cases'][key])
+                if variant == 'vallina_otc':
+                    self.assertEqual(memory_policy['context_scope'], 'current_team_round_only')
                 encoded = json.dumps(payload, sort_keys=True, ensure_ascii=False)
                 self.assertEqual(hashlib.sha256(encoded.encode()).hexdigest(), fingerprint)
+                # This explicit-choice fixture does not exercise the new
+                # rotation/yield triggers. Aside from the checkpoint version,
+                # its complete behavior must still match the previous fixture.
+                historical = encoded.replace('"otc_focus_version": 3', '"otc_focus_version": 2')
+                self.assertEqual(hashlib.sha256(historical.encode()).hexdigest(), strict['cases'][key])
 
 
 if __name__ == "__main__":

@@ -1,5 +1,3 @@
-# Playoff-Rd.-1-History-Bowl-2021-IHBB-Asian-Championships
-
 [Q1] In his book The World Crisis , Winston Churchill described the dismissal of this battle's planners Ferdinand Foch [[FOHSH]] and Joseph Joffree. The Mark I [[ONE]] Tank was first deployed at this battle, which was launched to relieve pressure from Verdun. For ten points, name this 1916 World War One battle named for a river in Picardy, France, at which the British sustained 420,000 casualties.
 
 [Q2] The Calutron was made as part of this project for use with the Y -12 Project. Personnel o f this project worked throughout Europe in Operation Alsos. For this project, Kenneth Nichols negotiated with the Eldorado Gold Mines and the Shinkolobwe [[sheen - koh-LOH-bweh]] Mine in Belgian Congo. This project created the Thin Man gun -type design. Leslie Groves and Robert Oppenheimer directed this project, which had sites in Oak Ridge and Los Alamos. For ten points, name this project which produced the first atomic bomb.

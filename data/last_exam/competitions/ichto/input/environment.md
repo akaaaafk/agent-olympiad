@@ -1,4 +1,4 @@
-# Environment — `ichto`
+# Environment
 
 ## Roster
 
@@ -14,8 +14,12 @@
 
 ## Allowed tools
 
-- query_rules
-- use_calculator
+```json
+[
+  "query_rules",
+  "use_calculator"
+]
+```
 
 ## Resources
 
@@ -58,3 +62,4 @@
   ]
 }
 ```
+

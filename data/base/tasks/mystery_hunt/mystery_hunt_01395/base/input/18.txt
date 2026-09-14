@@ -1,0 +1,21 @@
+> new game
+> south
+> east
+> open window
+> enter house
+> west
+> get lamp
+> move rug
+> open trap
+> down
+> light lamp
+> south
+> east
+> get painting
+> north
+> up
+> up
+> get knife and rope
+> down
+> west
+> get ??????????????????????????? (16)

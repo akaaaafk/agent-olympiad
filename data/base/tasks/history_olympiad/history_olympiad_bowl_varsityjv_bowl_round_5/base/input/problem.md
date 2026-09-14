@@ -1,5 +1,3 @@
-# VarsityJV_Bowl-Round-5
-
 [Q1] A dating app in this modern nation utilizes a chronology of early settlers by Ari the Wise to make sure residents do not date their cousins. Fishermen from this nation fought in an economic war with the British in the Cod Wars. Erik the Red travelled from this nation to settle Greenland in the late 10th century. For ten points , name this former Danish possession now governed from Reykjavik.
 
 [Q2] For ten points, name this period before adolescence.

@@ -1,5 +1,3 @@
-# Asteroid Rangers
-
 Hide 
  Asteroid Rangers 
 

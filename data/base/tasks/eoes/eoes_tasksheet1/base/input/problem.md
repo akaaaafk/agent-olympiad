@@ -1,4 +1,6 @@
-# tasksheet1
+Archive worksheet note: `answersheet1.pdf` is the original 27-page participant worksheet, not a solution key. Its Task A submarks sum to 90; the two archived Challenge 1 task sheets print different Task A maxima (90 and 92). This same-challenge worksheet is supplied with that version limitation, not as proof of an exact marking-scheme match. `template_diagrampaper.pdf` is the original blank graph-paper template; its TEAM A watermark does not assign this task to a team. Preserve the given charts and the blank result fields. The separately deferred Function table and morphology diagram remain unavailable until the stated hand-in condition. Physical experiments, lab-assistant feedback and executable grading are not supplied.
+
+Archive note: `challenge1_initial_handouts.pdf` contains the original two outline pages for Task A 3.1. The Function table and identification diagram are deferred until the handout is submitted, as stated on task-sheet pages 4, 6 and 7. A live specimen and release controller are not supplied.
 
 COUNTRY: Version 19.04.2015 TEAM: 
  

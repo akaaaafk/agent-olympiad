@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>MIT Mystery Hunt: The Mystery of the Traditional Scavenger Hunt</title>
+<link href="../css/mydossier.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="../js/rollover.js"></script>
+<style>
+	.border {
+		border-bottom: 1px solid #000000;
+	}
+</style>
+</head>
+<body onload="MM_preloadImages('http://web.mit.edu/puzzle/www/08/images/dossier_1_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_2_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_3_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_4_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_5_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_6_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_7_active.gif')">
+<div id="container">
+<div id="header"><div id="headerIcon"><a href="../index.html"><img src="../images/spacer.gif" alt="Home page" width="94" height="94" border="0" /></a></div><div id="headerCheckAnswer"><a href="answer/">View Solution</a></div>
+</div>
+<div id="content">
+  <div id="nav"><img src="http://web.mit.edu/puzzle/www/08/images/header_dossiers.gif" alt="Dossiers:" width="119" height="27" class="paddingRight4" />&nbsp;<a href="http://web.mit.edu/puzzle/www/08/dossier1.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_1_open.gif" alt="Dossier 1" name="dossier1" width="30" height="27" border="0" id="dossier1" onmouseover="MM_swapImage('dossier1','','http://web.mit.edu/puzzle/www/08/images/dossier_1_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier2.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_2_open.gif" alt="Dossier 2" name="dossier2" width="30" height="27" border="0" id="dossier2" onmouseover="MM_swapImage('dossier2','','http://web.mit.edu/puzzle/www/08/images/dossier_2_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier3.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_3_open.gif" alt="Dossier 3" name="dossier3" width="30" height="27" border="0" id="dossier3" onmouseover="MM_swapImage('dossier3','','http://web.mit.edu/puzzle/www/08/images/dossier_3_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier4.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_4_open.gif" alt="Dossier 4" name="dossier4" width="30" height="27" border="0" id="dossier4" onmouseover="MM_swapImage('dossier4','','http://web.mit.edu/puzzle/www/08/images/dossier_4_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier5.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_5_open.gif" alt="Dossier 5" name="dossier5" width="30" height="27" border="0" id="dossier5" onmouseover="MM_swapImage('dossier5','','http://web.mit.edu/puzzle/www/08/images/dossier_5_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier6.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_6_open.gif" alt="Dossier 6" name="dossier6" width="30" height="27" border="0" id="dossier6" onmouseover="MM_swapImage('dossier6','','http://web.mit.edu/puzzle/www/08/images/dossier_6_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier7.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_7_open.gif" alt="Dossier 7" name="dossier7" width="30" height="27" border="0" id="dossier7" onmouseover="MM_swapImage('dossier7','','http://web.mit.edu/puzzle/www/08/images/dossier_7_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a></div>
+
+  <h1>The Mystery of the Traditional Scavenger Hunt </h1>
+  <p><em>The true fans (you know, the ones with the Hardy Boys<sup><span class="small">TM</span></sup> lunchboxes, the Nancy Drew-brand plaid leg warmers, and the Three Investigators German editions) don't know just the popular stories, they know all of them, all
+    the way back to the beginning.</em></p>
+  <p>You must bring us 100 points worth of items, determined as follows:</p>
+  <ul>
+    <li>10 items from a column = 25 points</li>
+    <li>15 items from a column = 40 points</li>
+    <li>20 items from a column = 60 points</li>
+    <li>Three items from a given row = 10 bonus points</li>
+    </ul>
+  <p>Drawings and photographs are not acceptable.</p>
+  <table border="0" cellspacing="10" width="100%">
+    <tr>
+      <td valign="top" class="border"><strong>HARDY BOYS</strong></td>
+      <td valign="top" class="border"><strong>NANCY DREW</strong></td>
+      <td valign="top" class="border"><strong>THE THREE INVESTIGATORS </strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The <strong>Sinister Sign Post</strong></td>
+      <td valign="top">The Secret of The <strong>Old Clock</strong></td>
+      <td valign="top">The Mystery of the <strong>Stuttering Parrot</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The <strong>Twisted Claw</strong></td>
+      <td valign="top">The Sign of The <strong>Twisted Candles</strong></td>
+      <td valign="top">The Mystery of the <strong>Whispering Mummy</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The Clue of the <strong>Broken Blade</strong></td>
+      <td valign="top">The Clue of The <strong>Broken Locket</strong></td>
+      <td valign="top">The Mystery of the <strong>Green Ghost</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The <strong>Flickering Torch</strong> Mystery</td>
+      <td valign="top">The Mystery of The <strong>Ivory Charm</strong></td>
+      <td valign="top">The Mystery of the <strong>Fiery Eye</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The <strong>Melted Coins</strong></td>
+      <td valign="top">The <strong>Whispering Statue</strong></td>
+      <td valign="top">The Mystery of the <strong>Silver Spider</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The Sign of the <strong>Crooked Arrow</strong></td>
+      <td valign="top">The Clue of The <strong>Tapping Heels</strong></td>
+      <td valign="top">The Mystery of the <strong>Screaming Clock</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The <strong>Wailing Siren</strong> Mystery</td>
+      <td valign="top">The Mystery of The <strong>Brass-Bound Trunk</strong></td>
+      <td valign="top">The Mystery of the <strong>Talking Skull</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The <strong>Yellow Feather</strong> Mystery</td>
+      <td valign="top">The Clue in The <strong>Jewel Box</strong></td>
+      <td valign="top">The Secret of the <strong>Crooked Cat</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The <strong>Hooded Hawk</strong> Mystery</td>
+      <td valign="top">The Mystery of The <strong>Tolling Bell</strong></td>
+      <td valign="top">The Mystery of the <strong>Coughing Dragon</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The Ghost at <strong>Skeleton Rock</strong></td>
+      <td valign="top">The Clue in The <strong>Old Album</strong></td>
+      <td valign="top">The Mystery of the <strong>Flaming Footprints</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">Mystery at <strong>Devil's Paw</strong></td>
+      <td valign="top">The Clue of The <strong>Leaning Chimney</strong></td>
+      <td valign="top">The Mystery of the <strong>Singing Serpent</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The Mystery of the <strong>Chinese Junk</strong></td>
+      <td valign="top">The Secret of The <strong>Wooden Lady</strong></td>
+      <td valign="top">The Secret of the <strong>Haunted Mirror</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The Clue of the <strong>Screeching Owl</strong></td>
+      <td valign="top">The Clue of The <strong>Black Keys</strong></td>
+      <td valign="top">The Mystery of the <strong>Dead Man's Riddle</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The <strong>Viking Symbol</strong> Mystery</td>
+      <td valign="top">The Clue of The <strong>Velvet Mask</strong></td>
+      <td valign="top">The Mystery of the <strong>Invisible Dog</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The Mystery of the <strong>Aztec Warrior</strong></td>
+      <td valign="top">The <strong>Scarlet Slipper</strong> Mystery</td>
+      <td valign="top">The Mystery of the <strong>Dancing Devil</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The Mystery of the <strong>Spiral Bridge</strong></td>
+      <td valign="top">The Mystery of The <strong>Fire Dragon</strong></td>
+      <td valign="top">The Mystery of the <strong>Headless Horse</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">Mystery of the <strong>Whale Tattoo</strong></td>
+      <td valign="top">The Clue of The <strong>Dancing Puppet</strong></td>
+      <td valign="top">The Mystery of the <strong>Magic Circle</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The <strong>Bombay Boomerang</strong></td>
+      <td valign="top">The Clue of The <strong>Whistling Bagpipes</strong></td>
+      <td valign="top">The Mystery of the <strong>Sinister Scarecrow</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The <strong>Masked Monkey</strong></td>
+      <td valign="top">The Clue in The <strong>Crossword Cipher</strong></td>
+      <td valign="top">The Mystery of the <strong>Purple Pirate</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The <strong>Shattered Helmet</strong></td>
+      <td valign="top">The <strong>Spider Sapphire</strong> Mystery</td>
+      <td valign="top">The Mystery of the <strong>Kidnapped Whale</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The Clue of the <strong>Hissing Serpent</strong></td>
+      <td valign="top">The Mysterious <strong>Mannequin</strong></td>
+      <td valign="top">The Mystery of the <strong>Missing Mermaid</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The <strong>Witchmaster's Key</strong></td>
+      <td valign="top">The <strong>Crooked Banister</strong></td>
+      <td valign="top">The Mystery of the <strong>Two-Toed Pigeon</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The <strong>Firebird Rocket</strong></td>
+      <td valign="top">Mystery of The <strong>Glowing Eye</strong></td>
+      <td valign="top">The Mystery of the <strong>Smashing Glass</strong></td>
+    </tr>
+    <tr>
+      <td valign="top">The Sting of the <strong>Scorpion</strong></td>
+      <td valign="top">The <strong>Thirteenth Pearl</strong></td>
+      <td valign="top">The Mystery of the <strong>Ghost Train</strong></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p>&nbsp; </p>
+</div>
+</div>
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

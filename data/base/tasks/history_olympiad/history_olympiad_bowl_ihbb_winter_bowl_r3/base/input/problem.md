@@ -1,5 +1,3 @@
-# IHBB-Winter_Bowl-R3
-
 [Q1] A pilot from this nation unwittingly earned a one-hundred thousand dollar prize from the U.S. Air Force when he turned over of a Soviet MiG -15 fighter. Hatchet-wielding soldiers from this nation killed American servicemen in the Joint Security Area, to which the U.S. responded by mobilizing an entire taskforce to cut down a poplar tree in Operation Paul Bunyan. The Demilitarized Zone is shared between a southern neighbor and, for ten points, what East Asian nation dominated for seven decades by the Kim family?
 
 [Q2] This man piloted a Gonzalo Coe lho [[koo -EL-hoh]] voyage to Brazil which encountered its discoverer, Pedro Cabral. This Florentine worked for merchant Gianotto Berardi, who was an early investor in the 1492 Columbus expedition. The cartographer Martin Waldseemüller [[VAHLD -zee-MEW-luh]] was influenced by the Soderini letter to name a landmass for this explorer. For ten points, what Italian navigator, who is credited with coining the term "New World, is the namesake of two continents in the western hemisphere?

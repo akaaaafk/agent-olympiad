@@ -3,8 +3,18 @@
   "gold_pointer": "data/benchmarks/mystery_hunt/benchmark.json#mystery_hunt_01997.gold_label",
   "has_gold_answer": true,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+    "short_answer_source": "data/rubrics/mystery_hunt_short_answers.json",
+    "deliverable": "puzzle_answer",
+    "limitations": "Only explicitly linked original inputs and their static publisher dependencies are restored. Archive solution navigation, answer-reveal header and gold-bearing scripts are removed; no puzzle code is run. Fonts and CSS dependencies are original publisher files or mechanical local URL rewrites. Gold, total points, splits, licensing and grading/runtime readiness are unchanged, not recertified. All 32 coin-side images and the 16 counts (total 72) are preserved. Both explicit recommended-article links remain, with the original four-name article and its styling; the banner is puzzle content, not removed as a generic advertisement. The class name solution-table is original clue markup and is not treated as an answer leak. Prior limitations: The answer key exists, but the contestant puzzle page has not been separated from embedded answers and media dependencies.",
+    "scorecard_path": "data/rubrics/task_scorecards/mystery_hunt.json",
+    "scorecard_key": "mystery_hunt_01997"
+  },
+  "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+  "deliverable": "puzzle_answer"
 }

@@ -1,0 +1,32 @@
+{
+  "status": "completed",
+  "backup": "data/excluded/integrity_repair_20260914T010225Z",
+  "records": 4,
+  "removed_from_initial_inputs": [
+    "data/base/tasks/eoes/eoes_additionalfileschallenge1/base/input/additionalfileschallenge1.pdf",
+    "data/last_exam/tasks/eoes/eoes_additionalfileschallenge1/base/input/additionalfileschallenge1.pdf"
+  ],
+  "record_count_change": 0,
+  "readiness_promotions": 0,
+  "protected_files_unchanged": 181,
+  "verification": {
+    "records": 4,
+    "initial_source_pages": [
+      3,
+      4
+    ],
+    "deferred_source_pages": [
+      1,
+      2
+    ],
+    "original_sources_unchanged": true,
+    "exact_render_and_geometry_match": true,
+    "scoring_totals": {
+      "eoes_ExpBlowingintheWind": 306,
+      "eoes_tasksheet1": 304,
+      "eoes_tasksheet2": 306
+    },
+    "runtime_and_experiments_not_implemented": true
+  },
+  "summary": "4 EOES 2015 records: scoped appendix and two Challenge 1 variants; printed totals 306/304/306, three formulas restored; no readiness promotion."
+}

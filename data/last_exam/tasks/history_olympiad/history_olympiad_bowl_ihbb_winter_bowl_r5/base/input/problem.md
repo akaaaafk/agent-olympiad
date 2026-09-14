@@ -1,5 +1,3 @@
-# IHBB-Winter_Bowl-R5
-
 [Q1] Because Septimius Severus was born in Leptis Magna, a former colony of this city, he gave all of its people Roman citizenship at the end of the 2nd Century. Alexander the Great crucified 2,000 survivors in this city after he built an artificial causeway to subjugate its island portion. This city names a type of purple dye from the murex snail, most commonly associated with imperial power in antiquity. For ten points, name this Phoenician metropolis in modern- day Lebanon.
 
 [Q2] As punishment for smoking, Deccan [[DEH -kan]] sultan Malik Ambar poured this substance into the ears and mouths of criminals. The Piazza Fontana bombings occurred during a tumultuous time in Italian history known as the "Years of [this substance]." Thi s substance's presence in Roman toys and plumbing has been speculated as a cause of the fall of the Roman Empire due to widespread impotence and ill health effects. For ten points, name this toxic metal symbolized Pb.

@@ -1,5 +1,3 @@
-# Bowl-Round-6
-
 [Q1] Inmates at the Prison of the Annamites in this department revolted against poor conditions in Inini. In the 1880s, this region fought a border -war with Brazil over the independent state of Counani. A man cried "Long live France! Long live the Army!" after being sentenced to life imprisonment in a penal colony in this region, from which Henri Charrière [[shah -ree-YAY]] escaped, as recounted in his novel Papillon [[pah-pee-YOHN]]. The European Space Agency constructed its primary space center in , for ten poi nts, what French overseas region, where Alfred Dreyfus was imprisoned on Devil’s Island.
 
 [Q2] This man is the subject of a work by Joseph Califano titled The Triumph and Tragedy of [this man], and over 400 collections of manuscripts were relied upon by Robert Dalleck in another biography of this man. A four -volume series, including such entries as The Passage of Power and Master of the Senate , was written about th is one -time Speaker of the House. For ten points, Robert Caro wrote that four -volume biography of what man who took the presidential oath on an airplane?

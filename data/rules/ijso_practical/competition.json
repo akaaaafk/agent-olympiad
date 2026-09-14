@@ -17,7 +17,8 @@
   "allowed_tools": [
     "query_rules",
     "use_calculator",
-    "inspect_environment"
+    "inspect_environment",
+    "check_ijso_measurements"
   ],
   "resources": {
     "internet": "forbidden",

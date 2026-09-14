@@ -1,5 +1,3 @@
-# History-Bowl-Round-1
-
 [Q1] A 2010 redesign of this item removed the initials “VDB” from its front for the second time. During World War Two, these items were subject to a discoloring redox reaction when the chemistry-unaware Henry Morgenthau [[mohr-GEHN-thow]] authorized the addition of zinc to them. As a result, one of the most valuable examples of these items is the 1944 “steel wheat” variety. Since 2010 these items display a shield reading “e pluribus unum.” For ten points, name these coins which show Abraham Lincoln on the front.
 
 [Q2] During this campaign, a combined 25 American and British planes crashed, with 101 fatalities overall. Gail Halvorsen dropped candy to awaiting children during this prolonged campaign, becoming known as the "Chocolate Flier." After the Deutsche [[DOY -chuh]] Mark was introduced, Soviet troops cut off road and rail access to supply an occupied city, immediately causing this event. For ten points, name this aerial campaign led by the United States to provide aid and supplies to the German capital.

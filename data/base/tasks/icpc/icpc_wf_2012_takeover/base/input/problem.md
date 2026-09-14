@@ -1,5 +1,3 @@
-# Takeover Wars
-
 Hide 
  Takeover Wars 
 

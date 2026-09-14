@@ -3,8 +3,20 @@
   "gold_pointer": "data/benchmarks/ccdc/benchmark.json#ccdc_2020-NCCDC-TeamPacket.gold_label",
   "has_gold_answer": false,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+    "deliverable": "defended_services_and_reports",
+    "limitations": [
+      "A static team packet cannot reproduce the live red-team injects, service checks, availability scoring, or judge observations required for an official CCDC score."
+    ],
+    "scorecard_path": "data/rubrics/task_scorecards/ccdc.json",
+    "scorecard_key": "ccdc_2020-NCCDC-TeamPacket",
+    "reason": "Original VM/network environment, timed injects, service-check configuration and red-team/white-team scoring evidence are not archived."
+  },
+  "rubric_path": "data/rubrics/ccdc_official_scoring_protocol_v1.json",
+  "deliverable": "defended_services_and_reports"
 }

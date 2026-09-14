@@ -1,5 +1,3 @@
-# RoboMission Junior 2022
-
 MY ROBOT MY FRIEND 
 THE RESCUE ROBOT
 RoboMission

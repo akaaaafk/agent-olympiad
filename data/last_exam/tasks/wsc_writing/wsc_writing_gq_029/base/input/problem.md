@@ -1,5 +1,3 @@
-# wsc_writing_gq_029
-
 The future began in 1909—or, at least, futurism did. When Italian poet Filippo Tommaso Marinetti coined the word 'futurism' , he imagined a world of speed, danger, and beauty. To him, this future could be found in the swift efficiency of the automobile. Today’s futurists look further ahead to artificial intelligence, space travel, and the blending of human and machine. Explore the origin and development of futurism, then discuss with your team: how is it different from science fiction—or is it? Should we value works that predicted futures that never came to be? Be sure to look into the two early futurist works listed below: 
 
  Giacomo Balla | Dynamism of a Dog on a Leash (1912) 

@@ -1,4 +1,4 @@
-# Environment — `vis_moot`
+# Environment
 
 ## Roster
 
@@ -14,8 +14,12 @@
 
 ## Allowed tools
 
-- query_rules
-- web_search
+```json
+[
+  "query_rules",
+  "web_search"
+]
+```
 
 ## Resources
 
@@ -55,3 +59,4 @@
   ]
 }
 ```
+

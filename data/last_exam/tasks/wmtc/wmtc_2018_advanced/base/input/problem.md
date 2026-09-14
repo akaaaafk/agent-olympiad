@@ -1,5 +1,3 @@
-# WMTC 2018 Advanced — Team Round
-
 Advanced Level Team Round 
 English Version 
 Instruction:  This round has 14 questions (40 minutes). 

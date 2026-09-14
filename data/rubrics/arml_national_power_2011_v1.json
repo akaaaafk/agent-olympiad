@@ -1,6 +1,6 @@
 {
   "rubric_id": "arml_national_power_2011_v1",
-  "title": "Power Round \u2014 2011 \u2014 ARML Power sub-problem rubric",
+  "title": "Power Round — 2011 — ARML Power sub-problem rubric",
   "total_points": 50.0,
   "criteria": [
     {
@@ -8,14 +8,14 @@
       "name": "Problem 1a",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 1a (2 pts). Statement: 1a. For n = 1, 2, 3, 4, and k = 4, \ufb01nd Pa(n,n ) + Pa(n + 1,n ) +\u00b7\u00b7\u00b7 + Pa(n +k,n )."
+      "description": "Correct, justified solution to Problem 1a (2 pts). Statement: 1a. For n = 1, 2, 3, 4, and k = 4, ﬁnd Pa(n,n ) + Pa(n + 1,n ) +··· + Pa(n +k,n )."
     },
     {
       "id": "problem_01b",
       "name": "Problem 1b",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 1b (2 pts). Statement: 1b. If Pa(n,n ) + Pa(n + 1,n ) +\u00b7\u00b7\u00b7 + Pa(n +k,n ) = Pa(m,j ), \ufb01nd and justify formulas for m and j in terms of n and k."
+      "description": "Correct, justified solution to Problem 1b (2 pts). Statement: 1b. If Pa(n,n ) + Pa(n + 1,n ) +··· + Pa(n +k,n ) = Pa(m,j ), ﬁnd and justify formulas for m and j in terms of n and k."
     },
     {
       "id": "problem_02a",
@@ -43,21 +43,21 @@
       "name": "Problem 3b",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 3b (2 pts). Statement: 3b. Let j \u2265 0, and suppose n \u2265 2j. Prove that Pa( n,k ) has the same parity as the sum Pa(n\u2212 2j,k \u2212 2j) + Pa(n\u2212 2j,k ), i.e., either both Pa( n,k ) and the given sum are even, or both are odd."
+      "description": "Correct, justified solution to Problem 3b (2 pts). Statement: 3b. Let j ≥ 0, and suppose n ≥ 2j. Prove that Pa( n,k ) has the same parity as the sum Pa(n− 2j,k − 2j) + Pa(n− 2j,k ), i.e., either both Pa( n,k ) and the given sum are even, or both are odd."
     },
     {
       "id": "problem_03c",
       "name": "Problem 3c",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 3c (2 pts). Statement: 3c. If j is an integer such that 2j\u2264n< 2j+1, and k <2j, prove that PaP(n,k ) = PaP(n\u2212 2j,k )."
+      "description": "Correct, justified solution to Problem 3c (2 pts). Statement: 3c. If j is an integer such that 2j≤n< 2j+1, and k <2j, prove that PaP(n,k ) = PaP(n− 2j,k )."
     },
     {
       "id": "problem_04a",
       "name": "Problem 4a",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 4a (2 pts). Statement: 4a. Compute the next three rows of Clark\u2019s Triangle."
+      "description": "Correct, justified solution to Problem 4a (2 pts). Statement: 4a. Compute the next three rows of Clark’s Triangle."
     },
     {
       "id": "problem_04b",
@@ -106,14 +106,14 @@
       "name": "Problem 6",
       "max_score": 3.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 6 (3 pts). Statement: 6. Find and prove a closed formula (that is, a formula with a \ufb01xed number of terms and no \u201c. . . \u201d) for Cl(n,k ) in terms of n, k, and the Pa function."
+      "description": "Correct, justified solution to Problem 6 (3 pts). Statement: 6. Find and prove a closed formula (that is, a formula with a ﬁxed number of terms and no “. . . ”) for Cl(n,k ) in terms of n, k, and the Pa function."
     },
     {
       "id": "problem_07a",
       "name": "Problem 7a",
       "max_score": 1.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 7a (1 pt). Statement: 7a. Compute the entries in the next two rows of Leibniz\u2019s Triangle."
+      "description": "Correct, justified solution to Problem 7a (1 pt). Statement: 7a. Compute the entries in the next two rows of Leibniz’s Triangle."
     },
     {
       "id": "problem_07b",
@@ -141,7 +141,7 @@
       "name": "Problem 8b",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 8b (2 pts). Statement: 8b. Compute 2011\u2211 n=1 Le(n, 1)."
+      "description": "Correct, justified solution to Problem 8b (2 pts). Statement: 8b. Compute 2011∑ n=1 Le(n, 1)."
     },
     {
       "id": "problem_08c",
@@ -155,14 +155,14 @@
       "name": "Problem 9a",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 9a (2 pts). Statement: 9a. If \u221e\u2211 i=1 Le(i, 1) = Le(n,k ), determine the values of n and k."
+      "description": "Correct, justified solution to Problem 9a (2 pts). Statement: 9a. If ∞∑ i=1 Le(i, 1) = Le(n,k ), determine the values of n and k."
     },
     {
       "id": "problem_09b",
       "name": "Problem 9b",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 9b (2 pts). Statement: 9b. If \u221e\u2211 i=m Le(i,m ) = Le(n,k ), compute expressions for n and k in terms of m."
+      "description": "Correct, justified solution to Problem 9b (2 pts). Statement: 9b. If ∞∑ i=m Le(i,m ) = Le(n,k ), compute expressions for n and k in terms of m."
     },
     {
       "id": "problem_09c",
@@ -183,7 +183,7 @@
       "name": "Problem 11",
       "max_score": 4.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 11 (4 pts). Statement: 11. Find and prove a closed formula (that is, a formula with a \ufb01xed number of terms and no \u201c. . . \u201d) for Le(n,k ) in terms of n, k, and the Pa function."
+      "description": "Correct, justified solution to Problem 11 (4 pts). Statement: 11. Find and prove a closed formula (that is, a formula with a ﬁxed number of terms and no “. . . ”) for Le(n,k ) in terms of n, k, and the Pa function."
     }
   ],
   "not_observable_from_deck": [

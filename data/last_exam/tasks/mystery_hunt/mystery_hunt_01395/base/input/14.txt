@@ -1,0 +1,19 @@
+> load game
+> touch onion
+> take 30 workers
+> kill firehog
+> kill firehog
+> kill firehog
+> kill firehog
+> kill firehog
+> kill frog
+> kill beetle
+> kill beetle
+> kill beetle
+> kill beetle
+> kill beetle
+> kill beetle
+> kill beetle
+> kill frog
+> kill mushroom
+> carry ??????????????? (9)

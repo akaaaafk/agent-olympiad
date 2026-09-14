@@ -1,5 +1,3 @@
-# History-Bowl-Round-2
-
 [Q1] The discovery of chicken bones of a specific breed suggests these people may have had contact with the Mapuche people in the 14th century. Naturalist Joseph Banks hired one of these people, Tupaia [[too -pah-EE-ah]], to serve as navigator on the Endeavour. These people used a specific type of outrigger boat known as the ama, which they used to colonize the modern-day countries of New Zealand and Hawaii. The Pacific Ocean was traversed by, for ten points, which Oceanic people whose subgroups include the Maori and Samoans?
 
 [Q2] During this event, the Red Cross -inspired Red Swastika Society organized mass burials to account for the rampage by the IJA. An Osaka newspaper named the Mainichi [[my- NEE-chee]] encouraged a contest during this event between two officers to behead a hundred enemy soldiers by katana. This 1937 atrocity was likely spearheaded by the son -in-law of Emperor Meiji, Prince Yasuhiko Asaka. For ten points, name this "massacre perpetrated by the Japanese Army on the citizens of an Eastern Chinese city.

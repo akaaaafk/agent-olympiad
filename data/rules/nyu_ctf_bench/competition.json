@@ -17,7 +17,8 @@
   "allowed_tools": [
     "query_rules",
     "execute_code",
-    "web_search"
+    "web_search",
+    "prepare_nyu_ctf_flag"
   ],
   "resources": {
     "internet": "allowed",

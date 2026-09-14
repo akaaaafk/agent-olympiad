@@ -1,0 +1,12 @@
+{
+  "session_id": "qanta_2015_rilke",
+  "competition_id": "qanta",
+  "problem_ids": [
+    "qanta_train_136247",
+    "qanta_train_136253"
+  ],
+  "description": "OTC contest-session manifest for qanta_2015_rilke (2 tasks)",
+  "split_parts": false,
+  "task_family": "short_answer",
+  "competition_description": "Academic quiz-bowl questions: identify the requested person, place, work, event, or concept from progressively specific clues."
+}

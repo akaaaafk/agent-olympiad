@@ -19,7 +19,8 @@
     "inspect_environment",
     "start_environment",
     "execute_environment_command",
-    "reset_environment"
+    "reset_environment",
+    "prepare_cybench_flag"
   ],
   "resources": {
     "internet": "task_dependent",

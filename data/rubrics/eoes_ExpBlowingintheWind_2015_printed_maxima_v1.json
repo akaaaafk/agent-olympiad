@@ -1,0 +1,42 @@
+{
+  "rubric_id": "eoes_ExpBlowingintheWind_2015_printed_maxima_v1",
+  "total_points": 306,
+  "criteria": [],
+  "official_problem_maxima": [
+    {
+      "id": "A",
+      "max_score": 92,
+      "source_page": 2
+    },
+    {
+      "id": "B",
+      "max_score": 92,
+      "source_page": 2
+    },
+    {
+      "id": "C",
+      "max_score": 92,
+      "source_page": 2
+    },
+    {
+      "id": "D",
+      "max_score": 6,
+      "source_page": 2
+    },
+    {
+      "id": "E",
+      "max_score": 24,
+      "source_page": 2
+    }
+  ],
+  "source_file": "data/raw/eoes/euso/2015/ExpBlowingintheWind.pdf",
+  "source_sha256": "748316c61b08981680b3f69afe495b6c74835a4554971391e60c9c64a678b081",
+  "source_page": 2,
+  "visibility": "judge_only",
+  "executable": false,
+  "score_basis": "Sum of the section maxima printed in this exact archived task-sheet variant; not a normalized tournament score.",
+  "limitations": [
+    "No task-specific numeric marking scheme or experimental measurements are inferred.",
+    "Challenge 1 variants have different printed maxima and must not be added as independent contest challenges."
+  ]
+}

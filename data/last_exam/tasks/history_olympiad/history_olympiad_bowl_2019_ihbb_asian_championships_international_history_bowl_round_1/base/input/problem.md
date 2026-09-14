@@ -1,5 +1,3 @@
-# 2019-IHBB-Asian-Championships-International-History-Bowl-Round-1
-
 [Q1] Frederick Coyett surrendered on this island after a defeat at the Siege of Fort Zeelandia. A controversial French invasion of this island was repelled in the Keelung campaign. This island was captured by Shi Lang after his victory at the Battle of Penghu. Koxinga founded the Kingdom of Tungning on this island which was ruled from the present--day city of Tainan. For ten points, name this island home to cities such as Kaohsiung and Taipei.
 
 [Q2] As part of Operation PANDORA, this organization tried to stir up anti--Semitism by mailing out racist fake pamphlets. This organization, which often collaborated with GRU, was led by Vladimir Kryuchkov, who helped plan an August 1991 coup. During the fall of the Berlin Wall, thousands of this organization’s files were burned by its officers, including Vladimir Putin. For ten points, name this Soviet intelligence agency.

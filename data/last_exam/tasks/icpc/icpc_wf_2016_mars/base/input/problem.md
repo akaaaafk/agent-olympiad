@@ -1,5 +1,3 @@
-# What Really Happened on Mars?
-
 Hide 
  What Really Happened on Mars? 
 

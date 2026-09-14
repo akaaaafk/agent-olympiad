@@ -1,0 +1,189 @@
+@media screen {
+  html {
+    width: 100%;
+    min-width: 1010px;
+    margin: 0px;
+    padding: 0px;
+  }
+  #puzzfooter {
+    background-image: url("css-1.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #4b4f64;
+    min-height: 200px;
+  }
+  #evilbg {
+    background-image: none;
+    background-color: #5D2220;
+    /*	background-image: -ms-linear-gradient(top, #872E31 0%, #5D2220 100%);		/* IE10 Consumer Preview */
+  
+    /*	background-image: -moz-linear-gradient(top, #872E31 0%, #5D2220 100%); /* Mozilla Firefox */
+    /*	background-image: -o-linear-gradient(top, #872E31 0%, #5D2220 100%);	/* Opera */
+    /*	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #872E31), color-stop(1, #5D2220));	/* Webkit (Safari/Chrome 10) */
+    /*	background-image: -webkit-linear-gradient(top, #872E31 0%, #5D2220 100%);	/* Webkit (Chrome 11+) */
+    /*	background-image: linear-gradient(to bottom, #872E31 0%, #5D2220 100%);	/* W3C Markup, IE10 Release Preview */
+  }
+  .bg {
+    background-repeat: no-repeat;
+    background-position: center top;
+    width: 100%;
+    vertical-align: top;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+  }
+  .bar {
+    z-index: 2;
+    width: 100%;
+    min-width: 1000px;
+  }
+  #evilbar1 {
+    background-image: none;
+  }
+  #mainbar1 {
+    background-image: url("css-2.png");
+  }
+  #puzzbar1 {
+    background-image: url("css-3.png");
+  }
+  .bar1 {
+    height: 24px;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-position: center top;
+    opacity: .5;
+    padding-top: 7px;
+    text-align: right;
+  }
+  #bar2 {
+    opacity: .3;
+    margin-top: 3px;
+    height: 6px;
+    background-color: #ff0000;
+  }
+  #maincontainer {
+    height: 720px;
+    width: 1000px;
+  }
+  #puzzcontainer {
+    min-height: 1200px;
+    width: 1000px;
+  }
+  .container {
+    z-index: 3;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #maincontent {
+    top: 122px;
+    width: 450px;
+    /* oh well */
+  
+    transform: scaley(0.95) scalex(1.1) translatex(20px) translatey(-20px);
+    -o-transform: scaley(0.95) scalex(1.1) translatex(20px) translatey(-20px);
+    -moz-transform: scaley(0.95) scalex(1.1) translatex(20px) translatey(-20px);
+    -webkit-transform: scaley(0.95) scalex(1.1) translatex(20px) translatey(-20px);
+  }
+  #evilcontent {
+    font-family: "Century Schoolbook", "Times New Roman", "Times", serif;
+    font-weight: normal;
+    top: 210px;
+    left: 107px;
+    width: 809px;
+  }
+  .content {
+    position: relative;
+  }
+  #puzzcontent {
+    left: 93px;
+    top: 148px;
+    width: 849px;
+    font-family: "Century Schoolbook", "Times New Roman", Times, serif;
+    font-size: 13pt;
+  }
+  #agentlist,
+  #reel {
+    padding-top: 5px;
+    margin-top: 0;
+  }
+  #agentlist li,
+  #reel li {
+    font-family: "Courier New", "Courier", monospace;
+    font-weight: bold;
+    font-size: 10pt;
+    list-style-type: none;
+    list-style: none;
+  }
+  #agentlist a,
+  #reel a,
+  #agentlist a:visited,
+  #reel a:visited {
+    text-decoration: none;
+    color: #4b4f64;
+    padding-left: 5px;
+  }
+  #agentlist .solved a,
+  #reel .solved a {
+    color: #842c31;
+  }
+  #left {
+    width: 100%;
+  }
+  #right {
+    float: right;
+    width: 560px;
+  }
+  #mainheader {
+    font-size: 15pt;
+    left: 103px;
+    top: 123px;
+    width: 340px;
+    /* Not reeeeeeally necessary */
+  
+    transform: rotate(0.5deg);
+    -ms-transform: rotate(0.5deg);
+    /* IE 9 */
+  
+    -moz-transform: rotate(0.5deg);
+    /* Firefox */
+  
+    -webkit-transform: rotate(0.5deg);
+    /* Safari and Chrome */
+  
+    -o-transform: rotate(0.5deg);
+    /* Opera */
+  }
+  .header {
+    position: relative;
+    left: 199px;
+    top: 138px;
+    width: 750px;
+    font-family: "Courier New", "Courier", monospace;
+    font-weight: bold;
+    font-size: 20pt;
+    line-height: 28pt;
+    color: #842c31;
+  }
+  .header .answer {
+    text-transform: right;
+  }
+}
+/* end of @media screen */
+@media print {
+  .header {
+    font-family: "Courier New", "Courier", monospace;
+    font-weight: bold;
+    font-size: 20pt;
+    line-height: 28pt;
+  }
+  .answer {
+    text-transform: right;
+  }
+  #puzzcontent {
+    font-family: "Century Schoolbook", "Times New Roman", Times, serif;
+    font-size: 13pt;
+  }
+  #fixie-nav {
+    visibility: hidden;
+  }
+}

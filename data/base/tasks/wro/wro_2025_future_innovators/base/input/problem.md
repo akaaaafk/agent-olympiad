@@ -1,5 +1,3 @@
-# Future Innovators Mission 2025
-
 Future Innovators Season Challenge Season 2025  
  The Future of Robots AGE GROUPS ELEMENTARY, JUNIOR AND SENIOR   Official Game Rules for the WRO International Final. Version: January 15th 2025  (Note: Rules for local WRO events may vary!)  WRO International Premium Partner 
   WRO International Gold Partners   

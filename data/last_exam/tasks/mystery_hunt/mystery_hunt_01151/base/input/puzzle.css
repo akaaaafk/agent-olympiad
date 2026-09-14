@@ -1,0 +1,302 @@
+/* Test code for images */
+.puzzle-id-image { 
+  margin: auto;
+  padding-top: 10px;
+}
+.puzzle-id-image div { border: 2px solid #f44; }
+
+/*
+body.harvoid_constellation #content #title {
+  background: #9a1a0b; /* #d42811; */
+  border: solid #d42811;
+  border-width: 2px 0px;
+}
+*/
+
+/* No puzzle-id-images for Phase 1 */
+body.castor_pollux .puzzle-id-image,
+body.kronos .puzzle-id-image,
+body.hiigara .puzzle-id-image,
+body.the_atm .puzzle-id-image,
+body.planet_pluto .puzzle-id-image,
+body.pluto .puzzle-id-image { display: none; }
+body.castor_pollux .puzzle-id-image div,
+body.kronos .puzzle-id-image div,
+body.hiigara .puzzle-id-image div,
+body.the_atm .puzzle-id-image div,
+body.planet_pluto .puzzle-id-image div,
+body.pluto .puzzle-id-image div { display: none; border: none; }
+
+/* For Phase II, make the header a bit bigger */
+body.puzzle.astro_jail #header,
+body.puzzle.harvoid_constellation #header,
+body.puzzle.combat_simulator #header,
+body.puzzle.orbital_nexus #header,
+body.puzzle.virtual_sectors #header,
+body.puzzle.reverse_dimension #header { height: 160px; }
+
+body.harvoid_constellation .puzzle-id-image,
+body.harvoid_constellation .puzzle-id-image div { width: 150px; height: 149px; }
+body.reverse_dimension .puzzle-id-image,
+body.reverse_dimension .puzzle-id-image div { width: 133px; height: 150px; }
+
+body.astro_jail .puzzle-id-image,
+body.astro_jail .puzzle-id-image div { width: 250px; height: 250px; } 
+body.puzzle.astro_jail #header { height: 250px; }
+
+body.lazyr_zone .puzzle-id-image,
+body.lazyr_zone .puzzle-id-image div { width: 100px; height: 100px; } 
+body.puzzle.lazyr_zone #header { height: 110px; }
+body.combat_simulator .puzzle-id-image,
+body.combat_simulator .puzzle-id-image div  { width: 135px; height: 150px; }
+
+
+/* The default image */
+body.orbital_nexus .puzzle-id-image,
+body.orbital_nexus .puzzle-id-image div,
+body.virtual_sectors .puzzle-id-image,
+body.virtual_sectors .puzzle-id-image div  {
+  width: 150px; height: 150px; 
+}
+
+
+/* Harvoid */
+
+
+
+
+
+
+
+
+
+/* Reverse Dimension Images */
+
+
+
+body.his_cardiologist .puzzle-id-image div {
+  background: url(cardiologist.jpg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Orbital Nexus */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Astro Jail */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Lazyr Zone */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Virtual Sectors */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Combat Simulator */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body.puzzle,body.solution { 
+  margin: 0px;
+  border: 0px;
+  background-color: white;
+  color: black; 
+  font-family: Arial, sans-serif;
+}
+
+.puzzle #header,
+.solution #header { 
+  background: url(background-shim.png) repeat-x;
+  height: 60px;
+}
+
+#header .planet { 
+  display: block;
+  float: left;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+/*
+#header .check_answer {
+  display: block;
+  float: right;
+}
+*/
+#header .check_answer {
+  display: none;
+}
+
+#header .solution {
+  display: block; float: right;
+}
+#header .solution img { border: none; margin-top: 5px; margin-right: 10px; }
+
+#header .planet img { border: none; }
+
+.check_answer img { border: none; }
+
+.puzzle #content { 
+  clear: both;
+  margin: 2em;
+  font-size: 94%;
+  padding: 2em 3em;
+}
+
+#content #title {
+  background: black url(background-small-stars-2.png);
+  color: white;
+  margin-left: -5em;
+  margin-right: -5em;
+  padding: 5px;
+  margin-bottom: 3em;
+}
+
+#title .cartouche { text-align: center; margin: auto; color: #88b; }
+#title .cartouche img { height: 1.5em; margin-top: 5px; }
+
+#title h1 { text-align: center; margin: auto; }
+
+.floatleft { float: left; clear: left; position: relative; border: 0; margin-right: 1em; }
+.floatright { float: right; clear: right; position: relative; border: 0; margin-left: 1em; }
+.center { text-align: center; }
+.center * { margin-left: auto; margin-right: auto; }
+
+table.word-grid { border: 3px solid black; border-collapse: collapse; font-size: smaller; }
+table.word-grid td { width: 1.7em; height: 2.1em; text-align: center; vertical-align: middle;}
+table.word-grid td.filled,
+table.word-grid td.hilite,
+table.word-grid td.empty { border: 1px solid black; }
+table.word-grid td.filled { background-color: black; color: black; }
+table.word-grid td.hilite { background-color: #aaa; color: black; }
+table.word-grid td.empty { background-color: white; color: black; }
+table.word-grid td.letter { font: Arial, Helvetica, sans; }
+
+table.wikitable,
+table.prettytable {
+    margin: 1em 1em 1em 0;
+    background: #f9f9f9;
+    border: 1px #aaa solid;
+    border-collapse: collapse;
+}
+.wikitable th, .wikitable td,
+.prettytable th, .prettytable td {
+    border: 1px #aaa solid;
+    padding: 0.2em;
+}
+.wikitable th,
+.prettytable th {
+    background: #f2f2f2;
+    text-align: center;
+}
+.wikitable caption,
+.prettytable caption {
+    margin-left: inherit;
+    margin-right: inherit;
+    font-weight: bold;
+}
+
+ul.no-bullet { list-style-type: none; }
+
+#content img { vertical-align: middle; }
+
+pre { border: 1px dotted black; padding: .5em; background-color: #eef; margin-bottom: 1em; }
+
+
+
+.tright { float: right; border: 1px solid #bbb; padding: 4px; margin-left: 1em; }
+.thumbcaption { font-size: 90%; margin-top: .3em; }

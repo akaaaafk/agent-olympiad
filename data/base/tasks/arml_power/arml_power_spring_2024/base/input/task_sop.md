@@ -1,30 +1,13 @@
-# Task SOP
+# Task
 
-## Reference Environment
-- Competition: ARML Power Contest
-- Competition id: `arml_power`
-- Problem id: `arml_power_spring_2024`
-- Task type: `team_power`
-- Team size: None
-- Year / edition: 2024
-- Source: https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2024/ARMLPower_Spring_2024.pdf
+Competition: arml_power
 
-## Goal
-As a multi-agent team, solve the olympiad-style team task using only the materials under `base/input`. Produce the required deliverable (`proof_packet`).
+Task: arml_power_spring_2024
 
-## Task directory
-- Variant root: `base`
-- Input directory: `base/input`
+Edition: 2024
 
-## Inputs
-- `problem.md`
-- `ARMLPower_Spring_2024.pdf`
+Team size: 15
 
-## Title
-Power Round — Spring 2024
+Deliverable: proof_packet
 
-## Deterministic Evaluation Rule
-Gold answers and official solution booklets are not provided in `input/`. Scoring uses the evaluator declared on the task card (gold match, rubric LLM judge, slide judge, or deferred sandbox).
-
-## Deliverables
-Return the team `proof_packet` expected by this competition.
+Use the attached problem materials and the inherited competition and collaboration instructions.

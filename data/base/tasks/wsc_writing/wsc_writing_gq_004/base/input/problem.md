@@ -1,5 +1,3 @@
-# wsc_writing_gq_004
-
 You can’t read records that don’t exist, just as you can’t listen to music that was never recorded. Learn about the world’s earliest record-keeping , usually credited to the Sumerians or the Egyptians. Compare their early forms of writing—cuneiform and hieroglyphics—then discuss: would there be advantages to living in a world where no one keeps written track of anything? Be sure to investigate the following strategies that early civilizations used to record their histories. What were their limitations, and can we learn from any of them today? 
 
  petroglyphs | cuneiform | nsibidi | quipus | Dispilio Tablet 

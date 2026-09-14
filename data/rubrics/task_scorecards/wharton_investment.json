@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.1",
+  "dataset": "wharton_investment",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "wharton_investment_case-study-2019-2020",
+      "year": 2019,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wharton_investment_2019_v1.json",
+          "sha256": "b004d2c7f7adb6c793f846a99a0624d063c172c8c5b43210a547e55691d63281",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wharton_investment_2019_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The public case page is preserved, but the live OTIS market, approved stock list, season deliverable packet, private judge scorecard, and calibrated numeric weights are not all available.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wharton_investment_case-study-2020-2021",
+      "year": 2020,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wharton_investment_current_v1.json",
+          "sha256": "26e3e420f6aef24f2177ab8815fdb0eb59487517cbdc7f7f3673f2632e1fa347",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wharton_investment_current_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The public case page is preserved, but the live OTIS market, approved stock list, season deliverable packet, private judge scorecard, and calibrated numeric weights are not all available.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wharton_investment_case-study-2021-2022",
+      "year": 2021,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wharton_investment_current_v1.json",
+          "sha256": "26e3e420f6aef24f2177ab8815fdb0eb59487517cbdc7f7f3673f2632e1fa347",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wharton_investment_current_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The public case page is preserved, but the live OTIS market, approved stock list, season deliverable packet, private judge scorecard, and calibrated numeric weights are not all available.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wharton_investment_case-study-current",
+      "year": null,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wharton_investment_current_v1.json",
+          "sha256": "26e3e420f6aef24f2177ab8815fdb0eb59487517cbdc7f7f3673f2632e1fa347",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wharton_investment_current_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The public case page is preserved, but the live OTIS market, approved stock list, season deliverable packet, private judge scorecard, and calibrated numeric weights are not all available.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

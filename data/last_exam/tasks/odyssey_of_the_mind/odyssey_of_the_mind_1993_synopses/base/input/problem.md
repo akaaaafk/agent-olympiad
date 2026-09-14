@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 1993
-
 # Odyssey of the Mind — 1993 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. DinosaursDivisions I, II & IIIThe team’s problem is to create and present a story about dinosaurs. The performance will include team-made dinosaurs, one or more of which will perform technical tasks. Teams will also make a new dinosaur discovery that, for now, we will call a “creativosaurus.” The performance will have a theme that ties together the various required aspects. Time limit: 8 min. Cost limit: $90 USD.
 5. Which End is Up?Divisions I, II & IIIThe team’s problem is to design and build a balsa wood structure to balance and support as much weight as possible. One end, the top or bottom, must fit entirely over a 6″ x 6″ x 1″ block. The opposite end must fit entirely within a 4″ x 4″ x 1″ pace. Time limit: 8 min.
 6. Li’l Gourmet
+

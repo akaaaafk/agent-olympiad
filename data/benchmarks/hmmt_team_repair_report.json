@@ -1,0 +1,159 @@
+{
+  "operation": "hmmt_team_official_reference_repair",
+  "timestamp_utc": "20260912T212332Z",
+  "source_verification_plan": "data/rubrics/hmmt_team/official_reference_plan_20260912.json",
+  "original_problem_pdfs": "preserved",
+  "grading_validation_scope": "Offline reference delivery and data consistency only; no model accuracy claim.",
+  "before_evaluation_status_counts": {
+    "ready_with_limitations": 179,
+    "not_ready": 752,
+    "ready": 670,
+    "remote_judge_ready": 158,
+    "sample_tests_ready": 2
+  },
+  "before_hmmt_team_status_counts": {
+    "not_ready": 13,
+    "ready": 1
+  },
+  "packages": {
+    "n_tasks": 1761,
+    "n_competitions": 43,
+    "staged_assets": 770
+  },
+  "validation": {
+    "records": 1761,
+    "tracks": 43,
+    "scorecards": "matched",
+    "package_ids": "matched",
+    "input_assets": "hash_verified",
+    "iypt_years": "matched",
+    "hmmt_2024_perfect_score": 400.0,
+    "hmmt_team_rubrics_loaded": 14,
+    "complete_problem_references_in_prompt": 140,
+    "judge_reference_assets": "excluded_from_contestant_inputs",
+    "source_pdf_hashes": "matched_reviewed_originals",
+    "model_calls": 0
+  },
+  "status": "completed",
+  "records": 1761,
+  "tracks": 43,
+  "newly_archived_solution_pdfs": 13,
+  "repaired_not_ready": 13,
+  "hmmt_team_sessions": 14,
+  "official_problem_references": 140,
+  "transitions": [
+    {
+      "problem_id": "hmmt_team_2013",
+      "before": "not_ready",
+      "after": "ready_with_limitations",
+      "total_points": 250,
+      "question_count": 10
+    },
+    {
+      "problem_id": "hmmt_team_2014",
+      "before": "not_ready",
+      "after": "ready_with_limitations",
+      "total_points": 250,
+      "question_count": 10
+    },
+    {
+      "problem_id": "hmmt_team_2015",
+      "before": "not_ready",
+      "after": "ready_with_limitations",
+      "total_points": 250,
+      "question_count": 10
+    },
+    {
+      "problem_id": "hmmt_team_2016",
+      "before": "not_ready",
+      "after": "ready_with_limitations",
+      "total_points": 350,
+      "question_count": 10
+    },
+    {
+      "problem_id": "hmmt_team_2017",
+      "before": "not_ready",
+      "after": "ready_with_limitations",
+      "total_points": 400,
+      "question_count": 10
+    },
+    {
+      "problem_id": "hmmt_team_2018",
+      "before": "not_ready",
+      "after": "ready_with_limitations",
+      "total_points": 400,
+      "question_count": 10
+    },
+    {
+      "problem_id": "hmmt_team_2019",
+      "before": "not_ready",
+      "after": "ready_with_limitations",
+      "total_points": 400,
+      "question_count": 10
+    },
+    {
+      "problem_id": "hmmt_team_2020",
+      "before": "not_ready",
+      "after": "ready_with_limitations",
+      "total_points": 400,
+      "question_count": 10
+    },
+    {
+      "problem_id": "hmmt_team_2021",
+      "before": "not_ready",
+      "after": "ready_with_limitations",
+      "total_points": 670,
+      "question_count": 10
+    },
+    {
+      "problem_id": "hmmt_team_2022",
+      "before": "not_ready",
+      "after": "ready_with_limitations",
+      "total_points": 400,
+      "question_count": 10
+    },
+    {
+      "problem_id": "hmmt_team_2023",
+      "before": "not_ready",
+      "after": "ready_with_limitations",
+      "total_points": 500,
+      "question_count": 10
+    },
+    {
+      "problem_id": "hmmt_team_2024",
+      "before": "ready",
+      "after": "ready_with_limitations",
+      "total_points": 400,
+      "question_count": 10
+    },
+    {
+      "problem_id": "hmmt_team_2025",
+      "before": "not_ready",
+      "after": "ready_with_limitations",
+      "total_points": 400,
+      "question_count": 10
+    },
+    {
+      "problem_id": "hmmt_team_2026",
+      "before": "not_ready",
+      "after": "ready_with_limitations",
+      "total_points": 400,
+      "question_count": 10
+    }
+  ],
+  "evaluation_status_counts": {
+    "ready_with_limitations": 193,
+    "not_ready": 739,
+    "ready": 669,
+    "remote_judge_ready": 158,
+    "sample_tests_ready": 2
+  },
+  "remaining_not_ready": 739,
+  "limitations": [
+    "Proof grading uses an LLM and benchmark-defined partial credit, not deterministic answer matching or a recovered official partial-credit marking scheme. No live LLM grading accuracy was validated.",
+    "Official PDFs are authoritative. Extracted text may flatten mathematical notation or omit diagrams. The current text-only judge does not attach official solution PDFs; ambiguous formulas or diagram-dependent arguments require PDF-aware or manual review.",
+    "The current text judge clips submission text at 16000 characters. Longer proof submissions require a compatible PDF-aware or manual evaluation path.",
+    "Official timing, proctoring, hand-in procedures and human grading are not reproduced. Printed raw marks are not sweepstakes-normalized scores."
+  ],
+  "backup": "data/excluded/integrity_repair_20260912T212332Z"
+}

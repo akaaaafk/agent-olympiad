@@ -8,6 +8,7 @@ from unittest.mock import Mock, patch
 
 from pypdf import PdfReader
 from action_modules.task_specific import resolve_contest_interface
+from action_modules.competition_tools import ACTION_NAMES as PREPARATION_ACTIONS
 from actions import parse_typed_action
 from action_wire import normalize_invocation
 from artifact_contract import ArtifactContract
@@ -48,13 +49,13 @@ class UnifiedToolTests(unittest.TestCase):
 
     def test_ownership_execution_and_permission_are_independent(self):
         self.assertEqual(COMMON_TOOL_NAMES, {'use_calculator', 'web_search', 'execute_code', 'render_pdf'})
-        self.assertEqual(SPECIFIC_TOOL_NAMES, {'read_lab_equipment', 'read_star_chart'})
+        self.assertEqual(SPECIFIC_TOOL_NAMES, {'read_lab_equipment', 'read_star_chart'} | PREPARATION_ACTIONS)
         self.assertEqual(TOOL_ACTION_NAMES, TOOL_ACTIONS)
         self.assertFalse(ACTION_REGISTRY['submit_code'].is_tool)
         self.assertTrue(ACTION_REGISTRY['submit_code'].submission)
         self.assertTrue(replace(ACTION_REGISTRY['execute_code'], module='task_specific').is_tool)
         self.assertTrue(COMMON_TOOL_NAMES <= COMMON_ACTION_NAMES)
-        self.assertFalse(TOOL_ACTION_NAMES & resolve_action_names('arml_local'))
+        self.assertEqual(TOOL_ACTION_NAMES & resolve_action_names('arml_local'), {'prepare_arml_local_sheet'})
 
     def test_all_rule_cards_resolve_same_tools_in_both_runtimes(self):
         for name in iter_rule_card_ids(DEFAULT_RULES_ROOT):

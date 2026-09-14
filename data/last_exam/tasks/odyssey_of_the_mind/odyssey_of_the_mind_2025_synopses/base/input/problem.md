@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2025
-
 # Odyssey of the Mind — 2025 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -17,3 +15,4 @@ Sponsored by ARM & HAMMER™
 3. Cooking with BooksClassic cooking takes on a new meaning as teams create a performance about an original chef character that is inspired by fictional literary characters and events. Teams will choose from selected classic literature and create a gourmet meal based on their chosen book. The performance will include a setting from the book that inspired the meal, a team-created cooking gadget, and a dinner party featuring the meal that includes a character from the book
 4. AstronOMical Odyssey!OMers always shoot for the stars, and this problem is no different! Many civilizations have used stories, myths, and legends to explain the stars in the sky and their patterns. In this problem, teams will create a humorous performance set in a team-created “historical” civilization that presents constellations and original stories explaining each one. The performance will also include a humorous astronomer character with a “stellar” costume, a lighting effect, and a shooting star!
 5. It’s a Wonderful World!Travel back in time as OMers explore the Wonders of the World. In this problem, teams will create a performance about the Seven Wonders and create an original wonder that celebrates an achievement in our modern time. A time traveler character will take an architect on a trip to the past to find inspiration for this new creation. The performance will include an ancient setting, original artwork depicting a Wonder, and a creative time machine.
+

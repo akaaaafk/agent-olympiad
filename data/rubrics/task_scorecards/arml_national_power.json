@@ -1,0 +1,1688 @@
+{
+  "schema_version": "1.1",
+  "dataset": "arml_national_power",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "arml_national_power_2009",
+      "year": 2009,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/arml_national_power_2009_v1.json",
+          "sha256": "312f34d39c49c393fc863630c857b90e642f2541c5e4acfa12b42709c66a715b",
+          "format": "numeric_rubric",
+          "rubric_id": "arml_national_power_2009_v1",
+          "total_points": 50.0,
+          "criteria": [
+            {
+              "id": "problem_01a",
+              "name": "Problem 1a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 1a (1 pt). Statement: 1. (a) Compute the 3-signature for 52341."
+            },
+            {
+              "id": "problem_01b",
+              "name": "Problem 1b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 1b (2 pts). Statement: (b) Find another 5-label with the same 3-signature as in part (a)."
+            },
+            {
+              "id": "problem_01c",
+              "name": "Problem 1c",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 1c (2 pts). Statement: (c) Compute two other 6-labels with the same 4-signature as 462135."
+            },
+            {
+              "id": "problem_02a",
+              "name": "Problem 2a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 2a (1 pt). Statement: 2. (a) Explain why the label 1234 has a unique 3-signature."
+            },
+            {
+              "id": "problem_02b",
+              "name": "Problem 2b",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 2b (1 pt). Statement: (b) List three other 4-labels with unique 3-signatures."
+            },
+            {
+              "id": "problem_02c",
+              "name": "Problem 2c",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 2c (1 pt). Statement: (c) Explain why the 3-signature (123 , 321) is impossible."
+            },
+            {
+              "id": "problem_02d",
+              "name": "Problem 2d",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 2d (1 pt). Statement: (d) List three other impossible 3-signatures that have exactly two windows."
+            },
+            {
+              "id": "problem_03a",
+              "name": "Problem 3a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3a (2 pts). Statement: 3. Consider the shape below: (a) Find the 2-signature that corresponds to this shape."
+            },
+            {
+              "id": "problem_03b",
+              "name": "Problem 3b",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3b (3 pts). Statement: (b) Compute two diﬀerent 6-labels with the 2-signature you found in part (a)."
+            },
+            {
+              "id": "problem_04a",
+              "name": "Problem 4a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 4a (2 pts). Statement: 4. (a) List all 5-labels with 2-signature (12 , 12, 21, 21)."
+            },
+            {
+              "id": "problem_04b",
+              "name": "Problem 4b",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 4b (3 pts). Statement: (b) Find a formula for the number of (2 n + 1)-labels with the 2-signature"
+            },
+            {
+              "id": "problem_05a",
+              "name": "Problem 5a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 5a (2 pts). Statement: 5. (a) Compute the number of 5-labels with 2-signature (12 , 21, 12, 21)."
+            },
+            {
+              "id": "problem_05b",
+              "name": "Problem 5b",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 5b (3 pts). Statement: (b) Determine the number of 9-labels with 2-signature (12, 21, 12, 21, 12, 21, 12, 21). Justify your answer."
+            },
+            {
+              "id": "problem_06a",
+              "name": "Problem 6a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 6a (1 pt). Statement: 6. (a) Determine whether the following signatures are possible or impossible: (i) (123, 132, 213),"
+            },
+            {
+              "id": "problem_06b",
+              "name": "Problem 6b",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 6b (1 pt). Statement: (ii) (321, 312, 213)."
+            },
+            {
+              "id": "problem_06c",
+              "name": "Problem 6c",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 6c (1 pt). Statement: (b) Notice that a ( p + 1)-label has only two windows in its p-signature. For a given window ω1, compute the number of windows ω2 such that Sp[L] = ( ω1,ω 2) for some (p + 1)-labelL."
+            },
+            {
+              "id": "problem_06d",
+              "name": "Problem 6d",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 6d (2 pts). Statement: (c) Justify your answer from part (b)."
+            },
+            {
+              "id": "problem_07a",
+              "name": "Problem 7a",
+              "max_score": 4.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 7a (4 pts). Statement: 7. (a) For a general n, determine the number of distinct possible p-signatures."
+            },
+            {
+              "id": "problem_07b",
+              "name": "Problem 7b",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 7b (1 pt). Statement: (b) If a randomly chosen p-signature is 575 times more likely of being impossible than pos- sible, determine p and n."
+            },
+            {
+              "id": "problem_08a",
+              "name": "Problem 8a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 8a (1 pt). Statement: 8. (a) Show that (312 , 231, 312, 132) is not a unique 3-signature."
+            },
+            {
+              "id": "problem_08b",
+              "name": "Problem 8b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 8b (2 pts). Statement: (b) Show that (231, 213, 123, 132) is a unique 3-signature."
+            },
+            {
+              "id": "problem_08c",
+              "name": "Problem 8c",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 8c (1 pt). Statement: (c) Find two 5-labels with unique 2-signatures."
+            },
+            {
+              "id": "problem_08d",
+              "name": "Problem 8d",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 8d (2 pts). Statement: (d) Find a 6-label with a unique 4-signature but which has the 3-signature from part (a)."
+            },
+            {
+              "id": "problem_09a",
+              "name": "Problem 9a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 9a (1 pt). Statement: 9. (a) For a general n≥ 2, compute all n-labels that have unique 2-signatures."
+            },
+            {
+              "id": "problem_09b",
+              "name": "Problem 9b",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 9b (1 pt). Statement: (b) Determine whether or not S5[495138627] is unique."
+            },
+            {
+              "id": "problem_09c",
+              "name": "Problem 9c",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 9c (3 pts). Statement: (c) Determine the smallest p for which the 20-label L = 3, 11, 8, 4, 17, 7, 15, 19, 6, 2, 14, 1, 10, 16, 5, 12, 20, 9, 13, 18 has a unique p-signature."
+            },
+            {
+              "id": "problem_10",
+              "name": "Problem 10",
+              "max_score": 5.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 10 (5 pts). Statement: 10. Show that for each k≥ 2, the number of unique 2 k−1-signatures on the set of 2 k-labels is at least 22k−3."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense",
+            "diagrams that were not recovered from the source PDF"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/arml_national/2009/arml_national_power_2009_solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "bb5c73b024700043084246830d2a60e9d8d6f0166814df9cea3171233bc003e0"
+        }
+      ],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "arml_national_power_2010",
+      "year": 2010,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/arml_national_power_2010_v1.json",
+          "sha256": "da846e42a44c3c624422ab1324184be11a1774919fb976b8a467511254a0c7f8",
+          "format": "numeric_rubric",
+          "rubric_id": "arml_national_power_2010_v1",
+          "total_points": 50.0,
+          "criteria": [
+            {
+              "id": "problem_03a",
+              "name": "Problem 3a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3a (2 pts). Statement: 3."
+            },
+            {
+              "id": "problem_03b",
+              "name": "Problem 3b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3b (2 pts). Statement: b. Find the combined area of the six remaining curvilinear territories."
+            },
+            {
+              "id": "problem_03c",
+              "name": "Problem 3c",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3c (2 pts). Statement: On day 2, the plots bounded by the incircles of the six remaining curvilinear territories are sold. 2a. Determine the number of curvilinear territories remaining at the end of day 3."
+            },
+            {
+              "id": "problem_03d",
+              "name": "Problem 3d",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3d (2 pts). Statement: 2b. Let Xn be the number of plots sold on day n. Find a formula for Xn in terms of n."
+            },
+            {
+              "id": "problem_03e",
+              "name": "Problem 3e",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3e (2 pts). Statement: 2c. Determine the total number of plots sold up to and including day n."
+            },
+            {
+              "id": "problem_03a_2",
+              "name": "Problem 3a (award 2)",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3a (award 2) (2 pts). Statement: 3a. Two unit circles and a circle of radius 2 3 are mutually externally tangent. Compute all possible values of r such that a circle of radius r is tangent to all three circles."
+            },
+            {
+              "id": "problem_03b_2",
+              "name": "Problem 3b (award 2)",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3b (award 2) (3 pts). Statement: 3b. Given three mutually tangent circles with curvatures a,b,c> 0, suppose that (a,b,c, 0) does not satisfy Descartes’ Circle Formula. Show that there are two distinct values of r such that there is a circle of radius r tangent to the given circles."
+            },
+            {
+              "id": "problem_04a",
+              "name": "Problem 4a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 4a (2 pts). Statement: 4. Find a geometric interpretation for this situation."
+            },
+            {
+              "id": "problem_04b",
+              "name": "Problem 4b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 4b (2 pts). Statement: 4. Let φ = 1 + √ 5 2 , and let ρ =φ +√φ. a. Prove that ρ4 = 2ρ3 + 2ρ2 + 2ρ− 1."
+            },
+            {
+              "id": "problem_04c",
+              "name": "Problem 4c",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 4c (2 pts). Statement: b. Show that four pairwise externally tangent circles with nonequal radii in geometric progression must have common ratio ρ."
+            },
+            {
+              "id": "problem_05",
+              "name": "Problem 5",
+              "max_score": 4.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 5 (4 pts). Statement: 5. Use Descartes’ Circle Formula to show that a′ = 2s− 3a and therefore s′ =a′ +b +c +d = 3s− 4a."
+            },
+            {
+              "id": "problem_06a",
+              "name": "Problem 6a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 6a (2 pts). Statement: 6a. Use the result of problem 5 to compute the curvatures of all circles removed on day 2, and the corresponding values of s′."
+            },
+            {
+              "id": "problem_06b",
+              "name": "Problem 6b",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 6b (1 pt). Statement: 6b. Show that by area, 12% of the kingdom is sold on day 2."
+            },
+            {
+              "id": "problem_06c",
+              "name": "Problem 6c",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 6c (2 pts). Statement: 6c. Find the areas of the circles removed on day 3."
+            },
+            {
+              "id": "problem_06d",
+              "name": "Problem 6d",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 6d (1 pt). Statement: 6d. Show that the plots sold on day 3 have mean curvature of 23 ."
+            },
+            {
+              "id": "problem_07",
+              "name": "Problem 7",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 7 (3 pts). Statement: 7. Prove that the curvature of each circular plot is an integer."
+            },
+            {
+              "id": "problem_08a",
+              "name": "Problem 8a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 8a (2 pts). Statement: 8a. Suppose that A′ is a circle conjugate to A with centerzA′ and curvaturea′, and ˆs =a·zA +b· zB +c·zC +d·zD. Use Descartes’ Extended Circle Formula to show that a′·zA′ = 2ˆs− 3a·zA and therefore a′·zA′ +b·zB +c·zC +d·zD = 3ˆs− 4a·zA."
+            },
+            {
+              "id": "problem_08b",
+              "name": "Problem 8b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 8b (2 pts). Statement: 8b. Prove that the center of each circular plot has coordinates (u c, v c ) where u and v are integers, and c is the curvature of the plot."
+            },
+            {
+              "id": "problem_09a",
+              "name": "Problem 9a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 9a (2 pts). Statement: 9. Let P and Q be two proper c-triangles such that P dominates Q. Let C(P ) = (a,b,c,d ) and C(Q) = (w,x,y,z ). a. Show that P (3) dominates P (2) and that P (2) dominates P (1)."
+            },
+            {
+              "id": "problem_09b",
+              "name": "Problem 9b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 9b (2 pts). Statement: b. Prove that P (1) dominates Q(1)."
+            },
+            {
+              "id": "problem_09c",
+              "name": "Problem 9c",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 9c (2 pts). Statement: c. Prove that P (3) dominates Q(3)."
+            },
+            {
+              "id": "problem_10a",
+              "name": "Problem 10a",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 10a (3 pts). Statement: 10a. Prove that the largest plot sold by the king on day n has curvature n2 + 2."
+            },
+            {
+              "id": "problem_10b",
+              "name": "Problem 10b",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 10b (3 pts). Statement: 10b. If ρ =φ +√φ, as in problem 4, prove that the curvature of the smallest plot sold by the king on day n does not exceed 2ρn."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense",
+            "diagrams that were not recovered from the source PDF"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/arml_national/2010/arml_national_power_2010_solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "a3ff941c4822ed850869305c8191feb6e6f2ace858bde243fd34cb4e7164781d"
+        }
+      ],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "arml_national_power_2011",
+      "year": 2011,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/arml_national_power_2011_v1.json",
+          "sha256": "9af524113112c38e5cfe12d109f56df65219a4c747e6c8e515d4c54af31788f7",
+          "format": "numeric_rubric",
+          "rubric_id": "arml_national_power_2011_v1",
+          "total_points": 50.0,
+          "criteria": [
+            {
+              "id": "problem_01a",
+              "name": "Problem 1a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 1a (2 pts). Statement: 1a. For n = 1, 2, 3, 4, and k = 4, ﬁnd Pa(n,n ) + Pa(n + 1,n ) +··· + Pa(n +k,n )."
+            },
+            {
+              "id": "problem_01b",
+              "name": "Problem 1b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 1b (2 pts). Statement: 1b. If Pa(n,n ) + Pa(n + 1,n ) +··· + Pa(n +k,n ) = Pa(m,j ), ﬁnd and justify formulas for m and j in terms of n and k."
+            },
+            {
+              "id": "problem_02a",
+              "name": "Problem 2a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 2a (1 pt). Statement: 2a. Prove that PaP(n, 0) = PaP(n,n ) = 1 for all nonnegative integers n."
+            },
+            {
+              "id": "problem_02b",
+              "name": "Problem 2b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 2b (2 pts). Statement: 2b. Compute rows n = 0 to n = 8 of PaP."
+            },
+            {
+              "id": "problem_03a",
+              "name": "Problem 3a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3a (2 pts). Statement: 3a. If n = 2j for some nonnegative integer j, and 0 <k <n , show that PaP(n,k ) = 0."
+            },
+            {
+              "id": "problem_03b",
+              "name": "Problem 3b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3b (2 pts). Statement: 3b. Let j ≥ 0, and suppose n ≥ 2j. Prove that Pa( n,k ) has the same parity as the sum Pa(n− 2j,k − 2j) + Pa(n− 2j,k ), i.e., either both Pa( n,k ) and the given sum are even, or both are odd."
+            },
+            {
+              "id": "problem_03c",
+              "name": "Problem 3c",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3c (2 pts). Statement: 3c. If j is an integer such that 2j≤n< 2j+1, and k <2j, prove that PaP(n,k ) = PaP(n− 2j,k )."
+            },
+            {
+              "id": "problem_04a",
+              "name": "Problem 4a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 4a (2 pts). Statement: 4a. Compute the next three rows of Clark’s Triangle."
+            },
+            {
+              "id": "problem_04b",
+              "name": "Problem 4b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 4b (2 pts). Statement: 4b. If Cl(n, 1) =an2 +bn +c, determine the values of a,b, and c."
+            },
+            {
+              "id": "problem_04c",
+              "name": "Problem 4c",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 4c (2 pts). Statement: 4c. Prove the formula you found in 4b."
+            },
+            {
+              "id": "problem_05a",
+              "name": "Problem 5a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 5a (1 pt). Statement: 5a. Compute Cl(11, 2)."
+            },
+            {
+              "id": "problem_05b",
+              "name": "Problem 5b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 5b (2 pts). Statement: 5b. Find and justify a formula for Cl( n, 2) in terms of n."
+            },
+            {
+              "id": "problem_05c",
+              "name": "Problem 5c",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 5c (1 pt). Statement: 5c. Compute Cl(11, 3)."
+            },
+            {
+              "id": "problem_05d",
+              "name": "Problem 5d",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 5d (2 pts). Statement: 5d. Find and justify a formula for Cl( n, 3) in terms of n."
+            },
+            {
+              "id": "problem_06",
+              "name": "Problem 6",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 6 (3 pts). Statement: 6. Find and prove a closed formula (that is, a formula with a ﬁxed number of terms and no “. . . ”) for Cl(n,k ) in terms of n, k, and the Pa function."
+            },
+            {
+              "id": "problem_07a",
+              "name": "Problem 7a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 7a (1 pt). Statement: 7a. Compute the entries in the next two rows of Leibniz’s Triangle."
+            },
+            {
+              "id": "problem_07b",
+              "name": "Problem 7b",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 7b (1 pt). Statement: 7b. Compute Le(17, 1)."
+            },
+            {
+              "id": "problem_07c",
+              "name": "Problem 7c",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 7c (1 pt). Statement: 7c. Compute Le(17, 2)."
+            },
+            {
+              "id": "problem_08a",
+              "name": "Problem 8a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 8a (2 pts). Statement: 8a. Find and justify a formula for Le( n, 1) in terms of n."
+            },
+            {
+              "id": "problem_08b",
+              "name": "Problem 8b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 8b (2 pts). Statement: 8b. Compute 2011∑ n=1 Le(n, 1)."
+            },
+            {
+              "id": "problem_08c",
+              "name": "Problem 8c",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 8c (2 pts). Statement: 8c. Find and justify a formula for Le( n, 2) in terms of n."
+            },
+            {
+              "id": "problem_09a",
+              "name": "Problem 9a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 9a (2 pts). Statement: 9a. If ∞∑ i=1 Le(i, 1) = Le(n,k ), determine the values of n and k."
+            },
+            {
+              "id": "problem_09b",
+              "name": "Problem 9b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 9b (2 pts). Statement: 9b. If ∞∑ i=m Le(i,m ) = Le(n,k ), compute expressions for n and k in terms of m."
+            },
+            {
+              "id": "problem_09c",
+              "name": "Problem 9c",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 9c (2 pts). Statement: 9c. Justify your result in 9b."
+            },
+            {
+              "id": "problem_10",
+              "name": "Problem 10",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 10 (3 pts). Statement: 10. Find three distinct sets of positive integers {a,b,c,d } with a<b<c<d such that 1 3 = 1 a + 1 b + 1 c + 1 d."
+            },
+            {
+              "id": "problem_11",
+              "name": "Problem 11",
+              "max_score": 4.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 11 (4 pts). Statement: 11. Find and prove a closed formula (that is, a formula with a ﬁxed number of terms and no “. . . ”) for Le(n,k ) in terms of n, k, and the Pa function."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense",
+            "diagrams that were not recovered from the source PDF"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/arml_national/2011/arml_national_power_2011_solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "fde41f18bd566254070fbfa5efedd13271dbcc8f786c5d4eab4b92f4154cb5ca"
+        }
+      ],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "arml_national_power_2012",
+      "year": 2012,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/arml_national_power_2012_v1.json",
+          "sha256": "71d91cbbd000af265e8afbe1b7364ce3768bfc55cdff0ef3042ed0f3ac16b919",
+          "format": "numeric_rubric",
+          "rubric_id": "arml_national_power_2012_v1",
+          "total_points": 50.0,
+          "criteria": [
+            {
+              "id": "problem_03a",
+              "name": "Problem 3a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3a (1 pt). Statement: 3. The focus of this Power Question is to determine, given a hideout map and a ﬁxed number of Cops, whether the Cops can be sure of catching the Robber within some time limit. Map Notation: The following notation may be useful when writing your solutions. For a map M, let h(M) be the number of hideouts and e(M) be the number of edges in M. The safety of a hideout H is the number of hideouts adjacent to H, and is denoted by s(H). 158 Power Question 2012: Cops and Robbers 159 1a. Consider the hideout map M below. B6B5 B4 B3 B2 A B1 Show that one Cop can always catch the Robber."
+            },
+            {
+              "id": "problem_03b",
+              "name": "Problem 3b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3b (2 pts). Statement: The Cop number of a mapM, denotedC(M), is the minimum number of Cops required to guarantee that the Robber is caught. In 1a, you have shown that C(M) = 1. 1b. The map shown below is C6, the cyclic graph with six hideouts. Show that three Cops are suﬃcient to catch the Robber on C6, so that C(C6)≤ 3."
+            },
+            {
+              "id": "problem_03c",
+              "name": "Problem 3c",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3c (2 pts). Statement: A6A5 A4 A3 A2 A1 1c. Show that for all maps M, C(M)<h (M)."
+            },
+            {
+              "id": "problem_03d",
+              "name": "Problem 3d",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3d (2 pts). Statement: 2a. Find C(M) for the map below."
+            },
+            {
+              "id": "problem_03e",
+              "name": "Problem 3e",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3e (2 pts). Statement: A2 A3 A4 A5 A6 A1A7 2b. Show that C(M)≤ 3 for the map below."
+            },
+            {
+              "id": "problem_03f",
+              "name": "Problem 3f",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3f (3 pts). Statement: D A J G C L I F B H K E 160 Power Question 2012: Cops and Robbers 2c. Generalize the result of 2a: if Kn is a map with n hideouts in which every hideout is adjacent to every other hideout (also called the complete map on n hideouts), determine C(Kn)."
+            },
+            {
+              "id": "problem_03g",
+              "name": "Problem 3g",
+              "max_score": 4.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3g (4 pts). Statement: ber of days required to guarantee a capture using c Cops. For example, in the graph from 1b, if three Cops are deployed, they might catch the Robber in the ﬁrst day, but if they don’t, there is a strategy that will guarantee they will capture the Robber within two days. Therefore the capture time is D(C6, 3) = 2. 3. A path on n hideouts is a map with n hideouts, connected in one long string. (More formally, a map is a path if and only if two hideouts are adjacent to exactly one hideout each and all other hideouts are adjacent to exactly two hideouts each.) It is denoted by Pn. The maps P3 throughP6 are shown below. A6A5A4A3A2 A5A4A3A2 A4A3A2 A3 A1 A2 A1 A1 A1 Show that D(Pn, 1)≤ 2n for n≥ 3."
+            },
+            {
+              "id": "problem_04a",
+              "name": "Problem 4a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 4a (2 pts). Statement: 4. A cycle on n hideouts is a map with n hideouts, connected in one loop. (More formally, a map is a cycle if every hideout is adjacent to exactly two hideouts.) It is denoted by Cn. The mapsC3 throughC6 are shown below. A2 A3 A5 A4 A6 A3 A4 A5 A2 A1A1 A4 A2 A3 A3 A2 A1A1 a. Determine C(Cn) for n≥ 3. (Note that this is determine and not compute.)"
+            },
+            {
+              "id": "problem_04b",
+              "name": "Problem 4b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 4b (2 pts). Statement: b. Show that D(Cn,C (Cn))< 3n 2 for n≥ 3."
+            },
+            {
+              "id": "problem_05",
+              "name": "Problem 5",
+              "max_score": 4.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 5 (4 pts). Statement: 5. Determine W (M) for each of the maps in problem 2a and 2b."
+            },
+            {
+              "id": "problem_06",
+              "name": "Problem 6",
+              "max_score": 6.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 6 (6 pts). Statement: 6. Let M be a map with n≥ 3 hideouts. Prove that 2 ≤ W (M)≤ n, and that these bounds cannot be improved. In other words, prove that for each n≥ 3, there exist maps M1 and M2 such that W (M1) = 2 and W (M2) =n."
+            },
+            {
+              "id": "problem_07a",
+              "name": "Problem 7a",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 7a (3 pts). Statement: 7a. Prove that if M is bipartite, then C(M)≤n/2."
+            },
+            {
+              "id": "problem_07b",
+              "name": "Problem 7b",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 7b (3 pts). Statement: 7b. Prove that C(M)≤n/2 for any map M with the property that, for all hideouts H1 and H2, either all paths from H1 to H2 contain an odd number of edges, or all paths from H1 to H2 contain an even number of edges."
+            },
+            {
+              "id": "problem_08",
+              "name": "Problem 8",
+              "max_score": 4.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 8 (4 pts). Statement: 8. A map M is called k-perfect if its hideout set H can be partitioned into equal-sized subsets A1,A2,..., Ak such that for anyj, the hideouts ofAj are only adjacent to hideouts inAj+1 or Aj−1. (The indices are taken modulo k: the hideouts of A1 may be adjacent to the hideouts ofAk.) Show that if M is k-perfect, then C(M)≤ 2n k ."
+            },
+            {
+              "id": "problem_09",
+              "name": "Problem 9",
+              "max_score": 5.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 9 (5 pts). Statement: 9. Find an example of a map M with 2012 hideouts such that C(M) = 17 and W (M) = 34, or prove that no such map exists."
+            },
+            {
+              "id": "problem_10",
+              "name": "Problem 10",
+              "max_score": 5.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 10 (5 pts). Statement: 10. Find an example of a map M with 4 or more hideouts such that W (M) = 3, or prove that no such map exists."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense",
+            "diagrams that were not recovered from the source PDF"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/arml_national/2012/arml_national_power_2012_solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "9b9550cf805dffeb5ffdebdfc2cb07b0daeea2950ac20bf338cb41bfc488510e"
+        }
+      ],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "arml_national_power_2013",
+      "year": 2013,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/arml_national_power_2013_v1.json",
+          "sha256": "d344821c7fcc4fc3dc98ee65c57d010f260a244aa017a1c92eeffe8771c5da21",
+          "format": "numeric_rubric",
+          "rubric_id": "arml_national_power_2013_v1",
+          "total_points": 50.0,
+          "criteria": [
+            {
+              "id": "problem_01a",
+              "name": "Problem 1a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 1a (1 pt). Statement: 1a. Compute d(6), d(16), and d(72)."
+            },
+            {
+              "id": "problem_01b",
+              "name": "Problem 1b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 1b (2 pts). Statement: 1b. Of the houses with positive numbers less than 100, ﬁnd, with proof, the house or houses which is (are) closest to City Hall."
+            },
+            {
+              "id": "problem_01c",
+              "name": "Problem 1c",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 1c (1 pt). Statement: 1c. Find four houses at a distance of 1 /9 from house number 17."
+            },
+            {
+              "id": "problem_01d",
+              "name": "Problem 1d",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 1d (2 pts). Statement: 1d. Find an inﬁnite sequence of houses {hn} such that d(17,h 1)>d (17,h 2)>··· >d (17,hn)>d (17,hn+1)>··· ."
+            },
+            {
+              "id": "problem_02a",
+              "name": "Problem 2a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 2a (1 pt). Statement: 2a. Find four houses in N (6)."
+            },
+            {
+              "id": "problem_02b",
+              "name": "Problem 2b",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 2b (1 pt). Statement: 2b. Suppose that n is a house with d(n) = 1. Find four houses in N (n)."
+            },
+            {
+              "id": "problem_02c",
+              "name": "Problem 2c",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 2c (2 pts). Statement: 2c. Suppose that n is a house with d(n) = 1/27. Determine the ten smallest positive integers m (in the standard ordering of the integers) such that m∈N (n)."
+            },
+            {
+              "id": "problem_03a",
+              "name": "Problem 3a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3a (1 pt). Statement: 3a. Notice that d(16) = d(17) = 1 and that d(16, 17) = 1. Is it true that, for all m,n such that d(m) =d(n) = 1 andm̸=n,d(m,n ) = 1? Either prove your answer or ﬁnd a counterexample."
+            },
+            {
+              "id": "problem_03b",
+              "name": "Problem 3b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3b (2 pts). Statement: 3b. Suppose that d(m) =d(n) = 1/3k and that m̸=n. Determine the possible values of d(m,n )."
+            },
+            {
+              "id": "problem_03c",
+              "name": "Problem 3c",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3c (2 pts). Statement: 3c. Suppose that d(17,m ) = 1/81. Determine the possible values of d(16,m )."
+            },
+            {
+              "id": "problem_04a",
+              "name": "Problem 4a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 4a (1 pt). Statement: 4a. Show that d(17, 51)≤d(17, 34) +d(34, 51) and that d(17, 95)≤d(17, 68) +d(68, 95)."
+            },
+            {
+              "id": "problem_04b",
+              "name": "Problem 4b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 4b (2 pts). Statement: 4b. If a = 17 and b = 68, determine all values of c such that d(a,c ) =d(a,b )."
+            },
+            {
+              "id": "problem_05a",
+              "name": "Problem 5a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 5a (2 pts). Statement: 5a. Prove that, for all a and b, d(a,b )≤ max{d(a),d (b)}."
+            },
+            {
+              "id": "problem_05b",
+              "name": "Problem 5b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 5b (2 pts). Statement: 5b. Prove that, for all a, b, and c, d(a,c )≤ max{d(a,b ),d (b,c )}."
+            },
+            {
+              "id": "problem_05c",
+              "name": "Problem 5c",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 5c (1 pt). Statement: 5c. Prove that, for all a, b, and c, d(a,c )≤d(a,b ) +d(b,c )."
+            },
+            {
+              "id": "problem_05d",
+              "name": "Problem 5d",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 5d (2 pts). Statement: 5d. After thinking about it some more, the visitor announces that all ARMLopolitan triangles have a special property. What is it? Justify your answer."
+            },
+            {
+              "id": "problem_06a",
+              "name": "Problem 6a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 6a (1 pt). Statement: 6a. Find at least one house whose distance from City Hall changes as a result of the move."
+            },
+            {
+              "id": "problem_06b",
+              "name": "Problem 6b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 6b (2 pts). Statement: 6b. Prove that the distance between houses with consecutive numbers does not change after the move."
+            },
+            {
+              "id": "problem_07a",
+              "name": "Problem 7a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 7a (2 pts). Statement: 7a. The residents of N (1) value their suburban location and protest the move, claiming it will make them closer to City Hall. Will it? Justify your answer."
+            },
+            {
+              "id": "problem_07b",
+              "name": "Problem 7b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 7b (2 pts). Statement: 7b. Some residents ofN (9) claim that their tightly-knit community will be disrupted by the move: they will be scattered between diﬀerent neighborhoods after the change. Will they? Justify your answer."
+            },
+            {
+              "id": "problem_07c",
+              "name": "Problem 7c",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 7c (2 pts). Statement: 7c. Other residents ofN (9) claim that their community will be disrupted by newcomers: they say that after the move, their new neighborhood will also contain residents previously from several diﬀerent old neighborhoods (not just the new arrivals to ARMLopolis). Will it? Justify your answer."
+            },
+            {
+              "id": "problem_07d",
+              "name": "Problem 7d",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 7d (2 pts). Statement: 7d. Determine all values of n such thatN (n) will either entirely relocate (i.e., all residents r of N (n) are at a diﬀerent distance from City Hall than they were before), lose residents (as in 7b), or gain residents besides the new ARMLopolitans (as in 7c)."
+            },
+            {
+              "id": "problem_08a",
+              "name": "Problem 8a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 8a (2 pts). Statement: 8a. One day, Paul (house 23) and Sally (house 32), longtime residents of N (1), are discussing the “2 side” of the neighborhood, that is, the set of houses {n|n = 3k + 2, k∈ Z}. Paul says “I feel like I’m at the center of the “2 side”: when I looked out my window, I realized that the “2 side” consists of exactly those houses whose distance from me is at most 1 /3.” Prove that Paul is correct."
+            },
+            {
+              "id": "problem_08b",
+              "name": "Problem 8b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 8b (2 pts). Statement: 8b. Sally replies “It’s not all about you: I have the same experience!” Justify Sally’s claim; in other words, prove that {n| n = 3k + 2, k∈ Z} consists exactly of those houses whose distance from Sally’s house is at most 1 /3."
+            },
+            {
+              "id": "problem_08c",
+              "name": "Problem 8c",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 8c (2 pts). Statement: 8c. Paul’s and Sally’s observations can be generalized. For any x, letDr(x) ={y|d(x,y )≤r}, that is,Dr(x) is the disk of radius r. Prove that if d(x,z ) =r, thenDr(x) =Dr(z)."
+            },
+            {
+              "id": "problem_09a",
+              "name": "Problem 9a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 9a (2 pts). Statement: 9a. Ross takes a walk starting at his house, which is number 34. He ﬁrst visits house n1, such that d(n1, 34) = 1/3. He then goes to another house, n2, such that d(n1,n 2) = 1/3. Continuing in that way, he visits houses n3,n 4,..., and each time, d(ni,ni+1) = 1/3. At the end of the day, what is his maximum possible distance from his original house? Justify your answer."
+            },
+            {
+              "id": "problem_09b",
+              "name": "Problem 9b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 9b (2 pts). Statement: 9b. Generalize your answer to 9a: given a value of n0, determine the rational values ofr for which the sequence n1,n 2,... with d(ni,ni+1) = r is entirely contained in a circle of ﬁnite radius centered at n0."
+            },
+            {
+              "id": "problem_10a",
+              "name": "Problem 10a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 10a (1 pt). Statement: 10a. Compute d(3/5),d (5/8), and d(7/18)."
+            },
+            {
+              "id": "problem_10b",
+              "name": "Problem 10b",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 10b (1 pt). Statement: 10b. Determine all pairs of relatively prime integers p and q such that p/q∈N (4/3)."
+            },
+            {
+              "id": "problem_10c",
+              "name": "Problem 10c",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 10c (2 pts). Statement: s same address. When asked, he says “My old address was e, that is, the sum 1 0! + 1 1! + 1 2! +... . I’d really like to keep that address, because the addresses of my friends here are all partial sums of this series: Alice’s house is 1 0!, Bob’s house is 1 0! + 1 1!, Carol’s house is 1 0! + 1 1! + 1 2!, and so on. Just let me know what I have to do in order to be near my friends!” After some head-scratching, the ARMLopolitan planning council announces that this request cannot be satisﬁed: there is no number, rational or otherwise, that corresponds to the (inﬁnite) sum, or that is arbitrarily close to the houses in this sequence. Prove that the council is correct (and not just bureaucratic)."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense",
+            "diagrams that were not recovered from the source PDF"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/arml_national/2013/arml_national_power_2013_solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "75d677c4055b246d4db8cd6b00c7722466658ac642720fa33d27de9a409a14dc"
+        }
+      ],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "arml_national_power_2014",
+      "year": 2014,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/arml_national_power_2014_v1.json",
+          "sha256": "90db84c5b1547063f2f85bf8cb2698935fd22659f1224ae23cf764924ed9344b",
+          "format": "numeric_rubric",
+          "rubric_id": "arml_national_power_2014_v1",
+          "total_points": 50.0,
+          "criteria": [
+            {
+              "id": "problem_01a",
+              "name": "Problem 1a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 1a (1 pt). Statement: 1a. Compute pop(F17)."
+            },
+            {
+              "id": "problem_01b",
+              "name": "Problem 1b",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 1b (1 pt). Statement: 1b. Let n = pop(Fd). In terms of n, compute d."
+            },
+            {
+              "id": "problem_01c",
+              "name": "Problem 1c",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 1c (2 pts). Statement: 1c. Let T be a full town and let D∈ dish(T ). Let T′ be the town consisting of all residents of T who do not know how to make D. Prove that T′ is full."
+            },
+            {
+              "id": "problem_02a",
+              "name": "Problem 2a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 2a (1 pt). Statement: 2a. Show that gr(ARMLton) = 2."
+            },
+            {
+              "id": "problem_03",
+              "name": "Problem 3",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3 (1 pt). Statement: 3."
+            },
+            {
+              "id": "problem_03a",
+              "name": "Problem 3a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3a (1 pt). Statement: 3a. Show that gr(F4) = 3."
+            },
+            {
+              "id": "problem_05a",
+              "name": "Problem 5a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 5a (2 pts). Statement: 5."
+            },
+            {
+              "id": "problem_05b",
+              "name": "Problem 5b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 5b (2 pts). Statement: 3c. Show that gr(F6) = 5."
+            },
+            {
+              "id": "problem_05c",
+              "name": "Problem 5c",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 5c (2 pts). Statement: 4. Prove that the sequence gr(F2), gr(F3), gr(F4),... is a non-decreasing sequence."
+            },
+            {
+              "id": "problem_05d",
+              "name": "Problem 5d",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 5d (2 pts). Statement: For a dish D, a resident is called a D-chef if he or she knows how to make the dish D. Deﬁne chefT (D) to be the set of residents in T who are D-chefs. For example, in ARMLville, David is a steak-chef and a pancakes-chef. Further, chef ARMLville(steak) ={Sally, David}. 5. Prove that ∑ D∈dish(T ) |chefT (D)| = 2 pop(T )."
+            },
+            {
+              "id": "problem_06",
+              "name": "Problem 6",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 6 (2 pts). Statement: 6. Show that for any town T and any D∈ dish(T ), gr(T )≥| chefT (D)|."
+            },
+            {
+              "id": "problem_07",
+              "name": "Problem 7",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 7 (3 pts). Statement: 7. For n = 5, 6, and 7, ﬁnd a heterogeneous town T of population 5 for which |dish(T )| =n."
+            },
+            {
+              "id": "problem_08a",
+              "name": "Problem 8a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 8a (1 pt). Statement: 8a. Compute the number of distinguishable resident cycles of length 6 in F8."
+            },
+            {
+              "id": "problem_08b",
+              "name": "Problem 8b",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 8b (1 pt). Statement: 8b. In terms of k andd, ﬁnd the number of distinguishable resident cycles of lengthk inFd."
+            },
+            {
+              "id": "problem_09",
+              "name": "Problem 9",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 9 (3 pts). Statement: 9. Let T be a town with at least two residents that has a single resident cycle that contains every resident. Prove that T is homogeneous if and only if pop( T ) is even."
+            },
+            {
+              "id": "problem_10a",
+              "name": "Problem 10a",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 10a (3 pts). Statement: 10. Let T be a town such that, for each D∈ dish(T ),|chefT (D)| = 2. a. Prove that there are ﬁnitely many resident cyclesC1,C 2,...,C j inT so that each resident belongs to exactly one of the Ci."
+            },
+            {
+              "id": "problem_10b",
+              "name": "Problem 10b",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 10b (3 pts). Statement: b. Prove that if pop( T ) is odd, then T is heterogeneous."
+            },
+            {
+              "id": "problem_11a",
+              "name": "Problem 11a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 11a (2 pts). Statement: 11. Let T be a town such that, for each D∈ dish(T ),|chefT (D)| = 3. a. Either ﬁnd such a town T for which|dish(T )| is odd, or show that no such town exists."
+            },
+            {
+              "id": "problem_11b",
+              "name": "Problem 11b",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 11b (3 pts). Statement: b. Prove that if T contains a resident cycle such that for every dish D∈ dish(T ), there exists a chef in the cycle that can prepare D, then gr(T ) = 3."
+            },
+            {
+              "id": "problem_12a",
+              "name": "Problem 12a",
+              "max_score": 1.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 12a (1 pt). Statement: 12. Let k be a positive integer, and let T be a town in which |chefT (D)| = k for every dish D∈ dish(T ). Suppose further that |dish(T )| is odd. a. Show that k is even."
+            },
+            {
+              "id": "problem_12b",
+              "name": "Problem 12b",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 12b (3 pts). Statement: b. Prove the following: for every group in T , there is some dish D∈ dish(T ) such that no one in the group is a D-chef."
+            },
+            {
+              "id": "problem_12c",
+              "name": "Problem 12c",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 12c (3 pts). Statement: c. Prove that gr(T )>k ."
+            },
+            {
+              "id": "problem_13a",
+              "name": "Problem 13a",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 13a (3 pts). Statement: 13a. For each odd positive integer d≥ 3, prove that gr(Fd) =d."
+            },
+            {
+              "id": "problem_13b",
+              "name": "Problem 13b",
+              "max_score": 4.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 13b (4 pts). Statement: 13b. For each even positive integer d, prove that gr(Fd) =d− 1."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense",
+            "diagrams that were not recovered from the source PDF"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/arml_national/2014/arml_national_power_2014_solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "cd470ac18b51799442fab2678fdae8d4ff6d3dba4c6554e3da79d597082fba46"
+        }
+      ],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "arml_national_power_2016",
+      "year": 2016,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/team_power_proof_40_v1.json",
+          "sha256": "dcb91ca1bc6e6e3bb157210a08503d56eb6fb00eefde60fb0d9d305747a3893e",
+          "format": "numeric_rubric",
+          "rubric_id": "team_power_proof_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "correctness",
+              "name": "Mathematical correctness",
+              "max_score": 16,
+              "observable": true,
+              "description": "Results and proofs are mathematically correct against the official marking notes."
+            },
+            {
+              "id": "completeness",
+              "name": "Coverage of required parts",
+              "max_score": 12,
+              "observable": true,
+              "description": "All required sub-parts are attempted with substantive solutions."
+            },
+            {
+              "id": "reasoning",
+              "name": "Clarity of reasoning",
+              "max_score": 8,
+              "observable": true,
+              "description": "Arguments are structured, justified, and readable."
+            },
+            {
+              "id": "presentation",
+              "name": "Written presentation",
+              "max_score": 4,
+              "observable": true,
+              "description": "Notation, organization, and exposition are professional."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/arml_national/2016/arml_national_power_2016_solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "9504a61f118ae35ac46a0db099bab43b0acf772a191d2255ef96ba57a18e9a50"
+        }
+      ],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "arml_national_power_2017",
+      "year": 2017,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/arml_national_power_2017_v1.json",
+          "sha256": "c475c0b9d05ea04e3d2694e3775fd20bee555bc75fe0237630e1dc1778fd31d4",
+          "format": "numeric_rubric",
+          "rubric_id": "arml_national_power_2017_v1",
+          "total_points": 50.0,
+          "criteria": [
+            {
+              "id": "problem_03a",
+              "name": "Problem 3a",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3a (2 pts). Statement: y we do math. In the parallel universe, students are taught two operations: ⊕ and⊙. Elle notices that a⊕b = min(a,b ) and a⊙b =a +b for all real numbers a and b. Elle decides to investigate the properties of these two new operations. Throughout this Power Question, a⊕b and a⊙b will always denote parallel-universe addition and multiplication, respectively, while a +b and a·b will denote addition and multiplication in the usual sense. The standard order of operations (⊙ ﬁrst, then ⊕) will apply, although parentheses are sometimes included for clariﬁcation. All variables refer to real numbers unless otherwise speciﬁed. 1. a. Determine whether there is a real number O such thatO⊕ x =x for all x."
+            },
+            {
+              "id": "problem_03b",
+              "name": "Problem 3b",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3b (2 pts). Statement: b. Show that there is a real number I such thatI⊙ x =x for all x."
+            },
+            {
+              "id": "problem_03c",
+              "name": "Problem 3c",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3c (3 pts). Statement: 2. Show that⊙ distributes over⊕; that is, a⊙ (b⊕c) = (a⊙b)⊕ (a⊙c) for all a,b,c ."
+            },
+            {
+              "id": "problem_03d",
+              "name": "Problem 3d",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3d (3 pts). Statement: 3. Find all solutions to each of the following equations: a. (x⊙x)⊕ (2⊙x)⊕ 1 =x⊕ 2;"
+            },
+            {
+              "id": "problem_03e",
+              "name": "Problem 3e",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3e (3 pts). Statement: b. (x⊙x)⊕ (−1) = (x⊕ 1)⊙ (x⊕ (−1))."
+            },
+            {
+              "id": "problem_03f",
+              "name": "Problem 3f",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3f (2 pts). Statement: Next, Elle investigates the properties of exponents and polynomials. She uses the notation a⊙b =a⊙a⊙a⊙···⊙ a   b copies of a , wherea is a real number and b is a positive integer. Furthermore, by deﬁnition, a⊙0 = 0. Elle wonders if exponenti- ation works in the parallel universe the way it works in ours. 4. Show that for any real numbers x and y, and any positive integer n: a. (x⊙y)⊙n =x⊙n⊙y⊙n;"
+            },
+            {
+              "id": "problem_03g",
+              "name": "Problem 3g",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3g (2 pts). Statement: b. (x⊕y)⊙n =x⊙n⊕y⊙n;"
+            },
+            {
+              "id": "problem_03h",
+              "name": "Problem 3h",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3h (3 pts). Statement: c. (x⊕y)⊙2 =x⊙2⊕y⊙2 = (x⊙2)⊕ (x⊙y)⊕ (y⊙2)."
+            },
+            {
+              "id": "problem_03i",
+              "name": "Problem 3i",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3i (2 pts). Statement: 5. a. Show that for any a, there is exactly one solution to the equation x⊙2 = a. This is called the parallel square root of a and is denoted by ◦√a."
+            },
+            {
+              "id": "problem_03j",
+              "name": "Problem 3j",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3j (2 pts). Statement: b. Show that for any a, there is exactly one solution to the equation a⊙x =I, where I is deﬁned in Problem 1b. This is called the parallel reciprocal of a and is denoted by ˆa."
+            },
+            {
+              "id": "problem_03k",
+              "name": "Problem 3k",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3k (3 pts). Statement: c. Show that for any a, ◦√ ˆa =ˆ◦√a."
+            },
+            {
+              "id": "problem_03l",
+              "name": "Problem 3l",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3l (2 pts). Statement: x⊙0), where eachai is a real number. As a convenient shorthand, x⊙1 will simply be written as x anda0⊙x⊙0 will simply be written as a0. For example: • f(x) = (5⊙x)⊕ 3 is a degree-1 PUP, but not a degree-2 PUP. • f(x) = (1⊙x⊙2)⊕ 1 is not a PUP at all, because the x term is missing. • f(x) = (0⊙x⊙2)⊕ (0⊙x)⊕ 0 is a degree-2 PUP. • f(x) = (x⊙2)⊕x⊕ 1 is not a PUP; it should instead be written as (0 ⊙x⊙2)⊕ (0⊙x)⊕ 1. Elle now examines the properties of degree-2 (quadratic) PUPs. In the parallel universe, a root of a PUP f is a real numberx such that f(x) = 0. 6. In our universe, a quadratic equation has either zero, one, or two distinct real roots. a. Find a quadratic PUP that has exactly one root."
+            },
+            {
+              "id": "problem_03m",
+              "name": "Problem 3m",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3m (2 pts). Statement: b. Could a quadratic PUP have zero roots? Justify your answer."
+            },
+            {
+              "id": "problem_03n",
+              "name": "Problem 3n",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3n (2 pts). Statement: c. Could a quadratic PUP have inﬁnitely many distinct roots? Justify your answer."
+            },
+            {
+              "id": "problem_03o",
+              "name": "Problem 3o",
+              "max_score": 3.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3o (3 pts). Statement: d. Suppose that f(x) is a PUP of positive degree. Prove that if f has more than one root, then it has inﬁnitely many distinct roots."
+            },
+            {
+              "id": "problem_03p",
+              "name": "Problem 3p",
+              "max_score": 5.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3p (5 pts). Statement: 7. Supposef(x) = (a⊙x⊙2)⊕(b⊙x)⊕c is a quadratic PUP that has exactly one root. Find a formula for this root in terms of a, b, and c. Express the formula using only the operations ⊕,⊙, parallel-universe exponentiation, parallel square roots, and parallel reciprocals."
+            },
+            {
+              "id": "problem_03q",
+              "name": "Problem 3q",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3q (2 pts). Statement: Suppose f(x) = (a⊙x⊙2)⊕ (b⊙x)⊕c is a quadratic PUP. A factorization off is an ordered triple of real numbers (k,r,s ) such that r≤s, and f(x) =k⊙ (x⊕r)⊙ (x⊕s), for all real numbers x. 8. Prove that if (k,r,s ) is a factorization of f, then: a. k =a, and"
+            },
+            {
+              "id": "problem_03r",
+              "name": "Problem 3r",
+              "max_score": 2.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3r (2 pts). Statement: b. r⊙s =c⊙ˆa."
+            },
+            {
+              "id": "problem_03s",
+              "name": "Problem 3s",
+              "max_score": 5.0,
+              "observable": true,
+              "description": "Correct, justified solution to Problem 3s (5 pts). Statement: 9. Prove that every quadratic PUP has exactly one factorization."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense",
+            "diagrams that were not recovered from the source PDF"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/arml_national/2017/arml_national_power_2017_solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "f2233c3a1668ece73ff203cb2f8c1d9fd40524501f64f87474d3d2503ac28121"
+        }
+      ],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "arml_national_power_2018",
+      "year": 2018,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/team_power_proof_40_v1.json",
+          "sha256": "dcb91ca1bc6e6e3bb157210a08503d56eb6fb00eefde60fb0d9d305747a3893e",
+          "format": "numeric_rubric",
+          "rubric_id": "team_power_proof_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "correctness",
+              "name": "Mathematical correctness",
+              "max_score": 16,
+              "observable": true,
+              "description": "Results and proofs are mathematically correct against the official marking notes."
+            },
+            {
+              "id": "completeness",
+              "name": "Coverage of required parts",
+              "max_score": 12,
+              "observable": true,
+              "description": "All required sub-parts are attempted with substantive solutions."
+            },
+            {
+              "id": "reasoning",
+              "name": "Clarity of reasoning",
+              "max_score": 8,
+              "observable": true,
+              "description": "Arguments are structured, justified, and readable."
+            },
+            {
+              "id": "presentation",
+              "name": "Written presentation",
+              "max_score": 4,
+              "observable": true,
+              "description": "Notation, organization, and exposition are professional."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/arml_national/2018/arml_national_power_2018_solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "9cf2a727c3ab18291b10c76bd1cfc17a53a689dba31822df5cf917d54d8e7ee9"
+        }
+      ],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "arml_national_power_2019",
+      "year": 2019,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/team_power_proof_40_v1.json",
+          "sha256": "dcb91ca1bc6e6e3bb157210a08503d56eb6fb00eefde60fb0d9d305747a3893e",
+          "format": "numeric_rubric",
+          "rubric_id": "team_power_proof_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "correctness",
+              "name": "Mathematical correctness",
+              "max_score": 16,
+              "observable": true,
+              "description": "Results and proofs are mathematically correct against the official marking notes."
+            },
+            {
+              "id": "completeness",
+              "name": "Coverage of required parts",
+              "max_score": 12,
+              "observable": true,
+              "description": "All required sub-parts are attempted with substantive solutions."
+            },
+            {
+              "id": "reasoning",
+              "name": "Clarity of reasoning",
+              "max_score": 8,
+              "observable": true,
+              "description": "Arguments are structured, justified, and readable."
+            },
+            {
+              "id": "presentation",
+              "name": "Written presentation",
+              "max_score": 4,
+              "observable": true,
+              "description": "Notation, organization, and exposition are professional."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/arml_national/2019/arml_national_power_2019_solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "180d171a78262d7ac184c127a11f22e5d1427b4b03497bf6d4683415d6bcc78b"
+        }
+      ],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "arml_national_power_2023",
+      "year": 2023,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/team_power_proof_40_v1.json",
+          "sha256": "dcb91ca1bc6e6e3bb157210a08503d56eb6fb00eefde60fb0d9d305747a3893e",
+          "format": "numeric_rubric",
+          "rubric_id": "team_power_proof_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "correctness",
+              "name": "Mathematical correctness",
+              "max_score": 16,
+              "observable": true,
+              "description": "Results and proofs are mathematically correct against the official marking notes."
+            },
+            {
+              "id": "completeness",
+              "name": "Coverage of required parts",
+              "max_score": 12,
+              "observable": true,
+              "description": "All required sub-parts are attempted with substantive solutions."
+            },
+            {
+              "id": "reasoning",
+              "name": "Clarity of reasoning",
+              "max_score": 8,
+              "observable": true,
+              "description": "Arguments are structured, justified, and readable."
+            },
+            {
+              "id": "presentation",
+              "name": "Written presentation",
+              "max_score": 4,
+              "observable": true,
+              "description": "Notation, organization, and exposition are professional."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/arml_national/2023/arml_national_power_2023_solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "53153fea8c673271a359e35ce3a0378bcc7d509627e5651527bf650e371eb143"
+        }
+      ],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

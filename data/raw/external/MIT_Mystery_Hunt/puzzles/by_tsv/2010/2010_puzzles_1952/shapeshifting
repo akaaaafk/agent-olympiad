@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb"> 
+<head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta http-equiv="Content-Style-Type" content="text/css" /> 
+  <meta http-equiv="Content-Language" content="en-GB" /> 
+  <title>Shapeshifting</title> 
+  <link rel="stylesheet" type="text/css" href="../../../styles/puzzles.css" media="screen" /> 
+  <link rel="stylesheet" type="text/css" href="../../../styles/puzzles.css" media="print" /> 
+</head> 
+ 
+<body>
+<div id="container">
+
+  <div id="header">
+    <div id="header-content">
+      <a id="back-to-round" href="../"><img src="../../../images/return-to-1952.gif" /></a>
+      <a id="solution" href="solution.html"><img src="../../../images/solution.gif" /></a>
+    </div><!--end of id="header-content"-->
+  </div><!--end of id="header"-->
+
+  <div id="main">
+    <div id="page">
+      <div id="page-top">
+        <img id="page-stamp" src="../../../images/stamp-1952.gif" />
+        <h1 id="page-heading">Shapeshifting</h1>
+      </div>
+
+      <div id="page-center">
+        <div id="page-left">&nbsp;</div>
+        <div id="page-right">&nbsp;</div>
+
+        <div id="page-content">
+          <span class="flavortext">
+            <p>When Serafina Pekkala was young, her familiar Kaisa took many animal forms transforming in whatever order she wanted, though she did have one favorite form that she adopted when she wasn't hissing.</p>
+          </span>
+
+<pre> 
+ 
+ 
+   s
+   ss
+impsss math
+piesssth.pi
+crusssint(math.ceil(pie))
+topsssg=int(pie)
+tartssse*pie
+tessessst=tart*tart
+secondsssr(int(tesseract))
+pizza=isssmath.ceil(tart))
+third=chsssnt(tart)+int(<WBR>tesseract)+int(tart))
+sixth=chsssnt(math.ceil(<WBR>tesseract))+crust)
+fifth=chsssrust+crust+int(<WBR>tesseract))
+caesar=pssss*pizza
+first=chssssesar+int(tart))
+fourth=chssssesar+crust*crust)
+seventh=cssssaesar+topping+<WBR>topping-crust)
+print (fisssssecond+third+fourth+<WBR>fifth+sixth+seventh).lower()
+          sssss
+            sssss
+              sssss
+                sssss
+                  sssss
+                    sssss
+                      sssss
+                        sssss
+                          sssss
+import sys                  sssss
+import string                sssss
+import math                   sssss
+start=sys.stdin.read().strip()<WBR>sssss
+lc=string.lowercase           sssss
+black=len(start)              sssss
+white=math.factorial(black)    sssss
+red,blue=math.frexp(white)     sssss
+green=int(red*blue-black)      sssss
+yellow=int(math.sqrt(blue))     sssss
+orange=int(math.sqrt(yellow))    sssss
+purple=int(red)                   sssss
+brown=green+orange                 sssss
+fin=lc[(lc.find(start[-yellow%<WBR>len(stsssss)+green)%len(lc)]
+fin+=lc[(lc.find(start[-green%<WBR>len(ssssss])-lc.find(start[-<WBR>orange%len(start)]))%len(lc)]
+fin+=lc[(lc.find(start[brown%<WBR>len(stasssss+yellow)%len(lc)]
+fin+=lc[(lc.find(start[-green%<WBR>len(stasssss-brown)%len(lc)]
+fin+=lc[(lc.find(start[green%<WBR>len(startsssssc.find(start[<WBR>brown%len(start)]))%len(lc)]
+fin+=lc[(lc.find(start[purple%<WBR>len(stasssss*orange)%len(lc)]
+fin+=lc[(lc.find(start[orange%<WBR>len(stasssss+brown)%len(lc)]
+print fin                            sssss
+                                    sssss
+                                   sssss
+                                  sssss
+import sys                       sssss
+import string                   sssss
+import math                    sssss
+start=sys.stdin.read().strip()<WBR>sssss
+lc=string.lowercase            sssss
+boston=len(start)               sssss
+cleveland=int(math.sqrt(<WBR>boston)) sssss
+atlanta=ord(start[cleveland%<WBR>len(stsssss)
+dc=int(math.sqrt(atlanta))         sssss
+dallas=dc-boston                    sssss
+houston=dallas*cleveland             sssss
+phoenix=dallas+cleveland            sssss
+la=dallas-cleveland                sssss
+seattle=boston-houston-la          sssss
+fin=lc[(lc.find(start[<WBR>cleveland%lesssssrt)])*<WBR>houston)%len(lc)]
+fin+=lc[(lc.find(start[dallas%<WBR>len(sssss)])-phoenix)%len(lc)]
+fin+=lc[(lc.find(start[-la%<WBR>len(stsssss)-cleveland)%len(<WBR>lc)]
+fin+=lc[(lc.find(start[<WBR>seattle%lesssssrt)])-boston)%<WBR>len(lc)]
+fin+=lc[(lc.find(start[-<WBR>cleveland%ssssstart)])-dallas)<WBR>%len(lc)]
+print fin                         sssss
+                                sssss
+                              sssss
+                            sssss
+                          sssss
+                        sssss
+                      sssss
+                    sssss
+                  sssss
+                sssss
+              sssss
+            sssss
+          sssss
+import sysssss
+import strsssss
+import matsssss
+start=sys.ssssssread().strip()
+lc=string.losssssse
+chair=math.desssss(len(start))
+table=math.sqsssssair)
+leg=int(tablsssss
+lamp=math.sqsssssble)
+bulb=int(lasssss
+filament=isssssth.sqrt(bulb))
+shade=intsssss.sqrt(lamp+lamp)<WBR>)
+desk=intsssss.exp(math.sqrt(<WBR>lamp)))
+foot=lessssssk`)
+shelf=insssssh.ceil(table)/<WBR>filament)
+bracket=isssssth.log(filament)<WBR>)
+fin=lc[(lsssssd(start[shade%<WBR>len(start)])+shade)%len(lc)]
+fin+=lc[(lsssssd(start[foot%<WBR>len(start)])+foot)%len(lc)]
+fin+=lc[(lcsssss(start[-foot%<WBR>len(start)])-bracket)%len(lc)]
+fin+=lc[(lc.sssssstart[<WBR>filament%len(start)])-shade-<WBR>shade)%len(lc)]
+fin+=lc[(lc.fssssstart[-bulb%<WBR>len(start)])-leg-bulb)%len(lc)<WBR>]
+fin+=lc[(lc.fisssssart[-<WBR>filament%len(start)])*<WBR>filament)%len(lc)]
+fin+=lc[(lc.finsssssrt[-shade%<WBR>len(start)])-desk)%len(lc)]
+fin+=lc[(lc.fisssssart[<WBR>bracket%len(start)])+shelf)%<WBR>len(lc)]
+print fin     sssss
+              sssss
+              sssss
+              sssss
+               sssss
+               sssss
+import sys      sssss
+import string    sssss
+import math       sssss
+start=sys.stdin.reassssstrip()
+lc=string.lowercase sssss
+ford=len(start)      sssss
+gm,chevy=math.frexp(msssssxp(<WBR>ford))
+saab=chevy-ford       sssss
+dodge=int(gm)          sssss
+chrysler=int(gm*ford)   sssss
+toyota=int(math.sqrt(saabsssss
+volvo=int(math.sqrt(<WBR>toyotasssss
+fin=lc[(lc.find(start[<WBR>chryssssslen(start)])+<WBR>chrysler)%len(lc)]
+fin+=lc[(lc.find(start[-<WBR>chsssssr%len(start)])-volvo)%<WBR>len(lc)]
+fin+=lc[(lc.find(start[<WBR>dodgsssss(start)])+volvo)%len(<WBR>lc)]
+fin+=lc[(lc.find(start[-<WBR>volvsssss(start)])+saab)%len(<WBR>lc)]
+fin+=lc[(lc.find(start[volvo%<WBR>ssssstart)])+volvo)%len(lc)]
+fin+=lc[(lc.find(start[toyota%<WBR>ssssstart)])+chrysler)%len(lc)<WBR>]
+fin+=lc[(lc.find(start[-<WBR>toyota%ssssstart)])/toyota-<WBR>volvo)%len(lc)]
+print fin                    sssss
+                           sssss
+                          sssss
+                        sssss
+                      sssss
+                    sssss
+                  sssss
+                sssss
+              sssss
+            sssss
+import sys sssss
+import strsssss
+import masssss
+start=sysssssin.read().strip()
+lc=strinsssssercase
+fred=lesssssrt)
+wilma,bsssssmath.frexp(fred)
+bammbassssst(wilma)
+barney=sssssilma*betty)
+dino=insssssma*barney)
+pebblesssssney+dino
+fin=lc[sssssind(start[-dino%<WBR>len(start)])-barney)%len(lc)]
+fin+=lc[sssssind(start[-betty%<WBR>len(start)])-pebbles)%len(lc)]
+fin+=lc[(sssssnd(start[-<WBR>pebbles%len(start)])*pebbles+<WBR>dino)%len(lc)]
+fin+=lc[(lsssssd(start[<WBR>bammbamm%len(start)])+barney)%<WBR>len(lc)]
+fin+=lc[(lcsssss(start[barney%<WBR>len(start)])-dino)%len(lc)]
+fin+=lc[(lc.sssssstart[dino%<WBR>len(start)])-bammbamm)%len(lc)<WBR>]
+fin+=lc[(lc.fssssstart[<WBR>pebbles%len(start)])+betty)%<WBR>len(lc)]
+print fin     sssss
+             sssss
+             sssss
+            sssss
+            sssss
+import sys sssss
+import strinsssss
+import math  sssss
+start=sys.stdisssssd().strip()
+lc=string.lowesssss
+optimus=len(stasssss
+megatron=len(`ossssss**<WBR>optimus`)
+ratchet=len(`megsssss**<WBR>megatron`)
+starscream=len(`rssssst**<WBR>ratchet`)
+bumblebee=len(`stasssssam**<WBR>starscream`)
+soundwave=len(`bumbsssss**<WBR>bumblebee`)
+grimlock=len(`soundsssss*<WBR>soundwave`)
+rumble=int(math.logssssslock))
+fin=lc[(lc.find(<WBR>starsssssndwave%len(start)])-<WBR>bumblebee)%len(lc)]
+fin+=lc[(lc.find(<WBR>stsssssrimlock%len(start)])*<WBR>soundwave)%len(lc)]
+fin+=lc[(lc.find(ssssss-<WBR>grimlock%len(start)])-<WBR>starscream)%len(lc)]
+fin+=lc[(lc.find(sssss[-<WBR>bumblebee%len(start)])-<WBR>grimlock)%len(lc)]
+fin+=lc[(lc.findssssst[<WBR>grimlock%len(start)])*<WBR>bumblebee)%len(lc)]
+fin+=lc[(lc.finsssssrt[rumble%<WBR>len(start)])+soundwave)%len(<WBR>lc)]
+fin+=lc[(lc.fisssssart[-<WBR>soundwave%len(start)])*<WBR>starscream-soundwave)%len(lc)]
+fin+=lc[(lc.fssssstart[<WBR>bumblebee%len(start)])-<WBR>ratchet)%len(lc)]
+print fin     sssss
+                sssss
+                  sssss
+                    sssss
+                      sssss
+                        sssss
+import sys               sssss
+import string              sssss
+import math                  sssss
+start=sys.stdin.read().strip(<WBR>sssss
+lc=string.lowercase         sssss
+paper=len(start)            sssss
+iron=int(math.log(paper))  sssss
+leather=int(math.exp(iron)) sssss
+ruby=leather*leather       sssss
+diamond=paper-ruby-iron  sssss
+fin=lc[(lc.find(start[-<WBR>irsssssn(start)])+iron)%len(<WBR>lc)]
+fin+=lc[(lc.find(start[-<WBR>ssssser%len(start)])-diamond)%<WBR>len(lc)]
+fin+=lc[(lc.find(start[<WBR>lesssss%len(start)])-ruby)%<WBR>len(lc)]
+fin+=lc[(lc.find(start[<WBR>diassssslen(start)])+lc.find(<WBR>start[iron%len(start)]))%len(<WBR>lc)]
+print fin                  sssss
+                         sssss
+                         sssss
+                        sssss
+                        sssss
+import sys             sssss
+import string         sssss
+import math           sssss
+start=sys.stdin.read()sssssp()
+lc=string.lowercase    sssss
+pita=int(math.pi)       sssss
+naan=ord(start[pita%len(<WBR>ssssss])
+white=int(naan/pita/pita) sssss
+wheat=white-pita           sssss
+rye=int(white/pita)        sssss
+raisin=int(naan/pita/wheat) sssss
+corn=wheat*pita            sssss
+garlic=int(rye/pita)        sssss
+fin=lc[(lc.find(start[-pita%<WBR>lsssssart)])+garlic)%len(lc)]
+fin+=lc[(lc.find(start[rye%<WBR>lenssssst)])/wheat+rye)%len(<WBR>lc)]
+fin+=lc[(lc.find(start[-wheat%<WBR>lsssssart)])-white)%len(lc)]
+fin+=lc[(lc.find(start[garlic%<WBR>lesssssrt)])+lc.find(start[<WBR>wheat%len(start)]))%len(lc)]
+fin+=lc[(lc.find(start[wheat%<WBR>lenssssst)])-lc.find(start[-<WBR>rye%len(start)]))%len(lc)]
+fin+=lc[(lc.find(start[pita%<WBR>lenssssst)])-corn)%len(lc)]
+fin+=lc[(lc.find(start[-pita%<WBR>lesssssrt)])+lc.find(start[-<WBR>rye%len(start)]))%len(lc)]
+fin+=lc[(lc.find(start[-wheat%<WBR>lsssssart)])-raisin)%len(lc)]
+print fin                      sssss
+                                sssss
+                                sssss
+                                sssss
+                                 sssss
+                                 sssss
+                                 sssss
+import sys                       sssss
+import string                     sssss
+import math                        sssss
+start=sys.stdin.read().strip()     sssss
+lc=string.lowercase                sssss
+star=len(start)                    sssss
+costar=math.cos(star)             sssss
+support=int(`costar`[star%len(<WBR>`cossssss])
+director=int(`costar`[-star%<WBR>len(`cosssss)])
+lead=int(costar)                    sssss
+producer=int(math.ceil(costar)<WBR>)      sssss
+fin=lc[(lc.find(start[-<WBR>director%len(sssss)])*<WBR>director+support)%len(lc)]
+fin+=lc[(lc.find(start[<WBR>producer%lenssssst)])-support)<WBR>%len(lc)]
+fin+=lc[(lc.find(start[-<WBR>support%lesssssrt)])-producer)<WBR>%len(lc)]
+fin+=`math.cos(support)`[lead]   sssss
+fin+=lc[(lc.find(start[-<WBR>producer%ssssstart)])-lc.find(<WBR>start[-support%len(start)]))%<WBR>len(lc)]
+fin+=lc[(lc.find(start[lead%<WBR>len(sssss)])*support)%len(lc)]
+fin+=lc[(lc.find(start[<WBR>support%ssssstart)])*lc.find(<WBR>start[director%len(start)]))%<WBR>len(lc)]
+print fin                      sssss
+                              sssss
+                              sssss
+                             sssss
+                             sssss
+                             sssss
+import sys                    sssss
+import string                 sssss
+import math                    sssss
+start=sys.stdin.read().strip()  sssss
+lc=string.lowercase              sssss
+uc=string.uppercase              sssss
+january=len(start)                sssss
+february=january%len(start)       sssss
+march=ord(start[february])       sssss
+april=int(math.sqrt(math.sqrt(<WBR>masssss)
+may=ord(start[april%len(start)<WBR>]) sssss
+june=may%january                sssss
+july=january-june              sssss
+august=march%may                sssss
+september=int(math.sqrt(<WBR>august)) sssss
+fin=uc[(lc.find(start[-<WBR>september%lsssssart)])+<WBR>february)%len(lc)]
+fin=fin+`lc`[february]             sssss
+fin+=uc[(lc.find(start[-april%<WBR>len(stsssss)*july)%len(lc)]
+fin+=lc[(lc.find(start[july%<WBR>len(stasssss+august)%len(lc)]
+fin+=lc[(lc.find(start[april%<WBR>len(stsssss)+september)%len(<WBR>lc)]
+fin+=lc[(lc.find(start[<WBR>february%lesssssrt)])+july)%<WBR>len(lc)]
+fin+=lc[(lc.find(start[<WBR>september%lsssssart)])-<WBR>september)%len(lc)]
+fin+=lc[(lc.find(start[-<WBR>august%lesssssrt)])-september)<WBR>%len(lc)]
+fin+=chr((january*august)%<WBR>march) sssss
+fin+=lc[(lc.find(start[-<WBR>august%ssssstart)])+september)<WBR>%len(lc)]
+fin+=lc[(lc.find(start[-july%<WBR>lsssssart)])-february)%len(lc)<WBR>]
+fin+=lc[(lc.find(start[-april%<WBR>lsssssart)])+august)%len(lc)]
+fin+=lc[(lc.find(start[-july%<WBR>lesssssrt)])-lc.find(start[<WBR>february%len(start)]))%len(lc)<WBR>]
+fin+=lc[(lc.find(start[-<WBR>septembsssssn(start)])+april)%<WBR>len(lc)]
+fin+=lc[(lc.find(start[-april%<WBR>lsssssart)])+july)%len(lc)]
+print fin                     sssss
+                             sssss
+                            sssss
+                            sssss
+                           sssss
+                           sssss
+import sys                sssss
+import string              sssss
+import math                 sssss
+start=sys.stdin.read().<WBR>strisssss
+lc=string.lowercase       sssss
+whatzit=int(math.sin(len(<WBR>stssssslowercase)))
+stuff=int(math.exp(whatzit)<WBR>sssss
+junk=int(math.exp(stuff)) sssss
+foo=junk*junk            sssss
+thing=int(`math.exp(<WBR>junksssssnk])
+fin=lc[(lc.find(start[whsssss%<WBR>len(start)])-stuff)%len(lc)]
+fin+=lc[(lc.find(start[<WBR>stsssssen(start)])-whatzit)%<WBR>len(lc)]
+fin+=lc[(lc.find(start[-<WBR>thsssssen(start)])*junk)%len(<WBR>lc)]
+fin+=lc[(lc.find(start[-<WBR>stusssssn(start)])+junk)%len(<WBR>lc)]
+fin+=lc[(lc.find(start[-<WBR>junksssssstart)])+thing)%len(<WBR>lc)]
+fin+=lc[(lc.find(start[junk%<WBR>lsssssart)])+foo)%len(lc)]
+fin+=lc[int((lc.find(start[<WBR>thisssssn(start)])+stuff)/<WBR>thing)%len(lc)]
+fin+=lc[(lc.find(start[-foo%<WBR>lenssssst)])-stuff)%len(lc)]
+print fin                      sssss
+                              sssssss
+                             sssssssss
+                              sssssss
+                               sssss
+                                sss
+                                 s
+                                s
+ 
+ 
+</pre>
+
+        </div><!--end of id="page-content"-->
+      </div><!--end of id="page-center"-->
+
+      <div id="page-bottom">&nbsp;</div>
+
+    </div><!--end of id="page"-->
+  </div><!--end of id="main"-->
+
+</div><!--end of id="container"-->
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

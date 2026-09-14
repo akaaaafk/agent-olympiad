@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Fates Are Interlocked (Solution) -- COINHEIST</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet/less" href="../../../static/less/base.less"/>
+
+
+    <link href='http://fonts.googleapis.com/css?family=Cantarell:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet/less" type="text/css" media="all" href="../../rubik.less" />
+
+
+
+
+
+
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+    <script src="../../../static/js/less-1.3.0.min.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript" src="../../../static/js/fixie-nav.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round:400,400italic' rel='stylesheet' type='text/css'>
+
+
+
+    <!-- handy bit of code for making IE browsers act normal -->
+    <!-- [if lt IE 8]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" type="text/javascript"></script>
+    <![endif]-->
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="puzzle.css"><script src="puzzle.js"></script>
+
+
+</head>
+
+<body id="rubik" class="puzzle">
+    <div id="pre-container">
+
+        <div id="container">
+
+            <div id="stuff">
+                <div id="header">
+
+<h1><a href="../../index.html"><img src="../../cubies/RG.png"/> RUBIK <img src="../../cubies/RG.png"/></a></h1>
+
+                </div>
+
+                <div id="content">
+
+<h2>Our Fates Are Interlocked (Solution)</h2>
+<h4>by John Stumpo; interface by Gary Wang</h4>
+<p>
+This is a simulation of a <a href="https://en.wikipedia.org/wiki/Interlocking">railroad interlocking</a> machine (Union Switch
+and Signal Model 14) and corresponding interlocking plant. Here is a
+diagram of the interlocking that is simulated:
+</p>
+
+<p><img src="diagram.png" /></p>
+
+<p>
+(<a href="http://www.blockstation.net/symbol-index.html">Symbol key</a> - this diagram was made from <a href="http://www.blockstation.net/AMTK-Phila-Div/Section-C/C-1.html">another diagram</a> on that site.)
+</p>
+
+<p>
+Interlockings consist of switches and signals controlled by levers. The
+signals in this interlocking are visible, and they are of the classic
+all-amber Pennsylvania Railroad position-light type. The switches, however, are
+hidden. Their location, and which lever controls which one, must be
+determined by how they influence the signal aspects when thrown and
+from which levers become locked in place when switches are thrown. The
+point of interlocking is to prevent any manipulation of the levers that
+would create an unsafe situation, such as sending a train through an
+improperly lined switch, creating a combination of routes that could
+cause a collision, or moving a switch that a train might be moving over.
+</p>
+
+<p>
+Levers have at least two states, normal (N) and reversed (R). Some
+signal levers on a Model 14 control a pair of signals
+and have states normal (N, in the center), left (L), and right (R). A
+signal lever in normal position prevents the signal from clearing - the
+signal displays the Stop Signal aspect (rule 292). Reversing a signal
+lever allows the signal to display something other than Stop Signal. A
+switch lever leaves the switch (or the two switches of a crossover)
+lined for straight-through movement when normal and for the diverging
+(or crossover) move when reversed. By convention, signal levers are even
+and switch levers are odd.
+</p>
+
+<p>
+The lights under the levers indicate which moves are possible to make
+in the interlocking's current configuration. If a lever is locked out
+(a switch lever that is locked in its current position or a signal
+lever that cannot be moved to some position), the light goes out.
+</p>
+
+<p>
+Which lever (and direction) goes to which signal is easily discoverable
+by just moving each signal lever both ways and seeing which signal
+clears. All except 6R will clear if all switches are normal. Since this
+is so easily done, and the real challenge is dealing with the switches,
+I didn't bother concealing the signal numbers in the HTML page. (The id
+attributes for the signal images include the signal number.)
+</p>
+
+<p>
+Some switch locations can be determined by changes in signal aspect. For
+example, 12R clears to Slow Approach (Clear if 4R is cleared) if switches
+11 and 19 are normal, Restricting if 11 is reversed, and Medium Clear
+if 11 is normal and 19 is reversed. This indicates that the route from
+12R is determined by switches 11 and 19, and that 11 is reached before
+19. But the main workhorse in determining where the switches are is in
+the interlocking logic, and the puzzle can still be solved with the only
+knowledge of signal aspects being the difference between a Stop Signal
+(which is what everything starts out as) and everything else.
+</p>
+
+<p>
+There are three main ways in which the switch layout is discoverable
+via the interlocking logic. First, signals cannot be cleared if they
+would permit a train to hit an improperly lined switch. (For example,
+throwing 19 will prevent signal 10R from being cleared, indicating that
+19 obstructs the route from 10R.) Second, switches cannot be thrown if
+there is currently a route signaled over them. (For example, signal 8R can be cleared with switch
+9 in either position, but 9 becomes unthrowable when 8R is cleared, indicating that the
+route from 8R uses switch 9.) And third, signals can only be cleared
+in one direction at a time over a given route - otherwise we might get
+a head-on collision! (For example, having switch 9 reversed, 11 normal,
+and 19 normal connects track 4 to the east with track 3 to the west. The
+signals for this route are 8R and 12L. With the switches lined that way,
+it is possible to clear either one of those signals - but not both. This
+indicates that those signals control the opposing moves over that route.)
+</p>
+
+<p>
+Then the schedule comes into play. It provides a sequence of moves
+through the interlocking that take place one after another. For each
+train, take the minimum set of levers that must be out of normal position
+for the move to take place. Add the lever numbers to the given offset,
+and the sum is a number in the range [1,26] - an index into the alphabet. Doing this
+for each train on the schedule spells out the phrase (spaces added)
+"FIRST LETTER OF TWENTIETH FOURTH FIRST AND SIXTEENTH STATIONS TO
+WEST SEE BLOCKSTATION DOT NET". (This is 80 letters from 80 trains,
+and the train directions, interpreted as binary 8-bit ASCII, spell out
+"REDHERRING", indicating that they have nothing in and of themselves
+to do with the solution; this also covers the direction the signal
+levers must be moved to properly route the trains, since there is a 1:1
+correspondence between signal lever direction and train direction.)
+</p>
+
+<p>
+(Note that some moves go to or from P1 and P4, which are signaled pockets adjacent to passenger platforms. This permits other trains to "leapfrog" trains that are stopped at the platforms. The list of moves does take into account whether or not these locations are currently occupied by trains, and when a 1-1 or 4-4 move is indicated that would go through an occupied location, the "leapfrog" move (for example, 19-9-8R) is expected. Think of the P as standing for "Pocket" or "Platform".)
+</p>
+
+<table>
+<tr><th>Direction</th><th>From</th><th>To</th><th></th><th>Levers</th><th>Lever Sum</th><th>Sum</th><th>Letter</th></tr>
+<tr><td>&larr;</td><td>4</td><td>2</td><td>(-22)</td><td>11 9 8R</td><td>28</td><td>6</td><td>F</td></tr>
+<tr><td>&rarr;</td><td>2</td><td>1</td><td>(-20)</td><td>15 14L</td><td>29</td><td>9</td><td>I</td></tr>
+<tr><td>&larr;</td><td>4</td><td>4</td><td>(+0)</td><td>10R 8R</td><td>18</td><td>18</td><td>R</td></tr>
+<tr><td>&rarr;</td><td>2</td><td>4</td><td>(-15)</td><td>9 11 14L</td><td>34</td><td>19</td><td>S</td></tr>
+<tr><td>&larr;</td><td>1</td><td>2</td><td>(-11)</td><td>15 16R</td><td>31</td><td>20</td><td>T</td></tr>
+<tr><td>&larr;</td><td>1</td><td>4</td><td>(-55)</td><td>19 17 15 16R</td><td>67</td><td>12</td><td>L</td></tr>
+<tr><td>&rarr;</td><td>4</td><td>4</td><td>(-11)</td><td>6L 10L</td><td>16</td><td>5</td><td>E</td></tr>
+<tr><td>&larr;</td><td>1</td><td>P1</td><td>(+4)</td><td>16R</td><td>16</td><td>20</td><td>T</td></tr>
+<tr><td>&larr;</td><td>4</td><td>2</td><td>(-8)</td><td>11 9 8R</td><td>28</td><td>20</td><td>T</td></tr>
+<tr><td>&rarr;</td><td>4</td><td>1</td><td>(-56)</td><td>15 17 19 10L</td><td>61</td><td>5</td><td>E</td></tr>
+<tr><td>&larr;</td><td>1</td><td>3</td><td>(-34)</td><td>4R 17 15 16R</td><td>52</td><td>18</td><td>R</td></tr>
+<tr><td>&larr;</td><td>1</td><td>4</td><td>(-52)</td><td>19 17 15 16R</td><td>67</td><td>15</td><td>O</td></tr>
+<tr><td>&larr;</td><td>1</td><td>1 (leapfrog)</td><td>(-38)</td><td>13 15 16R</td><td>44</td><td>6</td><td>F</td></tr>
+<tr><td>&rarr;</td><td>P1</td><td>1</td><td>(+4)</td><td>16L</td><td>16</td><td>20</td><td>T</td></tr>
+<tr><td>&larr;</td><td>3</td><td>3</td><td>(+7)</td><td>4R 12R</td><td>16</td><td>23</td><td>W</td></tr>
+<tr><td>&rarr;</td><td>2</td><td>4</td><td>(-29)</td><td>9 11 14L</td><td>34</td><td>5</td><td>E</td></tr>
+<tr><td>&larr;</td><td>3</td><td>3</td><td>(-2)</td><td>4R 12R</td><td>16</td><td>14</td><td>N</td></tr>
+<tr><td>&rarr;</td><td>3</td><td>1</td><td>(-24)</td><td>15 17 12L</td><td>44</td><td>20</td><td>T</td></tr>
+<tr><td>&larr;</td><td>4</td><td>1</td><td>(-32)</td><td>13 11 9 8R</td><td>41</td><td>9</td><td>I</td></tr>
+<tr><td>&larr;</td><td>4</td><td>3</td><td>(-16)</td><td>4R 9 8R</td><td>21</td><td>5</td><td>E</td></tr>
+<tr><td>&larr;</td><td>2</td><td>3</td><td>(-15)</td><td>4R 17 14R</td><td>35</td><td>20</td><td>T</td></tr>
+<tr><td>&rarr;</td><td>4</td><td>P4</td><td>(-2)</td><td>10L</td><td>10</td><td>8</td><td>H</td></tr>
+<tr><td>&larr;</td><td>1</td><td>4</td><td>(-61)</td><td>19 17 15 16R</td><td>67</td><td>6</td><td>F</td></tr>
+<tr><td>&larr;</td><td>3</td><td>4</td><td>(-16)</td><td>19 12R</td><td>31</td><td>15</td><td>O</td></tr>
+<tr><td>&larr;</td><td>4</td><td>3</td><td>(+0)</td><td>4R 9 8R</td><td>21</td><td>21</td><td>U</td></tr>
+<tr><td>&rarr;</td><td>3</td><td>1</td><td>(-26)</td><td>15 17 12L</td><td>44</td><td>18</td><td>R</td></tr>
+<tr><td>&larr;</td><td>3</td><td>4</td><td>(-11)</td><td>19 12R</td><td>31</td><td>20</td><td>T</td></tr>
+<tr><td>&larr;</td><td>3</td><td>3</td><td>(-8)</td><td>4R 12R</td><td>16</td><td>8</td><td>H</td></tr>
+<tr><td>&rarr;</td><td>2</td><td>1</td><td>(-23)</td><td>15 14L</td><td>29</td><td>6</td><td>F</td></tr>
+<tr><td>&larr;</td><td>4</td><td>2</td><td>(-19)</td><td>11 9 8R</td><td>28</td><td>9</td><td>I</td></tr>
+<tr><td>&larr;</td><td>4</td><td>2</td><td>(-10)</td><td>11 9 8R</td><td>28</td><td>18</td><td>R</td></tr>
+<tr><td>&larr;</td><td>4</td><td>1</td><td>(-22)</td><td>13 11 9 8R</td><td>41</td><td>19</td><td>S</td></tr>
+<tr><td>&larr;</td><td>4</td><td>4 (leapfrog)</td><td>(-16)</td><td>19 9 8R</td><td>36</td><td>20</td><td>T</td></tr>
+<tr><td>&rarr;</td><td>2</td><td>1</td><td>(-28)</td><td>15 14L</td><td>29</td><td>1</td><td>A</td></tr>
+<tr><td>&larr;</td><td>1</td><td>3</td><td>(-38)</td><td>4R 17 15 16R</td><td>52</td><td>14</td><td>N</td></tr>
+<tr><td>&larr;</td><td>3</td><td>4</td><td>(-27)</td><td>19 12R</td><td>31</td><td>4</td><td>D</td></tr>
+<tr><td>&larr;</td><td>4</td><td>2</td><td>(-9)</td><td>11 9 8R</td><td>28</td><td>19</td><td>S</td></tr>
+<tr><td>&rarr;</td><td>2</td><td>1</td><td>(-20)</td><td>15 14L</td><td>29</td><td>9</td><td>I</td></tr>
+<tr><td>&larr;</td><td>2</td><td>2</td><td>(+10)</td><td>14R</td><td>14</td><td>24</td><td>X</td></tr>
+<tr><td>&rarr;</td><td>2</td><td>2</td><td>(+6)</td><td>14L</td><td>14</td><td>20</td><td>T</td></tr>
+<tr><td>&larr;</td><td>3</td><td>3</td><td>(-11)</td><td>4R 12R</td><td>16</td><td>5</td><td>E</td></tr>
+<tr><td>&rarr;</td><td>1</td><td>1</td><td>(-29)</td><td>16L 18L</td><td>34</td><td>5</td><td>E</td></tr>
+<tr><td>&larr;</td><td>1</td><td>2</td><td>(-17)</td><td>15 16R</td><td>31</td><td>14</td><td>N</td></tr>
+<tr><td>&rarr;</td><td>1</td><td>1</td><td>(-14)</td><td>16L 18L</td><td>34</td><td>20</td><td>T</td></tr>
+<tr><td>&larr;</td><td>3</td><td>4</td><td>(-23)</td><td>19 12R</td><td>31</td><td>8</td><td>H</td></tr>
+<tr><td>&larr;</td><td>1</td><td>2</td><td>(-12)</td><td>15 16R</td><td>31</td><td>19</td><td>S</td></tr>
+<tr><td>&rarr;</td><td>2</td><td>4</td><td>(-14)</td><td>9 11 14L</td><td>34</td><td>20</td><td>T</td></tr>
+<tr><td>&larr;</td><td>2</td><td>4</td><td>(-49)</td><td>19 17 14R</td><td>50</td><td>1</td><td>A</td></tr>
+<tr><td>&larr;</td><td>4</td><td>1</td><td>(-21)</td><td>13 11 9 8R</td><td>41</td><td>20</td><td>T</td></tr>
+<tr><td>&rarr;</td><td>1</td><td>1</td><td>(-25)</td><td>16L 18L</td><td>34</td><td>9</td><td>I</td></tr>
+<tr><td>&larr;</td><td>1</td><td>4</td><td>(-52)</td><td>19 17 15 16R</td><td>67</td><td>15</td><td>O</td></tr>
+<tr><td>&rarr;</td><td>4</td><td>1</td><td>(-47)</td><td>15 17 19 10L</td><td>61</td><td>14</td><td>N</td></tr>
+<tr><td>&larr;</td><td>3</td><td>3</td><td>(+3)</td><td>4R 12R</td><td>16</td><td>19</td><td>S</td></tr>
+<tr><td>&larr;</td><td>3</td><td>4</td><td>(-11)</td><td>19 12R</td><td>31</td><td>20</td><td>T</td></tr>
+<tr><td>&rarr;</td><td>1</td><td>1</td><td>(-19)</td><td>16L 18L</td><td>34</td><td>15</td><td>O</td></tr>
+<tr><td>&larr;</td><td>4</td><td>3</td><td>(+2)</td><td>4R 9 8R</td><td>21</td><td>23</td><td>W</td></tr>
+<tr><td>&larr;</td><td>4</td><td>1</td><td>(-36)</td><td>13 11 9 8R</td><td>41</td><td>5</td><td>E</td></tr>
+<tr><td>&rarr;</td><td>3</td><td>3</td><td>(+7)</td><td>12L</td><td>12</td><td>19</td><td>S</td></tr>
+<tr><td>&larr;</td><td>P4</td><td>4</td><td>(+10)</td><td>10R</td><td>10</td><td>20</td><td>T</td></tr>
+<tr><td>&larr;</td><td>3</td><td>3</td><td>(+3)</td><td>4R 12R</td><td>16</td><td>19</td><td>S</td></tr>
+<tr><td>&rarr;</td><td>2</td><td>4</td><td>(-29)</td><td>9 11 14L</td><td>34</td><td>5</td><td>E</td></tr>
+<tr><td>&larr;</td><td>4</td><td>4</td><td>(-13)</td><td>10R 8R</td><td>18</td><td>5</td><td>E</td></tr>
+<tr><td>&larr;</td><td>4</td><td>4</td><td>(-16)</td><td>10R 8R</td><td>18</td><td>2</td><td>B</td></tr>
+<tr><td>&rarr;</td><td>1</td><td>3</td><td>(-30)</td><td>11 13 18L</td><td>42</td><td>12</td><td>L</td></tr>
+<tr><td>&larr;</td><td>DS</td><td>4</td><td>(-8)</td><td>10R 7 6R</td><td>23</td><td>15</td><td>O</td></tr>
+<tr><td>&rarr;</td><td>1</td><td>4</td><td>(-48)</td><td>9 11 13 18L</td><td>51</td><td>3</td><td>C</td></tr>
+<tr><td>&larr;</td><td>2</td><td>4</td><td>(-39)</td><td>19 17 14R</td><td>50</td><td>11</td><td>K</td></tr>
+<tr><td>&larr;</td><td>4</td><td>4</td><td>(+1)</td><td>10R 8R</td><td>18</td><td>19</td><td>S</td></tr>
+<tr><td>&rarr;</td><td>2</td><td>1</td><td>(-9)</td><td>15 14L</td><td>29</td><td>20</td><td>T</td></tr>
+<tr><td>&rarr;</td><td>1</td><td>P1</td><td>(-17)</td><td>18L</td><td>18</td><td>1</td><td>A</td></tr>
+<tr><td>&rarr;</td><td>3</td><td>1</td><td>(-24)</td><td>15 17 12L</td><td>44</td><td>20</td><td>T</td></tr>
+<tr><td>&larr;</td><td>3</td><td>2</td><td>(-14)</td><td>11 12R</td><td>23</td><td>9</td><td>I</td></tr>
+<tr><td>&larr;</td><td>3</td><td>2</td><td>(-8)</td><td>11 12R</td><td>23</td><td>15</td><td>O</td></tr>
+<tr><td>&rarr;</td><td>4</td><td>3</td><td>(-15)</td><td>19 10L</td><td>29</td><td>14</td><td>N</td></tr>
+<tr><td>&larr;</td><td>3</td><td>4</td><td>(-27)</td><td>19 12R</td><td>31</td><td>4</td><td>D</td></tr>
+<tr><td>&larr;</td><td>2</td><td>1</td><td>(-12)</td><td>13 14R</td><td>27</td><td>15</td><td>O</td></tr>
+<tr><td>&larr;</td><td>4</td><td>3</td><td>(-1)</td><td>4R 9 8R</td><td>21</td><td>20</td><td>T</td></tr>
+<tr><td>&rarr;</td><td>P1</td><td>1</td><td>(-2)</td><td>16L</td><td>16</td><td>14</td><td>N</td></tr>
+<tr><td>&rarr;</td><td>1</td><td>P1</td><td>(-13)</td><td>18L</td><td>18</td><td>5</td><td>E</td></tr>
+<tr><td>&rarr;</td><td>1</td><td>4</td><td>(-31)</td><td>9 11 13 18L</td><td>51</td><td>20</td><td>T</td></tr>
+</table>
+
+<p>
+This indicates that solvers should <a href="http://www.blockstation.net/">go to blockstation.net</a> and figure out where the reference point is. Looking
+through the diagrams, it will be found that the interlocking that is
+simulated matches up with <a href="http://www.blockstation.net/AMTK-Phila-Div/Section-C/C-1.html">the main segment of Overbrook interlocking</a>, in <a href="http://www.blockstation.net/AMTK-Phila-Div/Section-C/index.html">the "Zoo
+to State (Main Line - Philadelphia to Harrisburg)" section</a>. There are 58 diagram pages in all on the site, many of
+which do not contain any interlockings, which I don't think is too
+unreasonable to have to look through.) Overbrook is also <a href="https://en.wikipedia.org/wiki/Overbrook_(SEPTA_station)">a commuter
+station</a> - note the station platforms on the diagram. Counting the indicated numbers of stations west of there
+(using either the diagrams or a list of stations on the <a href="https://en.wikipedia.org/wiki/Paoli/Thorndale_Line">SEPTA Paoli/Thorndale Line</a>
+as it exists today) gives <a href="https://en.wikipedia.org/wiki/Downingtown_(SEPTA_station)">Downingtown</a>, <a href="https://en.wikipedia.org/wiki/Ardmore_(SEPTA_station)">Ardmore</a>, <a href="https://en.wikipedia.org/wiki/Merion_(SEPTA_station)">Merion</a>, and
+<a href="https://en.wikipedia.org/wiki/Paoli_(SEPTA_station)">Paoli</a>, whose first letters spell <strong>DAMP</strong>, which is the answer. (The only difference
+between the diagrams and the line as it runs today, as far as placement of commuter stations
+is concerned, is that the western terminus, <a href="https://en.wikipedia.org/wiki/Thorndale_(SEPTA_station)">Thorndale</a>, is not on the
+diagrams, as it was built later. It is a little west of Thorn interlocking.)
+</p>
+
+<p>
+The filenames of the signal graphics used on the puzzle page are the rule
+numbers in the <a href="https://en.wikipedia.org/wiki/Northeast_Operating_Rules_Advisory_Committee">NORAC</a> Operating Rules (which apply to the railroad this interlocking is on) that specify each
+signal aspect. This is not critical to solving the puzzle, but serves
+as a suitably obscure way to provide extra confirmation of what the
+graphics actually are, since the files have to have names of some kind
+anyway. Other rulebooks are likely to have similar corresponding rule
+numbers, should solvers happen to
+be familiar with (or stumble across while Googling) some other rulebook.
+</p>
+
+                </div>
+
+                <div id="footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

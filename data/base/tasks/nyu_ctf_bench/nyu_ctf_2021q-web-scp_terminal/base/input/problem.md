@@ -1,5 +1,3 @@
-# CSAW-Quals / web / scp-terminal
-
 Every since you started working this administrative government job, things have gotten strange.
 It's not just because your day is spent cataloging an archive of anomalous objects. In your dreams you see a burning number: `31337`
 Maybe this terminal can help uncover the meaning of these dreams.

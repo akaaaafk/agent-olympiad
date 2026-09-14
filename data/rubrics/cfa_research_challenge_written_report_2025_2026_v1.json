@@ -1,0 +1,79 @@
+{
+  "rubric_id": "cfa_research_challenge_written_report_2025_2026_v1",
+  "type": "structured_rubric",
+  "title": "CFA Institute Research Challenge Research Report Evaluation Form",
+  "competition_id": "cfa_research_challenge",
+  "deliverable": "written_report",
+  "rules_edition": "2025-2026",
+  "total_points": 100,
+  "criteria": [
+    {
+      "id": "business_description",
+      "name": "Business Description",
+      "max_score": 5
+    },
+    {
+      "id": "industry_competitive_positioning",
+      "name": "Industry Overview & Competitive Positioning",
+      "max_score": 10
+    },
+    {
+      "id": "investment_summary",
+      "name": "Investment Summary",
+      "max_score": 15
+    },
+    {
+      "id": "valuation",
+      "name": "Valuation",
+      "max_score": 20
+    },
+    {
+      "id": "financial_analysis",
+      "name": "Financial Analysis",
+      "max_score": 20
+    },
+    {
+      "id": "investment_risks",
+      "name": "Investment Risks",
+      "max_score": 15
+    },
+    {
+      "id": "esg",
+      "name": "Environmental, Social, Governance",
+      "max_score": 15
+    }
+  ],
+  "scoring": {
+    "grader_method": "Graders independently evaluate each written report using the Research Report Evaluation Form.",
+    "tiebreak_order": [
+      "Financial Analysis",
+      "Valuation",
+      "Investment Summary",
+      "Industry Overview & Competitive Positioning",
+      "Investment Risks",
+      "Environmental, Social, Governance",
+      "Business Description"
+    ],
+    "tiebreak_source": {
+      "appendix": "F",
+      "pdf_page": 20
+    }
+  },
+  "provenance": {
+    "official_only": true,
+    "publisher": "CFA Institute",
+    "retrieved_from": "CFA Society Toronto",
+    "sources": [
+      {
+        "title": "CFA Institute Research Challenge Official Rules 2025-2026",
+        "url": "https://cfatoronto.ca/wp-content/uploads/2026/06/2025-2026-cfai-research-challenge-official-rules.pdf",
+        "local_file": "data/raw/cfa_research_challenge/rules/research_challenge_rules_2025_2026.pdf",
+        "sha256": "2d430759700b3da8f3a4172ad2a86c169edc37b848239464e1a3b0db8fa15bb2",
+        "appendix": "C",
+        "pdf_page": 17
+      }
+    ],
+    "applicability_note": "Verified against the archived 2025-2026 rules; not automatically applicable to other seasons or competition stages."
+  },
+  "applicability_note": "Verified against the archived 2025-2026 rules; not automatically applicable to other seasons or competition stages."
+}

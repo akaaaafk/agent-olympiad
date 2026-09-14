@@ -1,5 +1,3 @@
-# Dead-End Detector
-
 Hide 
  Dead-End Detector 
 

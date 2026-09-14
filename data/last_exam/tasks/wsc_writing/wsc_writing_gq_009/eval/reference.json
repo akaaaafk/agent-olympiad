@@ -3,8 +3,18 @@
   "gold_pointer": "data/benchmarks/wsc_writing/benchmark.json#wsc_writing_gq_009.gold_label",
   "has_gold_answer": false,
   "evaluator_id": "rubric_llm_v1",
-  "evaluator_status": "ready",
-  "rubric_path": "data/rubrics/wsc_writing_28_v1.json",
-  "deliverable": "written_essay",
-  "solution_file": null
+  "evaluator_status": "ready_with_limitations",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": "rubric_llm_v1",
+    "status": "ready_with_limitations",
+    "rubric_path": "data/rubrics/wsc_writing_100_v1.json",
+    "official_rubric_path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+    "deliverable": "written_essay",
+    "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+    "scorecard_path": "data/rubrics/task_scorecards/wsc_writing.json",
+    "scorecard_key": "wsc_writing_gq_009"
+  },
+  "rubric_path": "data/rubrics/wsc_writing_100_v1.json",
+  "deliverable": "written_essay"
 }

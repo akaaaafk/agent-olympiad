@@ -1,0 +1,157 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Reverse Dimension Doctor 8: Solution</title>
+<link rel="stylesheet" href="../../../styles/puzzle-solution.css"/>
+</head>
+<body class="solution reverse_dimension reverse_dimension_doctor_8">
+<div id="header">
+<div class="planet"><img src="../../../images/title-reverse_dimension.png" alt="Reverse Dimension"/></div>
+</div>
+
+<div id="content">
+    <h1>Reverse Dimension Doctor 8</h1>
+
+<p><i>by Stephen Peters</i><br />
+<b>Answer:</b> SPAMALOT
+</p><p><b>Companion Half: His Cardiologist, <a href="http://tardis.wikia.com/wiki/Grace_Holloway" class="external text" title="http://tardis.wikia.com/wiki/Grace_Holloway" rel="nofollow">Dr. Grace Holloway</a></b>
+</p><p>All the patients are characters from movies, who can be matched to the actors who played them. Each blood pressure reading consists of a systolic (upper) and diastolic (lower) number. Each diastolic number is shared by two names on the patient list, and the two characters sharing the diastolic lead to a movie featuring both actors. The difference in systolic numbers is an index into the title.
+</p>
+<table class="wikitable">
+
+<tr>
+<th> Dia.
+</th><th> Character 1
+</th><th> Actor 1
+</th><th> Character 2
+</th><th> Actor 2
+</th><th> &Delta; Syst.
+</th><th> Shared Film
+</th></tr>
+<tr>
+<td> 61 </td><td> Flick, Tracy (<i>Election</i>) </td><td> Reese Witherspoon </td><td> Atchison, Bill (<i>The First Wives Club</i>) </td><td> Victor Garber </td><td> 2 </td><td> <i>L(e)gally Blonde</i>
+</td></tr>
+<tr>
+<td> 62 </td><td> Cooper, Zane (<i>Maverick</i>) </td><td> James Garner </td><td> Hill, Prof. Harold (<i>The Music Man</i>) </td><td> Robert Preston </td><td> 1 </td><td> <i>(V)ictor/Victoria</i>
+</td></tr>
+<tr>
+<td> 63 </td><td> Schumacher, Max (<i>Network</i>) </td><td> William Holden </td><td> Ashling, Sunya (<i>The Love of Sunya</i>) </td><td> Gloria Swanson </td><td> 5 </td><td> <i>Suns(e)t Blvd.</i>
+</td></tr>
+<tr>
+<td> 64 </td><td> Bales, C.D. (<i>Roxanne</i>) </td><td> Steve Martin </td><td> Powers, Nigel (<i>Austin Powers in Goldmember</i>) </td><td> Michael Caine </td><td> 3 </td><td> <i>Di(r)ty Rotten Scoundrels</i>
+</td></tr>
+<tr>
+<td> 65 </td><td> Peterson, Albert F. (<i>Bye Bye Birdie</i>) </td><td> Dick van Dyke </td><td> Goldfinger, Auric (<i>Goldfinger</i>) </td><td> Gert Fr&ouml;be </td><td> 6 </td><td> <i>Chitt(y) Chitty Bang Bang</i>
+</td></tr>
+<tr>
+<td> 66 </td><td> Dvorak, Jody (<i>Kitten with a Whip</i>) </td><td> Ann-Margret </td><td> Kingsland, Gerald (<i>Castaway</i>) </td><td> Oliver Reed </td><td> 2 </td><td> <i>T(o)mmy</i>
+</td></tr>
+<tr>
+<td> 67 </td><td> Jefferies, L.B. (<i>Rear Window</i>) </td><td> James Stewart </td><td> Tyler, Bowen (<i>The Land That Time Forgot</i>) </td><td> Doug McClure </td><td> 4 </td><td> <i>She(n)andoah</i>
+</td></tr>
+<tr>
+<td> 68 </td><td> Dandelion, Dick (<i>Dear Wendy</i>) </td><td> Jamie Bell </td><td> Weasley, Molly (<i>Harry Potter</i>) </td><td> Julie Walters </td><td> 6 </td><td> <i>Billy (E)lliot</i>
+</td></tr>
+<tr>
+<td> 69 </td><td> Von B&uuml;low, Claus (<i>Reversal of Fortune</i>) </td><td> Jeremy Irons </td><td> Small-Fawcett, Nigel (<i>Never Say Never Again</i>) </td><td> Rowan Atkinson </td><td> 6 </td><td> <i>The Li(o)n King</i>
+</td></tr>
+<tr>
+<td> 70 </td><td> Finn, Dewey (<i>The School of Rock</i>) </td><td> Jack Black </td><td> Ayala, Helena (<i>Traffic</i>) </td><td> Catherine Zeta-Jones </td><td> 5 </td><td> <i>High (F)idelity</i>
+</td></tr>
+<tr>
+<td> 71 </td><td> Micacci, Pupina (<i>Mani in alto</i>) </td><td> Dorian Gray </td><td> Gailland, G&eacute;rard (<i>Docteur Françoise Gailland</i>) </td><td> Fran&ccedil;ois P&eacute;rier </td><td> 5 </td><td> <i>Nigh(t)s of Cabiria</i>
+</td></tr>
+<tr>
+<td> 72 </td><td> Renaldi, Queen Clarisse (<i>The Princess Diaries</i>) </td><td> Julie Andrews </td><td> Coplin, Pearl (<i>Flirting with Disaster</i>) </td><td> Mary Tyler Moore </td><td> 8 </td><td> <i>Thoroug(h)ly Modern Millie</i>
+</td></tr>
+<tr>
+<td> 73 </td><td> Jessep, Col. Nathan (<i>A Few Good Men</i>) </td><td> Jack Nicholson </td><td> Futterman, Sheila (<i>Gremlins</i>) </td><td> Jackie Joseph </td><td> 9 </td><td> <i>The Littl(e) Shop of Horrors</i>
+</td></tr>
+<tr>
+<td> 74 </td><td> Carlyle, Tina (<i>The Mask</i>) </td><td> Cameron Diaz </td><td> Toulour, Fran&ccedil;ois (<i>Ocean's Twelve</i>) </td><td> Vincent Cassel </td><td> 1 </td><td> <i>(S)hrek</i>
+</td></tr>
+<tr>
+<td> 75 </td><td> Fitch, Rankin (<i>Runaway Jury</i>) </td><td> Gene Hackman </td><td> Von Shtupp, Lili (<i>Blazing Saddles</i>) </td><td> Madeline Kahn </td><td> 11 </td><td> <i>Young Frank(e)nstein</i>
+</td></tr>
+<tr>
+<td> 76 </td><td> Gilbreth, Ann (<i>Cheaper by the Dozen</i>) </td><td> Jeanne Crain </td><td> Gannon, Capt. Bill (<i>Dragnet</i>) </td><td> Harry Morgan </td><td> 6 </td><td> <i>State (F)air</i>
+</td></tr>
+<tr>
+<td> 77 </td><td> Carruthers, Dr. Paul (<i>The Devil Bat</i>) </td><td> Bela Lugosi </td><td> Valbret, Yvonne (<i>Inspiration</i>) </td><td> Greta Garbo </td><td> 2 </td><td> <i>N(i)notchka</i>
+</td></tr>
+<tr>
+<td> 78 </td><td> Swinger, Gaye (<i>Looking for Love</i>) </td><td> Barbara Nichols </td><td> Barker, Maj. Asa (<i>Go Tell the Spartans</i>) </td><td> Burt Lancaster </td><td> 9 </td><td> <i>Sweet Sme(l)l of Success</i>
+</td></tr>
+<tr>
+<td> 79 </td><td> Garfield, Shrieking Eagle (<i>All Hands on Deck</i>) </td><td> Buddy Hackett </td><td> Brady, Greg (<i>The Brady Bunch</i>) </td><td> Christopher Daniel Barnes </td><td> 10 </td><td> <i>The Little (M)ermaid</i>
+</td></tr>
+<tr>
+<td> 80 </td><td> O'Neill, Flame (<i>Champagne for Caesar</i>) </td><td> Celeste Holm </td><td> Nordley, Linda (<i>Mogambo</i>) </td><td> Grace Kelly </td><td> 5 </td><td> <i>High (S)ociety</i>
+</td></tr>
+<tr>
+<td> 81 </td><td> Kjergen, Bjergen (<i>Wayne's World 2</i>) </td><td> Drew Barrymore </td><td> Veatch, Kate (<i>Dodgeball: A True Underdog Story</i>) </td><td> Christine Taylor </td><td> 4 </td><td> <i>The (W)edding Singer</i>
+</td></tr>
+<tr>
+<td> 82 </td><td> Vega, Vincent (<i>Pulp Fiction</i>) </td><td> John Travolta </td><td> Flekman, Bobbi (<i>This is Spinal Tap</i>)  </td><td> Fran Drescher </td><td> 7 </td><td> <i>Saturd(a)y Night Fever</i>
+</td></tr>
+<tr>
+<td> 83 </td><td> McCoy, Hogger (<i>Rock Island Trail</i>) </td><td> Chill Wills </td><td> O'Shaughnessy, Brigid (<i>The Maltese Falcon</i>) </td><td> Mary Astor </td><td> 9 </td><td> <i>Meet Me in (S)t. Louis</i>
+</td></tr>
+<tr>
+<td> 84 </td><td> Scissorhands, Edward (<i>Edward Scissorhands</i>) </td><td> Johnny Depp </td><td> Cameron, Beverly (<i>Paradise, Texas</i>) </td><td> Polly Bergen </td><td> 2 </td><td> <i>C(r)y-Baby</i>
+</td></tr>
+<tr>
+<td> 85 </td><td> Whittaker, Phil (<i>Woman of the Year</i>) </td><td> Roscoe Karns </td><td> Tsarakov, Vladimar Ivan (<i>The Mad Genius</i>) </td><td> John Barrymore </td><td> 3 </td><td> <i>Tw(e)ntieth Century</i>
+</td></tr>
+<tr>
+<td> 86 </td><td> Levene, Shelley (<i>Glengarry Glenn Ross</i>) </td><td> Jack Lemmon </td><td> Brainard, Prof. Ned (<i>The Absent-Minded Professor</i>) </td><td> Fred MacMurray </td><td> 9 </td><td> <i>The Apart(m)ent</i>
+</td></tr>
+<tr>
+<td> 87 </td><td> Olsson, Sandy (<i>Grease</i>) </td><td> Olivia Newton-John </td><td> Brady, Joseph (<i>Anchors Aweigh</i>) </td><td> Gene Kelly </td><td> 2 </td><td> <i>X(a)nadu</i>
+</td></tr>
+<tr>
+<td> 88 </td><td> Muffley, Pres. Merkin (<i>Dr. Strangelove</i>) </td><td> Peter Sellers </td><td> Otterbourne, Salome (<i>Death on the Nile</i>) </td><td> Angela Lansbury </td><td> 8 </td><td> <i>The Worl(d) of Henry Orient</i>
+</td></tr>
+<tr>
+<td> 89 </td><td> Lynn, Loretta (<i>Coal Miner's Daughter</i>) </td><td> Sissy Spacek </td><td> Scott, Dixie (<i>Tender Mercies</i>) </td><td> Betty Buckley </td><td> 6 </td><td> <i>Carri(e)</i>
+</td></tr>
+<tr>
+<td> 90 </td><td> Pokrifki, Paula (<i>An Officer and a Gentleman</i>) </td><td> Debra Winger </td><td> Mancuso, Cmdr. Bart (<i>The Hunt for Red October</i>) </td><td> Scott Glenn </td><td> 4 </td><td> <i>Urb(a)n Cowboy</i>
+</td></tr>
+<tr>
+<td> 91 </td><td> McKee, Valentine (<i>Tremors</i>) </td><td> Kevin Bacon </td><td> Lake, Nathalie (<i>Mars Attacks!</i>)</td><td> Sarah Jessica Parker </td><td> 8 </td><td> <i>Footloo(s)e</i>
+</td></tr>
+<tr>
+<td> 92 </td><td> Fishpaw, Francine (<i>Polyester</i>) </td><td> Divine </td><td> Overstreet, Knox </td><td> Josh Charles (<i>Dead Poets Society</i>) </td><td> 8 </td><td> <i>Hairspr(a)y</i>
+</td></tr></table>
+<p>The indexed letters in the title name gives the clue EVERY ONE OF THESE FILMS WAS REMADE AS A..., and the cardiogram indicates the word lengths of the Companion answer, BROADWAY MUSICAL. (A few of the films underwent a name change on their way to Broadway: <i>The World of Henry Orient</i> became <i>Henry, Sweet Henry,</i> <i>The Apartment</i> became <i>Promises, Promises</i>, <i>Nights of Cabiria</i> became <i>Sweet Charity</i>, <i>Twentieth Century</i> became <i>On the Twentieth Century</i>, and <i>Ninotchka</i> turned into <i>Silk Stockings</i>. <i>Nights of Cabiria</i> is also known as <i>Le Notti di Cabiria</i>, and the indexing is the same.)
+</p><p><b>Doctor Half: The Dashing Chap with Bouts of Amnesia, <a href="http://tardis.wikia.com/wiki/Eighth_Doctor" class="external text" title="http://tardis.wikia.com/wiki/Eighth_Doctor" rel="nofollow">the Eighth Doctor</a></b>
+</p><p>The numbers to the left and right of each grid row match a diastolic reading in the companion puzzle.Take the two referenced films from the companion puzzle, convert them to the names of their Broadway incarnations, and use the <a href="http://www.ibdb.com/index.php" class="external text" title="http://www.ibdb.com/index.php" rel="nofollow">Internet Broadway Database</a> or something similar to find the name of the actor appearing in both Broadway shows. For example, the first line gives 78 and 64, which indicate <i>Dirty Rotten Scoundrels</i> and <i>Sweet Smell of Success</i> in the Companion half. The actor appearing in both is JOHN LITHGOW, who can be entered into the grid on that row. The resulting grid is:
+</p>
+<table class="word-grid"><tr><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="empty letter">J</td><td class="empty letter">O</td><td class="empty letter">H</td><td class="empty letter">N</td><td class="filled">&nbsp;</td><td class="empty letter">L</td><td class="empty letter">I</td><td class="empty letter">T</td><td class="empty letter">H</td><td class="empty letter">G</td><td class="empty letter">O</td><td class="empty letter">W</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td></tr>
+<tr><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="empty letter">K</td><td class="empty letter">E</td><td class="empty letter">V</td><td class="empty letter">I</td><td class="empty letter">N</td><td class="filled">&nbsp;</td><td class="empty letter">C</td><td class="empty letter">A</td><td class="empty letter">H</td><td class="empty letter">O</td><td class="empty letter">O</td><td class="empty letter">N</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td></tr>
+<tr><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="empty letter">S</td><td class="empty letter">H</td><td class="empty letter">E</td><td class="empty letter">R</td><td class="empty letter">I</td><td class="empty letter">E</td><td class="filled">&nbsp;</td><td class="empty letter">R</td><td class="empty letter">E</td><td class="empty letter">N</td><td class="empty letter">E</td><td class="filled">&nbsp;</td><td class="empty letter">S</td><td class="empty letter">C</td><td class="empty letter">O</td><td class="empty letter">T</td><td class="empty letter">T</td><td class="filled">&nbsp;</td></tr>
+<tr><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="empty letter">D</td><td class="empty letter">O</td><td class="empty letter">N</td><td class="filled">&nbsp;</td><td class="empty letter">A</td><td class="empty letter">M</td><td class="empty letter">E</td><td class="empty letter">C</td><td class="empty letter">H</td><td class="empty letter">E</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td></tr>
+<tr><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="empty letter">H</td><td class="empty letter">A</td><td class="empty letter">R</td><td class="empty letter">R</td><td class="empty letter">I</td><td class="empty letter">E</td><td class="empty letter">T</td><td class="filled">&nbsp;</td><td class="empty letter">H</td><td class="empty letter">A</td><td class="empty letter">R</td><td class="empty letter">R</td><td class="empty letter">I</td><td class="empty letter">S</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td></tr>
+<tr><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="empty letter">G</td><td class="empty letter">E</td><td class="empty letter">O</td><td class="empty letter">R</td><td class="empty letter">G</td><td class="empty letter">E</td><td class="filled">&nbsp;</td><td class="empty letter">H</td><td class="empty letter">E</td><td class="empty letter">A</td><td class="empty letter">R</td><td class="empty letter">N</td></tr>
+<tr><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="empty letter">J</td><td class="empty letter">E</td><td class="empty letter">N</td><td class="empty letter">N</td><td class="filled">&nbsp;</td><td class="empty letter">C</td><td class="empty letter">O</td><td class="empty letter">L</td><td class="empty letter">E</td><td class="empty letter">L</td><td class="empty letter">L</td><td class="empty letter">A</td><td class="filled">&nbsp;</td></tr>
+<tr><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="empty letter">S</td><td class="empty letter">U</td><td class="empty letter">T</td><td class="empty letter">T</td><td class="empty letter">O</td><td class="empty letter">N</td><td class="filled">&nbsp;</td><td class="empty letter">F</td><td class="empty letter">O</td><td class="empty letter">S</td><td class="empty letter">T</td><td class="empty letter">E</td><td class="empty letter">R</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td></tr>
+<tr><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="empty letter">J</td><td class="empty letter">O</td><td class="empty letter">H</td><td class="empty letter">N</td><td class="filled">&nbsp;</td><td class="empty letter">C</td><td class="empty letter">U</td><td class="empty letter">L</td><td class="empty letter">L</td><td class="empty letter">U</td><td class="empty letter">M</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td></tr>
+<tr><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="empty letter">G</td><td class="empty letter">R</td><td class="empty letter">E</td><td class="empty letter">G</td><td class="empty letter">O</td><td class="empty letter">R</td><td class="empty letter">Y</td><td class="filled">&nbsp;</td><td class="empty letter">J</td><td class="empty letter">B</td><td class="empty letter">A</td><td class="empty letter">R</td><td class="empty letter">A</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td></tr>
+<tr><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="empty letter">M</td><td class="empty letter">A</td><td class="empty letter">R</td><td class="empty letter">C</td><td class="filled">&nbsp;</td><td class="empty letter">K</td><td class="empty letter">U</td><td class="empty letter">D</td><td class="empty letter">I</td><td class="empty letter">S</td><td class="empty letter">C</td><td class="empty letter">H</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td></tr>
+<tr><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="empty letter">H</td><td class="empty letter">U</td><td class="empty letter">N</td><td class="empty letter">T</td><td class="empty letter">E</td><td class="empty letter">R</td><td class="filled">&nbsp;</td><td class="empty letter">F</td><td class="empty letter">O</td><td class="empty letter">S</td><td class="empty letter">T</td><td class="empty letter">E</td><td class="empty letter">R</td><td class="filled">&nbsp;</td></tr>
+<tr><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="empty letter">O</td><td class="empty letter">R</td><td class="empty letter">F</td><td class="empty letter">E</td><td class="empty letter">H</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td></tr>
+<tr><td class="empty letter">D</td><td class="empty letter">O</td><td class="empty letter">N</td><td class="empty letter">N</td><td class="empty letter">A</td><td class="filled">&nbsp;</td><td class="empty letter">M</td><td class="empty letter">C</td><td class="empty letter">K</td><td class="empty letter">E</td><td class="empty letter">C</td><td class="empty letter">H</td><td class="empty letter">N</td><td class="empty letter">I</td><td class="empty letter">E</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td></tr>
+<tr><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="empty letter">K</td><td class="empty letter">E</td><td class="empty letter">R</td><td class="empty letter">R</td><td class="empty letter">Y</td><td class="filled">&nbsp;</td><td class="empty letter">B</td><td class="empty letter">U</td><td class="empty letter">T</td><td class="empty letter">L</td><td class="empty letter">E</td><td class="empty letter">R</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td></tr>
+<tr><td class="filled">&nbsp;</td><td class="empty letter">C</td><td class="empty letter">H</td><td class="empty letter">A</td><td class="empty letter">R</td><td class="empty letter">L</td><td class="empty letter">O</td><td class="empty letter">T</td><td class="empty letter">T</td><td class="empty letter">E</td><td class="filled">&nbsp;</td><td class="empty letter">D</td><td class="empty letter">A</td><td class="empty letter">M</td><td class="empty letter">B</td><td class="empty letter">O</td><td class="empty letter">I</td><td class="empty letter">S</td><td class="empty letter">E</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td><td class="filled">&nbsp;</td></tr>
+</table>
+<p>Reading down the common column, you get the clue WHEATON SNAKE FILM. Wil Wheaton was in the snake film that's the Doctor answer, PYTHON.
+</p><p><b>Doctor and Companion Clue:</b>
+</p><p>The combined clue is PYTHON BROADWAY MUSICAL, and the Monty Python musical on Broadway is SPAMALOT.
+</p>
+
+</div>
+
+<div id="footer"></div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* line 3, ../../sass/workshop.scss */
+body {
+  background: #381f12;
+  background: url("css-10.png") repeat-y calc(50% - 670px) 55px, url("css-11.png") repeat;
+}
+
+/* line 9, ../../sass/workshop.scss */
+#workshopdecor {
+  z-index: 10;
+  position: absolute;
+  background-image: url("css-12.png");
+  background-repeat: no-repeat;
+  height: 383px;
+  width: 1000px;
+}
+
+/* line 18, ../../sass/workshop.scss */
+#infowindow {
+  z-index: 10;
+  position: absolute;
+  left: 655px;
+  top: 38px;
+}
+
+/* line 25, ../../sass/workshop.scss */
+#puzzle-obj {
+  width: 383px;
+  height: 383px;
+  z-index: 11;
+}
+
+/* line 31, ../../sass/workshop.scss */
+#puzzle-obj img {
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: relative;
+}
+
+/* line 39, ../../sass/workshop.scss */
+#artstuff {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 1000px;
+}
+
+/* line 46, ../../sass/workshop.scss */
+#paper {
+  z-index: 8;
+  margin-top: 397px;
+}
+
+@media print {
+  /* line 52, ../../sass/workshop.scss */
+  #paper {
+    margin-top: 10px;
+  }
+}

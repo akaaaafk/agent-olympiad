@@ -1,3 +1,5 @@
-# 2009/puzzles/suspicious_material/PUZZLE
+# Suspicious Material
 
-Suspicious Material Suspicious Material Fun fact about the Tunabird of Moonclan: It makes its nest primarily out of discarded children's toys and the occasional jigsaw puzzle. But to learn more about its habitat habits, you'd have to check out its favorite guerrilla artist.
+Open `puzzle.html` for the original styled task. Explicit image links open original full-size files; a text preview does not replace the visual packet.
+
+Archive limitation: The original standalone archive packet is restored, including explicit full-size image links and applicable header artwork. Historic wording, symbols, dimensions and source groupings remain unchanged. Full-hunt progression, cross-task evaluation and image-aware grading are not reproduced.

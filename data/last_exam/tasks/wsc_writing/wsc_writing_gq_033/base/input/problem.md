@@ -1,5 +1,3 @@
-# wsc_writing_gq_033
-
 Finished works don’t materialize out of thin air. Authors, artists, musicians, architects, animators—nearly all creators go through one or more rough drafts before coming up with a finished product. For the drafts below, consider how much the work changes from one iteration to the next, and research the techniques that artists can use to transfer their sketches onto canvases. 
 
  Leonardo da Vinci | Mona Lisa (Louvre) & Mona Lisa (Isleworth) (c. 16th century) 

@@ -1,0 +1,82 @@
+{
+  "status": "completed",
+  "plan_path": "data/.cache/iiot_2023_test_recovery_20260913/apply_plan.json",
+  "backup": "data/excluded/integrity_repair_20260913T193417Z",
+  "selected_records": 8,
+  "new_files": 736,
+  "record_count_change": 0,
+  "programs_executed": false,
+  "readiness_changed": false,
+  "score_changes": [],
+  "protected_files_unchanged": 142,
+  "old_assets_unchanged": 24,
+  "other_records_and_scorecards_unchanged": true,
+  "new_assets_verified": true,
+  "public_inputs_unchanged": true,
+  "summary": {
+    "tasks": [
+      {
+        "task": "binge",
+        "pairs": 28,
+        "files": 56,
+        "input_aliases": 0,
+        "unresolved_aliases": 0
+      },
+      {
+        "task": "cipher",
+        "pairs": 52,
+        "files": 156,
+        "input_aliases": 52,
+        "unresolved_aliases": 0
+      },
+      {
+        "task": "fence",
+        "pairs": 38,
+        "files": 76,
+        "input_aliases": 0,
+        "unresolved_aliases": 0
+      },
+      {
+        "task": "ktree",
+        "pairs": 23,
+        "files": 46,
+        "input_aliases": 0,
+        "unresolved_aliases": 0
+      },
+      {
+        "task": "matgame",
+        "pairs": 79,
+        "files": 158,
+        "input_aliases": 0,
+        "unresolved_aliases": 0
+      },
+      {
+        "task": "publictransport",
+        "pairs": 53,
+        "files": 106,
+        "input_aliases": 0,
+        "unresolved_aliases": 0
+      },
+      {
+        "task": "tetris",
+        "pairs": 26,
+        "files": 52,
+        "input_aliases": 0,
+        "unresolved_aliases": 0
+      },
+      {
+        "task": "tourdetree",
+        "pairs": 39,
+        "files": 78,
+        "input_aliases": 0,
+        "unresolved_aliases": 0
+      }
+    ],
+    "official_test_pairs": 338,
+    "downloaded_files": 728,
+    "downloaded_bytes": 730823282,
+    "all_test_assets_judge_only": true,
+    "original_scores_unchanged": true,
+    "programs_executed": false
+  }
+}

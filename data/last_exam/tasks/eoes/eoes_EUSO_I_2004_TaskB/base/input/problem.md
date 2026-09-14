@@ -1,12 +1,10 @@
-# EUSO_I_2004_TaskB
-
 2nd
 European Union Science Olympiad
 in Groningen, Netherlands
 task B
 
 EUSO 2004
-
+[PDF page 2]
 Task B
 Task B is about the production of light and divided into two seperate parts.
 Part B.1 Chemiluminescence
@@ -36,7 +34,7 @@ At this temperature, the compound rapidly falls apart into two halves and light
 is emitted from one of them. 
 Note: The assistant marks during the experiments. 
 EUSO 2004
-
+[PDF page 3]
 Chemiluminescence 
 Material and equipment
 For Task B.1
@@ -87,7 +85,7 @@ ed with indium tin oxide
 • Photo-diode
 • Glass beakers
 EUSO 2004
-
+[PDF page 4]
 Synthesis of adamantylideneadamantane-1,2-dioxetane
 ad-ad
 (CHCI3)
@@ -145,7 +143,7 @@ es active carbon, add a stirring bar, and stir for 10 minutes on a magnetic
 stirrer.
 8. Filter the suspension.
 EUSO 2004
-
+[PDF page 5]
 Chemiluminescence 
 9.  C oncentrate the filtrate very carefully (under the supervision of the assistant) on 
 the rotary evaporator at about 40 °C.
@@ -201,7 +199,7 @@ C 
 The interest in polymeric semiconductors revived at the end of the 1980s as 
 a result of (i) the report of field-effect transistors made from polythiophene, 
 EUSO 2004
-
+[PDF page 6]
 and (ii) the discovery of electroluminescence from a poly-phenylene vinylene 
 (PPV) conjugated polymer-based diodes at Cambridge University. The schematic 
 structure of such a polymeric light-emitting diode (PLED) is shown in Figure 2. 
@@ -231,13 +229,13 @@ a PLED is thus determined by three processes: charge injection, charge trans-
 port, and recombination. 
 Polymer Light-Emitting Diode (PLED)
 EUSO 2004
-
+[PDF page 7]
 Chemiluminescence 
 Figure 3: Schematic device operation of a PLED.
 Instead of calcium we use indium tin alloy.
  
 EUSO 2004
-
+[PDF page 8]
 Experimental procedure 
 Preparation of an Organic Light Emitting Diode
 "Solid-State Organic Light-Emitting Diodes Based on PPV"
@@ -290,7 +288,7 @@ doesn’t work first try again if that doesn’t work either
 then ask one of the assistants for a working one. 
 
 EUSO 2004
-
+[PDF page 9]
 Chemiluminescence 
   Me asure voltage and current, and calculate the absorbed electrical power.
  

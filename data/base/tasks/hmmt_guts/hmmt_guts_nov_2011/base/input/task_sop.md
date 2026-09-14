@@ -1,30 +1,13 @@
-# Task SOP
+# Task
 
-## Reference Environment
-- Competition: HMMT November Guts Round
-- Competition id: `hmmt_guts`
-- Problem id: `hmmt_guts_nov_2011`
-- Task type: `guts_round`
-- Team size: 6
-- Year / edition: 2011
-- Source: https://hmmt-archive.s3.amazonaws.com/tournaments/2011/nov/guts/problems.pdf
+Competition: hmmt_guts
 
-## Goal
-As a multi-agent team, solve the olympiad-style team task using only the materials under `base/input`. Produce the required deliverable (`team_submission`).
+Task: hmmt_guts_nov_2011
 
-## Task directory
-- Variant root: `base`
-- Input directory: `base/input`
+Edition: 2011
 
-## Inputs
-- `problem.md`
-- `problems.pdf`
+Team size: 6
 
-## Title
-HMMT November 2011 — Guts Round
+Deliverable: numbered_worked_answers
 
-## Deterministic Evaluation Rule
-Gold answers and official solution booklets are not provided in `input/`. Scoring uses the evaluator declared on the task card (gold match, rubric LLM judge, slide judge, or deferred sandbox).
-
-## Deliverables
-Return the team `team_submission` expected by this competition.
+Use the attached problem materials and the inherited competition and collaboration instructions.

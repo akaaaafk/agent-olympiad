@@ -1,5 +1,3 @@
-# Wildcard26_Readme_http
-
 WildCard26 Mint 21 README
 Please read the entire README thoroughly before modifying anything on this computer.
 Unique Identifier

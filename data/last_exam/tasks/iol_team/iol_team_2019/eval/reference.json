@@ -1,10 +1,29 @@
 {
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/iol_team/benchmark.json#iol_team_2019.gold_label",
-  "has_gold_answer": true,
-  "evaluator_id": "rubric_llm_v1",
-  "evaluator_status": "ready",
-  "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-  "deliverable": "worked_answers",
-  "solution_file": "data/raw/iol/iol-2019-team-sol.en.pdf"
+  "has_gold_answer": false,
+  "evaluator_id": null,
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/iol/iol-2019-team-sol.en.pdf",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+    "deliverable": "team_worked_answer",
+    "judge_assets": [
+      "data/raw/iol/iol-2019-team-sol.en.pdf"
+    ],
+    "limitations": [
+      "All 18 official example videos are restored unchanged; their overlaid symbols/scores correspond to given examples 1-48, not answers 49-77.",
+      "Symbolic gymnastics notation in both problem and solution is lost in plain-text extraction. PDF images and video-capable delivery/grading remain unvalidated.",
+      "Gymnastics difficulty marks such as 0.2/0.4 are values to infer, not IOL item weights. The 100-point rubric is a proxy, not an official maximum."
+    ],
+    "scorecard_path": "data/rubrics/task_scorecards/iol_team.json",
+    "scorecard_key": "iol_team_2019",
+    "source_repair_report": "data/benchmarks/iol_followup_repair_20260913.json",
+    "scoring_validation_status": "source_repaired_runtime_and_grading_not_validated",
+    "score_basis": "100-point benchmark proxy only; official IOL item weights/maximum unverified. Gymnastics marks are task answer values, not evaluation weights."
+  },
+  "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+  "deliverable": "team_worked_answer"
 }

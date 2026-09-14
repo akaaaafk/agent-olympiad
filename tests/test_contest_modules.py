@@ -74,7 +74,7 @@ class ContestModuleTests(unittest.TestCase):
     def test_memory_off_filters_notes_and_retrieval_but_keeps_conversation(self):
         store = memory()
         note(store)
-        recall_notes(store, agent="Agent_1", query="CANARY", problem_id="q1", event_task_id="q1", turn=0)
+        recall_notes(store, agent="Agent_1", query="PRIVATE_CANARY", problem_id="q1", event_task_id="q1", turn=0)
         store.append(task_id="q1", question_id=None, actor="Agent_2", visibility="public",
                      kind="speak", payload={"content": "PUBLIC_MESSAGE"}, turn=0)
         value = json.dumps(agent_context(store, viewer="Agent_1", enabled=False, current_task_id="q1"))
@@ -87,13 +87,13 @@ class ContestModuleTests(unittest.TestCase):
     def test_private_notes_require_explicit_sharing_and_survive_checkpoint(self):
         store = memory()
         saved = note(store)
-        self.assertFalse(store.recall("Agent_2", query="CANARY"))
+        self.assertFalse(store.recall("Agent_2", query="PRIVATE_CANARY"))
         session = SimpleNamespace(budget=SimpleNamespace(turns_used=0))
         with self.assertRaises(ValueError):
             share_note(memory=store, session=session, agent="Agent_2", note_id=saved.event_id)
         share_note(memory=store, session=session, agent="Agent_1", note_id=saved.event_id)
         restored = ContestMemory.from_checkpoint_json(store.to_checkpoint_json())
-        self.assertTrue(restored.recall("Agent_2", query="CANARY"))
+        self.assertTrue(restored.recall("Agent_2", query="PRIVATE_CANARY"))
         with self.assertRaises(ValueError):
             share_note(memory=store, session=session, agent="Agent_1", note_id=saved.event_id)
 

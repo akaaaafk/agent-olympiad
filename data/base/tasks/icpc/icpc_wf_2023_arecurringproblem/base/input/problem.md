@@ -1,5 +1,3 @@
-# A Recurring Problem
-
 Hide 
  A Recurring Problem 
 

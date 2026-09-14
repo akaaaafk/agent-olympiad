@@ -1,5 +1,3 @@
-# RoboMission Elementary 2022
-
 MY ROBOT MY FRIEND 
 THE GARDEN ROBOT
 RoboMission

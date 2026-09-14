@@ -1,5 +1,3 @@
-# Tours
-
 Hide 
  Tours 
 

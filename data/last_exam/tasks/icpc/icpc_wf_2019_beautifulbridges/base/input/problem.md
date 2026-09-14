@@ -1,5 +1,3 @@
-# Beautiful Bridges
-
 Hide 
  Beautiful Bridges 
 

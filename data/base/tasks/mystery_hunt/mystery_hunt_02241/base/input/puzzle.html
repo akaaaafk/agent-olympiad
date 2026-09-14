@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1240, user-scalable=yes"></meta>
+  
+  
+  <title>The Eldritch, Gambrel Scavenger Hunt &mdash; Randolph Carter &mdash; MIT Mystery Hunt 2016</title>
+  <link rel="stylesheet" href="style-0.css" />
+  <link rel="stylesheet" href="style-1.css" />
+  <link href='style-2.css' rel='stylesheet' type='text/css'>
+  <link href='style-3.css' rel='stylesheet' type='text/css'>
+  
+
+<link rel="stylesheet" href="style-4.css" />
+
+
+  <style>
+  .navtooltip.hover {
+    display: block;
+  }
+  .navtooltip {
+    display: none;
+    position: absolute;
+    background-color: rgba(20,20,20, 1);
+    border: 1px solid #888;
+    padding: 10px 10px;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 7px black;
+    width: 13em;
+    margin: 10px 10px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  </style>
+  
+</head>
+
+<body class="puzzle-page">
+
+
+
+  
+
+<div class="back">
+  <div class="main">
+    <a class="btn back-to-round" data-archive-href="../../round/randolph_carter"><span class="glyphicon glyphicon-menu-left"></span></a>
+    
+    <img id="bg-desat" src="bg-desat.jpg"/>
+    
+  </div>
+  <div class="puzzle">
+    <div class="header">
+      
+      <img class="puzzle-logo" src="header.png">
+      
+      <h2>The Eldritch, Gambrel Scavenger Hunt</h2>
+      
+    </div>
+    <div class="content">
+      <p><em>
+"Hurry in, hurry in; it's storming out there! Let me get you something warm to drink. What's that? Of course I know Professor Oisy. Yes, Ben's hated me since his dog choked on some fruit that fell off one of my trees. Well, actually, it happened twice, but it's&mdash;What?! He's trying to summon an elder god? To destroy the university? We must stop him! We may be able to prevent our destruction if we hurry! If we live I'll smash that fool's head with an axe!"
+</em></p>
+<p>
+To prevent someone from summoning an Elder God, you need to retrieve items for your professor friend to place around campus. This field of protective objects is oriented on ancient ley lines of strange power. A map of these lines can be found below (click to enlarge):
+</p>
+<a href="hunt.png"><img src="hunt_small.png" alt="A map of ley lines on a fictional area" /></a>
+<p>
+Each ley line is associated with a quality, which are listed in a table below. The northwest-southeast lines (red) are associated with substance, the east-west lines (blue) with form, and the southwest-northeast lines (green) with meaning. In order to protect campus (represented by the grey area on the map), you need to place objects at the intersections of ley lines shown on the map. Any object must have the qualities of all three of the ley lines.
+</p>
+<p>
+Of course, you don't have time to put an item at each intersection, and thankfully, you don't need to! An object placed at an intersection covers a shape centered on the intersection. The size of the shape depends on your team size:
+</p>
+<ul>
+<li>For teams of 1&ndash;15, the shape is a hexagon of radius three segments.</li>
+<li>For teams of 16&ndash;60, the shape is a hexagon of radius two segments.</li>
+<li>For teams of 61&ndash;110, the shape is a equilateral triangle with side three segments. You may orient these triangles pointed up or down as you choose, and you can mix the two orientations in your coverage.</li>
+<li>For teams of over 110, the shape is a hexagon of radius one segment.</li>
+</ul>
+<p>
+See below for a visual example:
+</p>
+<a href="hunt_example.png"><img src="hunt_example_small.png" alt="How the hexagons work" /></a>
+<p>
+You must find enough items to cover the grey part of the <a href="hunt.png">map</a>. You can cover the white areas (or even areas outside the map!), but that is not required. You may also overlap shapes if you wish.
+</p>
+<p>
+Finally, your professor has a few small-area field inhibitors. They are able to cover one triangle each&mdash;you can use them to fill in any pesky gaps. The number you get is based on your team size:
+</p>
+<ul>
+<li>1&ndash;5: 8</li>
+<li>6&ndash;15: 3</li>
+<li>16&ndash;25: 20</li>
+<li>26&ndash;40: 15</li>
+<li>41&ndash;60: 10</li>
+<li>61&ndash;85: 30</li>
+<li>86&ndash;110: 20</li>
+<li>111&ndash;125: 35</li>
+<li>126&ndash;150: 25</li>
+<li>Over 150: 20</li>
+</ul>
+<p>
+When you have enough items to cover the <em>grey part</em> of the map, call GC, and the professor will come over and verify that your items fit the bill. Note that no item can be used for two different intersections unless you have two instances of it. (In case you were concerned, the items will not actually be placed around campus.)
+</p>
+<p>
+Finally, a note on what makes an acceptable item. In order to property activate the energy of the ley lines, the object must have been in its state for at least two or three days. Practically speaking, therefore, the object must not have been assembled or constructed for the purposes of this puzzle. (Clearly, we cannot know this for certain. But you must be able to convince us that the object had this form before you knew of this puzzle.)
+</p>
+<table>
+<tr>
+<td style="vertical-align:top; width:25%">
+<h4 style="color: darkred">Ley lines of substance:</h4>
+<ol>
+<li>Earth</li>
+<li>Bone, leather, or other inedible animal matter</li>
+<li>Ceramic</li>
+<li>Food</li>
+<li>Stone or mineral</li>
+<li>Paper or cardboard</li>
+<li>Wood</li>
+<li>Wood and metal</li>
+<li>Metal (base)</li>
+<li>Metal (precious, like 10K gold or sterling silver)</li>
+<li>Fabric or cotton</li>
+<li>Flexible plastic</li>
+<li>Rigid plastic</li>
+<li>Wood and plastic</li>
+<li>Glass and {metal and/or wood}</li>
+<li>Glass</li>
+<li>Combination of five or more of the above</li>
+<li>Ice</li>
+</ol>
+Note: Items should be primarily composed of this substance. Like if you looked at it, you would say, "that's made of X". For combinations of substances (like wood and metal), the item should be primarily composed of the combination, and each substance in the combination should be well-represented.
+</td>
+<td style="vertical-align:top; width:25%">
+<h4 style="color: darkblue">Ley lines of form:</h4>
+<ol start="19">
+<li>Tubular</li>
+<li>Cylindrical (solid)</li>
+<li>Equiangular</li>
+<li>Incomplete</li>
+<li>Flat</li>
+<li>With a hole (equivalent to a torus)</li>
+<li>With multiple holes</li>
+<li>Hollow</li>
+<li>Cup, mug, or bowl-shaped</li>
+<li>Without sharp corners</li>
+<li>With sharp corners, but without right angles</li>
+<li>Flexible</li>
+<li>Naturally-formed</li>
+<li>V- or L-shaped</li>
+<li>Y- or X-shaped</li>
+<li>Platonic</li>
+<li>Glowing</li>
+</ol>
+Note: Items should be substantially this form. Like if you looked at it, you would say, "that is X".
+</td>
+<td style="vertical-align:top; width:25%">
+<h4 style="color: darkgreen">Ley lines of meaning:</h4>
+<ol start="36">
+<li>Eldritch</li>
+<li>Random</li>
+<li>Dangerous</li>
+<li>Educational</li>
+<li>Intricate</li>
+<li>Disposable</li>
+<li>Individualized</li>
+<li>Meaningful</li>
+<li>Industrial</li>
+<li>Symbolic</li>
+<li>Obsolete</li>
+<li>New</li>
+<li>Ancient</li>
+<li>Commercial</li>
+<li>Forged (either relevant sense)</li>
+<li>Confusing</li>
+<li>Misshapen</li>
+<li>Pristine</li>
+<li>Well-worn</li>
+<li>Expensive</li>
+<li>Fragrant</li>
+</ol>
+</td>
+</tr>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+  
+  
+  
+
+
+
+</body>
+</html>

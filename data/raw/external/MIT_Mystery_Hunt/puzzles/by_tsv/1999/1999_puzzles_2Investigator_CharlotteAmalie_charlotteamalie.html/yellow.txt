@@ -1,0 +1,128 @@
+***********Yellow*********************
+
+(start) Y: Anybody there?
+
+<...anybody home>
+Y: Yes?
+
+<...hunt....>
+Y: Do you think I would tell you that?
+
+<How many....>
+Y: Are you counting this one?
+
+<Have you solved {x}?>
+Y: What kind of name is {x}?
+
+<... name?>
+Y: Does that matter?
+
+<...sign?> (standard pick up line?)
+Y: Don't you think you are being a little rude?
+
+< do you know where...>
+Y: Are you taking me somewhere?
+
+<...year....>
+Y: What, are you running for the dummy of the year contest?
+
+<....president...>
+Y: You're not going to start with the president jokes, are you?
+ 
+<whose talking about [a set of men]?>
+Y: Don't you think their wives are much more interesting?
+
+<....dialog...>
+Y: Is that the real question?
+
+<...come to mind?>
+Y: Do pig's fly?
+
+<... wood chuck...>
+Y: Why do fools fall in love?
+
+<...a fool?>
+Y: Are you?
+
+<...patronizing?>
+Y: (In patronizing tone) Who's a good dog?
+
+<Are you done...?>
+Y: What were we talking about?
+
+<...answer to life?>
+Y: The universe?
+
+<and everything?>
+Y: Is that the 6x9 question?
+
+<...number questions..>
+Y: Aren't we supposed to stick to facual questions? 
+
+<...do you want to pay...>
+Y: What bank has an ATM on the corner of Vassar and Mass ave?
+
+<...Rosencrantz...>
+Y: How do you spell relief?
+
+<...bituminous coal?>
+Y: Who died with that on his lips?
+
+<...bitterness...>
+Y: Do you want to grab a bite to eat together?
+
+<How much money...>
+Y: Can't you withdraw some?
+
+
+<...help you? | ...ready to play...>
+Y: Will it help us solve this hunt?
+
+<...sludge through...>
+Y: Well, I think so, Brain, but if Jimmy cracks corn, and no one cares, why does
+he keep doing it?
+
+<... a tv show?|... mean?>
+Y: What was Jackie Kennedy's maiden name?
+
+<...Dolores...>
+Y: So if your sister's boyfriend's mothers father is a family tree
+researcher, and he finds out that your cousin's daugther's father is the
+decendant of Dolores,, what does that mean?
+
+<...friends...>
+Y: If all your friends jump off a bridge would you too?
+
+<...bungy cord?>
+Y: How high do you want to bounce?
+
+<...pet dingo?>
+Y: Was it Chester?
+
+<...Worcestershire sauce...>
+Y: What item?
+
+<...banana?>
+Y: Is that a banana in your pocket or are you just happy to see me?
+
+
+< ...up this late?| ...unguarded... | ...sludge through... >
+Y: Well, I think so, Brain, but if Jimmy cracks corn, and no one cares, why does
+he keep doing it?
+
+<...keep doing it?>
+Y: When Willy was 5, which President did he meet at the Easter Egg Roll?
+
+<...what would the children look like?>
+Y: Do you know what a monkey's uncle looks like?
+
+
+<...anything like a mule's...>
+Y: Mares eat oats and does eat oats and little lambs eat ivy, a kid will eat 
+ivy to, wouldn't you?
+
+<....speaking english?>
+Y: What else would I speak, the language of love?
+
+<...honey or bitersweet...>
+Y: Who died with that on his lips?

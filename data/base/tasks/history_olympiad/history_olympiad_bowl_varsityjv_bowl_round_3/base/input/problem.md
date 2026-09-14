@@ -1,5 +1,3 @@
-# VarsityJV_Bowl-Round-3
-
 [Q1] In a 1910 toast, John Collins Bossidy called this city “the land of the bean and the cod.” Abolitionist sentiment surged in this city when William Lloyd Garrison founded The Liberator newsletter there. Despite the anti -Catholic sentiment of its founders, this city became a center of Irish -Catholic politics. Oliver Wendell Holmes, Sr. wrote about this city’s so-called “Brahmin” elite. For ten points, name this major New England city, nicknamed “Beantown.”
 
 [Q2] A participant in this conflict named Rodrigo Diaz brief ly switched sides after the Battle of Cabra and had a nickname meaning “the Lord.” Jews who did not flee this conflict were forced to become “conversos.” This event’s unofficial end came in 1492, when the Emirate of Granada fell to Spanish forces under the control of the “Catholic Monarchs.” For ten points, give the Spanish -language term for the expulsion of Muslims from Spain, led by Ferdinand and Isabella.

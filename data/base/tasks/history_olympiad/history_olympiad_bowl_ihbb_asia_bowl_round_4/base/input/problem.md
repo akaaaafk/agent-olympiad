@@ -1,5 +1,3 @@
-# IHBB-Asia-Bowl-Round-4
-
 [Q1] This man shared power with Alexander Kosygin in the early years of his leadership, and his poor economic planning led to the beginning of the Era of Stagnation. This leader joined Jimmy Carter in signing the SALT II accords. He justified military intervention to protect communism in a namesake doctrine. For ten points, name this Soviet General Secretary who succeeded Khrushchev.
 
 [Q2] A campaign against these people began when Galerius was told that their exist ence prevented the Oracle at Delphi from speaking. The catacombs of Rome were predominantly used for the burial of these people. Though these people suffered the Diocletian Persecution and Nero blamed them for causing the Great Fire, they were eventually g ranted legal status in the 313 AD Edict of Milan. For ten points, name these followers of a monotheistic faith adopted by Constantine the Great.

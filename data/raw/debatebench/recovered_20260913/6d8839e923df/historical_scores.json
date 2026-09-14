@@ -1,0 +1,110 @@
+{
+  "problem_id": "debatebench_Doxbridge Worlds 2021 West Round 4",
+  "visibility": "judge_only",
+  "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Doxbridge Worlds 2021 West Round 4.txt",
+  "transcript_sha256": "2e551adcae894db4eabcd9a003414d6eab037d92f197423ce99eb53f3d2cd6a5",
+  "score_workbook": "data/raw/debatebench/scores.xlsx",
+  "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+  "score_column_order": [
+    "PM",
+    "DPM",
+    "LO",
+    "DLO",
+    "MG",
+    "GW",
+    "MO",
+    "OW"
+  ],
+  "score_matching_title": "Doxbridge Worlds 2021 West Round 4",
+  "filename_alias_applied": false,
+  "identity_status": "matched",
+  "selected_scores": {
+    "sheet": "Sheet1",
+    "excel_row": 39,
+    "cell_range": "A39:M39",
+    "tournament_title": "Doxbridge Worlds 2021 West Round 4",
+    "speaker_scores": {
+      "PM": 82.0,
+      "LO": 76.0,
+      "DPM": 83.0,
+      "DLO": 77.0,
+      "MG": 78.0,
+      "MO": 79.0,
+      "GW": 76.0,
+      "OW": 80.0
+    },
+    "house_order": [
+      "OG",
+      "CO",
+      "CG",
+      "OO"
+    ]
+  },
+  "candidates": [
+    {
+      "sheet": "Sheet1",
+      "excel_row": 39,
+      "cell_range": "A39:M39",
+      "tournament_title": "Doxbridge Worlds 2021 West Round 4",
+      "speaker_scores": {
+        "PM": 82.0,
+        "LO": 76.0,
+        "DPM": 83.0,
+        "DLO": 77.0,
+        "MG": 78.0,
+        "MO": 79.0,
+        "GW": 76.0,
+        "OW": 80.0
+      },
+      "house_order": [
+        "OG",
+        "CO",
+        "CG",
+        "OO"
+      ]
+    }
+  ],
+  "role_alignment": {
+    "valid_role_boundaries": true,
+    "opening_role_order": [
+      "PM",
+      "LO",
+      "DPM",
+      "DLO",
+      "MG",
+      "MO",
+      "GW",
+      "OW"
+    ],
+    "expected_speaking_order": [
+      "PM",
+      "LO",
+      "DPM",
+      "DLO",
+      "MG",
+      "MO",
+      "GW",
+      "OW"
+    ],
+    "observed_role_tags": [
+      "PM",
+      "/PM",
+      "LO",
+      "/LO",
+      "DPM",
+      "/DPM",
+      "DLO",
+      "/DLO",
+      "MG",
+      "/MG",
+      "MO",
+      "/MO",
+      "GW",
+      "/GW",
+      "OW",
+      "/OW"
+    ],
+    "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+  },
+  "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+}

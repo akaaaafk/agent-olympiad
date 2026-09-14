@@ -1,5 +1,3 @@
-# wsc_writing_gq_022
-
 The Hangzhou Round famously caught fire. But what is a fire, and how does it burn? Begin your exploration of this topic with the terms below: 
 
  oxidization | ignition | combustion | flash point | convection 

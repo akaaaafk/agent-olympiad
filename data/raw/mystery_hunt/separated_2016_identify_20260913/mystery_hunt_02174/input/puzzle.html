@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1240, user-scalable=yes"></meta>
+  
+  
+  <title>identify, SORT, index, solve &mdash; Sleeping Beauty &mdash; MIT Mystery Hunt 2016</title>
+  <link rel="stylesheet" href="style-0.css" />
+  <link rel="stylesheet" href="style-1.css" />
+  <link href='style-2.css' rel='stylesheet' type='text/css'>
+  <link href='style-3.css' rel='stylesheet' type='text/css'>
+  
+
+<link rel="stylesheet" href="style-4.css" />
+
+
+  <style>
+  .navtooltip.hover {
+    display: block;
+  }
+  .navtooltip {
+    display: none;
+    position: absolute;
+    background-color: rgba(20,20,20, 1);
+    border: 1px solid #888;
+    padding: 10px 10px;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 7px black;
+    width: 13em;
+    margin: 10px 10px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  </style>
+  
+</head>
+
+<body class="puzzle-page">
+
+
+
+  
+
+<div class="back">
+  <div class="main">
+    <a class="btn back-to-round" data-archive-href="../../round/sleeping_beauty"><span class="glyphicon glyphicon-menu-left"></span></a>
+    
+    <img id="bg-desat" src="bg-desat.jpg"/>
+    
+  </div>
+  <div class="puzzle">
+    <div class="header">
+      
+      <img class="puzzle-logo" src="header.png">
+      
+      <h2>identify, SORT, index, solve</h2>
+      
+    </div>
+    <div class="content">
+      
+
+
+
+
+
+<p><i>Just how huge are things from Thumbelina's perspective? The answer may be well beyond the powers of Google.</i></p>
+<br>
+<table style="vertical-align: middle;">
+  <tr><td style="text-align: right;"><img src="a01.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>2</mn><msup><mo>↑</mo><mrow><msup><mn>10</mn><mrow><mn>100</mn></mrow></msup></mrow></msup><mn>2</mn></mrow><annotation encoding="application/x-tex">= 2 \uparrow^{10^{100}} 2</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a02.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo></mrow><annotation encoding="application/x-tex">=</annotation></semantics></math>Number of particles in the known Universe</td></tr>
+  <tr><td style="text-align: right;"><img src="a03.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><msup><mn>43</mn><mrow><msup><mn>45</mn><mrow><msup><mn>47</mn><mrow><msup><mn>49</mn><mrow><msup><mn>41</mn><mrow><mn>3</mn></mrow></msup></mrow></msup></mrow></msup></mrow></msup></mrow></msup></mrow><annotation encoding="application/x-tex">=43^{45^{47^{49^{41^{3}}}}}</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a04.jpg"></td><td>(eg)<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo></mrow><annotation encoding="application/x-tex">=</annotation></semantics></math><img src="square6.gif"></td></tr>
+  <tr><td style="text-align: right;"><img src="a05.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>3</mn><mo>→</mo><mn>2</mn><mo>→</mo><mn>3</mn><mo>→</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">=3 \rightarrow 2 \rightarrow 3 \rightarrow 3</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a06.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><msup><mn>3</mn><mrow><msup><mn>2</mn><mrow><msup><mn>2</mn><mrow><msup><mn>4</mn><mrow><msup><mn>35</mn><mrow><mn>15</mn></mrow></msup></mrow></msup></mrow></msup></mrow></msup></mrow></msup></mrow><annotation encoding="application/x-tex">=3^{2^{2^{4^{35^{15}}}}}</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a07.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo></mrow><annotation encoding="application/x-tex">=</annotation></semantics></math>Graham's number</td></tr>
+  <tr><td style="text-align: right;"><img src="a08.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><msup><mn>3</mn><mrow><msup><mn>4</mn><mrow><msup><mn>5</mn><mrow><msup><mn>6</mn><mrow><mo>.</mo><mo>.</mo><msup><mo>.</mo><mrow><mrow><mo>(</mo><mrow><msup><mn>10</mn><mrow><mn>100</mn></mrow></msup></mrow><mo>)</mo></mrow></mrow></msup></mrow></msup></mrow></msup></mrow></msup></mrow></msup></mrow><annotation encoding="application/x-tex">=3^{4^{5^{6^{...^{(10^{100})}}}}}</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a09.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>2</mn><mo>→</mo><mn>3</mn><mo>→</mo><mn>3</mn><mo>→</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">=2 \rightarrow 3 \rightarrow 3 \rightarrow 3</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a10.jpg"></td><td>(eg)<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo></mrow><annotation encoding="application/x-tex">=</annotation></semantics></math>Largest named number in the <i>Avata&#x1E43;saka S&#x16B;tra</i></td></tr>
+  <tr><td style="text-align: right;"><img src="a11.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><mrow><mo>(</mo><mrow><msup><mn>10</mn><mrow><mn>100</mn></mrow></msup><mo>!</mo></mrow><mo>)</mo></mrow><mo>!</mo></mrow><mo>)</mo></mrow><mo>!</mo></mrow><mo>)</mo></mrow><mo>!</mo></mrow><annotation encoding="application/x-tex">=(((10^{100}!)!)!)!</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a12.jpg"></td><td>(eg)<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><msup><mn>13</mn><mrow><mn>315760124882724518</mn></mrow></msup></mrow><annotation encoding="application/x-tex">=13^{315760124882724518}</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a13.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><msup><mn>20</mn><mrow><mn>270354175698445357</mn></mrow></msup></mrow><annotation encoding="application/x-tex">=20^{270354175698445357}</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a14.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mi>A</mi><mrow><mo>(</mo><mrow><mn>4</mn><mo>,</mo><mn>5</mn></mrow><mo>)</mo></mrow></mrow><annotation encoding="application/x-tex">=A(4,5)</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a15.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>2</mn><mo>→</mo><msup><mn>10</mn><mrow><mn>100</mn></mrow></msup><mo>→</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">=2 \rightarrow 10^{100} \rightarrow 2</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a16.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mi>A</mi><mrow><mo>(</mo><mrow><msup><mn>10</mn><mrow><mn>100</mn></mrow></msup><mo>,</mo><msup><mn>10</mn><mrow><mn>100</mn></mrow></msup></mrow><mo>)</mo></mrow></mrow><annotation encoding="application/x-tex">=A(10^{100},10^{100})</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a17.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>2</mn><mo>↑</mo><mo>↑</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">=2 \uparrow\uparrow 8</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a18.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mi>B</mi><mi>B</mi><mrow><mo>(</mo><mrow><mn>100</mn></mrow><mo>)</mo></mrow></mrow><annotation encoding="application/x-tex">=BB(100)</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a19.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo></mrow><annotation encoding="application/x-tex">=</annotation></semantics></math>Number of permutations of these numbers</td></tr>
+  <tr><td style="text-align: right;"><img src="a20.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo></mrow><annotation encoding="application/x-tex">=</annotation></semantics></math>Loader's number</td></tr>
+  <tr><td style="text-align: right;"><img src="a21.jpg"></td><td>(eg)<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo></mrow><annotation encoding="application/x-tex">=</annotation></semantics></math>Largest named number in <i>The Sand Reckoner</i></td></tr>
+  <tr><td style="text-align: right;"><img src="a22.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mi>A</mi><mrow><mo>(</mo><mrow><mn>5</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><annotation encoding="application/x-tex">=A(5,1)</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a23.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><msup><mn>68</mn><mrow><msup><mn>75</mn><mrow><msup><mn>96</mn><mrow><msup><mn>92</mn><mrow><msup><mn>39</mn><mrow><mn>3</mn></mrow></msup></mrow></msup></mrow></msup></mrow></msup></mrow></msup></mrow><annotation encoding="application/x-tex">=68^{75^{96^{92^{39^{3}}}}}</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a24.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><msup><mn>2</mn><mrow><msup><mn>38</mn><mrow><msup><mn>64</mn><mrow><msup><mn>20</mn><mrow><msup><mn>57</mn><mrow><mn>13</mn></mrow></msup></mrow></msup></mrow></msup></mrow></msup></mrow></msup></mrow><annotation encoding="application/x-tex">=2^{38^{64^{20^{57^{13}}}}}</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a25.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><msup><mrow><mo>(</mo><mrow><msup><mn>10</mn><mrow><mn>100</mn></mrow></msup></mrow><mo>)</mo></mrow><mrow><mo>.</mo><mo>.</mo><msup><mo>.</mo><mrow><msup><mn>6</mn><mrow><msup><mn>5</mn><mrow><msup><mn>4</mn><mrow><mn>3</mn></mrow></msup></mrow></msup></mrow></msup></mrow></msup></mrow></msup></mrow><annotation encoding="application/x-tex">=(10^{100})^{...^{6^{5^{4^{3}}}}}</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a26.jpg"></td><td>(eg)<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mi>A</mi><mrow><mo>(</mo><mrow><mi>B</mi><mi>B</mi><mrow><mo>(</mo><mrow><mn>99</mn></mrow><mo>)</mo></mrow><mo>,</mo><mi>B</mi><mi>B</mi><mrow><mo>(</mo><mrow><mn>99</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow><annotation encoding="application/x-tex">=A(BB(99),BB(99))</annotation></semantics></math></td></tr>
+  <tr><td style="text-align: right;"><img src="a27.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo></mrow><annotation encoding="application/x-tex">=</annotation></semantics></math>BIG FOOT + 1</td></tr>
+  <tr><td style="text-align: right;"><img src="a28.jpg"></td><td>(eg)<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo></mrow><annotation encoding="application/x-tex">=</annotation></semantics></math>Moser's number</td></tr>
+  <tr><td style="text-align: right;"><img src="a29.jpg"></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>3</mn><msup><mo>↑</mo><mrow><msup><mn>10</mn><mrow><mn>100</mn></mrow></msup></mrow></msup><mn>3</mn></mrow><annotation encoding="application/x-tex">=3 \uparrow^{10^{100}} 3</annotation></semantics></math></td></tr>
+</table>
+
+<br>
+<p><b>Lexicographic rank of this permutation:</b><br>
+_____________________________</p>
+<br>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+  
+  
+  
+
+
+
+
+
+</body>
+</html>

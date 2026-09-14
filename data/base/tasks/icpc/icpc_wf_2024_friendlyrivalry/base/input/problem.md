@@ -1,5 +1,3 @@
-# Friendly Rivalry
-
 Hide 
  Friendly Rivalry 
 

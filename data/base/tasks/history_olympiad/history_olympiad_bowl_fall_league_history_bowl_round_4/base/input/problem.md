@@ -1,5 +1,3 @@
-# Fall-League-History-Bowl_Round-4
-
 [Q1] This alchemist and pursuer of the philosopher's stone developed a theory of color he discussed in the book Opticks. This scientist's Mathematical Principles of Natural Philosophy explained his law of universal gravitation, developed using a calculus notati on he derived independently of Gottfried Leibniz [[LIBE-nitz]]. For ten points, name this English polymath who also theorized three eponymous laws of motion.
 
 [Q2] Iceland was once controlled by, for ten points, what Scandinavian nation governed from Copenhagen?

@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb"> 
+<head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta http-equiv="Content-Style-Type" content="text/css" /> 
+  <meta http-equiv="Content-Language" content="en-GB" /> 
+  <title>Absolute Power</title> 
+  <link rel="stylesheet" type="text/css" href="../../../styles/puzzles.css" media="screen" /> 
+  <link rel="stylesheet" type="text/css" href="../../../styles/puzzles.css" media="print" /> 
+</head> 
+ 
+<body>
+<div id="container">
+
+  <div id="header">
+    <div id="header-content">
+      <a id="back-to-round" href="../"><img src="../../../images/return-to-1952.gif" /></a>
+      <a id="solution" href="solution.html"><img src="../../../images/solution.gif" /></a>
+    </div><!--end of id="header-content"-->
+  </div><!--end of id="header"-->
+
+  <div id="main">
+    <div id="page">
+      <div id="page-top">
+        <img id="page-stamp" src="../../../images/stamp-1952.gif" />
+        <h1 id="page-heading">Absolute Power</h1>
+      </div>
+
+      <div id="page-center">
+        <div id="page-left">&nbsp;</div>
+        <div id="page-right">&nbsp;</div>
+
+        <div id="page-content">
+          <span class="flavortext">
+            <p>When Willow Rosenberg (no relation to <i>those</i> Rosenbergs) succumbed to the dark side, she wrecked havoc right, left, and center.</p>
+          </span>
+
+          <table class="center" style="font-size:80%; line-height:1.5em; width:90%">
+            <tr>
+              <td style="vertical-align:top; width:50%">
+                <b>WILLOW</b>
+                <ul>
+                  <li>2 - 6, per Beaufort</li>
+                  <li>Achilles' comrade-at-arms</li>
+                  <li>A row of waiters?</li>
+                  <li>Absent</li>
+                  <li>An island kingdom</li>
+                  <li>Assurance for a customer</li>
+                  <li>Dramatic procession</li>
+                  <li>Entrance</li>
+                  <li>Firenze, for one</li>
+                  <li>Fruit brandy</li>
+                  <li>Gambling top</li>
+                  <li>Having black and white stripes, perhaps</li>
+                  <li>Hebrew, Arab, etc.</li>
+                  <li>Irish moonshine</li>
+                  <li>It's sticky and sweet</li>
+                  <li>Lieutenant Colonel's insignia</li>
+                  <li>Like a certain spiral</li>
+                  <li>Like Evil Spock</li>
+                  <li>Raucous serenade</li>
+                  <li>Raymond Massey role</li>
+                  <li>Sanctimonious hypocrite</li>
+                  <li>The "stinking rose"</li>
+                  <li>Time to be off the streets</li>
+                  <li>Wages</li>
+                  <li>Wake-up call?</li>
+                  <li>Weapons depot</li>
+                  <li>Yeoman of the Guard</li>
+                </ul>
+              </td>
+              <td style="vertical-align:top; width:50%">
+                <b>DARK WILLOW</b>
+                <ul>
+                  <li>"Fishhooks"</li>
+                  <li>Spectacle</li>
+                  <li>Fire</li>
+                  <li>Notable queen of Romania</li>
+                  <li>Kevin of stage and screen</li>
+                  <li>Home for Fiver and Hazel, perhaps</li>
+                  <li>Separates or adheres</li>
+                  <li>Stick with a bill?</li>
+                  <li>Carouse</li>
+                  <li>Say [BLEEP] or [BLEEP], e.g.</li>
+                  <li>Spur</li>
+                  <li>Concubine's chamber</li>
+                  <li>Overpowering stench</li>
+                  <li>Rural structure</li>
+                  <li>Tremble</li>
+                  <li>Member of a sleepy trio</li>
+                  <li>Short character Jiminy</li>
+                  <li>Ricochet</li>
+                  <li>One of the Watchmen</li>
+                  <li>Griped about nothing</li>
+                  <li>Notch or groove</li>
+                  <li>A clan's emblem or effigy</li>
+                  <li>Reserve</li>
+                  <li>Kate and Jaclyn's co-star</li>
+                  <li>Pickling solution</li>
+                  <li>Humor inducing a groan, typically</li>
+                  <li>Soft French cheese</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div><!--end of id="page-content"-->
+      </div><!--end of id="page-center"-->
+
+      <div id="page-bottom">&nbsp;</div>
+
+    </div><!--end of id="page"-->
+  </div><!--end of id="main"-->
+
+</div><!--end of id="container"-->
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

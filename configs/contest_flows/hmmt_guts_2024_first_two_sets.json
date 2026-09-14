@@ -1,0 +1,9 @@
+{
+  "session_id": "hmmt_guts_2024_first_two_sets_flow_v1",
+  "competition_id": "hmmt_guts",
+  "problem_ids": ["hmmt_guts_2024"],
+  "split_parts": true,
+  "question_ids": ["1", "2", "3", "4", "5", "6", "7", "8"],
+  "competition_flow": "guts_sets_v1",
+  "competition_description": "Stateful pilot: the first two complete February sets (8 questions) from HMMT 2024. Explicit set hand-in, finality, immediate deterministic grading and next-set pickup. This is a selected-scope pilot, not the full contest."
+}

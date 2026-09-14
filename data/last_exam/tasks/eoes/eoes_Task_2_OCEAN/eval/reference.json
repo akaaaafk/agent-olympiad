@@ -3,8 +3,40 @@
   "gold_pointer": "data/benchmarks/eoes/benchmark.json#eoes_Task_2_OCEAN.gold_label",
   "has_gold_answer": false,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+    "deliverable": "lab_answer_sheet_and_report",
+    "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+    "scorecard_path": "data/rubrics/task_scorecards/eoes.json",
+    "scorecard_key": "eoes_Task_2_OCEAN",
+    "pre_reuse_evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+      "deliverable": "lab_answer_sheet_and_report",
+      "limitations": "No task-specific official marking scheme is archived for this packet; a protocol-only rubric cannot supply missing labels.",
+      "scorecard_path": "data/rubrics/task_scorecards/eoes.json",
+      "scorecard_key": "eoes_Task_2_OCEAN"
+    },
+    "rubric_reuse": {
+      "source_competition": "eoes",
+      "target_competition": "eoes",
+      "target_year": 2017,
+      "source_rubric_paths": [
+        "data/rubrics/eoes_official_scoring_protocol_v1.json"
+      ],
+      "source_editions": [
+        2022,
+        2023
+      ],
+      "official_year_equivalence": false,
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+    }
+  },
+  "rubric_path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+  "deliverable": "lab_answer_sheet_and_report"
 }

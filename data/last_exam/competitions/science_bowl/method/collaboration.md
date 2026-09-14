@@ -1,24 +1,116 @@
-# Method — `science_bowl`
+# Team method
 
-How this benchmark's agents are asked to work. Projected from `data/rules/science_bowl/collaboration.json`.
-
-## Agent constraints
-
-- Apply this competition's own roster, timing, tool, collaboration, submission, and scoring rules; do not import rules from another contest.
-- Only bonus questions permit team consultation in the official event.
-- Banned during the contest: internet access, calculators and electronic references. Work only from the materials provided with the problem.
-- Treat private reasoning and notes as unknown to teammates until you communicate the decision-relevant content.
-- Do not access hidden solutions, answer keys, evaluator internals, or unauthorized outside problem-solving help.
-- Follow phase-specific buzzer, recognition, speaker, and conferral rules; do not communicate an answer during a phase in which teammate consultation is forbidden.
-- Do not claim an interrupt, opponent response, moderator ruling, or bonus opportunity unless the current task exposes that state.
-- Do not confer verbally on tossups; for a bonus, consult only after the bonus is awarded and route the final answer through the captain when the official match state is modeled.
-- Only designated submitters may make the shared submission: Agent_1.
-- Use only the official mechanisms that the current task actually exposes; do not claim physical, oral, live-opponent, judge, or environment actions that were not observed.
-
-## Information / deliberation / communication
+## Collaboration configuration
 
 ```json
 {
+  "agent_roles": [
+    {
+      "name": "Agent_1",
+      "title": "captain",
+      "may_submit": true,
+      "duties": [
+        "Deliver the official team answer.",
+        "On bonuses, synthesize the team's consensus."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_2",
+      "title": "physical science specialist",
+      "may_submit": false,
+      "duties": [
+        "Lead physics and chemistry clues."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_3",
+      "title": "life and earth science specialist",
+      "may_submit": false,
+      "duties": [
+        "Lead biology and earth/space clues."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_4",
+      "title": "math and energy specialist",
+      "may_submit": false,
+      "duties": [
+        "Lead mathematics and energy/general science clues.",
+        "Challenge unsupported guesses."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    }
+  ],
+  "agent_constraints": [
+    "Apply this competition's own roster, timing, tool, collaboration, submission, and scoring rules; do not import rules from another contest.",
+    "Only bonus questions permit team consultation in the official event.",
+    "Banned during the contest: internet access, calculators and electronic references. Work only from the materials provided with the problem.",
+    "Treat private reasoning and notes as unknown to teammates until you communicate the decision-relevant content.",
+    "Do not access hidden solutions, answer keys, evaluator internals, or unauthorized outside problem-solving help.",
+    "Follow phase-specific buzzer, recognition, speaker, and conferral rules; do not communicate an answer during a phase in which teammate consultation is forbidden.",
+    "Do not claim an interrupt, opponent response, moderator ruling, or bonus opportunity unless the current task exposes that state.",
+    "Do not confer verbally on tossups; for a bonus, consult only after the bonus is awarded and route the final answer through the captain when the official match state is modeled.",
+    "Only designated submitters may make the shared submission: Agent_1.",
+    "Use only the official mechanisms that the current task actually exposes; do not claim physical, oral, live-opponent, judge, or environment actions that were not observed."
+  ],
+  "rule_sections": {
+    "competition_format": [
+      "Competition model: The task represents a quiz-bowl question without a complete live buzzer match.",
+      "The source-recorded active team has 4 members.",
+      "Source-recorded competition rule: The fifth student, coach, and spectators may not communicate with the four active contestants during a match."
+    ],
+    "timeline": [
+      "Source-recorded timing: Official toss-up/bonus timing windows; this benchmark is question-level.",
+      "Source-recorded competition rule: A team has four or five student members, with only four playing at one time.",
+      "Source-recorded competition rule: Only the contestant recognized after buzzing may answer a tossup, and the first response is the only response counted.",
+      "Source-recorded competition rule: Challenges must be made by an active contestant within the official challenge window before the next question begins."
+    ],
+    "resource_policy": [
+      "Source-recorded resource policy: Banned during the contest: internet access, calculators and electronic references. Work only from the materials provided with the problem."
+    ],
+    "collaboration_protocol": [
+      "Source-recorded collaboration rule: Only bonus questions permit team consultation in the official event.",
+      "Source-recorded competition rule: A team has four or five student members, with only four playing at one time.",
+      "Source-recorded competition rule: On tossups, quiet non-verbal communication is allowed, but verbal communication disqualifies the team from that tossup.",
+      "Source-recorded competition rule: A correct tossup is worth four points and earns that team a bonus question worth ten points.",
+      "Source-recorded competition rule: The team may consult verbally on a bonus, and the captain gives the final bonus answer unless another member is explicitly designated under the rules.",
+      "Source-recorded competition rule: An incorrect interrupt adds four points to the opposing team's score and may leave the opposing team eligible to hear the full tossup."
+    ],
+    "integrity_and_compliance": [
+      "Benchmark safety rule: do not use hidden solutions, evaluator internals, unauthorized outside assistance, or resources forbidden by this competition."
+    ],
+    "deliverable_format": [
+      "Runner answer contract: For multiple choice: the letter and option text. For short answer: the concise official-style answer only.",
+      "Official deliverable: spoken answer.",
+      "Source-recorded competition rule: Only the contestant recognized after buzzing may answer a tossup, and the first response is the only response counted.",
+      "Source-recorded competition rule: The team may consult verbally on a bonus, and the captain gives the final bonus answer unless another member is explicitly designated under the rules."
+    ],
+    "evaluation_criteria": [
+      "Repository evaluation status: Task performance is specified per question in gold mode, but the repository evaluator is unassigned; do not invent a completed score.",
+      "Source-recorded competition rule: A correct tossup is worth four points and earns that team a bonus question worth ten points.",
+      "Source-recorded competition rule: An incorrect interrupt adds four points to the opposing team's score and may leave the opposing team eligible to hear the full tossup."
+    ],
+    "runtime_limitations": [
+      "Runtime limitation: Interrupt timing, blurt penalties, and double-interrupt scoring need an event engine.",
+      "Runtime limitation: Question-level eval omits match strategy.",
+      "Runtime limitation: Question-level benchmark rows omit the opponent, buzzer recognition, interrupt and blurt state, bonus eligibility, match clock, moderator, and challenge process."
+    ]
+  },
   "information_policy": {
     "mode": "shared",
     "shared": [
@@ -39,64 +131,89 @@ How this benchmark's agents are asked to work. Projected from `data/rules/scienc
   },
   "communication": {
     "mode": "unlimited"
+  },
+  "simulation": {
+    "max_turns": 12,
+    "scheduler": "src_collaboration_proxy",
+    "live_opponent_buzzer_moderator_and_clock": "unavailable",
+    "open_table_coach": {
+      "enabled": true,
+      "status": "counterfactual_synthetic_baseline_not_official_contest_rule",
+      "may_submit": false,
+      "allowed_tools": [],
+      "counts_toward_shared_api_and_token_budget": true,
+      "contestant_turn_policy": {
+        "mode": "private_deliberation_then_single_action",
+        "allowed_actions": [
+          "work",
+          "speak",
+          "rest"
+        ],
+        "exactly_one_action": true,
+        "unstructured_response": "rest",
+        "final_submission": "reviewed_answer_sheet",
+        "visibility": {
+          "think": "private",
+          "work": "shared",
+          "speak": "team",
+          "rest": "private"
+        },
+        "max_chars_by_action": {
+          "think": 2400,
+          "work": 2400,
+          "speak": 320,
+          "rest": 80
+        },
+        "memory_entries": {
+          "private_think_per_agent": 3,
+          "shared_work": 18,
+          "group_messages": 12,
+          "public_messages": 24
+        },
+        "private_think_calls_per_turn": 1,
+        "discussion_policy": {
+          "report_after_work": true,
+          "silent_work_turn_requires_discussion": true,
+          "conflicts_require_targeted_speak": true
+        }
+      },
+      "precontest_brief": {
+        "turn": 0,
+        "problem_access": false,
+        "allowed_actions": [
+          "speak",
+          "rest"
+        ],
+        "advice_scope": [
+          "time allocation",
+          "task triage",
+          "communication protocol",
+          "independent verification",
+          "final answer-sheet reconciliation"
+        ]
+      },
+      "opening_discussion": {
+        "enabled": false,
+        "problem_access": false,
+        "allowed_actions": [],
+        "purpose": "Coach exits permanently after the single turn-0 blind brief."
+      },
+      "after_opening_access": false,
+      "min_turns": 10,
+      "protocol_version": "otc_turn0_review_v1",
+      "review_required": true,
+      "action_surface": "registry_bundles_v1",
+      "action_bundles": [
+        "common",
+        "desk",
+        "memory",
+        "independent_review",
+        "competition_tools",
+        "deliberation_if_structured"
+      ]
+    },
+    "turn_budget_basis": "official duration 60 min / 5 min per turn = 12 turns (hard cap 90); src/contest_budget.py is the source of truth"
   }
 }
 ```
 
-## Simulation
-
-```json
-{
-  "max_turns": 24,
-  "scheduler": "src_collaboration_proxy",
-  "live_opponent_buzzer_moderator_and_clock": "unavailable"
-}
-```
-
-## Rule sections
-
-```json
-{
-  "competition_format": [
-    "Competition model: The task represents a quiz-bowl question without a complete live buzzer match.",
-    "The source-recorded active team has 4 members.",
-    "Source-recorded competition rule: The fifth student, coach, and spectators may not communicate with the four active contestants during a match."
-  ],
-  "timeline": [
-    "Source-recorded timing: Official toss-up/bonus timing windows; this benchmark is question-level.",
-    "Source-recorded competition rule: A team has four or five student members, with only four playing at one time.",
-    "Source-recorded competition rule: Only the contestant recognized after buzzing may answer a tossup, and the first response is the only response counted.",
-    "Source-recorded competition rule: Challenges must be made by an active contestant within the official challenge window before the next question begins."
-  ],
-  "resource_policy": [
-    "Source-recorded resource policy: Banned during the contest: internet access, calculators and electronic references. Work only from the materials provided with the problem."
-  ],
-  "collaboration_protocol": [
-    "Source-recorded collaboration rule: Only bonus questions permit team consultation in the official event.",
-    "Source-recorded competition rule: A team has four or five student members, with only four playing at one time.",
-    "Source-recorded competition rule: On tossups, quiet non-verbal communication is allowed, but verbal communication disqualifies the team from that tossup.",
-    "Source-recorded competition rule: A correct tossup is worth four points and earns that team a bonus question worth ten points.",
-    "Source-recorded competition rule: The team may consult verbally on a bonus, and the captain gives the final bonus answer unless another member is explicitly designated under the rules.",
-    "Source-recorded competition rule: An incorrect interrupt adds four points to the opposing team's score and may leave the opposing team eligible to hear the full tossup."
-  ],
-  "integrity_and_compliance": [
-    "Benchmark safety rule: do not use hidden solutions, evaluator internals, unauthorized outside assistance, or resources forbidden by this competition."
-  ],
-  "deliverable_format": [
-    "Runner answer contract: For multiple choice: the letter and option text. For short answer: the concise official-style answer only.",
-    "Official deliverable: spoken answer.",
-    "Source-recorded competition rule: Only the contestant recognized after buzzing may answer a tossup, and the first response is the only response counted.",
-    "Source-recorded competition rule: The team may consult verbally on a bonus, and the captain gives the final bonus answer unless another member is explicitly designated under the rules."
-  ],
-  "evaluation_criteria": [
-    "Repository evaluation status: Task performance is specified per question in gold mode, but the repository evaluator is deferred_benchmark_metadata_missing; do not invent a completed score.",
-    "Source-recorded competition rule: A correct tossup is worth four points and earns that team a bonus question worth ten points.",
-    "Source-recorded competition rule: An incorrect interrupt adds four points to the opposing team's score and may leave the opposing team eligible to hear the full tossup."
-  ],
-  "runtime_limitations": [
-    "Runtime limitation: Interrupt timing, blurt penalties, and double-interrupt scoring need an event engine.",
-    "Runtime limitation: Question-level eval omits match strategy.",
-    "Runtime limitation: Question-level benchmark rows omit the opponent, buzzer recognition, interrupt and blurt state, bonus eligibility, match clock, moderator, and challenge process."
-  ]
-}
-```

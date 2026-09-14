@@ -1,3 +1,5 @@
-# 2016/puzzle/trail_goods
+# Trail Goods
 
-Trail Goods &mdash; Ysera &mdash; MIT Mystery Hunt 2016 Toggle navigation Home Navigation All Puzzles FAQ Call in Answer --> Solution Trail Goods
+Open `puzzle.html` with the explicitly linked full-resolution images. Text previews do not replace diagrams, subscripts, colors or blank cells.
+
+Archive limitation: Only original static standalone content and explicitly linked images are restored. Archive solution navigation, shared sheep/status requests and scripts are removed; round-return navigation and the artwork-credit hyperlink are inert, with attribution wording retained. Original geometry, blank cells, symbols, letter case, repeated clues and historical wording remain unchanged. Four broken Bootstrap font paths are corrected to the existing same-year publisher files; original source bytes and the four 404 responses are retained privately. Source-named Google font binaries are current snapshots with their OFL texts, not certified historical font versions. Local system font fallbacks are not bundled. Gold, total points, splits, license and grading/runtime readiness are unchanged and not recertified. The stylesheet also points its unused archive-logo rule at a missing path; the original logo survives in the same-year spoilr/images directory and is preserved locally, without restoring archive navigation.

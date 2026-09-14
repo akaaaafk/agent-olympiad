@@ -1,5 +1,3 @@
-# Clock Breaking
-
 Hide 
  Clock Breaking 
 

@@ -1,5 +1,3 @@
-# wsc_writing_gq_007
-
 Whether you see Edward Hopper’s Nighthawks (1942) as a homage to solitude or as a paean for a lost era of root beer floats, the odds are good that you see it often. The recent Netflix series The Sandman set an entire episode in a Nighthawks-style diner. Consider the selections below, then discuss with your team: what is the modern equivalent of the experience and feeling conveyed in the painting? 
 
  Are You Using that Chair | Banksy 

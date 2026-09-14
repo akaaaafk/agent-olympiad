@@ -1,5 +1,3 @@
-# EOES2023_Task1_Task_Sh_Final
-
 Song and Dance through the eyes of 
 science 
  

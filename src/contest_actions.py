@@ -6,9 +6,13 @@ from dataclasses import asdict, dataclass
 from typing import Any, Callable, Literal
 
 import otc_runtime
-from answer_identity import conflicting_answer_task
+from answer_identity import conflicting_answer_task, declared_answer_tasks
+from evaluation.final_answer import extract_final_answer
 from action_modules.memory import share_note as _share_note, recall_notes
 from action_modules.task_specific import is_answer_sheet_contest as _is_answer_sheet_contest
+from action_modules.competition_tools import ACTION_NAMES as PREPARATION_ACTIONS
+from action_modules.competition_flow import ACTION_NAMES as FLOW_ACTIONS
+from competition_tool_runtime import execute_preparation_tool, public_context
 from computer_capacity import (
     COMPUTER_ACTIONS, COMPUTER_USE_EVENT, require_computer_slot,
     session_computer_state,
@@ -232,6 +236,14 @@ def _apply_card_rules(
             limit = min(limit, int(budget.max_message_chars))
         clipped, cut = clip_text(text, limit)
         if cut:
+            if action == "work" and target is not None and target.kind != "programming":
+                # A candidate is an atomic deliverable. Tail clipping can drop
+                # its final line or expose an obsolete intermediate answer.
+                raise ValueError(
+                    f"work exceeds the {limit}-character limit; shorten the reasoning "
+                    "and retain the complete Final answer: <value> line. "
+                    "The existing answer was not changed."
+                )
             memory.append(
                 task_id=session.active_task.task_id if session.active_task else None,
                 question_id=None,
@@ -300,8 +312,35 @@ def _apply_action(
         raise ValueError(f"module {ACTION_REGISTRY[action].module!r} is disabled")
     if not config.allows_action(ACTION_REGISTRY[action]):
         raise ValueError(f"action {action!r} is unavailable in this baseline")
+    from contest_observation import require_current_action
+    require_current_action(action, arguments, session, memory, config)
+    flow = session.competition_flow
+    if flow is not None:
+        flow.require_action(action, arguments, agent)
+    if action in FLOW_ACTIONS:
+        from tool_registry import competition_permissions, validate_action_payload
+        if flow is None or action not in (competition_permissions(manifest.competition_id, rule_card=config.rule_card) or set()):
+            raise ValueError("competition flow action is not enabled/permitted")
+        errors = validate_action_payload(action, arguments)
+        if errors:
+            raise ValueError("; ".join(errors))
+        previous = session.active_task.task_id if session.active_task else None
+        result = flow.apply(action, arguments, agent)
+        memory.append(task_id=previous, question_id=None, actor=agent,
+                      visibility="public", kind=action, payload=arguments,
+                      turn=session.budget.turns_used)
+        memory.append(task_id=previous, question_id=None, actor="Contest_Control",
+                      visibility="public", kind=f"{action}_result", payload=result,
+                      turn=session.budget.turns_used)
+        return result["phase"] == "complete", 0
     task_by_id = {task.task_id: task for task in manifest.tasks}
     active = session.active_task
+    if action in PREPARATION_ACTIONS:
+        from tool_registry import competition_permissions
+        if action not in (competition_permissions(manifest.competition_id, rule_card=config.rule_card) or set()):
+            raise ValueError("preparation tool is not permitted by this competition")
+        if active is None or active.locked:
+            raise ValueError("select an unlocked task before using a preparation tool")
     if (
         config.features.leader_submits
         and agent != config.leader
@@ -327,6 +366,28 @@ def _apply_action(
                     f"answer task mismatch: content declares {declared!r}, "
                     f"but work targets {target_id!r}; correct the problem_id or content"
                 )
+            if ((active is None or active.task_id != target_id)
+                    and not declared_answer_tasks(str(arguments.get('content', '')))):
+                raise ValueError(
+                    f"cross-task work needs explicit task binding: current task is "
+                    f"{active.task_id if active else None!r}, target is {target_id!r}. "
+                    "Start content with 'Problem <target id>:' (or include a matching "
+                    "problem_id in JSON content), or select_problem first and read "
+                    "that task before writing. No draft or task selection was changed."
+                )
+            if _is_answer_sheet_contest(manifest):
+                versions = session.task(target_id).versions
+                if versions:
+                    previous = extract_final_answer(versions[-1].content, part_id=target_id)
+                    incoming = extract_final_answer(str(arguments.get("content", "")), part_id=target_id)
+                    if (previous.method not in {"unstructured", "missing"}
+                            and previous.final_answer and incoming.method in {"unstructured", "missing"}):
+                        raise ValueError(
+                            "work would replace a formatted answer with an unstructured note. "
+                            "Include a separate Final answer: <value> line for a revision; "
+                            "use Final answer: withdrawn to retract the candidate, or speak "
+                            "for a progress report. The existing answer was not changed."
+                        )
     if config.otc_policy is not None:
         arguments = _apply_card_rules(
             action=action,
@@ -410,6 +471,7 @@ def _apply_action(
             if active
             else None
         )
+    session.current_turn_only = config.current_turn_only
     context = _ActionContext(
         action=action,
         arguments=arguments,
@@ -502,11 +564,20 @@ def _session_noop(_: _ActionContext) -> tuple[bool, int]:
 
 
 def _session_share_note(ctx: _ActionContext) -> tuple[bool, int]:
+    # The request contains an id, so _apply_card_rules cannot clip its message.
+    # Apply the same public-message caps to the resolved note at publication.
+    policy = ctx.config.otc_policy
+    limit = policy.char_limit("share_note") if policy is not None else None
+    if policy is not None and "share_note" in policy.counted_message_actions():
+        message_limit = int(policy.communication.get("max_message_chars") or 0)
+        if message_limit:
+            limit = min(limit, message_limit) if limit else message_limit
     return _share_note(
         memory=ctx.memory,
         session=ctx.session,
         agent=ctx.agent,
         note_id=str(ctx.arguments["note_id"]),
+        max_chars=limit,
     )
 
 
@@ -549,6 +620,8 @@ def _session_recall(ctx: _ActionContext) -> tuple[bool, int]:
 
 
 def _session_inspect_problem(ctx: _ActionContext) -> tuple[bool, int]:
+    from contest_observation import observe
+    session, memory = observe(ctx.session, ctx.memory, ctx.config)
     if ctx.event_task_id is None:
         raise RuntimeError("pass problem_id or select a problem before inspect_problem")
     ctx.memory.append(
@@ -560,8 +633,8 @@ def _session_inspect_problem(ctx: _ActionContext) -> tuple[bool, int]:
         kind="inspect_problem_result",
         payload=_inspect_problem_payload(
             ctx.task_by_id[ctx.event_task_id],
-            ctx.session.task(ctx.event_task_id),
-            ctx.memory,
+            session.task(ctx.event_task_id),
+            memory,
             focus=str(ctx.arguments.get("focus") or ""),
         ),
         turn=ctx.turn,
@@ -572,6 +645,7 @@ def _session_inspect_problem(ctx: _ActionContext) -> tuple[bool, int]:
 def _session_triage_problem(ctx: _ActionContext) -> tuple[bool, int]:
     assert ctx.event_task_id is not None
     priority = str(ctx.arguments["priority"])
+    previous_visible = ctx.session.task(ctx.event_task_id).triaged_turn == ctx.turn
     task, previous = ctx.session.set_triage(
         ctx.event_task_id,
         priority,  # type: ignore[arg-type]
@@ -579,6 +653,8 @@ def _session_triage_problem(ctx: _ActionContext) -> tuple[bool, int]:
         actor=ctx.agent,
         turn=ctx.turn,
     )
+    if ctx.config.current_turn_only and not previous_visible:
+        previous = "normal"
     ctx.memory.append(
         task_id=ctx.event_task_id,
         question_id=None,
@@ -615,6 +691,8 @@ def _session_speak(ctx: _ActionContext) -> tuple[bool, int]:
         and active.versions
         and active.versions[-1].author == ctx.agent
         and active.versions[-1].evidence_refs
+        and (not ctx.config.current_turn_only
+             or ctx.session.version_created_this_turn(active.versions[-1].version_hash))
     ):
         ctx.memory.append(
             task_id=active.task_id,
@@ -646,20 +724,25 @@ def _session_work(ctx: _ActionContext) -> tuple[bool, int]:
         )
     content = str(ctx.arguments["content"])
     duplicate = active.find_duplicate_answer(content)
+    if (duplicate is not None and ctx.config.current_turn_only
+            and not ctx.session.version_created_this_turn(duplicate.version_hash)):
+        duplicate = None
     if duplicate is not None:
+        from contest_observation import observe
+        visible_session, visible_memory = observe(ctx.session, ctx.memory, ctx.config)
         # Same draft already on the sheet: no new version, tell the author
         # where it is and what is still blank instead of failing silently.
         recorded_turn = next(
             (
                 event.turn
-                for event in ctx.memory.view(ctx.agent, task_id=active.task_id)
+                for event in visible_memory.view(ctx.agent, task_id=active.task_id)
                 if event.kind == "work"
                 and isinstance(event.payload, dict)
                 and event.payload.get("content") == content
             ),
             None,
         )
-        blank = [task.task_id for task in ctx.session.tasks if not task.versions]
+        blank = [task.task_id for task in visible_session.visible_tasks if not task.versions]
         ctx.memory.append(
             task_id=active.task_id,
             question_id=None,
@@ -749,7 +832,8 @@ def _session_review_answer(ctx: _ActionContext) -> tuple[bool, int]:
 
 
 def _session_check_budget(ctx: _ActionContext) -> tuple[bool, int]:
-    session = ctx.session
+    from contest_observation import observe
+    session, _ = observe(ctx.session, ctx.memory, ctx.config)
     ctx.memory.append(
         task_id=ctx.event_task_id,
         question_id=None,
@@ -960,7 +1044,9 @@ def _session_task_tool(ctx: _ActionContext) -> tuple[bool, int]:
     if (action == "execute_code" and active.kind == "programming"
             and config.review_required):
         execution_cache_key = execution_key(task_by_id[active.task_id], arguments, ctx.task_action_executor)
-        reused = failed_execution(memory.archival_snapshot()["events"], active.task_id, execution_cache_key)
+        from contest_observation import observe
+        _, cache_memory = observe(session, memory, config)
+        reused = failed_execution(cache_memory.archival_snapshot()["events"], active.task_id, execution_cache_key)
         if reused is not None:
             memory.append(task_id=active.task_id, question_id=None, actor="Tool",
                           visibility="private", recipients=(agent,), kind="execute_code_result",
@@ -975,7 +1061,15 @@ def _session_task_tool(ctx: _ActionContext) -> tuple[bool, int]:
             payload={"action": action, "capacity": config.computer_capacity},
             turn=session.budget.turns_used,
         )
-    result = ctx.task_action_executor(task_by_id[active.task_id], action, arguments)
+    if action in PREPARATION_ACTIONS:
+        result = execute_preparation_tool(action, arguments, public_context(
+            ctx.manifest.competition_id, active.task_id,
+            expected_ids=[task.task_id for task in ctx.session.visible_tasks],
+            metadata=ctx.manifest.metadata,
+            task_metadata=task_by_id[active.task_id].benchmark,
+        ))
+    else:
+        result = ctx.task_action_executor(task_by_id[active.task_id], action, arguments)
     if action == "submit_code" and config.otc_policy is not None and config.otc_policy.run_judging_latency_turns:
         from contest_judging import queue_verdict
         queue_verdict(session, memory, active, result,
@@ -996,6 +1090,9 @@ def _session_task_tool(ctx: _ActionContext) -> tuple[bool, int]:
         if action == "execute_code" and active.kind == "programming":
             code = str(arguments["code"])
             latest = active.versions[-1] if active.versions else None
+            if (latest is not None and config.current_turn_only
+                    and not session.version_created_this_turn(latest.version_hash)):
+                latest = None
             # A local run only counts as evidence when the official samples pass
             # (or the task ships no samples and the run itself succeeded).
             sample_verdict = result.get("sample_verdict")

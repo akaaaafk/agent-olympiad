@@ -1,5 +1,3 @@
-# IChTo-2019-Problem-Set
-
 International Chemistry Tournament 2019 
 Problem Set
 Problem 1. Chemical Vacuum 

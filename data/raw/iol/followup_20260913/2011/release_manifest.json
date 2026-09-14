@@ -1,0 +1,82 @@
+{
+  "visibility": "maintainer_only",
+  "original_source": "data/raw/iol/iol-2011-team-prob.en-gb.pdf",
+  "original_sha256": "d5f5363e1c29e4be311d3fe34e6b808ab5f9fa5c70888d873a90466c77fb51f9",
+  "outputs": [
+    {
+      "path": "data/raw/iol/followup_20260913/2011/input/iol_2011_initial.pdf",
+      "sha256": "2f3375cabe5fedec0275092a05a0b48082b780c4110d8ed15e6ea5335dd28536",
+      "original_pages": [
+        1,
+        2
+      ],
+      "release_minute": 0,
+      "current_visibility": "agent_visible",
+      "reason": "Timed runtime release is not implemented; withheld material must not enter initial input."
+    }
+  ],
+  "withheld_page_releases": [
+    {
+      "path": "data/raw/iol/iol-2011-team-prob.en-gb.pdf",
+      "sha256": "d5f5363e1c29e4be311d3fe34e6b808ab5f9fa5c70888d873a90466c77fb51f9",
+      "original_pages": [
+        3
+      ],
+      "release_minute": 30,
+      "current_visibility": "judge_only",
+      "extraction_required_at_runtime": true
+    },
+    {
+      "path": "data/raw/iol/iol-2011-team-prob.en-gb.pdf",
+      "sha256": "d5f5363e1c29e4be311d3fe34e6b808ab5f9fa5c70888d873a90466c77fb51f9",
+      "original_pages": [
+        4
+      ],
+      "release_minute": 60,
+      "current_visibility": "judge_only",
+      "extraction_required_at_runtime": true
+    },
+    {
+      "path": "data/raw/iol/iol-2011-team-prob.en-gb.pdf",
+      "sha256": "d5f5363e1c29e4be311d3fe34e6b808ab5f9fa5c70888d873a90466c77fb51f9",
+      "original_pages": [
+        5
+      ],
+      "release_minute": 90,
+      "current_visibility": "judge_only",
+      "extraction_required_at_runtime": true
+    },
+    {
+      "path": "data/raw/iol/iol-2011-team-prob.en-gb.pdf",
+      "sha256": "d5f5363e1c29e4be311d3fe34e6b808ab5f9fa5c70888d873a90466c77fb51f9",
+      "original_pages": [
+        6
+      ],
+      "release_minute": 120,
+      "current_visibility": "judge_only",
+      "extraction_required_at_runtime": true
+    },
+    {
+      "path": "data/raw/iol/iol-2011-team-prob.en-gb.pdf",
+      "sha256": "d5f5363e1c29e4be311d3fe34e6b808ab5f9fa5c70888d873a90466c77fb51f9",
+      "original_pages": [
+        7
+      ],
+      "release_minute": 150,
+      "current_visibility": "judge_only",
+      "extraction_required_at_runtime": true
+    }
+  ],
+  "snapshots_minutes": [
+    30,
+    60,
+    90,
+    120,
+    150,
+    180
+  ],
+  "final_solution_release_minute": 180,
+  "runtime_release_implemented": false,
+  "scoring_time_dependence_not_recovered": true,
+  "source_pages_content_unmodified": true
+}

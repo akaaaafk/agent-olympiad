@@ -1,0 +1,101 @@
+#levers {
+  width: 1330px;
+  border-collapse: collapse;
+  margin-bottom: 5px;
+  table-layout: fixed;
+}
+
+.even-label, .odd-label {
+  width: 80px;
+  height: 120px;
+  text-align: center;
+}
+
+#levers > tbody > tr > td {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.odd-levers {
+  border-top: 1px solid black;
+}
+
+.even-levers {
+  border-bottom: 1px solid black;
+}
+
+.odd-label.N {
+  background-image: url('ul.png');
+}
+
+.odd-label.R {
+  background-image: url('ur.png');
+}
+
+.even-label.L {
+  background-image: url('ll.png');
+}
+
+.even-label.N {
+  background-image: url('lm.png');
+}
+
+.even-label.R {
+  background-image: url('lr.png');
+}
+
+.even-label, .odd-label {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.missing {
+  visibility: hidden;
+}
+
+.lever-row {
+  width: 100%;
+}
+
+.odd .L-lever {
+  display: none;
+}
+
+.L-lever, .odd .N-lever {
+  text-align: left;
+}
+
+.even .N-lever {
+  text-align: center;
+}
+
+.R-lever {
+  text-align: right;
+}
+
+.even .lever {
+  width: 33%;
+}
+
+.leverButton {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.light, .L-light, .R-light {
+  text-align: center;
+  background-color: black;
+  color: lightgreen;
+}
+
+.L-light {
+  padding-top: 30px;
+}
+
+.off span {
+  visibility: hidden;
+}
+
+.R-lights {
+  border-bottom: 1px solid black;
+}

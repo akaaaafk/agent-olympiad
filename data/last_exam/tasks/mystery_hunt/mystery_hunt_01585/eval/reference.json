@@ -3,8 +3,18 @@
   "gold_pointer": "data/benchmarks/mystery_hunt/benchmark.json#mystery_hunt_01585.gold_label",
   "has_gold_answer": true,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+    "short_answer_source": "data/rubrics/mystery_hunt_short_answers.json",
+    "deliverable": "puzzle_answer",
+    "limitations": "Original PDF pages, images and explicitly linked MP3/OGG files retain their bytes and ordering. Sudoku number/star rules, unequal-length blank boxes, arithmetic signs and the leading-zero extraction string are preserved. The Voices page retains its 30 direct MP3 links; its optional script-generated hover/OGG player is not reconstructed. Argh retains all 31 native players and both explicit formats, with preload disabled. MP3 frame boundaries and Ogg framing/page CRC are checked, not decoded, listened to, transcribed or certified semantically equivalent. Original CSS is localized; source-named Google Fonts use current publisher binaries, not certified historical revisions. No other answers, scores, cross-task state or grading/runtime readiness are changed or recertified. Prior limitations: The answer key exists, but the contestant puzzle page has not been separated from embedded answers and media dependencies.",
+    "scorecard_path": "data/rubrics/task_scorecards/mystery_hunt.json",
+    "scorecard_key": "mystery_hunt_01585"
+  },
+  "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+  "deliverable": "puzzle_answer"
 }

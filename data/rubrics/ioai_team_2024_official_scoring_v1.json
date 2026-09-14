@@ -7,25 +7,138 @@
   "total_points": 80,
   "task_weights": {
     "image_cover": 40,
-    "music_video": 40
+    "music_video": 60
   },
   "criteria": [
-    {"id": "image_visual_impact", "task": "image_cover", "name": "Visual impact and clarity", "max_score": 5},
-    {"id": "image_thematic_relevance", "task": "image_cover", "name": "Thematic relevance", "max_score": 5},
-    {"id": "image_composition", "task": "image_cover", "name": "Composition and balance", "max_score": 5},
-    {"id": "image_objects", "task": "image_cover", "name": "Predefined object inclusion", "max_score": 7, "scoring": "1 point for each of the first five included objects; 0.25 for each additional object, capped at 7."},
-    {"id": "image_palette", "task": "image_cover", "name": "Color palette adherence", "max_score": 5},
-    {"id": "image_originality", "task": "image_cover", "name": "Originality and creativity", "max_score": 5},
-    {"id": "image_ai_tools", "task": "image_cover", "name": "Effective use of AI tools", "max_score": 5},
-    {"id": "image_delivery", "task": "image_cover", "name": "Delivery", "max_score": 3, "scoring": "Image is at least 1024×1024 and appropriately sized and placed in the provided frame."},
-    {"id": "video_artist_likeness", "task": "music_video", "name": "Artist likeness", "max_score": 5},
-    {"id": "video_objects", "task": "music_video", "name": "Predefined object inclusion", "max_score": 7, "scoring": "1 point for each of the first five included objects; 0.25 for each additional object, capped at 7."},
-    {"id": "video_style", "task": "music_video", "name": "Homogeneous art style", "max_score": 5},
-    {"id": "video_sync", "task": "music_video", "name": "Music synchronization", "max_score": 5},
-    {"id": "video_accuracy", "task": "music_video", "name": "Generation accuracy", "max_score": 5},
-    {"id": "video_prompting", "task": "music_video", "name": "Prompting strategies", "max_score": 5},
-    {"id": "video_duration", "task": "music_video", "name": "Video duration", "max_score": 3, "levels": [{"condition": "shorter than 37 seconds", "score": 1}, {"condition": "at least 37 but shorter than 47 seconds", "score": 2}, {"condition": "full 47 seconds", "score": 3}]},
-    {"id": "video_neuralframes", "task": "music_video", "name": "Effective use of NeuralFrames", "max_score": 5}
+    {
+      "id": "image_visual_impact",
+      "task": "image_cover",
+      "name": "Visual impact and clarity",
+      "max_score": 5,
+      "description": "Visual impact and clarity. Apply the criterion-specific anchors in the original task statement."
+    },
+    {
+      "id": "image_thematic_relevance",
+      "task": "image_cover",
+      "name": "Thematic relevance",
+      "max_score": 5,
+      "description": "Thematic relevance. Apply the criterion-specific anchors in the original task statement."
+    },
+    {
+      "id": "image_composition",
+      "task": "image_cover",
+      "name": "Composition and balance",
+      "max_score": 5,
+      "description": "Composition and balance. Apply the criterion-specific anchors in the original task statement."
+    },
+    {
+      "id": "image_objects",
+      "task": "image_cover",
+      "name": "Predefined object inclusion",
+      "max_score": 7,
+      "scoring": "1 point for each of the first five included objects; 0.25 for each additional object, capped at 7.",
+      "description": "Predefined object inclusion: {\"scoring\": \"1 point for each of the first five included objects; 0.25 for each additional object, capped at 7.\"}"
+    },
+    {
+      "id": "image_palette",
+      "task": "image_cover",
+      "name": "Color palette adherence",
+      "max_score": 5,
+      "description": "Color palette adherence. Apply the criterion-specific anchors in the original task statement."
+    },
+    {
+      "id": "image_originality",
+      "task": "image_cover",
+      "name": "Originality and creativity",
+      "max_score": 5,
+      "description": "Originality and creativity. Apply the criterion-specific anchors in the original task statement."
+    },
+    {
+      "id": "image_ai_tools",
+      "task": "image_cover",
+      "name": "Effective use of AI tools",
+      "max_score": 5,
+      "description": "Effective use of AI tools. Apply the criterion-specific anchors in the original task statement."
+    },
+    {
+      "id": "image_delivery",
+      "task": "image_cover",
+      "name": "Delivery",
+      "max_score": 3,
+      "scoring": "Image is at least 1024×1024 and appropriately sized and placed in the provided frame.",
+      "description": "Delivery: {\"scoring\": \"Image is at least 1024×1024 and appropriately sized and placed in the provided frame.\"}"
+    },
+    {
+      "id": "video_artist_likeness",
+      "task": "music_video",
+      "name": "Artist likeness",
+      "max_score": 5,
+      "description": "Artist likeness. Apply the criterion-specific anchors in the original task statement."
+    },
+    {
+      "id": "video_objects",
+      "task": "music_video",
+      "name": "Predefined object inclusion",
+      "max_score": 7,
+      "scoring": "1 point for each of the first five included objects; 0.25 for each additional object, capped at 7.",
+      "description": "Predefined object inclusion: {\"scoring\": \"1 point for each of the first five included objects; 0.25 for each additional object, capped at 7.\"}"
+    },
+    {
+      "id": "video_style",
+      "task": "music_video",
+      "name": "Homogeneous art style",
+      "max_score": 5,
+      "description": "Homogeneous art style. Apply the criterion-specific anchors in the original task statement."
+    },
+    {
+      "id": "video_sync",
+      "task": "music_video",
+      "name": "Music synchronization",
+      "max_score": 5,
+      "description": "Music synchronization. Apply the criterion-specific anchors in the original task statement."
+    },
+    {
+      "id": "video_accuracy",
+      "task": "music_video",
+      "name": "Generation accuracy",
+      "max_score": 5,
+      "description": "Generation accuracy. Apply the criterion-specific anchors in the original task statement."
+    },
+    {
+      "id": "video_prompting",
+      "task": "music_video",
+      "name": "Prompting strategies",
+      "max_score": 5,
+      "description": "Prompting strategies. Apply the criterion-specific anchors in the original task statement."
+    },
+    {
+      "id": "video_duration",
+      "task": "music_video",
+      "name": "Video duration",
+      "max_score": 3,
+      "levels": [
+        {
+          "condition": "shorter than 37 seconds",
+          "score": 1
+        },
+        {
+          "condition": "at least 37 but shorter than 47 seconds",
+          "score": 2
+        },
+        {
+          "condition": "full 47 seconds",
+          "score": 3
+        }
+      ],
+      "description": "Video duration: {\"levels\": [{\"condition\": \"shorter than 37 seconds\", \"score\": 1}, {\"condition\": \"at least 37 but shorter than 47 seconds\", \"score\": 2}, {\"condition\": \"full 47 seconds\", \"score\": 3}]}"
+    },
+    {
+      "id": "video_neuralframes",
+      "task": "music_video",
+      "name": "Effective use of NeuralFrames",
+      "max_score": 5,
+      "description": "Effective use of NeuralFrames. Apply the criterion-specific anchors in the original task statement."
+    }
   ],
   "ordinal_criterion_scale": {
     "applies_to": "Criteria marked 1–5 in the task statement",
@@ -46,24 +159,50 @@
       "source_type": "official_task_statement_via_local_archive",
       "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/IOAI_ Practical round assignment.pdf",
       "mirrored_in": "data/benchmarks/ioai_team/benchmark.json",
-      "supports": ["all criteria", "criterion maxima", "80-point total", "40:60 image-to-video weight statement and 40-point task tables"]
+      "supports": [
+        "criterion maxima",
+        "raw task maxima of 40 each",
+        "final-ranking weight ratio of 40:60"
+      ],
+      "source_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "source_type": "official_organizer",
       "title": "IOAI 2024 Tasks",
       "url": "https://ioai-official.org/2024-tasks/",
-      "supports": ["two practical tasks", "official downloadable assignment", "four-hour round"]
+      "supports": [
+        "two practical tasks",
+        "official downloadable assignment",
+        "four-hour round"
+      ]
     },
     {
       "source_type": "official_organizer",
       "title": "IOAI 2024 Results & Awards",
       "url": "https://ioai-official.org/bulgaria-2024/results/",
-      "supports": ["published jury score", "published peer-voting score", "final rank"]
+      "supports": [
+        "published jury score",
+        "published peer-voting score",
+        "final rank"
+      ]
     }
   ],
   "limitations": [
-    "The task text says the image/video weighting is 40:60 but presents two official 40-point rubrics and the local benchmark records total_points as 80. This file preserves the explicit rubric maxima and flags the inconsistency rather than inventing a reconciliation.",
+    "Each raw task rubric has a 40-point maximum; the final-ranking image/video weight ratio is 40:60. The retained 80-point total is an unweighted sum of raw criterion maxima, not an official final-ranking scale. The complete scaling and jury/peer aggregation formula remains unresolved.",
     "The official final-ranking formula involving jury and peer voting is not stated in the cited public results page.",
     "Do not reuse these creative-media criteria for the 2025 robotics Team Challenge."
-  ]
+  ],
+  "task_weight_unit": "relative_final_ranking_weight",
+  "raw_task_maxima": {
+    "image_cover": 40,
+    "music_video": 40
+  },
+  "total_points_basis": "sum_of_raw_criterion_maxima_not_final_ranking",
+  "final_ranking_formula": null
 }

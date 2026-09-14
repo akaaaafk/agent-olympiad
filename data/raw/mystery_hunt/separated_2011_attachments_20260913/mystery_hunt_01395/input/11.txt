@@ -1,0 +1,59 @@
+> new game
+> choose master
+> fall
+> shoot hardhat
+> shoot hardhat
+> shoot spinner
+> shoot spinner
+> shoot minecart
+> shoot spinner
+> shoot spinner
+> shoot cannon
+> shoot spinner
+> shoot spinner
+> shoot minecart
+> shoot spinner
+> shoot cannon
+> fall
+> shoot spider
+> shoot spider
+> shoot spider
+> fall
+> shoot spider
+> shoot spider
+> right
+> swing
+> swing
+> swing
+> swing
+> right
+> shoot boulder
+> right
+> fall
+> shoot diamond
+> shoot diamond
+> shoot diamond
+> fall
+> shoot cart
+> shoot pittrap
+> shoot cart
+> shoot pittrap
+> swing
+> shoot diamond
+> shoot diamond
+> shoot diamond
+> fall
+> swing
+> fall
+> shoot spider
+> shoot spider
+> shoot spinner
+> shoot spider
+> shoot spinner
+> shoot spider
+> shoot spinner
+> shoot stomper
+> right
+> right
+> shoot master
+> get ?????????????? (6)

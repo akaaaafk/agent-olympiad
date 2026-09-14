@@ -1,5 +1,3 @@
-# Catering
-
 Hide 
  Catering 
 

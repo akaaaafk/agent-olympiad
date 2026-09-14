@@ -1,5 +1,3 @@
-# P1Tasks
-
 April 12, 2011 
  
  
@@ -272,7 +270,7 @@ these genes were closely associated with ethanol to lerance. Eight of them were 
 most being functionally unknown. To establish a bas is for future industrial applications, 
 strains iETS2 and iETS2 were created by integrating  the SPT15 mutant alleles of ETS2 and 
 ETS3 into the chromosomes, which also exhibited enh anced ethanol tolerance and survival 
-upon ethanol shock on a rich medium. Fermentation w ith 20% glucose for 24 h in a 
+upon ethanol shock on a rich medium. Fermentation w ith 20% glucose for 24 h [spacing glyph is unreadable in the original PDF] in a 
 bioreactor revealed that iETS2 and iETS2 grew bette r and produced approximately 25% 
 more ethanol than a control strain.  
 From the above abstract is obvious, that search for  yeast strains tolerant to high 

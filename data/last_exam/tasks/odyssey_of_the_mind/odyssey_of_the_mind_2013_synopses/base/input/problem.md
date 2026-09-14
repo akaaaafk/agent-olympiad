@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2013
-
 # Odyssey of the Mind — 2013 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Tumble-woodDivisions I, II, III & IVTeams will design and build a structure made of only balsa wood and glue that will balance and support as much weight as possible. Before weight placement begins, the team will present a commercial that includes the structure rolling down a ramp. The structure will be scored for how far it rolls and for how much weight it holds. The team will integrate the placement of the weights into the performance.Cost limit: $145 USD.
 5. It’s How You Look at ItDivisions I, II, III & IVThe problem is to create and present an original humorous performance that includes two characters that act naturally — to them — but odd to those around them. One scene will establish the “normal” behavior of one character that, at some point in the performance, finds itself among others who react to the out-of-place behavior. The other character’s behavior will stand out too, but this character will end up in a setting where its odd behavior is considered normal. The performance will also include a meter that indicates the degree of odd/normal behavior and a creative scene change.Cost limit: $125 USD.Sponsored by NASA.
 6. Top Sea-cret DiscoveriesGrades K-2The problem is to create and present a performance that includes exploring the ocean and making discoveries. Along the way, they will encounter three different types of sea life and a humorous Captain character. Teams will also create an original reason for the ocean’s waves and make a silly discovery that they have to help keep secret.Cost limit: $125 USD.
+

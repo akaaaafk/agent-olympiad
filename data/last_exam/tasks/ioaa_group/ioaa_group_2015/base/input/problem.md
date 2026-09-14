@@ -1,5 +1,3 @@
-# Team Competition 2015
-
 TEAM COMPETITION PROBLEM 
  
 The Borobudur Temple, built in the 9th century, is the biggest Buddhist temple in the world built 

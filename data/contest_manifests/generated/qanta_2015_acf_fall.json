@@ -1,0 +1,11 @@
+{
+  "session_id": "qanta_2015_acf_fall",
+  "competition_id": "qanta",
+  "problem_ids": [
+    "qanta_dev_149935"
+  ],
+  "description": "OTC contest-session manifest for qanta_2015_acf_fall (1 tasks)",
+  "split_parts": false,
+  "task_family": "short_answer",
+  "competition_description": "Academic quiz-bowl questions: identify the requested person, place, work, event, or concept from progressively specific clues."
+}

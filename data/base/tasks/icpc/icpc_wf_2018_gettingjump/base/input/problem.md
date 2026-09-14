@@ -1,5 +1,3 @@
-# Getting a Jump on Crime
-
 Hide 
  Getting a Jump on Crime 
 

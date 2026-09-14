@@ -1,0 +1,78 @@
+/* overall page stuff */
+
+/* SET BACKGROUND COLOR */
+body {
+   margin:20px;
+   background-color:#ffc;
+   color: #000;                 /* Text Color */
+}
+
+img { 
+   background-color: #fff;
+}
+
+/* SET LINK COLORS */
+A 		{ color: #a68; text-decoration: underline; }
+A:link		{ color: #a68; text-decoration: underline; }
+A:visited	{ color: #669; text-decoration: underline; }
+A:active	{ color: #a68; }
+A:hover		{ color: #a68; }
+
+
+/* INTROTEXT is always times, italics, medium */
+/* SET COLOR */
+P.intro {
+   font-family: times;
+   font-style: italic;
+   font-size: medium;
+   font-weight: normal;
+ }
+
+P.footer { 
+   font-family: times;
+   font-style: italic;
+   font-size: small;
+   font-weight: normal;
+   margin-top: 0px;
+}
+
+P.puzzlist { 
+   font-family: times;
+   font-size: medium;
+   font-weight: normal;
+   margin-top: 0px;
+   margin-left: 30px;
+}
+
+#puzzheader { 
+   width: 100%;
+   margin-bottom: 30px;
+ }
+
+#puzztitle { 
+  float: left;
+ }
+
+#puzzcall { 
+  float: right;
+ }
+
+#puzzintro { 
+   width: 100%;
+   margin-left: 15px;
+   margin-bottom: 20px;
+   clear: both;
+}
+
+#puzzbody {
+   width:100%;
+   margin-left: 25px;
+   margin-bottom: 20px;
+   clear: both;
+}
+
+#puzzfooter {
+   float:left;
+   width:100%;
+}
+

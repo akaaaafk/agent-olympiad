@@ -1,0 +1,49 @@
+body
+{
+    background-color: white;
+}
+
+font.grey {
+    color:grey;
+}
+
+font.link {
+    color: #3333FF;
+}
+
+table.tweet {
+    border-collapse:collapse;
+    width: 550px;    
+    border: 1px solid blue;
+    font-family: sans-serif;
+    background-color: white;
+}
+
+table.tweet td, table.tweet th {
+    padding: 3px;
+}
+
+td.date {
+    text-align:right;
+}
+
+td.image {
+    border-bottom: 1px solid grey;
+    vertical-align: top;
+}
+
+td.content {
+    border-bottom: 1px solid grey;
+}
+
+div.tweetcontainer {
+    width: 600px;
+    background-image: url("css-6.jpg");
+    padding: 50px;
+}
+
+p.italic {
+    font-style: italic;
+}
+
+

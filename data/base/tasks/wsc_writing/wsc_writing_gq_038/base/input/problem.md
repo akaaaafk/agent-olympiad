@@ -1,5 +1,3 @@
-# wsc_writing_gq_038
-
 In 2001, millennial pop star Britney Spears sang that she was “not a girl, not yet a woman”. In other words, she was an adolescent. Actually, she was 20 at the time—no longer a teenager, but well below the age at which our frontal lobes stop developing . With your team, explore the history of teenagers and the related terms below. If adolescence has always been a developmental stage in both humans and many other animals , why is the idea of teenagers so new ? 
 
  prefrontal cortex | neural pruning | risk-taking | neophilia | differentiation 

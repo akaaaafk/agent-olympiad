@@ -1,0 +1,27 @@
+> load game
+> headshot guard
+> exit vent
+> open stall
+> exit bathroom
+> descend stairs
+> open door
+> headshot guard
+> get ????????? (5)
+> get keycard
+> open door
+> activate door
+> open door
+> open door
+> open door
+> open door
+> shoot guard
+> headshot guard
+> enter laboratory
+> get ammo
+> talk doctor
+> get decoder
+> use decoder
+> lay mine
+> lay mine
+> lay mine
+> use detonator

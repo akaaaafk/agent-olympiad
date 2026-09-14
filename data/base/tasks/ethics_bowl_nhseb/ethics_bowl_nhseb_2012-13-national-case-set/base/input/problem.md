@@ -1,5 +1,3 @@
-# 2012-13-national-case-set
-
 2013 NATIONAL HIGH SCHOOL ETHICS BOWL CASES  
  
 Released 20 February 2013 

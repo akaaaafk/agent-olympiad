@@ -1,0 +1,244 @@
+{
+  "operation": "source_verified_pdf_control_glyph_repair",
+  "status": "completed_prompt_only_source_verified_repairs",
+  "backup": "data/excluded/integrity_repair_20260913T184738Z",
+  "timestamp_utc": "20260913T184738Z",
+  "changes": [
+    {
+      "task_id": "iol_team/iol_team_2021",
+      "source_file": "data/raw/iol/iol-2021-team-prob.en.pdf",
+      "source_sha256": "dc45f36e597bc17b466e59f4685fd51de9b0b500151a2f527ee436c30013cc0e",
+      "pdf_pages_visually_reviewed": [
+        9
+      ],
+      "control_characters_repaired": 1,
+      "replacements": [
+        {
+          "before": "\u001b",
+          "after": "←",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "task_id": "iol_team/iol_team_2025",
+      "source_file": "data/raw/iol/iol-2025-team-prob.en.pdf",
+      "source_sha256": "212e32a051bdeee11c84df2ff533ee5e8dcb4e5a7ac7e6b24bf87c9baf22027b",
+      "pdf_pages_visually_reviewed": [
+        1
+      ],
+      "control_characters_repaired": 1,
+      "replacements": [
+        {
+          "before": "north 6 ? -\u001b",
+          "after": "north ↑ ↓ → ←",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "task_id": "arml_power/arml_power_spring_2022",
+      "source_file": "data/raw/arml/Spring_2022/ARMLPower_Spring_2022.pdf",
+      "source_sha256": "c4247b51ea42f1fe16f7a20bf25ef703cfd6b254b69bfefde3457ff5b6f0a5b8",
+      "pdf_pages_visually_reviewed": [
+        5
+      ],
+      "control_characters_repaired": 2,
+      "replacements": [
+        {
+          "before": "\u0018m + n\n2\n\u0019",
+          "after": "⌈(m + n)/2⌉",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "task_id": "arml_power/arml_power_spring_2024",
+      "source_file": "data/raw/arml/Spring_2024/ARMLPower_Spring_2024.pdf",
+      "source_sha256": "ffb8ce57aa9142815cc38daf762840eb6e478198b80dcffc00b172bcadfb4d02",
+      "pdf_pages_visually_reviewed": [
+        3
+      ],
+      "control_characters_repaired": 4,
+      "replacements": [
+        {
+          "before": "f(m, s) ≤FC(m, s) = max\n\u001a1\n3, min\n\u001a\nm\ns⌈2m/s⌉, 1 −\nm\ns⌊2m/s⌋\n\u001b\u001b",
+          "after": "f(m, s) ≤ FC(m, s) = max{1/3, min{m/(s⌈2m/s⌉), 1 − m/(s⌊2m/s⌋)}}",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "task_id": "arml_national_power/arml_national_power_2023",
+      "source_file": "data/raw/arml_national/2023/arml_national_power_2023_problems.pdf",
+      "source_sha256": "c2c80bb859269c12769d2e9ed87713c16deacc6073d2ad75e2c4c030ee22ee66",
+      "pdf_pages_visually_reviewed": [
+        2
+      ],
+      "control_characters_repaired": 6,
+      "replacements": [
+        {
+          "before": "\u0004 log2(x)\u0005",
+          "after": "⌊log2(x)⌋",
+          "occurrences": 1
+        },
+        {
+          "before": "\u0004 k 4 \u0005",
+          "after": "⌊k/4⌋",
+          "occurrences": 1
+        },
+        {
+          "before": "\u0004 log2(m)\u0005",
+          "after": "⌊log2(m)⌋",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "task_id": "iiot/iiot_2021_02",
+      "source_file": "data/raw/iiot/2021/iiot_2021_problem_02.pdf",
+      "source_sha256": "5f8541d05d756aa369c545b2f2af06965361c83a32e372bb0061faf3c9b4ed7c",
+      "pdf_pages_visually_reviewed": [
+        1
+      ],
+      "control_characters_repaired": 1,
+      "replacements": [
+        {
+          "before": "\u000e",
+          "after": "Note:",
+          "occurrences": 1
+        },
+        {
+          "before": "109 + 7",
+          "after": "10^9 + 7",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "task_id": "iiot/iiot_2021_08",
+      "source_file": "data/raw/iiot/2021/iiot_2021_problem_08.pdf",
+      "source_sha256": "e5d8524978f90e87b4198dccb8859fffa4f5c664f5a6d056af8635d6f2dd6abc",
+      "pdf_pages_visually_reviewed": [
+        1
+      ],
+      "control_characters_repaired": 1,
+      "replacements": [
+        {
+          "before": "\u000e",
+          "after": "Note:",
+          "occurrences": 1
+        },
+        {
+          "before": "107 + 19",
+          "after": "10^7 + 19",
+          "occurrences": 1
+        },
+        {
+          "before": "10 7 +19",
+          "after": "10^7 + 19",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "task_id": "iiot/iiot_2023_01",
+      "source_file": "data/raw/iiot/2023/iiot_2023_problem_01.pdf",
+      "source_sha256": "b250e016fa2ea3603efaa934d5e3bc33c81cbaab340fc670c43b2b49c4b26856",
+      "pdf_pages_visually_reviewed": [
+        1
+      ],
+      "control_characters_repaired": 1,
+      "replacements": [
+        {
+          "before": "\u000e",
+          "after": "Note:",
+          "occurrences": 1
+        },
+        {
+          "before": "109 + 7",
+          "after": "10^9 + 7",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "task_id": "pumac_power/pumac_power_2010",
+      "source_file": "data/raw/pumac_power/PUMaC2010_Power.pdf",
+      "source_sha256": "320c312e03f6c47388781c345c0cfe521c0af13dfb8c87a4fa4df9dbdbf70e28",
+      "pdf_pages_visually_reviewed": [
+        4
+      ],
+      "control_characters_repaired": 4,
+      "replacements": [
+        {
+          "before": "\u000f",
+          "after": "ϵ",
+          "occurrences": 4
+        }
+      ]
+    },
+    {
+      "task_id": "pumac_power/pumac_power_2021",
+      "source_file": "data/raw/pumac_power/pumac2021v20.pdf",
+      "source_sha256": "7a0b658973cecb204e577eff998c477fd99148813467f16e0c22d5a634ba66ae",
+      "pdf_pages_visually_reviewed": [
+        11,
+        15,
+        17
+      ],
+      "control_characters_repaired": 20,
+      "replacements": [
+        {
+          "before": "\u0012",
+          "after": "(",
+          "occurrences": 5
+        },
+        {
+          "before": "\u0013",
+          "after": ")",
+          "occurrences": 5
+        },
+        {
+          "before": "dTV(x, y) = max\nA⊂[d]\n\f\f\f\f\f\nX\nn∈A\n(xn − yn)\n\f\f\f\f\f = 1\n2 sup\n( dX\nk=1\nfk(xk − yk) : max\ni∈[d]\n|fi| ≤1\n)",
+          "after": "dTV(x, y) = max_{A⊂[d]} |∑_{n∈A}(x_n − y_n)| = (1/2) sup{∑_{k=1}^d f_k(x_k − y_k) : max_{i∈[d]} |f_i| ≤ 1}",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "task_id": "pumac_power/pumac_power_2023",
+      "source_file": "data/raw/pumac_power/PUMaC2023PowerRoundMarch28Update.pdf",
+      "source_sha256": "2ad13388d3a1122a5f5b03429dd877d229ece2d0e11c011e765a5753495f2dec",
+      "pdf_pages_visually_reviewed": [
+        21,
+        23
+      ],
+      "control_characters_repaired": 8,
+      "replacements": [
+        {
+          "before": "\u0012",
+          "after": "(",
+          "occurrences": 4
+        },
+        {
+          "before": "\u0013",
+          "after": ")",
+          "occurrences": 4
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "repaired_records": 11,
+    "repaired_control_characters": 49,
+    "source_pages_visually_reviewed": 14,
+    "protected_files_unchanged": 1896,
+    "changed_files": 27,
+    "task_prompt_copies_updated": 22,
+    "membership_unchanged": true,
+    "original_sources_unchanged": true,
+    "answers_scores_and_readiness_unchanged": true,
+    "historical_results_modified": false
+  }
+}

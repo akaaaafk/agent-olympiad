@@ -1,23 +1,160 @@
-# Method — `jessup`
+# Team method
 
-How this benchmark's agents are asked to work. Projected from `data/rules/jessup/collaboration.json`.
-
-## Agent constraints
-
-- Apply this competition's own roster, timing, tool, collaboration, submission, and scoring rules; do not import rules from another contest.
-- Collaborate only within the team under contest rules.
-- Banned during the contest: calculators and running code. Permitted: internet access. Paper and pencil are always available.
-- Treat private reasoning and notes as unknown to teammates until you communicate the decision-relevant content.
-- Do not access hidden solutions, answer keys, evaluator internals, or unauthorized outside problem-solving help.
-- Observe the competition's phase order: confer only in an authorized conferral period, designate the current speaker, and stop when the modeled phase ends.
-- Keep the team's presentation, opponent commentary, response, and judge-question answers distinct so each can be evaluated under its own official criterion.
-- Only designated submitters may make the shared submission: Agent_1.
-- Use only the official mechanisms that the current task actually exposes; do not claim physical, oral, live-opponent, judge, or environment actions that were not observed.
-
-## Information / deliberation / communication
+## Collaboration configuration
 
 ```json
 {
+  "agent_roles": [
+    {
+      "name": "Agent_1",
+      "title": "captain / oralist",
+      "may_submit": true,
+      "duties": [
+        "Own the spoken case: opening, structure, and closing.",
+        "Absorb teammates' research into one line of argument rather than a list.",
+        "Submit only after the format and rule checks pass."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": [
+        "resource_policy",
+        "timeline",
+        "collaboration_protocol",
+        "deliverable_format"
+      ]
+    },
+    {
+      "name": "Agent_2",
+      "title": "researcher",
+      "may_submit": false,
+      "duties": [
+        "Find and cite the authorities the argument depends on.",
+        "Bring counter-authority to the team before a judge does."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": [
+        "integrity_and_compliance",
+        "resource_policy"
+      ]
+    },
+    {
+      "name": "Agent_3",
+      "title": "writer",
+      "may_submit": false,
+      "duties": [
+        "Draft the assigned section in full prose, not notes.",
+        "Keep the section within its word or time budget."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": [
+        "resource_policy",
+        "deliverable_format",
+        "evaluation_criteria"
+      ]
+    },
+    {
+      "name": "Agent_4",
+      "title": "opponent prep",
+      "may_submit": false,
+      "duties": [
+        "Argue the other side hard enough to expose weak reasoning.",
+        "Prepare answers to the strongest objection the team will face."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": [
+        "integrity_and_compliance",
+        "resource_policy"
+      ]
+    },
+    {
+      "name": "Agent_5",
+      "title": "judge-question specialist",
+      "may_submit": false,
+      "duties": [
+        "Anticipate judge questions and prepare short, direct answers.",
+        "Flag any claim the team cannot defend under questioning."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": [
+        "evaluation_criteria",
+        "deliverable_format"
+      ]
+    }
+  ],
+  "rule_sections": {
+    "competition_format": [
+      "Competition model: The team prepares a case, presents it, and responds to judges or opponents.",
+      "The source-recorded active team may have 2 to 5 members; the runner default is 5.",
+      "Source-recorded competition rule: Legal research on public sources and provided databases is allowed.",
+      "Source-recorded competition rule: FAQ confirms max five contributors over the competition year.",
+      "Legal research on public sources and provided databases is allowed.",
+      "FAQ confirms max five contributors over the competition year."
+    ],
+    "timeline": [
+      "Source-recorded timing: Multi-month memorial preparation plus oral rounds.",
+      "Source-recorded competition rule: Memorials: Applicant + Respondent; hard submission deadline (disqualification if missing both by schedule time); formatting/content rules in Rule 5.",
+      "Memorials: Applicant + Respondent; hard submission deadline (disqualification if missing both by schedule time); formatting/content rules in Rule 5.",
+      "Multi-month memorial preparation plus oral rounds."
+    ],
+    "resource_policy": [
+      "Source-recorded resource policy: Banned during the contest: calculators and running code. Permitted: internet access. Paper and pencil are always available.",
+      "Do not claim tools, internet, or materials that the rule card forbids."
+    ],
+    "collaboration_protocol": [
+      "Source-recorded collaboration rule: Collaborate only within the team under contest rules.",
+      "Source-recorded competition rule: No outside coaching that writes the memorial for the team.",
+      "Source-recorded competition rule: Team: 2–5 Team Members; only Team Members may contribute substantive work product.",
+      "Source-recorded competition rule: Outside assistance tightly limited: research/write/edit of Memorials and oral arguments must be exclusive Team Member work; Advisors limited to general advice (research methods, writing/advocacy technique) not drafting arguments.",
+      "Source-recorded competition rule: No other-team assistance (notes, memorials, practice moots against competitors, etc.).",
+      "No outside coaching that writes the memorial for the team.",
+      "Team: 2–5 Team Members; only Team Members may contribute substantive work product.",
+      "Outside assistance tightly limited: research/write/edit of Memorials and oral arguments must be exclusive Team Member work; Advisors limited to general advice (research methods, writing/advocacy technique) not drafting arguments.",
+      "No other-team assistance (notes, memorials, practice moots against competitors, etc.).",
+      "You must behave like a human teammate under official contest rules."
+    ],
+    "integrity_and_compliance": [
+      "Benchmark safety rule: do not use hidden solutions, evaluator internals, unauthorized outside assistance, or resources forbidden by this competition.",
+      "Source-recorded competition rule: No outside coaching that writes the memorial for the team.",
+      "Source-recorded competition rule: Outside assistance tightly limited: research/write/edit of Memorials and oral arguments must be exclusive Team Member work; Advisors limited to general advice (research methods, writing/advocacy technique) not drafting arguments.",
+      "Source-recorded competition rule: No other-team assistance (notes, memorials, practice moots against competitors, etc.).",
+      "No outside coaching that writes the memorial for the team.",
+      "Outside assistance tightly limited: research/write/edit of Memorials and oral arguments must be exclusive Team Member work; Advisors limited to general advice (research methods, writing/advocacy technique) not drafting arguments.",
+      "No other-team assistance (notes, memorials, practice moots against competitors, etc.)."
+    ],
+    "deliverable_format": [
+      "Runner answer contract: Submit the written memorial/case analysis and a concise oral outline.",
+      "Official deliverable: written memorial.",
+      "Benchmark adaptation: Official memorials are filed as PDF; the runner submits the memorial text.",
+      "Source-recorded competition rule: Prepare Applicant and Respondent written memorials plus oral outlines.",
+      "Source-recorded competition rule: Outside assistance tightly limited: research/write/edit of Memorials and oral arguments must be exclusive Team Member work; Advisors limited to general advice (research methods, writing/advocacy technique) not drafting arguments.",
+      "Source-recorded competition rule: Memorials: Applicant + Respondent; hard submission deadline (disqualification if missing both by schedule time); formatting/content rules in Rule 5.",
+      "Source-recorded competition rule: Season roughly Compromis in September → memorials ~January → oral Qualifying/International rounds.",
+      "Prepare Applicant and Respondent written memorials plus oral outlines.",
+      "Outside assistance tightly limited: research/write/edit of Memorials and oral arguments must be exclusive Team Member work; Advisors limited to general advice (research methods, writing/advocacy technique) not drafting arguments.",
+      "Memorials: Applicant + Respondent; hard submission deadline (disqualification if missing both by schedule time); formatting/content rules in Rule 5.",
+      "Season roughly Compromis in September → memorials ~January → oral Qualifying/International rounds.",
+      "Do not look up answer keys or hidden solutions."
+    ],
+    "evaluation_criteria": [
+      "Repository evaluation status: Task performance is evaluated per artifact in rubric mode by rubric_llm_v1; repository evaluator status is ready.",
+      "Source-recorded competition rule: Arguments must withstand judge questioning.",
+      "Arguments must withstand judge questioning."
+    ],
+    "runtime_limitations": [
+      "Runtime limitation: Months-long research + proprietary legal databases (ILSA-provided) are not free-web equivalent.",
+      "Runtime limitation: Oral courtroom advocacy and anonymity rules are out of scope for written-memorial-only agent evals.",
+      "Runtime limitation: AI policy: not a blanket ban in the sections reviewed; still subordinate to exclusive Team Member work-product rule — do not invent a permission."
+    ]
+  },
   "information_policy": {
     "mode": "role_specialized",
     "shared": [
@@ -47,93 +184,119 @@ How this benchmark's agents are asked to work. Projected from `data/rules/jessup
     "max_message_chars": 1200,
     "counted_actions": [
       "speak",
-      "write_scratchpad",
+      "work",
       "propose",
       "challenge",
       "provide_evidence",
       "revise",
       "decide"
     ]
+  },
+  "agent_constraints": [
+    "Apply this competition's own roster, timing, tool, collaboration, submission, and scoring rules; do not import rules from another contest.",
+    "Collaborate only within the team under contest rules.",
+    "Banned during the contest: calculators and running code. Permitted: internet access. Paper and pencil are always available.",
+    "Treat private reasoning and notes as unknown to teammates until you communicate the decision-relevant content.",
+    "Do not access hidden solutions, answer keys, evaluator internals, or unauthorized outside problem-solving help.",
+    "Observe the competition's phase order: confer only in an authorized conferral period, designate the current speaker, and stop when the modeled phase ends.",
+    "Keep the team's presentation, opponent commentary, response, and judge-question answers distinct so each can be evaluated under its own official criterion.",
+    "Only designated submitters may make the shared submission: Agent_1.",
+    "Use only the official mechanisms that the current task actually exposes; do not claim physical, oral, live-opponent, judge, or environment actions that were not observed."
+  ],
+  "simulation": {
+    "max_turns": 30,
+    "scheduler": "src_collaboration_draft",
+    "turn_budget_basis": "standardized experiment budget: 30 global turns; official contest timing is recorded separately",
+    "open_table_coach": {
+      "enabled": true,
+      "status": "counterfactual_otc_collaboration_overlay_not_official_competition_rule",
+      "may_submit": false,
+      "allowed_tools": [],
+      "counts_toward_shared_api_and_token_budget": true,
+      "contestant_turn_policy": {
+        "mode": "private_deliberation_then_single_action",
+        "allowed_actions": [
+          "work",
+          "speak",
+          "rest"
+        ],
+        "exactly_one_action": true,
+        "unstructured_response": "rest",
+        "final_submission": "reviewed_answer_sheet",
+        "visibility": {
+          "think": "private",
+          "work": "shared",
+          "speak": "team",
+          "rest": "private"
+        },
+        "max_chars_by_action": {
+          "think": 2400,
+          "work": 60000,
+          "speak": 1000,
+          "rest": 80
+        },
+        "memory_entries": {
+          "private_think_per_agent": 3,
+          "shared_work": 18,
+          "group_messages": 12,
+          "public_messages": 24
+        },
+        "private_think_calls_per_turn": 1,
+        "discussion_policy": {
+          "report_after_work": true,
+          "silent_work_turn_requires_discussion": true,
+          "conflicts_require_targeted_speak": true
+        }
+      },
+      "precontest_brief": {
+        "turn": 0,
+        "problem_access": false,
+        "allowed_actions": [
+          "speak",
+          "rest"
+        ],
+        "advice_scope": [
+          "time allocation within the rule card",
+          "team coordination and handoffs",
+          "independent verification",
+          "reconciling the required final deliverable"
+        ]
+      },
+      "opening_discussion": {
+        "enabled": false,
+        "problem_access": false,
+        "allowed_actions": [],
+        "purpose": "Coach exits permanently after the single turn-0 blind brief."
+      },
+      "after_opening_access": false,
+      "min_turns": 3,
+      "protocol_version": "otc_turn0_review_v1",
+      "review_required": true,
+      "action_surface": "registry_bundles_v1",
+      "action_bundles": [
+        "common",
+        "desk",
+        "memory",
+        "independent_review",
+        "competition_tools",
+        "deliberation_if_structured"
+      ]
+    },
+    "deliverable_pipeline": {
+      "version": "otc_artifact_v1",
+      "kind": "document",
+      "source_format": "text",
+      "render_format": "pdf",
+      "min_pages": 1,
+      "max_pages": 20,
+      "max_source_chars": 60000,
+      "max_file_size_mb": 20,
+      "review_rendered_version": true,
+      "post_review_synthesis": false,
+      "grading_status": "rubric_configured_validate_at_preflight",
+      "fidelity": "benchmark_adaptation_not_official_equivalence"
+    }
   }
 }
 ```
 
-## Simulation
-
-```json
-{
-  "max_turns": 24,
-  "scheduler": "src_collaboration_draft",
-  "turn_budget_basis": "official clock n/a turns vs floor 15 (5 teammates x 2 turns + 1 answer parts + 4 for synthesis)"
-}
-```
-
-## Rule sections
-
-```json
-{
-  "competition_format": [
-    "Competition model: The team prepares a case, presents it, and responds to judges or opponents.",
-    "The source-recorded active team may have 2 to 5 members; the runner default is 5.",
-    "Source-recorded competition rule: Legal research on public sources and provided databases is allowed.",
-    "Source-recorded competition rule: FAQ confirms max five contributors over the competition year.",
-    "Legal research on public sources and provided databases is allowed.",
-    "FAQ confirms max five contributors over the competition year."
-  ],
-  "timeline": [
-    "Source-recorded timing: Multi-month memorial preparation plus oral rounds.",
-    "Source-recorded competition rule: Memorials: Applicant + Respondent; hard submission deadline (disqualification if missing both by schedule time); formatting/content rules in Rule 5.",
-    "Memorials: Applicant + Respondent; hard submission deadline (disqualification if missing both by schedule time); formatting/content rules in Rule 5.",
-    "Multi-month memorial preparation plus oral rounds."
-  ],
-  "resource_policy": [
-    "Source-recorded resource policy: Banned during the contest: calculators and running code. Permitted: internet access. Paper and pencil are always available.",
-    "Do not claim tools, internet, or materials that the rule card forbids."
-  ],
-  "collaboration_protocol": [
-    "Source-recorded collaboration rule: Collaborate only within the team under contest rules.",
-    "Source-recorded competition rule: No outside coaching that writes the memorial for the team.",
-    "Source-recorded competition rule: Team: 2–5 Team Members; only Team Members may contribute substantive work product.",
-    "Source-recorded competition rule: Outside assistance tightly limited: research/write/edit of Memorials and oral arguments must be exclusive Team Member work; Advisors limited to general advice (research methods, writing/advocacy technique) not drafting arguments.",
-    "Source-recorded competition rule: No other-team assistance (notes, memorials, practice moots against competitors, etc.).",
-    "No outside coaching that writes the memorial for the team.",
-    "Team: 2–5 Team Members; only Team Members may contribute substantive work product.",
-    "Outside assistance tightly limited: research/write/edit of Memorials and oral arguments must be exclusive Team Member work; Advisors limited to general advice (research methods, writing/advocacy technique) not drafting arguments.",
-    "No other-team assistance (notes, memorials, practice moots against competitors, etc.).",
-    "You must behave like a human teammate under official contest rules."
-  ],
-  "integrity_and_compliance": [
-    "Benchmark safety rule: do not use hidden solutions, evaluator internals, unauthorized outside assistance, or resources forbidden by this competition.",
-    "Source-recorded competition rule: No outside coaching that writes the memorial for the team.",
-    "Source-recorded competition rule: Outside assistance tightly limited: research/write/edit of Memorials and oral arguments must be exclusive Team Member work; Advisors limited to general advice (research methods, writing/advocacy technique) not drafting arguments.",
-    "Source-recorded competition rule: No other-team assistance (notes, memorials, practice moots against competitors, etc.).",
-    "No outside coaching that writes the memorial for the team.",
-    "Outside assistance tightly limited: research/write/edit of Memorials and oral arguments must be exclusive Team Member work; Advisors limited to general advice (research methods, writing/advocacy technique) not drafting arguments.",
-    "No other-team assistance (notes, memorials, practice moots against competitors, etc.)."
-  ],
-  "deliverable_format": [
-    "Runner answer contract: Submit the written memorial/case analysis and a concise oral outline.",
-    "Official deliverable: written memorial.",
-    "Benchmark adaptation: Official memorials are filed as PDF; the runner submits the memorial text.",
-    "Source-recorded competition rule: Prepare Applicant and Respondent written memorials plus oral outlines.",
-    "Source-recorded competition rule: Outside assistance tightly limited: research/write/edit of Memorials and oral arguments must be exclusive Team Member work; Advisors limited to general advice (research methods, writing/advocacy technique) not drafting arguments.",
-    "Source-recorded competition rule: Memorials: Applicant + Respondent; hard submission deadline (disqualification if missing both by schedule time); formatting/content rules in Rule 5.",
-    "Source-recorded competition rule: Season roughly Compromis in September → memorials ~January → oral Qualifying/International rounds.",
-    "Prepare Applicant and Respondent written memorials plus oral outlines.",
-    "Outside assistance tightly limited: research/write/edit of Memorials and oral arguments must be exclusive Team Member work; Advisors limited to general advice (research methods, writing/advocacy technique) not drafting arguments.",
-    "Memorials: Applicant + Respondent; hard submission deadline (disqualification if missing both by schedule time); formatting/content rules in Rule 5.",
-    "Season roughly Compromis in September → memorials ~January → oral Qualifying/International rounds.",
-    "Do not look up answer keys or hidden solutions."
-  ],
-  "evaluation_criteria": [
-    "Repository evaluation status: Task performance is evaluated per artifact in rubric mode by rubric_llm_v1; repository evaluator status is ready.",
-    "Source-recorded competition rule: Arguments must withstand judge questioning.",
-    "Arguments must withstand judge questioning."
-  ],
-  "runtime_limitations": [
-    "Runtime limitation: Months-long research + proprietary legal databases (ILSA-provided) are not free-web equivalent.",
-    "Runtime limitation: Oral courtroom advocacy and anonymity rules are out of scope for written-memorial-only agent evals.",
-    "Runtime limitation: AI policy: not a blanket ban in the sections reviewed; still subordinate to exclusive Team Member work-product rule — do not invent a permission."
-  ]
-}
-```

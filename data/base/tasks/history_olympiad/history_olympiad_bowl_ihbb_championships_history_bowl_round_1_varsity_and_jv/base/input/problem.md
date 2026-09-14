@@ -1,5 +1,3 @@
-# IHBB-Championships-History-Bowl-Round-1-Varsity-and-JV
-
 [Q1] In this war, a group of German mercenaries under French leadership called Lauzun’s Legion saw action at White Plains. A German officer in this war ordered the establishment of separate toilets and kitchens and educated troops about marching orders during a brutal winter encampment. A group of Hessian soldiers in this war were defeated in a surprise attack the day after Christmas in the Battle of Trenton. For ten points, name this war in which Baron von Steuben drilled troops at Valley Forge, Pennsylvania, during the winter of 1777.
 
 [Q2] A ruler of this city has a dream in which he sees a statue with a gold head, a bronze belly, and clay feet. A Biblical figure partially named for this city is described as sitting on top of a scarlet beast with seven heads and ten horns. The Book of Ezekiel was composed while Ezekiel was in this city, which names a whore encountered in the Book of Revelation. The Book of Daniel tells of Nebuchadnezzar II, the ruler of, for ten points, what city where the Jews were held in a namesake period of captivity?

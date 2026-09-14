@@ -3,8 +3,19 @@
   "gold_pointer": "data/benchmarks/mystery_hunt/benchmark.json#mystery_hunt_00408.gold_label",
   "has_gold_answer": true,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/mystery_hunt/verified_solutions/2003_set_match.html",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+    "short_answer_source": "data/rubrics/mystery_hunt_short_answers.json",
+    "deliverable": "puzzle_answer",
+    "limitations": "Static page/media recovered; no gold or evaluator recertification. This is the retained untrained answer variant; it must not be counted as an independent puzzle from the trained variant. Prior limitations: The official solution verifies this answer variant; it is not an accidental duplicate. Contestant media/input separation and any hunt-specific training or host interaction still require integration. Do not treat variants as independent puzzles. Original puzzle answer before the hunt training transformation.",
+    "scorecard_path": "data/rubrics/task_scorecards/mystery_hunt.json",
+    "scorecard_key": "mystery_hunt_00408",
+    "answer_variant": "original"
+  },
+  "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+  "deliverable": "puzzle_answer"
 }

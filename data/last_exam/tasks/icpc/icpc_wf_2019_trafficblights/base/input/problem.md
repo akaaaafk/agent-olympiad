@@ -1,5 +1,3 @@
-# Traffic Blights
-
 Hide 
  Traffic Blights 
 

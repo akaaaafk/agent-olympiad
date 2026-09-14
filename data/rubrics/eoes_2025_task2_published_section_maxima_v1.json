@@ -1,0 +1,51 @@
+{
+  "rubric_id": "eoes_2025_task2_published_section_maxima_v1",
+  "total_points": 125,
+  "official_problem_maxima": [
+    {
+      "id": "1",
+      "title": "Kinetics of the reaction between crystal violet and hydroxide ions",
+      "max_score": 41.5,
+      "source_page": 2,
+      "source_file": "data/raw/eoes/eoes/2025/EOES2025_Task2_MarkingScheme_final.pdf",
+      "source_sha256": "3b64e0089709c19072945aae485df7a5716d6ea749290157b9222228aaf6db26"
+    },
+    {
+      "id": "2",
+      "title": "Velocity and Drag",
+      "max_score": 43.5,
+      "source_page": 11,
+      "source_file": "data/raw/eoes/eoes/2025/EOES2025_Task2_MarkingScheme_final.pdf",
+      "source_sha256": "3b64e0089709c19072945aae485df7a5716d6ea749290157b9222228aaf6db26"
+    },
+    {
+      "id": "3",
+      "title": "Heat it up! Speed it up! Step it up!",
+      "max_score": 40,
+      "source_page": 19,
+      "source_file": "data/raw/eoes/eoes/2025/EOES2025_Task2_MarkingScheme_final.pdf",
+      "source_sha256": "3b64e0089709c19072945aae485df7a5716d6ea749290157b9222228aaf6db26"
+    }
+  ],
+  "criteria": [],
+  "source_file": "data/raw/eoes/eoes/2025/EOES2025_Task2_MarkingScheme_final.pdf",
+  "source_sha256": "3b64e0089709c19072945aae485df7a5716d6ea749290157b9222228aaf6db26",
+  "source_url": "https://www.eoes.science/Previous%20olympiads/previous.html",
+  "visibility": "judge_only",
+  "executable": false,
+  "score_basis": "Sum of the three section maxima printed in the 2025 marking scheme, not a normalized tournament score.",
+  "limitations": [
+    "Section maxima only; detailed answer-dependent grading rules are still in the original marking PDF.",
+    "No simulated measurements, missing spreadsheet calculator, observer signatures or physical evidence are invented.",
+    "No cross-day or cross-discipline normalization is inferred."
+  ],
+  "visual_review": {
+    "renderer": "Poppler",
+    "pages": [
+      2,
+      11,
+      19
+    ],
+    "date": "2026-09-13"
+  }
+}

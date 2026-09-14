@@ -255,64 +255,72 @@ def main():
     parser.add_argument('--competitions', help='Optional comma-separated track filter; default all')
     parser.add_argument('--limit', type=int, help='Explicit pilot limit; default all sessions')
     args = parser.parse_args()
+    if args.limit is not None and args.limit < 1:
+        parser.error('--limit must be positive')
     out = args.output.resolve()
     out.mkdir(parents=True, exist_ok=True)
+    # Every stage writes: even report persists batch_status.json. Acquire
+    # before reading shared state or registering, and hold through final report.
+    lock = out / 'pipeline.lock'
+    handle = lock.open('x')
+    try:
+        with handle:
+            handle.write(str(os.getpid()))
+        return _run_locked(args, out)
+    finally:
+        lock.unlink()
+
+
+def _run_locked(args, out):
     registry = register(out) if args.stage in {'register', 'all'} else read(out / 'registry.json')
     status_path = out / 'batch_status.json'
     states = read(status_path)['jobs'] if status_path.exists() else {}
     exit_code = 0
     if args.stage in {'run', 'all'}:
-        # Exclusive create prevents duplicate batch supervisors for this root.
-        lock = out / 'pipeline.lock'
-        with lock.open('x') as handle:
-            handle.write(str(os.getpid()))
-        try:
-            selected = [j for j in registry['jobs'] if not args.competitions or
-                        j['competition'] in args.competitions.split(',')]
-            # Start with native answer sheets; expensive artifact and remote
-            # sessions follow in the same durable, serial queue.
-            selected.sort(key=lambda j: (j['session'] != 'arml_local_2014', j['competition'] != 'arml_local',
-                                        j['route'] != 'native', j['id']))
-            if args.limit is not None:
-                selected = selected[:args.limit]
-            for job in selected:
-                if job['blockers']:
-                    exit_code = 1
-                    continue
-                try:
-                    completed_results = {}
-                    cmd = command(job, out, args, completed_results=completed_results)
-                    if cmd is None:
-                        states[job['id']] = native_completion_state(completed_results[job['id']])
-                        if states[job['id']]['status'] != 'complete':
-                            exit_code = 1
-                        report(out, registry, states)
-                        print(job['id'], states[job['id']]['status'], flush=True)
-                        continue
-                    states[job['id']] = dict(status='running', command=cmd)
-                    report(out, registry, states)
-                    logs = out / 'logs'
-                    logs.mkdir(exist_ok=True)
-                    with (logs / (job['id'] + '.log')).open('a', encoding='utf-8') as log:
-                        completed = subprocess.run(cmd, cwd=ROOT, stdout=log, stderr=subprocess.STDOUT)
-                    dest = out / 'runs' / job['id']
-                    if completed.returncode:
-                        raise RuntimeError(f'Runner exit {completed.returncode}; see per-job log')
-                    if job['route'] == 'native':
-                        if command(job, out, args, completed_results=completed_results) is not None:
-                            raise RuntimeError('Runner exited without verified final result')
-                        states[job['id']] = native_completion_state(completed_results[job['id']])
-                    else:
-                        states[job['id']] = dict(status=read(dest / 'result.json')['status'])
+        selected = [j for j in registry['jobs'] if not args.competitions or
+                    j['competition'] in args.competitions.split(',')]
+        # Start with native answer sheets; expensive artifact and remote
+        # sessions follow in the same durable, serial queue.
+        selected.sort(key=lambda j: (j['session'] != 'arml_local_2014', j['competition'] != 'arml_local',
+                                    j['route'] != 'native', j['id']))
+        if args.limit is not None:
+            selected = selected[:args.limit]
+        for job in selected:
+            if job['blockers']:
+                exit_code = 1
+                continue
+            try:
+                completed_results = {}
+                cmd = command(job, out, args, completed_results=completed_results)
+                if cmd is None:
+                    states[job['id']] = native_completion_state(completed_results[job['id']])
                     if states[job['id']]['status'] != 'complete':
                         exit_code = 1
-                except Exception as exc:
-                    exit_code = 1
-                    states[job['id']] = dict(status='blocked', reason=f'{type(exc).__name__}: {exc}')
+                    report(out, registry, states)
+                    print(job['id'], states[job['id']]['status'], flush=True)
+                    continue
+                states[job['id']] = dict(status='running', command=cmd)
                 report(out, registry, states)
-                print(job['id'], states[job['id']]['status'], flush=True)
-        finally:
-            lock.unlink()
+                logs = out / 'logs'
+                logs.mkdir(exist_ok=True)
+                with (logs / (job['id'] + '.log')).open('a', encoding='utf-8') as log:
+                    completed = subprocess.run(cmd, cwd=ROOT, stdout=log, stderr=subprocess.STDOUT)
+                dest = out / 'runs' / job['id']
+                if completed.returncode:
+                    raise RuntimeError(f'Runner exit {completed.returncode}; see per-job log')
+                if job['route'] == 'native':
+                    if command(job, out, args, completed_results=completed_results) is not None:
+                        raise RuntimeError('Runner exited without verified final result')
+                    states[job['id']] = native_completion_state(completed_results[job['id']])
+                else:
+                    states[job['id']] = dict(status=read(dest / 'result.json')['status'])
+                if states[job['id']]['status'] != 'complete':
+                    exit_code = 1
+            except Exception as exc:
+                exit_code = 1
+                states[job['id']] = dict(status='blocked', reason=f'{type(exc).__name__}: {exc}')
+            report(out, registry, states)
+            print(job['id'], states[job['id']]['status'], flush=True)
     report(out, registry, states)
     return exit_code
 

@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2015
-
 # Odyssey of the Mind — 2015 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -19,3 +17,4 @@ The team’s problem is to design, build and operate one or more vehicles that w
 3. Lose Your MarblesDivisions I, II, III & IVThis problem requires teams to design, build, and test a structure, made only of balsa wood and glue, that will balance and support as much weight as possible. The structure will also hold five marbles that will be released during weight placement as a result of a team-created device removing a piece of the structure. After the crusher board and one additional weight are placed on top of the structure, the first marble will be released. After the next weight is supported, the team will use its device to release another marble, and so on. The team will incorporate weight placement and “losing your marbles” into the theme of the performance.Cost limit: $145 USD.
 4. Silent MovieDivisions I, II, III & IVLights, camera…action! In this problem teams will create and present a performance depicting a Director character that produces and presents a silent movie featuring a humorous villain character that commits three silly acts of “villainy”. Characters that are in the movie may not speak as part of the presentation of the movie. Instead, like classic silent films, the team will use music played on a team-created instrument and creatively displayed subtitles to convey its story to the audience and judges. Also, teams will use a signal to indicate when the movie begins and ends.Cost limit: $125 USD.
 5. Wacky Weather Warning Grades K-2Teams will create and present a humorous performance where a meteorologist makes three predictions of “wacky weather”. The meteorologist will speak in rhymes and use a team-created forecasting device and a backdrop that serves as a weather map. The community will “tune in” to get the weather report in any creative way the team wishes.Cost limit: $125 USD.
+

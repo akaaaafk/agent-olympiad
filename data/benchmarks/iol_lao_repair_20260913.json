@@ -1,0 +1,59 @@
+{
+  "operation": "iol_2012_lao_judge_link_and_image_reference_repair",
+  "status": "completed_judge_link_image_reference_and_score_sync",
+  "backup": "data/excluded/integrity_repair_20260913T182118Z",
+  "timestamp_utc": "20260913T182118Z",
+  "validation": {
+    "active_tracks": 43,
+    "active_records": 1720,
+    "active_iol_records": 18,
+    "no_years_excluded": true,
+    "repaired_years": [
+      2012
+    ],
+    "iol_status_counts": {
+      "not_ready": 9,
+      "ready": 8,
+      "ready_with_limitations": 1
+    },
+    "global_status_counts": {
+      "ready_with_limitations": 193,
+      "not_ready": 706,
+      "ready": 661,
+      "remote_judge_ready": 158,
+      "sample_tests_ready": 2
+    },
+    "country_ids_verified": 57,
+    "official_pronunciation_rows_present": 57,
+    "judge_link_recovered": true,
+    "source_pages_visually_reviewed": 2,
+    "public_page_images": 1,
+    "judge_page_images": 1,
+    "official_score_unknown": true,
+    "old_proxy_disabled": true,
+    "unchanged_iol_rows_and_scorecards": 17,
+    "other_tracks_unchanged": 42,
+    "protected_files_unchanged": 1183,
+    "archived_generated_files": 13,
+    "visualization_bytes_unchanged": true,
+    "historical_results_modified": false,
+    "end_to_end_runtime_or_grading_validated": false
+  },
+  "new_task_file_hashes": {
+    "data/base/tasks/iol_team/iol_team_2012/base/input/collaboration.md": "560ab79343764338024bc8969456101a1b867fa3b1a25695fe31dbc719975ea5",
+    "data/base/tasks/iol_team/iol_team_2012/base/input/ground_rules.md": "5731fda6b153d380ed3e389bf08900d590ea0b552b865a4804488c108cde2b6f",
+    "data/base/tasks/iol_team/iol_team_2012/base/input/input_environment_spec.md": "c67d25cae07934f1f50e0208a69d174ab2c3ad1a66e34426eecee973b0f1b2f3",
+    "data/base/tasks/iol_team/iol_team_2012/base/input/iol-2012-team-prob.en.pdf": "61fcd5cb329a1f5cb80699f1ecb5da02638f08b8bcd586984a90fe06c76fafaa",
+    "data/base/tasks/iol_team/iol_team_2012/base/input/problem.md": "964b072b398bdbf967b36e2030ef423b85f1ca62e2e1c23433f07d22de297a4a",
+    "data/base/tasks/iol_team/iol_team_2012/base/input/task_sop.md": "e4b25f78a777d88fae04f42fae3d6bfa093d46ab2726355a1fbd72b6f6a8eeec",
+    "data/base/tasks/iol_team/iol_team_2012/base/input/lao_20260913/input/iol_2012_lao_problem.png": "4f7bb7b3f4a0dfc1c6f0c7a6e72e5c628859ceb4a3196d01a234d7fbfea8ac1b",
+    "data/last_exam/tasks/iol_team/iol_team_2012/eval/reference.json": "5a5bb4eba930975fab06eb5f439ffcd4854db4c39102301f1fc6025b9bd63aa5",
+    "data/last_exam/tasks/iol_team/iol_team_2012/base/input/collaboration.md": "560ab79343764338024bc8969456101a1b867fa3b1a25695fe31dbc719975ea5",
+    "data/last_exam/tasks/iol_team/iol_team_2012/base/input/ground_rules.md": "5731fda6b153d380ed3e389bf08900d590ea0b552b865a4804488c108cde2b6f",
+    "data/last_exam/tasks/iol_team/iol_team_2012/base/input/input_environment_spec.md": "c67d25cae07934f1f50e0208a69d174ab2c3ad1a66e34426eecee973b0f1b2f3",
+    "data/last_exam/tasks/iol_team/iol_team_2012/base/input/iol-2012-team-prob.en.pdf": "61fcd5cb329a1f5cb80699f1ecb5da02638f08b8bcd586984a90fe06c76fafaa",
+    "data/last_exam/tasks/iol_team/iol_team_2012/base/input/problem.md": "964b072b398bdbf967b36e2030ef423b85f1ca62e2e1c23433f07d22de297a4a",
+    "data/last_exam/tasks/iol_team/iol_team_2012/base/input/task_sop.md": "e4b25f78a777d88fae04f42fae3d6bfa093d46ab2726355a1fbd72b6f6a8eeec",
+    "data/last_exam/tasks/iol_team/iol_team_2012/base/input/lao_20260913/input/iol_2012_lao_problem.png": "4f7bb7b3f4a0dfc1c6f0c7a6e72e5c628859ceb4a3196d01a234d7fbfea8ac1b"
+  }
+}

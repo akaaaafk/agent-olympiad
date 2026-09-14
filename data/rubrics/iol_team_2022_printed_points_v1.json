@@ -1,0 +1,49 @@
+{
+  "rubric_id": "iol_team_2022_printed_points_v1",
+  "dataset": "iol_team",
+  "visibility": "judge_only",
+  "title": "IOL 2022 official printed part subtotals",
+  "total_points": 100,
+  "criteria": [
+    {
+      "id": "I",
+      "name": "Part I",
+      "max_score": 25,
+      "source_pdf_page": 2,
+      "description": "Official part subtotal only; within-part partial-credit weights have not been recovered."
+    },
+    {
+      "id": "II",
+      "name": "Part II",
+      "max_score": 25,
+      "source_pdf_page": 6,
+      "description": "Official part subtotal only; within-part partial-credit weights have not been recovered."
+    },
+    {
+      "id": "III",
+      "name": "Part III",
+      "max_score": 25,
+      "source_pdf_page": 8,
+      "description": "Official part subtotal only; within-part partial-credit weights have not been recovered."
+    },
+    {
+      "id": "IV",
+      "name": "Part IV",
+      "max_score": 25,
+      "source_pdf_page": 9,
+      "description": "Official part subtotal only; within-part partial-credit weights have not been recovered."
+    }
+  ],
+  "source_file": "data/raw/iol/iol-2022-team-prob.en.pdf",
+  "source_sha256": "c4326d121cf4e1773f62da5b98a794636ff8f269d9bc7af5d93a29276e7af9ee",
+  "source_url": "https://ioling.org/problems/2022/",
+  "rubric_type": "printed_part_subtotals",
+  "grading_validation_status": "not_validated",
+  "limitations": [
+    "Printed Parts I-IV each carry 25 points, totaling 100. The previous generic accuracy/method/coverage split is not the official allocation.",
+    "Parts I and III require the Manchu script. Embedded font extraction corrupts its glyphs; original PDF images are authoritative for problem and answers.",
+    "Within-part partial credit and image/script-aware delivery/grading have not been validated. Printed subtotals alone do not make an executable official grader."
+  ],
+  "not_observable_from_deck": [],
+  "within_part_weights_verified": false
+}

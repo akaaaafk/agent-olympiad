@@ -3,8 +3,195 @@
   "gold_pointer": "data/benchmarks/eoes/benchmark.json#eoes_tasksheet1.gold_label",
   "has_gold_answer": false,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/eoes_tasksheet1_2015_printed_maxima_v1.json",
+    "deliverable": "lab_answer_sheet_and_report",
+    "limitations": [
+      "No task-specific numeric marking scheme or experimental measurements are inferred.",
+      "Challenge 1 variants have different printed maxima and must not be added as independent contest challenges.",
+      "Reviewed participant worksheets are available; physical experiments, lab-assistant feedback, exact edition equivalence and executable grading remain unverified."
+    ],
+    "scorecard_path": "data/rubrics/task_scorecards/eoes.json",
+    "scorecard_key": "eoes_tasksheet1",
+    "pre_reuse_evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+      "deliverable": "lab_answer_sheet_and_report",
+      "limitations": "No task-specific official marking scheme is archived for this packet; a protocol-only rubric cannot supply missing labels.",
+      "scorecard_path": "data/rubrics/task_scorecards/eoes.json",
+      "scorecard_key": "eoes_tasksheet1"
+    },
+    "superseded_rubric_reuse": {
+      "source_competition": "eoes",
+      "target_competition": "eoes",
+      "target_year": 2015,
+      "source_rubric_paths": [
+        "data/rubrics/eoes_official_scoring_protocol_v1.json"
+      ],
+      "source_editions": [
+        2022,
+        2023
+      ],
+      "official_year_equivalence": false,
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+    },
+    "official_max_score": 304,
+    "official_problem_maxima": [
+      {
+        "id": "A",
+        "max_score": 90,
+        "source_page": 2
+      },
+      {
+        "id": "B",
+        "max_score": 92,
+        "source_page": 2
+      },
+      {
+        "id": "C",
+        "max_score": 92,
+        "source_page": 2
+      },
+      {
+        "id": "D",
+        "max_score": 6,
+        "source_page": 2
+      },
+      {
+        "id": "E",
+        "max_score": 24,
+        "source_page": 2
+      }
+    ],
+    "score_basis": "Sum of the section maxima printed in this exact archived task-sheet variant; not a normalized tournament score.",
+    "source_repair_status": "variant_specific_printed_maxima_verified",
+    "staged_source_release": {
+      "parent_problem_ids": [
+        "eoes_ExpBlowingintheWind",
+        "eoes_tasksheet1"
+      ],
+      "original_source_file": "data/raw/eoes/euso/2015/additionalfileschallenge1.pdf",
+      "original_sha256": "acb21b4406c039beeb56c7eaf0a486c79bedcab9ed75db6ee7c8ba934e0871ce",
+      "initial_source_pages": [
+        3,
+        4
+      ],
+      "deferred_source_pages": [
+        1,
+        2
+      ],
+      "initial_file": "data/raw/eoes/separated_2015_20260913/challenge1_initial_handouts.pdf",
+      "release_condition": "Complete Task A 3.1 and hand the glued crayfish handout to the laboratory assistant before receiving the Function table and identification diagram.",
+      "evidence": [
+        {
+          "source_file": "data/raw/eoes/euso/2015/ExpBlowingintheWind.pdf",
+          "pages": [
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "source_file": "data/raw/eoes/euso/2015/tasksheet1.pdf",
+          "pages": [
+            4,
+            6,
+            7
+          ]
+        }
+      ],
+      "runtime_gate_implemented": false,
+      "official_left_right_assignment_inferred": false,
+      "limitations": [
+        "Original outline scale, placement, scan artifacts and unreadable source header are retained.",
+        "A specimen, glued extremities, lab-assistant photograph and complete answer-sheet packet are not supplied by this two-page extraction."
+      ]
+    },
+    "participant_worksheet_review": {
+      "kind": "participant_worksheet_not_solution",
+      "challenge": 1,
+      "full_visual_review": true,
+      "experimental_results_added": false,
+      "grading_key_recovered": false,
+      "edition_equivalence_certified": false,
+      "source_files": [
+        {
+          "path": "data/raw/eoes/euso/2015/answersheet1.pdf",
+          "sha256": "c581c20bcbe23b4c3eb2d7f45d310856830128c31642756c28af0696b99ae38d",
+          "visually_reviewed_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ],
+          "original_links_retained_not_followed": [
+            [
+              27,
+              2,
+              "http://www.dict.cc/englisch-deutsch/branchiae.html"
+            ]
+          ]
+        },
+        {
+          "path": "data/raw/eoes/euso/2015/template_diagrampaper.pdf",
+          "sha256": "5af0904208876d5721cf51a71f25bd33f9463d066f5a54bc7f7aa20429da0a93",
+          "visually_reviewed_pages": [
+            1
+          ],
+          "original_links_retained_not_followed": []
+        }
+      ],
+      "worksheet_task_a_printed_submarks": [
+        9,
+        12,
+        3,
+        5,
+        20,
+        10,
+        9,
+        2,
+        10,
+        10
+      ],
+      "worksheet_task_a_total": 90,
+      "task_sheet_task_a_total": 90,
+      "source_observations": [
+        "Pages 4 and 5 contain given oxygen and temperature charts, not completed markings.",
+        "Page 7 contains the participant identification key with empty tick cells; the separately deferred morphology diagram and Function table remain judge-only.",
+        "The printed 15 C statement on worksheet page 2 is a question to classify; the task-sheet scientific-information text says 11 C. Neither is silently corrected.",
+        "The graph-paper template carries original CHALLENGE 1 and TEAM A watermarks; no participant team assignment is inferred.",
+        "Mixed original footer dates, all blank lab-assistant fields, and page 20 resistance values are retained."
+      ]
+    }
+  },
+  "rubric_path": "data/rubrics/eoes_tasksheet1_2015_printed_maxima_v1.json",
+  "deliverable": "lab_answer_sheet_and_report"
 }

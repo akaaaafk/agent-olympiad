@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.1",
+  "dataset": "jessup",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "jessup_2024",
+      "year": 2024,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/jessup_memorial_100_v1.json",
+          "sha256": "29b0e1b2c9d80a29b5cf5b5fa0f36497a689580a54bb659713a40149dde8b8cc",
+          "format": "numeric_rubric",
+          "rubric_id": "jessup_memorial_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "legal_analysis",
+              "name": "Legal analysis",
+              "max_score": 35,
+              "observable": true,
+              "description": "Accurate, issue-spotting legal analysis grounded in international law."
+            },
+            {
+              "id": "argumentation",
+              "name": "Argumentation",
+              "max_score": 30,
+              "observable": true,
+              "description": "Persuasive Applicant/Respondent arguments with coherent structure."
+            },
+            {
+              "id": "authorities",
+              "name": "Authorities & citation",
+              "max_score": 20,
+              "observable": true,
+              "description": "Relevant authorities are cited and used appropriately."
+            },
+            {
+              "id": "writing",
+              "name": "Written memorial quality",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarity, organization, and professional memorial style."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral advocacy",
+            "rebuttal performance",
+            "courtroom demeanor"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Evaluates the written memorial only; oral advocacy is not scored.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

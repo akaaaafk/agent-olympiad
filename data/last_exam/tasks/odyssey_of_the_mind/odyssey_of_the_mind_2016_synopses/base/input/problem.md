@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2016
-
 # Odyssey of the Mind — 2016 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Stack Attack!Divisions I, II, III & IVThis problem requires teams to design, build, and test a structure, made only of balsa wood and glue that will balance and support as much weight as possible–twice. During weight-placement, teams can “Attack the Stack” where they will remove all of the weights except for the bottom one and the crusher board. Teams will also receive score for removing weights! After Attacking the Stack, the weight placement process can be repeated to add to the total weight held. Teams will incorporate weight-placement, repetition, and Attacking a Stack into the theme of the performance.Cost limit: $145 USD.
 5. Furs, Fins, Feathers and FriendsDivisions I, II, III & IVThe team’s problem is to create and present a humorous performance depicting problem solving from the perspective of three different animals. The animals will help a stranger, help each other, and solve a problem that threatens the survival of all animals. During the performance, the animals will sing and dance. They will also show curiosity, sympathy, frustration, and joy.Cost limit: $125 USD.
 6. Stir the Pot Grades K-2Teams will create and present a humorous performance about an object that comes to life when touched by an item that turns out to be magical. While it is alive, the animated object will encounter three other objects that will result in a dramatic change of behavior. There will be a narrator character that explains what is happening and a character that becomes friends with the object. The performance will also include a team-created poem, song, or dance.Cost limit: $125 USD.
+

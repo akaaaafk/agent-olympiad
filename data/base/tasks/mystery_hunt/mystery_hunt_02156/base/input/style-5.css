@@ -1,0 +1,21 @@
+img.bag {
+    width: 150px;
+    margin: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+img.bag:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+}
+a {
+    position: relative;
+}
+span.e {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-shadow: 1px 0 1px black, 0 1px 1px black, -1px 0 1px black, 0 -1px 1px black;
+}
+<

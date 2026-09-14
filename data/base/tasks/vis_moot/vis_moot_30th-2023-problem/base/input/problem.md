@@ -1,5 +1,3 @@
-# 30th-2023-problem
-
 THE PROBLEM 
  
  

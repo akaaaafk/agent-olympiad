@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.1",
+  "dataset": "wmtc",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "wmtc_2018_advanced",
+      "year": 2018,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/numerical_sheet_reference_40_v1.json",
+          "sha256": "ee1fac6916844e03ef4f2e421e1fb51cffd75aef5f2868ec86a049270ec14e16",
+          "format": "numeric_rubric",
+          "rubric_id": "numerical_sheet_reference_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "answers",
+              "name": "Answer correctness",
+              "max_score": 32,
+              "observable": true,
+              "description": "Final answers match official solutions (equivalent forms allowed)."
+            },
+            {
+              "id": "completeness",
+              "name": "Completeness",
+              "max_score": 8,
+              "observable": true,
+              "description": "All required problems have attempted final answers."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wmtc/2018/2018_WMTC_Advanced_Solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "c8de572aa4a38081225f5f695c1c63a38a3d72616b56782c64444eaf03d82453"
+        }
+      ],
+      "limitations": "Scores the archived 2018 Team Round only; live paper collection and proctoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "14 official Team Round answers x 5 points = 70",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 5.0
+        },
+        {
+          "id": "2",
+          "points": 5.0
+        },
+        {
+          "id": "3",
+          "points": 5.0
+        },
+        {
+          "id": "4",
+          "points": 5.0
+        },
+        {
+          "id": "5",
+          "points": 5.0
+        },
+        {
+          "id": "6",
+          "points": 5.0
+        },
+        {
+          "id": "7",
+          "points": 5.0
+        },
+        {
+          "id": "8",
+          "points": 5.0
+        },
+        {
+          "id": "9",
+          "points": 5.0
+        },
+        {
+          "id": "10",
+          "points": 5.0
+        },
+        {
+          "id": "11",
+          "points": 5.0
+        },
+        {
+          "id": "12",
+          "points": 5.0
+        },
+        {
+          "id": "13",
+          "points": 5.0
+        },
+        {
+          "id": "14",
+          "points": 5.0
+        }
+      ],
+      "gold_max_score": 70.0
+    },
+    {
+      "problem_id": "wmtc_2018_intermediate",
+      "year": 2018,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/numerical_sheet_reference_40_v1.json",
+          "sha256": "ee1fac6916844e03ef4f2e421e1fb51cffd75aef5f2868ec86a049270ec14e16",
+          "format": "numeric_rubric",
+          "rubric_id": "numerical_sheet_reference_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "answers",
+              "name": "Answer correctness",
+              "max_score": 32,
+              "observable": true,
+              "description": "Final answers match official solutions (equivalent forms allowed)."
+            },
+            {
+              "id": "completeness",
+              "name": "Completeness",
+              "max_score": 8,
+              "observable": true,
+              "description": "All required problems have attempted final answers."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wmtc/2018/2018_WMTC_Intermediate_Solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "157004b8d025b4e4bd063a45a90a743011142d775ddf97a0044ccdbc60fb48ee"
+        }
+      ],
+      "limitations": "Scores the archived 2018 Team Round only; live paper collection and proctoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "14 official Team Round answers x 5 points = 70",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 5.0
+        },
+        {
+          "id": "2",
+          "points": 5.0
+        },
+        {
+          "id": "3",
+          "points": 5.0
+        },
+        {
+          "id": "4",
+          "points": 5.0
+        },
+        {
+          "id": "5",
+          "points": 5.0
+        },
+        {
+          "id": "6",
+          "points": 5.0
+        },
+        {
+          "id": "7",
+          "points": 5.0
+        },
+        {
+          "id": "8",
+          "points": 5.0
+        },
+        {
+          "id": "9",
+          "points": 5.0
+        },
+        {
+          "id": "10",
+          "points": 5.0
+        },
+        {
+          "id": "11",
+          "points": 5.0
+        },
+        {
+          "id": "12",
+          "points": 5.0
+        },
+        {
+          "id": "13",
+          "points": 5.0
+        },
+        {
+          "id": "14",
+          "points": 5.0
+        }
+      ],
+      "gold_max_score": 70.0
+    },
+    {
+      "problem_id": "wmtc_2018_junior",
+      "year": 2018,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/numerical_sheet_reference_40_v1.json",
+          "sha256": "ee1fac6916844e03ef4f2e421e1fb51cffd75aef5f2868ec86a049270ec14e16",
+          "format": "numeric_rubric",
+          "rubric_id": "numerical_sheet_reference_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "answers",
+              "name": "Answer correctness",
+              "max_score": 32,
+              "observable": true,
+              "description": "Final answers match official solutions (equivalent forms allowed)."
+            },
+            {
+              "id": "completeness",
+              "name": "Completeness",
+              "max_score": 8,
+              "observable": true,
+              "description": "All required problems have attempted final answers."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wmtc/2018/2018_WMTC_Junior_Solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "6efe10911899e8e1a3e0f937a519032fb40ead8bb65e4708d10d79c13230a345"
+        }
+      ],
+      "limitations": "Scores the archived 2018 Team Round only; live paper collection and proctoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "14 official Team Round answers x 5 points = 70",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 5.0
+        },
+        {
+          "id": "2",
+          "points": 5.0
+        },
+        {
+          "id": "3",
+          "points": 5.0
+        },
+        {
+          "id": "4",
+          "points": 5.0
+        },
+        {
+          "id": "5",
+          "points": 5.0
+        },
+        {
+          "id": "6",
+          "points": 5.0
+        },
+        {
+          "id": "7",
+          "points": 5.0
+        },
+        {
+          "id": "8",
+          "points": 5.0
+        },
+        {
+          "id": "9",
+          "points": 5.0
+        },
+        {
+          "id": "10",
+          "points": 5.0
+        },
+        {
+          "id": "11",
+          "points": 5.0
+        },
+        {
+          "id": "12",
+          "points": 5.0
+        },
+        {
+          "id": "13",
+          "points": 5.0
+        },
+        {
+          "id": "14",
+          "points": 5.0
+        }
+      ],
+      "gold_max_score": 70.0
+    }
+  ]
+}

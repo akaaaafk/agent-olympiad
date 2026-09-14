@@ -1,13 +1,64 @@
-# Input Environment and Settings
+# Environment
 
-## System
-- Competition id: `eoes`
-- Problem id: `eoes_tasksheet1`
-- Task type: `lab_experiment`
-- Eval unit: `session`
-- Status: `collected`
+## Roster
 
-## Runtime
-- Status: `unavailable`
+```json
+{
+  "active_min": 3,
+  "active_default": 3,
+  "active_max": 3,
+  "collaboration": "Collaborate only within the team under contest rules.",
+  "range_basis": "source_record"
+}
+```
 
-EOES tasks require edition-specific field samples, maps, sensors, and laboratory state. No official executable simulator was found in the collected source material. Keep equipment actions disabled until a task-specific simulator and observation contract exist.
+## Allowed tools
+
+```json
+[
+  "query_rules",
+  "use_calculator",
+  "inspect_environment"
+]
+```
+
+## Resources
+
+```json
+{
+  "internet": "forbidden",
+  "calculator": "allowed",
+  "code_execution": "forbidden",
+  "paper_pencil": "allowed",
+  "provided_materials_only": true,
+  "physical_lab": "proxy_unavailable"
+}
+```
+
+## Official execution facts
+
+```json
+{
+  "official_minutes": null
+}
+```
+
+## Deliverable
+
+```json
+{
+  "answer_format": "Submit a lab-style report: data, calculations, tables/graphs description, and conclusions.",
+  "shared": true,
+  "mime_types": [
+    "text/plain"
+  ],
+  "task_types": [
+    "lab_experiment"
+  ],
+  "official_deliverable": "lab_report",
+  "official_mime_types": [
+    "text/plain"
+  ]
+}
+```
+

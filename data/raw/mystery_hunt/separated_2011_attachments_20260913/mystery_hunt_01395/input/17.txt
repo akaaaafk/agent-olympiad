@@ -1,0 +1,93 @@
+login
+go whirlpool
+go dungeon
+north
+ask priest for prayer
+ask paladin for blessing
+ask mage for brilliance
+kill snake
+kill snake
+kill snake
+kill snake
+north
+kill large snake
+north
+ride jellyfish
+north
+kill snake
+kill snake
+kill fish men
+north
+kill snake
+kill snake
+kill fish men
+north
+kill snake
+kill snake
+kill fish men
+north
+kill snake
+kill snake
+kill snake
+kill snake
+kill large snake
+kill fish men
+north
+kill snake
+kill snake
+kill snake
+kill snake
+north
+attack huge snake
+kill snake
+kill snake
+kill snake
+attack huge snake
+kill snake
+kill snake
+kill snake
+kill huge snake
+south
+attack horror
+move
+attack horror
+move
+attack horror
+move
+attack horror
+move
+attack horror
+move
+attack horror
+move
+kill horror
+south
+take teleporter
+north
+west
+kill elemental
+kill small elementals
+north
+kill elemental
+kill small elementals
+north
+kill elemental
+kill small elementals
+kill elemental
+kill small elementals
+north
+talk to huge elemental
+kill horror
+kill horror
+kill fish men
+kill horror
+kill horror
+kill fish men
+attack fiend
+run from fiend
+attack fiend
+run from fiends
+kill squid
+open chest
+get ??????????????? (4)
+wear ??????????????? on legs

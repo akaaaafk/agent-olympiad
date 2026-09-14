@@ -1,5 +1,3 @@
-# History-Bowl-Round-4
-
 [Q1] A boy named Chanco saved this city from a native raid by warning his caregiver, Richard Pace, of the impending attack. In the opening days of the Civil War, William Allen raised a private pro-Confederate militia to occupy this site to block the Union from reaching Richmond downstream. This city was partially razed in the midst of Bacon's Rebellion, and the House of Burgesses was originally set up in this settlement prior to its relocation to Williamsburg. A Stuart king names, for ten points, which first permanent English settlement in North America?
 
 [Q2] All three daughters of one ruler of this name were accused of adultery in the Tour de Nesle [NEH-luh]] Affair. One ruler of this name sent his son Louis to go on the Albigensian Crusade. That ruler with this name crushed the English at the Battle of Bouvines [[boo - VEEN]]. A Spanish ruler of this name invaded the Netherlands in the Eighty Years’ War, and that ruler of this name formed a fleet with the aim of d eposing Elizabeth I that was defeated at Gravelines [[grav -LEEN]]. For ten points, give this name of the king who created the Spanish Armada.

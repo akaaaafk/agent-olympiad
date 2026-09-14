@@ -1,5 +1,3 @@
-# Future Innovators Mission 2023
-
 Future Innovators
 Season Challenge 
 Season 2023

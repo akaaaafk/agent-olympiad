@@ -1,0 +1,35 @@
+{
+  "rubric_id": "iol_team_2016_printed_points_v1",
+  "dataset": "iol_team",
+  "title": "IOL 2016 printed weights with partial answer reference",
+  "visibility": "judge_only",
+  "rubric_type": "printed_point_allocation_with_partial_reference",
+  "grading_validation_status": "not_validated",
+  "source_file": "data/raw/iol/iol-2016-team-prob.en.pdf",
+  "source_sha256": "3b69eddf68639d1658376187cd05506e1064aeeba6128464c67e152bb9935130",
+  "source_url": "https://ioling.org/problems/2016/",
+  "limitations": [
+    "Official multilingual solution provides the 114 word-to-audio matches; all 114 WAV recordings are now contestant-visible.",
+    "The six-point observation/explanation part has no explicit marking reference in the recovered answer table.",
+    "Audio-capable runtime delivery and grading have not been validated end to end; the source's unspecified Creative Commons notice is preserved."
+  ],
+  "not_observable_from_deck": [],
+  "total_points": 120,
+  "criteria": [
+    {
+      "id": "a",
+      "name": "Assignment a",
+      "max_score": 114,
+      "source_page": 1,
+      "description": "Printed allocation; full marking/executable evaluation not validated."
+    },
+    {
+      "id": "b",
+      "name": "Assignment b",
+      "max_score": 6,
+      "source_page": 1,
+      "description": "Printed allocation; full marking/executable evaluation not validated."
+    }
+  ],
+  "tie_breaker": null
+}

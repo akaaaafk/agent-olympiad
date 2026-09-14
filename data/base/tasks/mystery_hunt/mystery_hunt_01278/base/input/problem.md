@@ -1,3 +1,5 @@
-# 2010/puzzles/1804/thirteen_at_dinner/
+# Thirteen at Dinner
 
-Thirteen at Dinner Thirteen at Dinner Excerpt from the Journal of Alexander von Humboldt: During the festival, the Aztecs held dinners on six consecutive nights, at a single large table in the plaza near the Moon Pyramid, each attended by thirteen of their most celebrated members. GUEST LIST Aames Asher Beatty Benedict Benedicto Benjamin Berlinger Billingsley Bishop Bos Bronson Brynner Buchholz Campbell Cavarno Chabert Chamberlain Coburn Collins Conte Cronyn Cuka Daly Danza Davis Davis Davis, Jr. Dexter Efroni Evigan Fell Finlay Fox Frederick Gandolfini Gibson Goodeve Guaty Harewood Harvey Hedlund Kay Lawford Leigh-Hunt Lemmon Lester Lister Lom Martin McBride McCarthy McQueen Mueller-Stahl Needham O'Grady Olmos Petersen Pleasance Rampling Raver Reed Reiser Rich Richardson Scott Silva Sinatra Smith Stallone Thorp Vaccaro Vance Vaughn Wahlberg Walters Williamson Wolf Wolf
+Open `puzzle.html` for the original styled task and its image links. The visual packet, including image-map regions, is not replaced by a text preview.
+
+Archive limitation: The original standalone archive page, diagrams, image-map links and applicable style artwork are preserved. Historical wording, repeated names, ordering and fictional premises are not modernized. No physical enactment, cross-task state or end-to-end grading is supplied.

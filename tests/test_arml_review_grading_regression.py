@@ -88,6 +88,7 @@ class ReviewTargetRegressionTests(unittest.TestCase):
             [TaskUnit(task_id, kind="non_programming") for task_id in ids],
             ContestBudgetState(max_turns=10),
         )
+        self.session.current_turn_only = True
         self.session.select_task(ids[0])
         self.own = self.session.create_answer("Final answer: 1", author="Agent_1")
         self.session.select_task(ids[1])
@@ -167,4 +168,3 @@ class ReviewTargetRegressionTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

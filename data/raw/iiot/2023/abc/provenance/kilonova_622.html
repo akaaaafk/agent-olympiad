@@ -1,0 +1,380 @@
+<!doctype html><html lang="en" class="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title> Problem 622: abc </title><link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/favicon-4c414e245fd0188e37bdaf8f14d5a50b41e0ea7feedac4785e036e7983395a4c.ico"><link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32-f4f2da92878553e04bbbfc1f61302889716689791600735f6ca41424a08ffd5c.png"><link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16-046686a00c6bcf7111e8a248032470b42db84fd87ccf2e447420cc49b865a29d.png"><link rel="manifest" href="/static/favicons/site.webmanifest?v=4"><link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg?v=4" color="#5bbad5"><link rel="shortcut icon" href="/static/favicons/favicon-4c414e245fd0188e37bdaf8f14d5a50b41e0ea7feedac4785e036e7983395a4c.ico"><meta name="apple-mobile-web-app-title" content="Kilonova"><meta name="application-name" content="Kilonova"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/static/favicons/browserconfig.xml?v=4"><meta name="theme-color" content="#ffffff"><!-- OpenGraph stuff --><meta property="og:title" content=" Problem 622: abc "><meta property="og:type" content="website"><meta property="og:description" content="abc - propusă la IIOT 2022-23 International Round"><meta name="description" content="abc - propusă la IIOT 2022-23 International Round"><meta property="og:locale" content="ro_RO"><meta property="og:site_name" content="Kilonova"><meta property="og:image" content="/static/ogimage-d0a859bca77285ed6244789da85a7d6a1c03cde09cfc996a5e9383f681bd7f29.jpeg"><!--Dependency bundle--><script id="server_time" type="application/json">"2026-09-13T05:09:47.856067192+02:00"
+</script><script id="platform_info" type="application/json">{"debug":false,"user":null,"admin":false,"user_id":0,"language":"en","langs":{"c":"C","cpp11":"C++11","cpp14":"C++14","cpp17":"C++17","cpp20":"C++20","cpp23":"C++23","golang":"Go","java":"Java","kotlin":"Kotlin","nodejs":"Node.js","outputOnly":"Output Only","pascal":"Pascal","php":"PHP","python3":"Python 3","rust":"Rust"},"sentryDSN":"https://721fd6c540ce127d1098666fa9488e19@o4509937902682112.ingest.de.sentry.io/4509937906090064","internalVersion":"v0.25.2-8f12269","apiPrefix":"/api"}
+</script><script src="/static/bundle-1d9789c1f3b6d9ad7319511629bbc11725c25f501c29c9c148c2d4860c9db846.js"></script><script src="/static/vendored-4a6a59b4a26885d5d703f06ac13841b89149b74176456e22d6ae9690c6af6bb0.js"></script><script>
+        const server_time = JSON.parse(document.getElementById("server_time").textContent);
+        var platform_info = JSON.parse(document.getElementById("platform_info").textContent);
+        bundled.initTime(bundled.dayjs(), bundled.dayjs(server_time));
+        window.htmx.on(("htmx:afterSwap"), (el) => {
+            bundled.initialLoad(el.target);
+        });
+        if(platform_info.debug) {
+            window.htmx.logAll();
+        }
+
+    </script><link rel="stylesheet" href="/static/chroma-e22616d18219ef8564f138f2401aea994227623c7a20928d1d1bcedad3285afe.css"><link rel="stylesheet" href="/static/vendored-7dcb19dce0e980f59c996f7a41f5ae56485e6028ea5ac0ac85cf763c7b2e4b93.css"><link rel="stylesheet" href="/static/styles-9570f3f108ef6f6dbaf307a5cddae43ac59ff0799b23b1517e629ab7cca53ecf.css">
+	<link rel="canonical" href='https://kilonova.ro/problems/622'>
+</head><body hx-ext="morph"><header class="segment-panel my-1 text-2xl md:flex md:justify-between md:px-5 md:py-3 md:items-center"><div class="flex items-center justify-between px-4 py-3 md:p-0"><div class="inline-block"><a class="roboto h-8 black-anchor" href="/">Kilonova</a></div><div class="md:hidden inline-block"><a id="theme_button_mobile" class="text-gray-500 dark:text-gray-300 hover:text-black focus:text-black dark:hover:text-white dark:focus:text-white focus:outline-hidden h-6 w-6 mx-2" href="#"><i id="theme_button_mobile_icon" class="fas fa-fw fa-lightbulb"></i> <span class="fa-sr-only">Toggle theme</span></a> <button id="nav-toggler" type="button" onclick="navbar_mgr.toggleNavbar()" class="fas fa-bars text-gray-500 dark:text-gray-300 hover:text-black focus:text-black dark:hover:text-white dark:focus:text-white focus:outline-hidden h-6 w-6 mx-2" aria-label="Toggle navigation bar"></button></div></div><nav id="nav-dropdown" class="px-2 pt-1 pb-3 md:flex md:p-0 z-50"><a id="theme_button" class="hidden md:block black-anchor mt-1 md:mt-0 md:ml-1 px-2 py-1 rounded-sm hoverable" href="#"><i id="theme_button_mobile_icon" class="fas fa-fw fa-lightbulb"></i> <span class="fa-sr-only">Toggle theme</span></a> <a class="block black-anchor mt-1 md:mt-0 md:ml-1 px-2 py-1 rounded-sm hoverable" href="/problems">Problems</a> <a class="block black-anchor mt-1 md:mt-0 md:ml-1 px-2 py-1 rounded-sm hoverable" href="/contests/official">Contests</a> <a class="block black-anchor mt-1 md:mt-0 md:ml-1 px-2 py-1 rounded-sm hoverable" href="/signup?back=/problems/622">Sign Up</a> <a class="block black-anchor mt-1 md:mt-0 md:ml-1 px-2 py-1 rounded-sm hoverable" href="/login?back=/problems/622">Log In</a></nav></header><script>
+		var navbar_mgr = new bundled.NavBarManager();
+		document
+			.getElementById("theme_button")
+			.addEventListener("click", bundled.toggleTheme);
+		document
+			.getElementById("theme_button_mobile")
+			.addEventListener("click", bundled.toggleTheme);
+	</script><main class="c-container">
+
+
+    
+
+<div class="segment-panel">
+<h1>
+    
+
+    
+	<b>abc</b>
+
+    
+</h1>
+<nav id="topbar_wrapper" class="mt-1">
+    
+
+    <a class="p-1  topbar-selected " href="/problems/622/">
+        Problem Statement
+    </a>
+    
+    
+        <div class="topbar-separator"></div>
+        <a class="p-1 "
+            href="/problems/622/submissions">
+            Submissions
+        </a>
+    
+    
+        <div class="topbar-separator"></div>
+        <a class="p-1 " hx-swap="none" hx-get="/problems/622/statistics?hx_modal=true" href="/problems/622/statistics">Statistics</a>
+    
+    
+    
+    
+
+    
+
+</nav>
+
+</div>
+
+
+	<div class="page-holder">
+		<div class="page-content reset-list enhance-tables statement-content">
+            
+				<label class="block my-2">
+					<span class="form-label">Statement format:</span>
+					<select id="variant-select" class="form-select" autocomplete="off">
+                        
+							<option value="en-md-"
+                                    selected>🇬🇧 English - Markdown</option>
+                        
+							<option value="en-pdf-"
+                                    >🇬🇧 English - PDF</option>
+                        
+					</select>
+				</label>
+            
+			<div class="w-full mb-6 mt-2 text-center">
+				
+				<span class="block">Time limit: 1s</span>
+				<span class="block">Memory limit: 256MB</span>
+				<span class="block">Input: 
+						<kn-glossary name="stdin" content="stdin"></kn-glossary></span>
+				<span class="block">Output: 
+						<kn-glossary name="stdin"
+						             content="stdout"></kn-glossary></span></div>
+			<article class="text-justify">
+                
+                    
+                
+                <p>In the Berlandian school of witchcraft and wizardry, Wartshog, each year newcomer students are distributed between three houses: Andorgryff, Bufflehuff, and Clawenrave. The distribution is done by a hat, called the Distributing Hat. The students put on the hat one by one (in a certain fixed order), and the hat shouts out loud the name of the house to which the student will belong. This year, there are <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span></span></span></span>, and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span></span></span></span> places in the three houses respectively, and the number of new students is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>+</mo><mi>B</mi><mo>+</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A + B + C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span></span></span></span>, so there will be exactly <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> new students in Andorgryff, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span></span></span></span> in Bufflehuff, and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span></span></span></span> in Clawenrave. The Distributing Hat follows one additional rule: <strong>no two consecutive students will be put in the same house</strong>.</p>
+<p>Can you tell how many different ways exist for distributing the students between the houses? Since this number might be very big, you need to give the answer modulo <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mn>9</mn></msup><mo>+</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">10^9 + 7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">7</span></span></span></span>. Two distributions are considered different if at least one student is assigned to a different house.</p>
+<h2 id="input-data">Input data</h2>
+<p>The first line contains <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.1389em;">T</span></span></span></span>, the number of test cases. Each of the following <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.1389em;">T</span></span></span></span> lines contains three integer numbers <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span></span></span></span>.</p>
+<h2 id="output-data">Output data</h2>
+<p>For each test case, output a single number on a separate line, the number of different ways to distribute the students, modulo <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mn>9</mn></msup><mo>+</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">10^9 + 7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">7</span></span></span></span>.</p>
+<h2 id="constraints-and-clarifications">Constraints and Clarifications</h2>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>T</mi><mo>≤</mo><mn>20</mn></mrow><annotation encoding="application/x-tex">1 \le T \le 20</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.1389em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">20</span></span></span></span>;</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo separator="true">,</mo><mi>C</mi><mo>≤</mo><mn>100</mn><mtext> </mtext><mn>000</mn></mrow><annotation encoding="application/x-tex">0 \le A, B, C \le 100 \ 000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">100</span><span class="mspace"> </span><span class="mord">000</span></span></span></span>;</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>+</mo><mi>B</mi><mo>+</mo><mi>C</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">A + B + C \ge 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>;</li>
+<li>The <em>modulo</em> operation <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>a</mi><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(a \bmod m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.0556em;"></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span> can be written in C/C++/Python as <code>(a % m)</code>. To avoid the <em>integer overflow</em> error, remember to reduce all partial results through the modulus, and not just the final result!</li>
+<li><em>Notice that if <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>&lt;</mo><msup><mn>10</mn><mn>9</mn></msup><mo>+</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">x &lt; 10^9 + 7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">7</span></span></span></span>, then <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">2 x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mord mathnormal">x</span></span></span></span> fits into a</em> C/C++ <em><code>int</code></em>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Score</th>
+<th>Restrictions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>Examples.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>6</td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">C = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>9</td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>+</mo><mi>B</mi><mo>+</mo><mi>C</mi><mo>≤</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">A+B+C \le 10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">10</span></span></span></span>.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>19</td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo separator="true">,</mo><mi>C</mi><mo>≤</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">A, B, C \le 100</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">100</span></span></span></span>.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>23</td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo separator="true">,</mo><mi>C</mi><mo>≤</mo><mn>2</mn><mtext> </mtext><mn>000</mn></mrow><annotation encoding="application/x-tex">A, B, C \le 2 \ 000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mspace"> </span><span class="mord">000</span></span></span></span>.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>14</td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>≤</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">C \le 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span>.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>29</td>
+<td>No additional limitations.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<p><code>stdin</code></p>
+<pre><code>5
+2 3 0
+2 2 1
+4 1 1
+100 100 100
+100000 100000 1
+</code></pre>
+<p><code>stdout</code></p>
+<pre><code>1
+12
+0
+105481704
+600000
+</code></pre>
+<h2 id="explanation">Explanation</h2>
+<p>In the <strong>first sample case</strong>, there is only one possible distribution: <code>BABAB</code> (here we write the initial letter of the chosen house for each student in order).</p>
+<p>In the <strong>second sample case</strong>, the 12 possible ways are: <code>ABABC</code>, <code>ABACB</code>, <code>ABCAB</code>, <code>ABCBA</code>, <code>ACBAB</code>, <code>BABAC</code>, <code>BABCA</code>, <code>BACAB</code>, <code>BACBA</code>, <code>BCABA</code>, <code>CABAB</code>, <code>CBABA</code>.</p>
+<p>In the <strong>third sample case</strong>, there will be at least two consecutive <code>A</code>-s in any distribution, so the hat has no way to distribute the students.</p>
+
+			</article>
+			<div style="clear: both"></div>
+		</div>
+
+		<aside class="page-sidebar">
+            
+                
+                    <section id="disclaimer_section" class="segment-panel hidden"><div class="modal-header"><h2 style="margin: 0.25rem;"><i class="fas fa-triangle-exclamation"></i> Disclaimer</h2><button id="disclaimer_close"><i class="modal-close fas fa-xmark"></i></button></div><div class="px-2 py-2">Evaluation results on Kilonova might be different to those during the contest.</div><script>
+            let unauthedStorageKey = "contest_disclaimer_dismissed:unauthed";
+            let storageKey = `contest_disclaimer_dismissed:${window.platform_info.user_id}`
+            if(window.platform_info.user_id === 0) {
+                storageKey = unauthedStorageKey
+            }
+            document.getElementById("disclaimer_close").addEventListener("click", () => {
+                window.localStorage.setItem(storageKey, "disabled");
+                document.getElementById("disclaimer_section").remove();
+            })
+            if(window.localStorage.getItem(storageKey) === null) {
+                if(window.localStorage.getItem(unauthedStorageKey) !== null) {
+                    window.localStorage.removeItem(unauthedStorageKey);
+                    window.localStorage.setItem(storageKey, "disabled");
+                } else {
+                    document.getElementById("disclaimer_section").classList.remove("hidden");
+                }
+            }
+        </script></section>
+                
+                <section class="segment-panel font-semibold"><h2 class="font-normal">Problem info</h2><div class="px-2"><p>ID: 622</p><p>Editor: <a href="/profile/AlexVasiluta">AlexVasiluta</a></p><p>Source: IIOT 2022-23 International Round</p><p x-data="{&#34;open&#34;:false}">Tags:  <span x-show="open" x-cloak><a href="/tags/487"><span class="tag tag-contest text-sm">IIOT</span></a><a href="/tags/294"><span class="tag tag-method text-sm">Combinatorics</span></a>  <a href="#" @click.prevent="open = !open">Hide</a></span> <a href="#" @click.prevent="open = !open" x-show="!open" x-cloak>View</a></p></div></section>
+                
+					<details class="segment-panel" open role="region">
+						<summary>
+							<h2 class="font-normal inline-block">
+								<a href="/problem_lists/226">IIOT 2022-23 International Round</a>
+							</h2>
+						</summary>
+						<div class="reset-list text-lg">
+                            
+                            
+								<ul>
+                                    
+                                        
+										<li>
+											<a  class="topbar-selected p-0" 
+													href="/problems/622?list_id=226">
+                                                abc
+											</a>
+                                            
+										</li>
+                                    
+                                        
+										<li>
+											<a 
+													href="/problems/623?list_id=226">
+                                                binge
+											</a>
+                                            
+										</li>
+                                    
+                                        
+										<li>
+											<a 
+													href="/problems/624?list_id=226">
+                                                cipher
+											</a>
+                                            
+										</li>
+                                    
+                                        
+										<li>
+											<a 
+													href="/problems/625?list_id=226">
+                                                fence
+											</a>
+                                            
+										</li>
+                                    
+                                        
+										<li>
+											<a 
+													href="/problems/626?list_id=226">
+                                                ktree
+											</a>
+                                            
+										</li>
+                                    
+                                        
+										<li>
+											<a 
+													href="/problems/627?list_id=226">
+                                                matgame
+											</a>
+                                            
+										</li>
+                                    
+                                        
+										<li>
+											<a 
+													href="/problems/628?list_id=226">
+                                                publictransport
+											</a>
+                                            
+										</li>
+                                    
+                                        
+										<li>
+											<a 
+													href="/problems/629?list_id=226">
+                                                tetris
+											</a>
+                                            
+										</li>
+                                    
+                                        
+										<li>
+											<a 
+													href="/problems/630?list_id=226">
+                                                tourdetree
+											</a>
+                                            
+										</li>
+                                    
+								</ul>
+                            
+						</div>
+					</details>
+                
+            
+            
+            
+            
+		</aside>
+	</div>
+
+	<script>
+        (() => {
+            for (let el of document.querySelectorAll("[id^='att-name-']")) {
+                el.innerHTML = `<i class="fas ${bundled.getFileIcon(el.innerText)} fa-fw"></i> ${el.innerHTML}`
+            }
+            for (let el of document.querySelectorAll("[id^='att-size-']")) {
+                el.innerText = bundled.sizeFormatter(Number(el.innerText))
+            }
+        })()
+	</script>
+
+	<script>
+        document.getElementById("variant-select")?.addEventListener("change", e => {
+            var params = new URLSearchParams(window.location.search);
+            params.set("var", e.target.value.replace(/-+$/, ""))
+            window.location.search = params.toString()
+        })
+        let prec =  0 ;
+        let strat = "max_submission";
+
+        function formatMaxScore(maxScore) {
+            let score = parseInt(maxScore);
+            if (isNaN(score)) {
+                console.error("Unknown value for maxScore")
+                return "ERR";
+            }
+            if (maxScore < 0) {
+                return "-"
+            }
+            if (strat == "acm-icpc") {
+                if (maxScore == 100) {
+                    return `<i class="fas fa-fw fa-check"></i>`;
+                }
+                return `<i class="fas fa-fw fa-xmark"></i>`;
+            }
+            return bundled.formatScoreStr(maxScore.toFixed(prec)) + "p";
+        }
+
+        const reloaders = document.querySelectorAll(`[data-pbid-reload="622"]`)
+        if (reloaders.length > 0) {
+            document.addEventListener("kn-poll", async () => {
+                
+                const res = await bundled.getCall("/problem/622/maxScore", {})
+                if (res.status === "error") {
+                    console.error(res.data)
+                    return
+                }
+                let val = formatMaxScore(res.data)
+                for (let reloader of reloaders) {
+                    if ("contest_id" in reloader.dataset) {
+                        
+                    } else {
+                        reloader.innerHTML = val
+                    }
+                }
+            })
+        }
+	</script>
+
+    
+
+		<h2 class="mt-3 mb-5"><a href="/login">Log in</a> or <a href="/signup">sign up</a> to be able to send submissions!</h2>
+
+    
+
+</main><div id="modals"></div><footer class="segment-panel my-1"><div class="min-h-0 mx-auto"><div class="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-2 justify-between"><div class="h-auto mb-2"><div class="text-lg">Useful Links</div><ul><li><a class="black-anchor" href="/">Front page</a></li><li><a class="black-anchor" href="/donate">Donate</a></li><li><a class="black-anchor" href="/problems">Problems</a></li><li><a class="black-anchor" href="/contests/official">Contests</a></li><li><a class="black-anchor" href="/submissions">Submissions</a></li><li><a class="black-anchor" href="/posts">Posts</a></li></ul><label class="block my-2"><select id="sessionLang" class="form-select" autocomplete="off"><option value="ro">🇷🇴 Română</option> <option value="en" selected>🇬🇧 English</option></select> <span>Display language</span></label></div><div class="h-auto mb-2"><div class="text-lg">Other information</div><ul><li><span class="black-span"><i class="fas fa-fw fa-code-branch"></i> Kilonova v0.25.2</span></li><li><span class="black-span"><i class="fas fa-fw fa-clock"></i> Server time: <span id="footer_server_time">05:09:47</span></span></li><li><a class="black-anchor" target="_blank" href="/links/discord"><i class="fab fa-fw fa-discord"></i> Discord Server</a></li><li><a class="black-anchor" target="_blank" rel="noopener noreferrer" href="https://github.com/KiloProjects/Kilonova"><i class="fab fa-fw fa-github"></i> GitHub</a></li><li><a class="black-anchor" rel="noopener noreferrer" href="/termsOfService"><i class="fas fa-fw fa-gavel"></i> Terms of service</a></li><li><a class="black-anchor" rel="noopener noreferrer" href="/privacyPolicy"><i class="fas fa-fw fa-unlock"></i> Privacy policy</a></li><li><a class="black-anchor" target="_blank" rel="noopener noreferrer" href="mailto:admin@kilonova.ro?subject=Contact"><i class="fas fa-fw fa-envelope"></i> Contact</a></li></ul></div><div class="h-auto mb-2 reset-list"><div class="text-lg">Credits</div><ul><li class="pl-0"><a class="black-anchor" target="_blank" rel="noopener noreferrer" href="https://github.com/AlexVasiluta">Platform made with <i class="fas fa-fw fa-heart"></i> by Alex Vasiluță </a></li><li class="black-span pl-0">Problems generously uploaded by the Kilonova community</li><li class="black-anchor pl-0">Cu excepția cazurilor unde este specificat diferit, conținutul platformei este publicat sub licența <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>. Vedeți <a href="https://kilonova.ro/posts/creative-commons">aici</a> mai multe detalii. <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" width="88" height="31" src="/static/by-nc-sa-cef48d3b4bee2f938fe8ac2c474b36dd2f08067b0deed6a78c71fa7bff63e7cd.eu.png"></a></li></ul></div></div><details class="text-muted reset-list"><summary>Request statistics (debug info)</summary><ul><li>Prepare duration: 6.470848ms</li><li>Render duration: 15.453015ms</li></ul></details></div></footer><script>
+        document.getElementById("sessionLang").addEventListener("change", (e)=>{
+            e.preventDefault();
+            bundled.setLanguage(e.currentTarget.value)
+        })
+    </script><script data-goatcounter="https://goat.kilonova.ro/count" async src="https://goat.kilonova.ro/count.js"></script></body></html>

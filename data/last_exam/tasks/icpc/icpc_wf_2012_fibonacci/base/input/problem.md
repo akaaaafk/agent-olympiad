@@ -1,5 +1,3 @@
-# Fibonacci Words
-
 Hide 
  Fibonacci Words 
 

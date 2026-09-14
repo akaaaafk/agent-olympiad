@@ -1,3 +1,5 @@
-# 2009/puzzles/message_redacted/PUZZLE/HBS-index.html
+# --MESSAGE REDACTED--
 
---MESSAGE REDACTED-- --MESSAGE REDACTED-- Happy King Day, from Keith Moon Beta Prime Where we're rockin' all the time For our record overlords (Did I say 'overlords'? I meant 'producers') Happy King Day, from Keith Moon Beta Prime! FF0000 00FF00 0000FF
+Open `puzzle.html` and its explicit local attachments for the original task. No text-only preview replaces images, audio/video or PDF sheets.
+
+Archive limitation: The original explicitly linked standalone archive materials are preserved byte-for-byte. Audio/video structure checks are not listening, watching, transcription or semantic grading. Historical full-hunt progression and host interaction are not reproduced. Only the original HBS-index.html view and its three WAV links are included; no historical view changes or timing is inferred or implemented.

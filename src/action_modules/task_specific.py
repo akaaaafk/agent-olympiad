@@ -5,6 +5,8 @@ from functools import partial
 from .contracts import ArgumentSpec, make_action
 from types import MappingProxyType
 from typing import Mapping
+from .competition_tools import SPECS as COMPETITION_TOOL_SPECS
+from .competition_flow import SPECS as FLOW_SPECS, ACTION_NAMES as FLOW_ACTIONS, flow_type
 
 _action = partial(make_action, module="task_specific")
 
@@ -58,6 +60,8 @@ SPECS = (
 )
 
 
+SPECS = SPECS + COMPETITION_TOOL_SPECS + FLOW_SPECS
+
 _PROGRAMMING_COMPETITIONS = frozenset({"icpc", "iiot", "codeforces"})
 _MATH_COMPETITIONS = frozenset(
     {
@@ -91,6 +95,8 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 
 
 def is_answer_sheet_contest(manifest: ContestManifest) -> bool:
+    if flow_type(manifest):
+        return False  # Each set/recognized spoken answer has its own hand-in.
     if manifest.metadata.get("artifact_contract"):
         return True  # One reviewed, frozen deliverable; no answer rewrite on submit.
     return len(manifest.tasks) > 1 and all(
@@ -185,7 +191,13 @@ def resolve_contest_interface(
             if (spec.is_tool or spec.name == "submit_code") and permitted is not None and spec.name not in permitted:
                 continue
             specs.add(spec)
-    delivery = "per_task_answer"
+    selected_flow = flow_type(manifest)
+    if not selected_flow:
+        specs = {spec for spec in specs if spec.name not in FLOW_ACTIONS}
+    else:
+        specs = {spec for spec in specs if spec.name not in {"submit", "finish_contest"}}
+        issues.add("competition_flow:single_team_turn_budget_no_opponents_or_appeals")
+    delivery = selected_flow or "per_task_answer"
     if all(task.programming for task in manifest.tasks) and manifest.tasks:
         delivery = "programming_judge"
     if is_answer_sheet_contest(manifest):

@@ -1,6 +1,6 @@
 {
   "rubric_id": "arml_national_power_2010_v1",
-  "title": "Power Round \u2014 2010 \u2014 ARML Power sub-problem rubric",
+  "title": "Power Round — 2010 — ARML Power sub-problem rubric",
   "total_points": 50.0,
   "criteria": [
     {
@@ -50,7 +50,7 @@
       "name": "Problem 3b (award 2)",
       "max_score": 3.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 3b (award 2) (3 pts). Statement: 3b. Given three mutually tangent circles with curvatures a,b,c> 0, suppose that (a,b,c, 0) does not satisfy Descartes\u2019 Circle Formula. Show that there are two distinct values of r such that there is a circle of radius r tangent to the given circles."
+      "description": "Correct, justified solution to Problem 3b (award 2) (3 pts). Statement: 3b. Given three mutually tangent circles with curvatures a,b,c> 0, suppose that (a,b,c, 0) does not satisfy Descartes’ Circle Formula. Show that there are two distinct values of r such that there is a circle of radius r tangent to the given circles."
     },
     {
       "id": "problem_04a",
@@ -64,28 +64,28 @@
       "name": "Problem 4b",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 4b (2 pts). Statement: 4. Let \u03c6 = 1 + \u221a 5 2 , and let \u03c1 =\u03c6 +\u221a\u03c6. a. Prove that \u03c14 = 2\u03c13 + 2\u03c12 + 2\u03c1\u2212 1."
+      "description": "Correct, justified solution to Problem 4b (2 pts). Statement: 4. Let φ = 1 + √ 5 2 , and let ρ =φ +√φ. a. Prove that ρ4 = 2ρ3 + 2ρ2 + 2ρ− 1."
     },
     {
       "id": "problem_04c",
       "name": "Problem 4c",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 4c (2 pts). Statement: b. Show that four pairwise externally tangent circles with nonequal radii in geometric progression must have common ratio \u03c1."
+      "description": "Correct, justified solution to Problem 4c (2 pts). Statement: b. Show that four pairwise externally tangent circles with nonequal radii in geometric progression must have common ratio ρ."
     },
     {
       "id": "problem_05",
       "name": "Problem 5",
       "max_score": 4.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 5 (4 pts). Statement: 5. Use Descartes\u2019 Circle Formula to show that a\u2032 = 2s\u2212 3a and therefore s\u2032 =a\u2032 +b +c +d = 3s\u2212 4a."
+      "description": "Correct, justified solution to Problem 5 (4 pts). Statement: 5. Use Descartes’ Circle Formula to show that a′ = 2s− 3a and therefore s′ =a′ +b +c +d = 3s− 4a."
     },
     {
       "id": "problem_06a",
       "name": "Problem 6a",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 6a (2 pts). Statement: 6a. Use the result of problem 5 to compute the curvatures of all circles removed on day 2, and the corresponding values of s\u2032."
+      "description": "Correct, justified solution to Problem 6a (2 pts). Statement: 6a. Use the result of problem 5 to compute the curvatures of all circles removed on day 2, and the corresponding values of s′."
     },
     {
       "id": "problem_06b",
@@ -120,7 +120,7 @@
       "name": "Problem 8a",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 8a (2 pts). Statement: 8a. Suppose that A\u2032 is a circle conjugate to A with centerzA\u2032 and curvaturea\u2032, and \u02c6s =a\u00b7zA +b\u00b7 zB +c\u00b7zC +d\u00b7zD. Use Descartes\u2019 Extended Circle Formula to show that a\u2032\u00b7zA\u2032 = 2\u02c6s\u2212 3a\u00b7zA and therefore a\u2032\u00b7zA\u2032 +b\u00b7zB +c\u00b7zC +d\u00b7zD = 3\u02c6s\u2212 4a\u00b7zA."
+      "description": "Correct, justified solution to Problem 8a (2 pts). Statement: 8a. Suppose that A′ is a circle conjugate to A with centerzA′ and curvaturea′, and ˆs =a·zA +b· zB +c·zC +d·zD. Use Descartes’ Extended Circle Formula to show that a′·zA′ = 2ˆs− 3a·zA and therefore a′·zA′ +b·zB +c·zC +d·zD = 3ˆs− 4a·zA."
     },
     {
       "id": "problem_08b",
@@ -162,7 +162,7 @@
       "name": "Problem 10b",
       "max_score": 3.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 10b (3 pts). Statement: 10b. If \u03c1 =\u03c6 +\u221a\u03c6, as in problem 4, prove that the curvature of the smallest plot sold by the king on day n does not exceed 2\u03c1n."
+      "description": "Correct, justified solution to Problem 10b (3 pts). Statement: 10b. If ρ =φ +√φ, as in problem 4, prove that the curvature of the smallest plot sold by the king on day n does not exceed 2ρn."
     }
   ],
   "not_observable_from_deck": [

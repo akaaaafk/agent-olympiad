@@ -1116,7 +1116,7 @@ class ContestRunnerTests(unittest.TestCase):
         core = {
             "select_problem", "speak", "work",
             "submit", "skip_problem", "rest", "finish_contest", "execute_code",
-            "submit_code",
+            "submit_code", "check_icpc_io_cases",
             "inspect_problem", "triage_problem", "check_budget", "query_rules",
         }
         surfaces = {
@@ -1666,7 +1666,8 @@ class ContestRunnerTests(unittest.TestCase):
         recall_result = next(e for e in memory.view("Agent_1") if e.kind == "recall_result")
         self.assertEqual(recall_result.payload["notes"][0]["content"], "q2 looks like a telescoping sum")
         self.assertEqual(recall_result.payload["notes"][0]["note_id"], note_events[0].event_id)
-        self.assertEqual(len(recall_result.payload["notes"]), 2)
+        self.assertEqual(len(recall_result.payload["notes"]), 1)
+        self.assertEqual(len(memory.recall("Agent_1")), 2)  # Explicit cross-task browse.
 
         with self.assertRaises(ValueError):
             apply("Agent_2", "share_note", {"note_id": note_events[0].event_id})

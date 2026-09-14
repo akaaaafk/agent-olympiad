@@ -1,5 +1,3 @@
-# VarsityJV_Bowl-Round-4
-
 [Q1] The Long Trail was constructed in this state and runs its entire length ending at the Canadian border in the north . This US state was briefly an independent country from 1777 to 1791, and during the Revolutionary War, the Green Mountain Boys were considered part of the militia from this colony. For ten points, name this New England state, today governed from Montpelier.
 
 [Q2] During the early years of this route’s existence, ice -breaking ferries like the SS Angara provided a linkage over a large lake. This route was used to transport natural rubber from Southeast Asia to Europe, and Kurt Gödel [[ GUR-duhl]] and Bette Erlich Lowenstein took this transportation line during their escape from Nazi Germany. The Circum -Baikal Railway was once part of, for ten points, what rail line which runs from Vladivostok to Moscow?

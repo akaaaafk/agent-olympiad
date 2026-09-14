@@ -1,5 +1,3 @@
-# Herding Cats
-
 Hide 
  Herding Cats 
 

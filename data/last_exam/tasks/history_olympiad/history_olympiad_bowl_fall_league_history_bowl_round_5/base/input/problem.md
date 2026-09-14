@@ -1,5 +1,3 @@
-# Fall-League-History-Bowl_Round-5
-
 [Q1] An 8 inch tall statue of Mao Zedong was placed at this site by an expeditionary team led by Wang Fuzhou [[WAHNG FOO-ZHOH]] who used the "human ladder" technique to reach it. The 1970 Khumbu Icefall killed various local contractors working to prepare Japanese skier Yūichirō Miura's attempt to ski down this peak. This mountain, also called Sagarmatha, was first summitted by Tenzing Norgay and Sir Edmund Hillary. For ten points, name this Himalayan mountain on the Nepal-China border, the highest point on Earth.
 
 [Q2] Johann Wolfgang Döbereiner [[DUH-buh-"rye"-nuh]] named a set of triads in an early formulation of this display. John Newlands att empted to create this display, which was inspired by the observations of Lothar Meyer. Some members of this diagram were originally prefixed "eka -," and this diagram once contained entries such as coronium and aether. Containing components like hydrogen an d helium, for ten points, what diagram, developed by Dmitri Mendeleev [[men-deh-LEY-eff]], organizes the chemical elements?

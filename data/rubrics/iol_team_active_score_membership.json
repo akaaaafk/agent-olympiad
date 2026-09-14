@@ -1,0 +1,293 @@
+{
+  "visibility": "judge_only",
+  "dataset": "iol_team",
+  "active_records": 18,
+  "excluded_years": [
+    2004,
+    2005
+  ],
+  "official_aggregate_max_score": null,
+  "historical_scores_modified": false,
+  "aggregation_policy": "Exclude removed IDs from earned and possible membership together. Do not pool proxy capacities with official points. 2024 tie-break M is separate from regular score.",
+  "records": [
+    {
+      "problem_id": "iol_team_2003",
+      "year": 2003,
+      "official_total_points": null,
+      "evaluation_status": "not_ready",
+      "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+      "scoring_components": null
+    },
+    {
+      "problem_id": "iol_team_2007",
+      "year": 2007,
+      "official_total_points": null,
+      "evaluation_status": "not_ready",
+      "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+      "scoring_components": null
+    },
+    {
+      "problem_id": "iol_team_2008",
+      "year": 2008,
+      "official_total_points": null,
+      "evaluation_status": "ready",
+      "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+      "scoring_components": null
+    },
+    {
+      "problem_id": "iol_team_2009",
+      "year": 2009,
+      "official_total_points": null,
+      "evaluation_status": "ready",
+      "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+      "scoring_components": null
+    },
+    {
+      "problem_id": "iol_team_2010",
+      "year": 2010,
+      "official_total_points": null,
+      "evaluation_status": "ready",
+      "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+      "scoring_components": null
+    },
+    {
+      "problem_id": "iol_team_2011",
+      "year": 2011,
+      "official_total_points": null,
+      "evaluation_status": "not_ready",
+      "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+      "scoring_components": null
+    },
+    {
+      "problem_id": "iol_team_2012",
+      "year": 2012,
+      "official_total_points": null,
+      "evaluation_status": "not_ready",
+      "rubric_path": "data/rubrics/iol_team_2012_structured_reference_v1.json",
+      "scoring_components": {
+        "official_total_points": null,
+        "official_item_weights_verified": false,
+        "legacy_benchmark_proxy_points": 100,
+        "legacy_proxy_enabled": false,
+        "item_count_is_not_a_score": true
+      }
+    },
+    {
+      "problem_id": "iol_team_2014",
+      "year": 2014,
+      "official_total_points": null,
+      "evaluation_status": "ready_with_limitations",
+      "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+      "scoring_components": null
+    },
+    {
+      "problem_id": "iol_team_2015",
+      "year": 2015,
+      "official_total_points": null,
+      "evaluation_status": "ready",
+      "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+      "scoring_components": null
+    },
+    {
+      "problem_id": "iol_team_2016",
+      "year": 2016,
+      "official_total_points": 120,
+      "evaluation_status": "not_ready",
+      "rubric_path": "data/rubrics/iol_team_2016_printed_points_v1.json",
+      "scoring_components": {
+        "total_points": 120,
+        "criteria": [
+          {
+            "id": "a",
+            "name": "Assignment a",
+            "max_score": 114,
+            "source_page": 1,
+            "description": "Printed allocation; full marking/executable evaluation not validated."
+          },
+          {
+            "id": "b",
+            "name": "Assignment b",
+            "max_score": 6,
+            "source_page": 1,
+            "description": "Printed allocation; full marking/executable evaluation not validated."
+          }
+        ],
+        "tie_breaker": null
+      }
+    },
+    {
+      "problem_id": "iol_team_2017",
+      "year": 2017,
+      "official_total_points": null,
+      "evaluation_status": "not_ready",
+      "rubric_path": "data/rubrics/iol_team_2017_structured_reference_v1.json",
+      "scoring_components": {
+        "official_total_points": null,
+        "official_item_weights_verified": false,
+        "legacy_benchmark_proxy_points": 100,
+        "legacy_proxy_enabled": false,
+        "description_count_is_not_a_score": true
+      }
+    },
+    {
+      "problem_id": "iol_team_2018",
+      "year": 2018,
+      "official_total_points": null,
+      "evaluation_status": "ready",
+      "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+      "scoring_components": null
+    },
+    {
+      "problem_id": "iol_team_2019",
+      "year": 2019,
+      "official_total_points": null,
+      "evaluation_status": "not_ready",
+      "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+      "scoring_components": null
+    },
+    {
+      "problem_id": "iol_team_2021",
+      "year": 2021,
+      "official_total_points": null,
+      "evaluation_status": "ready",
+      "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+      "scoring_components": null
+    },
+    {
+      "problem_id": "iol_team_2022",
+      "year": 2022,
+      "official_total_points": 100,
+      "evaluation_status": "not_ready",
+      "rubric_path": "data/rubrics/iol_team_2022_printed_points_v1.json",
+      "scoring_components": {
+        "total_points": 100,
+        "part_totals": {
+          "I": 25,
+          "II": 25,
+          "III": 25,
+          "IV": 25
+        },
+        "within_part_weights_verified": false
+      }
+    },
+    {
+      "problem_id": "iol_team_2023",
+      "year": 2023,
+      "official_total_points": null,
+      "evaluation_status": "ready",
+      "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+      "scoring_components": null
+    },
+    {
+      "problem_id": "iol_team_2024",
+      "year": 2024,
+      "official_total_points": 90,
+      "evaluation_status": "not_ready",
+      "rubric_path": "data/rubrics/iol_team_2024_printed_points_v1.json",
+      "scoring_components": {
+        "total_points": 90,
+        "criteria": [
+          {
+            "id": "A",
+            "name": "Assignment A",
+            "max_score": 2,
+            "source_page": 3,
+            "description": "Printed allocation; full marking/executable evaluation not validated."
+          },
+          {
+            "id": "B",
+            "name": "Assignment B",
+            "max_score": 2,
+            "source_page": 3,
+            "description": "Printed allocation; full marking/executable evaluation not validated."
+          },
+          {
+            "id": "C",
+            "name": "Assignment C",
+            "max_score": 2,
+            "source_page": 3,
+            "description": "Printed allocation; full marking/executable evaluation not validated."
+          },
+          {
+            "id": "D",
+            "name": "Assignment D",
+            "max_score": 2,
+            "source_page": 3,
+            "description": "Printed allocation; full marking/executable evaluation not validated."
+          },
+          {
+            "id": "E",
+            "name": "Assignment E",
+            "max_score": 10,
+            "source_page": 6,
+            "description": "Printed allocation; full marking/executable evaluation not validated."
+          },
+          {
+            "id": "F",
+            "name": "Assignment F",
+            "max_score": 8,
+            "source_page": 7,
+            "description": "Printed allocation; full marking/executable evaluation not validated."
+          },
+          {
+            "id": "G",
+            "name": "Assignment G",
+            "max_score": 20,
+            "source_page": 7,
+            "description": "Printed allocation; full marking/executable evaluation not validated."
+          },
+          {
+            "id": "H",
+            "name": "Assignment H",
+            "max_score": 3,
+            "source_page": 7,
+            "description": "Printed allocation; full marking/executable evaluation not validated."
+          },
+          {
+            "id": "I",
+            "name": "Assignment I",
+            "max_score": 4,
+            "source_page": 7,
+            "description": "Printed allocation; full marking/executable evaluation not validated."
+          },
+          {
+            "id": "J",
+            "name": "Assignment J",
+            "max_score": 5,
+            "source_page": 7,
+            "description": "Printed allocation; full marking/executable evaluation not validated."
+          },
+          {
+            "id": "K",
+            "name": "Assignment K",
+            "max_score": 4,
+            "source_page": 7,
+            "description": "Printed allocation; full marking/executable evaluation not validated."
+          },
+          {
+            "id": "L",
+            "name": "Assignment L",
+            "max_score": 28,
+            "source_page": 8,
+            "description": "Printed allocation; full marking/executable evaluation not validated."
+          }
+        ],
+        "tie_breaker": {
+          "id": "M",
+          "max_score": 10,
+          "source_page": 9,
+          "graded_only_on_top_score_tie": true,
+          "included_in_regular_total": false
+        }
+      }
+    },
+    {
+      "problem_id": "iol_team_2025",
+      "year": 2025,
+      "official_total_points": null,
+      "evaluation_status": "ready",
+      "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+      "scoring_components": null
+    }
+  ]
+}

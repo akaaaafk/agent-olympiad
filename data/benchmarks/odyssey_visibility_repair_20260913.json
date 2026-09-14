@@ -1,0 +1,19 @@
+{
+  "status": "completed",
+  "backup": "data/excluded/integrity_repair_20260913T192819Z",
+  "removed_from_initial_inputs": [
+    "data/base/tasks/odyssey_of_the_mind/odyssey_of_the_mind_spontaneous_examples_page/base/input/spontaneous_examples.md",
+    "data/last_exam/tasks/odyssey_of_the_mind/odyssey_of_the_mind_spontaneous_examples_page/base/input/spontaneous_examples.md"
+  ],
+  "original_source_retained": true,
+  "readiness_unchanged": true,
+  "scores_unchanged": true,
+  "verification": {
+    "initial_examples": 3,
+    "staged_input_copies_verified": 4,
+    "original_source_unchanged": true,
+    "judge_guidance_excluded": true,
+    "deferred_instructions_excluded": true,
+    "official_scoring_not_invented": true
+  }
+}

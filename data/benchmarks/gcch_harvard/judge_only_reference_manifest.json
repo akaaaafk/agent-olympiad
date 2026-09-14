@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "role": "judge_only_reference_inventory",
+  "note": "Completed team decks are references, not independent contestant tasks. No year-only pairing to a case is asserted.",
+  "assets": [
+    {
+      "path": "data/raw/gcch_harvard/gcch_03.pdf",
+      "mime_type": "application/pdf",
+      "role": "judge_only",
+      "sha256": "deccf9158ebbad68d4ddd9ab75a77a2c144dcae43df391d2ef36b6cca14208b9"
+    },
+    {
+      "path": "data/raw/gcch_harvard/gcch_04.pdf",
+      "mime_type": "application/pdf",
+      "role": "judge_only",
+      "sha256": "7b2cb6a26d4f03e0d57cc67570fad69bf8130d109efe7219138d4d2b45db4ce6"
+    },
+    {
+      "path": "data/raw/gcch_harvard/gcch_05.pdf",
+      "mime_type": "application/pdf",
+      "role": "judge_only",
+      "sha256": "44c111aba05de3284baf1ed53cf3370284c7c1f42274d3f1177b728299cc10f6"
+    },
+    {
+      "path": "data/raw/gcch_harvard/gcch_06.pdf",
+      "mime_type": "application/pdf",
+      "role": "judge_only",
+      "sha256": "a87bdf9b2be4a2ba90f09876da8788b037ca44d33aee47cf8f7d8dbd6cc48064"
+    },
+    {
+      "path": "data/raw/gcch_harvard/gcch_08.pdf",
+      "mime_type": "application/pdf",
+      "role": "judge_only",
+      "sha256": "537016b85078c70551e5133bacd01f6b27bfa610d69c62aba9b1d5ca029ff0ea"
+    },
+    {
+      "path": "data/raw/gcch_harvard/gcch_09.pdf",
+      "mime_type": "application/pdf",
+      "role": "judge_only",
+      "sha256": "59a71d503a302cc8d2ec6368681d0ad09ba813dbeeb99d4b944d85398bdeaa39"
+    },
+    {
+      "path": "data/raw/gcch_harvard/gcch_10.pdf",
+      "mime_type": "application/pdf",
+      "role": "judge_only",
+      "sha256": "0899883df342dc0addb75e8ceb7112fd91be13971ffda6f262a6116bfff2d85d"
+    },
+    {
+      "path": "data/raw/gcch_harvard/gcch_13.pdf",
+      "mime_type": "application/pdf",
+      "role": "judge_only",
+      "sha256": "8e124164166fe3d734abae002c9e913424c64c5e982b937f79fb11d77c7ff1cd"
+    },
+    {
+      "path": "data/raw/gcch_harvard/gcch_15.pdf",
+      "mime_type": "application/pdf",
+      "role": "judge_only",
+      "sha256": "ac1657f6f2abf5c292f5883839f3e8bf9afe044432a6d158b3d5edf7744e9f36"
+    }
+  ]
+}

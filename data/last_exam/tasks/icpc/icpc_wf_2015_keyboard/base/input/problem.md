@@ -1,5 +1,3 @@
-# Keyboarding
-
 Hide 
  Keyboarding 
 

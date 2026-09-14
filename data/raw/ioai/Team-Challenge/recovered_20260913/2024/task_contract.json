@@ -1,0 +1,36 @@
+{
+  "problem_id": "ioai_team_2024_practical",
+  "year": 2024,
+  "authority": "Selected edition only; the original task PDF controls exact requirements.",
+  "task_source": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/IOAI_ Practical round assignment.pdf",
+  "source_sha256": "e635e5b72a07aade991544819e35a07b5affeea3d8f8ea7f76fc010a369dd8cf",
+  "official_minutes": 240,
+  "deliverable": "cover_image_and_music_video_with_process_documentation",
+  "required_artifacts": [
+    "Framed cover image at least 1024 by 1024 pixels",
+    "47-second video exported from NeuralFrames without upscaling",
+    "Image AI/non-AI tool usage and prompting strategy",
+    "Video style, included objects, extra tools and timeline screenshots"
+  ],
+  "tools": {
+    "image": "Free AI or non-AI image editing tools; entirely non-AI images are permitted.",
+    "provided": "Basic Midjourney via Discord on monitored screens; NeuralFrames model-training credits.",
+    "video": "Render entirely in NeuralFrames, one tab at a time; no subsequent video editing.",
+    "supplementary": "The task allows additional free AI tools and LLMs for concepts and workflow, and artist images from the web."
+  },
+  "raw_task_maxima": {
+    "image_cover": 40,
+    "music_video": 40
+  },
+  "ranking_weight_ratio": {
+    "image_cover": 40,
+    "music_video": 60
+  },
+  "final_ranking_formula": null,
+  "rubric_pages": [
+    2,
+    3,
+    4,
+    5
+  ]
+}

@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 1986
-
 # Odyssey of the Mind — 1986 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Treasure HuntersDivisions II & IIIPrepare a computer program that produces computer output for guiding team members in successfully retrieving and moving several items on a 49-square grid laid out on the floor. During competition, the team will randomly select a map indicating the location of the items and a hazard. The computer program must be developed in advance and modified during competition. Based on the output provided by a computer operator, two team members (Communicators) will direct two other team members (Hunters) in traveling from square to square, retrieving and moving the items as required. Communicators must direct the Hunters only by sight (no talking or touching). Each square may be entered only once, diagonal moves are prohibited, and each Hunter is limited to 25 moves total. Time limit: 10 min. Cost limit: $40 USD.
 5. Bridging the GapDivisions I, II & IIIDesign and build a pair of structures using strips of balsa wood glued to support the greatest weight. The structures will include a beam 12 to 18 inches in length and a load-bearing element, not more than 6 inches in length, which sits atop the beam. Each structure must be at least 2 inches high, and the pair of structures must be 8 to 8″ inches high. The pair must not weigh more than 25 grams. During competition, the beam rests on two 2-inch by 4-inch blocks placed 11 inches apart. Time limit: 8 min.
 6. Happy Birthday
+

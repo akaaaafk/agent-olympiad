@@ -1,5 +1,3 @@
-# Bowl-Round-7-HS-1
-
 [Q1] An organization founded by this man gained prominence after publishing the “Collateral Murder” video, along with other materials provided by Chelsea Manning. In 2010, Sweden requested that this man be extradited on allegations of sexual assault. This man was granted asylum by Ecuador in 2012, and currently resides in its London embassy. For ten points, name this whistleblower who founded WikiLeaks.
 
 [Q2] During this event, Richard Palmes attacked Thomas Preston with a club, prompting a volley of gunfire that killed Crispus Attucks. John Adams controversially agreed to defend a group of British soldiers accused of murder for their roles in this event. For ten points, name this 1770 killing of five protesters in Massachusetts.

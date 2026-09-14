@@ -1,5 +1,3 @@
-# Crystal Crosswind
-
 Hide 
  Crystal Crosswind 
 

@@ -1,0 +1,211 @@
+# Team method
+
+## Collaboration configuration
+
+```json
+{
+  "agent_constraints": [
+    "Compete as three co-located teammates with one shared workstation—not as three independent remote solvers.",
+    "Begin with the same contestant permissions as both teammates; do not assume a permanent driver or reviewer office.",
+    "Treat private reasoning as unknown to teammates until you communicate it.",
+    "Only one teammate should edit/test/submit at a time; others continue off-workstation reasoning.",
+    "After a rejected run, construct a failing hypothesis before rewriting.",
+    "Do not use Internet access, external LLMs, search engines, or outside problem-solving help."
+  ],
+  "agent_roles": [
+    {
+      "name": "Agent_1",
+      "title": "contestant",
+      "may_submit": true,
+      "duties": [
+        "Scout, solve, implement, test, review, debug, or coordinate as current team needs require.",
+        "Share decision-relevant discoveries and transfer work with explicit context."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_2",
+      "title": "contestant",
+      "may_submit": true,
+      "duties": [
+        "Scout, solve, implement, test, review, debug, or coordinate as current team needs require.",
+        "Share decision-relevant discoveries and transfer work with explicit context."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_3",
+      "title": "contestant",
+      "may_submit": true,
+      "duties": [
+        "Scout, solve, implement, test, review, debug, or coordinate as current team needs require.",
+        "Share decision-relevant discoveries and transfer work with explicit context."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    }
+  ],
+  "information_policy": {
+    "mode": "shared",
+    "shared": [
+      "problem",
+      "contest_rules",
+      "team_discussion",
+      "scratchpad"
+    ],
+    "coordination_requirement": "Private reasoning is not silently copied; discoveries needed by teammates must be communicated."
+  },
+  "rule_sections": {
+    "competition_format": [
+      "Simulation: one Codeforces programming problem with local sample judging and optional remote VJudge submission."
+    ],
+    "shared_workstation_protocol": [
+      "Simulation choice: at most one teammate edits, executes, or submits at a time.",
+      "Simulation choice: hand off algorithm, edge cases, and source state when transferring work."
+    ],
+    "failure_recovery": [
+      "Simulation choice: after CE/RE/TLE/WA, diagnose before resubmitting."
+    ],
+    "timeline": [
+      "Apply the execution timing and selectors in this rule card."
+    ],
+    "resource_policy": [
+      "internet: forbidden",
+      "calculator: forbidden",
+      "code_execution: shared_workstation_only",
+      "paper_pencil: allowed",
+      "unapproved_materials: forbidden",
+      "shared_workstation: True",
+      "shared_workstation_count: 1",
+      "extra_computers: forbidden",
+      "external_llms_and_search_engines: forbidden",
+      "outside_communication: forbidden"
+    ],
+    "collaboration_protocol": [
+      "Three contestants collaborate on one shared programming workstation for a Codeforces problem proxied through VJudge."
+    ],
+    "integrity_and_compliance": [
+      "Compete as three co-located teammates on one shared workstation for this Codeforces problem.",
+      "Only one contestant at a time may edit, execute local tests, or submit a run.",
+      "Do not use the public Internet, external LLMs, search engines, or outside help.",
+      "Submit a complete stdin/stdout program; only an Accepted remote/local judge result solves the problem.",
+      "After a rejected run, diagnose before thrashing the same approach."
+    ],
+    "deliverable_format": [
+      "Submit a complete stdin/stdout program through submit_code / submit."
+    ],
+    "evaluation_criteria": [
+      "Report local sample verdicts and optional remote VJudge verdicts separately from collaboration quality. Prefer Accepted with diagnosis-backed recovery after rejects. Do not reward message volume alone."
+    ],
+    "runtime_limitations": [
+      "Team size is a simulation choice for collaboration schemas; Codeforces problems are normally individual.",
+      "Remote judging uses an experimental local VJudge gateway when configured."
+    ]
+  },
+  "deliberation": {
+    "mode": "unstructured",
+    "min_challenges": 0,
+    "evaluation_dimensions": [
+      "evidence_responsiveness",
+      "decision_traceability"
+    ]
+  },
+  "communication": {
+    "mode": "unlimited"
+  },
+  "simulation": {
+    "max_turns": 12,
+    "scheduler": "src_collaboration_draft",
+    "open_table_coach": {
+      "enabled": true,
+      "status": "counterfactual_synthetic_baseline_not_official_codeforces_rule",
+      "may_submit": false,
+      "allowed_tools": [],
+      "counts_toward_shared_api_and_token_budget": true,
+      "contestant_turn_policy": {
+        "mode": "private_deliberation_then_single_action",
+        "allowed_actions": [
+          "work",
+          "speak",
+          "rest",
+          "submit_code"
+        ],
+        "exactly_one_action": true,
+        "unstructured_response": "rest",
+        "final_submission": "reviewed_answer_sheet",
+        "visibility": {
+          "think": "private",
+          "work": "shared",
+          "speak": "team",
+          "rest": "private",
+          "submit_code": "team"
+        },
+        "max_chars_by_action": {
+          "think": 2400,
+          "work": 4000,
+          "speak": 320,
+          "rest": 80,
+          "submit_code": 12000
+        },
+        "memory_entries": {
+          "private_think_per_agent": 3,
+          "shared_work": 18,
+          "group_messages": 12,
+          "public_messages": 24
+        },
+        "private_think_calls_per_turn": 1,
+        "discussion_policy": {
+          "report_after_work": true,
+          "silent_work_turn_requires_discussion": true,
+          "conflicts_require_targeted_speak": true
+        }
+      },
+      "precontest_brief": {
+        "turn": 0,
+        "problem_access": false,
+        "allowed_actions": [
+          "speak",
+          "rest"
+        ],
+        "advice_scope": [
+          "time allocation",
+          "task triage",
+          "communication protocol",
+          "sample testing discipline",
+          "rejected-run diagnosis before rewrite"
+        ]
+      },
+      "opening_discussion": {
+        "enabled": false,
+        "problem_access": false,
+        "allowed_actions": [],
+        "purpose": "Coach exits permanently after the single turn-0 blind brief."
+      },
+      "after_opening_access": false,
+      "min_turns": 10,
+      "protocol_version": "otc_turn0_review_v1",
+      "review_required": true,
+      "action_surface": "registry_bundles_v1",
+      "action_bundles": [
+        "common",
+        "desk",
+        "memory",
+        "independent_review",
+        "competition_tools",
+        "deliberation_if_structured"
+      ]
+    },
+    "turn_budget_basis": "official duration 60 min / 5 min per turn = 12 turns (hard cap 90); src/contest_budget.py is the source of truth",
+    "repair_budget_after_rejected_run": 2
+  }
+}
+```
+

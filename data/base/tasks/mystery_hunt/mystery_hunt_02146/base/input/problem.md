@@ -1,3 +1,5 @@
-# 2016/puzzle/blazing_trails
+# Blazing Trails
 
-Blazing Trails &mdash; Dreamtime &mdash; MIT Mystery Hunt 2016 Toggle navigation Home Navigation All Puzzles FAQ Call in Answer --> Solution Blazing Trails [View this puzzle as a PDF]
+Open `puzzle.html` and its linked original PDF. All PDF pages are required; text extraction does not replace visual clues.
+
+Archive limitation: The explicitly linked original PDF and its original page order are preserved byte-for-byte, without re-export, OCR replacement or solved annotations. Original grids, colored marks, pictures, blank regions and repeated clue wording are task content, not inferred errors. Archive navigation, solution links and sheep/status scripts are removed; artwork attribution text remains, with its hyperlink inert. Original same-year Bootstrap fonts and unused archive-logo file repair the source CSS paths documented in the static batch. Source-named Google fonts are current snapshots with OFL texts, not certified 2016 binary versions. Gold, total points, splits, license and grading/runtime readiness are unchanged and not recertified. Both separately printed 8W clues are retained; direction labels, one/two right-angle-turn rules and wording about paint marks are not deduplicated or solved. No colored marks are invented for the printed grid.

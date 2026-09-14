@@ -1,30 +1,13 @@
-# Task SOP
+# Task
 
-## Reference Environment
-- Competition: National High School Ethics Bowl
-- Competition id: `ethics_bowl_nhseb`
-- Problem id: `ethics_bowl_nhseb_2014-15-national-case-set`
-- Task type: `ethics_case_set`
-- Team size: 5
-- Year / edition: 2014
-- Source: https://nhseb.org/case-library
+Competition: ethics_bowl_nhseb
 
-## Goal
-As a multi-agent team, solve the olympiad-style team task using only the materials under `base/input`. Produce the required deliverable (`team_submission`).
+Task: ethics_bowl_nhseb_2014-15-national-case-set
 
-## Task directory
-- Variant root: `base`
-- Input directory: `base/input`
+Edition: 2014
 
-## Inputs
-- `problem.md`
-- `2014-15-national-case-set.pdf`
+Team size: 5
 
-## Title
-2014-15-national-case-set
+Deliverable: ethics_bowl_match_speeches
 
-## Deterministic Evaluation Rule
-Gold answers and official solution booklets are not provided in `input/`. Scoring uses the evaluator declared on the task card (gold match, rubric LLM judge, slide judge, or deferred sandbox).
-
-## Deliverables
-Return the team `team_submission` expected by this competition.
+Use the attached problem materials and the inherited competition and collaboration instructions.

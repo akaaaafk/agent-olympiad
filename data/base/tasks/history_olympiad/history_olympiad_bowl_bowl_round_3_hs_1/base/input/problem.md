@@ -1,5 +1,3 @@
-# Bowl-Round-3-HS-1
-
 [Q1] Foreign intervention in this conflict prompted the battles of Outpost Harry and Pork Chop Hill. During this war, Matthew Ridgeway replaced a general who masterminded a decisive landing at Inchon, Douglas MacArthur. A demilitarized zone was created after an armistice was signed, though there has still been no peace treaty to end this war. For ten points, name this 1950s conflict on an Asian peninsula.
 
 [Q2] Until James Marsh developed a test for this substance, this element was an untraceable poison and earned the name “inheritance powder.” Autopsy reports and other studies found this element in the hair of Napoleon, Simon Bolivar, and King George III. For ten points, name this poisonous element, a common and deadly drinking water contaminant whose chemical symbol is As [A S].

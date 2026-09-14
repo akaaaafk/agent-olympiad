@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2018
-
 # Odyssey of the Mind — 2018 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -19,3 +17,4 @@ Creativity heats up as teams create their own cooking show where a chef gives an
 3. Classics… Mockumentary! Seriously?Divisions I, II, III & IVThere are often two sides to the same story. In this problem, characters don’t always agree as they recount the classic story where they appeared. The team will select a classic from a list and present different characters in a humorous documentary-style performance where details are added, denied, exaggerated, and disputed. There will be interviews, behind-the-scenes “clips,” and voice-overs that take the audience through the story and help present the events as they “really” took place. Whose side will you be on?
 4. Animal HouseDivisions I, II, III & IVOver the years, Odyssey of the Mind teams have designed structures that changed into many unbelievable shapes and sizes that balanced and held as much weight as possible. This year, teams will turn their balsa wood structures into animals! Since animals need to eat, they must be fed. The structure will have its appearance transformed and explained during an original performance. During the performance, the structure must hold the team-created food while it supports weights.
 5. A Stellar HangoutDivisions I, II, III & IVIn the outreaches of the universe, there is an Intergalactic Hangout where all sorts of creatures from different worlds stop, eat, refuel, and relax. Teams will create a humorous performance centered on this science fiction hangout that includes original creatures, foods, and a search for space treasure. There will also be a worker character, entertainment, and a futuristic map at the hangout.
+

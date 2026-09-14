@@ -1,5 +1,3 @@
-# EUSO_I_2004_TaskA
-
 2nd
 European Union Science Olympiad
 in Groningen, Netherlands

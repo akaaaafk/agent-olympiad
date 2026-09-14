@@ -1,5 +1,3 @@
-# 32nd-2025-problem-incl-PO2
-
 THE PROBLEM 
  
  

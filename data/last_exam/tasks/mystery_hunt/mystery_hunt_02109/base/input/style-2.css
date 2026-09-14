@@ -1,0 +1,126 @@
+/* line 3, ../../sass/atlantis.scss */
+body {
+  background: url("css-10.png") repeat-y calc(50% - 700px) 100px, -webkit-gradient(linear, to bottom, to top, color-stop(0%, #2e1b59), color-stop(100%, #01012a)) repeat-x;
+  background: url("css-10.png") repeat-y calc(50% - 700px) 100px, -webkit-linear-gradient(to bottom, #2e1b59, #01012a) repeat-x;
+  background: url("css-10.png") repeat-y calc(50% - 700px) 100px, -moz-linear-gradient(to bottom, #2e1b59, #01012a) repeat-x;
+  background: url("css-10.png") repeat-y calc(50% - 700px) 100px, -o-linear-gradient(to bottom, #2e1b59, #01012a) repeat-x;
+  background: url("css-10.png") repeat-y calc(50% - 700px) 100px, linear-gradient(to bottom, #2e1b59, #01012a) repeat-x;
+}
+
+/* line 9, ../../sass/atlantis.scss */
+html {
+  height: auto;
+  min-height: 100%;
+}
+
+/* line 14, ../../sass/atlantis.scss */
+body {
+  height: 100%;
+  background-color: #20124A;
+}
+
+/* line 19, ../../sass/atlantis.scss */
+#paper {
+  z-index: 9;
+  background: #B7EAE6;
+  margin-top: 347px;
+  min-height: 210px;
+}
+
+/* line 25, ../../sass/atlantis.scss */
+#artstuff {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 42px;
+  width: 1000px;
+  height: 1px;
+}
+
+/* line 33, ../../sass/atlantis.scss */
+#atlantiscontainer {
+  width: 1000px;
+  height: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 40, ../../sass/atlantis.scss */
+#atlantisdecor {
+  z-index: 10;
+  position: relative;
+  left: -19px;
+  background-image: url("css-11.png");
+  height: 389px;
+  width: 1030px;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 52, ../../sass/atlantis.scss */
+#leftdecor {
+  position: relative;
+  top: 356px;
+  left: -32px;
+  z-index: 10;
+  width: 101px;
+  height: 205px;
+  background-repeat: no-repeat;
+  background-image: url("css-12.png");
+}
+
+/* line 63, ../../sass/atlantis.scss */
+#rightdecor {
+  position: relative;
+  left: 960px;
+  top: 150px;
+  z-index: 10;
+  width: 102px;
+  height: 205px;
+  background-repeat: no-repeat;
+  background-image: url("css-13.png");
+}
+
+/* line 74, ../../sass/atlantis.scss */
+#puzzle-obj {
+  width: 335px;
+  height: 336px;
+  z-index: 11;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+/* line 82, ../../sass/atlantis.scss */
+#puzzle-obj img {
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: relative;
+}
+
+/* line 90, ../../sass/atlantis.scss */
+#infowindow {
+  z-index: 10;
+  position: absolute;
+  width: 320px;
+  top: 210px;
+  left: 640px;
+  padding: 12px;
+}
+
+@media print {
+  /* line 100, ../../sass/atlantis.scss */
+  #infowindow {
+    top: 0px;
+  }
+
+  /* line 103, ../../sass/atlantis.scss */
+  #paper {
+    margin-top: 10px;
+  }
+}

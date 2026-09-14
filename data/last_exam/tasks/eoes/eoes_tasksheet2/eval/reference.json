@@ -3,8 +3,135 @@
   "gold_pointer": "data/benchmarks/eoes/benchmark.json#eoes_tasksheet2.gold_label",
   "has_gold_answer": false,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/eoes_tasksheet2_2015_printed_maxima_v1.json",
+    "deliverable": "lab_answer_sheet_and_report",
+    "limitations": [
+      "No task-specific numeric marking scheme or experimental measurements are inferred.",
+      "Challenge 1 variants have different printed maxima and must not be added as independent contest challenges.",
+      "Reviewed participant worksheets are available; physical experiments, lab-assistant feedback, exact edition equivalence and executable grading remain unverified."
+    ],
+    "scorecard_path": "data/rubrics/task_scorecards/eoes.json",
+    "scorecard_key": "eoes_tasksheet2",
+    "pre_reuse_evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+      "deliverable": "lab_answer_sheet_and_report",
+      "limitations": "No task-specific official marking scheme is archived for this packet; a protocol-only rubric cannot supply missing labels.",
+      "scorecard_path": "data/rubrics/task_scorecards/eoes.json",
+      "scorecard_key": "eoes_tasksheet2"
+    },
+    "superseded_rubric_reuse": {
+      "source_competition": "eoes",
+      "target_competition": "eoes",
+      "target_year": 2015,
+      "source_rubric_paths": [
+        "data/rubrics/eoes_official_scoring_protocol_v1.json"
+      ],
+      "source_editions": [
+        2022,
+        2023
+      ],
+      "official_year_equivalence": false,
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+    },
+    "official_max_score": 306,
+    "official_problem_maxima": [
+      {
+        "id": "A",
+        "max_score": 92,
+        "source_page": 2
+      },
+      {
+        "id": "B",
+        "max_score": 92,
+        "source_page": 2
+      },
+      {
+        "id": "C",
+        "max_score": 92,
+        "source_page": 2
+      },
+      {
+        "id": "D",
+        "max_score": 6,
+        "source_page": 2
+      },
+      {
+        "id": "E",
+        "max_score": 24,
+        "source_page": 2
+      }
+    ],
+    "score_basis": "Sum of the section maxima printed in this exact archived task-sheet variant; not a normalized tournament score.",
+    "source_repair_status": "variant_specific_printed_maxima_verified",
+    "participant_worksheet_review": {
+      "kind": "participant_worksheet_not_solution",
+      "challenge": 2,
+      "full_visual_review": true,
+      "experimental_results_added": false,
+      "grading_key_recovered": false,
+      "edition_equivalence_certified": false,
+      "source_files": [
+        {
+          "path": "data/raw/eoes/euso/2015/answersheet2.pdf",
+          "sha256": "0253db0a6c5399420f0dd2ac79b396050aafac453c7ade4eaaf33afe258f86bc",
+          "visually_reviewed_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ],
+          "original_links_retained_not_followed": []
+        }
+      ],
+      "source_observations": [
+        "Worksheet page 3 contains the originally prefilled ice-plant number 9; this is retained as a given value, not promoted to a gold answer.",
+        "Worksheet pages 20 and 22 contain given dilution concentrations; measured rotations and derived results remain blank.",
+        "True/false statements, empty diagrams, signatures and experimental-result fields are preserved without solving them."
+      ],
+      "text_corrections": [
+        {
+          "before": "                                   𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠−𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚 𝑜𝑜𝑜𝑜 𝑡𝑡ℎ𝑒𝑒 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑅𝑅𝑅𝑅−𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣=  𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠−𝑒𝑒𝑒𝑒𝑒𝑒 𝑜𝑜𝑜𝑜 𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚 𝑝𝑝ℎ𝑎𝑎𝑎𝑎𝑎𝑎",
+          "after": "Rf-value = (distance start–middle of the spot) / (distance start–end of mobile phase)"
+        }
+      ],
+      "formula_source": {
+        "path": "data/raw/eoes/euso/2015/tasksheet2.pdf",
+        "sha256": "efd6485d801fa0d622e0ba6e2718068df5f0ecae4ad89ddcdd7d35d5a3794f6b",
+        "page": 13,
+        "transcription": "Rf-value = (distance start–middle of the spot) / (distance start–end of mobile phase)"
+      }
+    }
+  },
+  "rubric_path": "data/rubrics/eoes_tasksheet2_2015_printed_maxima_v1.json",
+  "deliverable": "lab_answer_sheet_and_report"
 }

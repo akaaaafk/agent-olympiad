@@ -1,5 +1,3 @@
-# RoboMission Senior 2026
-
 RoboMission Senior Game Rules Season 2026  
 Mosaic Masters   Official Game Rules for the WRO International Final. Version: January 15th 2026 (Note: Rules for local WRO events may vary!)      
 WRO International Premium Partners 

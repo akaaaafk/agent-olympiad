@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=1240, user-scalable=yes"></meta>
+    
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="icon" href="https://web.mit.edu/puzzle/www/2015/static/images/hunt/icon32.png" type="image/x-icon" />
+    <title>Image &mdash; MIT Mystery Hunt 2015</title>
+    
+    <link href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/puzzle.css" rel="stylesheet" type="text/css" />
+
+    
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/logbook.css" />
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/atlantis.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+ <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="https://web.mit.edu/puzzle/www/2015/intro.html">World Map</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="https://web.mit.edu/puzzle/www/2015/storylog.html">The Story So Far...</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Useful links <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="https://web.mit.edu/puzzle/www/2015/toc.html">List of Puzzles</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/eventschedule.html">Events Schedule</a></li>
+	    
+            <li></li>
+	    
+            <li><a href="https://web.mit.edu/puzzle/www/2015/updates.html">Updates from Sealab</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/completelog.html">Full team log</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/faq.html">FAQ</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/sponsors.html">Sponsors</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/">2015 Archive Overview</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    
+    
+    
+        <li></li>
+        
+    
+
+         
+    </ul>
+  </div><!-- /.navbar-collapse -->
+ </div>
+</nav> 
+
+  
+    <div id="artstuff">
+        <div id="atlantiscontainer">
+        <div id="leftdecor"></div>
+        <div id="rightdecor"></div>
+        </div>
+        <div id="atlantisdecor">
+            <div id="puzzle-obj"><img src="https://web.mit.edu/puzzle/www/2015//assets/puzzimages/348.png"></img></div>
+            <div id="infowindow">Location: Atlantis, Colorful Tower <br />Depth: 395</div>
+        </div>
+    </div>
+
+    <div id="paper">
+       <div class="puzzle-page-header">
+        
+            <div class="sol"><a href="solution/">View Solution</a></div>
+        
+        <h1>Image</h1>
+        
+	    
+	        <p class="answer" id="answer_348"> Answer: click here to reveal</p>
+            
+        
+        </div>
+      <div class='puzzle'>
+        <!-- Puzzle content begins here -->
+         <p>
+<a href="image">image</a> (3.5MB, md5=<tt>f5ac27a1a43331d1e47662928028dc4a</tt>)
+</p>
+
+        <!-- Puzzle content ends here -->
+      </div>
+    </div>
+
+
+    
+    <script type="text/javascript" src="https://web.mit.edu/puzzle/www/2015/static/bootstrap/javascripts/bootstrap.js" charset="utf-8"></script>
+    
+<script type="text/javascript">
+  $(document).ready(function(e) { $('#answer_348').click(function(e) { $('#answer_348').text("Answer: " + "HOLSTEIN");});});
+</script>
+
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

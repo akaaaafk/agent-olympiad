@@ -1,29 +1,13 @@
-# Task SOP
+# Task
 
-## Reference Environment
-- Competition: International Olympiad on Astronomy and Astrophysics
-- Competition id: `ioaa_group`
-- Problem id: `ioaa_group_2021`
-- Task type: `team_contest`
-- Team size: 5
-- Year / edition: 2021
-- Source: https://ioaastrophysics.org/resources/problems-from-past-ioaa
+Competition: ioaa_group
 
-## Goal
-As a multi-agent team, solve the olympiad-style team task using only the materials under `base/input`. Produce the required deliverable (`worked_answers`).
+Task: ioaa_group_2021
 
-## Task directory
-- Variant root: `base`
-- Input directory: `base/input`
+Edition: 2021
 
-## Inputs
-- `problem.md`
+Team size: 5
 
-## Title
-Team Competition 2021
+Deliverable: group_worked_answer
 
-## Deterministic Evaluation Rule
-Gold answers and official solution booklets are not provided in `input/`. Scoring uses the evaluator declared on the task card (gold match, rubric LLM judge, slide judge, or deferred sandbox).
-
-## Deliverables
-Return the team `worked_answers` expected by this competition.
+Use the attached problem materials and the inherited competition and collaboration instructions.

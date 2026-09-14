@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2011
-
 # Odyssey of the Mind — 2011 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Unhinged StructureDivisions I, II, III & IVThe problem is to design and build a solution using only balsa wood and glue that folds into the team’s structure without coming apart. The team may use material other than balsa wood and glue to serve as a hinge. The team will test its “folded” structure by placing as much weight as possible on it during a performance that also includes three different objects that change appearance by being folded or unfolded.Cost limit: $145 USD.
 5. Full CircleDivisions I, II, III & IVThe problem is to create and present a humorous performance where something changes form or appearance at least three times and eventually undergoes a final change where it returns to its original form and appearance. The team will signal the audience each time there is a change. The performance will include a very silly character, a very serious character, a song and dance, and a surprise ending.Cost limit: $125 USD.Sponsored by NASA.
 6. Money MakerGrades K-2The team is to create and present a humorous performance about a Money Maker character that tries to make money from wild ideas. The Money Maker will fail three times but will finally succeed. There will be another character that thinks all of the ideas are great and encourages the Money Maker to keep trying out his wild ideas. The performance will also include a commercial, a customer, and a real life example of an actual successful “wild” idea.Cost limit: $125 USD.
+

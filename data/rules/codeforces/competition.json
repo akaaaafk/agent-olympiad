@@ -28,7 +28,8 @@
   },
   "allowed_tools": [
     "query_rules",
-    "execute_code"
+    "execute_code",
+    "check_codeforces_io_cases"
   ],
   "resources": {
     "internet": "forbidden",

@@ -1,5 +1,3 @@
-# A Safe Bet
-
 Hide 
  A Safe Bet 
 

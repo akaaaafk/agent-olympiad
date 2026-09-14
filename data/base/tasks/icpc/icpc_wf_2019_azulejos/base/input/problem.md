@@ -1,5 +1,3 @@
-# Azulejos
-
 Hide 
  Azulejos 
 

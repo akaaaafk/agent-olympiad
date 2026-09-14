@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 1995
-
 # Odyssey of the Mind — 1995 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. A New TwistDivisions I, II, III & IVThis nonlinguistic problem requires teams to design and build a structure of balsa wood and glue. The structure will undergo a series of twists during the competition and will be tested by balancing and supporting as much weight as possible. Time limit: 8 min. Cost limit: $65 USD.
 5. Time TravelerDivisions I & IIThe team’s problem is to create and perform a skit about traveling in time. The performance must include a time traveler and a team-created time machine that performs tasks. During the performance, there will be at least three scenes and two journeys though time. The team must also present a surprise ending. Time limit: 8 min. Cost limit: $75 USD.
 6. Math Party
+

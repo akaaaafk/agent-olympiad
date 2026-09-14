@@ -1,0 +1,348 @@
+{
+  "operation": "iiot_abc_publisher_source_repair",
+  "timestamp_utc": "20260913T031334Z",
+  "problem_id": "iiot_2023_01",
+  "program_execution_performed": false,
+  "backup": "data/excluded/integrity_repair_20260913T031334Z",
+  "status": "source_repair_completed_readiness_deferred",
+  "new_files": [
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input0.txt",
+      "sha256": "9e443fa05fa973f6fdd2f318c768e400783b13a5c6c961e0f2db9dc58160dbde",
+      "bytes": 48
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input1.txt",
+      "sha256": "d46ae4887873f8b67d84dc3f72ac27fccefe95f02375aec2bfc7bc53da5f9b1a",
+      "bytes": 156
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input2.txt",
+      "sha256": "3677e6ef316f7dbe754e3a495076c31e179d8936312f758ee5e5d5b66b53d27f",
+      "bytes": 278
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input3.txt",
+      "sha256": "98cfaa04a1363c5af785c6ea3437bda8179b77e774dd7c7837b3ff69e381b1d1",
+      "bytes": 112
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input4.txt",
+      "sha256": "f49e39fc6f23b519b04e1ef48e6b614bcf96646e34e5cc89872bd6a56a3b9e4d",
+      "bytes": 123
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input5.txt",
+      "sha256": "946fb7628f2fff26566035e6854dc3f17e440d746c6ad361e004479440f62ed7",
+      "bytes": 123
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input6.txt",
+      "sha256": "481363103a46718afb14d6f89d7e0fc850a85199951b377ee7238b6c036d9b4a",
+      "bytes": 69
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input7.txt",
+      "sha256": "a73a099c5d25574410028d4285e658961420b6cedee5569079b8d2a51159038a",
+      "bytes": 95
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input8.txt",
+      "sha256": "12b7c78a639df2f816f6d48ecda4bf75e72b96d24f1ab3c4f0d85c1484767610",
+      "bytes": 177
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input9.txt",
+      "sha256": "eb6d2791afd4c7e3fb36eaf78eb2c186596056574b65533e820873886c447ab4",
+      "bytes": 177
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input10.txt",
+      "sha256": "06c05506964ce4973102adbd691e2300f8dbfda440c2399aca9a9c252925e6fd",
+      "bytes": 157
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input11.txt",
+      "sha256": "c5cc93f11a06f363758c2ed944c7109ae3cd54eb853fdf00e0409bce2f42655c",
+      "bytes": 126
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input12.txt",
+      "sha256": "0b517ae149a84b538624e56c576379d6fcd9db865b8655b63d56a67981be660a",
+      "bytes": 118
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input13.txt",
+      "sha256": "88b8d58cd76908bfb8101d204233767645c563b29a64f52355925eb8b3b68eb4",
+      "bytes": 270
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input14.txt",
+      "sha256": "32e1578e544c3dbad3ef421a9cb96ceffba56c75b700cbd065a8b790e4a4e59e",
+      "bytes": 282
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input15.txt",
+      "sha256": "d11b39dfc59dfdee520898f62848409d84cbb4713206ce9c6fbc43d9e1518e86",
+      "bytes": 220
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input16.txt",
+      "sha256": "b67be21ac744701006d625688468316535ceedbe4d25489ac66a9b6edb3ebd14",
+      "bytes": 129
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input17.txt",
+      "sha256": "c2822fccbfee558eacdec116eda12770a69c7d2e199705f4d176fafd14e902b4",
+      "bytes": 118
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input18.txt",
+      "sha256": "dda33057418ebcdcdf67e8f334db118e899783ec059ba7014599867aaa0733da",
+      "bytes": 283
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input19.txt",
+      "sha256": "44106e0a7ae5fcbbd7b24bd9fce0440deb7fad150323b77cfd734d26fc53a9f5",
+      "bytes": 273
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input20.txt",
+      "sha256": "5ae5bf7095843987b77b2bc1bf35211547ebd8086d0ac0afb84048009f427638",
+      "bytes": 125
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input21.txt",
+      "sha256": "817b9303148b798b9137ddc584733ff52f8729b32ccc14bb20ed0ea5c7d8f2ad",
+      "bytes": 146
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input22.txt",
+      "sha256": "0a3eaaa643d34f2c466c9abdb2e9a3f7212ec5c1dd0773a483eaa88b3450c767",
+      "bytes": 360
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input23.txt",
+      "sha256": "ae25d8ca982cbfd3e47223826c524d085753ccd09dcd26961a1476cfa328e2aa",
+      "bytes": 360
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input24.txt",
+      "sha256": "41b5ed52a1b86109831924b553f35e4650b7bf8bfb5a571ebdd57a89d09b4b9f",
+      "bytes": 271
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/input/input25.txt",
+      "sha256": "6fe5a0ef57f5d091844676203a75d102b4a4f4a120c148b10032b95c074239b0",
+      "bytes": 135
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output0.txt",
+      "sha256": "aeb31eb678522aa07b8f43deba0515029d1a913cb78fc723b11a6bedc751644f",
+      "bytes": 24
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output1.txt",
+      "sha256": "36f47cea4b18d8f7b48f15be515fad167b72e9ddc307c0e3de8c81630d2363eb",
+      "bytes": 40
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output2.txt",
+      "sha256": "c52ec21099cabd6f98156cb3a539814e71a73459e6dc4d6eb2c899aa74729d72",
+      "bytes": 40
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output3.txt",
+      "sha256": "17137d8c0e148369a88e06c6429855be86f86be4f77473b45348befb581bc134",
+      "bytes": 20
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output4.txt",
+      "sha256": "5dc5f2008144923859f117a386c5b0a6868013734626555fe2d955a03f5b3448",
+      "bytes": 45
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output5.txt",
+      "sha256": "031d10918d7f3057a0e0e3349ccf965fd32d1271d89fb9d09026530190d8d4dc",
+      "bytes": 44
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output6.txt",
+      "sha256": "a7ac99a73967f9d1832978caaaad5e8f4d79b2228442752e53630ed5dad751c6",
+      "bytes": 24
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output7.txt",
+      "sha256": "8496453c1be21d45ede33745b161dcc4ad41e6e5c13290de0b211f522ae5c517",
+      "bytes": 45
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output8.txt",
+      "sha256": "cab4ba5d1e55de5760b0354c3dfa40daf10a98dd2ffc183add8da3ef4c20c4e2",
+      "bytes": 173
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output9.txt",
+      "sha256": "8e31c4966f8357099b7ce48eb638d61ac5f904a6ac2d359a32d603f8ddc0ee81",
+      "bytes": 152
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output10.txt",
+      "sha256": "8de6846b07703f3081fb5fb27f772dad2250b40ff30d417d276f03909ca0355f",
+      "bytes": 58
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output11.txt",
+      "sha256": "10f6d3bacb61404473690a8f5cccf7037fdea40df1f71972dba5b4a7fd1be4b8",
+      "bytes": 48
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output12.txt",
+      "sha256": "8b5de6ffd0c97b83944a14438b8b7ca86237c789922d213545b8d3147ffb4440",
+      "bytes": 46
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output13.txt",
+      "sha256": "633395fba6789ec287cc59d99be80dab9f05bb3ccfab293a4162afd7b148ee63",
+      "bytes": 198
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output14.txt",
+      "sha256": "682d95fc61f9218d5aadc8b97d399c9e250598e2bf9144b8272fbd244c19c1e7",
+      "bytes": 188
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output15.txt",
+      "sha256": "0187dbccb9125a64d37c634c1064a8c4cd62ef7877129253cb03f6876aeeba15",
+      "bytes": 54
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output16.txt",
+      "sha256": "38cfc73346f0382387f9a7d3c94cb65ebbf700715c45c4e9f255b512e039ef93",
+      "bytes": 48
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output17.txt",
+      "sha256": "206abb3d562bd4217bc60cb9f1937a40133cb00190e28629adcda5fe0e28a79e",
+      "bytes": 39
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output18.txt",
+      "sha256": "6829eea81fe9be13bca09c6ca5509d7fbd5d2831d683a42cd3e04a296b372f18",
+      "bytes": 91
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output19.txt",
+      "sha256": "89ba9029446e997ea298de1093a6a6847a4c0f86e75b0d5f4de7cc317c1d3fd6",
+      "bytes": 94
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output20.txt",
+      "sha256": "1af29a9473364286490d96725d4f337d852ad3b1d3002a37b31a5c3fae16ccb2",
+      "bytes": 40
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output21.txt",
+      "sha256": "86b45a114fda1a84d38207a6e5972277c0e3d4249576d4c457fb45cd14bc3197",
+      "bytes": 46
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output22.txt",
+      "sha256": "a1920236cfb5cc381456bbf31f61f87b82cc2d06e10119b61f5dc3baef2f00a9",
+      "bytes": 182
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output23.txt",
+      "sha256": "3258a289e37a0cd7b13bd3964e42ff7c79be40acf341a98ed6dac90b15325813",
+      "bytes": 198
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output24.txt",
+      "sha256": "bc0533e8bd9647ef49762af96c5fcfdc4ca50e40d893845fa102c73e9d52ca19",
+      "bytes": 90
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/tests/output/output25.txt",
+      "sha256": "19e1a0260e0b9060bb42e97baddce275cb38ca4ff9a7fda3beef07c4a7276fcc",
+      "bytes": 48
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/references/sol_na.cpp",
+      "sha256": "ebb6324fc050703ba680696d42d6af09bc892ef00818047d2654e99cf7693735",
+      "bytes": 2978
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/references/solution.cpp",
+      "sha256": "0f15a4618e4e3a2145f1df4c1de223fb362f7a3434d2c96eee269de88016e359",
+      "bytes": 2433
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/references/solution2.cpp",
+      "sha256": "b377f99f6f945940a1ddcbb22b889150982816df0bdf2497760e3f0fe5411e63",
+      "bytes": 1999
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/templates/template_c.c",
+      "sha256": "9eddab4210d6a624fcea4bbcc821cf74ddf1ac706a67b6f462a514c60786ebd5",
+      "bytes": 651
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/templates/template_cpp.cpp",
+      "sha256": "478813c6f47e3623827515dfa481ccbff158d5491ac9263df86e67b88641e9e4",
+      "bytes": 587
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/source_manifest.json",
+      "sha256": "fc0c48af7837250e17167f903b3fd89fe3424ad81533c3def193068b63484941",
+      "bytes": 28058
+    },
+    {
+      "path": "data/raw/iiot/2023/abc/provenance/kilonova_622.html",
+      "sha256": "d555c2ec1a8762a8182d0e7ba69efa7c728dccf3acab9cacbc348625055cff90",
+      "bytes": 41012
+    },
+    {
+      "path": "data/base/tasks/iiot/iiot_2023_01/base/input/abc/templates/template_c.c",
+      "sha256": "9eddab4210d6a624fcea4bbcc821cf74ddf1ac706a67b6f462a514c60786ebd5",
+      "bytes": 651
+    },
+    {
+      "path": "data/last_exam/tasks/iiot/iiot_2023_01/base/input/abc/templates/template_c.c",
+      "sha256": "9eddab4210d6a624fcea4bbcc821cf74ddf1ac706a67b6f462a514c60786ebd5",
+      "bytes": 651
+    },
+    {
+      "path": "data/base/tasks/iiot/iiot_2023_01/base/input/abc/templates/template_cpp.cpp",
+      "sha256": "478813c6f47e3623827515dfa481ccbff158d5491ac9263df86e67b88641e9e4",
+      "bytes": 587
+    },
+    {
+      "path": "data/last_exam/tasks/iiot/iiot_2023_01/base/input/abc/templates/template_cpp.cpp",
+      "sha256": "478813c6f47e3623827515dfa481ccbff158d5491ac9263df86e67b88641e9e4",
+      "bytes": 587
+    }
+  ],
+  "metadata_files": [
+    "data/benchmarks/iiot/benchmark.json",
+    "data/rubrics/task_scorecards/iiot.json",
+    "data/last_exam/tasks/iiot/iiot_2023_01/eval/reference.json",
+    "data/base/task_cards.json",
+    "data/base/input_asset_manifest.json",
+    "data/last_exam/task_cards.json",
+    "data/last_exam/input_asset_manifest.json"
+  ],
+  "official_test_pairs": 26,
+  "reference_programs": 3,
+  "contestant_templates": 2,
+  "official_max_score": 100,
+  "evaluator_status": "not_ready",
+  "unresolved": [
+    "Official test-to-subtask mapping is not archived.",
+    "Original contest resource limits and checker configuration are not archived; mirror settings are not assumed equivalent.",
+    "No isolated reference-program execution has been run for this repair."
+  ],
+  "record_count_change": 0,
+  "readiness_count_change": 0,
+  "post_write_validation_performed": false,
+  "note": "No original test grouping, checker, limits, or acceptance was invented. Other records and all existing source files are retained."
+}

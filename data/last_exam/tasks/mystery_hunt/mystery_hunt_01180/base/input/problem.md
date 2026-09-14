@@ -1,3 +1,5 @@
-# 2009/puzzles/on_beyond_zyzzlvaria/PUZZLE
+# On Beyond Zyzzlvaria
 
-On Beyond Zyzzlvaria On Beyond Zyzzlvaria The Midston Alienfish is from On Beyond Zyzzlvaria. It whiles away its days reading books by its favorite author, like the ones below. We could read them too, except that our loonical lexicallography chart has been ruined by a sudden downpour of oobleck. You see, in Midston Alienfishese, characters don’t stand for letters—they stand for rules that are true about the words they’re in. The books will help you build the chart, the chart will help you build the books, so figure out the missing words, and you won’t get such funny looks!
+Open `puzzle.html` for the original styled task. Explicit image links open original full-size files; a text preview does not replace the visual packet.
+
+Archive limitation: The original standalone archive packet is restored, including explicit full-size image links and applicable header artwork. Historic wording, symbols, dimensions and source groupings remain unchanged. Full-hunt progression, cross-task evaluation and image-aware grading are not reproduced.

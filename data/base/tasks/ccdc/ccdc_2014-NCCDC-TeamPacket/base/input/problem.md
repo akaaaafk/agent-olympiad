@@ -1,5 +1,3 @@
-# NCCDC 2014 — Warp Core
-
 Presented by 
  
  

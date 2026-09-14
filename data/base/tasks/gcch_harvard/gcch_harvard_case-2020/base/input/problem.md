@@ -1,5 +1,3 @@
-# case-2020
-
 HARVARD
 The competition is brought to you by the IFSA Network, the Harvard Graduate
 Business Club and the Harvard College European Business Group.

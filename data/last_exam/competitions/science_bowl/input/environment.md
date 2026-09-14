@@ -1,4 +1,4 @@
-# Environment — `science_bowl`
+# Environment
 
 ## Roster
 
@@ -15,7 +15,11 @@
 
 ## Allowed tools
 
-- query_rules
+```json
+[
+  "query_rules"
+]
+```
 
 ## Resources
 
@@ -55,3 +59,4 @@
   ]
 }
 ```
+

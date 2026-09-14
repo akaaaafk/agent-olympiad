@@ -1,0 +1,749 @@
+{
+  "task_code": "tetris",
+  "year": 2023,
+  "official_archive_url": "https://iio.team/competition/tasks/2023",
+  "publisher_test_folder": "https://drive.google.com/drive/folders/1NvOd83jNecnFfgQvELWePg9QppUQX6K7?usp=drive_link",
+  "reference_manifest": "data/raw/iiot/2023/tetris/reference_manifest.json",
+  "files": [
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input0.txt",
+      "name": "input0.txt",
+      "kind": "input",
+      "sha256": "337b794ce718a09a620090d53541c3b4640a64133bbee2188444810cd3169f81",
+      "bytes": 4,
+      "publisher_file_id": "1emR9hh-mnEpxDrOsx27E5k33EmtwmV87",
+      "source_url": "https://drive.google.com/uc?export=download&id=1emR9hh-mnEpxDrOsx27E5k33EmtwmV87",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input1.txt",
+      "name": "input1.txt",
+      "kind": "input",
+      "sha256": "c84ee08831e31415e32cdb604fbe79f9aef82e00a33ae7579f7d82dfa8c41eef",
+      "bytes": 4,
+      "publisher_file_id": "1M2PvnM91gBtlYhO9dEEwTV0XH3LYXK4s",
+      "source_url": "https://drive.google.com/uc?export=download&id=1M2PvnM91gBtlYhO9dEEwTV0XH3LYXK4s",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input10.txt",
+      "name": "input10.txt",
+      "kind": "input",
+      "sha256": "c74ca9fbdc8f2a3d035d2dabe6e476e33e61bb7741f94b8c4d947186c36d866f",
+      "bytes": 4,
+      "publisher_file_id": "1ILjYlUvvCQtjJWzlYYGo0TiBv9tzjMIO",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ILjYlUvvCQtjJWzlYYGo0TiBv9tzjMIO",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input11.txt",
+      "name": "input11.txt",
+      "kind": "input",
+      "sha256": "f251ddc12234e0da8d3b778bd0f7463fb477f16f47757f5617dc8b4ff4d4f14a",
+      "bytes": 4,
+      "publisher_file_id": "1pGP-ILpWY6tAotfukAK-q0HUNSpPAluT",
+      "source_url": "https://drive.google.com/uc?export=download&id=1pGP-ILpWY6tAotfukAK-q0HUNSpPAluT",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input12.txt",
+      "name": "input12.txt",
+      "kind": "input",
+      "sha256": "6767d5f988fc2165a5d987988f42011e21322be30147e250bad9bf0aac53f25b",
+      "bytes": 6,
+      "publisher_file_id": "1OKzykZvglMhRdwvmGG78xpZgF77aHpNv",
+      "source_url": "https://drive.google.com/uc?export=download&id=1OKzykZvglMhRdwvmGG78xpZgF77aHpNv",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input13.txt",
+      "name": "input13.txt",
+      "kind": "input",
+      "sha256": "bd2694d2518b957ba772e47c714284b99a4c95f46f86b6e138986fb12861815c",
+      "bytes": 6,
+      "publisher_file_id": "1_4FZsdgy0QU45nVzGkrtRN6wlSBjqbyf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1_4FZsdgy0QU45nVzGkrtRN6wlSBjqbyf",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input14.txt",
+      "name": "input14.txt",
+      "kind": "input",
+      "sha256": "1fde44db394d5fbd0931cc8eed1953a333fa928927462cc21fc97f0a813f8007",
+      "bytes": 6,
+      "publisher_file_id": "1ZfjxxRoHYdKxGu4XHeKiu8uolpHtuC3m",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ZfjxxRoHYdKxGu4XHeKiu8uolpHtuC3m",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input15.txt",
+      "name": "input15.txt",
+      "kind": "input",
+      "sha256": "2cc82d9153d9c4ba6cc1765c1904d3cf55f1969f9d0b9fae61cab2d2144accc9",
+      "bytes": 6,
+      "publisher_file_id": "1zqu1PTDynpro4QLggkmPmLcZX7-ovdOY",
+      "source_url": "https://drive.google.com/uc?export=download&id=1zqu1PTDynpro4QLggkmPmLcZX7-ovdOY",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input16.txt",
+      "name": "input16.txt",
+      "kind": "input",
+      "sha256": "a4aafd91a36a934b54f050790fbd7a3a79e559cd249ccf2b8fcca65958954c6e",
+      "bytes": 6,
+      "publisher_file_id": "1z4BpJN2s5iHiPbl7iYO7gdP_QGcHiI53",
+      "source_url": "https://drive.google.com/uc?export=download&id=1z4BpJN2s5iHiPbl7iYO7gdP_QGcHiI53",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input17.txt",
+      "name": "input17.txt",
+      "kind": "input",
+      "sha256": "84aba9f91651061896d84c0ad1632c1a2034a0c86fd195665b821945de665cd3",
+      "bytes": 6,
+      "publisher_file_id": "1nCFr6zORynrOrGx5rZKZvTFROTLRjO7G",
+      "source_url": "https://drive.google.com/uc?export=download&id=1nCFr6zORynrOrGx5rZKZvTFROTLRjO7G",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input18.txt",
+      "name": "input18.txt",
+      "kind": "input",
+      "sha256": "5bbcd64370cb3b6db25f06072a4fc99282233b5986a63740871cfe317f934bdb",
+      "bytes": 6,
+      "publisher_file_id": "1zFWRZozLVl58a9Ko2btBRKDCBg-cWEox",
+      "source_url": "https://drive.google.com/uc?export=download&id=1zFWRZozLVl58a9Ko2btBRKDCBg-cWEox",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input19.txt",
+      "name": "input19.txt",
+      "kind": "input",
+      "sha256": "3fb297c299232f8dfc33169d9612f0380d6958f02b2fc314fb91cde57b537c13",
+      "bytes": 6,
+      "publisher_file_id": "1E7H4Hq21xv-R325g-9AcAXcyBIllzW7o",
+      "source_url": "https://drive.google.com/uc?export=download&id=1E7H4Hq21xv-R325g-9AcAXcyBIllzW7o",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input2.txt",
+      "name": "input2.txt",
+      "kind": "input",
+      "sha256": "3f11ad6bbc7ecca0b2416b713dee77f1a635c00aaeaa946e14cde1c2bfae56d5",
+      "bytes": 4,
+      "publisher_file_id": "1u5JXwT3vi7-P6BIas6CZKM8VQpDNszcT",
+      "source_url": "https://drive.google.com/uc?export=download&id=1u5JXwT3vi7-P6BIas6CZKM8VQpDNszcT",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input20.txt",
+      "name": "input20.txt",
+      "kind": "input",
+      "sha256": "42effec28e1d60924d14f80bf269ff7912e0ff616d25fee9bd59e2c16f37bfa8",
+      "bytes": 6,
+      "publisher_file_id": "1RzXUearUlGD4dtZ53_etvtDy5sNpuKq8",
+      "source_url": "https://drive.google.com/uc?export=download&id=1RzXUearUlGD4dtZ53_etvtDy5sNpuKq8",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input21.txt",
+      "name": "input21.txt",
+      "kind": "input",
+      "sha256": "142f2a46e8029f6d776de241ba2edbcfe3f3763627c0d303d1a058104030b9b7",
+      "bytes": 8,
+      "publisher_file_id": "1B0RFdXwjXYCukpKtFK_w81F_wPBOLbiP",
+      "source_url": "https://drive.google.com/uc?export=download&id=1B0RFdXwjXYCukpKtFK_w81F_wPBOLbiP",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input22.txt",
+      "name": "input22.txt",
+      "kind": "input",
+      "sha256": "8b8448aafe7b83e366fc4c08e02c209439a19253b0233622d84329e2e8ee5cd1",
+      "bytes": 8,
+      "publisher_file_id": "1fR_6MN2z5IQ-JVEbmi3g6yP7Ryr7tPEC",
+      "source_url": "https://drive.google.com/uc?export=download&id=1fR_6MN2z5IQ-JVEbmi3g6yP7Ryr7tPEC",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input23.txt",
+      "name": "input23.txt",
+      "kind": "input",
+      "sha256": "17a83b5aa36aa2d03642558bed3d35b109e603134bb9893bafc9efc8bf1c47d1",
+      "bytes": 8,
+      "publisher_file_id": "1vvtOK2W8FrLOSJK3sHlN_WXRyH796n-H",
+      "source_url": "https://drive.google.com/uc?export=download&id=1vvtOK2W8FrLOSJK3sHlN_WXRyH796n-H",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input24.txt",
+      "name": "input24.txt",
+      "kind": "input",
+      "sha256": "3b13c390ecdb661c018153dd91fc8da85222ee2cd4ac98e9c66fedf7101b7643",
+      "bytes": 8,
+      "publisher_file_id": "1Dk5Ne6bXwXjS1EZeU2gLYhMcNddWvKJM",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Dk5Ne6bXwXjS1EZeU2gLYhMcNddWvKJM",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input25.txt",
+      "name": "input25.txt",
+      "kind": "input",
+      "sha256": "eae528b76c3f4b1ceeadecf7a68ff81e965bdab1d81c01e360dc6a9f5550f64b",
+      "bytes": 8,
+      "publisher_file_id": "1EgCzVO3W9TVCTc0DcKBibKwdDnYF67mU",
+      "source_url": "https://drive.google.com/uc?export=download&id=1EgCzVO3W9TVCTc0DcKBibKwdDnYF67mU",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input3.txt",
+      "name": "input3.txt",
+      "kind": "input",
+      "sha256": "f251ddc12234e0da8d3b778bd0f7463fb477f16f47757f5617dc8b4ff4d4f14a",
+      "bytes": 4,
+      "publisher_file_id": "1QOOeOpvGSkGnQfg0xZF9i1Vss-RoeWOB",
+      "source_url": "https://drive.google.com/uc?export=download&id=1QOOeOpvGSkGnQfg0xZF9i1Vss-RoeWOB",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input4.txt",
+      "name": "input4.txt",
+      "kind": "input",
+      "sha256": "b7ea1f3c2d566646713b53bd09d64591fe6d4c8b5341a5f27e4523b1bae289c8",
+      "bytes": 4,
+      "publisher_file_id": "1PLU3jxwSX-6uBkqUUoGTINby0LSX-fyE",
+      "source_url": "https://drive.google.com/uc?export=download&id=1PLU3jxwSX-6uBkqUUoGTINby0LSX-fyE",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input5.txt",
+      "name": "input5.txt",
+      "kind": "input",
+      "sha256": "aca8cbbe96ba89bf0fd068d4b4069213909923c48085dca9e63b124bc1544bcb",
+      "bytes": 4,
+      "publisher_file_id": "1p29jLGuFkgbh4af9U7Mh-EJofzpFvupP",
+      "source_url": "https://drive.google.com/uc?export=download&id=1p29jLGuFkgbh4af9U7Mh-EJofzpFvupP",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input6.txt",
+      "name": "input6.txt",
+      "kind": "input",
+      "sha256": "dfac347cb71ae693ba8a54687f7112aff24ec67f88a3c66f69a7bf968fa2ac16",
+      "bytes": 4,
+      "publisher_file_id": "1o0vCLlmuD4_EkXvGpoKajh33rh4lHHmo",
+      "source_url": "https://drive.google.com/uc?export=download&id=1o0vCLlmuD4_EkXvGpoKajh33rh4lHHmo",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input7.txt",
+      "name": "input7.txt",
+      "kind": "input",
+      "sha256": "f65ceaae246de02135c1326ff5188bdd166c9749c021c91e49c0b9a79f9c7262",
+      "bytes": 4,
+      "publisher_file_id": "193WSO9IdOvz9sl5cnulHd5KzUROhY8yi",
+      "source_url": "https://drive.google.com/uc?export=download&id=193WSO9IdOvz9sl5cnulHd5KzUROhY8yi",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input8.txt",
+      "name": "input8.txt",
+      "kind": "input",
+      "sha256": "0b6693b0fa788f42f92edb0721ac4da7e1b22ea0c796913a2c5e83b6271cfaf5",
+      "bytes": 4,
+      "publisher_file_id": "1jNVKbI2gCLenDUtYt-9IkBUVmdySgCqr",
+      "source_url": "https://drive.google.com/uc?export=download&id=1jNVKbI2gCLenDUtYt-9IkBUVmdySgCqr",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/input/input9.txt",
+      "name": "input9.txt",
+      "kind": "input",
+      "sha256": "ce434a743148081fcb8cbbaf67ac1f09cbe2dcf9515fadb668d7a6e555825600",
+      "bytes": 4,
+      "publisher_file_id": "1qIj0snozST-C4RwRKLsBzGKewApKuk5f",
+      "source_url": "https://drive.google.com/uc?export=download&id=1qIj0snozST-C4RwRKLsBzGKewApKuk5f",
+      "folder_url": "https://drive.google.com/drive/folders/1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1E259Yb0sFXc3uY6kdjQhZIfk3ZsheYck"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output0.txt",
+      "name": "output0.txt",
+      "kind": "output",
+      "sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "bytes": 3,
+      "publisher_file_id": "1iYvnEAkzYv5mfGiH7PUyD4xnxeVlXYdU",
+      "source_url": "https://drive.google.com/uc?export=download&id=1iYvnEAkzYv5mfGiH7PUyD4xnxeVlXYdU",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output1.txt",
+      "name": "output1.txt",
+      "kind": "output",
+      "sha256": "b9d9840c8ec68581fbd4e9fda13e795246b992ec303c5ab23deb1373c45ed2e6",
+      "bytes": 30,
+      "publisher_file_id": "1O-NKW8wucqT6B3Tdelv-IykErw1TorBW",
+      "source_url": "https://drive.google.com/uc?export=download&id=1O-NKW8wucqT6B3Tdelv-IykErw1TorBW",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output10.txt",
+      "name": "output10.txt",
+      "kind": "output",
+      "sha256": "e981b562e9c5c0a48a95b065e8c1f9a99459e85c0db2cc615bedd94fe6e13d92",
+      "bytes": 38,
+      "publisher_file_id": "1iE5Xut5rogDjAlQALsjxktSR2N8FwSUx",
+      "source_url": "https://drive.google.com/uc?export=download&id=1iE5Xut5rogDjAlQALsjxktSR2N8FwSUx",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output11.txt",
+      "name": "output11.txt",
+      "kind": "output",
+      "sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "bytes": 3,
+      "publisher_file_id": "121XuRyQ0TrVtfwCin-CeX9lg1Q-Z_wab",
+      "source_url": "https://drive.google.com/uc?export=download&id=121XuRyQ0TrVtfwCin-CeX9lg1Q-Z_wab",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output12.txt",
+      "name": "output12.txt",
+      "kind": "output",
+      "sha256": "210804653409a95f7f3b8325648ae768de3145bfebbccdd2aec83b521fcc3c11",
+      "bytes": 273,
+      "publisher_file_id": "1cNxvogb74pjFOQoEDkZgqERzNmO3YX4T",
+      "source_url": "https://drive.google.com/uc?export=download&id=1cNxvogb74pjFOQoEDkZgqERzNmO3YX4T",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output13.txt",
+      "name": "output13.txt",
+      "kind": "output",
+      "sha256": "162b72e504ecd039d6e0f99a570437c43954b32e377a4ddf88334a9b1e1c61e9",
+      "bytes": 9614,
+      "publisher_file_id": "1i95eLx3LWxXRqNZ7o9Cztq5b5wWEaUrZ",
+      "source_url": "https://drive.google.com/uc?export=download&id=1i95eLx3LWxXRqNZ7o9Cztq5b5wWEaUrZ",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output14.txt",
+      "name": "output14.txt",
+      "kind": "output",
+      "sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "bytes": 3,
+      "publisher_file_id": "1Ezof1c6ZTOc0gyjjmkcu9R4RF2HyGCVl",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Ezof1c6ZTOc0gyjjmkcu9R4RF2HyGCVl",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output15.txt",
+      "name": "output15.txt",
+      "kind": "output",
+      "sha256": "0087505e1e2d96bb8f3b1bd09d4d9a8055684e750849873a586824ff8d4fd4cb",
+      "bytes": 9020,
+      "publisher_file_id": "1j0y0YEYtM1BtU1uhZ_6biZhW6OCpM3nn",
+      "source_url": "https://drive.google.com/uc?export=download&id=1j0y0YEYtM1BtU1uhZ_6biZhW6OCpM3nn",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output16.txt",
+      "name": "output16.txt",
+      "kind": "output",
+      "sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "bytes": 3,
+      "publisher_file_id": "1S8w5YSU6oO2nCMdwy7euSYI9cC_wPWno",
+      "source_url": "https://drive.google.com/uc?export=download&id=1S8w5YSU6oO2nCMdwy7euSYI9cC_wPWno",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output17.txt",
+      "name": "output17.txt",
+      "kind": "output",
+      "sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "bytes": 3,
+      "publisher_file_id": "1jx1yCkZwnDznwWK7Qws836sz87oKklPK",
+      "source_url": "https://drive.google.com/uc?export=download&id=1jx1yCkZwnDznwWK7Qws836sz87oKklPK",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output18.txt",
+      "name": "output18.txt",
+      "kind": "output",
+      "sha256": "58f56a05ec94e07828f272ce9c811e2a674c31ca8ddcf3c8d2831e078fbf621b",
+      "bytes": 1565,
+      "publisher_file_id": "13HLNQO9WFZ5FeB-01I9mLxVOSy3iGENW",
+      "source_url": "https://drive.google.com/uc?export=download&id=13HLNQO9WFZ5FeB-01I9mLxVOSy3iGENW",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output19.txt",
+      "name": "output19.txt",
+      "kind": "output",
+      "sha256": "20ebca0045179cc05ea3590bbe973839f9bf63466c1688bb35a298fe3e42cec2",
+      "bytes": 2064,
+      "publisher_file_id": "1sGsGL7ePb1IiESfIs8wNrjVsj3fiU55X",
+      "source_url": "https://drive.google.com/uc?export=download&id=1sGsGL7ePb1IiESfIs8wNrjVsj3fiU55X",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output2.txt",
+      "name": "output2.txt",
+      "kind": "output",
+      "sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "bytes": 3,
+      "publisher_file_id": "1yR1l4ZElgUj-CkXBvt6iFGA-VvnHmvKV",
+      "source_url": "https://drive.google.com/uc?export=download&id=1yR1l4ZElgUj-CkXBvt6iFGA-VvnHmvKV",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output20.txt",
+      "name": "output20.txt",
+      "kind": "output",
+      "sha256": "053c0d105f3980f12b9b36628971dac7c3b7b39103ca98cf8d87ff676d28b567",
+      "bytes": 3550,
+      "publisher_file_id": "1jNTRPdJIg9sNyGtfQtFrwE7URg0CREd8",
+      "source_url": "https://drive.google.com/uc?export=download&id=1jNTRPdJIg9sNyGtfQtFrwE7URg0CREd8",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output21.txt",
+      "name": "output21.txt",
+      "kind": "output",
+      "sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "bytes": 3,
+      "publisher_file_id": "1ezEmI2KZXP7GGlsfPEfIMYxcsmcZsWUS",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ezEmI2KZXP7GGlsfPEfIMYxcsmcZsWUS",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output22.txt",
+      "name": "output22.txt",
+      "kind": "output",
+      "sha256": "5a3e4ad43ab18cdd0a1c415cf7048eea5c4003ab8deaaf2ed67287ac07af1c24",
+      "bytes": 1071966,
+      "publisher_file_id": "1xqo1Dw21PDKr4lSDuJt0bFYx9GmE_fL_",
+      "source_url": "https://drive.google.com/uc?export=download&id=1xqo1Dw21PDKr4lSDuJt0bFYx9GmE_fL_",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output23.txt",
+      "name": "output23.txt",
+      "kind": "output",
+      "sha256": "dc4aa9c2547b10244cbfb9180f9502dbbf38de1ff552c18134a6b5d26e7f43b1",
+      "bytes": 1441089,
+      "publisher_file_id": "1hgUHOt3ggcFocsNCa35ArjTbXdmxsCE8",
+      "source_url": "https://drive.google.com/uc?export=download&id=1hgUHOt3ggcFocsNCa35ArjTbXdmxsCE8",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output24.txt",
+      "name": "output24.txt",
+      "kind": "output",
+      "sha256": "786c3944bc49b52703ca7af287c77d8423a737fcf7487ab3980117038a0263b5",
+      "bytes": 925592,
+      "publisher_file_id": "1zzivN0in2GIQmSSpOFX_B4E8wO0QxQjX",
+      "source_url": "https://drive.google.com/uc?export=download&id=1zzivN0in2GIQmSSpOFX_B4E8wO0QxQjX",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output25.txt",
+      "name": "output25.txt",
+      "kind": "output",
+      "sha256": "560605f74cd6a00a55283e9a5d4c4fa39c79157866e8325b979a629251952054",
+      "bytes": 1456066,
+      "publisher_file_id": "1b9KEbyZrQ5Ua14rLGfu1EDYQuzjkzvht",
+      "source_url": "https://drive.google.com/uc?export=download&id=1b9KEbyZrQ5Ua14rLGfu1EDYQuzjkzvht",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output3.txt",
+      "name": "output3.txt",
+      "kind": "output",
+      "sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "bytes": 3,
+      "publisher_file_id": "1UCq7YM4DM-0E962ky5ExxOGdD7nvpvhl",
+      "source_url": "https://drive.google.com/uc?export=download&id=1UCq7YM4DM-0E962ky5ExxOGdD7nvpvhl",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output4.txt",
+      "name": "output4.txt",
+      "kind": "output",
+      "sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "bytes": 3,
+      "publisher_file_id": "1FOIfDlbeepZa1X8OeIvi11jQY3DQG_Ks",
+      "source_url": "https://drive.google.com/uc?export=download&id=1FOIfDlbeepZa1X8OeIvi11jQY3DQG_Ks",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output5.txt",
+      "name": "output5.txt",
+      "kind": "output",
+      "sha256": "4a62573bf98563dd4f3708923e5d785bf4d66de514eb83e0f8a15fc7ae67b905",
+      "bytes": 11,
+      "publisher_file_id": "1Z89oChHeXllko3YhuaLeBtoiLxwpgYV9",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Z89oChHeXllko3YhuaLeBtoiLxwpgYV9",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output6.txt",
+      "name": "output6.txt",
+      "kind": "output",
+      "sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "bytes": 3,
+      "publisher_file_id": "1jwDXQcfMGYX8L8RsR3E6n5kbbTMSHx2Z",
+      "source_url": "https://drive.google.com/uc?export=download&id=1jwDXQcfMGYX8L8RsR3E6n5kbbTMSHx2Z",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output7.txt",
+      "name": "output7.txt",
+      "kind": "output",
+      "sha256": "94b45d669deb6db74a820338af305d9d1c2f9760183ab23ef3b1cab28525433b",
+      "bytes": 12,
+      "publisher_file_id": "132h1LGRkWnHI9y-8ORSE8C5SBVMdCE5_",
+      "source_url": "https://drive.google.com/uc?export=download&id=132h1LGRkWnHI9y-8ORSE8C5SBVMdCE5_",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output8.txt",
+      "name": "output8.txt",
+      "kind": "output",
+      "sha256": "43a1ab5972f870b940a72cb1f9ba6bb40a72e883e9cb37b56831ac937f1b5667",
+      "bytes": 20,
+      "publisher_file_id": "1hVyPw8v_PlqkiwLCGGchJjzIF0ZmYy7j",
+      "source_url": "https://drive.google.com/uc?export=download&id=1hVyPw8v_PlqkiwLCGGchJjzIF0ZmYy7j",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/tests/output/output9.txt",
+      "name": "output9.txt",
+      "kind": "output",
+      "sha256": "7264a27c1edba745b972682cf549ebf229084bc6603fd6c1efd82922a80b79f5",
+      "bytes": 29,
+      "publisher_file_id": "1cLNeEcSMkQw-btNQH-k7LlplY_MSw9n-",
+      "source_url": "https://drive.google.com/uc?export=download&id=1cLNeEcSMkQw-btNQH-k7LlplY_MSw9n-",
+      "folder_url": "https://drive.google.com/drive/folders/1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1iT_O8f2k2oszo49qEV7YuIH538Xu3pE2"
+    }
+  ],
+  "test_pairs": [
+    {
+      "id": "0",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input0.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output0.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "1",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input1.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output1.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "2",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input2.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output2.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "3",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input3.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output3.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "4",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input4.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output4.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "5",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input5.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output5.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "6",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input6.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output6.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "7",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input7.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output7.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "8",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input8.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output8.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "9",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input9.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output9.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "10",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input10.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output10.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "11",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input11.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output11.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "12",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input12.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output12.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "13",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input13.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output13.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "14",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input14.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output14.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "15",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input15.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output15.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "16",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input16.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output16.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "17",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input17.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output17.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "18",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input18.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output18.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "19",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input19.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output19.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "20",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input20.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output20.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "21",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input21.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output21.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "22",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input22.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output22.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "23",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input23.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output23.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "24",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input24.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output24.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "25",
+      "input": "data/raw/iiot/2023/tetris/tests/input/input25.txt",
+      "output": "data/raw/iiot/2023/tetris/tests/output/output25.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    }
+  ],
+  "input_aliases": [],
+  "unresolved_alias_files": [],
+  "official_test_pair_count": 26,
+  "listing_scope": "All files visible in the publisher-linked public embedded folder views at discovery time; no claim about unpublished/private files.",
+  "discovered_at_utc": "2026-09-13T19:21:25.479459+00:00",
+  "ordinary_view_truncation_avoided": true,
+  "test_subtask_mapping": null,
+  "checker_configuration": null,
+  "execution_limits": null,
+  "programs_executed": false
+}

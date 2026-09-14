@@ -1,5 +1,3 @@
-# CSAW-Finals / crypto / distastrous_security_apparatus
-
 Good Luck, k?
 
 Author: Paul Kehrer, Trail of Bits. 

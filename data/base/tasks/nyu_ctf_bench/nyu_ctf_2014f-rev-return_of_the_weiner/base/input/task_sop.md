@@ -1,29 +1,13 @@
-# Task SOP
+# Task
 
-## Reference Environment
-- Competition: NYU CTF Bench (CSAW)
-- Competition id: `nyu_ctf_bench`
-- Problem id: `nyu_ctf_2014f-rev-return_of_the_weiner`
-- Task type: `ctf`
-- Team size: 5
-- Year / edition: 2014
-- Source: https://github.com/NYU-LLM-CTF/NYU_CTF_Bench
+Competition: nyu_ctf_bench
 
-## Goal
-As a multi-agent team, solve the olympiad-style team task using only the materials under `base/input`. Produce the required deliverable (`team_submission`).
+Task: nyu_ctf_2014f-rev-return_of_the_weiner
 
-## Task directory
-- Variant root: `base`
-- Input directory: `base/input`
+Edition: 2014
 
-## Inputs
-- `problem.md`
+Team size: 5
 
-## Title
-CSAW-Finals / rev / return-of-the-weiner
+Deliverable: ctf_flag
 
-## Deterministic Evaluation Rule
-Gold answers and official solution booklets are not provided in `input/`. Scoring uses the evaluator declared on the task card (gold match, rubric LLM judge, slide judge, or deferred sandbox).
-
-## Deliverables
-Return the team `team_submission` expected by this competition.
+Use the attached problem materials and the inherited competition and collaboration instructions.

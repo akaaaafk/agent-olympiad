@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>MIT Mystery Hunt: Notes on a Century of English</title>
+<link href="../css/mydossier.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="../js/rollover.js"></script>
+</head>
+<body>
+<div id="container">
+<div id="header"><div id="headerIcon"><a href="../index.html"><img src="../images/spacer.gif" alt="Home page" width="94" height="94" border="0" /></a></div><div id="headerCheckAnswer"><a href="answer/">View Solution</a></div></div>
+<div id="content">
+  <div id="nav"><img src="http://web.mit.edu/puzzle/www/08/images/header_dossiers.gif" alt="Dossiers:" width="119" height="27" class="paddingRight4" />&nbsp;<a href="http://web.mit.edu/puzzle/www/08/dossier1.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_1_open.gif" alt="Dossier 1" name="dossier1" width="30" height="27" border="0" id="dossier1" onmouseover="MM_swapImage('dossier1','','http://web.mit.edu/puzzle/www/08/images/dossier_1_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier2.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_2_open.gif" alt="Dossier 2" name="dossier2" width="30" height="27" border="0" id="dossier2" onmouseover="MM_swapImage('dossier2','','http://web.mit.edu/puzzle/www/08/images/dossier_2_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier3.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_3_open.gif" alt="Dossier 3" name="dossier3" width="30" height="27" border="0" id="dossier3" onmouseover="MM_swapImage('dossier3','','http://web.mit.edu/puzzle/www/08/images/dossier_3_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier4.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_4_open.gif" alt="Dossier 4" name="dossier4" width="30" height="27" border="0" id="dossier4" onmouseover="MM_swapImage('dossier4','','http://web.mit.edu/puzzle/www/08/images/dossier_4_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier5.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_5_open.gif" alt="Dossier 5" name="dossier5" width="30" height="27" border="0" id="dossier5" onmouseover="MM_swapImage('dossier5','','http://web.mit.edu/puzzle/www/08/images/dossier_5_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier6.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_6_open.gif" alt="Dossier 6" name="dossier6" width="30" height="27" border="0" id="dossier6" onmouseover="MM_swapImage('dossier6','','http://web.mit.edu/puzzle/www/08/images/dossier_6_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier7.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_7_open.gif" alt="Dossier 7" name="dossier7" width="30" height="27" border="0" id="dossier7" onmouseover="MM_swapImage('dossier7','','http://web.mit.edu/puzzle/www/08/images/dossier_7_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a></div>
+
+
+  <h1>Notes on a Century of English<br />
+  According to Merriam-Webster's 11th Collegiate Dictionary</h1>
+	
+  <p><em>If you hit the verb &quot;cleat,&quot; you've gone too far ...</em></p>
+  <table width="100%">
+ <tr>
+  <td width="40%">&nbsp;</td>
+  <td>				
+bosh<br />
+consensus<br />
+hardpan<br />
+posterolateral<br />
+provost court<br />
+reedman<br />
+thermocline<br />
+zeta</td>
+ </tr>
+</table>
+
+</div>
+</div>
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

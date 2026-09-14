@@ -1,0 +1,86 @@
+<body>
+<h1>Solution to Execution Grounds</h1>
+<h3>by Oliver Kosut and Andrew Thomas</h3>
+
+<p>Given are the end states of 59 games of Hangman. In each game, letters are guessed in exactly the same order, as follows:<br><br>
+STGABRIELQHNVDJUXYZOKFPWCM<br><br>
+That is, the first guessed letter is S, then T, then G, etc. The guessing sequence continues between games, so the first letter guessed in one game immediately succeeds the last one guessed in the previous game. Guessing wraps around, so after reaching the M at the end of the sequence, the sequence is begun again starting with S. To solve the puzzle, one must determine the number of allowed incorrect guesses (which is 8), the exact guessing order, and each of the unknown words.</p>
+
+<p>For example, the first word is OMINOUS. We first guess S. This letter appears in the word, so it is written above its blank. Then we guess T, G, A, B, and R, none of which appear in the word. Then I, which does appear in the word. Then E, L, and Q, after which there have been 8 incorrect guesses, so the game ends as shown in the puzzle, with blanks except for I and S. In the next game, the first letter guessed is H.</p>
+
+<p>To solve for the number of allowed incorrect guesses and the guessing order, one uses which letters appear and do not appear in each Hangman game. To get the guessing order, one must determine what some of the words are, and therefore which letters could not have been guessed in a certain range, or else they would have appeared in the Hangman final state. As the guessing order becomes more determined, more and more of the unknown words can be deduced, because certain letters must have been guessed, and therefore cannot be among the missing letters. Once the complete guessing order is found, all the unknown words can be uniquely determined, at least among fairly common words (though this is not quite true; see below). The complete list of words is:</p>
+
+<pre>OMINOUS
+NEIGHBORHOOD
+ENGENDERS
+FRESHMAN
+AUTHENTICATING
+NEUROPHYSIOLOGICAL
+SKIING
+CANDLES
+WATCHMAKERS
+ENVIRONMENTAL
+RELINQUISHING
+APOSTLES
+AFTERWARD
+FLOWERPOTS
+TRANSVERSE
+BUTTERFIELD
+EVOLUTIONARILY
+RADII
+ASTROPHYSICISTS
+CATCH
+LIQUEURS
+LOGJAM
+DECOYS
+QUESTIONS
+OVERDEVELOP
+UNKNOWN
+BEDSPREADS
+SWEET
+LUNKHEAD
+ELECTRIFYING
+LACKADAISICAL
+FLAGS
+EXTRAORDINARILY
+TURNPIKE
+TELECOMMUNICATE
+TIMING
+EASILY
+RECOMPUTE
+SUBORDINATE
+TRACK
+INEXPRESSIBILITY
+NETWORKING
+GREYHOUND
+FIGURE
+UNBELIEVABLY
+EXAGGERATES
+SEDUCTRESSES
+MONKEYS
+SEXINESS
+INCOMPREHENSIBILITY
+NECESSARILY
+TOWERS
+GIBBERISH
+OVERREACHES
+RECONFIGURABLE
+OCEANS
+DIZZYINGLY
+ENJOYABLE
+RECOGNIZABLE</pre>
+
+<p>The first answer comes at the start of the guessing order: <span class="answer">ST GABRIEL</span>.</p>
+
+<p>The first letters of the Hangman words, after removing every fourth letter, reads (including convenient spaces)<br><br>
+
+ONE ANSWER AFTER ALL DOUBLE LETTERS IN GUESSING ORDER<br><br>
+
+This indicates that one should find each double letter in a Hangman word, and take the letter that succeeds it in the guessing sequence (wrapping around). Taking these in given order produces the second answer, <span class="answer">KEGELSTATT TRIO</span>.</p>
+
+<p>The above second extraction required discarding every fourth Hangman word. Each of these words clues a number in a unique way. In particular, there is a common phrase either "<i>word</i> n" or "n <i>word</i>" for some integer n between 1 and 26. The only Hangman words which were ambiguous among common words given the guessing data (CANDLES, CATCH, and TOWERS) can now be determined by choosing the word that clues a number. The number-cluing phrases are:<br><br>
+
+"freshman 15", "16 candles", "12 apostles", "butterfield 8", "catch 22", "20 questions", "sweet 16", "6 flags", "2 timing", "8 track", "figure 8", "12 monkeys", "2 towers", "ocean's 11"<br><br>
+
+Taking the nth letter in the guessing sequence for a word cluing n, in given order, gives JUNE FOURTEENTH, which clues the third answer, <span class="answer">FLAG DAY</span>.
+</body>

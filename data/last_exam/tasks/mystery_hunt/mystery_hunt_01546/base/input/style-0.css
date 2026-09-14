@@ -1,0 +1,95 @@
+@import "style-1.css";
+
+/* General formatting */
+body {
+  background-color: #dbdbdb;
+  background: url("css-0.jpg");
+}
+
+#top-border {
+ position: absolute; top: 0; left: 0; width:100%;
+ background-position: center top;
+ background-repeat: repeat-x;
+}
+#side-border div {
+ position: absolute;
+}
+#side-border .left-top, #side-border .left { left: 0; }
+#side-border .right-top, #side-border .right { right: 0; }
+#bottom-border { position: absolute; left: 50%; }
+
+/* Show page formatting */
+body.index #index-image {
+  margin: 10px auto 20px auto; display: block;
+  border: 2px solid #67030f;
+  background: rgba(255,255,255,0.4);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  width: 700px; height: 538px;
+  position: relative;
+}
+body.index #index-image > * {
+  position: absolute; top: 0; left: 0;
+  width: 700px; height: 538px;
+}
+body.index #puzzle-list a {
+  display: block;
+  padding: 20px 0 0 50px;
+  margin: 0 0 2px 0;
+  background: url("css-1.png") no-repeat;
+  height: 42px; /* 62px minus the padding */
+}
+body.index #puzzle-list a.unsolved {
+  background-image: url("css-2.png");
+}
+
+/* Specific size info for 1S images */
+body { min-width: 700px; }
+#top-border {
+ height: 81px; background-image: url("css-3.png");
+}
+#bottom-border {
+ height: 20px; width: 600px; margin-left: -300px;
+ background-image: url("css-4.png");
+ bottom: 5px;
+}
+#side-border .left-top, #side-border .right-top { height: 526px; top: 52px;}
+#side-border .left-top { width: 108px; background: url("css-5.png"); }
+#side-border .right-top { width: 91px; background: url("css-6.png"); }
+
+#side-border .left, #side-border .right { top: 578px; bottom: 0;
+                                          background-repeat: repeat-y; }
+#side-border .left { width: 39px; background: url("css-7.png"); }
+#side-border .right { width: 34px; background: url("css-8.png"); }
+
+#show-title { top: 85px; }
+#show-title .title {
+  width: 600px; left: -300px; /* centered */
+  height: 98px; background: url("css-9.png");
+}
+#link {
+  left: 290px; top: 6px;
+}
+.ptitle {
+  position: relative; /* put in front of banner */
+  height: 87px;
+  background: url("css-10.png") no-repeat;
+  padding: 36px 0 0 58px;
+  margin: -25px 0 -20px -19px;
+}
+
+#main {
+  padding-top: 185px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 60px;
+}
+body.index #main {
+  padding-top: 85px;
+}
+body.solution h2 {
+  padding: 0; margin: 0;
+  padding-left: 2em;
+  text-indent: -2em;
+}

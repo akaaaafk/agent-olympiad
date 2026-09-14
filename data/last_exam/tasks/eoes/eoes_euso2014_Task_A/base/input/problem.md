@@ -1,5 +1,3 @@
-# euso2014_Task_A
-
 1 
 April 1st, 2014 – TASK A 
 All about Olive oil 

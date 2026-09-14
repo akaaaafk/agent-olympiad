@@ -1,5 +1,3 @@
-# Up a Tree
-
 Hide 
  Up a Tree 
 

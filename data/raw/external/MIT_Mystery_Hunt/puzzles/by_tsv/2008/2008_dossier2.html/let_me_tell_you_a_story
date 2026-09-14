@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>MIT Mystery Hunt: Let Me Tell You the Story</title>
+<link href="../css/mydossier.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="../js/rollover.js"></script>
+</head>
+<body onload="MM_preloadImages('http://web.mit.edu/puzzle/www/08/images/dossier_1_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_2_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_3_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_4_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_5_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_6_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_7_active.gif')">
+<div id="container">
+<div id="header"><div id="headerIcon"><a href="../index.html"><img src="../images/spacer.gif" alt="Home page" width="94" height="94" border="0" /></a></div><div id="headerCheckAnswer"><a href="answer/">View Solution</a></div></div>
+<div id="content">
+  <div id="nav"><img src="http://web.mit.edu/puzzle/www/08/images/header_dossiers.gif" alt="Dossiers:" width="119" height="27" class="paddingRight4" />&nbsp;<a href="http://web.mit.edu/puzzle/www/08/dossier1.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_1_open.gif" alt="Dossier 1" name="dossier1" width="30" height="27" border="0" id="dossier1" onmouseover="MM_swapImage('dossier1','','http://web.mit.edu/puzzle/www/08/images/dossier_1_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier2.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_2_open.gif" alt="Dossier 2" name="dossier2" width="30" height="27" border="0" id="dossier2" onmouseover="MM_swapImage('dossier2','','http://web.mit.edu/puzzle/www/08/images/dossier_2_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier3.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_3_open.gif" alt="Dossier 3" name="dossier3" width="30" height="27" border="0" id="dossier3" onmouseover="MM_swapImage('dossier3','','http://web.mit.edu/puzzle/www/08/images/dossier_3_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier4.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_4_open.gif" alt="Dossier 4" name="dossier4" width="30" height="27" border="0" id="dossier4" onmouseover="MM_swapImage('dossier4','','http://web.mit.edu/puzzle/www/08/images/dossier_4_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier5.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_5_open.gif" alt="Dossier 5" name="dossier5" width="30" height="27" border="0" id="dossier5" onmouseover="MM_swapImage('dossier5','','http://web.mit.edu/puzzle/www/08/images/dossier_5_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier6.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_6_open.gif" alt="Dossier 6" name="dossier6" width="30" height="27" border="0" id="dossier6" onmouseover="MM_swapImage('dossier6','','http://web.mit.edu/puzzle/www/08/images/dossier_6_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier7.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_7_open.gif" alt="Dossier 7" name="dossier7" width="30" height="27" border="0" id="dossier7" onmouseover="MM_swapImage('dossier7','','http://web.mit.edu/puzzle/www/08/images/dossier_7_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a></div>
+
+  <h1>Let Me Tell You the Story</h1>
+<p><i>He is the hero, he is everything. He must be a complete man and a common 
+  man and yet an unusual man. He must be, to use a rather weathered phrase, 
+  a man of honor -- by instinct, by inevitability, without thought of it, 
+  and certainly without saying it. He must be the best man in his world and
+  a good enough man for any world.
+</i></p>
+      <p align="right"><i>-- Raymond Chandler, on Obi Wan Kenobi</i></p>
+
+<p>THE START.</p>
+
+<p>7:00 PM: It all began, as these things will, with a leggy dame in a 
+run-down gin joint. The second I walked through the door, I could see
+Valentine was feeling low. I sat down beside her and asked what she 
+was thinking -- and paid up to find out.</p>
+
+<p>"Some apes down in Jamaica Plain want me to work for them," V said, 
+pocketing the dough. "And they're not the sort to take no for an answer."</p>
+
+<p>"Need some muscle?"</p>
+
+<p>"At your rates? I don't have that kind of scratch."</p>
+
+<p>"We can work something out. Payment in kind. You still do that fancy 
+rhumba?"</p>
+
+<p>"You know it." She grabbed my hand, and led me out onto the dance
+floor. "And after, a waltz?"</p>
+
+<p>Two dances at the classic rate carved out of my fee, and she'd still be paying
+  me just enough to get by, even though I wasn't going to bill her for the inevitable
+  expenses. I gave in to temptation.</p>
+
+<hr>
+
+<p>Midnight: Bruised, completely broke, and with feet aching from the long
+trudge back, I walked into that dive for the second time that evening. 
+There was a dearth of red-headed taxi dancers around to show gratitude. 
+The Doris Day blonde who came up to me at the bar looked like a real 
+no-nonsense type. Pity -- I like nonsense.</p>
+
+<p>"Hey there! You that whiz-kid shamus they talk about?" </p>
+
+<p>"How'd you guess?"
+     
+"You look nosy, and you've got a face like hamburger. Rough day at
+the office?"</p>
+
+<p>"Rough commute. I had just enough to get in at Kendall Square, and when 
+I tried to get out, three MTA goons jumped me. They wanted a little 
+extra, I guess. I had to explain the situation with my knuckles."</p>
+
+<p>"Striking a blow for the working man?"</p>
+
+<p>"You might say that." I didn't know why you <i>would</i>, but I figured she 
+was leading somewhere with this.</p>
+
+<p>"Then this job should be right up your alley." With no gas can in sight,
+she plunked the cash down on the counter in front of me. "My union is
+on strike, and I think the company's going to pull something 
+underhanded. You ever deal with Pinkerton finks?"</p>
+
+<p>"Of course," I said, and grabbed the money. A full fee is worth a little 
+fib. Looking for a quick way to avoid giving details, I searched around 
+the room, and saw my cousin and his wife sitting in the corner. Even from 
+a distance, it was clear she was telling him exactly what was wrong with
+him, mentally. </p>
+
+<p>I decided to come to his rescue. As I sidled over, she apparently wound 
+down; he handed her something, and she headed for the bar. She didn't 
+like me. Some people are fussy. Plus, she's a doctor, and apparently
+she sees me as a germ.</p>
+
+<p>"Good grief!" he said. "What happened to you?" He's never quite grasped
+what I do for a living. Back home in that two-delicatessen town, my dad 
+had been a cop, and I saw the rough side of life early. His dad was a 
+barber; what would he know? So I skipped over the bit about thrashing 
+city employees, and implied that those JP hoodlums had done the job on 
+my face. Actually, they had been cake.</p>
+
+<p>"Nice shirt," I said, changing the subject. God as my witness, it looked
+like all of his other shirts, but it was new so we'd be sure to get some 
+mileage out of that. I settled in for a long evening of talking about
+reinforced buttons. </p>
+
+<hr>
+
+<p>10 AM: Next morning, I finally caught up with Valentine outside the bar, 
+and gave her the news that it was all taken care of. She was thrilled,
+and when she hugged the stuffing out of me I felt a bit thrilled 
+myself, but before anything more substantial could happen I spotted 
+my cuz-in-law the doctor striding towards us with a murderous look in 
+her eye. </p>
+
+<p>"Hi, Doc," V said cheerfully, as she disengaged. "Say, you wouldn't happen 
+to have change again, would you?" She got out her purse.</p>
+
+<p>The good doctor exploded. Apparently, this was a frequent request on
+Valentine's part, and she had just asked one time too many. The rant 
+concluded with "And why the hell are you always asking me for change?"</p>
+
+<p>"Because I make twice what you do, so it breaks right in two," Valentine
+said guilelessly. She held up a danceworth.</p>
+
+<p>Doc looked at her, decided against first doing some harm, and made change 
+-- breaking it right in two, to use that somewhat loaded phrase.
+Once V had scampered off, those diagnostic peepers fell on me, and I had
+a bad feeling when she opened her purse again. All she did, though, was
+take out ninety-odd percent of the dough inside, and hand that to me 
+with her right as she stashed Valentine's money with her left.  </p>
+
+<p>"I want you to find out what that hussy is doing with my husband," she
+said, as I accepted my third fee in 15 hours.</p>
+
+<hr>
+
+<p>4 PM: Some detective. After looking for V in all the usual places, and
+having no luck, I went back to my office to catch some Zs. I hadn't
+nabbed even one, though, when the lady herself walked through the door,
+and took off her coat to reveal an item of sleepwear that her legs 
+went all the way up to. "You like?"</p>
+
+<p>I liked, but business is business. "I've been hired to do some shamusing,
+Valentine, and this time you're the lucky shamusee. But I'm feeling lazy,
+so let's just skip to the questioning. Have you been messing around with
+any baldheaded blockheads named after major Boston waterways?"</p>
+
+<p>Her face turned  redder than her hair, but it was fury rather than
+shame. "That loud-mouthed ball-pulling fussbudget! How <i>dare</i> she -- 
+I mean, I never even <i>danced</i> with the guy till just this afternoon, 
+right after I saw you last."</p>
+
+<p>"You went dancing in <i>that</i>?"   </p>
+
+<p>"No, no -- I went dancing so I could buy this. Thanks to that round-headed 
+loser, I got two hours with a seamstress, and I can still buy --"</p>
+
+<p>"Three fizzy drinks, or two tickets to the opera. If you liked seltzer 
+or Brecht." I looked at her schmatta again. Clearly a custom job, but 
+yet there was something oddly familiar about the styling . . .</p>
+
+<p>"I gotta go," I said. "Time to turn to the end of the book."</p>
+
+<hr>
+
+<p>5:00 PM: The blonde -- looking more like Janis Paige today -- walked
+into the old gin joint, cozied up beside me, and asked what I was 
+thinking. I got deja vu along with the cash.</p>
+
+<p>"I've been doing a bunch of thinking," I said. "Mainly about how a 
+dame on strike has the dough to pay a gumshoe to look for imaginary 
+Pinkertons." She flinched. "At first, I thought you were skimming, 
+but it turns out there's a certain sum of money that'll get you back 
+to work. Enough for you to be living like a king, if you keep at it."</p>
+
+<p>"Nothing wrong with that."</p>
+
+<p>"Yeah, we all want a Scrabble board with letters made of gold.
+Of course, you might have made more if you were taking the whole 
+paycheck instead of just the pay raise, but that would have priced
+you right out of the market, wouldn't it, Babe?"</p>
+
+<p>"I don't know what you're talking about."</p>
+
+<p>"The hell you don't. It's not much of a family secret that Cuz's shirts
+are all pajama tops, with that big zig-zag stripe, and last night he
+had a new one. Said he had it made special, from 8-10 last night, and
+the seamstress didn't even charge him overtime. That retainer you gave
+me come from him?"</p>
+
+<p>"Could be. It's a fifty-fifty shot."</p>
+
+<p>"And today you spent another two hours making a certain taxi dancer  
+another kind of pajama top altogether."</p>
+
+<p>"I keep busy."</p>
+
+<p>"And I couldn't figure why. None of us is rolling in it. When this whole 
+shindig started, none of us five had two of anything that matched, and you 
+already had almost a third of the whole pot. But you weren't trying to get
+rich; you were trying to get him poor. Think about it: The money he gave 
+you, the money he gave Valentine that went to you, and what I saw him 
+give the missus . . . By the way, I take it the other half of the change 
+she gave V came from you?" </p>
+
+<p>"Yeah, I needed to talk to that headshrinker after she left the bar last 
+night, and she charged me a consultation fee, same as him."</p>
+
+<p>"Of course -- you had to put the idea in her head that he was fooling
+around with a certain cute little redhead. Keep her distracted while
+you planned to ruin him."</p>
+
+<p>"I'm telling you, you're nuts."</p>
+
+<p>"Get in line. A few minutes before you showed up, my cousin got up,
+stuck what little cash he had left into his pocket, and kissed his wife 
+goodbye. So I kissed him full on the lips, too. Got some interesting 
+looks. But it distracted him enough that I could slip a note in his 
+pocket. Tells the whole story."</p>
+
+<p>"You mean this note?" She held up the paper. "You'd be surprised what a 
+seamstress can make off with when she meets a client coming out of a bar 
+and wants to 'check a seam.'"</p>
+
+<p>"So I'll just catch him later," I said. </p>
+
+<p>"Catch him?" She chuckled. "Fat chance. He was headed down to the T,
+heading for Jamaica Plain, with exactly what he needs to get on." 
+I went pale. "And while you, as Jim Croce would put it, are a bad,
+bad man, he's a good one, and he's not going to get off of that train 
+the way you did. No, that lovable loser will be riding a good long time 
+-- and it's going to get Walter A. O'Brien elected, with me riding 
+his coattails. Goodbye, small-town unions; hello, big city politics!"</p>
+
+<p>I raced for the pay phone. The phone in that dive cost a fortune, but I
+shoved the two coins in. The guy couldn't possibly be at the`turnstile for
+another 5 minutes, and if I could reach someone at the T stop, they might 
+be able to stop him. Besides, I thought ruefully, it wasn't just me 
+shelling out to the phone company. All of us -- <b>me</b>, <b>the blonde</b>, 
+<b>the redhead</b>, <b>the brunette</b>, and <b>the bald guy</b>
+-- were poorer at the end than at the start, so we were all chipping 
+in for this 50-cent call; four bits that should be enough to convey all the 
+info I needed to.</p>
+
+<p>THE END.</p>
+
+</div>
+</div>
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

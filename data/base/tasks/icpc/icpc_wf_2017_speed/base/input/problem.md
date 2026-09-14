@@ -1,5 +1,3 @@
-# Need for Speed
-
 Hide 
  Need for Speed 
 

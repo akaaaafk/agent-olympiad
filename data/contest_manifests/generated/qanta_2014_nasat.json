@@ -1,0 +1,11 @@
+{
+  "session_id": "qanta_2014_nasat",
+  "competition_id": "qanta",
+  "problem_ids": [
+    "qanta_train_100927"
+  ],
+  "description": "OTC contest-session manifest for qanta_2014_nasat (1 tasks)",
+  "split_parts": false,
+  "task_family": "short_answer",
+  "competition_description": "Academic quiz-bowl questions: identify the requested person, place, work, event, or concept from progressively specific clues."
+}

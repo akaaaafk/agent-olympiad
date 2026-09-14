@@ -1,40 +1,5 @@
-# additionalfileschallenge1
+EOES / EUSO 2015 Challenge 1 - initial supplementary handouts
 
-CHALLENGE 1   /d/KE>&/> TASK  A 
- 
-4 Crayfish identification:    Dorsal diagram of a stereotyped crayfish 
- 
- 
- 
- 
- 
- 
+This record is an appendix to Challenge 1 Task A, not an independent experiment or an additional score. Open `challenge1_initial_handouts.pdf` for the two original outline pages used in Task A 3.1. Preserve their original size and orientation; the source header is unreadable. Follow the parent task sheet for instructions and required physical materials.
 
-Challenge 1 Task A /d/KE>&/>d^<  
- 
-The table “Function” 
-Extremity Function Marks 
-A B C D E  
-D 1 D 2 D 3 E 1 E 2 
-1          
-2          
-3          
-4 
-5 
-6 
-7 
-8 
-9          
-10          
-11          
-12          
-13 
-14          
-15 
-16 
-17 
-18 
-19          
-Country:  Team: 
-Challenge 1 Task A /d/KE>&/>d^<  
-Challenge 1 Task A /d/KE>&/>d^<  
+The identification diagram and Function table are released only after the completed crayfish handout is handed to the laboratory assistant. They are not initial inputs. No live specimen, laboratory-assistant interaction or stage controller is supplied by this archive.

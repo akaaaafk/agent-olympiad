@@ -1,5 +1,3 @@
-# 2017-18-national-case-set
-
 National High School Ethics Bowl National Cases 2017-2018 Case Committee Chair: Dominique Déry  Case Authors: Ian Cruise, Dominique Déry, Ramona Ilea, Intercollegiate Ethics Bowl, Clare LaFrance, Pramita Mital, Sally Moore, Katie Petrik, Sam Reis-Dennis, Keshav Singh, Rob Smithson, Steve Swartzer, Ruth Tomlin, Rob Willison, Brian Wong  Please do not reproduce without credit to the NHSEB and case authors. 						       
 National High School Ethics Bowl 
  Copyright 2018 by the National High School Ethics Bowl.  Please do not reproduce without credit to the NHSEB and case authors. 

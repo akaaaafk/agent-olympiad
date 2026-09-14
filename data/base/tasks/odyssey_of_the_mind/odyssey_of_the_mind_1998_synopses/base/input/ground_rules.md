@@ -1,0 +1,3 @@
+# Competition rules
+
+Odyssey of the Mind. The task represents a judged creative performance through a written proxy. Mixed or unresolved rulesets: the runner permits 5 to 7 active agents and defaults to 7. Collaborate only within the team under contest rules. Banned during the contest: internet access, calculators and running code. Paper and pencil are always available. Work only from the materials provided with the problem. Submit one shared long term performance; Submit the complete team deliverable requested by the problem statement. Treat unexposed physical, oral, live-opponent, judge, timing, or environment mechanisms as unavailable rather than simulated facts.

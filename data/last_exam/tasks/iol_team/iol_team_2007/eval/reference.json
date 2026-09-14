@@ -2,9 +2,28 @@
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/iol_team/benchmark.json#iol_team_2007.gold_label",
   "has_gold_answer": false,
-  "evaluator_id": "rubric_llm_v1",
-  "evaluator_status": "ready",
-  "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-  "deliverable": "worked_answers",
-  "solution_file": "data/raw/iol/iol-2007-team-sol.en.pdf"
+  "evaluator_id": null,
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/iol/recovered_20260913/2007/iol-2007-team-sol.m.pdf",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+    "deliverable": "team_worked_answer",
+    "judge_assets": [
+      "data/raw/iol/recovered_20260913/2007/iol-2007-team-sol.m.pdf"
+    ],
+    "limitations": [
+      "Official one-page diagram recovers the section 1 family tree. A flat list of names does not encode its parent-child edges.",
+      "No explicit section 2 mapping of eleven numbered people or edition point allocation was recovered; no answers inferred.",
+      "Image-aware delivery and graph grading have not been validated end to end."
+    ],
+    "scorecard_path": "data/rubrics/task_scorecards/iol_team.json",
+    "scorecard_key": "iol_team_2007",
+    "source_repair_report": "data/benchmarks/iol_source_repair_20260913.json",
+    "score_basis": "100-point benchmark proxy only; no verified official maximum for this edition.",
+    "scoring_validation_status": "partial_reference_not_end_to_end_validated"
+  },
+  "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+  "deliverable": "team_worked_answer"
 }

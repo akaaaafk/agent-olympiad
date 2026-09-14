@@ -1,0 +1,19 @@
+{
+  "status": "completed",
+  "backup": "data/excluded/integrity_repair_20260914T011943Z",
+  "records": 1,
+  "removed_from_initial_inputs": [
+    "data/base/tasks/debatebench/debatebench_Astana Open Round 5/base/input/motion.txt",
+    "data/last_exam/tasks/debatebench/debatebench_Astana Open Round 5/base/input/motion.txt"
+  ],
+  "record_count_change": 0,
+  "readiness_promotions": 0,
+  "summary": "Astana Round 5: retain the verified motion; quarantine the semantically mismatched published infoslide, preserve original bytes, historical scores and not_ready.",
+  "verification": {
+    "records": 1,
+    "original_slide_retained_judge_only": true,
+    "old_staged_copies_recoverably_archived": 2,
+    "scores_and_readiness_unchanged": true
+  },
+  "protected_files_unchanged": 56
+}

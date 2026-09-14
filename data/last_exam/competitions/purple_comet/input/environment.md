@@ -1,4 +1,4 @@
-# Environment — `purple_comet`
+# Environment
 
 ## Roster
 
@@ -16,8 +16,12 @@
 
 ## Allowed tools
 
-- query_rules
-- use_calculator
+```json
+[
+  "query_rules",
+  "use_calculator"
+]
+```
 
 ## Resources
 
@@ -77,3 +81,4 @@
   ]
 }
 ```
+

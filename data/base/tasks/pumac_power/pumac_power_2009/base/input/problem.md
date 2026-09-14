@@ -1,5 +1,3 @@
-# PUMaC Power Round 2009
-
 PUMaC 2009-10 Power Test
 A Version
 21 Problems; 86 Points

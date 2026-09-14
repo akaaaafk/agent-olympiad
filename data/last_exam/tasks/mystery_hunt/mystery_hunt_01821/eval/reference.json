@@ -3,8 +3,18 @@
   "gold_pointer": "data/benchmarks/mystery_hunt/benchmark.json#mystery_hunt_01821.gold_label",
   "has_gold_answer": true,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+    "short_answer_source": "data/rubrics/mystery_hunt_short_answers.json",
+    "deliverable": "puzzle_answer",
+    "limitations": "Only the original static standalone body, layout and explicitly linked images are restored. Archive Q.E.D./Solved header markers, status counters, solution navigation and scripts are removed; other navigation is inert. Original LESS is compiled offline using version 1.3.0, with imports and JavaScript expressions disabled. CSS image links and font dependencies are local; the archive League Gothic bytes are preserved, while source-named Google font binaries are current snapshots, not certified historical versions. Historical travel times, fictional advice, cipher text and repeated visual cells are not corrected or modernized. Calling Bingo retains only its listed other-puzzle titles and enumeration; no other answers or unlock states are injected. Federal Reserve retains only its archived fictional server notice; no real bank, puzzle server or terminal commands are contacted or executed. Gold, scores and grading/runtime readiness are unchanged and not recertified. Prior limitations: The answer key exists, but the contestant puzzle page has not been separated from embedded answers and media dependencies.",
+    "scorecard_path": "data/rubrics/task_scorecards/mystery_hunt.json",
+    "scorecard_key": "mystery_hunt_01821"
+  },
+  "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+  "deliverable": "puzzle_answer"
 }

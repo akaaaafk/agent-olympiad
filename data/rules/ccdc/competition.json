@@ -20,7 +20,8 @@
   },
   "allowed_tools": [
     "query_rules",
-    "inspect_environment"
+    "inspect_environment",
+    "prepare_defense_inject_response"
   ],
   "resources": {
     "internet": "forbidden",

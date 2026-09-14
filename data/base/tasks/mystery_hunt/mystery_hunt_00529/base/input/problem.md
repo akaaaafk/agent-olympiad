@@ -1,3 +1,5 @@
-# 2004/timbuktu/TVi/
+# Timbuktu : Islamic Pilgrimage: Omura
 
-Omura: Chapter 1 Omura: Chapter 1 - + - + - + - - + -
+Open `puzzle.html`, the original entry point, and follow its local links for the complete puzzle. All original subpages, styles and referenced images are included. No flattened preview replaces their layout.
+
+Archive limitation: Historical references, multi-page interpretation and end-to-end evaluation remain uncertified.

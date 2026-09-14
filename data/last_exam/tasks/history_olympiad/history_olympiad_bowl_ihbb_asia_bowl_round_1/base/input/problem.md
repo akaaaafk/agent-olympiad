@@ -1,5 +1,3 @@
-# IHBB-Asia-Bowl-Round-1
-
 [Q1] Pope Alexander II allegedly gave a papal banner to the winner of this battle as a sign of support. The losing side in this battle had earlier been forced to face Harald Hardrada at Stamford Bridge. The housecarls took a defensive position upon the Senlac Hill during this battle, though they could not prevent Harold Godwinson from being hit in the eye by an arrow, as depicted in the Bayeux Tapestry. For ten points, name this 1066 victory for William the Conqueror.
 
 [Q2] One of these figures replicated the enemy’s crest on the lanterns of his troops to gain entrance into that enemy’s army. A famous person of this type nicknamed “Devil” led his lord to safety through Iga province. Hattori Hanzo was a mem ber of this profession, also known as shinobi, who served Tokugawa Ieyasu. For ten points, name these stealthy mercenaries from feudal Japan.

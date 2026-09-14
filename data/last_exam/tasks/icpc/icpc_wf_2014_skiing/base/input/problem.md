@@ -1,5 +1,3 @@
-# Skiing
-
 Hide 
  Skiing 
 

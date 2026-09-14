@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 1983
-
 # Odyssey of the Mind — 1983 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -13,3 +11,4 @@ Note: These are public synopses. Full problem packets require membership.
 3. Pirates and the Queen’s TreasureDivision IEach team is a group of privateers trying to retrieve as much of the queen’s lost treasure as possible. Of special importance is a necklace belonging to the queen. In a quest to retrieve the treasure, the team will encounter a band of pirates. The team has to create ways to retrieve the treasure and create ways to shoot the pirates.
 4. Miner’s HelperDivisions I, II & IIIEach team is a group of mining engineers. They will create, construct, and operate a Miner’s Helper, which will travel along a path to an area where it will gather specific materials.
 5. Wrecking Ball StructureDivisions I, II & IIIEach team will build a structure of balsa wood and glue. No laminations or strengthening is allowed. Each team will place weights on the structure until it breaks. One time per minute a judge will cause a direct hit to the structure with a wrecking ball. This procedure will continue until the structure is broken or time runs out.
+

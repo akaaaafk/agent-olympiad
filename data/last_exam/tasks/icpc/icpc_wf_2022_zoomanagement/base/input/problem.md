@@ -1,5 +1,3 @@
-# Zoo Management
-
 Hide 
  Zoo Management 
 

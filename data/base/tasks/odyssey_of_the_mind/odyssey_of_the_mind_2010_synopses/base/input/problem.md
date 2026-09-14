@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2010
-
 # Odyssey of the Mind — 2010 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Column StructureDivisions I, II, III & IVThe problem is to design and build balsa wood columns that will function together to balance and support as much weight as possible. The columns must not be connected to each other in any way. The team will test its Column Structure by placing weights onto it. The team will add weight until its Column Structure breaks or time ends. Bonus score will be awarded for the number of columns used. The team will incorporate the testing of its columns in an original team-created performance.Cost limit: $145 USD.
 5. Food CourtDivisions I, II, III & IVThe problem is to create and present a humorous performance where a food item is accused of being unhealthy and must defend itself among its food peers. All characters are food items and will include “the accused,” “the accuser,” a jury that is not portrayed by team members, and additional team-created characters. The jury will reveal its decision to the audience.Cost limit: $125 USD.
 6. Surprise PartyGrades K-2The team is to create and present a humorous performance that includes a Surprise Party for a team-created character. The theme of the party is a surprise because it is being given for something that is not normally celebrated. Partygoers will give three gifts that help symbolize the theme of the party. The performance will also include an original party “noisemaker” that makes an unusual sound instead of a loud sound.Cost limit: $125 USD.
+

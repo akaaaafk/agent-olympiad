@@ -1,5 +1,3 @@
-# 2019-2020-Asia-Beta-Set_Bowl-Round-5
-
 [Q1] IHBB Asian Beta Set Bowl Round 5 2019-2020 History Bowl Round 5 First Quarter 1.Supporters of this sport burned half of Constantinople during the reign of Justinian the Great in the Nika Revolt. The richest athlete in this sport, Gaius Appuleius Diocles, competed for the Reds using a quadriga. For ten points, name this sport held in the Byzantine Hippodrome and the Roman Circus Maximus, a highly dangerous vehicular race.
 
 [Q2] (”race” not needed after mentioned; prompt on “racing” before mentioned) 2.This woman convened the ﬁrst meeting of the Ninety-Nines. This woman’s spouse debunked baseless rumors that this person was secretly Tokyo Rose. Will Rogers facetiously coined the term “Powder Puff Derby” to describe a race where this pilot took third. The USGS Itasca failed to locate this person after she didn’t check-in with Howland Island. Fred Noonan disappeared with, for ten points, what American aviator, the ﬁrst woman to ﬂy solo across the Atlantic Ocean?

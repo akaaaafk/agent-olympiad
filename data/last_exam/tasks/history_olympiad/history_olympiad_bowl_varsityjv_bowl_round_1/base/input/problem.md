@@ -1,5 +1,3 @@
-# VarsityJV_Bowl-Round-1
-
 [Q1] As a result of this group’s actions, racial restrictions on military officers were removed during World War One. In 1915, this group organized a protest against the pro -KKK film, Birth of a Nation. For ten points, name this organization founded by W. E. B. Du Bois [[doo -BOYS]] to promote civil rights for African-Americans.
 
 [Q2] In a 1418 competition, this city awarded Filippo Brunelleschi [[broo -nell-ESK-ee]] the contract to complete the Santa Maria del Fiore [[fee -OR-ay]] Cathedral. This guild republic rose to European prominence as a result of its banking prowess. Patrons of this city’s leader, Lorenzo, inclu ded Da Vinci and Michelangelo. For ten points, name this important Tuscan city ruled by the Medici family.

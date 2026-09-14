@@ -1,5 +1,3 @@
-# 2021-22-national-case-set
-
 NATIONAL HIGH SCHOOL ETHICS BOWL
 2021-2022
 Last Updated: March 1, 2022

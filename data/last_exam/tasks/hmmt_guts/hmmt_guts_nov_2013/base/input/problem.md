@@ -1,9 +1,10 @@
-# HMMT November 2013 — Guts Round
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
 
-[Page 1]
-HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
+
+
+
+                HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
 
 
                 1. [5] Evaluate 2 + 5 + 8 + · · · + 101.
@@ -11,6 +12,15 @@ HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
                 2. [5] Two fair six-sided dice are rolled. What is the probability that their sum is at least 10?
 
                 3. [5] A square is inscribed in a circle of radius 1. Find the perimeter of the square.
+
+
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
 
 
                 HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
@@ -21,6 +31,15 @@ HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
                prime if their greatest common factor is 1.)
 
                 6. [6] A right triangle has area 5 and a hypotenuse of length 5. Find its perimeter.
+
+
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
 
 
                 HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
@@ -46,8 +65,13 @@ HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
 
                 9. [7] Find the remainder when 12 + 32 + 52 + · · · + 992 is divided by 1000.
 
-[Page 2]
-HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
+
+                HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
 
 
              10. [8] How many pairs of real numbers (x, y) satisfy the equation
@@ -63,6 +87,15 @@ HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
              12. [8] Given that 622 + 1222 = 18728, ﬁnd positive integers (n, m) such that n2 + m2 = 9364.
 
 
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
+
                 HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
 
 
@@ -72,6 +105,15 @@ HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
              14. [9] Find all triples of positive integers (x, y, z) such that x2 + y −z = 100 and x + y2 −z = 124.
                                        √
              15. [9] Find all real numbers x between 0 and 360 such that  3 cos 10◦= cos 40◦+ sin x◦.
+
+
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
 
 
                 HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
@@ -89,8 +131,13 @@ HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
              18. [10] The rightmost nonzero digit in the decimal expansion of 101! is the same as the rightmost nonzero
                   digit of n!, where n is an integer greater than 101. Find the smallest possible value of n.
 
-[Page 3]
-HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
+
+                HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
 
 
              19. [11] Let p, q, r, s be distinct primes such that pq −rs is divisible by 30. Find the minimum possible
@@ -110,6 +157,15 @@ HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
               (The union of two or more regions in the plane is the set of points lying in at least one of the regions.)
 
 
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
+
                 HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
 
 
@@ -126,8 +182,13 @@ HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
 
                  • No subset of S has the property that the sum of its elements is 10.
 
-[Page 4]
-HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
+
+                HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
 
              25. [13]  Let a, b be positive reals with a > b > 12a. Place two squares of side lengths a, b next to each
                  other, such that the larger square has lower left corner at (0, 0) and the smaller square has lower left
@@ -139,6 +200,15 @@ HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
           AB = 4,3 what is a?
 
              27. [13] Find all triples of real numbers (a, b, c) such that a2 + 2b2 −2bc = 16 and 2ab −c2 = 16.
+
+
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
 
 
                 HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
@@ -159,8 +229,13 @@ HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
              30. [15] Find the number of ordered triples of integers (a, b, c) with 1 ≤a, b, c ≤100 and a2b+b2c+c2a =
                 ab2 + bc2 + ca2.
 
-[Page 5]
-HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
+
+                HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
 
 
              31. [17]  Chords AB and CD of circle ω intersect at E such that AE = 8, BE = 2, CD = 10, and
@@ -175,6 +250,15 @@ HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
                      all regions that are contained in exactly 3 of the 4 equilateral triangles?
 
 
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
+
                 HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
 
 
@@ -183,6 +267,8 @@ HMMT NOVEMBER 2013, 9 NOVEMBER 2013 — GUTS ROUND
                  actual answer.
 
              35. [20] Consider the following 4 by 4 grid with one corner square removed:
+
+
 
 
              You may start at any square in this grid and at each move, you may either stop or travel to an adjacent

@@ -1,0 +1,25 @@
+> new game
+> chop tree
+> get timber
+> chop tree
+> get timber
+> kill chicken
+> kill chicken
+> kill chicken
+> kill chicken
+> kill chicken
+> get feather
+> mine gravel
+> mine gravel
+> mine gravel
+> mine gravel
+> mine gravel
+> get flint
+> craft wood
+> craft table
+> craft wood
+> craft sticks
+> use table
+> craft ????? (5)
+> dig cave
+> hide night

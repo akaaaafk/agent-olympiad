@@ -1,3 +1,5 @@
-# 2006/puzzles/mcmurdo_station/joint_operations_intelligence_archive
+# McMurdo Station: Joint Operations Intelligence Archive
 
-McMurdo Station: Joint Operations Intelligence Archive S.P.I.E.S. maintains an archive of materials and exhibits from past operations and materials about its collaborations with other organizations. Particularly notable guests are occasionally permitted to visit the J.O.I.A. To make an appointment to receive more information, please call headquarters.
+Open `puzzle.html` for the original styled page and images. Explicit full-size image links are included; no flattened preview replaces spacing, colors or marked positions.
+
+Archive limitation: The page is an invitation to call headquarters. The original appointment, exhibits, host interaction and observations are not reproduced.

@@ -1,31 +1,13 @@
-# Task SOP
+# Task
 
-## Reference Environment
-- Competition: EOES / EUSO
-- Competition id: `eoes`
-- Problem id: `eoes_P1Tasks`
-- Task type: `lab_experiment`
-- Team size: 3
-- Year / edition: 2011
-- Source: https://www.eoes.science/Previous%20olympiads/previous.html
+Competition: eoes
 
-## Goal
-As a multi-agent team, solve the olympiad-style team task using only the materials under `base/input`. Produce the required deliverable (`team_submission`).
+Task: eoes_P1Tasks
 
-## Task directory
-- Variant root: `base`
-- Input directory: `base/input`
-- Software fixtures: `base/software`
+Edition: 2011
 
-## Inputs
-- `problem.md`
-- `P1Tasks.pdf`
+Team size: 3
 
-## Title
-P1Tasks
+Deliverable: lab_answer_sheet_and_report
 
-## Deterministic Evaluation Rule
-Gold answers and official solution booklets are not provided in `input/`. Scoring uses the evaluator declared on the task card (gold match, rubric LLM judge, slide judge, or deferred sandbox).
-
-## Deliverables
-Return the team `team_submission` expected by this competition.
+Use the attached problem materials and the inherited competition and collaboration instructions.

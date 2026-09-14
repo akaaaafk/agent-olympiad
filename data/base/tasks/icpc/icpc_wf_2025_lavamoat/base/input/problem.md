@@ -1,5 +1,3 @@
-# Lava Moat
-
 Hide 
  Lava Moat 
 

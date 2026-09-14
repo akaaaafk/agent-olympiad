@@ -1,5 +1,3 @@
-# Future Innovators Mission 2024
-
 Future Innovators Season Challenge Season 2024   
   Earth Allies AGE GROUPS ELEMENTARY, JUNIOR AND SENIOR     Official Game Rules for the WRO International Final.  Version: Janyary 15th 2024 (Note: Rules for local WRO events may vary!)   WRO International Premium Partner 
    

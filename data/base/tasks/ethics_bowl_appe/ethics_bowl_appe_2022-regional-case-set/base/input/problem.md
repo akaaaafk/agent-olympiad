@@ -1,5 +1,3 @@
-# 2022-regional-case-set
-
 REGIONAL 
 ETHICS BOWL  
 CASES 

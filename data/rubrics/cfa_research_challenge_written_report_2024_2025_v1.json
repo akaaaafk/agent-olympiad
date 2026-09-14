@@ -1,0 +1,79 @@
+{
+  "rubric_id": "cfa_research_challenge_written_report_2024_2025_v1",
+  "type": "structured_rubric",
+  "title": "CFA Institute Research Challenge Research Report Evaluation Form",
+  "competition_id": "cfa_research_challenge",
+  "deliverable": "written_report",
+  "rules_edition": "2024-2025",
+  "total_points": 100,
+  "criteria": [
+    {
+      "id": "business_description",
+      "name": "Business Description",
+      "max_score": 5
+    },
+    {
+      "id": "industry_competitive_positioning",
+      "name": "Industry Overview & Competitive Positioning",
+      "max_score": 10
+    },
+    {
+      "id": "investment_summary",
+      "name": "Investment Summary",
+      "max_score": 15
+    },
+    {
+      "id": "valuation",
+      "name": "Valuation",
+      "max_score": 20
+    },
+    {
+      "id": "financial_analysis",
+      "name": "Financial Analysis",
+      "max_score": 20
+    },
+    {
+      "id": "investment_risks",
+      "name": "Investment Risks",
+      "max_score": 15
+    },
+    {
+      "id": "esg",
+      "name": "Environmental, Social, Governance",
+      "max_score": 15
+    }
+  ],
+  "scoring": {
+    "grader_method": "Graders independently evaluate each written report using the Research Report Evaluation Form.",
+    "tiebreak_order": [
+      "Financial Analysis",
+      "Valuation",
+      "Investment Summary",
+      "Industry Overview & Competitive Positioning",
+      "Investment Risks",
+      "Environmental, Social, Governance",
+      "Business Description"
+    ],
+    "tiebreak_source": {
+      "appendix": "F",
+      "pdf_page": 20
+    }
+  },
+  "provenance": {
+    "official_only": true,
+    "publisher": "CFA Institute",
+    "retrieved_from": "CFA Institute society-hosted archive",
+    "sources": [
+      {
+        "title": "CFA Institute Research Challenge Official Rules 2024-2025",
+        "url": "https://higherlogicdownload.s3.amazonaws.com/CFAI/18ab2d35-5082-4f32-8747-c4d687c9b630/UploadedImages/Official_Rules_GIRC_2024-2025.pdf",
+        "local_file": "data/raw/cfa_research_challenge/rules/research_challenge_rules_2024_2025.pdf",
+        "sha256": "c9a1a5e61a251e4db5550636a3ef2af5ccf77b0160c28ebe86676df41886e35a",
+        "appendix": "C",
+        "pdf_page": 17
+      }
+    ],
+    "applicability_note": "Verified against the archived 2024-2025 rules; not automatically applicable to other seasons or competition stages."
+  },
+  "applicability_note": "Verified against the archived 2024-2025 rules; not automatically applicable to other seasons or competition stages."
+}

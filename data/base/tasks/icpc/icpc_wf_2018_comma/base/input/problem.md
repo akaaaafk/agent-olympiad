@@ -1,5 +1,3 @@
-# Comma Sprinkler
-
 Hide 
  Comma Sprinkler 
 

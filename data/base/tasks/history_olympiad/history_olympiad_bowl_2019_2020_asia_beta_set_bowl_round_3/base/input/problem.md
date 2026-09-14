@@ -1,5 +1,3 @@
-# 2019-2020-Asia-Beta-Set_Bowl-Round-3
-
 [Q1] IHBB Asian Beta Set Bowl Round 3 2019-2020 History Bowl Round 3 First Quarter 1.This country’s national anthem, “Maamme,” [mahhm-may] ends the Karelia Suite, which was written by this country’s most prominent composer, Jean Sibelius. Sibelius’ most famous work is named for this country and protested Russian censorship of its early 20th century nationalism. For ten points, name this country where many of Sibelius’ works were premiered in Helsinki.
 
 [Q2] 2.Alexander Bliss preserved a copy of this speech that had been requested by George Bancroft. A two-hour oration by Edward Everett preceded this speech. The end of this speech claims that “government of the people, by the people, for the people, shall not perish from the earth.” The phrase “Fourscore and seven years ago” opens, for ten points, what Abraham Lincoln speech delivered after a Civil War battle?

@@ -1,0 +1,54 @@
+{
+  "operation": "user_requested_reversible_ijso_answerless_year_exclusion",
+  "status": "completed_reversible_exclusion_and_score_membership_sync",
+  "timestamp_utc": "20260913T164037Z",
+  "backup": "data/excluded/integrity_repair_20260913T164037Z",
+  "excluded_years": [
+    2005,
+    2007,
+    2008,
+    2024,
+    2025
+  ],
+  "excluded_ids": [
+    "ijso_practical_2005_team_practical_2005",
+    "ijso_practical_2007_team_practical_2007",
+    "ijso_practical_2008_team_practical_2008",
+    "ijso_practical_2024_team_practical_2024",
+    "ijso_practical_2025_team_practical_2025"
+  ],
+  "exclusion_manifest": "data/excluded/ijso_answerless_years_20260913/manifest.json",
+  "score_membership": "data/rubrics/ijso_practical_active_score_membership.json",
+  "old_global_records": 1727,
+  "new_global_records": 1722,
+  "validation": {
+    "active_tracks": 43,
+    "active_global_records": 1722,
+    "active_ijso_records": 15,
+    "excluded_years": [
+      2005,
+      2007,
+      2008,
+      2024,
+      2025
+    ],
+    "active_ijso_status_counts": {
+      "ready_with_limitations": 11,
+      "not_ready": 4
+    },
+    "archived_generated_files": 65,
+    "retained_generated_files_unchanged": 203,
+    "raw_files_preserved": 50,
+    "other_tracks_unchanged": 42,
+    "remaining_scorecards_unchanged": true,
+    "global_status_counts": {
+      "ready_with_limitations": 194,
+      "not_ready": 699,
+      "ready": 669,
+      "remote_judge_ready": 158,
+      "sample_tests_ready": 2
+    },
+    "excluded_ids_rejected_by_loader": true,
+    "historical_scores_modified": false
+  }
+}

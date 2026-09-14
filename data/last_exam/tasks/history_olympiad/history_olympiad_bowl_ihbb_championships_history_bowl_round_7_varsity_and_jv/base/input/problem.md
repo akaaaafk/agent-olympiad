@@ -1,5 +1,3 @@
-# IHBB-Championships-History-Bowl-Round-7-Varsity-and-JV
-
 [Q1] In one anecdote, this book's author beheaded two women when he was asked to supervise a battle between 180 courtesans. This book postulates the following hierarchy of targets: ideas, then alliances, then armies, then cities. This book's first chapter, about planning, lays out five fundamental factors in its title discipline including seasonal changes and terrain. Understanding battlefield geography is advocated in, for ten points, what strategy book written during the Spring and Autumn Period by Sun Tzu?
 
 [Q2] This man was granted foreign aid from France through the Treaty of Barwalde. This man invaded Livonia in his early career to fend off a challenge from his Polish cousin Sigismund III, and his country was administered by Axel Oxenstierna after this man was slain leading a cavalry charge at Lützen. This man had earlier secured a decisive victory against the Holy Roman Empire at Breitenfeld. For ten points, name this Lion of the North who led Sweden in the Thirty Years War.

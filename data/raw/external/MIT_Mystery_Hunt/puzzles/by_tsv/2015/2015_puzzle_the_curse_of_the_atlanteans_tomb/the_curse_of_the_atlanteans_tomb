@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=1240, user-scalable=yes"></meta>
+    
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="icon" href="https://web.mit.edu/puzzle/www/2015/static/images/hunt/icon32.png" type="image/x-icon" />
+    <title>The Curse of the Atlantean's Tomb &mdash; MIT Mystery Hunt 2015</title>
+    
+    <link href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/puzzle.css" rel="stylesheet" type="text/css" />
+
+    
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/logbook.css" />
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/ocean.css" />
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015//static/stylesheets/graveyard.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+ <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="https://web.mit.edu/puzzle/www/2015/intro.html">World Map</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="https://web.mit.edu/puzzle/www/2015/storylog.html">The Story So Far...</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Useful links <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="https://web.mit.edu/puzzle/www/2015/toc.html">List of Puzzles</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/eventschedule.html">Events Schedule</a></li>
+	    
+            <li></li>
+	    
+            <li><a href="https://web.mit.edu/puzzle/www/2015/updates.html">Updates from Sealab</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/completelog.html">Full team log</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/faq.html">FAQ</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/sponsors.html">Sponsors</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/">2015 Archive Overview</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    
+    
+    
+        <li></li>
+        
+    
+
+         
+    </ul>
+  </div><!-- /.navbar-collapse -->
+ </div>
+</nav> 
+
+  
+    <div id="artstuff">
+        <div id="oceandecor">
+            <div id="puzzle-obj"><img src="https://web.mit.edu/puzzle/www/2015//assets/puzzimages/193.png"></img></div>
+            <div id="infowindow">Location: Graveyard <br />Depth: 327</div>
+        <div id="leftdecor"></div>
+        <div id="rightdecor"></div>
+        </div>
+    </div>
+    <div id="paper">
+      
+
+
+
+        <div class="puzzle-page-header">
+        
+            <div class="sol"><a href="solution/">View Solution</a></div>
+        
+        <h1>The Curse of the Atlantean's Tomb</h1>
+        
+	    
+	        <p class="answer" id="answer_193"> Answer: click here to reveal</p>
+            
+        
+        </div>
+      <div class='puzzle'>
+        <!-- Puzzle content begins here -->
+         <p><img src="images/curse-of-the-atlantean-tomb.png" width="100%"></p>
+
+<div style="width:100%;">
+<div style="float:left;margin:0 px;width:50%;" class="no-page-break">
+<b>Across:</b>
+<br>
+<br>
+<p>
+1. Exercises back muscle between turnovers<br>
+5. Pillages with headless hot irons<br>
+6. Coat with one half quart on the outside<br>
+8. Elk, 'roos mix in storage<br>
+9. Worth breaking a tin cog<br>
+11. Martin V disturbed a wild animal, such as a fox<br>
+13. Battle of Thermopylae leaders were stole<br>
+15. Deserved victory was reversed recently<br>
+17. Oddly, Loki put into caskets caused quarrels<br>
+18. Perversely, it began singing loudly<br>
+19. Petulantly put up a trial balloon?<br>
+21. Girl harboring beginnings of heavy addiction prompts disasters<br>
+22. Polemarch, gutted, is a barker<br>
+23. Swagger about with absurd trust<br>
+25. Electricity indirectly following coat of varnish?<br>
+27. Invents appliance store<br>
+28. Very big sounds found in your office<br>
+30. Many members of a house<br>
+32. Breezing through parts of the lungs<br>
+34. Enthalpy relative lacks<br>
+35. One hundred fifty stuffed in a box at your fingertips<br>
+37. Pair a second time about fire starter<br>
+40. 100 cents, in some places speaking point-blank<br>
+42. Short rib<br>
+43. Nice street to regret<br>
+44. Secret, with the lid off, is known<br>
+45. Game alteration evens out moose<br>
+47. Adjust out of time, then faint<br>
+48. Promise a lookup every second<br>
+49. Awards initially entertained my mother's younger sister<br>
+51. Pair of ends in small killers<br>
+52. Till mixed poker game<br>
+53. Indian state is very much in tempo<br>
+54. When pigs fly from one vermin<br>
+55. Jack sat outside packaging<br>
+56. Blacked out when former lover mentioned</p>
+
+</div>
+<div style="float:left; margin:0 px; width:50%;" class="no-page-break">
+<b>Down:</b>
+<br>
+<br>
+<p>
+1. Silk velvet and eggs to start after French bread<br>
+2. Banks made of muddy silts<br>
+3. Irrational number in cot changing the subject<br>
+4. Contraband weapons for mythical destroyer<br>
+5. First-year players on Denver team<br>
+7. Dizzy swine falls between tenors with matching sweaters<br>
+8. Baiters caught king's stalkers<br>
+10. Wilder relative's beginning<br>
+11. Measure void, lacking an irrational beginning<br>
+12. Forbidden drum<br>
+13. Strand the Spanish in prehistoric hotel<br>
+14. The ram makes an effort<br>
+15. German hunter can get one drunk<br>
+16. Fretsaw disfigured those who serve<br>
+17. A bunch of baloney about shifting sea bottoms<br>
+20. Part of royal Tahitian resort city<br>
+21. Wetter critter<br>
+22. ASAP, alter ruined school for wrestlers<br>
+24. One who allows art looter to regroup<br>
+26. Stylist for twisted office use<br>
+27. Metallic elbow guards fruit sellers<br>
+29. Chicken look is a squinter<br>
+31. Having no limits and no ends<br>
+33. Furious Republican leader involved in scandalous suffix?<br>
+34. Leaders of crowds<br>
+35. Revolutionary's small game of tactics<br>
+36. Blow horn, opening stand<br>
+38. Someone accepting a challenge about Kat's return<br>
+39. Raise creator of Jupiter<br>
+41. Arrives like Halley<br>
+42. Reception was cross, I heard<br>
+45. Mother's note contains nothing<br>
+46. Wear for a long time<br>
+50. Turn the German blue</p>
+
+        <!-- Puzzle content ends here -->
+      </div>
+    </div>
+
+
+
+
+
+    
+    <script type="text/javascript" src="https://web.mit.edu/puzzle/www/2015/static/bootstrap/javascripts/bootstrap.js" charset="utf-8"></script>
+    
+<script type="text/javascript">
+  $(document).ready(function(e) { $('#answer_193').click(function(e) { $('#answer_193').text("Answer: " + "BIG SUR");});});
+</script>
+
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

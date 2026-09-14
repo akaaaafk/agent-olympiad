@@ -1,5 +1,3 @@
-# Pachinko
-
 Hide 
  Pachinko 
 

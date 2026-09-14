@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/tr/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb"> 
+<head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta http-equiv="Content-Style-Type" content="text/css" /> 
+  <meta http-equiv="Content-Language" content="en-GB" /> 
+  <title>Box Sets</title> 
+  <link rel="stylesheet" type="text/css" href="../../../styles/puzzles.css" media="screen" /> 
+  <link rel="stylesheet" type="text/css" href="../../../styles/puzzles.css" media="print" /> 
+  <script language="javascript">
+    imageObj = new Image();
+
+    images = new Array();
+    images[0] = "blank.gif";
+    images[1] = "A.gif";
+    images[2] = "B.gif";
+    images[3] = "C.gif";
+    images[4] = "D.gif";
+    images[5] = "E.gif";
+    images[6] = "F.gif";
+    images[7] = "G.gif";
+    images[8] = "H.gif";
+    images[9] = "I.gif";
+    images[10] = "J.gif";
+    images[11] = "K.gif";
+    images[12] = "L.gif";
+    images[13] = "M.gif";
+    images[14] = "N.gif";
+    images[15] = "O.gif";
+    images[16] = "P.gif";
+    images[17] = "Q.gif";
+    images[18] = "R.gif";
+    images[19] = "S.gif";
+
+    for(var i=1; i<=19; i++) {
+      imageObj.src = images[i];
+    }
+
+    function showBox(boxID) {
+      document.getElementById("box").src = images[boxID];
+    }
+
+    function showClue(strClue) {
+      document.getElementById("clue").innerHTML = strClue;
+    }
+  </script> 
+</head> 
+ 
+<body>
+<div id="container">
+
+  <div id="header">
+    <div id="header-content">
+      <a id="back-to-round" href="./"><img src="../../../images/return-to-puzzle.gif" /></a>
+    </div><!--end of id="header-content"-->
+  </div><!--end of id="header"-->
+
+  <div id="main">
+    <div id="page">
+      <div id="page-top">
+        <img id="page-stamp" src="../../../images/stamp-1804.gif" />
+        <h1 id="page-heading">Box Sets</h1>
+        <h3>by Dave Shukan</h3>
+        <p>ANSWER: <b>SMACK</b></p>
+      </div>
+
+      <div id="page-center">
+        <div id="page-left">&nbsp;</div>
+        <div id="page-right">&nbsp;</div>
+
+        <div id="page-content">
+          <p>The pictures decompose into 19 sets; each with elements aligned to the corners of a rectangle. Each represents three members of a set and a fourth member with a one-letter typo, as follows:</p>
+          <div class="center" style="position:relative; height:610px; width:610px">
+            <img style="position:absolute; top:0; left:0" src="box_sets_solution.jpg" />
+            <img id="box" style="position:absolute; top:0; left:0" src="blank.gif" />
+            <img style="position:absolute; top:0; left:0" src="blank.gif" usemap="#overlay" />
+          </div>
+          <div class="caption">Hover on box to reveal set<br/><span id="clue"></span></div>
+          <map name="overlay">
+            <area shape="rect" coords="0,0,68,68" onmouseover="showBox('13'); showClue('PORT GIN <b>BRANDY</b> SEER')" />
+            <area shape="rect" coords="68,0,136,68" onmouseover="showBox('1'); showClue('LATS POUND COLON <b>REN</b>')" />
+            <area shape="rect" coords="136,0,203,68" onmouseover="showBox('10'); showClue('<b>BUTTER</b> COFFEE KIDNEY RUNG')" />
+            <area shape="rect" coords="203,0,271,68" onmouseover="showBox('2'); showClue('IRON COPPER MERCURY <b>TIE</b>')" />
+            <area shape="rect" coords="271,0,339,68" onmouseover="showBox('9'); showClue('HEART <b>CLUB</b> DIAMOND SHADE')" />
+            <area shape="rect" coords="339,0,407,68" onmouseover="showBox('5'); showClue('<b>TAURUS</b> FOCUS RANGER FLEA')" />
+            <area shape="rect" coords="407,0,474,68" onmouseover="showBox('13'); showClue('PORT <b>GIN</b> BRANDY SEER')" />
+            <area shape="rect" coords="474,0,542,68" onmouseover="showBox('3'); showClue('PENGUIN SIREN BLACKWIDOW <b>ARCHES</b>')" />
+            <area shape="rect" coords="542,0,610,68" onmouseover="showBox('0'); showClue('CIA')" />
+            <area shape="rect" coords="0,68,68,136" onmouseover="showBox('1'); showClue('LATS <b>POUND</b> COLON REN')" />
+            <area shape="rect" coords="68,68,136,136" onmouseover="showBox('4'); showClue('SCOUT SPY FLAG <b>TOMB</b>')" />
+            <area shape="rect" coords="136,68,203,136" onmouseover="showBox('19'); showClue('GEORGIA <b>CHINA</b> CHAD CUBE')" />
+            <area shape="rect" coords="203,68,271,136" onmouseover="showBox('4'); showClue('<b>SCOUT</b> SPY FLAG TOMB')" />
+            <area shape="rect" coords="271,68,339,136" onmouseover="showBox('11'); showClue('SKITTLES KISSES <b>3MUSKETEERS</b> BABERUTH')" />
+            <area shape="rect" coords="339,68,407,136" onmouseover="showBox('9'); showClue('<b>HEART</b> CLUB DIAMOND SHADE')" />
+            <area shape="rect" coords="407,68,474,136" onmouseover="showBox('5'); showClue('TAURUS FOCUS RANGER <b>FLEA</b>')" />
+            <area shape="rect" coords="474,68,542,136" onmouseover="showBox('19'); showClue('<b>GEORGIA</b> CHINA CHAD CUBE')" />
+            <area shape="rect" coords="542,68,610,136" onmouseover="showBox('3'); showClue('PENGUIN SIREN <b>BLACKWIDOW</b> ARCHES')" />
+            <area shape="rect" coords="0,136,68,203" onmouseover="showBox('10'); showClue('BUTTER <b>COFFEE</b> KIDNEY RUNG')" />
+            <area shape="rect" coords="68,136,136,203" onmouseover="showBox('14'); showClue('<b>TOWER</b> WHEELOFFORTUNE MOON FOAL')" />
+            <area shape="rect" coords="136,136,203,203" onmouseover="showBox('15'); showClue('BRIDGE <b>CROWN</b> BRACES CAT')" />
+            <area shape="rect" coords="203,136,271,203" onmouseover="showBox('1'); showClue('<b>LATS</b> POUND COLON REN')" />
+            <area shape="rect" coords="271,136,339,203" onmouseover="showBox('6'); showClue('MACE CURRY SALT <b>RINGER</b>')" />
+            <area shape="rect" coords="339,136,407,203" onmouseover="showBox('15'); showClue('BRIDGE CROWN <b>BRACES</b> CAT')" />
+            <area shape="rect" coords="407,136,474,203" onmouseover="showBox('12'); showClue('CUP <b>BARREL</b> HOGSHEAD PINE')" />
+            <area shape="rect" coords="474,136,542,203" onmouseover="showBox('6'); showClue('MACE <b>CURRY</b> SALT RINGER')" />
+            <area shape="rect" coords="542,136,610,203" onmouseover="showBox('14'); showClue('TOWER WHEELOFFORTUNE <b>MOON</b> FOAL')" />
+            <area shape="rect" coords="0,203,68,271" onmouseover="showBox('2'); showClue('IRON <b>COPPER</b> MERCURY TIE')" />
+            <area shape="rect" coords="68,203,136,271" onmouseover="showBox('9'); showClue('HEART CLUB <b>DIAMOND</b> SHADE')" />
+            <area shape="rect" coords="136,203,203,271" onmouseover="showBox('1'); showClue('LATS POUND <b>COLON</b> REN')" />
+            <area shape="rect" coords="203,203,271,271" onmouseover="showBox('16'); showClue('<b>MULE</b> PUMP STILETTO HEDGE')" />
+            <area shape="rect" coords="271,203,339,271" onmouseover="showBox('7'); showClue('<b>SUMMER</b> SPRING WINTER FELL')" />
+            <area shape="rect" coords="339,203,407,271" onmouseover="showBox('8'); showClue('SPECTER HATCH BOXER <b>BATH</b>')" />
+            <area shape="rect" coords="407,203,474,271" onmouseover="showBox('0'); showClue('ABS')" />
+            <area shape="rect" coords="474,203,542,271" onmouseover="showBox('12'); showClue('CUP BARREL <b>HOGSHEAD</b> PINE')" />
+            <area shape="rect" coords="542,203,610,271" onmouseover="showBox('16'); showClue('MULE PUMP <b>STILETTO</b> HEDGE')" />
+            <area shape="rect" coords="0,271,68,339" onmouseover="showBox('18'); showClue('SALSA <b>TAP</b> REEL BULLET')" />
+            <area shape="rect" coords="68,271,136,339" onmouseover="showBox('5'); showClue('TAURUS FOCUS <b>RANGER</b> FLEA')" />
+            <area shape="rect" coords="136,271,203,339" onmouseover="showBox('9'); showClue('HEART CLUB DIAMOND <b>SHADE</b>')" />
+            <area shape="rect" coords="203,271,271,339" onmouseover="showBox('3'); showClue('<b>PENGUIN</b> SIREN BLACKWIDOW ARCHES')" />
+            <area shape="rect" coords="271,271,339,339" onmouseover="showBox('12'); showClue('<b>CUP</b> BARREL HOGSHEAD PINE')" />
+            <area shape="rect" coords="339,271,407,339" onmouseover="showBox('7'); showClue('SUMMER SPRING WINTER <b>FELL</b>')" />
+            <area shape="rect" coords="407,271,474,339" onmouseover="showBox('10'); showClue('BUTTER COFFEE KIDNEY <b>RUNG</b>')" />
+            <area shape="rect" coords="474,271,542,339" onmouseover="showBox('11'); showClue('SKITTLES <b>KISSES</b> 3MUSKETEERS BABERUTH')" />
+            <area shape="rect" coords="542,271,610,339" onmouseover="showBox('18'); showClue('<b>SALSA</b> TAP REEL BULLET')" />
+            <area shape="rect" coords="0,339,68,407" onmouseover="showBox('11'); showClue('SKITTLES KISSES 3MUSKETEERS <b>BABERUTH</b>')" />
+            <area shape="rect" coords="68,339,136,407" onmouseover="showBox('4'); showClue('SCOUT SPY <b>FLAG</b> TOMB')" />
+            <area shape="rect" coords="136,339,203,407" onmouseover="showBox('5'); showClue('TAURUS <b>FOCUS</b> RANGER FLEA')" />
+            <area shape="rect" coords="203,339,271,407" onmouseover="showBox('4'); showClue('SCOUT <b>SPY</b> FLAG TOMB')" />
+            <area shape="rect" coords="271,339,339,407" onmouseover="showBox('3'); showClue('PENGUIN <b>SIREN</b> BLACKWIDOW ARCHES')" />
+            <area shape="rect" coords="339,339,407,407" onmouseover="showBox('12'); showClue('CUP BARREL HOGSHEAD <b>PINE</b>')" />
+            <area shape="rect" coords="407,339,474,407" onmouseover="showBox('17'); showClue('FRAME SPARE <b>GUTTER</b> ROCKET')" />
+            <area shape="rect" coords="474,339,542,407" onmouseover="showBox('8'); showClue('SPECTER HATCH <b>BOXER</b> BATH')" />
+            <area shape="rect" coords="542,339,610,407" onmouseover="showBox('2'); showClue('<b>IRON</b> COPPER MERCURY TIE')" />
+            <area shape="rect" coords="0,407,68,474" onmouseover="showBox('13'); showClue('PORT GIN BRANDY <b>SEER</b>')" />
+            <area shape="rect" coords="68,407,136,474" onmouseover="showBox('14'); showClue('TOWER <b>WHEELOFFORTUNE</b> MOON FOAL')" />
+            <area shape="rect" coords="136,407,203,474" onmouseover="showBox('8'); showClue('<b>SPECTER</b> HATCH BOXER BATH')" />
+            <area shape="rect" coords="203,407,271,474" onmouseover="showBox('0'); showClue('ELK')" />
+            <area shape="rect" coords="271,407,339,474" onmouseover="showBox('10'); showClue('BUTTER COFFEE <b>KIDNEY</b> RUNG')" />
+            <area shape="rect" coords="339,407,407,474" onmouseover="showBox('17'); showClue('FRAME <b>SPARE</b> GUTTER ROCKET')" />
+            <area shape="rect" coords="407,407,474,474" onmouseover="showBox('13'); showClue('<b>PORT</b> GIN BRANDY SEER')" />
+            <area shape="rect" coords="474,407,542,474" onmouseover="showBox('17'); showClue('<b>FRAME</b> SPARE GUTTER ROCKET')" />
+            <area shape="rect" coords="542,407,610,474" onmouseover="showBox('14'); showClue('TOWER WHEELOFFORTUNE MOON <b>FOAL</b>')" />
+            <area shape="rect" coords="0,474,68,542" onmouseover="showBox('7'); showClue('SUMMER <b>SPRING</b> WINTER FELL')" />
+            <area shape="rect" coords="68,474,136,542" onmouseover="showBox('0'); showClue('BUM')" />
+            <area shape="rect" coords="136,474,203,542" onmouseover="showBox('15'); showClue('BRIDGE CROWN BRACES <b>CAT</b>')" />
+            <area shape="rect" coords="203,474,271,542" onmouseover="showBox('16'); showClue('MULE PUMP STILETTO <b>HEDGE</b>')" />
+            <area shape="rect" coords="271,474,339,542" onmouseover="showBox('6'); showClue('MACE CURRY <b>SALT</b> RINGER')" />
+            <area shape="rect" coords="339,474,407,542" onmouseover="showBox('15'); showClue('<b>BRIDGE</b> CROWN BRACES CAT')" />
+            <area shape="rect" coords="407,474,474,542" onmouseover="showBox('17'); showClue('FRAME SPARE GUTTER <b>ROCKET</b>')" />
+            <area shape="rect" coords="474,474,542,542" onmouseover="showBox('6'); showClue('<b>MACE</b> CURRY SALT RINGER')" />
+            <area shape="rect" coords="542,474,610,542" onmouseover="showBox('16'); showClue('MULE <b>PUMP</b> STILETTO HEDGE')" />
+            <area shape="rect" coords="0,542,68,610" onmouseover="showBox('18'); showClue('SALSA TAP REEL <b>BULLET</b>')" />
+            <area shape="rect" coords="68,542,136,610" onmouseover="showBox('7'); showClue('SUMMER SPRING <b>WINTER</b> FELL')" />
+            <area shape="rect" coords="136,542,203,610" onmouseover="showBox('19'); showClue('GEORGIA CHINA <b>CHAD</b> CUBE')" />
+            <area shape="rect" coords="203,542,271,610" onmouseover="showBox('11'); showClue('<b>SKITTLES</b> KISSES 3MUSKETEERS BABERUTH')" />
+            <area shape="rect" coords="271,542,339,610" onmouseover="showBox('8'); showClue('SPECTER <b>HATCH</b> BOXER BATH')" />
+            <area shape="rect" coords="339,542,407,610" onmouseover="showBox('2'); showClue('IRON COPPER <b>MERCURY</b> TIE')" />
+            <area shape="rect" coords="407,542,474,610" onmouseover="showBox('0'); showClue('DOC')" />
+            <area shape="rect" coords="474,542,542,610" onmouseover="showBox('19'); showClue('GEORGIA CHINA CHAD <b>CUBE</b>')" />
+            <area shape="rect" coords="542,542,610,610" onmouseover="showBox('18'); showClue('SALSA TAP <b>REEL</b> BULLET')" />
+          </map>
+          <br/>
+          <p>The replacement letters spell, in grid order, the phrase REST ARE THREES A THRU E:</p>
+          <table style="font-size:80%; line-height:1.5em; padding-left:2em">
+            <tr><th style="width:28em">Set</th><th>Letter</th></tr>
+            <tr><td>LATS POUND COLON REN (YEN)</td><td>R</td></tr>
+            <tr><td>IRON COPPER MERCURY TIE (TIN)</b></td><td>E</td></tr>
+            <tr><td>PENGUIN SIREN BLACKWIDOW ARCHES (ARCHER)</td><td>S</td></tr>
+            <tr><td>SCOUT SPY FLAG TOMB (BOMB)</td><td>T</td></tr>
+            <tr><td>TAURUS FOCUS RANGER FLEA (FLEX)</td><td>A</td></tr>
+            <tr><td>MACE CURRY SALT RINGER (GINGER)</td><td>R</td></tr>
+            <tr><td>SUMMER SPRING WINTER FELL (FALL)</td><td>E</td></tr>
+            <tr><td>SPECTER HATCH BOXER BATH (BAYH)</td><td>T</td></tr>
+            <tr><td>HEART CLUB DIAMOND SHADE (SPADE)</td><td>H</td></tr>
+            <tr><td>BUTTER COFFEE KIDNEY RUNG (LUNG)</td><td>R</td></tr>
+            <tr><td>SKITTLES KISSES 3MUSKETEERS BABERUTH (BABYRUTH)</td><td>E</td></tr>
+            <tr><td>CUP BARREL HOGSHEAD PINE (PINT)</td><td>E</td></tr>
+            <tr><td>PORT GIN BRANDY SEER (BEER)</td><td>S</td></tr>
+            <tr><td>TOWER WHEELOFFORTUNE MOON FOAL (FOOL)</td><td>A</td></tr>
+            <tr><td>BRIDGE CROWN BRACES CAT (CAP)</td><td>T</td></tr>
+            <tr><td>MULE PUMP STILETTO HEDGE (WEDGE)</td><td>H</td></tr>
+            <tr><td>FRAME SPARE GUTTER ROCKET (POCKET)</td><td>R</td></tr>
+            <tr><td>SALSA TAP REEL BULLET (BALLET)</td><td>U</td></tr>
+            <tr><td>GEORGIA CHINA CHAD CUBE (CUBA)</td><td>E</td></tr>
+          </table>
+          <p>The remaining, non-matched pictures are 3-letter words starting with A-E:</p>
+          <ul style="font-size:80%">
+            <li>ABS</li>
+            <li>BUM</li>
+            <li>CIA</li>
+            <li>DOC</li>
+            <li>ELK</li>
+          </ul>
+          <p>The final letters spell the answer <b>SMACK</b> (a callback to <i>"a big hit"</i> in the flavor text.)</p>
+        </div><!--end of id="page-content"-->
+      </div><!--end of id="page-center"-->
+
+      <div id="page-bottom">&nbsp;</div>
+
+    </div><!--end of id="page"-->
+  </div><!--end of id="main"-->
+
+</div><!--end of id="container"-->
+
+</body>
+</html>

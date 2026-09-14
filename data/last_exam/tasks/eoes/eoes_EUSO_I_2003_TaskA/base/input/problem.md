@@ -1,5 +1,3 @@
-# EUSO_I_2003_TaskA
-
 1st 
 European Union Science Olympiad
 in Dublin, Ireland

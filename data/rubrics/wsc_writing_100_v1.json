@@ -1,0 +1,50 @@
+{
+  "rubric_id": "wsc_writing_100_v1",
+  "title": "WSC Collaborative Writing official score scale",
+  "total_points": 100,
+  "criteria": [
+    {
+      "id": "clarity",
+      "name": "Clarity",
+      "min_score": 15,
+      "max_score": 25,
+      "observable": true,
+      "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+    },
+    {
+      "id": "content",
+      "name": "Content",
+      "min_score": 15,
+      "max_score": 25,
+      "observable": true,
+      "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+    },
+    {
+      "id": "style",
+      "name": "Style",
+      "min_score": 15,
+      "max_score": 25,
+      "observable": true,
+      "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+    },
+    {
+      "id": "originality",
+      "name": "Originality",
+      "min_score": 15,
+      "max_score": 25,
+      "observable": true,
+      "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+    }
+  ],
+  "official_score_floor_per_criterion": 15,
+  "official_total_range": [
+    60,
+    100
+  ],
+  "official_rubric_path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+  "not_observable_from_deck": [
+    "human-judge calibration",
+    "official three-paper team session",
+    "staged cross-paper editing"
+  ]
+}

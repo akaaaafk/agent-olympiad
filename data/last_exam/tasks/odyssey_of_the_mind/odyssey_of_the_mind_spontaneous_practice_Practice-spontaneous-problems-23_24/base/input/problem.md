@@ -1,5 +1,3 @@
-# Spontaneous practice problems
-
 Practice spontaneous problems for  
 Odyssey Inclusive Coaches - 2024  
 Coaches, please use the problems provided below to practice  

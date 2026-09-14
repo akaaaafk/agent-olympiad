@@ -57,6 +57,8 @@ def _agent_turn_actions(
         kind = str(event["kind"])
         if kind in {THINK_EVENT, "note"}:
             kind = "remember" if kind == "note" else kind
+        elif kind == "note_shared":
+            kind = "share_note"
         by_turn.setdefault(int(event["turn"]), []).append(kind)
     return by_turn
 
@@ -70,7 +72,9 @@ def silent_work_streak(memory: ContestMemory, agent: str) -> int:
     by_turn = _agent_turn_actions(_events(memory), agent)
     streak = 0
     for turn in sorted(by_turn, reverse=True):
-        kinds = set(by_turn[turn]) - {THINK_EVENT}
+        kinds = set(by_turn[turn]) - {
+            THINK_EVENT, "remember", "recall", "memory_auxiliary_call", "automatic_memory",
+        }
         if not kinds:
             continue
         if kinds & (MESSAGE_ACTION_NAMES | DELIBERATION_ACTION_NAMES):
@@ -84,14 +88,15 @@ def silent_work_streak(memory: ContestMemory, agent: str) -> int:
 
 def reported_after_last_work(memory: ContestMemory, agent: str) -> bool:
     """False when the agent's latest recorded work has not been followed by a report."""
-    by_turn = _agent_turn_actions(_events(memory), agent)
-    for turn in sorted(by_turn, reverse=True):
-        kinds = set(by_turn[turn]) - {THINK_EVENT}
-        if not kinds:
+    # Auxiliary shares can precede or follow work in the same turn. Preserve
+    # event order instead of treating every message in that turn as later.
+    for event in reversed(_events(memory)):
+        if event["actor"] != agent:
             continue
-        if kinds & (MESSAGE_ACTION_NAMES | DELIBERATION_ACTION_NAMES):
+        kind = "share_note" if event["kind"] == "note_shared" else event["kind"]
+        if kind in MESSAGE_ACTION_NAMES | DELIBERATION_ACTION_NAMES:
             return True
-        if kinds & SILENT_WORK_ACTIONS:
+        if kind in SILENT_WORK_ACTIONS:
             return False
     return True
 
@@ -355,8 +360,14 @@ def think_system_prompt(
            "and the current shared drafts, then decide which single action you will ")
         + f"take next and why. The actions available this turn are: "
         f"{', '.join(sorted(action_names))}. "
-        f"Write plain text, at most {limit} characters, ending with one line "
-        "'NEXT ACTION: <action name>'. Do not output JSON and do not call actions."
+        + (f"Write at most {limit} characters total. "
+           "Write plain-text reasoning and 'NEXT ACTION: <action name>', followed "
+           "by the required memory_update block. JSON is allowed only inside that "
+           "block; do not call actions."
+           if retain_history else
+           f"Write plain text, at most {limit} characters, ending with one line "
+           "'NEXT ACTION: <action name>'. "
+           "Do not output JSON and do not call actions.")
         + ('\n' + memory_guidance if memory_guidance else '')
     )
 

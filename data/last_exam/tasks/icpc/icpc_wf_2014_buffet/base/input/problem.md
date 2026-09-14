@@ -1,5 +1,3 @@
-# Buffed Buffet
-
 Hide 
  Buffed Buffet 
 

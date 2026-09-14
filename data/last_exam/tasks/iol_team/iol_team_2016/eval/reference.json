@@ -1,10 +1,30 @@
 {
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/iol_team/benchmark.json#iol_team_2016.gold_label",
-  "has_gold_answer": true,
-  "evaluator_id": "rubric_llm_v1",
-  "evaluator_status": "ready",
-  "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-  "deliverable": "worked_answers",
-  "solution_file": "data/raw/iol/iol-2016-team-sol.m.pdf"
+  "has_gold_answer": false,
+  "evaluator_id": null,
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/iol/iol-2016-team-sol.m.pdf",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/iol_team_2016_printed_points_v1.json",
+    "deliverable": "team_worked_answer",
+    "judge_assets": [
+      "data/raw/iol/iol-2016-team-sol.m.pdf"
+    ],
+    "limitations": [
+      "Official multilingual solution provides the 114 word-to-audio matches; all 114 WAV recordings are now contestant-visible.",
+      "The six-point observation/explanation part has no explicit marking reference in the recovered answer table.",
+      "Audio-capable runtime delivery and grading have not been validated end to end; the source's unspecified Creative Commons notice is preserved."
+    ],
+    "scorecard_path": "data/rubrics/task_scorecards/iol_team.json",
+    "scorecard_key": "iol_team_2016",
+    "source_repair_report": "data/benchmarks/iol_source_repair_20260913.json",
+    "score_basis": "Printed official allocations: 120 regular points; partial reference only. Part a: 114; part b: 6.",
+    "scoring_validation_status": "partial_reference_not_end_to_end_validated",
+    "answer_key_path": "data/rubrics/iol_team_2016_audio_answer_map.json"
+  },
+  "rubric_path": "data/rubrics/iol_team_2016_printed_points_v1.json",
+  "deliverable": "team_worked_answer"
 }

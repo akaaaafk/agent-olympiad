@@ -1,5 +1,3 @@
-# case-2021
-
 HARVARD
 The competition is brought to you by the IFSA Network and the Harvard
 Graduate School of Arts and Sciences Business Club.

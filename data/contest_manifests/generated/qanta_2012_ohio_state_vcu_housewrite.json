@@ -1,0 +1,11 @@
+{
+  "session_id": "qanta_2012_ohio_state_vcu_housewrite",
+  "competition_id": "qanta",
+  "problem_ids": [
+    "qanta_train_60415"
+  ],
+  "description": "OTC contest-session manifest for qanta_2012_ohio_state_vcu_housewrite (1 tasks)",
+  "split_parts": false,
+  "task_family": "short_answer",
+  "competition_description": "Academic quiz-bowl questions: identify the requested person, place, work, event, or concept from progressively specific clues."
+}

@@ -1,5 +1,3 @@
-# RoboMission Elementary 2023
-
 RoboMission
 Elementary Game Rules 
 Season 2023

@@ -19,7 +19,8 @@
     "administrivia_packet": "not_encoded"
   },
   "allowed_tools": [
-    "query_rules"
+    "query_rules",
+    "check_arml_power_proofs"
   ],
   "resources": {
     "internet": "forbidden",

@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2007
-
 # Odyssey of the Mind — 2007 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Out Of The Box BalsaDivisions I, II, III & IVThe team’s problem is to design, build, and test a structure made of balsa wood and glue that will balance and support weights. The team is allowed to use materials other than balsa wood and glue to assemble the parts of the structure. The structure will be designed to fit completely inside a box that is smaller than the assembled structure. When competition time begins, the team will remove the parts and assembly materials from the box, creatively assemble its structure, and test it by placing weights onto it.Cost limit: $125 USD.
 5. I’m Only Thinking Of You!Divisions I, II, III & IVFor this problem, teams will create and present an original humorous performance that includes a Self-Centered Character (SCC) and a surprise. The SCC will take advantage of others three separate times. Two of the three times it will successfully convince others that it is being helpful and will say, “I’m only thinking of you,” or something similar. The third time it will fail to deceive others into believing that its self-centered behavior helps them and its true nature is revealed.Cost limit: $125 USD.
 6. The Time CapsuleGrades K-2The team will create and present a performance about a group of explorers that uncover a time capsule filled with five unusual items made by the team. The explorers will try to figure out what these odd items are and how they were used. They won’t always agree with each other! The exploration may take place anywhere in any time period.Cost limit: $115 USD.
+

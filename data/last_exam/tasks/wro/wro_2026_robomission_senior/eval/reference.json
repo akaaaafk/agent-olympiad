@@ -3,8 +3,18 @@
   "gold_pointer": "data/benchmarks/wro/benchmark.json#wro_2026_robomission_senior.gold_label",
   "has_gold_answer": false,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/wro_official_rubrics.json",
+    "rubric_variant": "wro_2026_robomission_senior",
+    "deliverable": "observed_physical_robot_attempt",
+    "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+    "scorecard_path": "data/rubrics/task_scorecards/wro.json",
+    "scorecard_key": "wro_2026_robomission_senior"
+  },
+  "rubric_path": "data/rubrics/wro_official_rubrics.json",
+  "deliverable": "observed_physical_robot_attempt"
 }

@@ -1,5 +1,3 @@
-# wsc_writing_gq_024
-
 “Time of death,” says a doctor on TV, after frantic efforts to get someone’s heart pumping again fail, “5:11 am.” If it were only that simple! Research is increasingly suggesting that death is a complex process , sometimes reversible—sometimes not. Explore the differences between resuscitation and resurrection, then, without getting too dark, discuss with your team: how much of a person’s mind needs to be intact for it to be a good idea to keep them alive—and who should decide? You may also want to explore some historical ideas about what happens after death, including those below: 
 
  Valhalla | Tartarus | Diyu | Jigoku 

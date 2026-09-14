@@ -1,5 +1,3 @@
-# Qanat
-
 Hide 
  Qanat 
 

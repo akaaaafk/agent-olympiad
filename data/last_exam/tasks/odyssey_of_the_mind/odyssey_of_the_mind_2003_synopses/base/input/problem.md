@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2003
-
 # Odyssey of the Mind — 2003 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Odd Pod StructureDivisions I, II, III & IVThis problem requires teams to design and build a structure of balsa wood and glue that will rest on an odd number of team-made pods while holding as much weight as possible. The team must have a minimum of three pods and will be awarded points for the number of pods used. The pods can be made of any material but must measure no more than 2″ x 2″ x 3/4″. The team may place the pods anywhere outside of an 8-inch circle on the tester. Once the structure is placed on the pods, it will be tested by balancing and supporting weights. Time limit: 8 min. Cost limit: $125 USD.
 5. Fooled Ya!Divisions I, II & IIIThe team is to create and present a performance that includes two characters who perform at least five “illusions” that entertain other characters in the performance. One of the illusions will turn out to be not an illusion at all — it will actually happen! The team will also include a special effect in its performance.Time limit: 8 min. Cost limit: $100 USD.
 6. Music LessonsPrimaryIn this musical problem, teams will create and perform a song with lyrics that help to teach something. The team will make and play two musical instruments to accompany the song. The team will show how learning the song helps a character in the performance. Time limit: 8 min. Cost limit: $50 USD.
+

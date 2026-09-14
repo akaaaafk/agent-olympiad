@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=1240, user-scalable=yes"></meta>
+    
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="icon" href="https://web.mit.edu/puzzle/www/2015/static/images/hunt/icon32.png" type="image/x-icon" />
+    <title>Goldfish Memory &mdash; MIT Mystery Hunt 2015</title>
+    
+    <link href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/puzzle.css" rel="stylesheet" type="text/css" />
+
+    
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/logbook.css" />
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/ocean.css" />
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015//static/stylesheets/school_of_fish.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+ <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="https://web.mit.edu/puzzle/www/2015/intro.html">World Map</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="https://web.mit.edu/puzzle/www/2015/storylog.html">The Story So Far...</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Useful links <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="https://web.mit.edu/puzzle/www/2015/toc.html">List of Puzzles</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/eventschedule.html">Events Schedule</a></li>
+	    
+            <li></li>
+	    
+            <li><a href="https://web.mit.edu/puzzle/www/2015/updates.html">Updates from Sealab</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/completelog.html">Full team log</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/faq.html">FAQ</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/sponsors.html">Sponsors</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/">2015 Archive Overview</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    
+    
+    
+        <li></li>
+        
+    
+
+         
+    </ul>
+  </div><!-- /.navbar-collapse -->
+ </div>
+</nav> 
+
+  
+    <div id="artstuff">
+        <div id="oceandecor">
+            <div id="puzzle-obj"><img src="https://web.mit.edu/puzzle/www/2015//assets/puzzimages/271.png"></img></div>
+            <div id="infowindow">Location: School of Fish <br />Depth: 235</div>
+        <div id="leftdecor"></div>
+        <div id="rightdecor"></div>
+        </div>
+    </div>
+    <div id="paper">
+      
+
+
+
+        <div class="puzzle-page-header">
+        
+            <div class="sol"><a href="solution/">View Solution</a></div>
+        
+        <h1>Goldfish Memory</h1>
+        
+	    
+	        <p class="answer" id="answer_271"> Answer: click here to reveal</p>
+            
+        
+        </div>
+      <div class='puzzle'>
+        <!-- Puzzle content begins here -->
+         <style type="text/css">
+  #play_area {
+    width: 900px;
+  }
+
+  .card {
+    height: 119px;
+    width: 128px;
+    margin: 5px;
+    background-color: blue;
+    display: inline-block;
+    cursor: pointer;
+    cursor: hand;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .flipped {
+    background-color: white;
+    cursor: default;
+  }
+
+  .notflipped {
+    cursor: pointer;
+  }
+
+  .card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>
+
+<center>
+<noscript>You need JavaScript enabled for this puzzle.</noscript>
+<div id="play_area">
+</div>
+<div>&nbsp;</div>
+<div id="puzzle-session-error-message-container"></div>
+</center>
+
+<script src="https://web.mit.edu/puzzle/www/2015/static/puzzle_session.js"></script>
+
+<script type='text/javascript'>
+    var STATE_PICKING1 = 0;
+    var STATE_LOADING1 = 1;
+    var STATE_PICKING2 = 2;
+    var STATE_LOADING2 = 3;
+    var STATE_DISPLAYING = 4;
+
+    var state = STATE_PICKING1;
+
+    var session = new PuzzleSession("/dynamic/puzzle/goldfish_memory/flip_card");
+
+    var NUM_CARDS = 36;
+    var card_id1 = null;
+    var card_id2 = null;
+    var timeout = null;
+    $(document).ready( function () {
+        for (var i = 0; i < NUM_CARDS; i++) {
+            $('#play_area').append("<div class='card notflipped' id='card"+ i + "'></div>");
+        }
+        $('.card').each(function () {
+            $(this).click(function () {
+                if (timeout !== null) {
+                    resetState();
+                    clearTimeout(timeout);
+                    timeout = null;
+                }
+
+                var card_id = parseInt($(this).attr('id').substring(4));
+                if (state == STATE_PICKING1 || state == STATE_PICKING2) {
+                    if (state == STATE_PICKING2 && card_id == card_id1) {
+                        return;
+                    }
+
+                    if (state == STATE_PICKING1)
+                        state = STATE_LOADING1;
+                    else
+                        state = STATE_LOADING2;
+                    session.json_request({action: "uncover", card: card_id}, function(res) {
+                        var image_name = res.result;
+                        if (state == STATE_LOADING1) {
+                            setCardShow(card_id, image_name);
+                            state = STATE_PICKING2;
+                            card_id1 = card_id;
+                        } else {
+                            setCardShow(card_id, image_name);
+                            state = STATE_DISPLAYING;
+                            card_id2 = card_id;
+                            timeout = setTimeout(function() {
+                                resetState();
+                                timeout = null;
+                            }, 1500);
+                        }
+                    });
+                }
+            });
+        });
+    });
+
+    function resetState() {
+        setCardHidden(card_id1);
+        setCardHidden(card_id2);
+        state = STATE_PICKING1;
+    }
+
+    function setCardShow(card_id, image_name) {
+        var el = $('#card' + card_id);
+        el.css("background-image", "url('"+image_name+"')");
+        el.addClass("flipped");
+        el.removeClass("notflipped");
+    }
+
+    function setCardHidden(card_id) {
+        var el = $('#card' + card_id);
+        el.css("background-image", "");
+        el.addClass("notflipped");
+        el.removeClass("flipped");
+    }
+</script>
+
+        <!-- Puzzle content ends here -->
+      </div>
+    </div>
+
+
+
+
+
+    
+    <script type="text/javascript" src="https://web.mit.edu/puzzle/www/2015/static/bootstrap/javascripts/bootstrap.js" charset="utf-8"></script>
+    
+<script type="text/javascript">
+  $(document).ready(function(e) { $('#answer_271').click(function(e) { $('#answer_271').text("Answer: " + "BLAZER");});});
+</script>
+
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

@@ -1,24 +1,208 @@
-# Method — `debatebench`
+# Team method
 
-How this benchmark's agents are asked to work. Projected from `data/rules/debatebench/collaboration.json`.
-
-## Agent constraints
-
-- Apply this competition's own roster, timing, tool, collaboration, submission, and scoring rules; do not import rules from another contest.
-- Eight participants form four private two-speaker coalitions. Each speaker may prepare only with their partner; cross-coalition sharing is forbidden.
-- Banned during the contest: internet access, calculators and running code. Paper and pencil are always available. Work only from the materials provided with the problem.
-- Treat private reasoning and notes as unknown to teammates until you communicate the decision-relevant content.
-- Do not access hidden solutions, answer keys, evaluator internals, or unauthorized outside problem-solving help.
-- Observe the competition's phase order: confer only in an authorized conferral period, designate the current speaker, and stop when the modeled phase ends.
-- Keep the team's presentation, opponent commentary, response, and judge-question answers distinct so each can be evaluated under its own official criterion.
-- Keep the four British Parliamentary teams as separate coalitions; do not leak one coalition's private preparation to another coalition.
-- Only designated submitters may make the shared submission: Agent_1, Agent_2, Agent_3, Agent_4, Agent_5, Agent_6, Agent_7, Agent_8.
-- Use only the official mechanisms that the current task actually exposes; do not claim physical, oral, live-opponent, judge, or environment actions that were not observed.
-
-## Information / deliberation / communication
+## Collaboration configuration
 
 ```json
 {
+  "agent_roles": [
+    {
+      "name": "Agent_1",
+      "title": "Opening Government Prime Minister",
+      "may_submit": true,
+      "duties": [
+        "Define the motion when necessary and establish Opening Government's case.",
+        "Prepare only with Agent_2."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_2",
+      "title": "Opening Government Deputy Prime Minister",
+      "may_submit": true,
+      "duties": [
+        "Defend and extend the opening government case while rebutting Opening Opposition.",
+        "Prepare only with Agent_1."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_3",
+      "title": "Opening Opposition Leader of Opposition",
+      "may_submit": true,
+      "duties": [
+        "Answer the government definition and establish Opening Opposition's case.",
+        "Prepare only with Agent_4."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_4",
+      "title": "Opening Opposition Deputy Leader of Opposition",
+      "may_submit": true,
+      "duties": [
+        "Defend and extend the opening opposition case while rebutting Opening Government.",
+        "Prepare only with Agent_3."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_5",
+      "title": "Closing Government Member of Government",
+      "may_submit": true,
+      "duties": [
+        "Present a distinct closing-government extension and engage prior speeches.",
+        "Prepare only with Agent_6."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_6",
+      "title": "Closing Government Government Whip",
+      "may_submit": true,
+      "duties": [
+        "Compare the debate and explain why Closing Government ranks first without adding a new substantive argument.",
+        "Prepare only with Agent_5."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_7",
+      "title": "Closing Opposition Member of Opposition",
+      "may_submit": true,
+      "duties": [
+        "Present a distinct closing-opposition extension and engage prior speeches.",
+        "Prepare only with Agent_8."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_8",
+      "title": "Closing Opposition Opposition Whip",
+      "may_submit": true,
+      "duties": [
+        "Compare the debate and explain why Closing Opposition ranks first without adding a new substantive argument.",
+        "Prepare only with Agent_7."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    }
+  ],
+  "agent_constraints": [
+    "Apply this competition's own roster, timing, tool, collaboration, submission, and scoring rules; do not import rules from another contest.",
+    "Eight participants form four private two-speaker coalitions. Each speaker may prepare only with their partner; cross-coalition sharing is forbidden.",
+    "Banned during the contest: internet access, calculators and running code. Paper and pencil are always available. Work only from the materials provided with the problem.",
+    "Treat private reasoning and notes as unknown to teammates until you communicate the decision-relevant content.",
+    "Do not access hidden solutions, answer keys, evaluator internals, or unauthorized outside problem-solving help.",
+    "Observe the competition's phase order: confer only in an authorized conferral period, designate the current speaker, and stop when the modeled phase ends.",
+    "Keep the team's presentation, opponent commentary, response, and judge-question answers distinct so each can be evaluated under its own official criterion.",
+    "Keep the four British Parliamentary teams as separate coalitions; do not leak one coalition's private preparation to another coalition.",
+    "Only designated submitters may make the shared submission: Agent_1, Agent_2, Agent_3, Agent_4, Agent_5, Agent_6, Agent_7, Agent_8.",
+    "Use only the official mechanisms that the current task actually exposes; do not claim physical, oral, live-opponent, judge, or environment actions that were not observed."
+  ],
+  "rule_sections": {
+    "competition_format": [
+      "Competition model: The team prepares a case, presents it, and responds to judges or opponents.",
+      "Mixed or unresolved rulesets: the runner permits 8 to 8 active agents and defaults to 8.",
+      "Source-recorded competition rule: Follow British Parliamentary / WUDC role constraints implied by the transcript task.",
+      "Source-recorded competition rule: Do not invent evidence that the materials do not support.",
+      "Source-recorded competition rule: Every debate has four teams of two speakers: Opening Government, Opening Opposition, Closing Government, and Closing Opposition.",
+      "Source-recorded competition rule: Take at least one POI during your speech or be penalised for failure to engage, and keep any POI you offer to 15 seconds or less.",
+      "Source-recorded competition rule: The judging panel ranks all four teams first through fourth by persuasiveness; debates cannot end in a draw.",
+      "Follow British Parliamentary / WUDC role constraints implied by the transcript task.",
+      "Do not invent evidence that the materials do not support.",
+      "Every debate has four teams of two speakers: Opening Government, Opening Opposition, Closing Government, and Closing Opposition.",
+      "Take at least one POI during your speech or be penalised for failure to engage, and keep any POI you offer to 15 seconds or less.",
+      "The judging panel ranks all four teams first through fourth by persuasiveness; debates cannot end in a draw.",
+      "Benchmark is a cleaned British Parliamentary debate corpus, not itself a governing body.",
+      "Repo provenance currently points at Hugging Face datasets — treat as benchmark-native, not official regulations."
+    ],
+    "timeline": [
+      "Benchmark adaptation: no official numeric duration is encoded in the available primary-source record; simulation.max_turns is only a runner safety budget.",
+      "Source-recorded competition rule: BP/WUDC norms; secondary to official WUDC rules: 4 teams of 2 in a room; limited prep after motion release; no internet during prep in many championship settings.",
+      "Source-recorded competition rule: After the motion is released you have 15 minutes to prepare, and during that time you may confer only with your partner.",
+      "Source-recorded competition rule: Be ready to enter the debate room the moment the 15 minutes elapse; a late team can be replaced by a swing team and scores zero for that round.",
+      "Source-recorded competition rule: Speak for 7 minutes; you may finish your sentence or conclusion within roughly 15 seconds, and judges disregard everything said after 7 minutes 15 seconds.",
+      "Source-recorded competition rule: The first and last minute of every speech is protected time in which no POI may be offered; POIs may be offered only between the 1- and 6-minute marks.",
+      "Source-recorded competition rule: After a POI is refused, wait 15 seconds before any debater on your side offers another; persistent rapid offers count as barracking and are not permitted.",
+      "BP/WUDC norms; secondary to official WUDC rules: 4 teams of 2 in a room; limited prep after motion release; no internet during prep in many championship settings.",
+      "After the motion is released you have 15 minutes to prepare, and during that time you may confer only with your partner.",
+      "Be ready to enter the debate room the moment the 15 minutes elapse; a late team can be replaced by a swing team and scores zero for that round.",
+      "Speak for 7 minutes; you may finish your sentence or conclusion within roughly 15 seconds, and judges disregard everything said after 7 minutes 15 seconds.",
+      "The first and last minute of every speech is protected time in which no POI may be offered; POIs may be offered only between the 1- and 6-minute marks.",
+      "After a POI is refused, wait 15 seconds before any debater on your side offers another; persistent rapid offers count as barracking and are not permitted."
+    ],
+    "resource_policy": [
+      "Source-recorded resource policy: Banned during the contest: internet access, calculators and running code. Paper and pencil are always available. Work only from the materials provided with the problem.",
+      "Source-recorded competition rule: BP/WUDC norms; secondary to official WUDC rules: 4 teams of 2 in a room; limited prep after motion release; no internet during prep in many championship settings.",
+      "Source-recorded competition rule: Do not use the Internet to research the motion, do not use generative AI for any purpose, and do not communicate with anyone other than your partner, the CA team, or the Organising Committee.",
+      "BP/WUDC norms; secondary to official WUDC rules: 4 teams of 2 in a room; limited prep after motion release; no internet during prep in many championship settings.",
+      "Do not use the Internet to research the motion, do not use generative AI for any purpose, and do not communicate with anyone other than your partner, the CA team, or the Organising Committee.",
+      "Do not claim tools, internet, or materials that the rule card forbids."
+    ],
+    "collaboration_protocol": [
+      "Source-recorded collaboration rule: Eight participants form four private two-speaker coalitions. Each speaker may prepare only with their partner; cross-coalition sharing is forbidden.",
+      "Source-recorded competition rule: Respond as a debating team, not as an unconstrained essay writer.",
+      "Source-recorded competition rule: Speeches are delivered in the order PM, LO, DPM, DLO, MG, MO, GW, OW, and each speaker gives exactly one speech.",
+      "Source-recorded competition rule: After the motion is released you have 15 minutes to prepare, and during that time you may confer only with your partner.",
+      "Source-recorded competition rule: Do not use the Internet to research the motion, do not use generative AI for any purpose, and do not communicate with anyone other than your partner, the CA team, or the Organising Committee.",
+      "Source-recorded competition rule: Be ready to enter the debate room the moment the 15 minutes elapse; a late team can be replaced by a swing team and scores zero for that round.",
+      "Respond as a debating team, not as an unconstrained essay writer.",
+      "Speeches are delivered in the order PM, LO, DPM, DLO, MG, MO, GW, OW, and each speaker gives exactly one speech.",
+      "After the motion is released you have 15 minutes to prepare, and during that time you may confer only with your partner.",
+      "Do not use the Internet to research the motion, do not use generative AI for any purpose, and do not communicate with anyone other than your partner, the CA team, or the Organising Committee.",
+      "Be ready to enter the debate room the moment the 15 minutes elapse; a late team can be replaced by a swing team and scores zero for that round.",
+      "You must behave like a human teammate under official contest rules."
+    ],
+    "integrity_and_compliance": [
+      "Benchmark safety rule: do not use hidden solutions, evaluator internals, unauthorized outside assistance, or resources forbidden by this competition.",
+      "Source-recorded competition rule: Take no help from coaches, teammates outside your pair, institution-mates, or judges during preparation; doing so risks disqualification.",
+      "Source-recorded competition rule: Do not use the Internet to research the motion, do not use generative AI for any purpose, and do not communicate with anyone other than your partner, the CA team, or the Organising Committee.",
+      "Source-recorded competition rule: Electronic devices may be used only as stopwatches, as cameras to photograph the draw, motion, and info-slide, or as offline dictionaries; digital matter files and shared online documents are prohibited even for teams permitted laptops.",
+      "Take no help from coaches, teammates outside your pair, institution-mates, or judges during preparation; doing so risks disqualification.",
+      "Do not use the Internet to research the motion, do not use generative AI for any purpose, and do not communicate with anyone other than your partner, the CA team, or the Organising Committee.",
+      "Electronic devices may be used only as stopwatches, as cameras to photograph the draw, motion, and info-slide, or as offline dictionaries; digital matter files and shared online documents are prohibited even for teams permitted laptops."
+    ],
+    "deliverable_format": [
+      "Runner answer contract: Submit eight labeled speeches in official order: PM, LO, DPM, DLO, MG, MO, GW, OW. Preserve coalition privacy and identify POIs separately.",
+      "Official deliverable: oral speech.",
+      "Source-recorded competition rule: Respond as a debating team, not as an unconstrained essay writer.",
+      "Source-recorded competition rule: Electronic devices may be used only as stopwatches, as cameras to photograph the draw, motion, and info-slide, or as offline dictionaries; digital matter files and shared online documents are prohibited even for teams permitted laptops.",
+      "Respond as a debating team, not as an unconstrained essay writer.",
+      "Electronic devices may be used only as stopwatches, as cameras to photograph the draw, motion, and info-slide, or as offline dictionaries; digital matter files and shared online documents are prohibited even for teams permitted laptops.",
+      "Do not look up answer keys or hidden solutions."
+    ],
+    "evaluation_criteria": [
+      "Repository evaluation status: Task performance is specified per artifact in rubric mode, but the repository evaluator is unassigned; do not invent a completed score."
+    ],
+    "runtime_limitations": [
+      "Runtime limitation: Live interruption by POIs, protected time, and the 15-second offer window depend on real-time speech that turn-based text cannot reproduce.",
+      "Runtime limitation: Judging is a consensus deliberation among a human panel ranking four teams, not a gold-answer comparison.",
+      "Runtime limitation: Speaker points and the extension obligations of Closing teams depend on what earlier speakers actually said in the room."
+    ]
+  },
   "information_policy": {
     "mode": "shared",
     "shared": [
@@ -39,102 +223,94 @@ How this benchmark's agents are asked to work. Projected from `data/rules/debate
   },
   "communication": {
     "mode": "unlimited"
+  },
+  "simulation": {
+    "max_turns": 30,
+    "scheduler": "src_collaboration_draft",
+    "turn_budget_basis": "standardized experiment budget: 30 global turns; official contest timing is recorded separately",
+    "open_table_coach": {
+      "enabled": true,
+      "status": "counterfactual_otc_collaboration_overlay_not_official_competition_rule",
+      "may_submit": false,
+      "allowed_tools": [],
+      "counts_toward_shared_api_and_token_budget": true,
+      "contestant_turn_policy": {
+        "mode": "private_deliberation_then_single_action",
+        "allowed_actions": [
+          "work",
+          "speak",
+          "rest"
+        ],
+        "exactly_one_action": true,
+        "unstructured_response": "rest",
+        "final_submission": "reviewed_answer_sheet",
+        "visibility": {
+          "think": "private",
+          "work": "shared",
+          "speak": "team",
+          "rest": "private"
+        },
+        "max_chars_by_action": {
+          "think": 2400,
+          "work": 8000,
+          "speak": 1000,
+          "rest": 80
+        },
+        "memory_entries": {
+          "private_think_per_agent": 3,
+          "shared_work": 18,
+          "group_messages": 12,
+          "public_messages": 24
+        },
+        "private_think_calls_per_turn": 1,
+        "discussion_policy": {
+          "report_after_work": true,
+          "silent_work_turn_requires_discussion": true,
+          "conflicts_require_targeted_speak": true
+        }
+      },
+      "precontest_brief": {
+        "turn": 0,
+        "problem_access": false,
+        "allowed_actions": [
+          "speak",
+          "rest"
+        ],
+        "advice_scope": [
+          "time allocation within the rule card",
+          "team coordination and handoffs",
+          "independent verification",
+          "reconciling the required final deliverable"
+        ]
+      },
+      "opening_discussion": {
+        "enabled": false,
+        "problem_access": false,
+        "allowed_actions": [],
+        "purpose": "Coach exits permanently after the single turn-0 blind brief."
+      },
+      "after_opening_access": false,
+      "min_turns": 3,
+      "protocol_version": "otc_turn0_review_v1",
+      "review_required": true,
+      "action_surface": "registry_bundles_v1",
+      "action_bundles": [
+        "common",
+        "desk",
+        "memory",
+        "independent_review",
+        "competition_tools",
+        "deliberation_if_structured"
+      ]
+    },
+    "deliverable_pipeline": {
+      "version": "otc_artifact_v1",
+      "kind": "external_environment",
+      "fidelity": "benchmark_adaptation_not_official_equivalence",
+      "status": "requires_specialized_adapter",
+      "reason": "Live, physical or interactive performance requires its own environment and scoring adapter."
+    }
   }
 }
 ```
 
-## Simulation
-
-```json
-{
-  "max_turns": 24,
-  "scheduler": "src_collaboration_draft",
-  "turn_budget_basis": "official clock n/a turns vs floor 21 (8 speakers x 2 turns + 1 answer parts + 4 for synthesis)"
-}
-```
-
-## Rule sections
-
-```json
-{
-  "competition_format": [
-    "Competition model: The team prepares a case, presents it, and responds to judges or opponents.",
-    "Mixed or unresolved rulesets: the runner permits 8 to 8 active agents and defaults to 8.",
-    "Source-recorded competition rule: Follow British Parliamentary / WUDC role constraints implied by the transcript task.",
-    "Source-recorded competition rule: Do not invent evidence that the materials do not support.",
-    "Source-recorded competition rule: Every debate has four teams of two speakers: Opening Government, Opening Opposition, Closing Government, and Closing Opposition.",
-    "Source-recorded competition rule: Take at least one POI during your speech or be penalised for failure to engage, and keep any POI you offer to 15 seconds or less.",
-    "Source-recorded competition rule: The judging panel ranks all four teams first through fourth by persuasiveness; debates cannot end in a draw.",
-    "Follow British Parliamentary / WUDC role constraints implied by the transcript task.",
-    "Do not invent evidence that the materials do not support.",
-    "Every debate has four teams of two speakers: Opening Government, Opening Opposition, Closing Government, and Closing Opposition.",
-    "Take at least one POI during your speech or be penalised for failure to engage, and keep any POI you offer to 15 seconds or less.",
-    "The judging panel ranks all four teams first through fourth by persuasiveness; debates cannot end in a draw.",
-    "Benchmark is a cleaned British Parliamentary debate corpus, not itself a governing body.",
-    "Repo provenance currently points at Hugging Face datasets — treat as benchmark-native, not official regulations."
-  ],
-  "timeline": [
-    "Benchmark adaptation: no official numeric duration is encoded in the available primary-source record; simulation.max_turns is only a runner safety budget.",
-    "Source-recorded competition rule: BP/WUDC norms; secondary to official WUDC rules: 4 teams of 2 in a room; limited prep after motion release; no internet during prep in many championship settings.",
-    "Source-recorded competition rule: After the motion is released you have 15 minutes to prepare, and during that time you may confer only with your partner.",
-    "Source-recorded competition rule: Be ready to enter the debate room the moment the 15 minutes elapse; a late team can be replaced by a swing team and scores zero for that round.",
-    "Source-recorded competition rule: Speak for 7 minutes; you may finish your sentence or conclusion within roughly 15 seconds, and judges disregard everything said after 7 minutes 15 seconds.",
-    "Source-recorded competition rule: The first and last minute of every speech is protected time in which no POI may be offered; POIs may be offered only between the 1- and 6-minute marks.",
-    "Source-recorded competition rule: After a POI is refused, wait 15 seconds before any debater on your side offers another; persistent rapid offers count as barracking and are not permitted.",
-    "BP/WUDC norms; secondary to official WUDC rules: 4 teams of 2 in a room; limited prep after motion release; no internet during prep in many championship settings.",
-    "After the motion is released you have 15 minutes to prepare, and during that time you may confer only with your partner.",
-    "Be ready to enter the debate room the moment the 15 minutes elapse; a late team can be replaced by a swing team and scores zero for that round.",
-    "Speak for 7 minutes; you may finish your sentence or conclusion within roughly 15 seconds, and judges disregard everything said after 7 minutes 15 seconds.",
-    "The first and last minute of every speech is protected time in which no POI may be offered; POIs may be offered only between the 1- and 6-minute marks.",
-    "After a POI is refused, wait 15 seconds before any debater on your side offers another; persistent rapid offers count as barracking and are not permitted."
-  ],
-  "resource_policy": [
-    "Source-recorded resource policy: Banned during the contest: internet access, calculators and running code. Paper and pencil are always available. Work only from the materials provided with the problem.",
-    "Source-recorded competition rule: BP/WUDC norms; secondary to official WUDC rules: 4 teams of 2 in a room; limited prep after motion release; no internet during prep in many championship settings.",
-    "Source-recorded competition rule: Do not use the Internet to research the motion, do not use generative AI for any purpose, and do not communicate with anyone other than your partner, the CA team, or the Organising Committee.",
-    "BP/WUDC norms; secondary to official WUDC rules: 4 teams of 2 in a room; limited prep after motion release; no internet during prep in many championship settings.",
-    "Do not use the Internet to research the motion, do not use generative AI for any purpose, and do not communicate with anyone other than your partner, the CA team, or the Organising Committee.",
-    "Do not claim tools, internet, or materials that the rule card forbids."
-  ],
-  "collaboration_protocol": [
-    "Source-recorded collaboration rule: Eight participants form four private two-speaker coalitions. Each speaker may prepare only with their partner; cross-coalition sharing is forbidden.",
-    "Source-recorded competition rule: Respond as a debating team, not as an unconstrained essay writer.",
-    "Source-recorded competition rule: Speeches are delivered in the order PM, LO, DPM, DLO, MG, MO, GW, OW, and each speaker gives exactly one speech.",
-    "Source-recorded competition rule: After the motion is released you have 15 minutes to prepare, and during that time you may confer only with your partner.",
-    "Source-recorded competition rule: Do not use the Internet to research the motion, do not use generative AI for any purpose, and do not communicate with anyone other than your partner, the CA team, or the Organising Committee.",
-    "Source-recorded competition rule: Be ready to enter the debate room the moment the 15 minutes elapse; a late team can be replaced by a swing team and scores zero for that round.",
-    "Respond as a debating team, not as an unconstrained essay writer.",
-    "Speeches are delivered in the order PM, LO, DPM, DLO, MG, MO, GW, OW, and each speaker gives exactly one speech.",
-    "After the motion is released you have 15 minutes to prepare, and during that time you may confer only with your partner.",
-    "Do not use the Internet to research the motion, do not use generative AI for any purpose, and do not communicate with anyone other than your partner, the CA team, or the Organising Committee.",
-    "Be ready to enter the debate room the moment the 15 minutes elapse; a late team can be replaced by a swing team and scores zero for that round.",
-    "You must behave like a human teammate under official contest rules."
-  ],
-  "integrity_and_compliance": [
-    "Benchmark safety rule: do not use hidden solutions, evaluator internals, unauthorized outside assistance, or resources forbidden by this competition.",
-    "Source-recorded competition rule: Take no help from coaches, teammates outside your pair, institution-mates, or judges during preparation; doing so risks disqualification.",
-    "Source-recorded competition rule: Do not use the Internet to research the motion, do not use generative AI for any purpose, and do not communicate with anyone other than your partner, the CA team, or the Organising Committee.",
-    "Source-recorded competition rule: Electronic devices may be used only as stopwatches, as cameras to photograph the draw, motion, and info-slide, or as offline dictionaries; digital matter files and shared online documents are prohibited even for teams permitted laptops.",
-    "Take no help from coaches, teammates outside your pair, institution-mates, or judges during preparation; doing so risks disqualification.",
-    "Do not use the Internet to research the motion, do not use generative AI for any purpose, and do not communicate with anyone other than your partner, the CA team, or the Organising Committee.",
-    "Electronic devices may be used only as stopwatches, as cameras to photograph the draw, motion, and info-slide, or as offline dictionaries; digital matter files and shared online documents are prohibited even for teams permitted laptops."
-  ],
-  "deliverable_format": [
-    "Runner answer contract: Submit eight labeled speeches in official order: PM, LO, DPM, DLO, MG, MO, GW, OW. Preserve coalition privacy and identify POIs separately.",
-    "Official deliverable: oral speech.",
-    "Source-recorded competition rule: Respond as a debating team, not as an unconstrained essay writer.",
-    "Source-recorded competition rule: Electronic devices may be used only as stopwatches, as cameras to photograph the draw, motion, and info-slide, or as offline dictionaries; digital matter files and shared online documents are prohibited even for teams permitted laptops.",
-    "Respond as a debating team, not as an unconstrained essay writer.",
-    "Electronic devices may be used only as stopwatches, as cameras to photograph the draw, motion, and info-slide, or as offline dictionaries; digital matter files and shared online documents are prohibited even for teams permitted laptops.",
-    "Do not look up answer keys or hidden solutions."
-  ],
-  "evaluation_criteria": [
-    "Repository evaluation status: Task performance is specified per artifact in rubric mode, but the repository evaluator is deferred; do not invent a completed score."
-  ],
-  "runtime_limitations": [
-    "Runtime limitation: Live interruption by POIs, protected time, and the 15-second offer window depend on real-time speech that turn-based text cannot reproduce.",
-    "Runtime limitation: Judging is a consensus deliberation among a human panel ranking four teams, not a gold-answer comparison.",
-    "Runtime limitation: Speaker points and the extension obligations of Closing teams depend on what earlier speakers actually said in the room."
-  ]
-}
-```

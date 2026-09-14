@@ -1,14 +1,62 @@
-# Input Environment and Settings
+# Environment
 
-## System
-- Competition id: `wsc_writing`
-- Problem id: `wsc_writing_gq_026`
-- Task type: `collaborative_writing_discussion`
-- Eval unit: `session`
-- Status: `collected`
+## Roster
 
-## Evaluation Hints (for harness, not a gold key)
-- Evaluator: `rubric_llm_v1`
-- Evaluator status: `ready`
-- Rubric path: `data/rubrics/wsc_writing_28_v1.json`
-- Deliverable: `written_essay`
+```json
+{
+  "active_min": 3,
+  "active_default": 3,
+  "active_max": 3,
+  "collaboration": "Collaborate only within the team under contest rules.",
+  "range_basis": "source_record"
+}
+```
+
+## Allowed tools
+
+```json
+[
+  "query_rules"
+]
+```
+
+## Resources
+
+```json
+{
+  "internet": "forbidden",
+  "calculator": "forbidden",
+  "code_execution": "forbidden",
+  "paper_pencil": "allowed",
+  "provided_materials_only": true,
+  "electronic_devices": "forbidden"
+}
+```
+
+## Official execution facts
+
+```json
+{
+  "official_minutes": null
+}
+```
+
+## Deliverable
+
+```json
+{
+  "answer_format": "Submit three written responses, one per teammate, with each response answering a different prompt.",
+  "shared": true,
+  "mime_types": [
+    "text/plain"
+  ],
+  "task_types": [
+    "collaborative_writing_discussion"
+  ],
+  "official_deliverable": "written_essay",
+  "official_mime_types": [
+    "text/plain"
+  ]
+}
+```
+

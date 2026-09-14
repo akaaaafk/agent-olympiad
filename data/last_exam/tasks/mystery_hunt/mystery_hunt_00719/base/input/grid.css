@@ -1,0 +1,32 @@
+.grid {
+  border-collapse: collapse;
+  empty-cells: show;
+}
+
+.grid td {
+  border: 1px solid black;
+  background: white;
+  width: 30px;
+  height: 30px;
+  font: bolder 14pt sans-serif;
+  text-align: center;
+}
+
+.grid.paleline td {
+  border: 1px dotted silver;
+}
+
+.grid th {
+  border: 0px;
+  font: 14pt sans-serif;
+}
+
+.grid td {  padding: 0px; }
+
+/* Unused missing-image rule omitted; no matching cells in this static page. */
+.grid td.special { background: red; }
+.grid td.num {
+  font: 9pt sans-serif;
+  text-align: left;
+  vertical-align: text-top;
+}

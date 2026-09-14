@@ -1,0 +1,525 @@
+{
+  "reviewed_at_utc": "20260913T025258Z",
+  "research": [
+    {
+      "key": "ijso_2011_chem",
+      "url": "https://ijsoweb.org/qna/expt-2011-chem.pdf",
+      "final_url": "https://ijsoweb.org/qna/expt-2011-chem.pdf",
+      "path": "data/.cache/missing_editions_20260913/ijso_2011_chem.pdf",
+      "sha256": "253b4d3183718ab93bbaa48f3e36f9e4b5945dbbeb90d60a593d8a95ff2bc30f",
+      "bytes": 563289,
+      "kind": "pdf",
+      "pages": 7
+    },
+    {
+      "key": "ijso_2011_phy",
+      "url": "https://ijsoweb.org/qna/expt-2011-phy.pdf",
+      "final_url": "https://ijsoweb.org/qna/expt-2011-phy.pdf",
+      "path": "data/.cache/missing_editions_20260913/ijso_2011_phy.pdf",
+      "sha256": "5090182dbc3447e3e2fd55c7c7c327d6d1b295caa7e8cf4140f443cd07cd2e0d",
+      "bytes": 77191,
+      "kind": "pdf",
+      "pages": 3
+    },
+    {
+      "key": "ijso_2015_prob",
+      "url": "https://ijsoweb.org/qna2015/Experiment/Experiment_exam_sheet_THE_FINAL.docx",
+      "error": "HTTP Error 406: Not Acceptable"
+    },
+    {
+      "key": "ijso_2015_bio_sol",
+      "url": "https://ijsoweb.org/qna2015/Experiment/Experiment_ExamSheet_mark-scheme_biology%28Final%29_2130.docx",
+      "error": "HTTP Error 406: Not Acceptable"
+    },
+    {
+      "key": "ijso_2015_chem_sol",
+      "url": "https://ijsoweb.org/qna2015/Experiment/Experiment_mark-scheme_chemistry%28Final%29_1710.docx",
+      "error": "HTTP Error 406: Not Acceptable"
+    },
+    {
+      "key": "ijso_2015_phy_sol",
+      "url": "https://ijsoweb.org/qna2015/Experiment/Experiment_mark-scheme_physics%28Final%29.docx",
+      "error": "HTTP Error 406: Not Acceptable"
+    },
+    {
+      "key": "ijso_2024_prob",
+      "url": "https://tpmso.org/twijso/wp-content/uploads/2025/02/2024_exp_eng.pdf",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>"
+    },
+    {
+      "key": "ijso_2005_brazil",
+      "url": "https://www.ijso.com.br/downloads/provas/2005/2005.pdf",
+      "final_url": "https://www.ijso.com.br/downloads/provas/2005/2005.pdf",
+      "path": "data/.cache/missing_editions_20260913/ijso_2005_brazil.pdf",
+      "sha256": "ebba0db4802a4bcc1d3c78d30960c9c6d76e7b7992e4c429bc1a5d6e2b8eb369",
+      "bytes": 585085,
+      "kind": "pdf",
+      "pages": 24
+    },
+    {
+      "key": "ijso_2025_host",
+      "url": "https://ijso.siriusolymp.ru/examination_rounds",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "key": "pumac_archive",
+      "url": "https://jason-shi-f9dm.squarespace.com/archives",
+      "final_url": "https://jason-shi-f9dm.squarespace.com/archives",
+      "path": "data/.cache/missing_editions_20260913/pumac_archive.html",
+      "sha256": "5d5f38ed2cbb7ea1f63b6210fdc38060f2b8ee85364ad020362153e22657e6a0",
+      "bytes": 216093,
+      "kind": "html"
+    },
+    {
+      "key": "ioaa_archive",
+      "url": "https://ioaastrophysics.org/resources/problems-from-past-ioaa",
+      "final_url": "https://ioaastrophysics.org/resources/problems-from-past-ioaa",
+      "path": "data/.cache/missing_editions_20260913/ioaa_archive.html",
+      "sha256": "e3f03c0dc0e08595015e3db2161457980c76b111be8695d9863b114890effd02",
+      "bytes": 96273,
+      "kind": "html"
+    },
+    {
+      "key": "ijso_brazil_archive",
+      "url": "https://www.ijso.com.br/provas",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "key": "iol_2003_page",
+      "url": "https://ioling.org/problems/2003/",
+      "final_url": "https://ioling.org/problems/2003/",
+      "path": "data/.cache/missing_editions_20260913/iol_2003_page.html",
+      "sha256": "fa7a07763b763d79504be828515d4e78ed600a1c124a6288ae1e08ffa86890ed",
+      "bytes": 32321,
+      "kind": "html"
+    },
+    {
+      "key": "iol_2013_page",
+      "url": "https://ioling.org/problems/2013/",
+      "final_url": "https://ioling.org/problems/2013/",
+      "path": "data/.cache/missing_editions_20260913/iol_2013_page.html",
+      "sha256": "b609c06972d9aafecab57c9c5fb888fdd208614b8b14c88b1ef7fb196e609fa4",
+      "bytes": 33209,
+      "kind": "html"
+    },
+    {
+      "key": "arml_2022_ARMLPower_Spring_2022_Solutions.pdf",
+      "url": "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2022/ARMLPower_Spring_2022_Solutions.pdf",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "key": "arml_2022_ARMLPower_Spring_Solution_2022.pdf",
+      "url": "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2022/ARMLPower_Spring_Solution_2022.pdf",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "key": "arml_2023_ARMLPower_Spring_2023_Solutions.pdf",
+      "url": "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2023/ARMLPower_Spring_2023_Solutions.pdf",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "key": "arml_2023_ARMLPower_Spring_Solution_2023.pdf",
+      "url": "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2023/ARMLPower_Spring_Solution_2023.pdf",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "key": "arml_2024_ARMLPower_Spring_2024_Solutions.pdf",
+      "url": "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2024/ARMLPower_Spring_2024_Solutions.pdf",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "key": "arml_2024_ARMLPower_Spring_Solution_2024.pdf",
+      "url": "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2024/ARMLPower_Spring_Solution_2024.pdf",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "key": "arml_2025_ARMLPower_Spring_2025_Solutions.pdf",
+      "url": "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2025/ARMLPower_Spring_2025_Solutions.pdf",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "key": "arml_2025_ARMLPower_Spring_Solution_2025.pdf",
+      "url": "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2025/ARMLPower_Spring_Solution_2025.pdf",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "key": "iol_2003_local_sol",
+      "path": "data/raw/iol/iol-2003-team-sol.en.pdf",
+      "sha256": "0452d8366d2b6f692aebb892610860506760af57f0e513db724cbdebc034359a",
+      "bytes": 1295679,
+      "kind": "pdf",
+      "pages": 2
+    },
+    {
+      "key": "iol_2013_local_sol",
+      "path": "data/raw/iol/iol-2013-team-sol.en.pdf",
+      "sha256": "5c5996fef304b965c8447cc9af07421ac864ea7d5abcc660d873ab55cd05b2d9",
+      "bytes": 18948,
+      "kind": "html"
+    },
+    {
+      "key": "arml_2022_sol",
+      "url": "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2022/ARMLPower_Spring_2022_Solution.pdf",
+      "error": "HTTP Error 406: Not Acceptable"
+    },
+    {
+      "key": "arml_2023_sol",
+      "url": "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2023/ARMLPower_Spring_2023_Solution.pdf",
+      "error": "HTTP Error 406: Not Acceptable"
+    },
+    {
+      "key": "arml_2024_sol",
+      "url": "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2024/ARMLPower_Spring_2024_Solution.pdf",
+      "error": "HTTP Error 406: Not Acceptable"
+    },
+    {
+      "key": "arml_2025_sol",
+      "url": "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2025/ARMLPower_Spring_2025_Solution.pdf",
+      "error": "HTTP Error 406: Not Acceptable"
+    },
+    {
+      "key": "iol_2003_official_sol",
+      "url": "https://ioling.org/booklets/iol-2003-team-sol.en.pdf",
+      "sha256": "0452d8366d2b6f692aebb892610860506760af57f0e513db724cbdebc034359a",
+      "kind": "pdf",
+      "pages": 2,
+      "path": "data/.cache/missing_editions_20260913/iol_2003_official_sol.pdf"
+    },
+    {
+      "key": "ijso_taiwan_archive",
+      "url": "https://tpmso.org/twijso/",
+      "sha256": "987ffce7e3314d800927dd02f60b49bc3cd1e361800448d809d206ca453ca5c6",
+      "kind": "html",
+      "path": "data/.cache/missing_editions_20260913/ijso_taiwan_archive.html"
+    },
+    {
+      "key": "ijso_hungary_archive",
+      "url": "https://kemia.apaczai.elte.hu/versenyek/feladatok/ijso/ijsofeladatok.html",
+      "sha256": "a14f887590130956615c257c56ee1bf3b0159499656c891f81cfdd4c225c1e50",
+      "kind": "html",
+      "path": "data/.cache/missing_editions_20260913/ijso_hungary_archive.html"
+    },
+    {
+      "key": "ijso_links_brazil",
+      "path": "data/.cache/missing_editions_20260913/ijso_links_brazil_c.html",
+      "sha256": "2c956cfead32834a1ced2a27b125dd18fe78c0ab9c258a3c93740fc9206b4fd0",
+      "kind": "html"
+    },
+    {
+      "key": "ijso_taiwan_newhost",
+      "path": "data/.cache/missing_editions_20260913/ijso_taiwan_newhost_c.html",
+      "sha256": "848ae21f615408c2c3ee923c8c361f8c508c425dc1cd5806980d2a920c6ff4aa",
+      "kind": "html"
+    },
+    {
+      "key": "ijso_2025_slovenia",
+      "path": "data/.cache/missing_editions_20260913/ijso_2025_slovenia_c.html",
+      "sha256": "a237b0e5a128b36e8a32a18745bbea1e8124c3b9b33690c9b5863eb29c7d68ae",
+      "kind": "html"
+    },
+    {
+      "key": "ijso_2015_bio_sol",
+      "error": "No downloaded artifact; prior fetch failed."
+    },
+    {
+      "key": "ijso_2015_chem_sol",
+      "error": "No downloaded artifact; prior fetch failed."
+    },
+    {
+      "key": "ijso_2015_phy_sol",
+      "error": "No downloaded artifact; prior fetch failed."
+    },
+    {
+      "key": "ijso_2012_hu_prob",
+      "error": "No downloaded artifact; prior fetch failed."
+    },
+    {
+      "key": "ijso_2012_hu_ans",
+      "error": "No downloaded artifact; prior fetch failed."
+    },
+    {
+      "key": "ijso_2015_prob",
+      "path": "data/.cache/missing_editions_20260913/ijso_2015_prob_retry.docx",
+      "sha256": "a5c1b2cf94808267e2b21bbd0a7e6e69c6f3e74d173ee0c2374368daf554b00f",
+      "kind": "docx",
+      "media": 26
+    },
+    {
+      "key": "arml_2022_sol",
+      "path": "data/.cache/missing_editions_20260913/arml_2022_sol_retry.pdf",
+      "sha256": "8b6ae02f2a52287b50a9b194742388752f9f5973d29f40ee00dcc900a19a00a2",
+      "kind": "pdf",
+      "pages": 7
+    },
+    {
+      "key": "arml_2023_sol",
+      "path": "data/.cache/missing_editions_20260913/arml_2023_sol_retry.pdf",
+      "sha256": "08cd84a63b4ecdd24b1faf7159cfe458555af4902516d4ad7f664a7e6191e53c",
+      "kind": "pdf",
+      "pages": 4
+    },
+    {
+      "key": "arml_2024_sol",
+      "path": "data/.cache/missing_editions_20260913/arml_2024_sol_retry.pdf",
+      "sha256": "9f2a3b846525a52eedba635f118a74a8a202bb1e3d5e14391047c1c19b6b9b35",
+      "kind": "pdf",
+      "pages": 6
+    },
+    {
+      "key": "arml_2025_sol",
+      "path": "data/.cache/missing_editions_20260913/arml_2025_sol_retry.pdf",
+      "sha256": "645ff862c348bc5cd007499f4fa434b400e3fef14765d0221c7997ce61beb7e3",
+      "kind": "pdf",
+      "pages": 6
+    },
+    {
+      "key": "arml_2022_prob",
+      "path": "data/raw/arml/Spring_2022/ARMLPower_Spring_2022.pdf",
+      "sha256": "c4247b51ea42f1fe16f7a20bf25ef703cfd6b254b69bfefde3457ff5b6f0a5b8",
+      "kind": "pdf",
+      "pages": 8
+    },
+    {
+      "key": "arml_2023_prob",
+      "path": "data/raw/arml/Spring_2023/ARMLPower_Spring_2023.pdf",
+      "sha256": "e11b7acca95b6e05ef096af96691b07f9716f5ff95d592dd110be227758f2234",
+      "kind": "pdf",
+      "pages": 4
+    },
+    {
+      "key": "arml_2024_prob",
+      "path": "data/raw/arml/Spring_2024/ARMLPower_Spring_2024.pdf",
+      "sha256": "ffb8ce57aa9142815cc38daf762840eb6e478198b80dcffc00b172bcadfb4d02",
+      "kind": "pdf",
+      "pages": 4
+    },
+    {
+      "key": "arml_2025_prob",
+      "path": "data/raw/arml/Spring_2025/ARMLPower_Spring_2025.pdf",
+      "sha256": "1b4de6821fa5947fc9eb5e02ac51f12dade37999bf2ef3bba8e30ee3a2a952cb",
+      "kind": "pdf",
+      "pages": 4
+    },
+    {
+      "key": "ijso_2004_prob",
+      "url": "https://www.ijso.com.br/downloads/provas/2004/2004lab.pdf",
+      "path": "data/.cache/missing_editions_20260913/ijso_2004_prob_d.pdf",
+      "sha256": "9a61f73ca489cf8156b6ac14d790616175769a1e4110fdb10df0adf2b7ed28a6",
+      "kind": "pdf",
+      "pages": 14
+    },
+    {
+      "key": "ijso_2004_sol",
+      "url": "https://www.ijso.com.br/downloads/provas/2004/2004lab_gab.pdf",
+      "path": "data/.cache/missing_editions_20260913/ijso_2004_sol_d.pdf",
+      "sha256": "0741a1e082e7547c318bcfd2aec056c9e425d464113c8a538581bb7a3312fc2f",
+      "kind": "pdf",
+      "pages": 7
+    },
+    {
+      "key": "ijso_2006_prob",
+      "url": "https://www.ijso.com.br/downloads/provas/2006/2006lab.pdf",
+      "path": "data/.cache/missing_editions_20260913/ijso_2006_prob_d.pdf",
+      "sha256": "00b18bd6aa2be127977defa5ad2a949f46c2e2e6582a37ed844820a9025c0bd2",
+      "kind": "pdf",
+      "pages": 10
+    },
+    {
+      "key": "ijso_2006_sol",
+      "url": "https://www.ijso.com.br/downloads/provas/2006/2006lab_gab.pdf",
+      "path": "data/.cache/missing_editions_20260913/ijso_2006_sol_d.pdf",
+      "sha256": "2110f256698007a824956ba5832d6979bfe80b55bc8a3d40a4c3bc9e9c7fbeb5",
+      "kind": "pdf",
+      "pages": 2
+    },
+    {
+      "key": "ijso_taiwan_exam",
+      "url": "https://tpmso.k12ea.gov.tw/twijso/index.php/about/exam/",
+      "error": "curl: (47) Maximum (50) redirects followed\n"
+    },
+    {
+      "key": "ijso_2025_sl_prob",
+      "url": "https://drive.google.com/uc?id=1ZH6_mMBoMUUHcDR11aONNDnshCaA79Um&export=download",
+      "path": "data/.cache/missing_editions_20260913/ijso_2025_sl_prob_d.pdf",
+      "sha256": "0a251216a83fad20ade0321cd4c2939aa7e4885c090bb9a06c56540bdc372c93",
+      "kind": "pdf",
+      "pages": 57
+    },
+    {
+      "key": "ijso_2012_tw_prob",
+      "url": "https://tpmso.k12ea.gov.tw/twijso/wp-content/uploads/2016/12/2012_exp_eng.pdf",
+      "error": "curl: (47) Maximum (50) redirects followed\n"
+    },
+    {
+      "key": "ijso_2015_bio_sol",
+      "path": "data/.cache/missing_editions_20260913/ijso_2015_bio_sol_retry.docx",
+      "sha256": "160256c46c30939f702a031a251de10fbf29fa474243e0e02c16af45b4e99381",
+      "kind": "docx",
+      "media": 4
+    },
+    {
+      "key": "ijso_2015_chem_sol",
+      "path": "data/.cache/missing_editions_20260913/ijso_2015_chem_sol_retry.docx",
+      "sha256": "2fa6c0bb44fef9d4b1d3e294156c4b1f855a62552ccbab583993e1ab302813b8",
+      "kind": "docx",
+      "media": 5
+    },
+    {
+      "key": "ijso_2015_phy_sol",
+      "path": "data/.cache/missing_editions_20260913/ijso_2015_phy_sol_retry.docx",
+      "sha256": "46d974c12e863ce659b4a8b0337e7c694a47c1ced9eeeb3131d851c6a768a616",
+      "kind": "docx",
+      "media": 0
+    },
+    {
+      "key": "ijso_2024_prob_alt",
+      "url": "https://tpmso.k12ea.gov.tw/twijso/wp-content/uploads/2025/02/2024_exp_eng.pdf?download=1",
+      "path": "data/.cache/missing_editions_20260913/ijso_2024_prob_alt.pdf",
+      "sha256": "7df4134fdbbd9893b7ee2c42c0db15110bbb97cf362e8c88167f353a115bcb5b",
+      "kind": "pdf",
+      "pages": 50
+    },
+    {
+      "key": "ijso_2024_exam_alt",
+      "url": "https://tpmso.k12ea.gov.tw/twijso/index.php/about/exam/?view=archive",
+      "path": "data/.cache/missing_editions_20260913/ijso_2024_exam_alt.html",
+      "sha256": "f5cc2a54caa81e81bcce7c5fdd4c3cb1bddec5add503eeea93af228f0cc18890",
+      "kind": "html"
+    }
+  ],
+  "imported_files": [
+    {
+      "source": "data/.cache/missing_editions_20260913/arml_2022_sol_retry.pdf",
+      "destination": "data/raw/arml/Spring_2022/ARMLPower_Spring_2022_Solution_verified.pdf",
+      "sha256": "8b6ae02f2a52287b50a9b194742388752f9f5973d29f40ee00dcc900a19a00a2",
+      "url": "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2022/ARMLPower_Spring_2022_Solution.pdf"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/arml_2023_sol_retry.pdf",
+      "destination": "data/raw/arml/Spring_2023/ARMLPower_Spring_2023_Solution_verified.pdf",
+      "sha256": "08cd84a63b4ecdd24b1faf7159cfe458555af4902516d4ad7f664a7e6191e53c",
+      "url": "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2023/ARMLPower_Spring_2023_Solution.pdf"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/arml_2024_sol_retry.pdf",
+      "destination": "data/raw/arml/Spring_2024/ARMLPower_Spring_2024_Solution_verified.pdf",
+      "sha256": "9f2a3b846525a52eedba635f118a74a8a202bb1e3d5e14391047c1c19b6b9b35",
+      "url": "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2024/ARMLPower_Spring_2024_Solution.pdf"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/arml_2025_sol_retry.pdf",
+      "destination": "data/raw/arml/Spring_2025/ARMLPower_Spring_2025_Solution_verified.pdf",
+      "sha256": "645ff862c348bc5cd007499f4fa434b400e3fef14765d0221c7997ce61beb7e3",
+      "url": "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2025/ARMLPower_Spring_2025_Solution.pdf"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/ijso_2004_prob_d.pdf",
+      "destination": "data/raw/ijso/2004/recovered_20260913/experiment.pdf",
+      "sha256": "9a61f73ca489cf8156b6ac14d790616175769a1e4110fdb10df0adf2b7ed28a6",
+      "url": "https://www.ijso.com.br/downloads/provas/2004/2004lab.pdf"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/ijso_2004_sol_d.pdf",
+      "destination": "data/raw/ijso/2004/recovered_20260913/marking_official.pdf",
+      "sha256": "0741a1e082e7547c318bcfd2aec056c9e425d464113c8a538581bb7a3312fc2f",
+      "url": "https://www.ijso.com.br/downloads/provas/2004/2004lab_gab.pdf"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/ijso_2005_brazil.pdf",
+      "destination": "data/raw/ijso/2005/recovered_20260913/experiment.pdf",
+      "sha256": "ebba0db4802a4bcc1d3c78d30960c9c6d76e7b7992e4c429bc1a5d6e2b8eb369",
+      "url": "https://www.ijso.com.br/downloads/provas/2005/2005.pdf"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/ijso_2006_prob_d.pdf",
+      "destination": "data/raw/ijso/2006/recovered_20260913/experiment.pdf",
+      "sha256": "00b18bd6aa2be127977defa5ad2a949f46c2e2e6582a37ed844820a9025c0bd2",
+      "url": "https://www.ijso.com.br/downloads/provas/2006/2006lab.pdf"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/ijso_2006_sol_d.pdf",
+      "destination": "data/raw/ijso/2006/recovered_20260913/marking_official.pdf",
+      "sha256": "2110f256698007a824956ba5832d6979bfe80b55bc8a3d40a4c3bc9e9c7fbeb5",
+      "url": "https://www.ijso.com.br/downloads/provas/2006/2006lab_gab.pdf"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/ijso_2015_prob_retry.docx",
+      "destination": "data/raw/ijso/2015/recovered_20260913/experiment.docx",
+      "sha256": "a5c1b2cf94808267e2b21bbd0a7e6e69c6f3e74d173ee0c2374368daf554b00f",
+      "url": "https://www.ijsoweb.org/qna2015/Experiment/Experiment_exam_sheet_THE_FINAL.docx"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/ijso_2015_bio_sol_retry.docx",
+      "destination": "data/raw/ijso/2015/recovered_20260913/marking_bio.docx",
+      "sha256": "160256c46c30939f702a031a251de10fbf29fa474243e0e02c16af45b4e99381",
+      "url": "https://www.ijsoweb.org/qna2015/Experiment/Experiment_ExamSheet_mark-scheme_biology%28Final%29_2130.docx"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/ijso_2015_chem_sol_retry.docx",
+      "destination": "data/raw/ijso/2015/recovered_20260913/marking_chem.docx",
+      "sha256": "2fa6c0bb44fef9d4b1d3e294156c4b1f855a62552ccbab583993e1ab302813b8",
+      "url": "https://www.ijsoweb.org/qna2015/Experiment/Experiment_mark-scheme_chemistry%28Final%29_1710.docx"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/ijso_2015_phy_sol_retry.docx",
+      "destination": "data/raw/ijso/2015/recovered_20260913/marking_phy.docx",
+      "sha256": "46d974c12e863ce659b4a8b0337e7c694a47c1ced9eeeb3131d851c6a768a616",
+      "url": "https://www.ijsoweb.org/qna2015/Experiment/Experiment_mark-scheme_physics%28Final%29.docx"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/ijso_2024_prob_alt.pdf",
+      "destination": "data/raw/ijso/2024/recovered_20260913/experiment.pdf",
+      "sha256": "7df4134fdbbd9893b7ee2c42c0db15110bbb97cf362e8c88167f353a115bcb5b",
+      "url": "https://tpmso.k12ea.gov.tw/twijso/wp-content/uploads/2025/02/2024_exp_eng.pdf?download=1"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/ijso_2025_sl_prob_d.pdf",
+      "destination": "data/raw/ijso/2025/recovered_20260913/experiment.pdf",
+      "sha256": "0a251216a83fad20ade0321cd4c2939aa7e4885c090bb9a06c56540bdc372c93",
+      "url": "https://drive.google.com/uc?id=1ZH6_mMBoMUUHcDR11aONNDnshCaA79Um&export=download"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/ijso_2011_chem.pdf",
+      "destination": "data/raw/ijso/2011/recovered_20260913/chem.pdf",
+      "sha256": "253b4d3183718ab93bbaa48f3e36f9e4b5945dbbeb90d60a593d8a95ff2bc30f",
+      "url": "https://ijsoweb.org/qna/expt-2011-chem.pdf"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/ijso_2011_phy.pdf",
+      "destination": "data/raw/ijso/2011/recovered_20260913/phy.pdf",
+      "sha256": "5090182dbc3447e3e2fd55c7c7c327d6d1b295caa7e8cf4140f443cd07cd2e0d",
+      "url": "https://ijsoweb.org/qna/expt-2011-phy.pdf"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/pumac_archive.html",
+      "destination": "data/raw/source_verification/20260913/pumac_archive.html",
+      "sha256": "5d5f38ed2cbb7ea1f63b6210fdc38060f2b8ee85364ad020362153e22657e6a0",
+      "url": "https://jason-shi-f9dm.squarespace.com/archives"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/ioaa_archive.html",
+      "destination": "data/raw/source_verification/20260913/ioaa_archive.html",
+      "sha256": "e3f03c0dc0e08595015e3db2161457980c76b111be8695d9863b114890effd02",
+      "url": "https://ioaastrophysics.org/resources/problems-from-past-ioaa"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/iol_2013_page.html",
+      "destination": "data/raw/source_verification/20260913/iol_2013_page.html",
+      "sha256": "b609c06972d9aafecab57c9c5fb888fdd208614b8b14c88b1ef7fb196e609fa4",
+      "url": "https://ioling.org/problems/2013/"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/ijso_hungary_archive.html",
+      "destination": "data/raw/source_verification/20260913/ijso_hungary_archive.html",
+      "sha256": "a14f887590130956615c257c56ee1bf3b0159499656c891f81cfdd4c225c1e50",
+      "url": "https://kemia.apaczai.elte.hu/versenyek/feladatok/ijso/ijsofeladatok.html"
+    },
+    {
+      "source": "data/.cache/missing_editions_20260913/ijso_2024_exam_alt.html",
+      "destination": "data/raw/source_verification/20260913/ijso_2024_exam_alt.html",
+      "sha256": "f5cc2a54caa81e81bcce7c5fdd4c3cb1bddec5add503eeea93af228f0cc18890",
+      "url": "https://tpmso.k12ea.gov.tw/twijso/index.php/about/exam/?view=archive"
+    }
+  ],
+  "findings": "Public-source lookup is bounded, not a claim that no copy exists anywhere. HTTP errors alone did not cause deletion where a verified packet could be recovered."
+}

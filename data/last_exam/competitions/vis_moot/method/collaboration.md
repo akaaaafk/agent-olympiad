@@ -1,23 +1,149 @@
-# Method — `vis_moot`
+# Team method
 
-How this benchmark's agents are asked to work. Projected from `data/rules/vis_moot/collaboration.json`.
-
-## Agent constraints
-
-- Apply this competition's own roster, timing, tool, collaboration, submission, and scoring rules; do not import rules from another contest.
-- Collaborate only within the team under contest rules.
-- Banned during the contest: calculators and running code. Permitted: internet access. Paper and pencil are always available.
-- Treat private reasoning and notes as unknown to teammates until you communicate the decision-relevant content.
-- Do not access hidden solutions, answer keys, evaluator internals, or unauthorized outside problem-solving help.
-- Observe the competition's phase order: confer only in an authorized conferral period, designate the current speaker, and stop when the modeled phase ends.
-- Keep the team's presentation, opponent commentary, response, and judge-question answers distinct so each can be evaluated under its own official criterion.
-- Only designated submitters may make the shared submission: Agent_1.
-- Use only the official mechanisms that the current task actually exposes; do not claim physical, oral, live-opponent, judge, or environment actions that were not observed.
-
-## Information / deliberation / communication
+## Collaboration configuration
 
 ```json
 {
+  "agent_roles": [
+    {
+      "name": "Agent_1",
+      "title": "captain / oralist",
+      "may_submit": true,
+      "duties": [
+        "Own the spoken case: opening, structure, and closing.",
+        "Absorb teammates' research into one line of argument rather than a list.",
+        "Submit only after the format and rule checks pass."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": [
+        "resource_policy",
+        "timeline",
+        "collaboration_protocol",
+        "deliverable_format"
+      ]
+    },
+    {
+      "name": "Agent_2",
+      "title": "researcher",
+      "may_submit": false,
+      "duties": [
+        "Find and cite the authorities the argument depends on.",
+        "Bring counter-authority to the team before a judge does."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": [
+        "integrity_and_compliance",
+        "resource_policy"
+      ]
+    },
+    {
+      "name": "Agent_3",
+      "title": "writer",
+      "may_submit": false,
+      "duties": [
+        "Draft the assigned section in full prose, not notes.",
+        "Keep the section within its word or time budget."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": [
+        "resource_policy",
+        "deliverable_format",
+        "evaluation_criteria"
+      ]
+    },
+    {
+      "name": "Agent_4",
+      "title": "opponent prep",
+      "may_submit": false,
+      "duties": [
+        "Argue the other side hard enough to expose weak reasoning.",
+        "Prepare answers to the strongest objection the team will face."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": [
+        "integrity_and_compliance",
+        "resource_policy"
+      ]
+    },
+    {
+      "name": "Agent_5",
+      "title": "judge-question specialist",
+      "may_submit": false,
+      "duties": [
+        "Anticipate judge questions and prepare short, direct answers.",
+        "Flag any claim the team cannot defend under questioning."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": [
+        "evaluation_criteria",
+        "deliverable_format"
+      ]
+    }
+  ],
+  "rule_sections": {
+    "competition_format": [
+      "Competition model: The team prepares a case, presents it, and responds to judges or opponents.",
+      "Mixed or unresolved rulesets: the runner permits 2 to 5 active agents and defaults to 5.",
+      "Source-recorded competition rule: Prepare arbitration memorials from the Vis problem packet.",
+      "Source-recorded competition rule: Facts limited to Problem + clarifications + necessary logical extensions / publicly available true facts; inventing facts is unethical and sanctioned.",
+      "Source-recorded competition rule: Use current-year Rules Booklet (rules change annually).",
+      "Prepare arbitration memorials from the Vis problem packet.",
+      "Facts limited to Problem + clarifications + necessary logical extensions / publicly available true facts; inventing facts is unethical and sanctioned.",
+      "Use current-year Rules Booklet (rules change annually)."
+    ],
+    "timeline": [
+      "Benchmark adaptation: no official numeric duration is encoded in the available primary-source record; simulation.max_turns is only a runner safety budget.",
+      "Source-recorded competition rule: Oral hearings in Vienna (and/or Vis East Hong Kong as separate moot); registration fee and participation expectations after claimant memo.",
+      "Oral hearings in Vienna (and/or Vis East Hong Kong as separate moot); registration fee and participation expectations after claimant memo."
+    ],
+    "resource_policy": [
+      "Source-recorded resource policy: Banned during the contest: calculators and running code. Permitted: internet access. Paper and pencil are always available.",
+      "Do not claim tools, internet, or materials that the rule card forbids."
+    ],
+    "collaboration_protocol": [
+      "Source-recorded collaboration rule: Collaborate only within the team under contest rules.",
+      "Source-recorded competition rule: Team: ≥2 students from one institution; no maximum team size (31st Rules §31).",
+      "Source-recorded competition rule: Memoranda: searchable PDF, single file, typically ≤1 MB upload limit; deadlines via team account (claimant then respondent).",
+      "Team: ≥2 students from one institution; no maximum team size (31st Rules §31).",
+      "Memoranda: searchable PDF, single file, typically ≤1 MB upload limit; deadlines via team account (claimant then respondent).",
+      "You must behave like a human teammate under official contest rules."
+    ],
+    "integrity_and_compliance": [
+      "Benchmark safety rule: do not use hidden solutions, evaluator internals, unauthorized outside assistance, or resources forbidden by this competition.",
+      "Source-recorded competition rule: Legal research is allowed; outside drafting help is not.",
+      "Legal research is allowed; outside drafting help is not."
+    ],
+    "deliverable_format": [
+      "Runner answer contract: Submit the written memorial/case analysis and a concise oral outline.",
+      "Official deliverable: written memorandum.",
+      "Benchmark adaptation: Official memoranda are filed as PDF; the runner submits the memorandum text.",
+      "Source-recorded competition rule: Write for both advocacy and oral defense.",
+      "Source-recorded competition rule: Parts: memorandum for claimant, memorandum for respondent, oral hearings.",
+      "Source-recorded competition rule: Oral hearings in Vienna (and/or Vis East Hong Kong as separate moot); registration fee and participation expectations after claimant memo.",
+      "Write for both advocacy and oral defense.",
+      "Parts: memorandum for claimant, memorandum for respondent, oral hearings.",
+      "Oral hearings in Vienna (and/or Vis East Hong Kong as separate moot); registration fee and participation expectations after claimant memo.",
+      "Do not look up answer keys or hidden solutions."
+    ],
+    "evaluation_criteria": [
+      "Repository evaluation status: Task performance is specified per artifact in rubric mode, but the repository evaluator is unassigned; do not invent a completed score."
+    ],
+    "runtime_limitations": [
+      "Runtime limitation: Index team_size 5 is a modeling choice, not a Vis maximum.",
+      "Runtime limitation: Oral arbitration advocacy and multi-month prep dwarfs single-session agent runs.",
+      "Runtime limitation: 31st Rules PDF retrieved; prefer the Rules Booklet for the exact Vis year under evaluation."
+    ]
+  },
   "information_policy": {
     "mode": "role_specialized",
     "shared": [
@@ -47,82 +173,119 @@ How this benchmark's agents are asked to work. Projected from `data/rules/vis_mo
     "max_message_chars": 1200,
     "counted_actions": [
       "speak",
-      "write_scratchpad",
+      "work",
       "propose",
       "challenge",
       "provide_evidence",
       "revise",
       "decide"
     ]
+  },
+  "agent_constraints": [
+    "Apply this competition's own roster, timing, tool, collaboration, submission, and scoring rules; do not import rules from another contest.",
+    "Collaborate only within the team under contest rules.",
+    "Banned during the contest: calculators and running code. Permitted: internet access. Paper and pencil are always available.",
+    "Treat private reasoning and notes as unknown to teammates until you communicate the decision-relevant content.",
+    "Do not access hidden solutions, answer keys, evaluator internals, or unauthorized outside problem-solving help.",
+    "Observe the competition's phase order: confer only in an authorized conferral period, designate the current speaker, and stop when the modeled phase ends.",
+    "Keep the team's presentation, opponent commentary, response, and judge-question answers distinct so each can be evaluated under its own official criterion.",
+    "Only designated submitters may make the shared submission: Agent_1.",
+    "Use only the official mechanisms that the current task actually exposes; do not claim physical, oral, live-opponent, judge, or environment actions that were not observed."
+  ],
+  "simulation": {
+    "max_turns": 30,
+    "scheduler": "src_collaboration_draft",
+    "turn_budget_basis": "standardized experiment budget: 30 global turns; official contest timing is recorded separately",
+    "open_table_coach": {
+      "enabled": true,
+      "status": "counterfactual_otc_collaboration_overlay_not_official_competition_rule",
+      "may_submit": false,
+      "allowed_tools": [],
+      "counts_toward_shared_api_and_token_budget": true,
+      "contestant_turn_policy": {
+        "mode": "private_deliberation_then_single_action",
+        "allowed_actions": [
+          "work",
+          "speak",
+          "rest"
+        ],
+        "exactly_one_action": true,
+        "unstructured_response": "rest",
+        "final_submission": "reviewed_answer_sheet",
+        "visibility": {
+          "think": "private",
+          "work": "shared",
+          "speak": "team",
+          "rest": "private"
+        },
+        "max_chars_by_action": {
+          "think": 2400,
+          "work": 60000,
+          "speak": 1000,
+          "rest": 80
+        },
+        "memory_entries": {
+          "private_think_per_agent": 3,
+          "shared_work": 18,
+          "group_messages": 12,
+          "public_messages": 24
+        },
+        "private_think_calls_per_turn": 1,
+        "discussion_policy": {
+          "report_after_work": true,
+          "silent_work_turn_requires_discussion": true,
+          "conflicts_require_targeted_speak": true
+        }
+      },
+      "precontest_brief": {
+        "turn": 0,
+        "problem_access": false,
+        "allowed_actions": [
+          "speak",
+          "rest"
+        ],
+        "advice_scope": [
+          "time allocation within the rule card",
+          "team coordination and handoffs",
+          "independent verification",
+          "reconciling the required final deliverable"
+        ]
+      },
+      "opening_discussion": {
+        "enabled": false,
+        "problem_access": false,
+        "allowed_actions": [],
+        "purpose": "Coach exits permanently after the single turn-0 blind brief."
+      },
+      "after_opening_access": false,
+      "min_turns": 3,
+      "protocol_version": "otc_turn0_review_v1",
+      "review_required": true,
+      "action_surface": "registry_bundles_v1",
+      "action_bundles": [
+        "common",
+        "desk",
+        "memory",
+        "independent_review",
+        "competition_tools",
+        "deliberation_if_structured"
+      ]
+    },
+    "deliverable_pipeline": {
+      "version": "otc_artifact_v1",
+      "kind": "document",
+      "source_format": "text",
+      "render_format": "pdf",
+      "min_pages": 1,
+      "max_pages": 20,
+      "max_source_chars": 60000,
+      "max_file_size_mb": 20,
+      "review_rendered_version": true,
+      "post_review_synthesis": false,
+      "grading_status": "rubric_configured_validate_at_preflight",
+      "fidelity": "benchmark_adaptation_not_official_equivalence"
+    }
   }
 }
 ```
 
-## Simulation
-
-```json
-{
-  "max_turns": 24,
-  "scheduler": "src_collaboration_draft",
-  "turn_budget_basis": "official clock n/a turns vs floor 15 (5 teammates x 2 turns + 1 answer parts + 4 for synthesis)"
-}
-```
-
-## Rule sections
-
-```json
-{
-  "competition_format": [
-    "Competition model: The team prepares a case, presents it, and responds to judges or opponents.",
-    "Mixed or unresolved rulesets: the runner permits 2 to 5 active agents and defaults to 5.",
-    "Source-recorded competition rule: Prepare arbitration memorials from the Vis problem packet.",
-    "Source-recorded competition rule: Facts limited to Problem + clarifications + necessary logical extensions / publicly available true facts; inventing facts is unethical and sanctioned.",
-    "Source-recorded competition rule: Use current-year Rules Booklet (rules change annually).",
-    "Prepare arbitration memorials from the Vis problem packet.",
-    "Facts limited to Problem + clarifications + necessary logical extensions / publicly available true facts; inventing facts is unethical and sanctioned.",
-    "Use current-year Rules Booklet (rules change annually)."
-  ],
-  "timeline": [
-    "Benchmark adaptation: no official numeric duration is encoded in the available primary-source record; simulation.max_turns is only a runner safety budget.",
-    "Source-recorded competition rule: Oral hearings in Vienna (and/or Vis East Hong Kong as separate moot); registration fee and participation expectations after claimant memo.",
-    "Oral hearings in Vienna (and/or Vis East Hong Kong as separate moot); registration fee and participation expectations after claimant memo."
-  ],
-  "resource_policy": [
-    "Source-recorded resource policy: Banned during the contest: calculators and running code. Permitted: internet access. Paper and pencil are always available.",
-    "Do not claim tools, internet, or materials that the rule card forbids."
-  ],
-  "collaboration_protocol": [
-    "Source-recorded collaboration rule: Collaborate only within the team under contest rules.",
-    "Source-recorded competition rule: Team: ≥2 students from one institution; no maximum team size (31st Rules §31).",
-    "Source-recorded competition rule: Memoranda: searchable PDF, single file, typically ≤1 MB upload limit; deadlines via team account (claimant then respondent).",
-    "Team: ≥2 students from one institution; no maximum team size (31st Rules §31).",
-    "Memoranda: searchable PDF, single file, typically ≤1 MB upload limit; deadlines via team account (claimant then respondent).",
-    "You must behave like a human teammate under official contest rules."
-  ],
-  "integrity_and_compliance": [
-    "Benchmark safety rule: do not use hidden solutions, evaluator internals, unauthorized outside assistance, or resources forbidden by this competition.",
-    "Source-recorded competition rule: Legal research is allowed; outside drafting help is not.",
-    "Legal research is allowed; outside drafting help is not."
-  ],
-  "deliverable_format": [
-    "Runner answer contract: Submit the written memorial/case analysis and a concise oral outline.",
-    "Official deliverable: written memorandum.",
-    "Benchmark adaptation: Official memoranda are filed as PDF; the runner submits the memorandum text.",
-    "Source-recorded competition rule: Write for both advocacy and oral defense.",
-    "Source-recorded competition rule: Parts: memorandum for claimant, memorandum for respondent, oral hearings.",
-    "Source-recorded competition rule: Oral hearings in Vienna (and/or Vis East Hong Kong as separate moot); registration fee and participation expectations after claimant memo.",
-    "Write for both advocacy and oral defense.",
-    "Parts: memorandum for claimant, memorandum for respondent, oral hearings.",
-    "Oral hearings in Vienna (and/or Vis East Hong Kong as separate moot); registration fee and participation expectations after claimant memo.",
-    "Do not look up answer keys or hidden solutions."
-  ],
-  "evaluation_criteria": [
-    "Repository evaluation status: Task performance is specified per artifact in rubric mode, but the repository evaluator is unassigned; do not invent a completed score."
-  ],
-  "runtime_limitations": [
-    "Runtime limitation: Index team_size 5 is a modeling choice, not a Vis maximum.",
-    "Runtime limitation: Oral arbitration advocacy and multi-month prep dwarfs single-session agent runs.",
-    "Runtime limitation: 31st Rules PDF retrieved; prefer the Rules Booklet for the exact Vis year under evaluation."
-  ]
-}
-```

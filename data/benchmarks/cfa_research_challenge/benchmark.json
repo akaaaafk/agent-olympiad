@@ -8,41 +8,123 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2008-winning-rpt-hk-baptist-univ.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2008-winning-rpt-hk-baptist-univ.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on China Mobile Limited (HKEX: 0941) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2008\n\nReference subject company: China Mobile Limited (0941.HK).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.\n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "BUY",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "BUY",
-          "points": 1.0,
-          "reference": "Official short answer: BUY",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "Hong Kong Baptist University"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "Hong Kong Baptist University",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2008-winning-presentation-hk-baptist-univ.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2008-winning-presentation-hk-baptist-univ.pdf",
     "subject_company": "China Mobile Limited",
     "ticker": "0941.HK",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2008,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2008",
+      "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2008-winning-rpt-hk-baptist-univ.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "6f5be3f48b7659b506c93a493df95c0eaaa8c5dba0ded539537c242ac823ccc7"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2008-winning-presentation-hk-baptist-univ.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "7468ed2ed528da9a8a8357cdf66adefce40ba3503b8665d13030362a60f8c350"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2008-winning-rpt-hk-baptist-univ.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2008-winning-rpt-hk-baptist-univ.pdf",
+          "role": "judge_only",
+          "sha256": "6f5be3f48b7659b506c93a493df95c0eaaa8c5dba0ded539537c242ac823ccc7"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2008-winning-presentation-hk-baptist-univ.pdf",
+          "role": "judge_only",
+          "sha256": "7468ed2ed528da9a8a8357cdf66adefce40ba3503b8665d13030362a60f8c350"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": false
     }
   },
   {
@@ -54,41 +136,123 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2009-winning-rpt-nanyang-tech.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2009-winning-rpt-nanyang-tech.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on ComfortDelGro Corporation Limited (SGX: C52) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2009\n\nReference subject company: ComfortDelGro Corporation Limited (C52.SI).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.\n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "SELL",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "SELL",
-          "points": 1.0,
-          "reference": "Official short answer: SELL",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "Nanyang Technological University"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "Nanyang Technological University",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2009-winning-presentation-nanyang-tech.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2009-winning-presentation-nanyang-tech.pdf",
     "subject_company": "ComfortDelGro Corporation Limited",
     "ticker": "C52.SI",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2009,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2009",
+      "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2009-winning-rpt-nanyang-tech.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "2a16e90448c4f5bf2296a557403b2798db42ee96f6bedd24df6a8fc781a8c2a6"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2009-winning-presentation-nanyang-tech.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "e3793cf128b3a11136e841bfececf5bcf9091c3c6daf7822f3c6df426f79bf30"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2009-winning-rpt-nanyang-tech.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2009-winning-rpt-nanyang-tech.pdf",
+          "role": "judge_only",
+          "sha256": "2a16e90448c4f5bf2296a557403b2798db42ee96f6bedd24df6a8fc781a8c2a6"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2009-winning-presentation-nanyang-tech.pdf",
+          "role": "judge_only",
+          "sha256": "e3793cf128b3a11136e841bfececf5bcf9091c3c6daf7822f3c6df426f79bf30"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": false
     }
   },
   {
@@ -100,41 +264,123 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2010-winning-rpt-univ-philippines.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2010-winning-rpt-univ-philippines.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on Energy Development Corporation (PSE: EDC) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2010\n\nReference subject company: Energy Development Corporation (EDC.PS).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.\n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "BUY",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "BUY",
-          "points": 1.0,
-          "reference": "Official short answer: BUY",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "University of the Philippines Diliman"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "University of the Philippines Diliman",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2010-winning-presentation-univ-philippines.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2010-winning-presentation-univ-philippines.pdf",
     "subject_company": "Energy Development Corporation",
     "ticker": "EDC.PS",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2010,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2010",
+      "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2010-winning-rpt-univ-philippines.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "f0f67ba6f20a19e70a7eb9a874530a2c02c52c4b5570b750732499251799d2ed"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2010-winning-presentation-univ-philippines.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "753bb08771f2728f4a6398c6ac23aaf9b5aae3dba627df0a3843393227c0450b"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2010-winning-rpt-univ-philippines.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2010-winning-rpt-univ-philippines.pdf",
+          "role": "judge_only",
+          "sha256": "f0f67ba6f20a19e70a7eb9a874530a2c02c52c4b5570b750732499251799d2ed"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2010-winning-presentation-univ-philippines.pdf",
+          "role": "judge_only",
+          "sha256": "753bb08771f2728f4a6398c6ac23aaf9b5aae3dba627df0a3843393227c0450b"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": false
     }
   },
   {
@@ -146,41 +392,123 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2011-winning-rpt-politecnico-di-milano.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2011-winning-rpt-politecnico-di-milano.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on Piaggio & C. S.p.A. (BIT: PIA) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2011\n\nReference subject company: Piaggio & C. S.p.A. (PIA.MI).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.\n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "Accumulate",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "Accumulate",
-          "points": 1.0,
-          "reference": "Official short answer: Accumulate",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "Politecnico di Milano"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "Politecnico di Milano",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2011-winning-presentation-politecnico-di-milano.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2011-winning-presentation-politecnico-di-milano.pdf",
     "subject_company": "Piaggio & C. S.p.A.",
     "ticker": "PIA.MI",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2011,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2011",
+      "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2011-winning-rpt-politecnico-di-milano.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "3f797f243c1c65835d3667b0925ed1a2cf5cd20f0f6cf7e7c39f78b8f181b5e7"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2011-winning-presentation-politecnico-di-milano.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "ab31f60606524ee4b836e60bc685a430a59dd6ec767e2e6f96ed619f20120cce"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2011-winning-rpt-politecnico-di-milano.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2011-winning-rpt-politecnico-di-milano.pdf",
+          "role": "judge_only",
+          "sha256": "3f797f243c1c65835d3667b0925ed1a2cf5cd20f0f6cf7e7c39f78b8f181b5e7"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2011-winning-presentation-politecnico-di-milano.pdf",
+          "role": "judge_only",
+          "sha256": "ab31f60606524ee4b836e60bc685a430a59dd6ec767e2e6f96ed619f20120cce"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": false
     }
   },
   {
@@ -192,41 +520,123 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2012-winning-rpt-thammasat-univ.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2012-winning-rpt-thammasat-univ.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on CP ALL Public Company Limited (SET: CPALL) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2012\n\nReference subject company: CP ALL Public Company Limited (CPALL.BK).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.\n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "BUY",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "BUY",
-          "points": 1.0,
-          "reference": "Official short answer: BUY",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "Thammasat University"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "Thammasat University",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2012-winning-presentation-thammasat-university.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2012-winning-presentation-thammasat-university.pdf",
     "subject_company": "CP ALL Public Company Limited",
     "ticker": "CPALL.BK",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2012,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2012",
+      "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2012-winning-rpt-thammasat-univ.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "820c881531faa3526832cd6bf6e375c86fe6da033ec97e73e103f28dc9ad66f5"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2012-winning-presentation-thammasat-university.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "eb6815d1f780b05819097f2ee9a33a970fcb14d0e919675067c948270e837086"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2012-winning-rpt-thammasat-univ.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2012-winning-rpt-thammasat-univ.pdf",
+          "role": "judge_only",
+          "sha256": "820c881531faa3526832cd6bf6e375c86fe6da033ec97e73e103f28dc9ad66f5"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2012-winning-presentation-thammasat-university.pdf",
+          "role": "judge_only",
+          "sha256": "eb6815d1f780b05819097f2ee9a33a970fcb14d0e919675067c948270e837086"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": false
     }
   },
   {
@@ -238,41 +648,123 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2013-rpt-wroclaw-univ.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2013-rpt-wroclaw-univ.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on KGHM Polska Miedź S.A. (WSE: KGH) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2013\n\nReference subject company: KGHM Polska Miedź S.A. (KGH.WA).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.\n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "BUY",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "BUY",
-          "points": 1.0,
-          "reference": "Official short answer: BUY",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "Wroclaw University of Economics"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "Wroclaw University of Economics",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2013-winning-presentation-wroclaw-univ.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2013-winning-presentation-wroclaw-univ.pdf",
     "subject_company": "KGHM Polska Miedź S.A.",
     "ticker": "KGH.WA",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2013,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2013",
+      "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2013-rpt-wroclaw-univ.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "55f2e68bfefc8d3c07cf4e38a12035009c3e62075dce79d639ad1981dc1461a9"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2013-winning-presentation-wroclaw-univ.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "7acd0e1ccb2b26550a6d7a2e8a1fa7cb383671584af16d0388ca829a38c7ac0b"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2013-rpt-wroclaw-univ.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2013-rpt-wroclaw-univ.pdf",
+          "role": "judge_only",
+          "sha256": "55f2e68bfefc8d3c07cf4e38a12035009c3e62075dce79d639ad1981dc1461a9"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2013-winning-presentation-wroclaw-univ.pdf",
+          "role": "judge_only",
+          "sha256": "7acd0e1ccb2b26550a6d7a2e8a1fa7cb383671584af16d0388ca829a38c7ac0b"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": false
     }
   },
   {
@@ -284,41 +776,123 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2014-winning-written-report-univ-of-philippines-diliman.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2014-winning-written-report-univ-of-philippines-diliman.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on Manila Electric Company / Meralco (PSE: MER) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2014\n\nReference subject company: Manila Electric Company (Meralco) (MER.PS).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.\n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "BUY",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "BUY",
-          "points": 1.0,
-          "reference": "Official short answer: BUY",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "University of the Philippines Diliman"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "University of the Philippines Diliman",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2014-winning-presentation-university-philippines-diliman.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2014-winning-presentation-university-philippines-diliman.pdf",
     "subject_company": "Manila Electric Company (Meralco)",
     "ticker": "MER.PS",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2014,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2014",
+      "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2014-winning-written-report-univ-of-philippines-diliman.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "63f5da50e330e6d27a1076c864334dcc85475dcd60e6b711c5adeb1ee2f99257"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2014-winning-presentation-university-philippines-diliman.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "c9003466005ccdc4c5d4e9fb2fe997aaff6531666ae572e1ebc9cd28b5401fba"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2014-winning-written-report-univ-of-philippines-diliman.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2014-winning-written-report-univ-of-philippines-diliman.pdf",
+          "role": "judge_only",
+          "sha256": "63f5da50e330e6d27a1076c864334dcc85475dcd60e6b711c5adeb1ee2f99257"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2014-winning-presentation-university-philippines-diliman.pdf",
+          "role": "judge_only",
+          "sha256": "c9003466005ccdc4c5d4e9fb2fe997aaff6531666ae572e1ebc9cd28b5401fba"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": false
     }
   },
   {
@@ -330,41 +904,123 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2015-winning-written-report-canisius-college.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2015-winning-written-report-canisius-college.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on Sovran Self Storage, Inc. (NYSE: SSS) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2015\n\nReference subject company: Sovran Self Storage, Inc. (SSS).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.\n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "HOLD",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "HOLD",
-          "points": 1.0,
-          "reference": "Official short answer: HOLD",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "Canisius College"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "Canisius College",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2015-winning-presentation-canisius-college.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2015-winning-presentation-canisius-college.pdf",
     "subject_company": "Sovran Self Storage, Inc.",
     "ticker": "SSS",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2015,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2015",
+      "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2015-winning-written-report-canisius-college.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "3a5eb701741d54f549c6d16f5f873119ca52473907073df435b88cdfa1c0a426"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2015-winning-presentation-canisius-college.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "e8bd0c52f946b2b9d87bb19568fcc6687e5a8a20bf660e3e586eeed2948b9278"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2015-winning-written-report-canisius-college.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2015-winning-written-report-canisius-college.pdf",
+          "role": "judge_only",
+          "sha256": "3a5eb701741d54f549c6d16f5f873119ca52473907073df435b88cdfa1c0a426"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2015-winning-presentation-canisius-college.pdf",
+          "role": "judge_only",
+          "sha256": "e8bd0c52f946b2b9d87bb19568fcc6687e5a8a20bf660e3e586eeed2948b9278"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": false
     }
   },
   {
@@ -376,41 +1032,123 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2016-winning-rpt-univ-of-waterloo.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2016-winning-rpt-univ-of-waterloo.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on Canadian Tire Corporation, Limited (TSX: CTC.A) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2016\n\nReference subject company: Canadian Tire Corporation, Limited (CTC.A.TO).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.\n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "BUY",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "BUY",
-          "points": 1.0,
-          "reference": "Official short answer: BUY",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "University of Waterloo"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "University of Waterloo",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2016-winning-presentation-university-of-waterloo.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2016-winning-presentation-university-of-waterloo.pdf",
     "subject_company": "Canadian Tire Corporation, Limited",
     "ticker": "CTC.A.TO",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2016,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2016",
+      "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2016-winning-rpt-univ-of-waterloo.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "d632b9e4c39a3ae6f460a8986e21b86774fdf3d99d64b8450003ad2db853132a"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2016-winning-presentation-university-of-waterloo.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "b4ad1bd7d20906e5f43d14e9ae6641f42c44b00c71de5fa0715e4a56bdab78b3"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2016-winning-rpt-univ-of-waterloo.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2016-winning-rpt-univ-of-waterloo.pdf",
+          "role": "judge_only",
+          "sha256": "d632b9e4c39a3ae6f460a8986e21b86774fdf3d99d64b8450003ad2db853132a"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2016-winning-presentation-university-of-waterloo.pdf",
+          "role": "judge_only",
+          "sha256": "b4ad1bd7d20906e5f43d14e9ae6641f42c44b00c71de5fa0715e4a56bdab78b3"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": false
     }
   },
   {
@@ -422,41 +1160,123 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2017-winning-written-report-barna-business-school.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2017-winning-written-report-barna-business-school.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on Copa Holdings, S.A. (NYSE: CPA) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2017\n\nReference subject company: Copa Holdings, S.A. (CPA).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.\n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "BUY",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "BUY",
-          "points": 1.0,
-          "reference": "Official short answer: BUY",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "Barna Business School"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "Barna Business School",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2017-winning-presentation-barna-business-school.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2017-winning-presentation-barna-business-school.pdf",
     "subject_company": "Copa Holdings, S.A.",
     "ticker": "CPA",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2017,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2017",
+      "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2017-winning-written-report-barna-business-school.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "c0d4f25ccee95be66808e64e8e4c583de5092ee99e26ad0e3f81f6f473726685"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2017-winning-presentation-barna-business-school.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "1f2138a6aeb7c0e6748de7ff8591be90dd95ad8bc021e09d011217d8bc567b5b"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2017-winning-written-report-barna-business-school.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2017-winning-written-report-barna-business-school.pdf",
+          "role": "judge_only",
+          "sha256": "c0d4f25ccee95be66808e64e8e4c583de5092ee99e26ad0e3f81f6f473726685"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2017-winning-presentation-barna-business-school.pdf",
+          "role": "judge_only",
+          "sha256": "1f2138a6aeb7c0e6748de7ff8591be90dd95ad8bc021e09d011217d8bc567b5b"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": false
     }
   },
   {
@@ -468,41 +1288,123 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2018-winning-written-report--university-of-laussane.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2018-winning-written-report--university-of-laussane.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on VAT Group AG (SIX: VACN) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2018\n\nReference subject company: VAT Group AG (VACN.SW).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.\n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "BUY",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "BUY",
-          "points": 1.0,
-          "reference": "Official short answer: BUY",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "University of Lausanne"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "University of Lausanne",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2018-winning-presentation-university-of-lausanne.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2018-winning-presentation-university-of-lausanne.pdf",
     "subject_company": "VAT Group AG",
     "ticker": "VACN.SW",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2018,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2018",
+      "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2018-winning-written-report--university-of-laussane.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "b28f9249a743d6b58bf148867b4a708084efb2aad2aceda187558d1089f0a919"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2018-winning-presentation-university-of-lausanne.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "d0795f4df8ed7ed222e63b4ed42e4fa79e8f879ab2d94baa0a70c85f8ac7f2ed"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2018-winning-written-report--university-of-laussane.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2018-winning-written-report--university-of-laussane.pdf",
+          "role": "judge_only",
+          "sha256": "b28f9249a743d6b58bf148867b4a708084efb2aad2aceda187558d1089f0a919"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2018-winning-presentation-university-of-lausanne.pdf",
+          "role": "judge_only",
+          "sha256": "d0795f4df8ed7ed222e63b4ed42e4fa79e8f879ab2d94baa0a70c85f8ac7f2ed"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": false
     }
   },
   {
@@ -514,41 +1416,123 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2019-winning-report-ateneo-de-manila-university.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2019-winning-report-ateneo-de-manila-university.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on D&L Industries, Inc. (PSE: DNL) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2019\n\nReference subject company: D&L Industries, Inc. (DNL.PS).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.\n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "BUY",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "BUY",
-          "points": 1.0,
-          "reference": "Official short answer: BUY",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "Ateneo de Manila University"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "Ateneo de Manila University",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2019-winning-presentation-ateneo-de-manila-university.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2019-winning-presentation-ateneo-de-manila-university.pdf",
     "subject_company": "D&L Industries, Inc.",
     "ticker": "DNL.PS",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2019,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2019",
+      "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2019-winning-report-ateneo-de-manila-university.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "d7b2d836672c76ce183a7c24b9c3a3a8c491ab2f9e3900d9297031c5111ebb07"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2019-winning-presentation-ateneo-de-manila-university.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "408d5d6ca1f4916c0d5778ab94634cd7806b3873e7d7db2fd149cc6fdcef787a"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2019-winning-report-ateneo-de-manila-university.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2019-winning-report-ateneo-de-manila-university.pdf",
+          "role": "judge_only",
+          "sha256": "d7b2d836672c76ce183a7c24b9c3a3a8c491ab2f9e3900d9297031c5111ebb07"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2019-winning-presentation-ateneo-de-manila-university.pdf",
+          "role": "judge_only",
+          "sha256": "408d5d6ca1f4916c0d5778ab94634cd7806b3873e7d7db2fd149cc6fdcef787a"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": false
     }
   },
   {
@@ -560,41 +1544,123 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2020-winning-report-university-of-sydney.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2020-winning-report-university-of-sydney.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on Commonwealth Bank of Australia (ASX: CBA) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2020\n\nReference subject company: Commonwealth Bank of Australia (CBA.AX).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.\n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "SELL",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "SELL",
-          "points": 1.0,
-          "reference": "Official short answer: SELL",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "University of Sydney"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "University of Sydney",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2020-winning-presentation-university-of-sydney.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2020-winning-presentation-university-of-sydney.pdf",
     "subject_company": "Commonwealth Bank of Australia",
     "ticker": "CBA.AX",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2020,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2020",
+      "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2020-winning-report-university-of-sydney.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "8cf40f5e888dd9aad0e9b3aa57e5f5489cae94ffff6eb032117a18bd324b2a67"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2020-winning-presentation-university-of-sydney.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "c15cf761a63069d532fe0b1cbac91846f5878d9d09f0acf221a7ce62dfac82c5"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2020-winning-report-university-of-sydney.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2020-winning-report-university-of-sydney.pdf",
+          "role": "judge_only",
+          "sha256": "8cf40f5e888dd9aad0e9b3aa57e5f5489cae94ffff6eb032117a18bd324b2a67"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2020-winning-presentation-university-of-sydney.pdf",
+          "role": "judge_only",
+          "sha256": "c15cf761a63069d532fe0b1cbac91846f5878d9d09f0acf221a7ce62dfac82c5"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": false
     }
   },
   {
@@ -606,41 +1672,123 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2021-winning-report-bi-norwegian-business-school.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2021-winning-report-bi-norwegian-business-school.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on Vestas Wind Systems A/S (CPH: VWS) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2021\n\nReference subject company: Vestas Wind Systems A/S (VWS.CO).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.\n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "BUY",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "BUY",
-          "points": 1.0,
-          "reference": "Official short answer: BUY",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "BI Norwegian Business School"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "BI Norwegian Business School",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2021-winning-presentation-bi-norwegian-business-school.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2021-winning-presentation-bi-norwegian-business-school.pdf",
     "subject_company": "Vestas Wind Systems A/S",
     "ticker": "VWS.CO",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2021,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2021",
+      "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2021-winning-report-bi-norwegian-business-school.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "7a4cbb70ca50d2b429d44ea9a9b8df4a067d5ce4fba38bfa2b821f04946e6ea3"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2021-winning-presentation-bi-norwegian-business-school.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "b86b6b45ba9513526bf33ef5f3020d6f5fa78299af350894e9fff2323f2423ef"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2021-winning-report-bi-norwegian-business-school.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2021-winning-report-bi-norwegian-business-school.pdf",
+          "role": "judge_only",
+          "sha256": "7a4cbb70ca50d2b429d44ea9a9b8df4a067d5ce4fba38bfa2b821f04946e6ea3"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2021-winning-presentation-bi-norwegian-business-school.pdf",
+          "role": "judge_only",
+          "sha256": "b86b6b45ba9513526bf33ef5f3020d6f5fa78299af350894e9fff2323f2423ef"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": false
     }
   },
   {
@@ -652,41 +1800,123 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2022-winning-written-report-northern-illinois-univ.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2022-winning-written-report-northern-illinois-univ.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on Motorola Solutions, Inc. (NYSE: MSI) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2022\n\nReference subject company: Motorola Solutions, Inc. (MSI).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.\n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "BUY",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "BUY",
-          "points": 1.0,
-          "reference": "Official short answer: BUY",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "Northern Illinois University"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "Northern Illinois University",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2022-winning-presentation-northern-illinois-univ.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2022-winning-presentation-northern-illinois-univ.pdf",
     "subject_company": "Motorola Solutions, Inc.",
     "ticker": "MSI",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2022,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2022",
+      "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2022-winning-written-report-northern-illinois-univ.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "ee8f6ff72a4f9200e12901990715041367b5de3513f4f20f3575a3956d3b13cd"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2022-winning-presentation-northern-illinois-univ.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "942081b76af81bddbd4fdb221caed27bc338323339136a5b12957d64fabd3a57"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2022-winning-written-report-northern-illinois-univ.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2022-winning-written-report-northern-illinois-univ.pdf",
+          "role": "judge_only",
+          "sha256": "ee8f6ff72a4f9200e12901990715041367b5de3513f4f20f3575a3956d3b13cd"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2022-winning-presentation-northern-illinois-univ.pdf",
+          "role": "judge_only",
+          "sha256": "942081b76af81bddbd4fdb221caed27bc338323339136a5b12957d64fabd3a57"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": false
     }
   },
   {
@@ -698,41 +1928,123 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2023-winning-written-report-university-of-sydney.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2023-winning-written-report-university-of-sydney.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on Qantas Airways Limited (ASX: QAN) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2023\n\nReference subject company: Qantas Airways Limited (QAN.AX).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.\n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "BUY",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "BUY",
-          "points": 1.0,
-          "reference": "Official short answer: BUY",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "University of Sydney"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "University of Sydney",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2023-winning-presentation-university-of-sydney.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2023-winning-presentation-university-of-sydney.pdf",
     "subject_company": "Qantas Airways Limited",
     "ticker": "QAN.AX",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2023,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2023",
+      "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2023-winning-written-report-university-of-sydney.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "f19e04a9735687871fb4263b84c6ad6625bd0ad7009f165f67c9ea5f31d576dd"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2023-winning-presentation-university-of-sydney.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "cd2aea6b0169f5589433b99cf46ee0a11978f40b341111352dbede662752d995"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2023-winning-written-report-university-of-sydney.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2023-winning-written-report-university-of-sydney.pdf",
+          "role": "judge_only",
+          "sha256": "f19e04a9735687871fb4263b84c6ad6625bd0ad7009f165f67c9ea5f31d576dd"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2023-winning-presentation-university-of-sydney.pdf",
+          "role": "judge_only",
+          "sha256": "cd2aea6b0169f5589433b99cf46ee0a11978f40b341111352dbede662752d995"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": false
     }
   },
   {
@@ -744,41 +2056,123 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2024-winning-written-report-university-of-waterloo.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2024-winning-written-report-university-of-waterloo.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on Cargojet Inc. (TSX: CJT) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2024\n\nReference subject company: Cargojet Inc. (CJT.TO).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.\n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "BUY",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "BUY",
-          "points": 1.0,
-          "reference": "Official short answer: BUY",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "University of Waterloo"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "University of Waterloo",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2024-winning-presentation-university-of-waterloo.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2024-winning-presentation-university-of-waterloo.pdf",
     "subject_company": "Cargojet Inc.",
     "ticker": "CJT.TO",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2024,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2024",
+      "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2024-winning-written-report-university-of-waterloo.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "5a3f57948a42a1ce90bde2d327cc569df1b17831394fb3017dfa3f508f03b182"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2024-winning-presentation-university-of-waterloo.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "fd287c76773df6f4ccca66763b8d1e544bce39aecd2786ad80a169c9775a971a"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2024-winning-written-report-university-of-waterloo.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2024-winning-written-report-university-of-waterloo.pdf",
+          "role": "judge_only",
+          "sha256": "5a3f57948a42a1ce90bde2d327cc569df1b17831394fb3017dfa3f508f03b182"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2024-winning-presentation-university-of-waterloo.pdf",
+          "role": "judge_only",
+          "sha256": "fd287c76773df6f4ccca66763b8d1e544bce39aecd2786ad80a169c9775a971a"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": false
     }
   },
   {
@@ -790,41 +2184,147 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2025-winning-written-report-kozminski-university.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2025-winning-written-report-kozminski-university.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on Dom Development S.A. (WSE: DOM) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2025\n\nReference subject company: Dom Development S.A. (DOM.WA).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe season-specific official rules and scoring forms have now been archived. \n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "BUY",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "BUY",
-          "points": 1.0,
-          "reference": "Official short answer: BUY",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "Kozminski University"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "Kozminski University",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2025-winning-presentation-kozminski-university.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2025-winning-presentation-kozminski-university.pdf",
     "subject_company": "Dom Development S.A.",
     "ticker": "DOM.WA",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_2024_2025_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_2024_2025_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2025",
+      "reason": "Season-specific rules/scoring forms are archived, but original subject-company research inputs and a reproducible historical information boundary remain incomplete.",
+      "pre_season_source_repair": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2025,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "subregional_presentation_rubric_path": "data/rubrics/cfa_research_challenge_subregional_presentation_2024_2025_v1.json",
+      "rubric_source_edition": "2024-2025",
+      "official_year_equivalence": true,
+      "source_repair_status": "season_specific_rules_and_score_sheets_archived",
+      "required_selectors": [
+        "competition_stage",
+        "local_format_if_local"
+      ],
+      "score_basis": "Use the archived season and selected stage: report 100, oral presentation with Q&A 100, sub-regional recording without Q&A 80. These are separate artifact maxima, not an automatic 200-point contest total. No unique-gold recommendation or unobserved oral score is inferred.",
+      "official_artifact_maxima": {
+        "written_report": 100,
+        "presentation_with_questions": 100,
+        "subregional_recording_without_questions": 80
+      }
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2025-winning-written-report-kozminski-university.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "140198578dea7d0f0f7b6270082655b54f52763bd3d4d8db3e2d4f48e85bfebb"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2025-winning-presentation-kozminski-university.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "cb6acf7abdba4f3e036873291d2194946be21db0c0c3be3562f23382a3607d77"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rules/research_challenge_rules_2024_2025.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "c9a1a5e61a251e4db5550636a3ef2af5ccf77b0160c28ebe86676df41886e35a"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2025-winning-written-report-kozminski-university.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2025-winning-written-report-kozminski-university.pdf",
+          "role": "judge_only",
+          "sha256": "140198578dea7d0f0f7b6270082655b54f52763bd3d4d8db3e2d4f48e85bfebb"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2025-winning-presentation-kozminski-university.pdf",
+          "role": "judge_only",
+          "sha256": "cb6acf7abdba4f3e036873291d2194946be21db0c0c3be3562f23382a3607d77"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rules/research_challenge_rules_2024_2025.pdf",
+          "role": "agent_visible",
+          "sha256": "c9a1a5e61a251e4db5550636a3ef2af5ccf77b0160c28ebe86676df41886e35a"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": true
     }
   },
   {
@@ -836,41 +2336,177 @@
     "task_type": "equity_research",
     "team_size": 4,
     "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
-    "source_file": "data/raw/cfa_research_challenge/rc-2026-winning-written-report-university-of-waterloo.pdf",
+    "source_file": null,
     "solution_file": "data/raw/cfa_research_challenge/rc-2026-winning-written-report-university-of-waterloo.pdf",
     "total_points": null,
-    "problem_description": "Write an approximately 10-page equity research report on Lightspeed Commerce Inc. (TSX/NYSE: LSPD) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.",
+    "problem_description": "# CFA Institute Research Challenge 2026\n\nReference subject company: Lightspeed Commerce Inc. (LSPD).\n\nThis is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.\n\nThe season-specific official rules and scoring forms have now been archived. The Toronto/Ottawa 2025-2026 host timeline is also attached. \n\nDo not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.\n",
     "gold_label": {
-      "expected_answer": "SELL",
-      "grading_rubric": "Equity research report + oral defense; champion PDFs are gold references",
-      "human_baseline": null,
-      "parts": [
-        {
-          "id": "1",
-          "expected": "SELL",
-          "points": 1.0,
-          "reference": "Official short answer: SELL",
-          "match_mode": "normalized",
-          "aliases": []
-        }
-      ]
+      "expected_answer": null,
+      "grading_rubric": "Champion artifacts are references, not prompts or short-answer gold. Use the applicable season and stage rubric only after original research inputs and an information boundary are restored. Do not infer Q&A or delivery from static slides.",
+      "human_baseline": "University of Waterloo"
     },
-    "status": "collected",
+    "status": "partial",
     "champion_team": "University of Waterloo",
     "note": "subject_company inferred from champion report (per tasks.json notes)",
-    "presentation_file": "benchmark/cfa_research_challenge/rc-2026-winning-presentation-university-of-waterloo_0.pdf",
+    "presentation_file": "data/raw/cfa_research_challenge/rc-2026-winning-presentation-university-of-waterloo_0.pdf",
     "subject_company": "Lightspeed Commerce Inc.",
     "ticker": "LSPD",
     "team_size_note": "3-5",
     "eval_unit": "session",
     "is_multi_agent": true,
     "evaluation": {
-      "evaluator_id": "gold_answer_v1",
-      "status": "ready",
-      "fallback_evaluator_id": "rubric_llm_v1",
-      "deliverable": "answer_sheet",
-      "short_answer_source": "data\\rubrics\\cfa_research_challenge_short_answers.json",
-      "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json"
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_2025_2026_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_2025_2026_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement."
+      ],
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "deliverable": "equity_research_report_and_presentation",
+        "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+      },
+      "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+      "scorecard_key": "cfa_research_challenge_2026",
+      "reason": "Season-specific rules/scoring forms are archived, but original subject-company research inputs and a reproducible historical information boundary remain incomplete.",
+      "pre_season_source_repair": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2026,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "subregional_presentation_rubric_path": "data/rubrics/cfa_research_challenge_subregional_presentation_2025_2026_v1.json",
+      "rubric_source_edition": "2025-2026",
+      "official_year_equivalence": true,
+      "source_repair_status": "season_specific_rules_and_score_sheets_archived",
+      "required_selectors": [
+        "competition_stage",
+        "local_format_if_local"
+      ],
+      "score_basis": "Use the archived season and selected stage: report 100, oral presentation with Q&A 100, sub-regional recording without Q&A 80. These are separate artifact maxima, not an automatic 200-point contest total. No unique-gold recommendation or unobserved oral score is inferred.",
+      "official_artifact_maxima": {
+        "written_report": 100,
+        "presentation_with_questions": 100,
+        "subregional_recording_without_questions": 80
+      },
+      "source_caveats": [
+        "The host-published 2025-2026 rules retain an August 2024 host-registration date in section 4.3. Use the separately archived 2025-2026 Toronto timeline for local participant dates; do not silently correct the source PDF."
+      ]
+    },
+    "assets": [
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2026-winning-written-report-university-of-waterloo.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "a1d3e6d770d3eaac9699cc8307219b73848db2da34ae03255fc85678b7cdab2d"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rc-2026-winning-presentation-university-of-waterloo_0.pdf",
+        "mime_type": "application/pdf",
+        "role": "judge_only",
+        "sha256": "ba2cac49a17bb2cfa60008a085e89f291df72dbb1455123ea0decfaa6da62cd1"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rules/research_challenge_rules_2025_2026.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "2d430759700b3da8f3a4172ad2a86c169edc37b848239464e1a3b0db8fa15bb2"
+      },
+      {
+        "path": "data/raw/cfa_research_challenge/rules/toronto_2025_2026_timeline.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "3a5677a1f3377d4c25ca4997a2d6aa3dcab19a17a5ce9f96d7395feb9a37e622"
+      }
+    ],
+    "asset_policy": "Champion report and presentation are judge_only and must never enter contestant context.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.cfainstitute.org/insights/events/research-challenge/past-champions",
+      "source_file": null,
+      "solution_file": "data/raw/cfa_research_challenge/rc-2026-winning-written-report-university-of-waterloo.pdf",
+      "files": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2026-winning-written-report-university-of-waterloo.pdf",
+          "role": "judge_only",
+          "sha256": "a1d3e6d770d3eaac9699cc8307219b73848db2da34ae03255fc85678b7cdab2d"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2026-winning-presentation-university-of-waterloo_0.pdf",
+          "role": "judge_only",
+          "sha256": "ba2cac49a17bb2cfa60008a085e89f291df72dbb1455123ea0decfaa6da62cd1"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rules/research_challenge_rules_2025_2026.pdf",
+          "role": "agent_visible",
+          "sha256": "2d430759700b3da8f3a4172ad2a86c169edc37b848239464e1a3b0db8fa15bb2"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rules/toronto_2025_2026_timeline.pdf",
+          "role": "agent_visible",
+          "sha256": "3a5677a1f3377d4c25ca4997a2d6aa3dcab19a17a5ce9f96d7395feb9a37e622"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "restoration_review": {
+      "status": "restored_for_user_review",
+      "date": "2026-09-11",
+      "original_exclusion_reason": "Only champion reports/presentations and inferred company metadata exist; original case and contemporaneous input packet absent.",
+      "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+    },
+    "competition_id": "cfa_research_challenge",
+    "source_coverage": {
+      "task_format": "open_public_information_equity_research",
+      "fixed_question_paper_required": false,
+      "original_host_assignment_archived": false,
+      "historical_company_materials_archived": false,
+      "contemporaneous_information_boundary": null,
+      "champion_artifacts_visibility": "judge_only",
+      "season_rules_archived": true,
+      "host_timeline_archived": true
+    },
+    "event_calendar": {
+      "source_file": "data/raw/cfa_research_challenge/rules/toronto_2025_2026_timeline.pdf",
+      "source_url": "https://cfatoronto.ca/wp-content/uploads/2026/06/2026-research-challenge-timeline-local-competition.pdf",
+      "season": "2025-2026",
+      "host": "CFA Society Toronto and CFA Society Ottawa",
+      "kickoff_date": "2025-10-29",
+      "subject_company_meeting_date": "2025-12-01",
+      "written_report_due_date": "2026-01-08",
+      "preliminary_slides_due_date": "2026-01-15",
+      "preliminary_presentation_date": "2026-01-21",
+      "local_final_slides_due_date": "2026-02-09",
+      "local_final_date": "2026-02-12",
+      "deadline_time_not_specified": true,
+      "information_cutoff_inferred": false
     }
   }
 ]

@@ -1,0 +1,2903 @@
+{
+  "schema_version": "1.1",
+  "dataset": "hmmt_guts",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "hmmt_guts_2000",
+      "year": 2000,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2000/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "679af84eb1eee9ffe93ad059a4959bb9026c4615a1d078b5c3c15ee9eb2ec02c"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2001",
+      "year": 2001,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2001/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "62044c445c48b28bf9e4f0c577d05e9c1f7909ab3493915f7f282c859c9eeed5"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2002",
+      "year": 2002,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2002/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "42d269d4a6df1061c216792737f42e5ca5352a9868072c4c962464da2a64b0b7"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2003",
+      "year": 2003,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2003/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "b7d34331027013ad540de90d6674816bccbef7a24c774aa4072a81f61c6dbac3"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2004",
+      "year": 2004,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2004/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "52af673639316d92178ab41e069044b1e25aaecd4086a0ee3a50c07dfda9a460"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2005",
+      "year": 2005,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2005/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "98ec1a73aba4c0de118671ef09ab073d0d1980251c7da152f07bc57ad206048f"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2006",
+      "year": 2006,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2006/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "4b97d5b8de9d929c2a2fc89d4596728efd5f980423bb7609dea36bb70d2f9df6"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2007",
+      "year": 2007,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2007/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "35136036cfb33977d8ad29f8c7619f0e3d7151f728882490558ad0c42c36ea33"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2008",
+      "year": 2008,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2008/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1501be1ee3fd02b2a626fd4dd6fdea7585e91b7eae409bf8008d8f4d18843cf4"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2008",
+      "year": 2008,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2008/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "095ba736991210a1eb7584cf5e1916bd63d027dc5c8fd334edc6deaeca316054"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2009",
+      "year": 2009,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2009/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "eeda49cbc5628f6f9dcad1a66baf140d6189e899af36c16588fbb61d3b83463d"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2009",
+      "year": 2009,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2009/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "bd6331188744a875945e155fceb0305b1a291293258327ba0e18a443e28ebb3b"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2010",
+      "year": 2010,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2010/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "7f0755377505eb98485e68da7e45b0bf8b1e1157b64c76a8c142aca540cb3728"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2010",
+      "year": 2010,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2010/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "5d014c16eaa3412c668e2571c128bc9e194807b5749581b7a4597e7ca36304da"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2011",
+      "year": 2011,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2011/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "35ebea78b21c22234a0e94a15ac3c250561986880221c0e6a514cf02053aacbe"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2011",
+      "year": 2011,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2011/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "7905fe5fef3fc7392f65937f9501e12b3d6b0b84b9638cfeebe70d5c8acd1212"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2012",
+      "year": 2012,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2012/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "b1f7144157807ea45f016fef6898c708d090fac5bdddfedf3ea8ae37fc5859e4"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2012",
+      "year": 2012,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2012/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "daccfed2369d3699ec3ec5ee0581909c8aa0501adac031c728626be69fee09c9"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2013",
+      "year": 2013,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2013/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "e10f17cbb8eb6447cc213c243b008075985524fb39da61f3cf0cf6e983e89cc3"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2013",
+      "year": 2013,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2013/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "de045ca00316da2e470ce822989c55baeb2b16e6e283d507ef1914127e626bee"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2014",
+      "year": 2014,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2014/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "67f628a9d70fc82efc94fbd3f892964962cf447303963334a2cfb7beddd408f4"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2014",
+      "year": 2014,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2014/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "a944c7c76cdd4efa2614037a141b2a7e5260db0798c795408564c2702f1f9a56"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2015",
+      "year": 2015,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2015/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "560cfe13cc4d0ac7de6ff4981b3ee4266efa6c94d24152acd948837652adfa9b"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2015",
+      "year": 2015,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2015/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "fa3afd5f86f8d9590f9087d3fb65f1f33fcd9d2e364e9ba75c40d5ee26c70157"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2016",
+      "year": 2016,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2016/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "03186fdce205e7c8de2f467fca83e92d42badcc0ad454f0d74c2f4f33e64b6ce"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2016",
+      "year": 2016,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2016/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "0116ac59d89d3fea20b28cd5b70ad1ba7ce07565ca0893d3b9e96d0a08337916"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2017",
+      "year": 2017,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2017/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "e8e35d1acf067e658f2dbf8d4b839643130f71a0fb8e9e4ee3da274b1c6cf374"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2017",
+      "year": 2017,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2017/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "13ec26a4c216fa2dc9ecc5b223a9e851c8bba06c357bc78dc8af0f146210d568"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2018",
+      "year": 2018,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2018/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "0467337253bd554910c7db7781745a33b4d9d48356b64a5849e8ece49065f5e6"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2018",
+      "year": 2018,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2018/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "e80774bcfcb1ccc82581635a7af54514bc07cfe286b595ee7a30c7e8b85e60b5"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2019",
+      "year": 2019,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2019/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "0735b47440056700b7914ab1df1583841e565691580dea1712ba76fcba1b59a5"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2019",
+      "year": 2019,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2019/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1a4e2fa24cf349908c68f91262612ebb9f77a51568fbad805c21bf3fb14f43df"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2020",
+      "year": 2020,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2020/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "0a5c89f63c12ac83b51e11625de39f4a5f657f1648e2bffe7ab8c4edc8784f38"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2020",
+      "year": 2020,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2020/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "44228e11cd3936ad2a5a0391ad58c6a7b758f2d3c4cfc6e9121448d94c405ea6"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2021",
+      "year": 2021,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2021/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "66e3b4d1b9b048b3fa974420a1b97985921231e61c786142bd82632bf2999203"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2021",
+      "year": 2021,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2021/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "2c100d9cfd3768ab7fc6308783b8c6083691fc6f0e690ac8d3facdaa303e3f74"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2022",
+      "year": 2022,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2022/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "d59d1076c40d617e6939ef8032d684ee20a85aa93d8e791959053232415398cd"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2022",
+      "year": 2022,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2022/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "15d49dfb89d6418be8efe88debd48d6b2b4147b294f1ce18044f6f83109965e4"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2023",
+      "year": 2023,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2023/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "e935ac60dc6964f780ad04661048ef8832cf0c259c64f43ddb562276e2f7acee"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2023",
+      "year": 2023,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2023/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "17e78dc26653bf0bdecce46ad8f03dd42fbd4c02c6b6290e703c1490160558ff"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2024",
+      "year": 2024,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/hmmt_guts_2024_official_weights_v1.json",
+          "sha256": "e9a6d39d04f276f9658bb9a7d08a27fec3f11cc916d66ae7a3ce69c7be95cdb3",
+          "format": "numeric_rubric",
+          "rubric_id": "hmmt_guts_2024_official_weights_v1",
+          "total_points": 400,
+          "criteria": [
+            {
+              "id": "1",
+              "name": "Problem 1",
+              "max_score": 5,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "2",
+              "name": "Problem 2",
+              "max_score": 5,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "3",
+              "name": "Problem 3",
+              "max_score": 5,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "4",
+              "name": "Problem 4",
+              "max_score": 5,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "5",
+              "name": "Problem 5",
+              "max_score": 6,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "6",
+              "name": "Problem 6",
+              "max_score": 6,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "7",
+              "name": "Problem 7",
+              "max_score": 6,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "8",
+              "name": "Problem 8",
+              "max_score": 6,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "9",
+              "name": "Problem 9",
+              "max_score": 7,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "10",
+              "name": "Problem 10",
+              "max_score": 7,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "11",
+              "name": "Problem 11",
+              "max_score": 7,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "12",
+              "name": "Problem 12",
+              "max_score": 7,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "13",
+              "name": "Problem 13",
+              "max_score": 9,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "14",
+              "name": "Problem 14",
+              "max_score": 9,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "15",
+              "name": "Problem 15",
+              "max_score": 9,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "16",
+              "name": "Problem 16",
+              "max_score": 9,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "17",
+              "name": "Problem 17",
+              "max_score": 11,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "18",
+              "name": "Problem 18",
+              "max_score": 11,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "19",
+              "name": "Problem 19",
+              "max_score": 11,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "20",
+              "name": "Problem 20",
+              "max_score": 11,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "21",
+              "name": "Problem 21",
+              "max_score": 12,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "22",
+              "name": "Problem 22",
+              "max_score": 12,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "23",
+              "name": "Problem 23",
+              "max_score": 12,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "24",
+              "name": "Problem 24",
+              "max_score": 12,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "25",
+              "name": "Problem 25",
+              "max_score": 14,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "26",
+              "name": "Problem 26",
+              "max_score": 14,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "27",
+              "name": "Problem 27",
+              "max_score": 14,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "28",
+              "name": "Problem 28",
+              "max_score": 14,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "29",
+              "name": "Problem 29",
+              "max_score": 16,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "30",
+              "name": "Problem 30",
+              "max_score": 16,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "31",
+              "name": "Problem 31",
+              "max_score": 16,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "32",
+              "name": "Problem 32",
+              "max_score": 16,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "33",
+              "name": "Problem 33",
+              "max_score": 20,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "34",
+              "name": "Problem 34",
+              "max_score": 20,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "35",
+              "name": "Problem 35",
+              "max_score": 20,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            },
+            {
+              "id": "36",
+              "name": "Problem 36",
+              "max_score": 20,
+              "min_score": 0,
+              "description": "Correct official short answer earns the printed problem weight."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2024/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "f8c3ce0a71c808fb04f16e368ae408a5ddd94b57f2e7f5771795b802fa2e9bb4"
+        }
+      ],
+      "limitations": "Static weighted answer grading; progressive release, hand-in timing, and live standings are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Sum of printed per-problem weights for correct curated answers; static packet only.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 5
+        },
+        {
+          "id": "2",
+          "points": 5
+        },
+        {
+          "id": "3",
+          "points": 5
+        },
+        {
+          "id": "4",
+          "points": 5
+        },
+        {
+          "id": "5",
+          "points": 6
+        },
+        {
+          "id": "6",
+          "points": 6
+        },
+        {
+          "id": "7",
+          "points": 6
+        },
+        {
+          "id": "8",
+          "points": 6
+        },
+        {
+          "id": "9",
+          "points": 7
+        },
+        {
+          "id": "10",
+          "points": 7
+        },
+        {
+          "id": "11",
+          "points": 7
+        },
+        {
+          "id": "12",
+          "points": 7
+        },
+        {
+          "id": "13",
+          "points": 9
+        },
+        {
+          "id": "14",
+          "points": 9
+        },
+        {
+          "id": "15",
+          "points": 9
+        },
+        {
+          "id": "16",
+          "points": 9
+        },
+        {
+          "id": "17",
+          "points": 11
+        },
+        {
+          "id": "18",
+          "points": 11
+        },
+        {
+          "id": "19",
+          "points": 11
+        },
+        {
+          "id": "20",
+          "points": 11
+        },
+        {
+          "id": "21",
+          "points": 12
+        },
+        {
+          "id": "22",
+          "points": 12
+        },
+        {
+          "id": "23",
+          "points": 12
+        },
+        {
+          "id": "24",
+          "points": 12
+        },
+        {
+          "id": "25",
+          "points": 14
+        },
+        {
+          "id": "26",
+          "points": 14
+        },
+        {
+          "id": "27",
+          "points": 14
+        },
+        {
+          "id": "28",
+          "points": 14
+        },
+        {
+          "id": "29",
+          "points": 16
+        },
+        {
+          "id": "30",
+          "points": 16
+        },
+        {
+          "id": "31",
+          "points": 16
+        },
+        {
+          "id": "32",
+          "points": 16
+        },
+        {
+          "id": "33",
+          "points": 20
+        },
+        {
+          "id": "34",
+          "points": 20
+        },
+        {
+          "id": "35",
+          "points": 20
+        },
+        {
+          "id": "36",
+          "points": 20
+        }
+      ],
+      "gold_max_score": 400.0
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2024",
+      "year": 2024,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2024/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "3d78355e6b981f8cfea3018194601aec27bf945380c24c7149c90d5ed8d22713"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2025",
+      "year": 2025,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2025/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "d3aeba4b9a805c3374f4d76b462252a8c37925021494620d2a74305b42a96115"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_nov_2025",
+      "year": 2025,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/nov/2025/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "d0569f7498460d3eca9e623bc345683e8a3c8f33b5065dbc2c332736441fb949"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "hmmt_guts_2026",
+      "year": 2026,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/hmmt_guts/feb/2026/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "503217a27a71e247482d75e18c7a969f0afc2781eb63ead60406f602d54d948f"
+        }
+      ],
+      "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+      "rubric_reuse": null,
+      "scoring_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

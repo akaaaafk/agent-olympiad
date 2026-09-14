@@ -1,0 +1,58 @@
+body {
+    background: url(flame-border.jpg) repeat-y top left;
+    margin: 0px;
+    padding: 0px 0px 0px 45px; 
+    font-family: "Myriad Web" "Lucida Sans" "Luxi Sans" sans-serif;
+}
+
+div#nav {
+    background: black;
+    margin: 0px auto;
+    padding: 4px;
+    text-align: right;
+    height: auto;
+    min-height: 35px;
+}
+
+#nav img { border: 0px; }
+#nav .main-page { float: left; text-align: left; }
+
+div#story-text {
+    background: #900 url(red-gradient.png) repeat-x top left;
+    color: white; 
+    border-bottom: 2px solid #622;
+    margin: 0em; 
+    padding: 1.5em 2em .5em 100px;
+    min-height: 35px;
+    text-align: right; 
+    font-style: italic;
+    font-size: 85%;
+}
+#story-text .lesson { font-weight: bold; padding-right: 0.5em; }
+
+div#content {
+    background: white;
+    margin: 1em; 
+    padding: 1em;
+    padding-top: 0.5em;
+}
+
+div#title { color: red; margin: 1em; text-align: center;}
+h1 { text-align: center; }
+
+div.intro,p.intro { margin: 2em 4em; font-size: 95%; }
+
+#title img { width: auto; }
+img.sin-icon { width: auto; float: right; margin: -8px -8px 0px 0px; }
+#title .flame-row { width: 98%; clear: both; } 
+
+table { border-collapse: collapse; }
+td { border: 1px solid black; }
+table.layout td { border: none; }
+
+div.right { float: right; }
+div.left { float: left; }
+div.centered { text-align: center; }
+
+dt { clear: left; float: left; font-weight: bold; }
+dd { margin-left: 2em; }

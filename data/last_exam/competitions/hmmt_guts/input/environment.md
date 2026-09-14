@@ -1,4 +1,4 @@
-# Environment — `hmmt_guts`
+# Environment
 
 ## Roster
 
@@ -16,7 +16,11 @@
 
 ## Allowed tools
 
-- query_rules
+```json
+[
+  "query_rules"
+]
+```
 
 ## Resources
 
@@ -73,7 +77,7 @@
     "text/plain"
   ],
   "task_types": [
-    "guts_round"
+    "team_contest"
   ],
   "official_deliverable": "answer_sheet",
   "official_mime_types": [
@@ -81,3 +85,4 @@
   ]
 }
 ```
+

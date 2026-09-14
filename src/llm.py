@@ -672,6 +672,7 @@ def make_perplexity_caller(
     model: str = "openai/gpt-5.4-mini",
     api: str = "agent",
     max_output_tokens: int = 16000,
+    *, temperature: float | None = None,
 ) -> QueryFn:
     """Build a real LLM caller using PERPLEXITY_API_KEY. Raises if key missing."""
     api_key = os.environ.get("PERPLEXITY_API_KEY")
@@ -689,7 +690,8 @@ def make_perplexity_caller(
                 resp = requests.post(
                     "https://api.perplexity.ai/v1/agent",
                     headers=headers,
-                    json={"model": model, "input": full_input, "max_output_tokens": max_output_tokens},
+                    json={"model": model, "input": full_input, "max_output_tokens": max_output_tokens,
+                          **({"temperature": temperature} if temperature is not None else {})},
                     timeout=300,
                 )
                 if not resp.ok:

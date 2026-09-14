@@ -1,0 +1,128 @@
+{
+  "rubric_id": "arml_power_spring_2023_official_reference_v2",
+  "title": "ARML Power Spring 2023 - official-reference proof rubric",
+  "total_points": 40,
+  "criteria": [
+    {
+      "id": "problem_01",
+      "name": "Problem 1",
+      "max_score": 3,
+      "observable": true,
+      "description": "Use the official reference below, allowing equivalent valid proofs. Award at most 3 points. Printed subpart maxima in order: 1, 1, 1. Partial credit is a benchmark judgment, not an official detailed marking scheme. PDF layouts and diagrams remain authoritative.\n\nTASK AND LOCAL CONTEXT:\n1. Condense each of the following numbers:\n(a) 9876.\n[1 pt.]\n(b) 888 888 888 888 888 (there are ﬁfteen 8’s).\n[1 pt.]\n(c) The number 777. . . 777 consisting of 2023 7’s.\n[1 pt.]\n\nOFFICIAL REFERENCE:\n1. Since the order in which condensation proceeds is being assumed not to matter, each\nnumber will be condensed by adding all the digits together, repeating as many times\nas needed.\n(a) 9 + 8 + 7 + 6 = 30, and then 3 + 0 = 3 .\n(b) The ﬁfteen 8’s add to 120, and 1 + 2 + 0 = 3 .\n(c) The 2023 7’s add to 2023·7 = 14161. Then 1+4+1+6+1 = 13, and 1+3 = 4 ."
+    },
+    {
+      "id": "problem_02",
+      "name": "Problem 2",
+      "max_score": 4,
+      "observable": true,
+      "description": "Use the official reference below, allowing equivalent valid proofs. Award at most 4 points. Printed subpart maxima in order: 1, 1, 2. Partial credit is a benchmark judgment, not an official detailed marking scheme. PDF layouts and diagrams remain authoritative.\n\nTASK AND LOCAL CONTEXT:\n2. Condense each of the following base-15 numbers:\n1\n\n\n(a) 9876(15).\n[1 pt.]\n(b) 888 888 888 888 888(15) (there are ﬁfteen 8’s).\n[1 pt.]\n(c) The number 777 . . . 777(15) consisting of 2023 7’s.\n[2 pts.]\n\nOFFICIAL REFERENCE:\n2. Again, condensation will proceed by adding the digits of the number, repeating as\nnecessary.\n(a) 9 + 8 + 7 + 6 = 30 = 20(ﬁfteen) and then 2 + 0 = 2 .\n(b) The ﬁfteen 8’s add to 120, which is 80(ﬁfteen), and 8 + 0 = 8 .\n(c) The 2023 7’s add to 14161 = 42E1(ﬁfteen). Since E represents 14, these digits add\nto 21, or 16(ﬁfteen), and ﬁnally 1 + 6 = 7"
+    },
+    {
+      "id": "problem_03",
+      "name": "Problem 3",
+      "max_score": 3,
+      "observable": true,
+      "description": "Use the official reference below, allowing equivalent valid proofs. Award at most 3 points. Printed subpart maxima in order: 3. Partial credit is a benchmark judgment, not an official detailed marking scheme. PDF layouts and diagrams remain authoritative.\n\nTASK AND LOCAL CONTEXT:\n3. When working in base 10, show that if A is any positive integer, and B is obtained\nfrom A by one single step of the condensing process, then A −B is divisible by 9.\nFor example, for A = 138293156 and B = 1382 + 931 + 56 = 2369, their diﬀerence is\nA −B = 138290787 can be checked to be divisible by 9.\n[3 pts.]\nWhen working in a base b other than base 10, the corresponding result is that the\ndiﬀerence of A and any number obtained from A by one step of the condensation process is\ndivisible by b −1.\n\nOFFICIAL REFERENCE:\n3. Let A = dndn−1 . . . d2d1d0(ten). This can be expanded to A = dn10n + dn−110n−1 +\n· · · + d2102 + d1101 + d0. When the number is split into pieces, each piece is a base-10\nrepresentation of some number, so has the same coeﬃcients di with possibly diﬀerent\npowers of 10. For example, of one of the pieces is dk+3dk+2dk+1dk then instead of being\nattached to 10k+3, dk+3 will simply be attached to 103. So B is just A with some of the\nexponents on the power of 10 changed. But the diﬀerence A −B will then be a sum of\nterms like d(10a −10b). This can be factored as d10b(10a−b −1). The last factor in that\nis always divisible by 9 (10a−b −1 = (10 −1)(10a−b−1 + 10a−b−2 + · · · + 102 + 101 + 100\nby factoring), so the diﬀerence between A and B is a sum of numbers each of which is\ndivisible by 9, so their sum is also."
+    },
+    {
+      "id": "problem_04",
+      "name": "Problem 4",
+      "max_score": 2,
+      "observable": true,
+      "description": "Use the official reference below, allowing equivalent valid proofs. Award at most 2 points. Printed subpart maxima in order: 2. Partial credit is a benchmark judgment, not an official detailed marking scheme. PDF layouts and diagrams remain authoritative.\n\nTASK AND LOCAL CONTEXT:\n4. Prove that, no matter the steps chosen in the condensation process, the resulting single\ndigit will always be the same for any given starting number.\n[2 pts.]\n\nOFFICIAL REFERENCE:\n4. From the previous problem, any two ways of condensing a number will results in single\ndigits that diﬀer by a multiple of 9.\nThe only single digits that diﬀer by 9 are 0\nand 9, and 0 cannot be obtained by condensing, so the ﬁnal digits obtained from the\ncondensing process will be the same no matter what route is taken."
+    },
+    {
+      "id": "problem_05",
+      "name": "Problem 5",
+      "max_score": 2,
+      "observable": true,
+      "description": "Use the official reference below, allowing equivalent valid proofs. Award at most 2 points. Printed subpart maxima in order: 2. Partial credit is a benchmark judgment, not an official detailed marking scheme. PDF layouts and diagrams remain authoritative.\n\nTASK AND LOCAL CONTEXT:\n5. Show that, given any starting number, the smallest possible number that can be\nachieved by one step of the condensation process is the result of adding the digits\nof the number. That is, no way of splitting the number into parts and adding the parts\nresults in a smaller number than if each part is a single digit.\n[2 pts.]\nIn base 10, the numbers 1–9 are already condensed. The numbers 10–18 take only one\nstep to condense, but 19 requires two steps: 1 + 9 = 10; 1 + 0 = 1.\n\nOFFICIAL REFERENCE:\n5. Following the proof in problem 3, when a number is condensed the power of 10 that\neach digit is multiplied by is reduced. The maximum reduction possible is then the\npower is reduced to zero. That is, each digit is multiplied by 100 = 1, so must appear\nas a single digit being summed in the condensation process."
+    },
+    {
+      "id": "problem_06",
+      "name": "Problem 6",
+      "max_score": 2,
+      "observable": true,
+      "description": "Use the official reference below, allowing equivalent valid proofs. Award at most 2 points. Printed subpart maxima in order: 1, 1. Partial credit is a benchmark judgment, not an official detailed marking scheme. PDF layouts and diagrams remain authoritative.\n\nTASK AND LOCAL CONTEXT:\n6. When each condensing step consists of simply adding the digits, compute the least\npositive integer for which the condensation process requires:\n(a) three steps.\n[1 pt.]\n(b) four steps.\n[1 pt.]\nIn light of problem 5 it might seem that adding the digits at each condensation step\nrequires the fewest steps. But that is not the case! For example, to condense 982, one might\nadd the digits to obtain 9 + 8 + 2 = 19, and then 1 + 9 = 10, ﬁnishing with the third step\n1 + 0 = 1. But instead, one could start the process with 98 + 2 = 100 and then ﬁnish in a\ntotal of two steps with 1 + 0 + 0 = 1. Being free to choose how to split the number before\nadding the pieces can reduce the number of steps needed to completely condense a number.\n\nOFFICIAL REFERENCE:\n6.\n(a) If the digits of a number sum to something less than 19 then condensation will\ncomplete in one more step. So the sum of the digits must be at least 19. The\nsmallest number for which this occurs is 199 . Note that 199 can be condensed\n1\n\n\nin two steps via 199 →1 + 99 = 100 →1 + 0 + 0 = 1, but the question asked\nspeciﬁcally for the case of simply adding the digits without creating any multiple-\ndigit blocks.\n(b) This time the digits need to add to at least 199. The smallest number for which\nthis happens is 1999 · · · 999 in which there are exactly twenty-two 9’s. That is,\nthe number is 19 999 999 999 999 999 999 999 ."
+    },
+    {
+      "id": "problem_07",
+      "name": "Problem 7",
+      "max_score": 2,
+      "observable": true,
+      "description": "Use the official reference below, allowing equivalent valid proofs. Award at most 2 points. Printed subpart maxima in order: 2. Partial credit is a benchmark judgment, not an official detailed marking scheme. PDF layouts and diagrams remain authoritative.\n\nTASK AND LOCAL CONTEXT:\n7. Compute the least positive integer for which the condensation process requires at least\nthree steps, regardless of how the number is split into pieces at each step.\n[2 pts.]\nHow dramatic can the reduction in the number of steps actually be? Believe it or not,\nwith the correct choices in how to split the number at each step:\n• Every positive integer, written in base 4 or larger can be completely condensed in at\nmost four steps.\n2\n\n\n• Every positive integer, written in base 3 can be completely condensed in at most three\nsteps, and only 11 numbers require three steps; all others can be condensed in at most\ntwo steps.\n• Every positive integer, written in base 2 can be completely condensed in at most two\nsteps.\nThe remainder of this problem will be devoted to proving the statement about numbers\nexpressed in base 2.\n\nOFFICIAL REFERENCE:\n7. The digits of the required number should add to 19, though as seen above the number\n199 can actually be condensed in two steps.\nThe next candidate would be 289 .\nThis can be checked to work. If broken into pieces as 28 + 9 the result is 289 →\n28 + 9 = 37 →3 + 7 = 10 →1 + 0 = 0 taking three steps.\nThe other ways of\nbreaking 289 into pieces are 289 →2 + 89 = 91 →9 + 1 = 10 →1 + 0 = 1 or\n289 →2 + 8 + 9 = 19 →1 + 9 = 10 →1 + 0 = 1."
+    },
+    {
+      "id": "problem_08",
+      "name": "Problem 8",
+      "max_score": 2,
+      "observable": true,
+      "description": "Use the official reference below, allowing equivalent valid proofs. Award at most 2 points. Printed subpart maxima in order: 2. Partial credit is a benchmark judgment, not an official detailed marking scheme. PDF layouts and diagrams remain authoritative.\n\nTASK AND LOCAL CONTEXT:\n8. Note that in base 2, the only single-digit number is 1(2). Use this fact to explain why\na positive integer, written in base 2, can be condensed in one step if and only if it is a\npower of two.\n[2 pts.]\nThus, to fulﬁll the claim that every number, in base 2, can be condensed in at most\ntwo steps it must be shown that every number that is not already a power of two can be\ncondensed in one step to a power of two! To facilitate the argument, let the starting number\nbe denoted a, let m be the number of 1’s in its base-2 expansion, and let k be such that\n2k < m ≤2k+1. For example, for a = 45 = 101101(2), m = 4 and k = 1. Note that, since\nm is a power of two, this number can be condensed to a power of two simply by adding its\ndigits.\nWhen m = 1 the number is a power of two, and can be condensed in one step by adding\nits digits. When m = 2 or m = 4 adding the digits takes one step, and results in a power of\ntwo that can be condensed in a second step by adding the digits.\n\nOFFICIAL REFERENCE:\n8. In base 2 there is only one 1-digit number, namely 1. Thus the digits of the number\nto be condensed must add to 1, so there must be one digit of 1 and all the rest of the\ndigits are zeroes. So the number, in base 2, is 100 · · · 00(two) where there can be any\nnonnegative integer number of zero digits. Such a number represents 2n where n is the\nnumber of zero digits. Conversely, 2n, written in base 2, consists of 1 followed by n\nzeroes, so condensing by adding the digits gives a result of 1."
+    },
+    {
+      "id": "problem_09",
+      "name": "Problem 9",
+      "max_score": 3,
+      "observable": true,
+      "description": "Use the official reference below, allowing equivalent valid proofs. Award at most 3 points. Printed subpart maxima in order: 3. Partial credit is a benchmark judgment, not an official detailed marking scheme. PDF layouts and diagrams remain authoritative.\n\nTASK AND LOCAL CONTEXT:\n9. When m = 3 the number has exactly three 1’s, and may have any number of 0’s in\nits binary expansion. Construct a strategy for splitting any such number into pieces\nso that the sum of the pieces will result in a power of two. Make sure to demonstrate\nthat the strategy will work for any positive integer that has exactly m = 3 1’s in its\nbinary expansion.\n[3 pts.]\n\nOFFICIAL REFERENCE:\n9. If the number is 111(two) then condense as follows: 111(two) →1 + 11(two) = 100(two) →\n1 + 0 + 0 = 1. Otherwise the number has 0 for at least one of its digits. Take the ﬁrst\n0 that occurs after a 1 and group them into one piece, while leaving all other digits as\nsingle pieces. For example, 1100010(two) should be grouped as 1 + 10 + 0 + 0 + 1 + 0.\nIn this grouping, the single 0’s can be ignored, while the two singleton 1’s add to two\nand the remaining 10(two) represents 2, so the sum of the digits is 4, a power of two."
+    },
+    {
+      "id": "problem_10",
+      "name": "Problem 10",
+      "max_score": 3,
+      "observable": true,
+      "description": "Use the official reference below, allowing equivalent valid proofs. Award at most 3 points. Printed subpart maxima in order: 3. Partial credit is a benchmark judgment, not an official detailed marking scheme. PDF layouts and diagrams remain authoritative.\n\nTASK AND LOCAL CONTEXT:\n10. Create and prove a strategy that will take any number with m = 5 1’s in its binary\nexpansion and condense it to a power of two in one step.\n[3 pts.]\n\nOFFICIAL REFERENCE:\n10. Time for some casework. The following show how to obtain a power of two after one\ncondensation step for any base-2 number with exactly m = 5 1 digits:\nCase 1: 11111(two) →1111(two) + 1 = 10000(two).\nCase 2: 111110(two) →1111(two) + 1 + 0 = 10000(two).\nCase 3: All other numbers with a single 0 in them can be split, for example, as 1 +\n101(two) + 1 + 1 = 1000(two).\nCase 4: Any number with two consecutive 0 digits can be split as 100(two) plus four single\n1’s, totaling 8.\nCase 5: Any number with two or more zeroes, none of which are consecutive must have a\n101 group somewhere in it, so can be split as in case 3 above."
+    },
+    {
+      "id": "problem_11",
+      "name": "Problem 11",
+      "max_score": 2,
+      "observable": true,
+      "description": "Use the official reference below, allowing equivalent valid proofs. Award at most 2 points. Printed subpart maxima in order: 2. Partial credit is a benchmark judgment, not an official detailed marking scheme. PDF layouts and diagrams remain authoritative.\n\nTASK AND LOCAL CONTEXT:\n11. Create and prove a strategy that will work when m = 6 or m = 7.\n[2 pts.]\nOf course, when m = 8 simply adding the digits produces a power of two.\nFor larger m, observe the following. Given any number written in binary, if the individual\ndigits are simply added, the resulting number will be m. But what if we create some two- or\nthree-digit pieces? If, instead of · · · + 1 + 0 + · · · the digits are grouped · · · + 10 + · · · then\nthose two digits will contribute 2 instead of 1 to the sum of the pieces. If · · · + 1 + 1 + · · ·\nis regrouped as · · · + 11 + · · · then those two digits will contribute 3 instead of 2 to the\nsum. For example, for 38 = 100110(2), when the pieces are all one-digit long, the total is\n1 + 0 + 0 + 1 + 1 + 0 = 3. If the pieces are 10(2) + 0 + 1 + 1 + 0 the total increases to 4, as it\ndoes when the pieces are 1 + 0 + 0 + 11(2) + 0 or 1 + 0 + 0 + 1 + 10(2). A total of 5 could be\nreached by making more than one two-digit piece.\n3\n\nOFFICIAL REFERENCE:\n11. In the case of m = 7, simply group the two leading digits into one piece. This will add\none to the digital sum. For m = 6, group the leading two digits into one piece. There\nare at least three 1’s left, so group the left-most remaining 1 with the digit following it,\nand now the digital sum has been increased by two. For example, 11000110101(two) →\n11 + 0 + 0 + 0 + 11(two) + 0 + 1 + 0 + 1 = 8 = 1000(two).\n2"
+    },
+    {
+      "id": "problem_12",
+      "name": "Problem 12",
+      "max_score": 2,
+      "observable": true,
+      "description": "Use the official reference below, allowing equivalent valid proofs. Award at most 2 points. Printed subpart maxima in order: 2. Partial credit is a benchmark judgment, not an official detailed marking scheme. PDF layouts and diagrams remain authoritative.\n\nTASK AND LOCAL CONTEXT:\n12. As just seen, the sum of the pieces increases by one when two digits are grouped\ntogether. Determine the possible eﬀects on the sum when a three-digit piece is created.\n[2 pts.]\nNote that when 1 + 1 + 1 is replaced with the group 111(2) these three digits contribute\n7/3 times as much to the new sum as they did when standing as single digits. 1 + 1 + 0\nreplaced by 110(2) multiplies the contribution of these three digits by 3. 1 + 0 + 1 to 101(2)\nis a multiplier of 5/2, and 1 + 0 + 0 to 100(2) is a multiplier of 4.\n\nOFFICIAL REFERENCE:\n12. There are four cases:\n(a) +1 + 0 + 0+ is replaced with +100+, changing the contribution from 1 to 4.\n(b) +1 + 0 + 1+ is replaced with +101+, changing the contribution from 2 to 5.\n(c) +1 + 1 + 0+ is replaced with +110+, changing the contribution from 2 to 6.\n(d) +1 + 1 + 1+ is replaced with +111+, changing the contribution from 3 to 7.\nSo the sum increases by either 3 or 4."
+    },
+    {
+      "id": "problem_13",
+      "name": "Problem 13",
+      "max_score": 3,
+      "observable": true,
+      "description": "Use the official reference below, allowing equivalent valid proofs. Award at most 3 points. Printed subpart maxima in order: 3. Partial credit is a benchmark judgment, not an official detailed marking scheme. PDF layouts and diagrams remain authoritative.\n\nTASK AND LOCAL CONTEXT:\n13. Prove that, starting at the left end of the number and creating as many three-digit\npieces as possible, the sum of these pieces is at least 2m.\n[3 pts.]\nNote that m ≤2k+1 < 2m, so that somewhere in the process of creating three-digit pieces\nthe sum of the pieces must become greater than 2k+1. Stop creating three-digit pieces at\nthis point, and instead create two-digit pieces as long as the sum remains under 2k+1. For\nexample, consider 110 110 111 010 011(2) with m = 10. The strategy produces:\n1 + 1 + 0 + 1 + 1 + 0 + 1 + 1 + 1 + 0 + 1 + 0 + 0 + 1 + 1 = 10\n110(2) + 1 + 1 + 0 + 1 + 1 + 1 + 0 + 1 + 0 + 0 + 0 + 1 = 13\n110(2) + 110(2) + 1 + 1 + 1 + 0 + 1 + 0 + 0 + 0 + 1 = 17 (too big!)\n110(2) + 11(2) + 0 + 1 + 1 + 1 + 0 + 1 + 0 + 0 + 0 + 1 = 14\n110(2) + 11(2) + 0 + 11(2) + 1 + 0 + 1 + 0 + 0 + 0 + 1 = 15\n110(2) + 11(2) + 0 + 11(2) + 10(2) + 1 + 0 + 0 + 0 + 1 = 16\nWhen the tripling-up resulted in a sum larger than the next power of two, that step was\nundone and the digits were only grouped into two-digit pieces after that.\n\nOFFICIAL REFERENCE:\n13. Assume that the process of creating three-digit pieces collects every 1 into one of the\npieces.\nThen since each piece contributes at least 7/3 as much to the sum as the\nindividual digits did, the sum will be at least 7m/3 > 2m. If the three-digit pieces\nleave out a single 1, then the sum will be at least 7(m −1)/3 + 1 = 7m/3 −4/3. If two\n1’s are left out, the sum will be at least 7(m −2)/3 + 2 = 7m/3 −8/3. Using the fact\nthat m ≥8, note that 7m/3 = 2m + m/3 ≥2m + 8/3, so in all cases the new sum is\nat least 2m."
+    },
+    {
+      "id": "problem_14",
+      "name": "Problem 14",
+      "max_score": 4,
+      "observable": true,
+      "description": "Use the official reference below, allowing equivalent valid proofs. Award at most 4 points. Printed subpart maxima in order: 4. Partial credit is a benchmark judgment, not an official detailed marking scheme. PDF layouts and diagrams remain authoritative.\n\nTASK AND LOCAL CONTEXT:\n14. Prove that if m ≥10 then this strategy will always be able to produce a power of two.\n[4 pts.]\n\nOFFICIAL REFERENCE:\n14. Let q be the number of 1’s that have been collected into three-digit pieces. At the\nstart, q = 0 and the sum of the pieces is m. As more 1’s are collected into three-digit\npieces, the sum at any given point will be at least 7\n3q + (m −q). By the previous\nproblem, if enough 1’s are collected into three-digit pieces the sum will be at least 2m\nat some point. So at some point as the sum changes from m to 2m it must either equal\nor become larger than a power of 2. In fact, if m is not already a power of 2 (in which\ncase the process stops immediately!) then 2m ≥2k + 2. For m between 10 and 15,\n2m ≥2k + 4. Otherwise, m will be at least 17.\nIf 10 ≤m ≤15 then 1’s are collected into three-digit groups as long as 7\n3q + (m −q) <\n2m −4 or 4\n3q < m −4 and thus q < m −5. On the other hand, is m ≥17 then\n7\n3q + (m −q) < 2m −2 so 4\n3q < m −2 and once again q < m −5. So in either case, the\nprocess must stop creating three-digit groups while there are still at least six 1’s left.\nBut at this point, the current sum must be at least 2k −3 because creating a 3-digit\ngroup can only increase the sum by 3 or 4. Since there are at least six 1’s remaining,\nat least 3 2-digit groups can be formed, raising the sum by 3. That is, any deﬁcit in\ncreating a sum of 2k by forming 3-digit groups can be made up by forming as many\n2-digit groups as needed from the remaining 1’s. Thus any number with m ≥10 can\nbe condensed to a power of 2 in one step."
+    },
+    {
+      "id": "problem_15",
+      "name": "Problem 15",
+      "max_score": 3,
+      "observable": true,
+      "description": "Use the official reference below, allowing equivalent valid proofs. Award at most 3 points. Printed subpart maxima in order: 3. Partial credit is a benchmark judgment, not an official detailed marking scheme. PDF layouts and diagrams remain authoritative.\n\nTASK AND LOCAL CONTEXT:\n15. Create and prove a strategy that will create a power of two with one condensation step\nwhen m = 9.\n[3 pts.]\nTaken together, these problems show that, for any positive integer written in base 2, it\nis possible to choose a way to split the number into pieces so that the sum of these pieces\nis a power of two, and then a second condensation step consisting of just adding the digits\nwill result in a single digit, thus proving the claim.\n4\n\nOFFICIAL REFERENCE:\n15. The 3-digit strategy will work in the case of m = 9 as well. Care needs to be taken to\nmake sure of all the details.\nWhen the process begins, there are m = 9 1’s, and the current sum is 9.\n• If the ﬁrst 3-digit group created is 111 or 110, then the current sum is 13, and\nthere are six 1’s remaining, which can form at least 3 2-digit groups which will\nachieve a sum of 16.\n• if the ﬁrst 3-digit group created is 101 or 100, then the current sum is 12. Consider\nthe next 3-digit group created.\n3\n\n\n– If it is 111 or 110 then a sum of 16 has been achieved.\n– If it is 100 or 101 then a sum of 15 has been achieved, and there are still at\nleast 5 1’s so that a 2-digit group can be created to achieve a sum of 16.\n4"
+    }
+  ],
+  "not_observable_from_deck": [
+    "Physical/oral performance. PDF diagrams and table layout may not survive text extraction."
+  ],
+  "provenance": {
+    "competition_id": "arml_power",
+    "problem_id": "arml_power_spring_2023",
+    "source_file": "data/raw/arml/Spring_2023/ARMLPower_Spring_2023.pdf",
+    "solution_file": "data/raw/arml/Spring_2023/ARMLPower_Spring_2023_Solution_verified.pdf",
+    "solution_url": "https://www.arml.com/ARML/arml_2019/public_power_contest/contest_archive/Spring_2023/ARMLPower_Spring_2023_Solution.pdf",
+    "official_header_total": 40,
+    "printed_points_sum": 40,
+    "unweighted_problems": [],
+    "coverage_note": "All numbered problems and their printed weights are represented.",
+    "reference_visibility": "judge_only",
+    "reference_placement": "Full per-problem source and solution in criterion descriptions, avoiding the separate reference-field truncation."
+  }
+}

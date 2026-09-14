@@ -1,0 +1,101 @@
+***********Red*********************
+
+(Start) R: Knock knock anybody home?
+
+<yes|anybody there>
+R: How is your hunt going?
+
+<...tell you that? | Isn't there a puzzle...?>
+R: How many puzzles have you solved?
+
+<.... this one?>
+R: Have you solved Charlotte Amalie yet?
+
+<... name....>
+R: What is your name?
+
+<...matter...|...staring...>
+R: What's your sign?
+
+<...rude? | answers hidden>
+R: Do you know where you are?
+
+<Where in Hell are we?>
+R: Did you have geography when you were in elementary school?
+
+<... taking me somewhere?>
+R: Do you know what year it is?
+
+<... are you running for .... | this year>
+R: Who is the current president of the United States?
+
+< .... president....>
+R: Whose talking about presidents?
+
+<.... wives....| who's asking? | dialog puzzle?>
+R: How do you mean?
+
+<...unguarded? | ....up this late?>
+R: Do you think?
+
+<...what I'm thinking?>
+R: I think so, Brain, but don't you need a swimming pool to play Marco Polo?
+
+<...capitol of [country]?>
+R: Is [country] where Carmen Sandiego is?
+
+< Do you think....attractive?|Where in hell is Carmen ...>
+R: Do you know who I think is attractive?
+
+<Can you name all 12..?>
+R: Have you ever taken a purity test?
+
+<... a date?>
+R: Will you go out with me?
+
+<What exactly does "[x]" mean?>
+R: Don't you think it is romantic when two people share an ice cream soda?
+
+<..little cold..>
+R How can we be lovers if we can't be friends?
+
+<... frost bite...>
+R: Will you marry me?
+
+<... only just met?>
+R: When shall I meet thee again?
+
+<ready to play the question game?|Can we help you?>
+R: What was Jackie Kennedy's maiden name?
+
+<... Richie, Dolores, and June's....>
+R: Why are you ducking my questions?
+
+<...difference between a duck?>
+R: Whats the difference between a duck and a what?
+
+<... get it?>
+R: Get what?
+
+<...get the door...>
+R: (look out of door) What does Emma Thompson look like?
+
+<...look just like her mother?|.. taller, Emma Thompson..>
+R: Whats that movie called that stars Emma Thompson and her real life mother?
+
+<Would your [relative] have allowed that?>
+R: Would your [relative] have allowed you to appear naked at a public function?
+
+<....beach?>
+R: Have you ever dived in the water at a swimming meet and had your pockets 
+fill up with water and drag your shorts down?
+
+<...cue...>
+R: Do you think I am jsut going to show my answerts to you?
+
+
+
+
+
+
+

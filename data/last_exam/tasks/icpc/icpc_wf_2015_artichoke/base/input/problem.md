@@ -1,5 +1,3 @@
-# Amalgamated Artichokes
-
 Hide 
  Amalgamated Artichokes 
 

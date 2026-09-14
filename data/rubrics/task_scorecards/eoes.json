@@ -1,0 +1,1274 @@
+{
+  "schema_version": "1.1",
+  "dataset": "eoes",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "eoes_a1",
+      "year": 2021,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/eoes/eoes/2021/a1_solution.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "cb8c2b7de6dcc5e282e28e5ef97c4e7ac00909bb4be7ecc8f6adbfcb7f32be2e"
+        }
+      ],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2021,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_a2",
+      "year": 2021,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/eoes/eoes/2021/a2_solution.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "882278a7d0accc029e81f57a6f1673a1c5231315a6be6d82029296638e250a92"
+        }
+      ],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2021,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_t1",
+      "year": 2021,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2021,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_t2",
+      "year": 2021,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2021,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_EOES2023_Task1_Task_Sh_Final",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/eoes/eoes/2023/EOES2023_Task1_MarkSc.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "fbfb51fa06981e755fef2b48cb0c804c58d217025faeafdbb323c15290c06b1a"
+        }
+      ],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2023,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_EOES2023_Task2_TaskSheets_Final",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/eoes/eoes/2023/EOES2023_Task2_Marksch.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "4c2699c7e865eccda662ffd33547c05f4961f3e84b5ee1e303f192bd9808baec"
+        }
+      ],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2023,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_T2",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/eoes/eoes/2024/T2_MS.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "10fb916be11d43e28ffef0b557367e6f73e71e883110e0dd640fe6a5c3fe2db8"
+        }
+      ],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2024,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_TASK1",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/eoes/eoes/2024/Task1_MS.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "d5ef2539e06d995aa84db3b1985dc17dbb035d48d934b76f31172c5dbe485851"
+        }
+      ],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2024,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_EOES2025_Task1_TaskSheet-final",
+      "year": 2025,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_2025_task1_published_section_maxima_v1.json",
+          "sha256": "d4a7bfd2b8b90f4419e29d208688fe31756cc27553f98c52a2a8f95d7bcb1f82",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_2025_task1_published_section_maxima_v1",
+          "total_points": 120,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/eoes/eoes/2025/EOES2025_Task1_MarkingScheme.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "897d983bbbf6a6b79d4fab264d6cddfe7bb5bc416bbb67c9c296855e963bad4a"
+        },
+        {
+          "path": "data/rubrics/eoes_2025_task1_published_section_maxima_v1.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "d4a7bfd2b8b90f4419e29d208688fe31756cc27553f98c52a2a8f95d7bcb1f82"
+        }
+      ],
+      "limitations": [
+        "Section maxima only; detailed answer-dependent grading rules are still in the original marking PDF.",
+        "No simulated measurements, missing spreadsheet calculator, observer signatures or physical evidence are invented.",
+        "No cross-day or cross-discipline normalization is inferred."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Sum of the three section maxima printed in the 2025 marking scheme, not a normalized tournament score.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_EOES2025_Task2_TaskSheet_final",
+      "year": 2025,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_2025_task2_published_section_maxima_v1.json",
+          "sha256": "b3357c192e2ef298e8cb77c9e0515ce79a926d3000e5298582b9d82b8d0bd62b",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_2025_task2_published_section_maxima_v1",
+          "total_points": 125,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/eoes/eoes/2025/EOES2025_Task2_MarkingScheme_final.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "3b64e0089709c19072945aae485df7a5716d6ea749290157b9222228aaf6db26"
+        },
+        {
+          "path": "data/rubrics/eoes_2025_task2_published_section_maxima_v1.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "b3357c192e2ef298e8cb77c9e0515ce79a926d3000e5298582b9d82b8d0bd62b"
+        }
+      ],
+      "limitations": [
+        "Section maxima only; detailed answer-dependent grading rules are still in the original marking PDF.",
+        "No simulated measurements, missing spreadsheet calculator, observer signatures or physical evidence are invented.",
+        "No cross-day or cross-discipline normalization is inferred."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Sum of the three section maxima printed in the 2025 marking scheme, not a normalized tournament score.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_EUSO_I_2003_TaskA",
+      "year": 2003,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2003,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_EUSO_I_2003_TaskB",
+      "year": 2003,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2003,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_EUSO_I_2004_TaskA",
+      "year": 2004,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2004,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_EUSO_I_2004_TaskB",
+      "year": 2004,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2004,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_TEST1",
+      "year": 2006,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2006,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_TEST2 final version English",
+      "year": 2006,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2006,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_P1Tasks",
+      "year": 2011,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2011,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_P2Tasks",
+      "year": 2011,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2011,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_cepelinai_articleEUSO",
+      "year": 2012,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2012,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_worshippers-of_scientific_method",
+      "year": 2012,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2012,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_EUSO 2013 _ TEST 1_TASK",
+      "year": 2013,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2013,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_EUSO 2013 TEST 2 TASK 2",
+      "year": 2013,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2013,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_euso2014_Task_A",
+      "year": 2014,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2014,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_euso2014_Task_B",
+      "year": 2014,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2014,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_additionalfileschallenge1",
+      "year": 2015,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/eoes/euso/2015/additionalfileschallenge1.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "acb21b4406c039beeb56c7eaf0a486c79bedcab9ed75db6ee7c8ba934e0871ce"
+        }
+      ],
+      "limitations": [
+        "Supplementary pages of Challenge 1, not a separately scoreable experiment.",
+        "Initial source pages 3 and 4 only; pages 1 and 2 require Task A 3.1 hand-in.",
+        "Physical materials and phased release are not implemented."
+      ],
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2015,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_ExpBlowingintheWind",
+      "year": 2015,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_ExpBlowingintheWind_2015_printed_maxima_v1.json",
+          "sha256": "656796cfd6ac5b084284375491359ef72718de7ad791f6caba1d68df32e8e31a",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_ExpBlowingintheWind_2015_printed_maxima_v1",
+          "total_points": 306,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/rubrics/eoes_ExpBlowingintheWind_2015_printed_maxima_v1.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "656796cfd6ac5b084284375491359ef72718de7ad791f6caba1d68df32e8e31a"
+        },
+        {
+          "path": "data/raw/eoes/euso/2015/additionalfileschallenge1.pdf",
+          "role": "judge_only",
+          "mime_type": "application/pdf",
+          "sha256": "acb21b4406c039beeb56c7eaf0a486c79bedcab9ed75db6ee7c8ba934e0871ce"
+        }
+      ],
+      "limitations": [
+        "No task-specific numeric marking scheme or experimental measurements are inferred.",
+        "Challenge 1 variants have different printed maxima and must not be added as independent contest challenges.",
+        "Reviewed participant worksheets are available; physical experiments, lab-assistant feedback, exact edition equivalence and executable grading remain unverified."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Sum of the section maxima printed in this exact archived task-sheet variant; not a normalized tournament score.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_tasksheet1",
+      "year": 2015,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_tasksheet1_2015_printed_maxima_v1.json",
+          "sha256": "7aed765bac2f7c7373e78b9b32b0fb281e29986adbea6563f0f29ad1f972424d",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_tasksheet1_2015_printed_maxima_v1",
+          "total_points": 304,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/rubrics/eoes_tasksheet1_2015_printed_maxima_v1.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "7aed765bac2f7c7373e78b9b32b0fb281e29986adbea6563f0f29ad1f972424d"
+        },
+        {
+          "path": "data/raw/eoes/euso/2015/additionalfileschallenge1.pdf",
+          "role": "judge_only",
+          "mime_type": "application/pdf",
+          "sha256": "acb21b4406c039beeb56c7eaf0a486c79bedcab9ed75db6ee7c8ba934e0871ce"
+        }
+      ],
+      "limitations": [
+        "No task-specific numeric marking scheme or experimental measurements are inferred.",
+        "Challenge 1 variants have different printed maxima and must not be added as independent contest challenges.",
+        "Reviewed participant worksheets are available; physical experiments, lab-assistant feedback, exact edition equivalence and executable grading remain unverified."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Sum of the section maxima printed in this exact archived task-sheet variant; not a normalized tournament score.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_tasksheet2",
+      "year": 2015,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_tasksheet2_2015_printed_maxima_v1.json",
+          "sha256": "f2a675fe9edaaf938918c97db9e3fdb2d24aec0bf780d205368df96cb8a268e2",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_tasksheet2_2015_printed_maxima_v1",
+          "total_points": 306,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/rubrics/eoes_tasksheet2_2015_printed_maxima_v1.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "f2a675fe9edaaf938918c97db9e3fdb2d24aec0bf780d205368df96cb8a268e2"
+        }
+      ],
+      "limitations": [
+        "No task-specific numeric marking scheme or experimental measurements are inferred.",
+        "Challenge 1 variants have different printed maxima and must not be added as independent contest challenges.",
+        "Reviewed participant worksheets are available; physical experiments, lab-assistant feedback, exact edition equivalence and executable grading remain unverified."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Sum of the section maxima printed in this exact archived task-sheet variant; not a normalized tournament score.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_Task_1_ICE",
+      "year": 2017,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2017,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "eoes_Task_2_OCEAN",
+      "year": 2017,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+          "sha256": "34ff9f3246b0b2945f78839ce7b2071ad5e2ede2f02e290f78102f3249bbf6fc",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "eoes_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+      "rubric_reuse": {
+        "source_competition": "eoes",
+        "target_competition": "eoes",
+        "target_year": 2017,
+        "source_rubric_paths": [
+          "data/rubrics/eoes_official_scoring_protocol_v1.json"
+        ],
+        "source_editions": [
+          2022,
+          2023
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

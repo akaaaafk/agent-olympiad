@@ -1,0 +1,48 @@
+{
+  "operation": "cfa_season_source_repair",
+  "timestamp_utc": "20260913T035233Z",
+  "status": "completed_readiness_deferred",
+  "backup": "data/excluded/integrity_repair_20260913T035233Z",
+  "program_execution_performed": false,
+  "post_write_validation_performed": false,
+  "records_retained": 19,
+  "season_matched_records": 2,
+  "official_rule_pdfs": 2,
+  "host_timeline_pdfs": 1,
+  "new_numeric_rubrics": 6,
+  "readiness_promotions": 0,
+  "champion_assets_remain_judge_only": true,
+  "original_only_policy": true,
+  "new_files": [
+    "data/raw/cfa_research_challenge/rules/research_challenge_rules_2024_2025.pdf",
+    "data/raw/cfa_research_challenge/rules/research_challenge_rules_2025_2026.pdf",
+    "data/raw/cfa_research_challenge/rules/toronto_2025_2026_timeline.pdf",
+    "data/rubrics/cfa_research_challenge_written_report_2024_2025_v1.json",
+    "data/rubrics/cfa_research_challenge_presentation_2024_2025_v1.json",
+    "data/rubrics/cfa_research_challenge_subregional_presentation_2024_2025_v1.json",
+    "data/rubrics/cfa_research_challenge_written_report_2025_2026_v1.json",
+    "data/rubrics/cfa_research_challenge_presentation_2025_2026_v1.json",
+    "data/rubrics/cfa_research_challenge_subregional_presentation_2025_2026_v1.json",
+    "data/raw/cfa_research_challenge/rules/source_manifest_20260913.json",
+    "data/benchmarks/cfa_source_repair_20260913.json"
+  ],
+  "modified_canonical_files": [
+    "data/benchmarks/cfa_research_challenge/benchmark.json",
+    "data/rules/cfa_research_challenge/evaluation.json",
+    "data/rubrics/task_scorecards/cfa_research_challenge.json",
+    "data/benchmarks/index.json"
+  ],
+  "cfa_packages": {
+    "n_tasks": 19,
+    "n_competitions": 1,
+    "staged_assets": 3
+  },
+  "total_records": 1741,
+  "cfa_not_ready": 19,
+  "active_record_count_change": 0,
+  "unresolved": [
+    "Original company research inputs and historical information boundary remain incomplete.",
+    "Evaluation stage and authentic oral/Q&A evidence remain unresolved.",
+    "Season-specific rules before the two repaired seasons remain unverified."
+  ]
+}

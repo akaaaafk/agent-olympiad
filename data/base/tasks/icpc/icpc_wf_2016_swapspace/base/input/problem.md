@@ -1,5 +1,3 @@
-# Swap Space
-
 Hide 
  Swap Space 
 

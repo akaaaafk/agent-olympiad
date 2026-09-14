@@ -3,8 +3,37 @@
   "gold_pointer": "data/benchmarks/odyssey_of_the_mind/benchmark.json#odyssey_of_the_mind_1993_synopses.gold_label",
   "has_gold_answer": false,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/odyssey_of_the_mind_official_scoring_protocol_v1.json",
+    "deliverable": "long_term_performance_or_spontaneous_response",
+    "limitations": "Public synopses/examples omit the complete problem-specific packet, event-day prompt, cohort normalization, or live performance needed for official scoring.",
+    "pre_reuse_evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/odyssey_of_the_mind_official_scoring_protocol_v1.json",
+      "deliverable": "long_term_performance_or_spontaneous_response",
+      "limitations": "Public synopses/examples omit the complete problem-specific packet, event-day prompt, cohort normalization, or live performance needed for official scoring."
+    },
+    "rubric_reuse": {
+      "source_competition": "odyssey_of_the_mind",
+      "target_competition": "odyssey_of_the_mind",
+      "target_year": 1993,
+      "source_rubric_paths": [
+        "data/rubrics/odyssey_of_the_mind_official_scoring_protocol_v1.json"
+      ],
+      "source_editions": [
+        "existing same-competition rubric; edition unspecified"
+      ],
+      "official_year_equivalence": false,
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+    },
+    "scorecard_path": "data/rubrics/task_scorecards/odyssey_of_the_mind.json",
+    "scorecard_key": "odyssey_of_the_mind_1993_synopses"
+  },
+  "rubric_path": "data/rubrics/odyssey_of_the_mind_official_scoring_protocol_v1.json",
+  "deliverable": "long_term_performance_or_spontaneous_response"
 }

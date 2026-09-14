@@ -1,5 +1,3 @@
-# Game Strategy
-
 Hide 
  Game Strategy 
 

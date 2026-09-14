@@ -1,3 +1,5 @@
-# 2003/www.acme-corp.com/teamGuest/5/5_2.html
+# Antiphony
 
-Antiphony (Solution) Document 5.2: Antiphony These seem to be some Gregorian chants and some crosses. Perhaps your boss meant to take them down to the church before dinner and didn't make it there in time. He should have mapped out his route beforehand. This puzzle in PDF or in PS . Back to the index
+Open `puzzle.html` and its linked PDF files. Their original page geometry, notation and images are preserved; no flattened preview replaces them.
+
+Archive limitation: The original PDFs are the complete static puzzle materials. PostScript alternatives, where present, are archived as inert source files and were not executed. Historical rules and visual/spatial grading remain uncertified.

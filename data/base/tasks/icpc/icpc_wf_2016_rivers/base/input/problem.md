@@ -1,5 +1,3 @@
-# Longest Rivers
-
 Hide 
  Longest Rivers 
 

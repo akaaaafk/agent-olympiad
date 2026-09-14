@@ -1,5 +1,3 @@
-# RoboMission Elementary 2025
-
 RoboMission 
 Elementary Game Rules 
 Season 2025 

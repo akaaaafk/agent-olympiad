@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Lance Nathan">
+   <META NAME="GENERATOR" CONTENT="me typing damnit">
+   <TITLE>Less Engineering, Dammit!</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<h2>M Puzzle: Less Engineering, Dammit!</h2>
+<h3>by Gregg Favalora</h3>
+
+<p>
+
+The schematics describe a system that makes horizontal and vertical line segments coast from left to right, wrapping around a 16-character display. The data come from three components called "shift registers," which control individual lights (LEDs) within each character. A description is included as an imaginary data sheet.
+
+<p>
+
+The visual flow for each "pixel" in time:
+
+<p>
+
+<center><img src="LED-1.jpg"></center>
+
+<p>
+
+U1 controls the top 3 LEDs for each character; U2 does LEDs 10 and 4 for each character, and U3 handles LEDs 1 and 2. This will be obvious to an electrical engineer.
+
+<p>
+
+It is assumed the solver will make a simulation in C and watch the output in a monospace XTerm window. If patient, the answer will appear at the 96th time step for R1=1k and R2, R3=2k.  (To prevent the answer from being obvious, I shifted the final state data for Shift reg2 and Shift reg3 by 16 bits.)
+
+<p>
+
+<table border="1">
+<tr><td colspan="17"><strong>INITIAL STATE</strong></tr>
+<tr><td>Shift reg1:<td>111<td>100<td>101<td>110<td>001<td>110<td>001<td>110<td>100<td>000<td>101<td>110<td>000<td>000<td>110<td>000</tr>
+<tr><td>Shift reg2:<td>10<td>00<td>00<td>10<td>10<td>11<td>10<td>10<td>10<td>11<td>11<td>11<td>01<td>00<td>01<td>11</tr>
+<tr><td>Shift reg3:<td>11<td>00<td>01<td>11<td>10<td>10<td>11<td>10<td>10<td>10<td>01<td>01<td>00<td>11<td>00<td>01</tr>
+<tr><td colspan="17"><strong>FINAL STATE (Timestep 96 for R1=1k, R2=2k, R3=2k)</strong></tr>
+<tr><td>Shift reg1:<td>111<td>100<td>101<td>110<td>001<td>110<td>001<td>110<td>100<td>000<td>101<td>110<td>000<td>000<td>110<td>000</tr>
+<tr><td>Shift reg2:<td>10<td>11<td>11<td>11<td>01<td>00<td>01<td>11<td>10<td>00<td>00<td>10<td>10<td>11<td>10<td>10</tr>
+<tr><td>Shift reg3:<td>10<td>10<td>01<td>01<td>00<td>11<td>00<td>01<td>11<td>00<td>01<td>11<td>10<td>10<td>11<td>10</tr>
+</table>
+
+<p>
+
+In the final state, the following appears:
+
+<p>
+
+<center><img src="LED-answer.jpg"></center>
+
+<p>
+
+In other words--in <a href="http://www.twyman.org.uk/Fonts/">Harvey Twyman's LCD font</a>--"Physicist Werner."  The answer is HEISENBERG.
+
+<p>
+
+Training:
+
+<p>
+
+The clear reference to "knitting" in the last line of the flavortext gives the training puzzle, Knitting.  In spite of the suggestions that the untrained/trained answer is AUTHORITARIANISM/"Fearful Symmetry" (or LIBRARIAN/Travelers, say), the trained answer is actually MIND'S EYE.
+
+</BODY>
+</HTML>
+

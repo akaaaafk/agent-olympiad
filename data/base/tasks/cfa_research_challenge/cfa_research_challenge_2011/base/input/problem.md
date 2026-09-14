@@ -1,3 +1,10 @@
-# Piaggio & C. S.p.A. (PIA.MI)
+# CFA Institute Research Challenge 2011
 
-Write an approximately 10-page equity research report on Piaggio & C. S.p.A. (BIT: PIA) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.
+Reference subject company: Piaggio & C. S.p.A. (PIA.MI).
+
+This is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.
+
+The existing rubric is an explicitly cross-season reference; historical season equivalence has not been verified.
+
+Do not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.
+

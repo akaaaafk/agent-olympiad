@@ -1,5 +1,3 @@
-# Asteroids
-
 Hide 
  Asteroids 
 

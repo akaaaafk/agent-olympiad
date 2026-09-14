@@ -1,5 +1,3 @@
-# Team Competition 2014
-
 TEAM COMPETITION 
  
  

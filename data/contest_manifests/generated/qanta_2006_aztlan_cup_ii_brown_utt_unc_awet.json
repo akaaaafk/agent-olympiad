@@ -1,0 +1,11 @@
+{
+  "session_id": "qanta_2006_aztlan_cup_ii_brown_utt_unc_awet",
+  "competition_id": "qanta",
+  "problem_ids": [
+    "qanta_train_63832"
+  ],
+  "description": "OTC contest-session manifest for qanta_2006_aztlan_cup_ii_brown_utt_unc_awet (1 tasks)",
+  "split_parts": false,
+  "task_family": "short_answer",
+  "competition_description": "Academic quiz-bowl questions: identify the requested person, place, work, event, or concept from progressively specific clues."
+}

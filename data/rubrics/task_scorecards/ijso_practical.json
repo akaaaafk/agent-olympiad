@@ -1,0 +1,1257 @@
+{
+  "schema_version": "1.1",
+  "dataset": "ijso_practical",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "ijso_practical_2009_team_practical_2009",
+      "year": 2009,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ijso_practical_report_40_v1.json",
+          "sha256": "76eec7ef02da24944f2429adb448832cacf4fa5f8090c3e14e48bfe669c99bae",
+          "format": "numeric_rubric",
+          "rubric_id": "ijso_practical_report_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "procedure",
+              "name": "Procedure understanding",
+              "max_score": 10,
+              "observable": true,
+              "description": "Describes a coherent experimental procedure and controls."
+            },
+            {
+              "id": "analysis",
+              "name": "Data analysis & reasoning",
+              "max_score": 15,
+              "observable": true,
+              "description": "Analyses, calculations, and scientific reasoning in the report."
+            },
+            {
+              "id": "conclusions",
+              "name": "Conclusions & uncertainty",
+              "max_score": 10,
+              "observable": true,
+              "description": "Conclusions follow from stated data; uncertainties discussed."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 5,
+              "observable": true,
+              "description": "Clear tables/figures/text presentation in the written report."
+            }
+          ],
+          "not_observable_from_deck": [
+            "physical instrument operation",
+            "lab safety behavior",
+            "true measured raw data fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ijso/2009/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "c7e2c4eb94a697f608fd8a2655233db13af6af1702908164603501a43fb14c8c"
+        }
+      ],
+      "limitations": "Archived marking material anchors a report-only adaptation; physical observations and instrument work are unavailable.",
+      "rubric_reuse": {
+        "source_competition": "ijso_practical",
+        "target_competition": "ijso_practical",
+        "target_year": 2009,
+        "source_rubric_paths": [
+          "data/rubrics/ijso_practical_report_40_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ijso_practical_2010_team_practical_2010",
+      "year": 2010,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ijso_practical_report_40_v1.json",
+          "sha256": "76eec7ef02da24944f2429adb448832cacf4fa5f8090c3e14e48bfe669c99bae",
+          "format": "numeric_rubric",
+          "rubric_id": "ijso_practical_report_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "procedure",
+              "name": "Procedure understanding",
+              "max_score": 10,
+              "observable": true,
+              "description": "Describes a coherent experimental procedure and controls."
+            },
+            {
+              "id": "analysis",
+              "name": "Data analysis & reasoning",
+              "max_score": 15,
+              "observable": true,
+              "description": "Analyses, calculations, and scientific reasoning in the report."
+            },
+            {
+              "id": "conclusions",
+              "name": "Conclusions & uncertainty",
+              "max_score": 10,
+              "observable": true,
+              "description": "Conclusions follow from stated data; uncertainties discussed."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 5,
+              "observable": true,
+              "description": "Clear tables/figures/text presentation in the written report."
+            }
+          ],
+          "not_observable_from_deck": [
+            "physical instrument operation",
+            "lab safety behavior",
+            "true measured raw data fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ijso/2010/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "9e09c00a0298c13b4c692effaec1d103923f63b11d55fa0871329428541dfc17"
+        }
+      ],
+      "limitations": "Archived marking material anchors a report-only adaptation; physical observations and instrument work are unavailable.",
+      "rubric_reuse": {
+        "source_competition": "ijso_practical",
+        "target_competition": "ijso_practical",
+        "target_year": 2010,
+        "source_rubric_paths": [
+          "data/rubrics/ijso_practical_report_40_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ijso_practical_2013_team_practical_2013",
+      "year": 2013,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ijso_practical_report_40_v1.json",
+          "sha256": "76eec7ef02da24944f2429adb448832cacf4fa5f8090c3e14e48bfe669c99bae",
+          "format": "numeric_rubric",
+          "rubric_id": "ijso_practical_report_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "procedure",
+              "name": "Procedure understanding",
+              "max_score": 10,
+              "observable": true,
+              "description": "Describes a coherent experimental procedure and controls."
+            },
+            {
+              "id": "analysis",
+              "name": "Data analysis & reasoning",
+              "max_score": 15,
+              "observable": true,
+              "description": "Analyses, calculations, and scientific reasoning in the report."
+            },
+            {
+              "id": "conclusions",
+              "name": "Conclusions & uncertainty",
+              "max_score": 10,
+              "observable": true,
+              "description": "Conclusions follow from stated data; uncertainties discussed."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 5,
+              "observable": true,
+              "description": "Clear tables/figures/text presentation in the written report."
+            }
+          ],
+          "not_observable_from_deck": [
+            "physical instrument operation",
+            "lab safety behavior",
+            "true measured raw data fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ijso/2013/taskA-sol.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "094be49b990404a1ec6bb9b214670d6bb019ae6628cb8f68ad4c829a0177bfc2"
+        },
+        {
+          "path": "data/raw/ijso/2013/taskB-sol.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "91bc54d4f3ab815be324da70a57f30582b904f87bac4c5a6f9dd56760c1c6a87"
+        },
+        {
+          "path": "data/raw/ijso/2013/taskC-sol.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "69ecca2e2cb7b73dea9d0e88478e550f9c2cd0457f4fb851a80a41aad4e5e536"
+        }
+      ],
+      "limitations": "Archived marking material anchors a report-only adaptation; physical observations and instrument work are unavailable.",
+      "rubric_reuse": {
+        "source_competition": "ijso_practical",
+        "target_competition": "ijso_practical",
+        "target_year": 2013,
+        "source_rubric_paths": [
+          "data/rubrics/ijso_practical_report_40_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ijso_practical_2014_team_practical_2014",
+      "year": 2014,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ijso_practical_report_40_v1.json",
+          "sha256": "76eec7ef02da24944f2429adb448832cacf4fa5f8090c3e14e48bfe669c99bae",
+          "format": "numeric_rubric",
+          "rubric_id": "ijso_practical_report_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "procedure",
+              "name": "Procedure understanding",
+              "max_score": 10,
+              "observable": true,
+              "description": "Describes a coherent experimental procedure and controls."
+            },
+            {
+              "id": "analysis",
+              "name": "Data analysis & reasoning",
+              "max_score": 15,
+              "observable": true,
+              "description": "Analyses, calculations, and scientific reasoning in the report."
+            },
+            {
+              "id": "conclusions",
+              "name": "Conclusions & uncertainty",
+              "max_score": 10,
+              "observable": true,
+              "description": "Conclusions follow from stated data; uncertainties discussed."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 5,
+              "observable": true,
+              "description": "Clear tables/figures/text presentation in the written report."
+            }
+          ],
+          "not_observable_from_deck": [
+            "physical instrument operation",
+            "lab safety behavior",
+            "true measured raw data fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ijso/2014/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "ff933d53b3cf42a6ffec110f4d1d73f62f1bb7f63e253b0b9512cdde6f58e159"
+        }
+      ],
+      "limitations": "Archived marking material anchors a report-only adaptation; physical observations and instrument work are unavailable.",
+      "rubric_reuse": {
+        "source_competition": "ijso_practical",
+        "target_competition": "ijso_practical",
+        "target_year": 2014,
+        "source_rubric_paths": [
+          "data/rubrics/ijso_practical_report_40_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ijso_practical_2016_team_practical_2016",
+      "year": 2016,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ijso_practical_report_40_v1.json",
+          "sha256": "76eec7ef02da24944f2429adb448832cacf4fa5f8090c3e14e48bfe669c99bae",
+          "format": "numeric_rubric",
+          "rubric_id": "ijso_practical_report_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "procedure",
+              "name": "Procedure understanding",
+              "max_score": 10,
+              "observable": true,
+              "description": "Describes a coherent experimental procedure and controls."
+            },
+            {
+              "id": "analysis",
+              "name": "Data analysis & reasoning",
+              "max_score": 15,
+              "observable": true,
+              "description": "Analyses, calculations, and scientific reasoning in the report."
+            },
+            {
+              "id": "conclusions",
+              "name": "Conclusions & uncertainty",
+              "max_score": 10,
+              "observable": true,
+              "description": "Conclusions follow from stated data; uncertainties discussed."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 5,
+              "observable": true,
+              "description": "Clear tables/figures/text presentation in the written report."
+            }
+          ],
+          "not_observable_from_deck": [
+            "physical instrument operation",
+            "lab safety behavior",
+            "true measured raw data fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ijso/2016/bio-grade.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "8bd6c5164d602ba4928006f5885df0b34cfab9e769189f5ed7a39bc7ff104747"
+        },
+        {
+          "path": "data/raw/ijso/2016/chem-grade.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "72ab9dda1c937941b6942127a53746fbc641bc4f2ad2c936d2775bdc07384768"
+        },
+        {
+          "path": "data/raw/ijso/2016/phy-grade.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1c9b78d355e5be787333cf15784b0e02fdca46f8f2bb0d7551570a0b1e48f056"
+        }
+      ],
+      "limitations": "Archived marking material anchors a report-only adaptation; physical observations and instrument work are unavailable.",
+      "rubric_reuse": {
+        "source_competition": "ijso_practical",
+        "target_competition": "ijso_practical",
+        "target_year": 2016,
+        "source_rubric_paths": [
+          "data/rubrics/ijso_practical_report_40_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ijso_practical_2017_team_practical_2017",
+      "year": 2017,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ijso_practical_report_40_v1.json",
+          "sha256": "76eec7ef02da24944f2429adb448832cacf4fa5f8090c3e14e48bfe669c99bae",
+          "format": "numeric_rubric",
+          "rubric_id": "ijso_practical_report_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "procedure",
+              "name": "Procedure understanding",
+              "max_score": 10,
+              "observable": true,
+              "description": "Describes a coherent experimental procedure and controls."
+            },
+            {
+              "id": "analysis",
+              "name": "Data analysis & reasoning",
+              "max_score": 15,
+              "observable": true,
+              "description": "Analyses, calculations, and scientific reasoning in the report."
+            },
+            {
+              "id": "conclusions",
+              "name": "Conclusions & uncertainty",
+              "max_score": 10,
+              "observable": true,
+              "description": "Conclusions follow from stated data; uncertainties discussed."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 5,
+              "observable": true,
+              "description": "Clear tables/figures/text presentation in the written report."
+            }
+          ],
+          "not_observable_from_deck": [
+            "physical instrument operation",
+            "lab safety behavior",
+            "true measured raw data fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ijso/2017/marking.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "021569d7f53b0ec74726d7f4d69c398dceafe5539df3618b4e0b9488fe0f2de2"
+        }
+      ],
+      "limitations": "Archived marking material anchors a report-only adaptation; physical observations and instrument work are unavailable.",
+      "rubric_reuse": {
+        "source_competition": "ijso_practical",
+        "target_competition": "ijso_practical",
+        "target_year": 2017,
+        "source_rubric_paths": [
+          "data/rubrics/ijso_practical_report_40_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ijso_practical_2018_team_practical_2018",
+      "year": 2018,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ijso_practical_report_40_v1.json",
+          "sha256": "76eec7ef02da24944f2429adb448832cacf4fa5f8090c3e14e48bfe669c99bae",
+          "format": "numeric_rubric",
+          "rubric_id": "ijso_practical_report_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "procedure",
+              "name": "Procedure understanding",
+              "max_score": 10,
+              "observable": true,
+              "description": "Describes a coherent experimental procedure and controls."
+            },
+            {
+              "id": "analysis",
+              "name": "Data analysis & reasoning",
+              "max_score": 15,
+              "observable": true,
+              "description": "Analyses, calculations, and scientific reasoning in the report."
+            },
+            {
+              "id": "conclusions",
+              "name": "Conclusions & uncertainty",
+              "max_score": 10,
+              "observable": true,
+              "description": "Conclusions follow from stated data; uncertainties discussed."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 5,
+              "observable": true,
+              "description": "Clear tables/figures/text presentation in the written report."
+            }
+          ],
+          "not_observable_from_deck": [
+            "physical instrument operation",
+            "lab safety behavior",
+            "true measured raw data fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ijso/2018/marking.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "bcca4352f79b2f89f9e6b461bec7dbb4318804b378b5027ed74f948736ed5bd1"
+        }
+      ],
+      "limitations": "Archived marking material anchors a report-only adaptation; physical observations and instrument work are unavailable.",
+      "rubric_reuse": {
+        "source_competition": "ijso_practical",
+        "target_competition": "ijso_practical",
+        "target_year": 2018,
+        "source_rubric_paths": [
+          "data/rubrics/ijso_practical_report_40_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ijso_practical_2019_team_practical_2019",
+      "year": 2019,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ijso_practical_report_40_v1.json",
+          "sha256": "76eec7ef02da24944f2429adb448832cacf4fa5f8090c3e14e48bfe669c99bae",
+          "format": "numeric_rubric",
+          "rubric_id": "ijso_practical_report_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "procedure",
+              "name": "Procedure understanding",
+              "max_score": 10,
+              "observable": true,
+              "description": "Describes a coherent experimental procedure and controls."
+            },
+            {
+              "id": "analysis",
+              "name": "Data analysis & reasoning",
+              "max_score": 15,
+              "observable": true,
+              "description": "Analyses, calculations, and scientific reasoning in the report."
+            },
+            {
+              "id": "conclusions",
+              "name": "Conclusions & uncertainty",
+              "max_score": 10,
+              "observable": true,
+              "description": "Conclusions follow from stated data; uncertainties discussed."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 5,
+              "observable": true,
+              "description": "Clear tables/figures/text presentation in the written report."
+            }
+          ],
+          "not_observable_from_deck": [
+            "physical instrument operation",
+            "lab safety behavior",
+            "true measured raw data fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ijso/2019/answers.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "82b084ed322aa2a67b720c409cecec18276fdccb6451eb7514a3d81453f571a5"
+        },
+        {
+          "path": "data/raw/ijso/2019/marking.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "bc6a3b8f64b9697a0d705462090101c363806f0bb6de49ab7dae31f123fc6d25"
+        }
+      ],
+      "limitations": "Archived marking material anchors a report-only adaptation; physical observations and instrument work are unavailable.",
+      "rubric_reuse": {
+        "source_competition": "ijso_practical",
+        "target_competition": "ijso_practical",
+        "target_year": 2019,
+        "source_rubric_paths": [
+          "data/rubrics/ijso_practical_report_40_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ijso_practical_2021_team_practical_2021",
+      "year": 2021,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ijso_practical_report_40_v1.json",
+          "sha256": "76eec7ef02da24944f2429adb448832cacf4fa5f8090c3e14e48bfe669c99bae",
+          "format": "numeric_rubric",
+          "rubric_id": "ijso_practical_report_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "procedure",
+              "name": "Procedure understanding",
+              "max_score": 10,
+              "observable": true,
+              "description": "Describes a coherent experimental procedure and controls."
+            },
+            {
+              "id": "analysis",
+              "name": "Data analysis & reasoning",
+              "max_score": 15,
+              "observable": true,
+              "description": "Analyses, calculations, and scientific reasoning in the report."
+            },
+            {
+              "id": "conclusions",
+              "name": "Conclusions & uncertainty",
+              "max_score": 10,
+              "observable": true,
+              "description": "Conclusions follow from stated data; uncertainties discussed."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 5,
+              "observable": true,
+              "description": "Clear tables/figures/text presentation in the written report."
+            }
+          ],
+          "not_observable_from_deck": [
+            "physical instrument operation",
+            "lab safety behavior",
+            "true measured raw data fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ijso/2021/solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1255bd8bf074dede16b678e739a896c6421917c5ae903b027b57c44e91cc5bd7"
+        }
+      ],
+      "limitations": "Archived marking material anchors a report-only adaptation; physical observations and instrument work are unavailable.",
+      "rubric_reuse": {
+        "source_competition": "ijso_practical",
+        "target_competition": "ijso_practical",
+        "target_year": 2021,
+        "source_rubric_paths": [
+          "data/rubrics/ijso_practical_report_40_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ijso_practical_2022_team_practical_2022",
+      "year": 2022,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ijso_practical_report_40_v1.json",
+          "sha256": "76eec7ef02da24944f2429adb448832cacf4fa5f8090c3e14e48bfe669c99bae",
+          "format": "numeric_rubric",
+          "rubric_id": "ijso_practical_report_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "procedure",
+              "name": "Procedure understanding",
+              "max_score": 10,
+              "observable": true,
+              "description": "Describes a coherent experimental procedure and controls."
+            },
+            {
+              "id": "analysis",
+              "name": "Data analysis & reasoning",
+              "max_score": 15,
+              "observable": true,
+              "description": "Analyses, calculations, and scientific reasoning in the report."
+            },
+            {
+              "id": "conclusions",
+              "name": "Conclusions & uncertainty",
+              "max_score": 10,
+              "observable": true,
+              "description": "Conclusions follow from stated data; uncertainties discussed."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 5,
+              "observable": true,
+              "description": "Clear tables/figures/text presentation in the written report."
+            }
+          ],
+          "not_observable_from_deck": [
+            "physical instrument operation",
+            "lab safety behavior",
+            "true measured raw data fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ijso/2022/marking.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "dadc84204a35236c9f93e1bc071f893dbc816a2cffdae23d7df4a4e981ac786f"
+        }
+      ],
+      "limitations": "Archived marking material anchors a report-only adaptation; physical observations and instrument work are unavailable.",
+      "rubric_reuse": {
+        "source_competition": "ijso_practical",
+        "target_competition": "ijso_practical",
+        "target_year": 2022,
+        "source_rubric_paths": [
+          "data/rubrics/ijso_practical_report_40_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ijso_practical_2023_team_practical_2023",
+      "year": 2023,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ijso_practical_report_40_v1.json",
+          "sha256": "76eec7ef02da24944f2429adb448832cacf4fa5f8090c3e14e48bfe669c99bae",
+          "format": "numeric_rubric",
+          "rubric_id": "ijso_practical_report_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "procedure",
+              "name": "Procedure understanding",
+              "max_score": 10,
+              "observable": true,
+              "description": "Describes a coherent experimental procedure and controls."
+            },
+            {
+              "id": "analysis",
+              "name": "Data analysis & reasoning",
+              "max_score": 15,
+              "observable": true,
+              "description": "Analyses, calculations, and scientific reasoning in the report."
+            },
+            {
+              "id": "conclusions",
+              "name": "Conclusions & uncertainty",
+              "max_score": 10,
+              "observable": true,
+              "description": "Conclusions follow from stated data; uncertainties discussed."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 5,
+              "observable": true,
+              "description": "Clear tables/figures/text presentation in the written report."
+            }
+          ],
+          "not_observable_from_deck": [
+            "physical instrument operation",
+            "lab safety behavior",
+            "true measured raw data fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ijso/2023/answers.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "bc62fa3dcd10e260a736a2ef330f871f46c29d78b8427698033704d48758a8f5"
+        }
+      ],
+      "limitations": "Archived marking material anchors a report-only adaptation; physical observations and instrument work are unavailable.",
+      "rubric_reuse": {
+        "source_competition": "ijso_practical",
+        "target_competition": "ijso_practical",
+        "target_year": 2023,
+        "source_rubric_paths": [
+          "data/rubrics/ijso_practical_report_40_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ijso_practical_2004_team_practical_2004",
+      "year": 2004,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ijso_practical_report_40_v1.json",
+          "sha256": "76eec7ef02da24944f2429adb448832cacf4fa5f8090c3e14e48bfe669c99bae",
+          "format": "numeric_rubric",
+          "rubric_id": "ijso_practical_report_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "procedure",
+              "name": "Procedure understanding",
+              "max_score": 10,
+              "observable": true,
+              "description": "Describes a coherent experimental procedure and controls."
+            },
+            {
+              "id": "analysis",
+              "name": "Data analysis & reasoning",
+              "max_score": 15,
+              "observable": true,
+              "description": "Analyses, calculations, and scientific reasoning in the report."
+            },
+            {
+              "id": "conclusions",
+              "name": "Conclusions & uncertainty",
+              "max_score": 10,
+              "observable": true,
+              "description": "Conclusions follow from stated data; uncertainties discussed."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 5,
+              "observable": true,
+              "description": "Clear tables/figures/text presentation in the written report."
+            }
+          ],
+          "not_observable_from_deck": [
+            "physical instrument operation",
+            "lab safety behavior",
+            "true measured raw data fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ijso/2004/recovered_20260913/marking_official.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "0741a1e082e7547c318bcfd2aec056c9e425d464113c8a538581bb7a3312fc2f",
+          "source_url": "https://www.ijso.com.br/downloads/provas/2004/2004lab_gab.pdf"
+        }
+      ],
+      "limitations": [
+        "Original experimental problem and marking PDFs recovered. Image-based answer diagrams, observed experiment data, and validation of the historical team adaptation remain unavailable.",
+        "Original files preserved; no other-year answers, fabricated measurements or guessed scores were used."
+      ],
+      "rubric_reuse": {
+        "source_competition": "ijso_practical",
+        "target_competition": "ijso_practical",
+        "target_year": 2004,
+        "source_rubric_paths": [
+          "data/rubrics/ijso_practical_report_40_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ijso_practical_2006_team_practical_2006",
+      "year": 2006,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ijso_practical_report_40_v1.json",
+          "sha256": "76eec7ef02da24944f2429adb448832cacf4fa5f8090c3e14e48bfe669c99bae",
+          "format": "numeric_rubric",
+          "rubric_id": "ijso_practical_report_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "procedure",
+              "name": "Procedure understanding",
+              "max_score": 10,
+              "observable": true,
+              "description": "Describes a coherent experimental procedure and controls."
+            },
+            {
+              "id": "analysis",
+              "name": "Data analysis & reasoning",
+              "max_score": 15,
+              "observable": true,
+              "description": "Analyses, calculations, and scientific reasoning in the report."
+            },
+            {
+              "id": "conclusions",
+              "name": "Conclusions & uncertainty",
+              "max_score": 10,
+              "observable": true,
+              "description": "Conclusions follow from stated data; uncertainties discussed."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 5,
+              "observable": true,
+              "description": "Clear tables/figures/text presentation in the written report."
+            }
+          ],
+          "not_observable_from_deck": [
+            "physical instrument operation",
+            "lab safety behavior",
+            "true measured raw data fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ijso/2006/recovered_20260913/marking_official.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "2110f256698007a824956ba5832d6979bfe80b55bc8a3d40a4c3bc9e9c7fbeb5",
+          "source_url": "https://www.ijso.com.br/downloads/provas/2006/2006lab_gab.pdf"
+        }
+      ],
+      "limitations": [
+        "Original 10-page experiment and 2-page official answer/marking sheet recovered. OCR is lossy and measurements are not supplied; image-aware task-specific scoring has not been validated.",
+        "Original files preserved; no other-year answers, fabricated measurements or guessed scores were used."
+      ],
+      "rubric_reuse": {
+        "source_competition": "ijso_practical",
+        "target_competition": "ijso_practical",
+        "target_year": 2006,
+        "source_rubric_paths": [
+          "data/rubrics/ijso_practical_report_40_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ijso_practical_2011_team_practical_2011",
+      "year": 2011,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ijso_practical_report_40_v1.json",
+          "sha256": "76eec7ef02da24944f2429adb448832cacf4fa5f8090c3e14e48bfe669c99bae",
+          "format": "numeric_rubric",
+          "rubric_id": "ijso_practical_report_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "procedure",
+              "name": "Procedure understanding",
+              "max_score": 10,
+              "observable": true,
+              "description": "Describes a coherent experimental procedure and controls."
+            },
+            {
+              "id": "analysis",
+              "name": "Data analysis & reasoning",
+              "max_score": 15,
+              "observable": true,
+              "description": "Analyses, calculations, and scientific reasoning in the report."
+            },
+            {
+              "id": "conclusions",
+              "name": "Conclusions & uncertainty",
+              "max_score": 10,
+              "observable": true,
+              "description": "Conclusions follow from stated data; uncertainties discussed."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 5,
+              "observable": true,
+              "description": "Clear tables/figures/text presentation in the written report."
+            }
+          ],
+          "not_observable_from_deck": [
+            "physical instrument operation",
+            "lab safety behavior",
+            "true measured raw data fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ijso/2011/bio-sol.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "7674202dc0327d5cd0953e95ca4d66eafee0c909342a834396ab7607e09a978e"
+        },
+        {
+          "path": "data/raw/ijso/2011/chem-sol.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "76aecb98ccfaa979d72e0a46b3cb5a8b7a27dfe57d41b7d001c01b0d94c48f78"
+        }
+      ],
+      "limitations": [
+        "All three subject problem packets are now archived. Biology and chemistry marking files exist, but a verified physics marking file and observed experiment data remain missing."
+      ],
+      "rubric_reuse": {
+        "source_competition": "ijso_practical",
+        "target_competition": "ijso_practical",
+        "target_year": 2011,
+        "source_rubric_paths": [
+          "data/rubrics/ijso_practical_report_40_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ijso_practical_2015_team_practical_2015",
+      "year": 2015,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ijso_practical_report_40_v1.json",
+          "sha256": "76eec7ef02da24944f2429adb448832cacf4fa5f8090c3e14e48bfe669c99bae",
+          "format": "numeric_rubric",
+          "rubric_id": "ijso_practical_report_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "procedure",
+              "name": "Procedure understanding",
+              "max_score": 10,
+              "observable": true,
+              "description": "Describes a coherent experimental procedure and controls."
+            },
+            {
+              "id": "analysis",
+              "name": "Data analysis & reasoning",
+              "max_score": 15,
+              "observable": true,
+              "description": "Analyses, calculations, and scientific reasoning in the report."
+            },
+            {
+              "id": "conclusions",
+              "name": "Conclusions & uncertainty",
+              "max_score": 10,
+              "observable": true,
+              "description": "Conclusions follow from stated data; uncertainties discussed."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 5,
+              "observable": true,
+              "description": "Clear tables/figures/text presentation in the written report."
+            }
+          ],
+          "not_observable_from_deck": [
+            "physical instrument operation",
+            "lab safety behavior",
+            "true measured raw data fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ijso/2015/recovered_20260913/marking_bio.docx",
+          "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "role": "judge_only",
+          "sha256": "160256c46c30939f702a031a251de10fbf29fa474243e0e02c16af45b4e99381",
+          "source_url": "https://www.ijsoweb.org/qna2015/Experiment/Experiment_ExamSheet_mark-scheme_biology%28Final%29_2130.docx"
+        },
+        {
+          "path": "data/raw/ijso/2015/recovered_20260913/marking_chem.docx",
+          "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "role": "judge_only",
+          "sha256": "2fa6c0bb44fef9d4b1d3e294156c4b1f855a62552ccbab583993e1ab302813b8",
+          "source_url": "https://www.ijsoweb.org/qna2015/Experiment/Experiment_mark-scheme_chemistry%28Final%29_1710.docx"
+        },
+        {
+          "path": "data/raw/ijso/2015/recovered_20260913/marking_phy.docx",
+          "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "role": "judge_only",
+          "sha256": "46d974c12e863ce659b4a8b0337e7c694a47c1ced9eeeb3131d851c6a768a616",
+          "source_url": "https://www.ijsoweb.org/qna2015/Experiment/Experiment_mark-scheme_physics%28Final%29.docx"
+        }
+      ],
+      "limitations": [
+        "Official problem and three marking DOCX files recovered. Tables/drawings require document rendering; observed measurements and complete aligned text-only scoring remain unavailable. Marking files contain differing question/point variants, so no automatic year-specific scoring is asserted.",
+        "Original files preserved; no other-year answers, fabricated measurements or guessed scores were used."
+      ],
+      "rubric_reuse": {
+        "source_competition": "ijso_practical",
+        "target_competition": "ijso_practical",
+        "target_year": 2015,
+        "source_rubric_paths": [
+          "data/rubrics/ijso_practical_report_40_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ],
+  "active_score_membership_path": "data/rubrics/ijso_practical_active_score_membership.json"
+}

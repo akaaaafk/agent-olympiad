@@ -1,5 +1,3 @@
-# PUMaC Power Round 2017
-
 PUMaC 2017 Power Round Page 1
 PUMaC 2017 Power Round:
 “I ain’t even Lie-in’...”

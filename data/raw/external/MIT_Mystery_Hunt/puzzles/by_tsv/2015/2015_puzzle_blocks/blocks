@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=1240, user-scalable=yes"></meta>
+    
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="icon" href="https://web.mit.edu/puzzle/www/2015/static/images/hunt/icon32.png" type="image/x-icon" />
+    <title>Blocks &mdash; MIT Mystery Hunt 2015</title>
+    
+    <link href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/puzzle.css" rel="stylesheet" type="text/css" />
+
+    
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/logbook.css" />
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/ocean.css" />
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015//static/stylesheets/school_of_fish.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+ <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="https://web.mit.edu/puzzle/www/2015/intro.html">World Map</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="https://web.mit.edu/puzzle/www/2015/storylog.html">The Story So Far...</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Useful links <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="https://web.mit.edu/puzzle/www/2015/toc.html">List of Puzzles</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/eventschedule.html">Events Schedule</a></li>
+	    
+            <li></li>
+	    
+            <li><a href="https://web.mit.edu/puzzle/www/2015/updates.html">Updates from Sealab</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/completelog.html">Full team log</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/faq.html">FAQ</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/sponsors.html">Sponsors</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/">2015 Archive Overview</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    
+    
+    
+        <li></li>
+        
+    
+
+         
+    </ul>
+  </div><!-- /.navbar-collapse -->
+ </div>
+</nav> 
+
+  
+    <div id="artstuff">
+        <div id="oceandecor">
+            <div id="puzzle-obj"><img src="https://web.mit.edu/puzzle/www/2015//assets/puzzimages/230.png"></img></div>
+            <div id="infowindow">Location: School of Fish <br />Depth: 148</div>
+        <div id="leftdecor"></div>
+        <div id="rightdecor"></div>
+        </div>
+    </div>
+    <div id="paper">
+      
+
+
+
+        <div class="puzzle-page-header">
+        
+            <div class="sol"><a href="solution/">View Solution</a></div>
+        
+        <h1>Blocks</h1>
+        
+	    
+	        <p class="answer" id="answer_230"> Answer: click here to reveal</p>
+            
+        
+        </div>
+      <div class='puzzle'>
+        <!-- Puzzle content begins here -->
+         <style>
+    div.bk {position:absolute;font-size:0px;border-left:black 0px solid;border-right:black 0px solid;border-top:black 36px solid;border-bottom:black 0px solid;width:36px;height:36px;}
+    div.lt {position:absolute;text-align:center;width:36px;}
+</style>
+
+<center>
+<div class="no-page-break puzzle-sans">
+<div style="border-width:0px;width:333px;height:333px;position:relative;">
+<div style="border-width:0px;top:0px;left:0px;width:333px;height:333px;position:absolute;">
+<div class="bk" style="left:3px;top:3px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:39px;top:3px;border-top:#50a1da 36px solid;"></div>
+<div class="bk" style="left:75px;top:3px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:113px;top:3px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:149px;top:3px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:185px;top:3px;border-top:#cdcdcd 36px solid;"></div>
+<div class="bk" style="left:223px;top:3px;border-top:#ff0000 36px solid;"></div>
+<div class="bk" style="left:259px;top:3px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:295px;top:3px;border-top:#ffe65e 36px solid;"></div>
+<div class="bk" style="left:3px;top:39px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:39px;top:39px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:75px;top:39px;border-top:#008081 36px solid;"></div>
+<div class="bk" style="left:113px;top:39px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:149px;top:39px;border-top:#ff0000 36px solid;"></div>
+<div class="bk" style="left:185px;top:39px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:223px;top:39px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:259px;top:39px;border-top:#cdcdcd 36px solid;"></div>
+<div class="bk" style="left:295px;top:39px;border-top:#ff6cd0 36px solid;"></div>
+<div class="bk" style="left:3px;top:75px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:39px;top:75px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:75px;top:75px;border-top:#313131 36px solid;"></div>
+<div class="bk" style="left:113px;top:75px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:149px;top:75px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:185px;top:75px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:223px;top:75px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:259px;top:75px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:295px;top:75px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:3px;top:113px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:39px;top:113px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:75px;top:113px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:113px;top:113px;border-top:#cd60ff 36px solid;"></div>
+<div class="bk" style="left:149px;top:113px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:185px;top:113px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:223px;top:113px;border-top:#50a1da 36px solid;"></div>
+<div class="bk" style="left:259px;top:113px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:295px;top:113px;border-top:#824000 36px solid;"></div>
+<div class="bk" style="left:3px;top:149px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:39px;top:149px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:75px;top:149px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:113px;top:149px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:149px;top:149px;border-top:#ff6cd0 36px solid;"></div>
+<div class="bk" style="left:185px;top:149px;border-top:#50a1da 36px solid;"></div>
+<div class="bk" style="left:223px;top:149px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:259px;top:149px;border-top:#ff0000 36px solid;"></div>
+<div class="bk" style="left:295px;top:149px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:3px;top:185px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:39px;top:185px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:75px;top:185px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:113px;top:185px;border-top:#ff0000 36px solid;"></div>
+<div class="bk" style="left:149px;top:185px;border-top:#ffe65e 36px solid;"></div>
+<div class="bk" style="left:185px;top:185px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:223px;top:185px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:259px;top:185px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:295px;top:185px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:3px;top:223px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:39px;top:223px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:75px;top:223px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:113px;top:223px;border-top:#ffe65e 36px solid;"></div>
+<div class="bk" style="left:149px;top:223px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:185px;top:223px;border-top:#313131 36px solid;"></div>
+<div class="bk" style="left:223px;top:223px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:259px;top:223px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:295px;top:223px;border-top:#50a1da 36px solid;"></div>
+<div class="bk" style="left:3px;top:259px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:39px;top:259px;border-top:#824000 36px solid;"></div>
+<div class="bk" style="left:75px;top:259px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:113px;top:259px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:149px;top:259px;border-top:#008081 36px solid;"></div>
+<div class="bk" style="left:185px;top:259px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:223px;top:259px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:259px;top:259px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:295px;top:259px;border-top:#ff0000 36px solid;"></div>
+<div class="bk" style="left:3px;top:295px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:39px;top:295px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:75px;top:295px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:113px;top:295px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:149px;top:295px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:185px;top:295px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:223px;top:295px;border-top:#ffffff 36px solid;"></div>
+<div class="bk" style="left:259px;top:295px;border-top:#ffe65e 36px solid;"></div>
+<div class="bk" style="left:295px;top:295px;border-top:#ffffff 36px solid;"></div>
+<div style="left:0px;top:0px;width:333px;position:absolute;font-size:0px;border-left:black 0px solid;border-right:black 0px solid;border-top:black 3px solid;border-bottom:black 0px solid;"></div>
+<div style="left:0px;top:0px;height:333px;position:absolute;font-size:0px;border-left:black 3px solid;border-right:black 0px solid;border-top:black 0px solid;border-bottom:black 0px solid;"></div>
+<div style="left:0px;top:38px;width:333px;position:absolute;font-size:0px;border-left:black 0px solid;border-right:black 0px solid;border-top:black 1px solid;border-bottom:black 0px solid;"></div>
+<div style="left:38px;top:0px;height:333px;position:absolute;font-size:0px;border-left:black 1px solid;border-right:black 0px solid;border-top:black 0px solid;border-bottom:black 0px solid;"></div>
+<div style="left:0px;top:74px;width:333px;position:absolute;font-size:0px;border-left:black 0px solid;border-right:black 0px solid;border-top:black 1px solid;border-bottom:black 0px solid;"></div>
+<div style="left:74px;top:0px;height:333px;position:absolute;font-size:0px;border-left:black 1px solid;border-right:black 0px solid;border-top:black 0px solid;border-bottom:black 0px solid;"></div>
+<div style="left:0px;top:110px;width:333px;position:absolute;font-size:0px;border-left:black 0px solid;border-right:black 0px solid;border-top:black 3px solid;border-bottom:black 0px solid;"></div>
+<div style="left:110px;top:0px;height:333px;position:absolute;font-size:0px;border-left:black 3px solid;border-right:black 0px solid;border-top:black 0px solid;border-bottom:black 0px solid;"></div>
+<div style="left:0px;top:148px;width:333px;position:absolute;font-size:0px;border-left:black 0px solid;border-right:black 0px solid;border-top:black 1px solid;border-bottom:black 0px solid;"></div>
+<div style="left:148px;top:0px;height:333px;position:absolute;font-size:0px;border-left:black 1px solid;border-right:black 0px solid;border-top:black 0px solid;border-bottom:black 0px solid;"></div>
+<div style="left:0px;top:184px;width:333px;position:absolute;font-size:0px;border-left:black 0px solid;border-right:black 0px solid;border-top:black 1px solid;border-bottom:black 0px solid;"></div>
+<div style="left:184px;top:0px;height:333px;position:absolute;font-size:0px;border-left:black 1px solid;border-right:black 0px solid;border-top:black 0px solid;border-bottom:black 0px solid;"></div>
+<div style="left:0px;top:220px;width:333px;position:absolute;font-size:0px;border-left:black 0px solid;border-right:black 0px solid;border-top:black 3px solid;border-bottom:black 0px solid;"></div>
+<div style="left:220px;top:0px;height:333px;position:absolute;font-size:0px;border-left:black 3px solid;border-right:black 0px solid;border-top:black 0px solid;border-bottom:black 0px solid;"></div>
+<div style="left:0px;top:258px;width:333px;position:absolute;font-size:0px;border-left:black 0px solid;border-right:black 0px solid;border-top:black 1px solid;border-bottom:black 0px solid;"></div>
+<div style="left:258px;top:0px;height:333px;position:absolute;font-size:0px;border-left:black 1px solid;border-right:black 0px solid;border-top:black 0px solid;border-bottom:black 0px solid;"></div>
+<div style="left:0px;top:294px;width:333px;position:absolute;font-size:0px;border-left:black 0px solid;border-right:black 0px solid;border-top:black 1px solid;border-bottom:black 0px solid;"></div>
+<div style="left:294px;top:0px;height:333px;position:absolute;font-size:0px;border-left:black 1px solid;border-right:black 0px solid;border-top:black 0px solid;border-bottom:black 0px solid;"></div>
+<div style="left:0px;top:330px;width:333px;position:absolute;font-size:0px;border-left:black 0px solid;border-right:black 0px solid;border-top:black 3px solid;border-bottom:black 0px solid;"></div>
+<div style="left:330px;top:0px;height:333px;position:absolute;font-size:0px;border-left:black 3px solid;border-right:black 0px solid;border-top:black 0px solid;border-bottom:black 0px solid;"></div>
+<div class="lt" style="left:3px;top:7px;color:#000000;font-size:27px;">L</div>
+<div class="lt" style="left:39px;top:7px;color:#ffffff;font-size:27px;">E</div>
+<div class="lt" style="left:75px;top:7px;color:#000000;font-size:27px;">A</div>
+<div class="lt" style="left:113px;top:7px;color:#000000;font-size:27px;">I</div>
+<div class="lt" style="left:149px;top:7px;color:#000000;font-size:27px;">M</div>
+<div class="lt" style="left:185px;top:7px;color:#ffffff;font-size:27px;">M</div>
+<div class="lt" style="left:223px;top:7px;color:#ffffff;font-size:27px;">N</div>
+<div class="lt" style="left:259px;top:7px;color:#000000;font-size:27px;">E</div>
+<div class="lt" style="left:295px;top:7px;color:#ffffff;font-size:27px;">L</div>
+<div class="lt" style="left:3px;top:43px;color:#000000;font-size:27px;">C</div>
+<div class="lt" style="left:39px;top:43px;color:#000000;font-size:27px;">A</div>
+<div class="lt" style="left:75px;top:43px;color:#ffffff;font-size:27px;">R</div>
+<div class="lt" style="left:113px;top:43px;color:#000000;font-size:27px;">U</div>
+<div class="lt" style="left:149px;top:43px;color:#ffffff;font-size:27px;">D</div>
+<div class="lt" style="left:185px;top:43px;color:#000000;font-size:27px;">N</div>
+<div class="lt" style="left:223px;top:43px;color:#000000;font-size:27px;">O</div>
+<div class="lt" style="left:259px;top:43px;color:#ffffff;font-size:27px;">K</div>
+<div class="lt" style="left:295px;top:43px;color:#ffffff;font-size:27px;">Y</div>
+<div class="lt" style="left:3px;top:79px;color:#000000;font-size:27px;">U</div>
+<div class="lt" style="left:39px;top:79px;color:#000000;font-size:27px;">U</div>
+<div class="lt" style="left:75px;top:79px;color:#ffffff;font-size:27px;">A</div>
+<div class="lt" style="left:113px;top:79px;color:#000000;font-size:27px;">M</div>
+<div class="lt" style="left:149px;top:79px;color:#000000;font-size:27px;">T</div>
+<div class="lt" style="left:185px;top:79px;color:#000000;font-size:27px;">O</div>
+<div class="lt" style="left:223px;top:79px;color:#000000;font-size:27px;">I</div>
+<div class="lt" style="left:259px;top:79px;color:#000000;font-size:27px;">A</div>
+<div class="lt" style="left:295px;top:79px;color:#000000;font-size:27px;">R</div>
+<div class="lt" style="left:3px;top:117px;color:#000000;font-size:27px;">D</div>
+<div class="lt" style="left:39px;top:117px;color:#000000;font-size:27px;">H</div>
+<div class="lt" style="left:75px;top:117px;color:#000000;font-size:27px;">A</div>
+<div class="lt" style="left:113px;top:117px;color:#ffffff;font-size:27px;">V</div>
+<div class="lt" style="left:149px;top:117px;color:#000000;font-size:27px;">S</div>
+<div class="lt" style="left:185px;top:117px;color:#000000;font-size:27px;">O</div>
+<div class="lt" style="left:223px;top:117px;color:#ffffff;font-size:27px;">N</div>
+<div class="lt" style="left:259px;top:117px;color:#000000;font-size:27px;">O</div>
+<div class="lt" style="left:295px;top:117px;color:#ffffff;font-size:27px;">T</div>
+<div class="lt" style="left:3px;top:153px;color:#000000;font-size:27px;">G</div>
+<div class="lt" style="left:39px;top:153px;color:#000000;font-size:27px;">S</div>
+<div class="lt" style="left:75px;top:153px;color:#000000;font-size:27px;">E</div>
+<div class="lt" style="left:113px;top:153px;color:#000000;font-size:27px;">R</div>
+<div class="lt" style="left:149px;top:153px;color:#ffffff;font-size:27px;">I</div>
+<div class="lt" style="left:185px;top:153px;color:#ffffff;font-size:27px;">E</div>
+<div class="lt" style="left:223px;top:153px;color:#000000;font-size:27px;">D</div>
+<div class="lt" style="left:259px;top:153px;color:#ffffff;font-size:27px;">A</div>
+<div class="lt" style="left:295px;top:153px;color:#000000;font-size:27px;">N</div>
+<div class="lt" style="left:3px;top:189px;color:#000000;font-size:27px;">V</div>
+<div class="lt" style="left:39px;top:189px;color:#000000;font-size:27px;">L</div>
+<div class="lt" style="left:75px;top:189px;color:#000000;font-size:27px;">R</div>
+<div class="lt" style="left:113px;top:189px;color:#ffffff;font-size:27px;">R</div>
+<div class="lt" style="left:149px;top:189px;color:#ffffff;font-size:27px;">F</div>
+<div class="lt" style="left:185px;top:189px;color:#000000;font-size:27px;">N</div>
+<div class="lt" style="left:223px;top:189px;color:#000000;font-size:27px;">O</div>
+<div class="lt" style="left:259px;top:189px;color:#000000;font-size:27px;">E</div>
+<div class="lt" style="left:295px;top:189px;color:#000000;font-size:27px;">L</div>
+<div class="lt" style="left:3px;top:227px;color:#000000;font-size:27px;">F</div>
+<div class="lt" style="left:39px;top:227px;color:#000000;font-size:27px;">C</div>
+<div class="lt" style="left:75px;top:227px;color:#000000;font-size:27px;">S</div>
+<div class="lt" style="left:113px;top:227px;color:#ffffff;font-size:27px;">R</div>
+<div class="lt" style="left:149px;top:227px;color:#000000;font-size:27px;">E</div>
+<div class="lt" style="left:185px;top:227px;color:#ffffff;font-size:27px;">C</div>
+<div class="lt" style="left:223px;top:227px;color:#000000;font-size:27px;">U</div>
+<div class="lt" style="left:259px;top:227px;color:#000000;font-size:27px;">A</div>
+<div class="lt" style="left:295px;top:227px;color:#ffffff;font-size:27px;">N</div>
+<div class="lt" style="left:3px;top:263px;color:#000000;font-size:27px;">C</div>
+<div class="lt" style="left:39px;top:263px;color:#ffffff;font-size:27px;">H</div>
+<div class="lt" style="left:75px;top:263px;color:#000000;font-size:27px;">F</div>
+<div class="lt" style="left:113px;top:263px;color:#000000;font-size:27px;">N</div>
+<div class="lt" style="left:149px;top:263px;color:#ffffff;font-size:27px;">D</div>
+<div class="lt" style="left:185px;top:263px;color:#000000;font-size:27px;">N</div>
+<div class="lt" style="left:223px;top:263px;color:#000000;font-size:27px;">D</div>
+<div class="lt" style="left:259px;top:263px;color:#000000;font-size:27px;">A</div>
+<div class="lt" style="left:295px;top:263px;color:#ffffff;font-size:27px;">L</div>
+<div class="lt" style="left:3px;top:299px;color:#000000;font-size:27px;">C</div>
+<div class="lt" style="left:39px;top:299px;color:#000000;font-size:27px;">I</div>
+<div class="lt" style="left:75px;top:299px;color:#000000;font-size:27px;">A</div>
+<div class="lt" style="left:113px;top:299px;color:#000000;font-size:27px;">S</div>
+<div class="lt" style="left:149px;top:299px;color:#000000;font-size:27px;">L</div>
+<div class="lt" style="left:185px;top:299px;color:#000000;font-size:27px;">I</div>
+<div class="lt" style="left:223px;top:299px;color:#000000;font-size:27px;">G</div>
+<div class="lt" style="left:259px;top:299px;color:#ffffff;font-size:27px;">I</div>
+<div class="lt" style="left:295px;top:299px;color:#000000;font-size:27px;">E</div>
+</div></div>
+</div>
+</center>
+
+        <!-- Puzzle content ends here -->
+      </div>
+    </div>
+
+
+
+
+
+    
+    <script type="text/javascript" src="https://web.mit.edu/puzzle/www/2015/static/bootstrap/javascripts/bootstrap.js" charset="utf-8"></script>
+    
+<script type="text/javascript">
+  $(document).ready(function(e) { $('#answer_230').click(function(e) { $('#answer_230').text("Answer: " + "RUBLE");});});
+</script>
+
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

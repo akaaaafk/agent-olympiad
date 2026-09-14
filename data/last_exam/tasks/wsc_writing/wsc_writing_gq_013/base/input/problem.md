@@ -1,5 +1,3 @@
-# wsc_writing_gq_013
-
 Some old games are being reimagined as television shows, movies , and mobile apps ; even their soundtracks are sometimes revived for orchestral performance . But these adaptations require looking at how these games fit into the present moment. For instance, in the 1980s, the popular title The Oregon Trail taught millions of American kids how hard it was to settle the west without dying of dysentery. But the game has since been criticized for celebrating the destruction of the environment and the defeat of indigenous peoples. The developers of a more recent version tried to address these concerns. Review the following examples, then discuss with your team: which of them would you suggest redesigning to address similar concerns before being rereleased today? 
 
  Seven Cities of Gold | Sid Meier's Pirates! | Doom 

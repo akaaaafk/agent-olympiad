@@ -13,19 +13,84 @@
   "provenance": [
     {
       "source_type": "official_organizer",
-      "title": "Contest Rules for IOAI 2025, version 2.3",
+      "title": "Contest Rules for IOAI 2025, cover version 2.4 (August 3, 2025)",
       "url": "https://ioai-official.org/wp-content/uploads/2025/08/Contest-Rules-for-IOAI-2025-version-2.3-1.pdf",
-      "supports": ["task-specific scoring rule", "team awards"]
+      "supports": [
+        "task-specific scoring rule",
+        "team awards"
+      ],
+      "path": "data/raw/ioai/Team-Challenge/recovered_20260913/rules_2025_v2_4.pdf",
+      "sha256": "4d383bdb4b2756d99896aace1000bbfd9cc3042fc3d307bf3485ec44bbdf2370",
+      "source_pages": [
+        1,
+        8,
+        9
+      ],
+      "filename_version_warning": "URL says 2.3; rendered cover says 2.4."
     },
     {
       "source_type": "local_benchmark_evidence",
       "path": "data/benchmarks/ioai_team/benchmark.json",
-      "supports": ["Factory of the Future task statement", "simulation platform and task context", "null total_points"]
+      "supports": [
+        "Factory of the Future task statement",
+        "simulation platform and task context",
+        "null total_points"
+      ]
     }
   ],
   "limitations": [
     "The local task extract does not contain a numeric scoring table, task weights, penalties, tie-breakers, or total maximum.",
     "No numeric dimensions are supplied because they would be invented.",
-    "The 2024 Practical Round rubric is not applicable to this robotics challenge."
-  ]
+    "The 2024 Practical Round rubric is not applicable to this robotics challenge.",
+    "A current upstream simulator and referee are identified, but the original contest revision, licensing, scene assets and scoring equivalence are not verified."
+  ],
+  "source_review": {
+    "upstream_implementation": {
+      "repository": "https://github.com/galbot-ioai/physics_sim_edu",
+      "revision": "f6ff7758a2094a8334d541a407135d42eadac7b8",
+      "observed_branch": "master",
+      "guide_branch": "ioai/master",
+      "guide_branch_currently_present": false,
+      "commit_date": "2025-09-11T09:24:21Z",
+      "original_contest_revision_verified": false,
+      "implementation_archived": false,
+      "runtime_executed": false,
+      "current_entry_paths": [
+        {
+          "path": "LICENSE",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e9dd007dc511a11f532667824e6eb644d3bc7889",
+          "size": 567,
+          "url": "https://api.github.com/repos/galbot-ioai/physics_sim_edu/git/blobs/e9dd007dc511a11f532667824e6eb644d3bc7889"
+        },
+        {
+          "path": "ioai/main.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "4369c4d51e905ba89ac1b1a7ddda0392f55052ca",
+          "size": 5342,
+          "url": "https://api.github.com/repos/galbot-ioai/physics_sim_edu/git/blobs/4369c4d51e905ba89ac1b1a7ddda0392f55052ca"
+        },
+        {
+          "path": "ioai/main_referee.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "57cdcbb94537edb8b4558abb2d249445dabcd601",
+          "size": 6349,
+          "url": "https://api.github.com/repos/galbot-ioai/physics_sim_edu/git/blobs/57cdcbb94537edb8b4558abb2d249445dabcd601"
+        },
+        {
+          "path": "ioai/referee/referee.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2fcead5c287bf16ef4a5e1ab8ced0b3adb46c9f2",
+          "size": 10415,
+          "url": "https://api.github.com/repos/galbot-ioai/physics_sim_edu/git/blobs/2fcead5c287bf16ef4a5e1ab8ced0b3adb46c9f2"
+        }
+      ],
+      "license_note": "The observed public repository license restricts use and redistribution; public visibility is not a redistribution grant."
+    },
+    "current_public_implementation_is_not_verified_historical_judge": true
+  }
 }

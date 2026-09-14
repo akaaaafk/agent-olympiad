@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 1998
-
 # Odyssey of the Mind — 1998 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Camouflaged CreationDivisions I, II, III & IVThe team will design and build a Camouflaged Structure made of balsa wood and glue. This may be stained and/or painted and will be camouflaged as part of a Larger Creation. During the performance the team will remove the Camouflaged Structure from the Larger Creation, then test it by having it support weights. The team must create and present a theme for its performance, and all of the team’s props must fit inside a limited space. Time limit: 8 min. Cost limit: $100 USD.
 5. Create and AnimateDivisions I and IIThe team is to create and present a humorous performance where an inanimate object comes to life. The performance will include a team-created poem or song and original music. All of the team’s props must fit within a limited space. Time limit: 8 min. Cost limit: $90 USD.
 6. Dream VacationPrimaryThe team is to create and perform a skit about a Dream Vacation, which must include two sights and an experience at each sight. The performance will also include a Main Character and a team-created song. Time limit: 8 min. Cost limit: $90 USD.
+

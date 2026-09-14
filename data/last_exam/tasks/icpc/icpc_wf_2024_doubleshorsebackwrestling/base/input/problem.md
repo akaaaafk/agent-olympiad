@@ -1,5 +1,3 @@
-# Doubles Horseback Wrestling
-
 Hide 
  Doubles Horseback Wrestling 
 

@@ -1,0 +1,66 @@
+{
+  "problem_id": "debatebench_Belgrade WUDC 2022 Round 8",
+  "visibility": "judge_only",
+  "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Belgrade WUDC 2022 Round 8.txt",
+  "transcript_sha256": "28007b87f6675ea88f63f923784a13b562d9864bbf700728723571b355f0e01f",
+  "score_workbook": "data/raw/debatebench/scores.xlsx",
+  "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+  "score_column_order": [
+    "PM",
+    "DPM",
+    "LO",
+    "DLO",
+    "MG",
+    "GW",
+    "MO",
+    "OW"
+  ],
+  "score_matching_title": "Belgrade WUDC 2022 Round 8",
+  "filename_alias_applied": false,
+  "identity_status": "missing",
+  "selected_scores": null,
+  "candidates": [],
+  "role_alignment": {
+    "valid_role_boundaries": true,
+    "opening_role_order": [
+      "PM",
+      "LO",
+      "DPM",
+      "DLO",
+      "MG",
+      "MO",
+      "GW",
+      "OW"
+    ],
+    "expected_speaking_order": [
+      "PM",
+      "LO",
+      "DPM",
+      "DLO",
+      "MG",
+      "MO",
+      "GW",
+      "OW"
+    ],
+    "observed_role_tags": [
+      "PM",
+      "/PM",
+      "LO",
+      "/LO",
+      "DPM",
+      "/DPM",
+      "DLO",
+      "/DLO",
+      "MG",
+      "/MG",
+      "MO",
+      "/MO",
+      "GW",
+      "/GW",
+      "OW",
+      "/OW"
+    ],
+    "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+  },
+  "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+}

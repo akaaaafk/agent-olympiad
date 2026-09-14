@@ -1,4 +1,4 @@
-# Environment — `gcch_harvard`
+# Environment
 
 ## Roster
 
@@ -14,7 +14,11 @@
 
 ## Allowed tools
 
-- query_rules
+```json
+[
+  "query_rules"
+]
+```
 
 ## Resources
 
@@ -55,3 +59,4 @@
   ]
 }
 ```
+

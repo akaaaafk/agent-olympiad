@@ -1,5 +1,3 @@
-# IChTo-2026-problem-set_260203-modified
-
 International Chemistry Tournament 
 9th Edition 
  

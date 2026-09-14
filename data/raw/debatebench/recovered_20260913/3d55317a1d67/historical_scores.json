@@ -1,0 +1,110 @@
+{
+  "problem_id": "debatebench_Belgrade WUDC 2022 Round 9 Room 2",
+  "visibility": "judge_only",
+  "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Belgrade WUDC 2022 Round 9 Room 2.txt",
+  "transcript_sha256": "13fa7742d910ce657cf7084129f58e5e081bbbab8f608d252ea7b15bc4d0131c",
+  "score_workbook": "data/raw/debatebench/scores.xlsx",
+  "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+  "score_column_order": [
+    "PM",
+    "DPM",
+    "LO",
+    "DLO",
+    "MG",
+    "GW",
+    "MO",
+    "OW"
+  ],
+  "score_matching_title": "Belgrade WUDC 2022 Round 9 Room 2",
+  "filename_alias_applied": false,
+  "identity_status": "matched",
+  "selected_scores": {
+    "sheet": "Sheet1",
+    "excel_row": 26,
+    "cell_range": "A26:M26",
+    "tournament_title": "Belgrade WUDC 2022 Round 9 Room 2",
+    "speaker_scores": {
+      "PM": 80.0,
+      "LO": 85.0,
+      "DPM": 80.0,
+      "DLO": 84.0,
+      "MG": 80.0,
+      "MO": 83.0,
+      "GW": 81.0,
+      "OW": 83.0
+    },
+    "house_order": [
+      "OO",
+      "CO",
+      "CG",
+      "OG"
+    ]
+  },
+  "candidates": [
+    {
+      "sheet": "Sheet1",
+      "excel_row": 26,
+      "cell_range": "A26:M26",
+      "tournament_title": "Belgrade WUDC 2022 Round 9 Room 2",
+      "speaker_scores": {
+        "PM": 80.0,
+        "LO": 85.0,
+        "DPM": 80.0,
+        "DLO": 84.0,
+        "MG": 80.0,
+        "MO": 83.0,
+        "GW": 81.0,
+        "OW": 83.0
+      },
+      "house_order": [
+        "OO",
+        "CO",
+        "CG",
+        "OG"
+      ]
+    }
+  ],
+  "role_alignment": {
+    "valid_role_boundaries": false,
+    "opening_role_order": [
+      "PM",
+      "LO",
+      "DPM",
+      "DLO",
+      "MG",
+      "MO",
+      "GW",
+      "OW"
+    ],
+    "expected_speaking_order": [
+      "PM",
+      "LO",
+      "DPM",
+      "DLO",
+      "MG",
+      "MO",
+      "GW",
+      "OW"
+    ],
+    "observed_role_tags": [
+      "PM",
+      "/PM",
+      "LO",
+      "/LO",
+      "DPM",
+      "/DPM",
+      "DLO",
+      "/DLO",
+      "MG",
+      "/MG",
+      "MO",
+      "/MG",
+      "GW",
+      "/GW",
+      "OW",
+      "/OW"
+    ],
+    "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+  },
+  "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+}

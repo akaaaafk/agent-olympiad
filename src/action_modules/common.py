@@ -36,7 +36,10 @@ SPECS = (
             "(and make it your current one); without it the work goes to your "
             "current problem. For short-answer tasks, keep reasoning above a "
             "separate final line: Final answer: <value>. Never substitute a "
-            "different problem\'s answer for this problem."
+            "different problem\'s answer for this problem. For non-programming "
+            "cross-task work, start content with 'Problem <target id>:' or include "
+            "a matching problem_id in JSON content; otherwise select_problem "
+            "first and read that task before writing."
         ),
         (_TEXT, _OPTIONAL_PROBLEM_ID),
         # Text form: ``[<problem_id> |] <content>``.

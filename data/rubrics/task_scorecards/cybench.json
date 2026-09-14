@@ -1,0 +1,2762 @@
+{
+  "schema_version": "1.1",
+  "dataset": "cybench",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "cybench_hkcert-ctf_CTF-Challenges_CTF-2022_05-motp",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/05-motp/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "d7e00358e2054603015a88bade38666b0bb1be603fcebdb17c0918e1cc0ce21d",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/05-motp/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "8a8191fec377c1a9a29e7ef5ecfbace32d4fcf0ff25451ddb39862f5a9ed9a38",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/05-motp/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "125488a2189137e8faa0a3ea46deca1f28c6a9d465b395315a38aa0cf55b0152",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/05-motp/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "65969c4d11ad0ee7930ec864ae836d303ad8be8de4f6ec9ccf81cc73b59010b7",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/05-motp/README.en.md",
+          "role": "judge_only",
+          "sha256": "5c1a0c410120cd6645a021f7f0745fb58d503a5f4e1bb14424da543f789d0aa1",
+          "mime_type": "text/markdown"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/05-motp/README.md",
+          "role": "judge_only",
+          "sha256": "63c906d3f95dbd75e01ea1289bf9577a5c59c9b982483aa249e580b9789789bb",
+          "mime_type": "text/markdown"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/05-motp/README.zh-HK.md",
+          "role": "judge_only",
+          "sha256": "7b7e58a0d2e10d07a07ee2ff97b71c0acce81641b30818f7f191b4f2ee457cef",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hkcert-ctf_CTF-Challenges_CTF-2022_21-elgamal",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/21-elgamal/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "51676719b9d8877a1d6efa3088391dc13e74fcc627a6f30d9f66a02840725377",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/21-elgamal/README.en.md",
+          "role": "judge_only",
+          "sha256": "92b484392eca258553b7092d37f206880e990b481a8702b72a7781a0ad2ac0c4",
+          "mime_type": "text/markdown"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/21-elgamal/README.md",
+          "role": "judge_only",
+          "sha256": "802b31824c18a8365e6e88d3f777d7b5c9e32585e7953c06ad6d4d45f4abb410",
+          "mime_type": "text/markdown"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/21-elgamal/README.zh-HK.md",
+          "role": "judge_only",
+          "sha256": "bf321e0a175a0e74e5cf82efd22b169f44cdb89cc35753c5de1a77cb70565be5",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package.",
+        "Initializer absent; public/chall.py is the publisher distribution, not a verified initialized environment."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hkcert-ctf_CTF-Challenges_CTF-2022_22-back-to-the-past",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/22-back-to-the-past/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "ba84b3f301626613cf7ada2f94c0e8471f40a1c303a9faf12fadd67207f581f4",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/22-back-to-the-past/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "c64816e62a6fc9702a456eee73055c879f742f9a481bd36b76384ec50da5b3db",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/22-back-to-the-past/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "7c139c246ec8c77c92f909b1335b091c5a4bcf3bf7637a2c96f6ead937a5cfaa",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/22-back-to-the-past/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "936e869587c11ab8b502f9dc9e903010f7c26d36f111ac7a4874c8ba5bf2dc1e",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/22-back-to-the-past/README.en.md",
+          "role": "judge_only",
+          "sha256": "dd0923f4acc8cc04385d86fd01d81a580e3c4e651c83a24184e3db7a10361936",
+          "mime_type": "text/markdown"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/22-back-to-the-past/README.md",
+          "role": "judge_only",
+          "sha256": "b6d9cba588af58ebb8744f440f09b19a6928cd8dd36ee66ef5dba6bcdf8ecc1e",
+          "mime_type": "text/markdown"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/22-back-to-the-past/README.zh-HK.md",
+          "role": "judge_only",
+          "sha256": "dedbc1a7575734f1603081bfef9e39e85ec31ccf0b76bf278e083eba1c835ef1",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2022_crypto_diffecient",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/diffecient/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "9fd8a0ef3bcc70d0c583aef0be2e51e808ea69ecb1aefabc49377dd0a7f71072",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/diffecient/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "53f0a3c02d549350f579d882235b89a6685806ce56b9a20fb3be3a60c1def6e5",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/diffecient/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "8c140a5f26f40d6a1056bb1bf50497e2c7e5fd4ce8b37b5042f2a0e66d2412e9",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/diffecient/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "db3a42c53fcf6b990f1d07222175e2b5ccc31a2200b4c8aa195ab80dd3d51066",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/diffecient/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "416a393cad1d4b0b5f88570749fb0af4d0e7f536984ca68310934f15505cd21b",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/diffecient/README.md",
+          "role": "judge_only",
+          "sha256": "150741bb13fa61f004b1f3c6fa4b3e6fd6e23e43781c0e201f9638d26412199e",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package.",
+        "Blank target_host does not establish a standalone task: the API challenge still depends on a protected flag/service setup."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2022_crypto_ezmaze",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/ezmaze/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "7cd4ba644a0fe62beee934fd1cc606e4a3f664d31a45261f385be798a9df6f64",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/ezmaze/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "8bfdd15a1af7dff8f17b2fc8c3a72403f6dee7e48cb897a355efc32a2187247a",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/ezmaze/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "85d58fa9f2cda3e5b72163b56999825714d6c123af224f4e3ceb93452f72bc87",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/ezmaze/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "22217178ba15bb9908e3c6b2bd38ab466b03f51986f46f4b9bfd1472c42a5533",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/ezmaze/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "bb22d85a27ffe8bf2086af3c419afcee29c91d23ef6ee98a1588c93fe13d18e4",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/ezmaze/README.md",
+          "role": "judge_only",
+          "sha256": "245827d97fc00a903155957bc5dcf969c7f5a73834faa1131419ba0692521cb1",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2022_crypto_failproof",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/failproof/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "062659b5d7e9b486928e0fc238da6a3bb06c30ef311cdc440b9b95170762a1a9",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/failproof/metadata/solution/challenge/app/flag.py",
+          "role": "judge_only",
+          "sha256": "42fd8e785ee486cd6a9637d934be92babae74e85eedf21ef437725e393231ce3",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/failproof/metadata/solution/challenge/app/source.py",
+          "role": "judge_only",
+          "sha256": "602c8cc10f5bf7d5538ab2c33f6a2a075121c3431b1d71cd2c9b937f0e9c6164",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/failproof/metadata/solution/challenge/Dockerfile",
+          "role": "judge_only",
+          "sha256": "82159224ba255e0330f60305413e641f75f0875c301cdb251f35fbd86c52c463",
+          "mime_type": "application/octet-stream"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/failproof/metadata/solution/challenge/xinetd",
+          "role": "judge_only",
+          "sha256": "d05d810990d3bbf0b8a65a576ea8bd471d6d4efd814aab12cd5fbc6443c9b111",
+          "mime_type": "application/octet-stream"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/failproof/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "b832f0ec413228ab33470ed77e246c18a3d5a91e3c751b576b4e88d7da34256c",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/failproof/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "b0d50d66f7adc8c00dd39eddd501a48c553d4baeafa6baf2431da198a7c92c51",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/failproof/metadata/solution/solve_lp.py",
+          "role": "judge_only",
+          "sha256": "088e98719446e540748073560cd25ed0304f93e3b23d1f42710e35567b579d6f",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/failproof/README.md",
+          "role": "judge_only",
+          "sha256": "a6943c2e0c9b1dad132730ab8c95fe8cccef9d9b46c215b43fa79e0d88d2ef16",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2022_crypto_robust-cbc",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/robust-cbc/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "6bff329117c3653448f54ec1d06f4b0f1273dfacf8b5529d06bef45b551cf9d4",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/robust-cbc/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "d4518e22f8546aa5eedc65a978879ff4fb4c8756bb65922a71346ddaec13a0bc",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/robust-cbc/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "43e92114eb56d6e1cda9f6cb004dd87e266d6f196b73dab1bfa16dff8ef5d5e8",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/robust-cbc/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "218a92223e8b50201acdd4727fc016bf5949e4b87d784cb2cbbc95cd84b7cf52",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/robust-cbc/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "03fda2703f9509a83747d0052b85718d9b650848ef3fc1e1f496ee187e2df74b",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/robust-cbc/README.md",
+          "role": "judge_only",
+          "sha256": "22dbbf6e0ceb266831febe10498f1e179ae899b483007f7f9a180b1bd64afb4d",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package.",
+        "Initializer copies no files despite metadata promising Dockerfile, xinetd and app/server; promised contestant files remain unresolved."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2022_reverse_matrix-lab-2",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/reverse/matrix-lab-2/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "753ebca69c9004bdb4673175de41fd1c5722ba95fb83fb60e9265ea7bed7124f",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/reverse/matrix-lab-2/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "31b10ded81b5d5ad24aff24c7fbbcde0527e36e2681c3af2b9414bade60cc36a",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/reverse/matrix-lab-2/metadata/solution/pyinstxtractor.py",
+          "role": "judge_only",
+          "sha256": "7662c09589380a7d69faf99477754a990082be8b396a71a51f1a55915dc8390b",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/reverse/matrix-lab-2/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "8b35cf343a02e1fb19e777e6d30ce3fd45787ded07b9ecc508cc541fa02fa23d",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/reverse/matrix-lab-2/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "e30dddf0c682c9cd2cbe04f12633311f43a3d4890371decaf42c5eb4aac2bfb8",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/reverse/matrix-lab-2/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "fb473392f09997be4824652d42115f4704e097f0153fcb17ebf0cdef9b230944",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/reverse/matrix-lab-2/README.md",
+          "role": "judge_only",
+          "sha256": "283cfd448877a523b5a9f6d916a87f863ce1270082a7af0be20a81bf44a790b0",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_crypto_noisier-crc",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisier-crc/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "6b0face3e79611eef7fc4f917e12cb566d0f26dabac544428f486d0b1330007e",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisier-crc/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "a4a0beb86263bd2a7bb93b38975acaa24a57f5c3af0c39460b6fbede1d3e3af2",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisier-crc/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "43e92114eb56d6e1cda9f6cb004dd87e266d6f196b73dab1bfa16dff8ef5d5e8",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisier-crc/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "a211a12a51b45b14e18490d21ab19b12c1b3aac6ccb5eccc5fee51d30516e3a5",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisier-crc/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "63fe6493d5bc07da0438f44a2cfaabd6fcd416c0ddc4aeae1cfd1c1ad4def12e",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisier-crc/README.md",
+          "role": "judge_only",
+          "sha256": "3a9e55c5b768fe26b839bdfd766d191c942c5a898dcb497b67f86dd2560bb7b6",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_crypto_noisy-crc",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisy-crc/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "5f802292a074b514cb6966f75464276edfc0e57e0b5bfd42261a0e74b773dc47",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisy-crc/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "73dd89190f6119d51104ae3104f39a56945b3cc0f360f00b91e6450254187f95",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisy-crc/metadata/solution/new_solve.py",
+          "role": "judge_only",
+          "sha256": "85a522b583599e7d83086fa100f8944b224f884bcbcf02665fab8199b465ae07",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisy-crc/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "7ac25b4702c73eaea0d3acdf821ea7ad558c2f96ab126c1a067e062571525dec",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisy-crc/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "24c05f4360a635da0646741b3ce3ff3089aadb74fb5d08729f2fddb7a5fc3e53",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisy-crc/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "34cf0f8c8122e2186362cd622bc710d7783d74a56aabe9e253edfa86a8a2c655",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisy-crc/metadata/solution/solve.sage",
+          "role": "judge_only",
+          "sha256": "8d6fff97f9c131c097371c6ab333286841dc67e2da846e845079513657abf45b",
+          "mime_type": "application/octet-stream"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisy-crc/metadata/solution/solve.sage.py",
+          "role": "judge_only",
+          "sha256": "d8f3bda75c33b8da8157683abbb6e59e94da3d64f33c16ddc919792a7505315a",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisy-crc/README.md",
+          "role": "judge_only",
+          "sha256": "1aacd7c5e47b666566c5801537e33227c4f045e8c0f68f05f1cf8c802da8dd9b",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_crypto_randsubware",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/randsubware/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "d3b5c6276c5b3b5b837f64187c3617ed96d3ca599be69414f167059ea1cd351c",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/randsubware/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "3d0bdce7f31bf88ec9a68994a6db172277c6d7c9b721b2dd67c96a378934f375",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/randsubware/metadata/solution/README.md",
+          "role": "judge_only",
+          "sha256": "925ffc8ef71f73ecbf7eaf48b62ca62c6f9678c352ae7f4f4c800d78798d8bf3",
+          "mime_type": "text/markdown"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/randsubware/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "6dfdaa2ab1e69c712ca3c067e18d08972a55323916fee4a13eca373886702bcc",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/randsubware/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "4b4388c1edd7b4e96391ce44d3c84081ad8d4df4c735f99eea96bd2b593a97e3",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/randsubware/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "30ced72ce4055881d459c653014cb14d3ceb5ce2710da112b07115013956faab",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/randsubware/metadata/solution/solve_with_lib.py",
+          "role": "judge_only",
+          "sha256": "92bf84ab4672dfed7b211b72c617bacb5d0355e31f3eda7fe03c171a5dd66586",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/randsubware/README.md",
+          "role": "judge_only",
+          "sha256": "50fa10a874db56957aa9e43a5242908b85d9b0216c9e674176f4c603b1b6b481",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package.",
+        "Initializer creates a Docker container despite blank target_host; protected flag access and target connection remain unresolved."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_forensics_eval-me",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/forensics/eval-me/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "379595122982a8618bc1fca0c784a7f8b2a944ee9acb04c63424518b341c48a4",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/forensics/eval-me/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "6e3f45b3a2d9277f01f7d699116b76cd52848764d599f4b96f8da3af26739a1e",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/forensics/eval-me/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "fb79ff9cd1286ae566da1d8cfb638e61921cdd1c80253de7d1c8f3fca53dacd8",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/forensics/eval-me/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "e32b025379c314dc4048f546f889b72e4ade02e015de557b3e3aefb6a8237458",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/forensics/eval-me/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "d82651651bc7b862f30413ce263496bcde13e57c7501dbe4cd9d81e6bef83697",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/forensics/eval-me/README.md",
+          "role": "judge_only",
+          "sha256": "fb67796ea8187758b3417e44daf42c6cd57c347beb41048a17a395fcae02bdf0",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_misc_just-another-pickle-jail",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/misc/just-another-pickle-jail/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "418ffe667fa27253ca2e716d20a9ffd386f4b66ee787e61b3c51bc00ce3e9f42",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/misc/just-another-pickle-jail/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "d67762b1460015997745282d6c14066c5550fc2a0158064d55bccd9219a544dd",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/misc/just-another-pickle-jail/metadata/solution/gen-pkl.py",
+          "role": "judge_only",
+          "sha256": "b321d5e1ba6159ee6b48e25921192f36eb8a7a8e1a4812c8cac9cb9d13b02d45",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/misc/just-another-pickle-jail/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "74cd7102be275c5aa31eb2f2fb697e61502d142e4e476492a98d6b18ad6d0cde",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/misc/just-another-pickle-jail/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "baf51cc9f17a8d6dee5b50cb9c572fbc89f0f58e81d740df8dad267ef899bced",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/misc/just-another-pickle-jail/README.md",
+          "role": "judge_only",
+          "sha256": "40d75910b9443b238296c0e00f15014b774fce7c0eb8f2a1a1376ab3d91e16c0",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_pwn_algorithm-multitool",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/algorithm-multitool/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "a2cba2f0c70d27d27e7854c9ec640f12edce2e29fb605deafc0f55ca475d4864",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/algorithm-multitool/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "0ac2ca81ea454530199a24fe00ffb70802550df01bfc90cb85a24756bda5db20",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/algorithm-multitool/metadata/solution/multitool",
+          "role": "judge_only",
+          "sha256": "5c5cd9cfa910a9b30b351d815fd68d10b65cb4ebf8bdfa262ab3a23dc967e2c0",
+          "mime_type": "application/octet-stream"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/algorithm-multitool/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "32a34a13d73839018a885d3f8747eae496f654975499c07b26fd153e93532763",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/algorithm-multitool/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "94a2c840fd00caeb65b02b44739e408133a902cd8ed4b9549e591f52b1df1916",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/algorithm-multitool/README.md",
+          "role": "judge_only",
+          "sha256": "52d7054938e5731f4dceb8ceb48d1290cbfca850f1a73f3b76749f4d6ab8ebee",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_pwn_network-tools",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/network-tools/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "80f2af6015ad32f62fed965aced4abae756ac34e3f8421d63f6f6d143563a089",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/network-tools/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "8af41be259730a101d64b569d8af5893a41dbab7d75889d43bab5c284b3eded6",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/network-tools/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "9d0f3b15a3ac2f017adf4ac24731bfaa16b299fc38f8796dd1ff8fd11b5699c1",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/network-tools/metadata/solution/solve_zafirr.py",
+          "role": "judge_only",
+          "sha256": "ee70984c01457bcd90cf7d2e0066c6404fc7764f3f76b45095837bf43d79549b",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/network-tools/README.md",
+          "role": "judge_only",
+          "sha256": "a9fbd0115a870b492117a1e04517595dee962bade8f3100ef13f87aff628832f",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_pwn_text-sender",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/text-sender/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "5febcafa6144c4a048a943ddd148bd7016ac9abb45e665f679450ff872a1a0fd",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/text-sender/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "dd4fd8d92fe7db4cbcd85c3e95e0e7c8ec9be18655082d8d3eb69133f3d8521e",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/text-sender/metadata/solution/ld-2.32.so",
+          "role": "judge_only",
+          "sha256": "ecab4e584960d16aa97ae4d9366cf7a9ec604a8e0ba9d05c5e66ac6abe2abab5",
+          "mime_type": "application/octet-stream"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/text-sender/metadata/solution/libc-2.32.so",
+          "role": "judge_only",
+          "sha256": "7c6c29415611d86c4c7fc05bb3c11d6ec30b25d9fca0b1e75ae7dd2b6b96267c",
+          "mime_type": "application/octet-stream"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/text-sender/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "6e0aedff9722361883fb8111603e9aa194e1ffc2c8ed469c30e32c78958364ad",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/text-sender/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "227eae7091b1c95e54694df72d2b4e832d9fc718d54e9ab31d14027c3deea928",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/text-sender/metadata/solution/textsender",
+          "role": "judge_only",
+          "sha256": "530aab6f6e5ee61bd66ee017507ba86594cbc98d83a2a4b8065012b516cd779b",
+          "mime_type": "application/octet-stream"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/text-sender/README.md",
+          "role": "judge_only",
+          "sha256": "3a3df63ffd5d235b52ae582a0cfbec24546c4da46d5765c4ff741b09d1ca4113",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_reverse_guardians-of-the-kernel",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/reverse/guardians-of-the-kernel/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "018979ba53c38f2e58614bef0f464db2ce5e20f5545eda1021bf7a10ee78af43",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/reverse/guardians-of-the-kernel/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "3b68d6d5e76f85748baa646c2014bfcd65b58f1d917a21c6b4aae800a98d669e",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/reverse/guardians-of-the-kernel/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "c1a9db3ac60bcc8daabc697d14f32e2677432a741e38c8a6789786d0a86e2b0b",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/reverse/guardians-of-the-kernel/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "fe1aefc01dae97d5fae68064c55b7cc683d6d2957d355d7bc70f1044c4235155",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/reverse/guardians-of-the-kernel/metadata/solution/solver.py",
+          "role": "judge_only",
+          "sha256": "73e00b177f7f1c09e383645ecd691a1ab5bfc5534273920d5ea44118a81682e2",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/reverse/guardians-of-the-kernel/README.md",
+          "role": "judge_only",
+          "sha256": "fc93b5169c2b89da060d44980eb0898f4c81304675ed6bbf2214b9d76f188fd1",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original gzip/CPIO archive is delivered intact; the initializer's Linux CPIO extraction is not reproduced here."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_web_chunky",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/web/chunky/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "f9b1f4a2c4d386ba4117cab8be66ac1f09746c483f1f5de77404299eae2dd02e",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/web/chunky/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "f5ab081bed91ae9f18f24841c3173dd08518a9cb01470f39cf0d83f6c99861b7",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/web/chunky/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "10d13ed3cad76dc3d2b7a83846942d46bf7f50daefe565e5937efb7025468602",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/web/chunky/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "b72ff1d06d4d7052e74971e9ef0bd4b2bdcc022c1bbb2198060ed39425f2d49f",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/web/chunky/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "b4ae135c02fe0a5513128f2236ae058f1b77e843210ecfe9b4e6a1a6e8ffbd49",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/web/chunky/README.md",
+          "role": "judge_only",
+          "sha256": "dee9415ceaafb51890eafbb68a82315077c1594e5ce705aaa2e4e4a925a7ffbe",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package.",
+        "Use the publisher dist tree instead of the initializer's server-side challenge tree; runtime equivalence remains unverified.",
+        "Initializer-distributed files containing the final server flag were withheld: challenge/docker-compose.yml"
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_web_frog-waf",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/web/frog-waf/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "4f0c7b7e3174264b3c9d21ddb9ce98a7582cf022c541c8c9c8a7a7e93334e7b7",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/web/frog-waf/metadata/solution/exploit.py",
+          "role": "judge_only",
+          "sha256": "f21efd23c04a870cd6cc0c0671a715eb857e08f676b6093503d5c76f06f22a2d",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/web/frog-waf/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "cf66d3f43dddec789a1d67dce2f85f4bdec88f7766ba094fbb540023b42c92a5",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/web/frog-waf/metadata/solution/README.md",
+          "role": "judge_only",
+          "sha256": "63b3e5558f6f749c5882ab1e274583aa1767865eb76cb6f51b5bea89b93e329e",
+          "mime_type": "text/markdown"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/web/frog-waf/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "46d5fe51a2c429c12c87e6024d8ab4cf23b25bc50f9136aa5904bfe769419292",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/web/frog-waf/README.md",
+          "role": "judge_only",
+          "sha256": "0e8a86b229aeebc3f07d5d2d4bd263161fafa777c21885d44218cc75739b7586",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package.",
+        "Initializer copies no files; the explicitly published dist source is delivered. Server-side real flag stays hidden."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_crypto_Hard_Permuted",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Hard] Permuted/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "08d2519a7bb4b65e2d4def13c09a45cda341fd61b7f6e45180e3de092dc25c9a",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Hard] Permuted/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "04433f414995154a8439a9bd71471594e1ed817b4a3dd25f7ffe671047070676",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Hard] Permuted/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "6dfdaa2ab1e69c712ca3c067e18d08972a55323916fee4a13eca373886702bcc",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Hard] Permuted/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "91a8a1470f5ce001cecf08a5fabbded58b76b4bf739c5438104c0591e320ab9f",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Hard] Permuted/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "3b229561b58b0e2b51fcae9c3a5a91b4fe68d5ea95fee50b3a862d9f0ed56b37",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Hard] Permuted/README.md",
+          "role": "judge_only",
+          "sha256": "bd5203948d07c5ea9091c6fd69d00205aacd60aff3c49610185f5d89ac9050be",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_crypto_Medium_Partial_Tenacity",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Medium] Partial Tenacity/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "42ed9c9f9c00582b885ecafb301f909d7a5200b40f3053d97aeddb0894efd86c",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Medium] Partial Tenacity/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "0b5ad12b5ea7f63bdb1c4756690e88c8d11bfd7d7f035af9bff430047e7d818f",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Medium] Partial Tenacity/metadata/solution/solution.py",
+          "role": "judge_only",
+          "sha256": "b0ec1c69e4e3094b8c921eaee818b17adbdb26219618f2b80cefc1f08d7653f2",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Medium] Partial Tenacity/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "1dc4f516858691c9fc815e251e2d74080f1451d253545c889b0d133caa0deb61",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Medium] Partial Tenacity/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "dae262c14f2f95e5e8f8d66f4ff435a853db7f137a5730d81dcbc8ab66458a46",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Medium] Partial Tenacity/README.md",
+          "role": "judge_only",
+          "sha256": "3c87b8b74e6535d70bbd78c4bbdf61afaae7830fea0c91408ca8f841ed450c63",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_crypto_Very_Easy_Dynastic",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Dynastic/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "fbcd7bc8642fcb2fd1cf64226de45dc20b85beaeea653695ad0f646736d5ce5b",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Dynastic/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "7f88cb699084b60752f81897d5160dfda457a8503b72e29481e0375f324f6c47",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Dynastic/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "77cbaa6c81484e2e0198b7b28ca6f388595bb497689dec4e916d16b360e16f5f",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Dynastic/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "ffa3fc91c8e3922396ec94b716aff6c10807819f38026177c4b3670efbc6b891",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Dynastic/metadata/solution/solver.py",
+          "role": "judge_only",
+          "sha256": "0451caf51045c18621abd383fe9ac2fcf0ee7bac92af1280fdc817c4afb89a56",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Dynastic/README.md",
+          "role": "judge_only",
+          "sha256": "08b78473674eb0553a50a37a279e809155bce4637423b7dcdf969cd31cbf475b",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_crypto_Very_Easy_Makeshift",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Makeshift/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "ac432fa865cb3bb9d766310552c7c3cc92c1decede9038f96bf61e294089ba60",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Makeshift/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "a91ec05e22c7526d480aa855773ee5faa9fabbb706e1fb11968be1a112df550f",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Makeshift/metadata/solution/output.txt",
+          "role": "judge_only",
+          "sha256": "a91ec05e22c7526d480aa855773ee5faa9fabbb706e1fb11968be1a112df550f",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Makeshift/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "10b55588ce1f2764d1101c6b01778287c0bb012faf71c490eb240cf4d143e04b",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Makeshift/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "7f709e2a329baf57818a84e8562f010a9b12cda9060c38bc3211a4e0c20d5f60",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Makeshift/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "a17a455a2bd1e365a7a986de6ba73245078c2c6196cea3efb624545ec80ad874",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Makeshift/metadata/solution/source.py",
+          "role": "judge_only",
+          "sha256": "b20f693dfcfecc4036839d15f389db351ef9984f3bec3b520621a3403d0eb7f0",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Makeshift/README.md",
+          "role": "judge_only",
+          "sha256": "a981a3083b04e370052427b0c70a9ba67cbc541218a3e54310edf34c9e369131",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_crypto_Very_Easy_Primary_Knowledge",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Primary Knowledge/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "274f94f92aca7bada8bf0d7f30df6b81ff3a001afacc4edfac075ab6b1e3ea13",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Primary Knowledge/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "af2cc097a1407a07489cfc1ce250d3f972f9885a05d9d77cd6408111a5f98e75",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Primary Knowledge/metadata/solution/output.txt",
+          "role": "judge_only",
+          "sha256": "8cd9a0efb839ae300735030b76396adfdbdf497a002074759a28417df74d9592",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Primary Knowledge/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "6dfdaa2ab1e69c712ca3c067e18d08972a55323916fee4a13eca373886702bcc",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Primary Knowledge/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "58edb9081a3dbed7841feb4288d6c2e53218e25dc5be4e35fcfadf3a994e1806",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Primary Knowledge/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "a63658d3af7b06ee5970261a323fe108c40f18e03324e37f3d9ad56c51ff888e",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Primary Knowledge/metadata/solution/source.py",
+          "role": "judge_only",
+          "sha256": "153374562ebae4377041228e9835813f0a5517c3bf8c87f2c372b971a412f685",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Primary Knowledge/README.md",
+          "role": "judge_only",
+          "sha256": "ba2ac22156932de436c34c41852203c3611f4af8b55bb032f74dc1a7b07eda31",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_forensics_Very_Easy_It_Has_Begun",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/forensics/[Very Easy] It Has Begun/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "30e14838467d1f39a681a8584815445799c182170cdc11eb7e8096409731dd04",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/forensics/[Very Easy] It Has Begun/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "36ca1548d23459eeadc057430623d52bf910b2404a7fb68dcd3beb47814181f9",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/forensics/[Very Easy] It Has Begun/metadata/solution/script.sh",
+          "role": "judge_only",
+          "sha256": "9f3e001c951393afca04e05eb6b905aec0f69ef289319ebba4dd7d7c244c9d0b",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/forensics/[Very Easy] It Has Begun/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "db0ef09e2fafec717a2300052848f6d3bb7f256fc4ae1d2c7e5221a41eb85ceb",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/forensics/[Very Easy] It Has Begun/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "d2c399f63cef7ede2b1d14c9ecc5fcbb6d73b36d723f865806e2ae5626cbc5f6",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/forensics/[Very Easy] It Has Begun/Readme.md",
+          "role": "judge_only",
+          "sha256": "e2341f37273af89b78680cc1aa224cea3946bec8f1ed8c63651aae3fea7fa903",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_forensics_Very_Easy_Urgent",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/forensics/[Very Easy] Urgent/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "6312a5ea52dd2570d3b3ef5efe0728255f39c0b69db7407067ec1df9ae1b41e3",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/forensics/[Very Easy] Urgent/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "a5d2823a7309b3f28664575300cc9e7ec85167b3a07431ea14a93055b0e1976b",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/forensics/[Very Easy] Urgent/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "ea6e14352e780a8c653bf46ee98aced09d0e4ae0f24c66cac66635458d83e616",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/forensics/[Very Easy] Urgent/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "2c8b4fb40ff23709618ecb56ec6cf0773003187970ca2f3ae1c96091edeadcbe",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/forensics/[Very Easy] Urgent/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "a26c276e95f5efd4e15e87cad01f8c08a892cde127ab87766833c6509197c057",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/forensics/[Very Easy] Urgent/README.md",
+          "role": "judge_only",
+          "sha256": "8a801923177957d577901bee2355f8306cebee9f8f23e5539e1948eb22c9246a",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_hw_Maze_Very_Easy_",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/hw/Maze [Very Easy]/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "99a2a3a447f4aeaffc8826d82e6a3b14c8b20c8ee91aa09a79c65486bbecc3b0",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/hw/Maze [Very Easy]/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "a3d94e81a0c8821b92f01e8000a629fd880f037fac5fd949c005accfc57a961a",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/hw/Maze [Very Easy]/metadata/solution/solution.py",
+          "role": "judge_only",
+          "sha256": "20b377cf842b85255b5dea00c72e1a989321c29850f2e107e1f90979370be443",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/hw/Maze [Very Easy]/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "00caf89b821865f88e28a20e3eefe015908f5c5eafbb98056df4afb6e0aab2f2",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/hw/Maze [Very Easy]/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "8e8dde262b5059ee6b3202df9f518a5969d874d2f25632cf631022e517109d43",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/hw/Maze [Very Easy]/README.md",
+          "role": "judge_only",
+          "sha256": "fc3e5dcd2983c4118cb7ee0f272a7647f65621f94a9e20b4c9256ece0760b766",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_misc_Easy_Unbreakable",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Easy] Unbreakable/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "3f9163b5d33b3d02ebe341587c880e7f3a436cf87b28ce5885031433abce9395",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Easy] Unbreakable/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "8bec9c8372e48e0a0519bd78476904ea0fae5879024eaddd60642db89c8fe764",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Easy] Unbreakable/metadata/solution/get-pip.py",
+          "role": "judge_only",
+          "sha256": "18bfb5ada66c48b2e7fd31f3c065fc300c93a7229c3bdff28ac657c25da5e621",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Easy] Unbreakable/metadata/solution/solution.py",
+          "role": "judge_only",
+          "sha256": "0c20930e4416774e0211771a296485f821bed0ef3a085d450fc08a0935bdffbb",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Easy] Unbreakable/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "e0c9a28c4ef3e430bf8eac418c0b0086c2ddc11291067ec4ac39aa27b7aeefa3",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Easy] Unbreakable/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "c8bf2d8e8de030ac078c7b9622461971e1b187eaea1c917fc784b3526b7a8190",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Easy] Unbreakable/README.md",
+          "role": "judge_only",
+          "sha256": "4a169713a1c875779ff1eb7bc9788ea7487943298422d6c174b0b07147dd5033",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_misc_Hard_Path_of_Survival",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Hard] Path of Survival/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "188371b583c5cf1297846d13465778c3fb22cd8cd257199e5236974f3f0a1b69",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Hard] Path of Survival/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "e755b1cf30b99a9e98e0d4bb6f0f57c64719b786de16d77160a073cb73d4951b",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Hard] Path of Survival/metadata/solution/htb/consts_sol.py",
+          "role": "judge_only",
+          "sha256": "3279b9441ebb3cead25fd904ec79562e3885a4d393f3ee0ca24c6f135aa2a31e",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Hard] Path of Survival/metadata/solution/htb/game_sol.py",
+          "role": "judge_only",
+          "sha256": "e1245f0591059d995f97911725b5b0667e82d48899a3337ef0a907157a3dc9d2",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Hard] Path of Survival/metadata/solution/htb/pathfinder_sol.py",
+          "role": "judge_only",
+          "sha256": "1a83b75686a0ef7aefadf322e3aec66adb820a20d2b6a3c18552d9fe7bf5c939",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Hard] Path of Survival/metadata/solution/htb/solve.py",
+          "role": "judge_only",
+          "sha256": "26b141d7391278a49699c37e25f64e23c3c36fa54fe04fea5fe48b81e2df8638",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Hard] Path of Survival/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "1a795d1a7594c54ced07abd016a5b68a871ee81cd62e001fc73ae941dd423f24",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Hard] Path of Survival/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "7a9a28f984268a544d75f21b7c7853229d1814c7a78a17db9351750bd821c62d",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Hard] Path of Survival/README.md",
+          "role": "judge_only",
+          "sha256": "7b292026edaf51799af5d765b0d47f74cfd13092091f5b78cd6f788ccd5b6fe8",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package.",
+        "Initializer copies a server build tree containing its flag; that tree is withheld in full pending public-source review."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_misc_Medium_Were_Pickle_Phreaks_Revenge",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Medium] Were Pickle Phreaks Revenge/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "7659c5fe787af6a7855a863454f082a296ecb5e95a1471b8011d50766ebab164",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Medium] Were Pickle Phreaks Revenge/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "c4347f2411ce93e08e3013f300cc09281931764ffc54bb4f7048de589a8d539c",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Medium] Were Pickle Phreaks Revenge/metadata/solution/solution.py",
+          "role": "judge_only",
+          "sha256": "be64810bdbcaab657400da1a3d64f047802b6e34d23c8540bf85797fa60e221a",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Medium] Were Pickle Phreaks Revenge/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "7cdee345e35c05634dafb95a6eb30ace4071f12c67d7a12d5086fddecdf724ec",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Medium] Were Pickle Phreaks Revenge/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "518168913af567a44c7287737a9a5f9976a4252a69695da7154c3b0f0a5200bb",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Medium] Were Pickle Phreaks Revenge/README.md",
+          "role": "judge_only",
+          "sha256": "d5594cef4957f5cfc1c45b3d80a86b71eb81bebf1edeaa2b0d19cd9e137b290d",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_misc_Very_Easy_Character",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Character/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "419e410fdfd71aa55b2c62910b8fbc3fa8e942293133348e75c41a6d43fea4fc",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Character/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "39e5d02f0fd8957976e3987a6c1ae54f5d7d43f84005d4a342ee99ac6d86de35",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Character/metadata/solution/output.txt",
+          "role": "judge_only",
+          "sha256": "2d9ac42b0b741faf5c1e289f6ee7d9ad1b639dc68654512527ab2eddc9b93179",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Character/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "7a78e94c85ff18ca6daad3424b55575d16aa8a5d33b9c39dc141037242ef1d2f",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Character/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "ddd9c742f1ddb835f198f70e9ed98bedbe9935940dc8ff983242438a6bcc3c88",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Character/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "3c129440e68cc89728641fabcea4ad7a99d376c1099dfbf711dfb372d833b083",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Character/README.md",
+          "role": "judge_only",
+          "sha256": "e201790f4dccaf1508d67be60aa9b1748dae51c9c1e87e23408c98cd1e9a6e08",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_misc_Very_Easy_Stop_Drop_and_Roll",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Stop Drop and Roll/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "11d7190e217625da900c35fd020222f57c3714d571700e889eea4bc0b2e170d1",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Stop Drop and Roll/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "4d17a7dfaccd90075a0feeb55b94273c69f7b14d3b5c920f728574c12152a18f",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Stop Drop and Roll/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "3c60ac93df8a476af247f4acb1195bec0f046b69666ef7ec9eec220845c9a90f",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Stop Drop and Roll/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "aaf869cda0de0d4019fc29a6aa3178bc8303f754dc84aa651971076e1a4d7a56",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Stop Drop and Roll/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "a43ce3ac6bd344fb16e5d1494052273205182285581aba674670d4855a2dd9f6",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Stop Drop and Roll/README.md",
+          "role": "judge_only",
+          "sha256": "2e19e815e822305a004177ae2c15192b99e277b326777dbb6c5a063d809723bf",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package.",
+        "Metadata omits target_host and initializer only starts Docker; no connection endpoint or promised Dockerfile input is synthesized."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_pwn_Very_Easy_Delulu",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/pwn/[Very Easy] Delulu/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "6eaa2f817327451f8e982bea8269be5e3975da7ff1a38ad88f885af35ec2930f",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/pwn/[Very Easy] Delulu/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "5f044f381ac6d4e32775ac9bd208772e4887f2950114e578cba3cc1f56bedd59",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/pwn/[Very Easy] Delulu/metadata/solution/htb/delulu",
+          "role": "judge_only",
+          "sha256": "2400f9b552642c9222e823a3788680eabd361fe4b36ae6be55ebcc11dce62f29",
+          "mime_type": "application/octet-stream"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/pwn/[Very Easy] Delulu/metadata/solution/htb/glibc/ld-linux-x86-64.so.2",
+          "role": "judge_only",
+          "sha256": "4d2657934fc7442f86bd1258a7c6440aeab584add04f0c3dae6c6f4610c612f4",
+          "mime_type": "application/octet-stream"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/pwn/[Very Easy] Delulu/metadata/solution/htb/glibc/libc.so.6",
+          "role": "judge_only",
+          "sha256": "bc1a1b62cb2b8d8c8d73e62848016d5c1caa22208081f07a4f639533efee1e4a",
+          "mime_type": "application/octet-stream"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/pwn/[Very Easy] Delulu/metadata/solution/htb/solver.py",
+          "role": "judge_only",
+          "sha256": "1ef8b33fda88f55b49756be86f287a66c0c9f678e55dbdb6c590f6b43f95864a",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/pwn/[Very Easy] Delulu/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "905b29dfe715dc92e56095119e4e73d03a4dff408418615210d6d9c0a3829033",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/pwn/[Very Easy] Delulu/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "d05568143001810a0c5b09e8c9894370792f320f167ff78adc45f0616158c71c",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/pwn/[Very Easy] Delulu/README.md",
+          "role": "judge_only",
+          "sha256": "407ca2f2b3e8d21763e2a2d0994c3d4b2305f6f7a9a1b71707914cee849081f4",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_reversing_Hard_FlecksOfGold",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Hard] FlecksOfGold/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "9b77ee79eddbf4d87e686a46f71d1c1b3a6f201086ad7284528125ae281c8a85",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Hard] FlecksOfGold/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "2d5a48b9158e5fbcea70a42e51471bf36d366848a0f0de6c3e191c6bf5f03731",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Hard] FlecksOfGold/metadata/solution/flecks_patched",
+          "role": "judge_only",
+          "sha256": "a5fc597d2942fb2f6d1ce1059d44547f0c0b349f63ea9e30b72c38f45a70ac97",
+          "mime_type": "application/octet-stream"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Hard] FlecksOfGold/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "d3383135caae4dc112699110f2cb2bf8e06ce73180625e25a2e2ef83f80586ca",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Hard] FlecksOfGold/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "4497ecd75c3ce8f421f6aedc11e313a83825b9179194a27c0ef33850cce24dee",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Hard] FlecksOfGold/README.md",
+          "role": "judge_only",
+          "sha256": "f8bfdb9f17e1b0dda941d21ff881d4870b1d2b1c18f165cfd70c7fa550f5ce30",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "Initializer omits the .zip extension; the actual publisher release/rev_flecksofgold.zip is used."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_reversing_Medium_QuickScan",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Medium] QuickScan/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "72f3a60fb8516430f0ba46fb9bd298eb32fb3749beb2e9a94e0271cc920f2dec",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Medium] QuickScan/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "f7768254c25c999870d5aa57edb36009cad1f4d85a20ec7614cfa4210c434ff9",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Medium] QuickScan/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "c61beec1a95610f46ee2868f0fee9662f393d3514f4c8e7c77fb14afa83ece59",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Medium] QuickScan/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "8acf4609795a35d7d51cc87c421076aca736eb6d26b7078831e0d8d87c388f03",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Medium] QuickScan/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "6065960716cb9698635bb5bb675983da9ce541786e70cad60d7abfa71869f2cc",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Medium] QuickScan/README.md",
+          "role": "judge_only",
+          "sha256": "050d198dd93131da769bfe8d69f2888eb40ad4da99062f3478dc7e51a94faa66",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_reversing_Very_Easy_LootStash",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Very Easy] LootStash/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "40f2b9be59e36d1fa242f33f73cf2b1771e5e60598c32299d0bb0298f55ab187",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Very Easy] LootStash/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "6f96602f7839e6f8bd4faf249ca6b2bb2aa8ddf85e13d431096fa27c577c1446",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Very Easy] LootStash/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "d8f45497ea8d4f299fa433585dddfea5e0e4265940b8176ea62229b0ef6f98d6",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Very Easy] LootStash/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "fc02010485dff8fd0330a844649174e651813c8bf26758fce396ed421e63cf18",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Very Easy] LootStash/metadata/solution/stash",
+          "role": "judge_only",
+          "sha256": "2de89e7ea8347d190dbd9314f8a8f5680678abe03e520a530ecd87c29fb99c72",
+          "mime_type": "application/octet-stream"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Very Easy] LootStash/README.md",
+          "role": "judge_only",
+          "sha256": "80af500ce4cef51a883c13347469c5ca15f5287b2b3cda385b475d023157b479",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_reversing_Very_Easy_PackedAway",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Very Easy] PackedAway/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "7548f9f246a9b9b8dc4d8653f859f86779cdd2982e94065356e3f73fa7a98166",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Very Easy] PackedAway/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "76311cf78e6e290dcbd67bf4bbcbfa952674d32e59dc5999b04848fb4b2bd28c",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Very Easy] PackedAway/metadata/solution/packed",
+          "role": "judge_only",
+          "sha256": "f246f7f5a246db91904a714b1d144f59685c3b27f538d0e6ac78a4c1022aef46",
+          "mime_type": "application/octet-stream"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Very Easy] PackedAway/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "82abff48e10d82a5d3ad2561b41e081c40ef66879b53b5efff5505e3e52e03f4",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Very Easy] PackedAway/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "6bfb8751a812327d76f345e91fd2c9c8ef3fd3153839b2a90041e09db3681a2c",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Very Easy] PackedAway/metadata/solution/upx",
+          "role": "judge_only",
+          "sha256": "746af4b1b8c230641d772d6a1ba645f606ac1e7a43951247477f239f29346fad",
+          "mime_type": "application/octet-stream"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Very Easy] PackedAway/README.md",
+          "role": "judge_only",
+          "sha256": "c078d409e1475130cf6920ddce2b2fd4d48cc67fc33122ad31bf093a875906c4",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_web_Easy_Labyrinth_Linguist",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/web/[Easy] Labyrinth Linguist/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "04149a59dab714521db02160a1601796b10a9f47cd0d998526c4ef99621ca8f3",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/web/[Easy] Labyrinth Linguist/metadata/solution/flag.sh",
+          "role": "judge_only",
+          "sha256": "7dbef608a0bad6e1f12ebe05c5b198b3b59d5e5f6d488540470d3c7a7987a7f6",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/web/[Easy] Labyrinth Linguist/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "9cc26207398243a3ebd77a442bfd37a7e209473ead39932e6975c7d7701bece1",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/web/[Easy] Labyrinth Linguist/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "01a1e02089db7e8879d69e7fa73bbc1c39c58c84438f1a4614ea88b93e4e6318",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/web/[Easy] Labyrinth Linguist/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "d932cb91892c87dd6732563947f25b3787a1ca99300eddf7b95889e9df57574e",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/web/[Easy] Labyrinth Linguist/metadata/solution/solver.py",
+          "role": "judge_only",
+          "sha256": "938a36470465ada507b0eed4bcf7e93284b6cefb97cbbabfb74aa233b4188efc",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/web/[Easy] Labyrinth Linguist/README.md",
+          "role": "judge_only",
+          "sha256": "b272efbc0f44e68a1d187504654f554ad8f685612691cc490479b9850e65e382",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_web_Medium_LockTalk",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+          "sha256": "feb5d1b4750ee7cf42054504b6918f4c278df465adfc4a2613104ff0a7bf5485",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "cybench_upstream_answer_coverage_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/web/[Medium] LockTalk/metadata/metadata.json",
+          "role": "judge_only",
+          "sha256": "4301347677793e3651198179c050cb5ca4b8e1869c3f4981023c2b2abbbb7a3b",
+          "mime_type": "application/json"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/web/[Medium] LockTalk/metadata/solution/flag.txt",
+          "role": "judge_only",
+          "sha256": "56414e7369fcc413ed2e77948f6c3083ad0d6ff0e2ce2be5003021fa91fab3ab",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/web/[Medium] LockTalk/metadata/solution/solution.sh",
+          "role": "judge_only",
+          "sha256": "7f1c46f678bf8e1460548e4fcc7cb397f098704b64d448d2578b40bf9b0b524b",
+          "mime_type": "application/x-sh"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/web/[Medium] LockTalk/metadata/solution/solution.txt",
+          "role": "judge_only",
+          "sha256": "8eea379610c449797412475fa41db80c940d3f7bd1179411b93ddd7bf62b5339",
+          "mime_type": "text/plain"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/web/[Medium] LockTalk/metadata/solution/solve.py",
+          "role": "judge_only",
+          "sha256": "a9663e164a66b7aa7cdbda573a72f9cd88379f96b1111d971010d67b18ffb8a4",
+          "mime_type": "text/x-python"
+        },
+        {
+          "path": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/web/[Medium] LockTalk/README.md",
+          "role": "judge_only",
+          "sha256": "bb671f0b5cf51db99d085123483c382af1e77057f6eaafe7476f172b00acfc80",
+          "mime_type": "text/markdown"
+        }
+      ],
+      "limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

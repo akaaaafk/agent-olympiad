@@ -1,5 +1,3 @@
-# Money for Nothing
-
 Hide 
  Money for Nothing 
 

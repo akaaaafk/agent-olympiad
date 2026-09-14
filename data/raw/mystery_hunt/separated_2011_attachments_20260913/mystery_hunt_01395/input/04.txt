@@ -1,0 +1,71 @@
+> load game
+> east
+> south
+> east
+> stairs
+> east
+> south
+> west
+> south
+> east
+> south
+> exit
+> west
+> fight slime
+> north
+> east
+> cross bridge
+> east
+> fight slime
+> fight slime
+> south
+> fight magician
+> east
+> cross bridge
+> east
+> south
+> fight ghost
+> east
+> south
+> fight magician
+> east
+> south
+> enter cave
+> heal
+> heal
+> south
+> east
+> south
+> east
+> south
+> sleep dragon
+> fight dragon
+> fight dragon
+> fight dragon
+> fight dragon
+> south
+> west
+> south
+> east
+> fight ghost
+> north
+> door
+> fight scorpion
+> north
+> talk
+> outside
+> return
+> enter castle
+> north
+> east
+> north
+> west
+> north
+> west
+> stairs
+> west
+> north
+> west
+> north
+> talk
+> get ???????????? (3)

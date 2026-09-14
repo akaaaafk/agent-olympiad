@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Plotlines</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=1000">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssreset/reset-min.css">
+<link rel="stylesheet" type="text/css" href="../../styles/global.css">
+<link rel="stylesheet" type="text/css" href="../styles/world.css">
+</head>
+
+<body>
+<div id="centralcolumn" class="lightback">
+<div id="puzzletopbar">
+<div style="float:left;">
+<ul id="navbar">
+	<li><a href="../" title="Back to Katamari">Back to Katamari</a></li>
+	<li><a href="#" style="text-decoration:none;">Info ></a><ul>
+	   <li><a href="../introduction.html" title="Introduction">Introduction</a></li>
+           <li><a href="../../contact/" title="Contact HQ">Contact HQ</a></li>
+	   <li><a href="../../events/" title="Events">Events</a></li>
+           <li><a href="../../answerboard/" title="Answer Board">Answer Board</a></li>
+	   <li><a href="../../achievements/" title="Achievements">Achievements</a></li>
+	   <li><a href="../../updates/" title="Updates">Updates</a></li>
+	   </ul>
+	</li>
+	<li><a href="answer/" title="View solution">View solution</a></li>
+</ul>
+</div>
+<div id="pointsinfo" style="float:right;">
+</div>
+<script type="text/javascript" src="../../assets/points.js"></script>
+</div>
+
+<div id="puzzlecontent">
+<div id="puzzletitle"><p><img src="../images/nub.png" class="iconimage">Plotlines</p></div>
+
+
+<p><a href="assets/1.gif"><img width="900" src="assets/1.gif"></a></p>
+<p><a href="assets/2.gif"><img width="900" src="assets/2.gif"></a></p>
+<p><a href="assets/3.gif"><img width="900" src="assets/3.gif"></a></p>
+<p><a href="assets/4.gif"><img width="900" src="assets/4.gif"></a></p>
+<p><a href="assets/5.gif"><img width="900" src="assets/5.gif"></a></p>
+<p><a href="assets/6.gif"><img width="900" src="assets/6.gif"></a></p>
+<p><a href="assets/7.gif"><img width="900" src="assets/7.gif"></a></p>
+<p><a href="assets/8.gif"><img width="900" src="assets/8.gif"></a></p>
+
+</div>
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

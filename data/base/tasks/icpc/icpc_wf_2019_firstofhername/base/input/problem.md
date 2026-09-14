@@ -1,5 +1,3 @@
-# First of Her Name
-
 Hide 
  First of Her Name 
 

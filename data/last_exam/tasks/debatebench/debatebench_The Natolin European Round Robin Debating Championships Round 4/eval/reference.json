@@ -3,8 +3,74 @@
   "gold_pointer": "data/benchmarks/debatebench/benchmark.json#debatebench_The Natolin European Round Robin Debating Championships Round 4.gold_label",
   "has_gold_answer": false,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/The Natolin European Round Robin Debating Championships Round 4.txt",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+    "deliverable": "bp_debate_speeches",
+    "limitations": [
+      "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+      "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+      "An event-and-round verified original motion/infoslide packet is still missing."
+    ],
+    "pre_reuse_evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+      "deliverable": "bp_debate_speeches",
+      "limitations": "The motion/infoslide and a verified transcript-to-score mapping are missing. The completed transcript cannot serve as both prompt and contestant output."
+    },
+    "rubric_reuse": {
+      "source_competition": "debatebench",
+      "target_competition": "debatebench",
+      "target_year": 2019,
+      "source_rubric_paths": [
+        "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+      ],
+      "source_editions": [
+        "existing same-competition rubric; edition unspecified"
+      ],
+      "official_year_equivalence": false,
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+    },
+    "scorecard_path": "data/rubrics/task_scorecards/debatebench.json",
+    "scorecard_key": "debatebench_The Natolin European Round Robin Debating Championships Round 4",
+    "historical_reference_path": "data/raw/debatebench/recovered_20260913/a5be8b9f2ace/historical_scores.json",
+    "historical_score_identity": "matched",
+    "header_year_review": {
+      "event_date_basis": "organizer event page, corroborated by the contemporaneous first-edition report",
+      "source_evidence": [
+        {
+          "key": "event",
+          "url": "https://www2.coleurope.eu/events/european-round-robin-debating-championships",
+          "path": "data/raw/debatebench/header_year_review_20260913/event_source_review.json",
+          "sha256": "b994f905d2722a8ebdfa7fcb40f1a4bce527db6d12a24d11626a92fd1e1989a0",
+          "mime_type": "application/json",
+          "checked_at_utc": "20260914T012652Z"
+        },
+        {
+          "key": "report",
+          "url": "https://www.achteminute.de/en/20190709/tel-aviv-wins-european-round-robin/",
+          "path": "data/raw/debatebench/header_year_review_20260913/report.html",
+          "sha256": "8c6660922b3abb432bea0329df9137de1eb4c574c19445006ee62e5d99c1857b",
+          "mime_type": "text/html",
+          "checked_at_utc": "20260914T012652Z"
+        }
+      ],
+      "identity_basis": "Same named Natolin tournament series; exact pre-speech headings in rounds 1-3 agree with the report, which also lists rounds 4-5. Round 4 wealth and round 5 Iran-policy subject matter were read for consistency, not used to invent motion wording.",
+      "original_transcript": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/The Natolin European Round Robin Debating Championships Round 4.txt",
+      "original_transcript_sha256": "e66e8b618c5f59ec41d6c9674d98d5b938b35e99edcd91c2fcf5b7ade538cde9",
+      "scores_speakers_and_full_video_not_recertified": true,
+      "previous_year": 2017,
+      "event_year": 2019,
+      "event_dates": [
+        "2019-07-05",
+        "2019-07-07"
+      ]
+    }
+  },
+  "rubric_path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+  "deliverable": "bp_debate_speeches"
 }

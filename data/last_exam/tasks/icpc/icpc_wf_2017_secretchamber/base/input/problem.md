@@ -1,5 +1,3 @@
-# Secret Chamber at Mount Rushmore
-
 Hide 
  Secret Chamber at Mount Rushmore 
 

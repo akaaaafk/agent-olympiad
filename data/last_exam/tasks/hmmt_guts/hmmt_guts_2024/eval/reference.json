@@ -1,0 +1,23 @@
+{
+  "visibility": "hidden_until_grade",
+  "gold_pointer": "data/benchmarks/hmmt_guts/benchmark.json#hmmt_guts_2024.gold_label",
+  "has_gold_answer": true,
+  "evaluator_id": "gold_answer_v1",
+  "evaluator_status": "ready",
+  "solution_file": "data/raw/hmmt_guts/feb/2024/solutions.pdf",
+  "evaluation": {
+    "evaluator_id": "gold_answer_v1",
+    "status": "ready",
+    "rubric_path": "data/rubrics/hmmt_guts_2024_official_weights_v1.json",
+    "judge_assets": [
+      "data/raw/hmmt_guts/feb/2024/solutions.pdf"
+    ],
+    "deliverable": "numbered_answer_sheet",
+    "limitations": "Static weighted answer grading; progressive release, hand-in timing, and live standings are not reproduced.",
+    "scorecard_path": "data/rubrics/task_scorecards/hmmt_guts.json",
+    "scorecard_key": "hmmt_guts_2024",
+    "score_basis": "Sum of printed per-problem weights for correct curated answers; static packet only."
+  },
+  "rubric_path": "data/rubrics/hmmt_guts_2024_official_weights_v1.json",
+  "deliverable": "numbered_answer_sheet"
+}

@@ -1,5 +1,3 @@
-# Posterize
-
 Hide 
  Posterize 
 

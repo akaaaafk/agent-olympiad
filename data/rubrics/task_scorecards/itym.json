@@ -1,0 +1,1027 @@
+{
+  "schema_version": "1.1",
+  "dataset": "itym",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "itym_2009",
+      "year": 2009,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/itym_research_report_100_v1.json",
+          "sha256": "43e8eacaff203db33c7ed799f894271015353949a1c7614ab8f88ed3180ae1a9",
+          "format": "numeric_rubric",
+          "rubric_id": "itym_research_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "physics_or_theory",
+              "name": "Scientific / theoretical quality",
+              "max_score": 35,
+              "observable": true,
+              "description": "Core theory, models, and claims are sound against the problem statement."
+            },
+            {
+              "id": "investigation",
+              "name": "Investigation design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Experiments, analysis plan, or research protocol are appropriate and complete."
+            },
+            {
+              "id": "evidence",
+              "name": "Evidence & results",
+              "max_score": 20,
+              "observable": true,
+              "description": "Reported evidence supports the conclusions."
+            },
+            {
+              "id": "presentation",
+              "name": "Report / fight materials",
+              "max_score": 20,
+              "observable": true,
+              "description": "Written materials are clear enough for a jury or opponent team."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live oral fight",
+            "physical experiment fidelity",
+            "months-long preparation process"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "itym_2010",
+      "year": 2010,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/itym_research_report_100_v1.json",
+          "sha256": "43e8eacaff203db33c7ed799f894271015353949a1c7614ab8f88ed3180ae1a9",
+          "format": "numeric_rubric",
+          "rubric_id": "itym_research_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "physics_or_theory",
+              "name": "Scientific / theoretical quality",
+              "max_score": 35,
+              "observable": true,
+              "description": "Core theory, models, and claims are sound against the problem statement."
+            },
+            {
+              "id": "investigation",
+              "name": "Investigation design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Experiments, analysis plan, or research protocol are appropriate and complete."
+            },
+            {
+              "id": "evidence",
+              "name": "Evidence & results",
+              "max_score": 20,
+              "observable": true,
+              "description": "Reported evidence supports the conclusions."
+            },
+            {
+              "id": "presentation",
+              "name": "Report / fight materials",
+              "max_score": 20,
+              "observable": true,
+              "description": "Written materials are clear enough for a jury or opponent team."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live oral fight",
+            "physical experiment fidelity",
+            "months-long preparation process"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "itym_2011",
+      "year": 2011,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/itym_research_report_100_v1.json",
+          "sha256": "43e8eacaff203db33c7ed799f894271015353949a1c7614ab8f88ed3180ae1a9",
+          "format": "numeric_rubric",
+          "rubric_id": "itym_research_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "physics_or_theory",
+              "name": "Scientific / theoretical quality",
+              "max_score": 35,
+              "observable": true,
+              "description": "Core theory, models, and claims are sound against the problem statement."
+            },
+            {
+              "id": "investigation",
+              "name": "Investigation design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Experiments, analysis plan, or research protocol are appropriate and complete."
+            },
+            {
+              "id": "evidence",
+              "name": "Evidence & results",
+              "max_score": 20,
+              "observable": true,
+              "description": "Reported evidence supports the conclusions."
+            },
+            {
+              "id": "presentation",
+              "name": "Report / fight materials",
+              "max_score": 20,
+              "observable": true,
+              "description": "Written materials are clear enough for a jury or opponent team."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live oral fight",
+            "physical experiment fidelity",
+            "months-long preparation process"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "itym_2012",
+      "year": 2012,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/itym_research_report_100_v1.json",
+          "sha256": "43e8eacaff203db33c7ed799f894271015353949a1c7614ab8f88ed3180ae1a9",
+          "format": "numeric_rubric",
+          "rubric_id": "itym_research_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "physics_or_theory",
+              "name": "Scientific / theoretical quality",
+              "max_score": 35,
+              "observable": true,
+              "description": "Core theory, models, and claims are sound against the problem statement."
+            },
+            {
+              "id": "investigation",
+              "name": "Investigation design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Experiments, analysis plan, or research protocol are appropriate and complete."
+            },
+            {
+              "id": "evidence",
+              "name": "Evidence & results",
+              "max_score": 20,
+              "observable": true,
+              "description": "Reported evidence supports the conclusions."
+            },
+            {
+              "id": "presentation",
+              "name": "Report / fight materials",
+              "max_score": 20,
+              "observable": true,
+              "description": "Written materials are clear enough for a jury or opponent team."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live oral fight",
+            "physical experiment fidelity",
+            "months-long preparation process"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "itym_2013",
+      "year": 2013,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/itym_research_report_100_v1.json",
+          "sha256": "43e8eacaff203db33c7ed799f894271015353949a1c7614ab8f88ed3180ae1a9",
+          "format": "numeric_rubric",
+          "rubric_id": "itym_research_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "physics_or_theory",
+              "name": "Scientific / theoretical quality",
+              "max_score": 35,
+              "observable": true,
+              "description": "Core theory, models, and claims are sound against the problem statement."
+            },
+            {
+              "id": "investigation",
+              "name": "Investigation design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Experiments, analysis plan, or research protocol are appropriate and complete."
+            },
+            {
+              "id": "evidence",
+              "name": "Evidence & results",
+              "max_score": 20,
+              "observable": true,
+              "description": "Reported evidence supports the conclusions."
+            },
+            {
+              "id": "presentation",
+              "name": "Report / fight materials",
+              "max_score": 20,
+              "observable": true,
+              "description": "Written materials are clear enough for a jury or opponent team."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live oral fight",
+            "physical experiment fidelity",
+            "months-long preparation process"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "itym_2014",
+      "year": 2014,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/itym_research_report_100_v1.json",
+          "sha256": "43e8eacaff203db33c7ed799f894271015353949a1c7614ab8f88ed3180ae1a9",
+          "format": "numeric_rubric",
+          "rubric_id": "itym_research_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "physics_or_theory",
+              "name": "Scientific / theoretical quality",
+              "max_score": 35,
+              "observable": true,
+              "description": "Core theory, models, and claims are sound against the problem statement."
+            },
+            {
+              "id": "investigation",
+              "name": "Investigation design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Experiments, analysis plan, or research protocol are appropriate and complete."
+            },
+            {
+              "id": "evidence",
+              "name": "Evidence & results",
+              "max_score": 20,
+              "observable": true,
+              "description": "Reported evidence supports the conclusions."
+            },
+            {
+              "id": "presentation",
+              "name": "Report / fight materials",
+              "max_score": 20,
+              "observable": true,
+              "description": "Written materials are clear enough for a jury or opponent team."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live oral fight",
+            "physical experiment fidelity",
+            "months-long preparation process"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "itym_2015",
+      "year": 2015,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/itym_research_report_100_v1.json",
+          "sha256": "43e8eacaff203db33c7ed799f894271015353949a1c7614ab8f88ed3180ae1a9",
+          "format": "numeric_rubric",
+          "rubric_id": "itym_research_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "physics_or_theory",
+              "name": "Scientific / theoretical quality",
+              "max_score": 35,
+              "observable": true,
+              "description": "Core theory, models, and claims are sound against the problem statement."
+            },
+            {
+              "id": "investigation",
+              "name": "Investigation design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Experiments, analysis plan, or research protocol are appropriate and complete."
+            },
+            {
+              "id": "evidence",
+              "name": "Evidence & results",
+              "max_score": 20,
+              "observable": true,
+              "description": "Reported evidence supports the conclusions."
+            },
+            {
+              "id": "presentation",
+              "name": "Report / fight materials",
+              "max_score": 20,
+              "observable": true,
+              "description": "Written materials are clear enough for a jury or opponent team."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live oral fight",
+            "physical experiment fidelity",
+            "months-long preparation process"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "itym_2016",
+      "year": 2016,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/itym_research_report_100_v1.json",
+          "sha256": "43e8eacaff203db33c7ed799f894271015353949a1c7614ab8f88ed3180ae1a9",
+          "format": "numeric_rubric",
+          "rubric_id": "itym_research_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "physics_or_theory",
+              "name": "Scientific / theoretical quality",
+              "max_score": 35,
+              "observable": true,
+              "description": "Core theory, models, and claims are sound against the problem statement."
+            },
+            {
+              "id": "investigation",
+              "name": "Investigation design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Experiments, analysis plan, or research protocol are appropriate and complete."
+            },
+            {
+              "id": "evidence",
+              "name": "Evidence & results",
+              "max_score": 20,
+              "observable": true,
+              "description": "Reported evidence supports the conclusions."
+            },
+            {
+              "id": "presentation",
+              "name": "Report / fight materials",
+              "max_score": 20,
+              "observable": true,
+              "description": "Written materials are clear enough for a jury or opponent team."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live oral fight",
+            "physical experiment fidelity",
+            "months-long preparation process"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "itym_2017",
+      "year": 2017,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/itym_research_report_100_v1.json",
+          "sha256": "43e8eacaff203db33c7ed799f894271015353949a1c7614ab8f88ed3180ae1a9",
+          "format": "numeric_rubric",
+          "rubric_id": "itym_research_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "physics_or_theory",
+              "name": "Scientific / theoretical quality",
+              "max_score": 35,
+              "observable": true,
+              "description": "Core theory, models, and claims are sound against the problem statement."
+            },
+            {
+              "id": "investigation",
+              "name": "Investigation design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Experiments, analysis plan, or research protocol are appropriate and complete."
+            },
+            {
+              "id": "evidence",
+              "name": "Evidence & results",
+              "max_score": 20,
+              "observable": true,
+              "description": "Reported evidence supports the conclusions."
+            },
+            {
+              "id": "presentation",
+              "name": "Report / fight materials",
+              "max_score": 20,
+              "observable": true,
+              "description": "Written materials are clear enough for a jury or opponent team."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live oral fight",
+            "physical experiment fidelity",
+            "months-long preparation process"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "itym_2018",
+      "year": 2018,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/itym_research_report_100_v1.json",
+          "sha256": "43e8eacaff203db33c7ed799f894271015353949a1c7614ab8f88ed3180ae1a9",
+          "format": "numeric_rubric",
+          "rubric_id": "itym_research_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "physics_or_theory",
+              "name": "Scientific / theoretical quality",
+              "max_score": 35,
+              "observable": true,
+              "description": "Core theory, models, and claims are sound against the problem statement."
+            },
+            {
+              "id": "investigation",
+              "name": "Investigation design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Experiments, analysis plan, or research protocol are appropriate and complete."
+            },
+            {
+              "id": "evidence",
+              "name": "Evidence & results",
+              "max_score": 20,
+              "observable": true,
+              "description": "Reported evidence supports the conclusions."
+            },
+            {
+              "id": "presentation",
+              "name": "Report / fight materials",
+              "max_score": 20,
+              "observable": true,
+              "description": "Written materials are clear enough for a jury or opponent team."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live oral fight",
+            "physical experiment fidelity",
+            "months-long preparation process"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "itym_2019",
+      "year": 2019,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/itym_research_report_100_v1.json",
+          "sha256": "43e8eacaff203db33c7ed799f894271015353949a1c7614ab8f88ed3180ae1a9",
+          "format": "numeric_rubric",
+          "rubric_id": "itym_research_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "physics_or_theory",
+              "name": "Scientific / theoretical quality",
+              "max_score": 35,
+              "observable": true,
+              "description": "Core theory, models, and claims are sound against the problem statement."
+            },
+            {
+              "id": "investigation",
+              "name": "Investigation design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Experiments, analysis plan, or research protocol are appropriate and complete."
+            },
+            {
+              "id": "evidence",
+              "name": "Evidence & results",
+              "max_score": 20,
+              "observable": true,
+              "description": "Reported evidence supports the conclusions."
+            },
+            {
+              "id": "presentation",
+              "name": "Report / fight materials",
+              "max_score": 20,
+              "observable": true,
+              "description": "Written materials are clear enough for a jury or opponent team."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live oral fight",
+            "physical experiment fidelity",
+            "months-long preparation process"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "itym_2020",
+      "year": 2020,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/itym_research_report_100_v1.json",
+          "sha256": "43e8eacaff203db33c7ed799f894271015353949a1c7614ab8f88ed3180ae1a9",
+          "format": "numeric_rubric",
+          "rubric_id": "itym_research_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "physics_or_theory",
+              "name": "Scientific / theoretical quality",
+              "max_score": 35,
+              "observable": true,
+              "description": "Core theory, models, and claims are sound against the problem statement."
+            },
+            {
+              "id": "investigation",
+              "name": "Investigation design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Experiments, analysis plan, or research protocol are appropriate and complete."
+            },
+            {
+              "id": "evidence",
+              "name": "Evidence & results",
+              "max_score": 20,
+              "observable": true,
+              "description": "Reported evidence supports the conclusions."
+            },
+            {
+              "id": "presentation",
+              "name": "Report / fight materials",
+              "max_score": 20,
+              "observable": true,
+              "description": "Written materials are clear enough for a jury or opponent team."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live oral fight",
+            "physical experiment fidelity",
+            "months-long preparation process"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "itym_2021",
+      "year": 2021,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/itym_research_report_100_v1.json",
+          "sha256": "43e8eacaff203db33c7ed799f894271015353949a1c7614ab8f88ed3180ae1a9",
+          "format": "numeric_rubric",
+          "rubric_id": "itym_research_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "physics_or_theory",
+              "name": "Scientific / theoretical quality",
+              "max_score": 35,
+              "observable": true,
+              "description": "Core theory, models, and claims are sound against the problem statement."
+            },
+            {
+              "id": "investigation",
+              "name": "Investigation design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Experiments, analysis plan, or research protocol are appropriate and complete."
+            },
+            {
+              "id": "evidence",
+              "name": "Evidence & results",
+              "max_score": 20,
+              "observable": true,
+              "description": "Reported evidence supports the conclusions."
+            },
+            {
+              "id": "presentation",
+              "name": "Report / fight materials",
+              "max_score": 20,
+              "observable": true,
+              "description": "Written materials are clear enough for a jury or opponent team."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live oral fight",
+            "physical experiment fidelity",
+            "months-long preparation process"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "itym_2022",
+      "year": 2022,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/itym_research_report_100_v1.json",
+          "sha256": "43e8eacaff203db33c7ed799f894271015353949a1c7614ab8f88ed3180ae1a9",
+          "format": "numeric_rubric",
+          "rubric_id": "itym_research_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "physics_or_theory",
+              "name": "Scientific / theoretical quality",
+              "max_score": 35,
+              "observable": true,
+              "description": "Core theory, models, and claims are sound against the problem statement."
+            },
+            {
+              "id": "investigation",
+              "name": "Investigation design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Experiments, analysis plan, or research protocol are appropriate and complete."
+            },
+            {
+              "id": "evidence",
+              "name": "Evidence & results",
+              "max_score": 20,
+              "observable": true,
+              "description": "Reported evidence supports the conclusions."
+            },
+            {
+              "id": "presentation",
+              "name": "Report / fight materials",
+              "max_score": 20,
+              "observable": true,
+              "description": "Written materials are clear enough for a jury or opponent team."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live oral fight",
+            "physical experiment fidelity",
+            "months-long preparation process"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "itym_2023",
+      "year": 2023,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/itym_research_report_100_v1.json",
+          "sha256": "43e8eacaff203db33c7ed799f894271015353949a1c7614ab8f88ed3180ae1a9",
+          "format": "numeric_rubric",
+          "rubric_id": "itym_research_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "physics_or_theory",
+              "name": "Scientific / theoretical quality",
+              "max_score": 35,
+              "observable": true,
+              "description": "Core theory, models, and claims are sound against the problem statement."
+            },
+            {
+              "id": "investigation",
+              "name": "Investigation design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Experiments, analysis plan, or research protocol are appropriate and complete."
+            },
+            {
+              "id": "evidence",
+              "name": "Evidence & results",
+              "max_score": 20,
+              "observable": true,
+              "description": "Reported evidence supports the conclusions."
+            },
+            {
+              "id": "presentation",
+              "name": "Report / fight materials",
+              "max_score": 20,
+              "observable": true,
+              "description": "Written materials are clear enough for a jury or opponent team."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live oral fight",
+            "physical experiment fidelity",
+            "months-long preparation process"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "itym_2024",
+      "year": 2024,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/itym_research_report_100_v1.json",
+          "sha256": "43e8eacaff203db33c7ed799f894271015353949a1c7614ab8f88ed3180ae1a9",
+          "format": "numeric_rubric",
+          "rubric_id": "itym_research_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "physics_or_theory",
+              "name": "Scientific / theoretical quality",
+              "max_score": 35,
+              "observable": true,
+              "description": "Core theory, models, and claims are sound against the problem statement."
+            },
+            {
+              "id": "investigation",
+              "name": "Investigation design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Experiments, analysis plan, or research protocol are appropriate and complete."
+            },
+            {
+              "id": "evidence",
+              "name": "Evidence & results",
+              "max_score": 20,
+              "observable": true,
+              "description": "Reported evidence supports the conclusions."
+            },
+            {
+              "id": "presentation",
+              "name": "Report / fight materials",
+              "max_score": 20,
+              "observable": true,
+              "description": "Written materials are clear enough for a jury or opponent team."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live oral fight",
+            "physical experiment fidelity",
+            "months-long preparation process"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "itym_2025",
+      "year": 2025,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/itym_research_report_100_v1.json",
+          "sha256": "43e8eacaff203db33c7ed799f894271015353949a1c7614ab8f88ed3180ae1a9",
+          "format": "numeric_rubric",
+          "rubric_id": "itym_research_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "physics_or_theory",
+              "name": "Scientific / theoretical quality",
+              "max_score": 35,
+              "observable": true,
+              "description": "Core theory, models, and claims are sound against the problem statement."
+            },
+            {
+              "id": "investigation",
+              "name": "Investigation design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Experiments, analysis plan, or research protocol are appropriate and complete."
+            },
+            {
+              "id": "evidence",
+              "name": "Evidence & results",
+              "max_score": 20,
+              "observable": true,
+              "description": "Reported evidence supports the conclusions."
+            },
+            {
+              "id": "presentation",
+              "name": "Report / fight materials",
+              "max_score": 20,
+              "observable": true,
+              "description": "Written materials are clear enough for a jury or opponent team."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live oral fight",
+            "physical experiment fidelity",
+            "months-long preparation process"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

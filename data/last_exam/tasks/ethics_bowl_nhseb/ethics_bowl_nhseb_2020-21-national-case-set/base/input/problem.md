@@ -1,5 +1,3 @@
-# 2020-21-national-case-set
-
 NATIONAL HIGH 
 SCHOOL ETHICS BOWL
 Case Set for 2020-2021 National Competition

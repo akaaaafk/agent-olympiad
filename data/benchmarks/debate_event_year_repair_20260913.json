@@ -1,0 +1,30 @@
+{
+  "status": "completed",
+  "problem_id": "debatebench_d_oxbridge_3_round_3_cvr_cr_box_df_4_vid2txt_Jan-08-2025_-13_full",
+  "previous_year": 2025,
+  "event_year": 2020,
+  "backup": "data/excluded/integrity_repair_20260913T194546Z",
+  "newline_recovery_backup": "data/excluded/integrity_repair_20260913T194657Z",
+  "filename_and_id_preserved": true,
+  "answers_scores_readiness_unchanged": true,
+  "source_evidence": {
+    "event": "Doxbridge 3: Return of the King",
+    "round": 3,
+    "event_year": 2020,
+    "event_dates": [
+      "2020-11-07",
+      "2020-11-08"
+    ],
+    "source_url": "https://www.achteminute.de/en/20201109/zagreb-wins-doxbridge-iii/",
+    "source_type": "contemporaneous tournament report",
+    "report_file": "data/raw/debatebench/event_year_verified_20260913/tournament_report.html",
+    "report_sha256": "940d001c6177c8ce5149eea28151f766dc274999e3804fab5cd0cbd4b9e6fcac",
+    "official_round_motion_url": "https://doxbridge-3.calicotab.com/doxbridge3/motions/",
+    "official_motion_snapshot": "data/raw/debatebench/recovered_20260913/sources/eea6bdadc61d959b.html",
+    "identity_basis": "Event name and exact round-3 motion agree with the official round archive.",
+    "correction": "The Jan-08-2025 timestamp in the preserved transcript filename is not used as the event year.",
+    "scores_and_speaker_identity_not_recertified": true
+  },
+  "source_hashes_and_projections_verified": true,
+  "recovery_note": "Original CRLF source bytes restored after the first apply normalized line endings. No canonical scoring/data rollback."
+}

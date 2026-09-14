@@ -1,5 +1,3 @@
-# The Cost of Speed Limits
-
 Hide 
  The Cost of Speed Limits 
 

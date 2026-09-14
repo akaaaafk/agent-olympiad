@@ -1,0 +1,24 @@
+{
+  "visibility": "hidden_until_grade",
+  "gold_pointer": "data/benchmarks/iypt/benchmark.json#iypt_2019.gold_label",
+  "has_gold_answer": false,
+  "evaluator_id": "slide_deck_v1",
+  "evaluator_status": "ready_with_limitations",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": "slide_deck_v1",
+    "status": "ready_with_limitations",
+    "rubric_path": "data/rubrics/iypt_research_report_100_v1.json",
+    "media": [
+      "images",
+      "pdf"
+    ],
+    "deliverable": "research_presentation_deck",
+    "score_basis": "normalized benchmark rubric, not an official Physics Fight score",
+    "limitations": "Scores the research presentation deck; experiments, oral defense, opponent/reviewer exchanges, and jury coefficients are not reproduced.",
+    "scorecard_path": "data/rubrics/task_scorecards/iypt.json",
+    "scorecard_key": "iypt_2019"
+  },
+  "rubric_path": "data/rubrics/iypt_research_report_100_v1.json",
+  "deliverable": "research_presentation_deck"
+}

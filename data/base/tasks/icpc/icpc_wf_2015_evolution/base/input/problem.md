@@ -1,5 +1,3 @@
-# Evolution in Parallel
-
 Hide 
  Evolution in Parallel 
 

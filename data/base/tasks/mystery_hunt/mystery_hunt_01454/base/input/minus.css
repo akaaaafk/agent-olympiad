@@ -1,0 +1,22 @@
+body,html {
+  background: #ffffff;
+  background-image: url(minusmanbackground.jpg);
+  background-position: left top;
+  background-repeat: repeat-x;
+  color:#000000;
+}
+
+a {
+  color:#000000;
+  }
+
+#centralcolumn {
+  background:url(minusman.jpg) no-repeat top center;
+}
+
+#maincontent {
+  position: absolute;
+  margin-top: 215px;
+  margin-left: 530px;
+  width: 440px;
+}

@@ -1,4 +1,4 @@
-# Environment — `fyziklani`
+# Environment
 
 ## Roster
 
@@ -16,8 +16,12 @@
 
 ## Allowed tools
 
-- query_rules
-- use_calculator
+```json
+[
+  "query_rules",
+  "use_calculator"
+]
+```
 
 ## Resources
 
@@ -61,7 +65,7 @@
     "text/plain"
   ],
   "task_types": [
-    "progressive_physics_team_contest"
+    "team_contest"
   ],
   "official_deliverable": "answer_sheet",
   "official_mime_types": [
@@ -69,3 +73,4 @@
   ]
 }
 ```
+

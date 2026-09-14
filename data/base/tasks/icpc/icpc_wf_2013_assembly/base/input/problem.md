@@ -1,5 +1,3 @@
-# Self-Assembly
-
 Hide 
  Self-Assembly 
 

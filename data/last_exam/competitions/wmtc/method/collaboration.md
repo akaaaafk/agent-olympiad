@@ -1,22 +1,105 @@
-# Method — `wmtc`
+# Team method
 
-How this benchmark's agents are asked to work. Projected from `data/rules/wmtc/collaboration.json`.
-
-## Agent constraints
-
-- Inhabit a WMTC Team Round contestant identity on one six-person team; do not invent a second roster or treat the round as six independent remote solves.
-- Begin with the same contestant permissions as every teammate; do not assume a permanent captain, specialist, or sole submitter.
-- Treat private reasoning and notes as unknown to teammates until you communicate the decision-relevant content.
-- Simulation choice: treat calculators, phones, internet, and other personal electronics as unavailable; use paper, pencil, and the provided problem material only. That default-deny is not copied from a current official booklet.
-- Ignore Individual and Relay items if they appear; submit one shared numbered Team Round answer sheet.
-- Simulation choice: a limited message budget and structured propose, challenge, provide-evidence, revise, and decide steps are a session coordination overlay, not an official WMTC message cap.
-- Do not access hidden solutions, answer keys, evaluator internals, or unauthorized outside problem-solving help.
-- Any teammate may file the shared sheet after the team reconciles answers; do not silently overwrite a teammate's settled answer.
-
-## Information / deliberation / communication
+## Collaboration configuration
 
 ```json
 {
+  "agent_constraints": [
+    "Inhabit a WMTC Team Round contestant identity on one six-person team; do not invent a second roster or treat the round as six independent remote solves.",
+    "Begin with the same contestant permissions as every teammate; do not assume a permanent captain, specialist, or sole submitter.",
+    "Treat private reasoning and notes as unknown to teammates until you communicate the decision-relevant content.",
+    "Simulation choice: treat calculators, phones, internet, and other personal electronics as unavailable; use paper, pencil, and the provided problem material only. That default-deny is not copied from a current official booklet.",
+    "Ignore Individual and Relay items if they appear; submit one shared numbered Team Round answer sheet.",
+    "Simulation choice: a limited message budget and structured propose, challenge, provide-evidence, revise, and decide steps are a session coordination overlay, not an official WMTC message cap.",
+    "Do not access hidden solutions, answer keys, evaluator internals, or unauthorized outside problem-solving help.",
+    "Any teammate may file the shared sheet after the team reconciles answers; do not silently overwrite a teammate's settled answer."
+  ],
+  "agent_roles": [
+    {
+      "name": "Agent_1",
+      "title": "contestant",
+      "may_submit": true,
+      "duties": [
+        "Inhabit a WMTC Team Round contestant identity on a six-person team.",
+        "Scout, solve, check, or coordinate as current team needs require.",
+        "Share decision-relevant discoveries and help reconcile one shared answer sheet."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_2",
+      "title": "contestant",
+      "may_submit": true,
+      "duties": [
+        "Inhabit a WMTC Team Round contestant identity on a six-person team.",
+        "Scout, solve, check, or coordinate as current team needs require.",
+        "Share decision-relevant discoveries and help reconcile one shared answer sheet."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_3",
+      "title": "contestant",
+      "may_submit": true,
+      "duties": [
+        "Inhabit a WMTC Team Round contestant identity on a six-person team.",
+        "Scout, solve, check, or coordinate as current team needs require.",
+        "Share decision-relevant discoveries and help reconcile one shared answer sheet."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_4",
+      "title": "contestant",
+      "may_submit": true,
+      "duties": [
+        "Inhabit a WMTC Team Round contestant identity on a six-person team.",
+        "Scout, solve, check, or coordinate as current team needs require.",
+        "Share decision-relevant discoveries and help reconcile one shared answer sheet."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_5",
+      "title": "contestant",
+      "may_submit": true,
+      "duties": [
+        "Inhabit a WMTC Team Round contestant identity on a six-person team.",
+        "Scout, solve, check, or coordinate as current team needs require.",
+        "Share decision-relevant discoveries and help reconcile one shared answer sheet."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_6",
+      "title": "contestant",
+      "may_submit": true,
+      "duties": [
+        "Inhabit a WMTC Team Round contestant identity on a six-person team.",
+        "Scout, solve, check, or coordinate as current team needs require.",
+        "Share decision-relevant discoveries and help reconcile one shared answer sheet."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    }
+  ],
   "information_policy": {
     "mode": "shared",
     "shared": [
@@ -26,6 +109,74 @@ How this benchmark's agents are asked to work. Projected from `data/rules/wmtc/c
       "scratchpad"
     ],
     "coordination_requirement": "Contestants receive equal baseline information access, but private reasoning is not silently copied between them; they must communicate discoveries needed by teammates."
+  },
+  "rule_sections": {
+    "competition_format": [
+      "Competition model: The team solves the Team Round and produces one shared answer sheet.",
+      "Mixed or unresolved rulesets: historical practice is six contestants; a current official maximum is not frozen.",
+      "Official: WMTC is a team-oriented championship with Individual, Team, and Relay examinations and Junior, Intermediate, and Advanced levels.",
+      "Official: founding history records students competing in teams of six; this session models six equal Team Round contestants.",
+      "Official: this session is the Team Round only.",
+      "Simulation choice: six active agents is a modeled size while a current official booklet is unavailable; the range remains mixed or unresolved.",
+      "Simulation choice: do not freeze homepage announcement figures for Individual or Relay as official Team Round rules."
+    ],
+    "timeline": [
+      "Source-recorded timing: Team-round session timing is edition-dependent and is not frozen here.",
+      "Official: Team Round session timing is edition-dependent and is not issued in this briefing.",
+      "Simulation choice: simulation.max_turns is a runner safety budget, not an official wall-clock limit.",
+      "Simulation choice: do not treat a historical packet clock or a homepage announcement timing as the current official duration."
+    ],
+    "resource_policy": [
+      "Source-recorded resource policy: a current official materials and device policy was not issued in this briefing.",
+      "Official: a current official materials and device policy was not issued in this briefing.",
+      "Simulation choice: calculators, phones, internet, and other personal electronics are default-denied; paper and pencil are available; work from the provided problem material only.",
+      "Simulation choice: that default-deny is a conservative Team Round stance, not a clause copied from a current official booklet."
+    ],
+    "collaboration_protocol": [
+      "Official: the Team Round is a team-oriented examination in which students work together.",
+      "Official: problem-solving communication is limited to teammates; coaches, other teams, and outsiders do not help during the examination.",
+      "Simulation choice: all six contestants begin with equal permissions and any of them may submit the shared sheet.",
+      "Simulation choice: private reasoning is unknown to teammates until it is communicated."
+    ],
+    "integrity_and_compliance": [
+      "Official: do not receive outside problem-solving help or invent unpublished official rulings.",
+      "Simulation choice: hidden solutions, answer keys, and evaluator internals are unavailable and must not be used.",
+      "Simulation choice: using a calculator, phone, internet, or extra materials under the default-deny is a compliance violation in this session."
+    ],
+    "deliverable_format": [
+      "Runner answer contract: Numbered team answers matching the team-round problems in order.",
+      "Official deliverable: answer sheet.",
+      "Official: the Team Round deliverable is one shared team answer sheet.",
+      "Simulation choice: submit exact simplified mathematical answers numbered to match the Team Round problems in order.",
+      "Simulation choice: if mixed Individual or Relay items appear, ignore them and answer only the Team Round problems."
+    ],
+    "evaluation_criteria": [
+      "Official: team, individual, and relay awards are determined separately at each level.",
+      "Official: Relay-award ties are broken by Team Round total, then Individual Round total.",
+      "Official: the current Team Round scoring formula is not issued in this briefing.",
+      "Simulation choice: repository gold scoring per problem is deferred until benchmark evaluator metadata exists; do not invent a completed official score."
+    ],
+    "runtime_limitations": [
+      "Runtime limitation: A current official booklet, live Team Round clock, paper-sheet collection, and Individual or Relay examinations are not reproduced.",
+      "Simulation choice: a current official booklet, live Team Round clock, paper-sheet collection, and Individual or Relay examinations are not reproduced.",
+      "Simulation choice: the runner accepts numbered plain text instead of a collected paper answer sheet."
+    ],
+    "typical_contest_workflow": [
+      "Simulation choice: partition the Team Round problems, communicate decision-relevant work, independently re-derive high-risk answers, and reconcile one sheet before anyone submits.",
+      "Simulation choice: temporary specialization may emerge but is never a fixed office."
+    ],
+    "conflict_resolution": [
+      "Simulation choice: disagreements are resolved by communicated evidence, not by silent overwrite of the shared sheet.",
+      "Simulation choice: an unresolved answer may be left blank rather than invented."
+    ],
+    "handoff_protocol": [
+      "Simulation choice: a handoff may name the problem, approach, remaining checks, and next action.",
+      "Simulation choice: incomplete handoffs stay observable; there is no automatic memory copy."
+    ],
+    "review_protocol": [
+      "Simulation choice: review before submission is optional rather than mandatory.",
+      "Simulation choice: any teammate may re-derive a contested answer."
+    ]
   },
   "deliberation": {
     "mode": "structured",
@@ -41,105 +192,100 @@ How this benchmark's agents are asked to work. Projected from `data/rules/wmtc/c
   },
   "communication": {
     "mode": "limited",
-    "team_message_budget": 16,
-    "per_agent_message_budget": 3,
+    "team_message_budget": 60,
+    "per_agent_message_budget": 10,
     "max_message_chars": 1200,
     "counted_actions": [
       "speak",
-      "write_scratchpad",
+      "work",
       "propose",
       "challenge",
       "provide_evidence",
       "revise",
       "decide"
     ]
+  },
+  "simulation": {
+    "max_turns": 12,
+    "scheduler": "round_table_or_centralized",
+    "turn_budget_basis": "official duration 60 min / 5 min per turn = 12 turns (hard cap 90); src/contest_budget.py is the source of truth",
+    "open_table_coach": {
+      "enabled": true,
+      "status": "counterfactual_synthetic_baseline_not_official_contest_rule",
+      "may_submit": false,
+      "allowed_tools": [],
+      "counts_toward_shared_api_and_token_budget": true,
+      "contestant_turn_policy": {
+        "mode": "private_deliberation_then_single_action",
+        "allowed_actions": [
+          "work",
+          "speak",
+          "rest"
+        ],
+        "exactly_one_action": true,
+        "unstructured_response": "rest",
+        "final_submission": "reviewed_answer_sheet",
+        "visibility": {
+          "think": "private",
+          "work": "shared",
+          "speak": "team",
+          "rest": "private"
+        },
+        "max_chars_by_action": {
+          "think": 2400,
+          "work": 2400,
+          "speak": 320,
+          "rest": 80
+        },
+        "memory_entries": {
+          "private_think_per_agent": 3,
+          "shared_work": 18,
+          "group_messages": 12,
+          "public_messages": 24
+        },
+        "private_think_calls_per_turn": 1,
+        "discussion_policy": {
+          "report_after_work": true,
+          "silent_work_turn_requires_discussion": true,
+          "conflicts_require_targeted_speak": true
+        }
+      },
+      "precontest_brief": {
+        "turn": 0,
+        "problem_access": false,
+        "allowed_actions": [
+          "speak",
+          "rest"
+        ],
+        "advice_scope": [
+          "time allocation",
+          "task triage",
+          "communication protocol",
+          "independent verification",
+          "final answer-sheet reconciliation"
+        ]
+      },
+      "opening_discussion": {
+        "enabled": false,
+        "problem_access": false,
+        "allowed_actions": [],
+        "purpose": "Coach exits permanently after the single turn-0 blind brief."
+      },
+      "after_opening_access": false,
+      "min_turns": 10,
+      "protocol_version": "otc_turn0_review_v1",
+      "review_required": true,
+      "action_surface": "registry_bundles_v1",
+      "action_bundles": [
+        "common",
+        "desk",
+        "memory",
+        "independent_review",
+        "competition_tools",
+        "deliberation_if_structured"
+      ]
+    }
   }
 }
 ```
 
-## Simulation
-
-```json
-{
-  "max_turns": 24,
-  "scheduler": "round_table_or_centralized",
-  "turn_budget_basis": "official clock n/a turns vs floor 17 (6 teammates x 2 turns + 1 answer parts + 4 for synthesis)"
-}
-```
-
-## Rule sections
-
-```json
-{
-  "competition_format": [
-    "Competition model: The team solves the Team Round and produces one shared answer sheet.",
-    "Mixed or unresolved rulesets: historical practice is six contestants; a current official maximum is not frozen.",
-    "Official: WMTC is a team-oriented championship with Individual, Team, and Relay examinations and Junior, Intermediate, and Advanced levels.",
-    "Official: founding history records students competing in teams of six; this session models six equal Team Round contestants.",
-    "Official: this session is the Team Round only.",
-    "Simulation choice: six active agents is a modeled size while a current official booklet is unavailable; the range remains mixed or unresolved.",
-    "Simulation choice: do not freeze homepage announcement figures for Individual or Relay as official Team Round rules."
-  ],
-  "timeline": [
-    "Source-recorded timing: Team-round session timing is edition-dependent and is not frozen here.",
-    "Official: Team Round session timing is edition-dependent and is not issued in this briefing.",
-    "Simulation choice: simulation.max_turns is a runner safety budget, not an official wall-clock limit.",
-    "Simulation choice: do not treat a historical packet clock or a homepage announcement timing as the current official duration."
-  ],
-  "resource_policy": [
-    "Source-recorded resource policy: a current official materials and device policy was not issued in this briefing.",
-    "Official: a current official materials and device policy was not issued in this briefing.",
-    "Simulation choice: calculators, phones, internet, and other personal electronics are default-denied; paper and pencil are available; work from the provided problem material only.",
-    "Simulation choice: that default-deny is a conservative Team Round stance, not a clause copied from a current official booklet."
-  ],
-  "collaboration_protocol": [
-    "Official: the Team Round is a team-oriented examination in which students work together.",
-    "Official: problem-solving communication is limited to teammates; coaches, other teams, and outsiders do not help during the examination.",
-    "Simulation choice: all six contestants begin with equal permissions and any of them may submit the shared sheet.",
-    "Simulation choice: private reasoning is unknown to teammates until it is communicated."
-  ],
-  "integrity_and_compliance": [
-    "Official: do not receive outside problem-solving help or invent unpublished official rulings.",
-    "Simulation choice: hidden solutions, answer keys, and evaluator internals are unavailable and must not be used.",
-    "Simulation choice: using a calculator, phone, internet, or extra materials under the default-deny is a compliance violation in this session."
-  ],
-  "deliverable_format": [
-    "Runner answer contract: Numbered team answers matching the team-round problems in order.",
-    "Official deliverable: answer sheet.",
-    "Official: the Team Round deliverable is one shared team answer sheet.",
-    "Simulation choice: submit exact simplified mathematical answers numbered to match the Team Round problems in order.",
-    "Simulation choice: if mixed Individual or Relay items appear, ignore them and answer only the Team Round problems."
-  ],
-  "evaluation_criteria": [
-    "Official: team, individual, and relay awards are determined separately at each level.",
-    "Official: Relay-award ties are broken by Team Round total, then Individual Round total.",
-    "Official: the current Team Round scoring formula is not issued in this briefing.",
-    "Simulation choice: repository gold scoring per problem is deferred until benchmark evaluator metadata exists; do not invent a completed official score."
-  ],
-  "runtime_limitations": [
-    "Runtime limitation: A current official booklet, live Team Round clock, paper-sheet collection, and Individual or Relay examinations are not reproduced.",
-    "Simulation choice: a current official booklet, live Team Round clock, paper-sheet collection, and Individual or Relay examinations are not reproduced.",
-    "Simulation choice: the runner accepts numbered plain text instead of a collected paper answer sheet."
-  ],
-  "typical_contest_workflow": [
-    "Simulation choice: partition the Team Round problems, communicate decision-relevant work, independently re-derive high-risk answers, and reconcile one sheet before anyone submits.",
-    "Simulation choice: temporary specialization may emerge but is never a fixed office."
-  ],
-  "conflict_resolution": [
-    "Simulation choice: disagreements are resolved by communicated evidence, not by silent overwrite of the shared sheet.",
-    "Simulation choice: an unresolved answer may be left blank rather than invented."
-  ],
-  "handoff_protocol": [
-    "Simulation choice: a handoff may name the problem, approach, remaining checks, and next action.",
-    "Simulation choice: incomplete handoffs stay observable; there is no automatic memory copy."
-  ],
-  "review_protocol": [
-    "Simulation choice: review before submission is optional rather than mandatory.",
-    "Simulation choice: any teammate may re-derive a contested answer."
-  ],
-  "emergent_behavior": [
-    "Observe but do not require partitioning, independent checks, handoff, peer review, and role rotation.",
-    "Do not reward a permanent synthesizer role, equal speaking time, exclusive problem ownership, or message volume by itself."
-  ]
-}
-```

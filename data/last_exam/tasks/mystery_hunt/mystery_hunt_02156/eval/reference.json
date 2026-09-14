@@ -3,8 +3,18 @@
   "gold_pointer": "data/benchmarks/mystery_hunt/benchmark.json#mystery_hunt_02156.gold_label",
   "has_gold_answer": true,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+    "short_answer_source": "data/rubrics/mystery_hunt_short_answers.json",
+    "deliverable": "puzzle_answer",
+    "limitations": "All 18 explicitly linked bags are mechanically projected from the hash-pinned original HTML literal array and reviewed d.js display logic. Their original diagram widths, dot coordinates, per-dot image mapping, recipe wording, letter spacing, punctuation and enumerations remain. Each dot is now a local link to the original hover image, without running the source scripts; this is not pixel-identical hover/viewport behavior. No answers or synthetic recipes are added. The original query responses and display script stay private; every served query returns the same original bag HTML. Archive solution navigation, shared sheep/status requests and scripts are removed; artwork attribution wording stays with its link inert. Source CSS retains its original harmless trailing less-than character. Same-year CSS dependency path repairs follow the static batch; current source-named Google fonts include OFL texts but are not certified 2016 binaries. Gold, total points, splits, license and grading/runtime readiness remain unchanged and are not recertified. Prior limitations: The answer key exists, but the contestant puzzle page has not been separated from embedded answers and media dependencies.",
+    "scorecard_path": "data/rubrics/task_scorecards/mystery_hunt.json",
+    "scorecard_key": "mystery_hunt_02156"
+  },
+  "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+  "deliverable": "puzzle_answer"
 }

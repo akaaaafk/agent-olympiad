@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 1988
-
 # Odyssey of the Mind — 1988 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -16,3 +14,4 @@ Note: These are public synopses. Full problem packets require membership.
 6. CoronationPrimaryCreate a King, Queen, Prince and/or Princess, make background props and perform a Coronation ceremony. Time limit: 7min. Cost limit: $35 USD.
 7. Division IV: Torture Test
 8. Super-Technocrats
+

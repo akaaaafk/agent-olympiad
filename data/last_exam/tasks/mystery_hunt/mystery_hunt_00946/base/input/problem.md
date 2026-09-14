@@ -1,3 +1,5 @@
-# 2007/puzzles/the_usual_suspects
+# VI-3: The Usual Suspects
 
-VI-3: The Usual Suspects Lesson VI-3: Rigged Card Games True con artists can get people to play find-the-queen with an Uno deck. The Usual Suspects Make sure you know the accused on a last-name basis.
+Open `puzzle.html` for the original styled puzzle, figures and marked positions. No text-only preview replaces the visual layout.
+
+Archive limitation: The original 2007 clues, visual marks and wording are preserved. Historical facts are not modernized; image/layout-aware interpretation and end-to-end evaluation remain uncertified.

@@ -1,5 +1,3 @@
-# IHBB-Winter_Bowl-R4
-
 [Q1] The Soviet Union boycotted this event in favor of their own Spartakiad to be hosted in Barcelona the following year. The reporters of Der Stürmer [[SHTIR-muh]] were banned from the host city during this procession. Prior to this event, Adidas founder Adolf Dassler convinced Jesse Owens to wear his shoes prior to the Long Jump competition. For ten points, name this 1936 athletic event hosted by the government of Adolf Hitler in the German capital.
 
 [Q2] This man's work on animal respiration utilized his friend and human guinea pig Armand Séguin [[seh-GWEEN]]. This scientist disproved the historically popular phlogiston [[FLOH-jis-tahn]] theory by showing that nothing new is produced by combustion. This man formulated the law of conservation of mass and named oxygen and hydrogen before being executed during the French Revolution. For ten points, name this French scientist who is considered the father of modern chemistry.

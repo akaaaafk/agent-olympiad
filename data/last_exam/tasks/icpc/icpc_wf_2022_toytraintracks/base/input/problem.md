@@ -1,5 +1,3 @@
-# Toy Train Tracks
-
 Hide 
  Toy Train Tracks 
 

@@ -237,7 +237,7 @@ class ContestMemoryTests(unittest.TestCase):
         )
         self.assertEqual(carol["direct_messages"], [])
 
-    def test_recall_ranks_problem_tag_then_query_then_recency(self) -> None:
+    def test_recall_filters_problem_tag_then_ranks_query_and_recency(self) -> None:
         self.memory.append(
             task_id="task-a", question_id=None, actor="alice", visibility="private",
             recipients=("alice",), kind="note", turn=1,
@@ -262,12 +262,12 @@ class ContestMemoryTests(unittest.TestCase):
 
         by_tag = self.memory.recall("alice", problem_id="task-a")
         self.assertEqual(by_tag[0]["content"], "task-a: parity argument fails for n=3")
-        # Identical content collapses to the most recent copy (the shared one).
-        self.assertEqual(len(by_tag), 2)
-        self.assertEqual(by_tag[1]["note_id"], shared.event_id)
-        self.assertTrue(by_tag[1]["shared"])
+        self.assertEqual(len(by_tag), 1)
+        # Without a task filter, identical content collapses to the newest copy.
         by_query = self.memory.recall("alice", query="generating function")
+        self.assertEqual(len(by_query), 1)
         self.assertEqual(by_query[0]["note_id"], shared.event_id)
+        self.assertTrue(by_query[0]["shared"])
         # Private notes of other agents never leak.
         self.assertFalse(any("carol" in row["content"] for row in by_query))
         self.assertEqual(self.memory.recall("alice", top_k=1), [by_query[0]])

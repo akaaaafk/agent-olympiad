@@ -1,5 +1,3 @@
-# PUMaC Power Round 2023
-
 PUMaC 2022* Power Round:
 The PID Structure Theorem
 Frank Lu
@@ -849,18 +847,18 @@ amixi
 For instance, given the vector space of polynomials of degree at most 2 , we can see that
 this has a basis 1 , 1 + x, 1 + x + x2. Consider the map that sends each polynomial to the
 vector
-p(0)
+(p(0)
 p(1)
-
+)
 . Then, the matrix that we get for this linear transformation is
-1 1 1
+(1 1 1
 1 2 3
-
+)
 .
 For instance, we note that T (1 + x + x2) =
-1
+(1
 3
-
+)
 , giving us the third column.
 We wish to relate the two operations of matrix multiplication and of applying our linear
 transformation in general.
@@ -964,9 +962,9 @@ first by −1 yields the final matrix
  , which is in reduced row echelon form.
 Problem 2.4.5. Reduce the following matrices to reduced row echelon form.
 1.
-1 2 3
+(1 2 3
 6 5 4
-
+)
 2.
 
 

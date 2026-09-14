@@ -1,5 +1,3 @@
-# Low Power
-
 Hide 
  Low Power 
 

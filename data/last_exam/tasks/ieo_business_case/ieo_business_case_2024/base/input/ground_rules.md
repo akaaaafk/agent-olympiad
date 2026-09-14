@@ -1,0 +1,3 @@
+# Competition rules
+
+International Economics Olympiad — Business Case. The team researches, authors, and defends a judged artifact. The source-recorded active team may have 3 to 5 members; the runner default is 5. Collaborate only within the team under contest rules. Permitted: internet access, calculators and running code. Paper and pencil are always available. Submit one shared slide deck; Submit a structured report or slide outline covering analysis, recommendation, and evidence. The regulations establish preparation and presentation days but not one exact continuous 1,440-minute official clock. Treat unexposed physical, oral, live-opponent, judge, timing, or environment mechanisms as unavailable rather than simulated facts.

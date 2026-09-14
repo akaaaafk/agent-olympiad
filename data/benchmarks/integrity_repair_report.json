@@ -1,0 +1,95 @@
+{
+  "operation": "dataset_integrity_repair",
+  "timestamp_utc": "20260912T181457Z",
+  "split_policy": "Preserve all existing splits; no random split invented.",
+  "license_policy": "Preserve unverified licensing; do not infer permission.",
+  "before_records": 1738,
+  "iypt": {
+    "records": 39,
+    "corrected_year_assignments": 38,
+    "unique_sources": 39,
+    "source_formats": {
+      "publisher_html_with_local_images": 31,
+      "publisher_pdf": 8
+    }
+  },
+  "hmmt_guts": {
+    "before": 21,
+    "after": 45,
+    "added": 24,
+    "paired_official_solutions": 45,
+    "status_counts": {
+      "ready_with_limitations": 44,
+      "ready": 1
+    }
+  },
+  "packages": {
+    "n_tasks": 1762,
+    "n_competitions": 43,
+    "staged_assets": 771
+  },
+  "validation": {
+    "records": 1762,
+    "tracks": 43,
+    "scorecards": "matched",
+    "package_ids": "matched",
+    "input_assets": "hash_verified",
+    "iypt_years": "matched",
+    "hmmt_2024_perfect_score": 400.0,
+    "rule_cards_loaded": 43,
+    "offline_regression_tests_passed": 14,
+    "active_external_references": 0,
+    "iypt_mojibake_remaining": 0,
+    "case_collision_tasks_preserved": [
+      "eoes/eoes_t2",
+      "eoes/eoes_T2"
+    ]
+  },
+  "after_records": 1762,
+  "evaluation_status_counts": {
+    "ready_with_limitations": 179,
+    "not_ready": 783,
+    "ready": 640,
+    "remote_judge_ready": 158,
+    "sample_tests_ready": 2
+  },
+  "unresolved": {
+    "splits": {
+      "unspecified": 1328,
+      "development": 54,
+      "test": 140,
+      "train": 237,
+      "dev": 3
+    },
+    "licenses": {
+      "not_verified": 1762
+    },
+    "not_ready": 783
+  },
+  "backup": "data/excluded/integrity_repair_20260912T181457Z",
+  "status": "completed",
+  "execution_passes": [
+    {
+      "manifest": "data/excluded/integrity_repair_20260912T180944Z/manifest.json",
+      "status": "staging_collision_detected_and_fixed"
+    },
+    {
+      "manifest": "data/excluded/integrity_repair_20260912T181457Z/manifest.json",
+      "status": "completed"
+    }
+  ],
+  "external_import": {
+    "references": 452,
+    "files": 20105,
+    "bytes": 1799802058
+  },
+  "backups": [
+    "data/excluded/integrity_repair_20260912T180944Z",
+    "data/excluded/integrity_repair_20260912T181457Z"
+  ],
+  "subsequent_source_repair": {
+    "report": "data/benchmarks/source_verified_repair_report.json",
+    "current_catalog_records": 1761,
+    "note": "Earlier counts and validation describe the preceding repair snapshot, not the current catalog."
+  }
+}

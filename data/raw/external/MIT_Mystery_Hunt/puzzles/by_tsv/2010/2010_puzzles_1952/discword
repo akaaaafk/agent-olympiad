@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb"> 
+<head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta http-equiv="Content-Style-Type" content="text/css" /> 
+  <meta http-equiv="Content-Language" content="en-GB" /> 
+  <title>Discword</title> 
+  <link rel="stylesheet" type="text/css" href="../../../styles/puzzles.css" media="screen" /> 
+  <link rel="stylesheet" type="text/css" href="../../../styles/puzzles.css" media="print" /> 
+</head> 
+ 
+<body>
+<div id="container">
+
+  <div id="header">
+    <div id="header-content">
+      <a id="back-to-round" href="../"><img src="../../../images/return-to-1952.gif" /></a>
+      <a id="solution" href="solution.html"><img src="../../../images/solution.gif" /></a>
+    </div><!--end of id="header-content"-->
+  </div><!--end of id="header"-->
+
+  <div id="main">
+    <div id="page">
+      <div id="page-top">
+        <img id="page-stamp" src="../../../images/stamp-1952.gif" />
+        <h1 id="page-heading">Discword</h1>
+      </div>
+
+      <div id="page-center">
+        <div id="page-left">&nbsp;</div>
+        <div id="page-right">&nbsp;</div>
+
+        <div id="page-content">
+          <span class="flavortext">
+            <p>Esme Weatherwax says: "On a recent visit to Ankh-Morpork I picked up this discword puzzle from the Ankh-Morpork Times. It seems they forgot to print the diagram, but I know these things always have 180-degree rotational symmetry and have something to do with current events. I'm sure I could summon up the diagram, but that<i> ate'nt right; </i>I should solve it the way the locals had to."</p>
+          </span>
+
+          <table class="center" style="font-size:80%; line-height:1.5em; width:90%">
+            <tr>
+              <td style="vertical-align:top; width:33%">
+                <p><b>Turnwise</b></p>
+                <ol>
+                  <li value="1">Doorstep accessory</li>
+                  <li value="7">Kind of snake</li>
+                  <li value="8">A single time</li>
+                  <li value="10">Noisy disturbance</li>
+                  <li value="15">Writing fluid</li>
+                  <li value="16">The followers of a small god</li>
+                  <li value="20">Similar</li>
+                  <li value="21">Skill</li>
+                  <li value="23">Acquire</li>
+                  <li value="24">Bubbly, swirly tub</li>
+                  <li value="28">Body of water</li>
+                  <li value="29">Agitate</li>
+                  <li value="34">Take advantage of</li>
+                  <li value="39">Beyond</li>
+                  <li value="45">Belonging to us</li>
+                  <li value="46">Three singers</li>
+                </ol>
+                <p><b>Widdershins</b></p>
+                <ol>
+                  <li value="3">Witch or vampire, sometimes? (abbr.)</li>
+                </ol>
+              </td>
+              <td style="vertical-align:top; width:33%">
+                <ol>
+                  <li value="6">Body of water</li>
+                  <li value="11">Fill completely</li>
+                  <li value="12">Fish eggs</li>
+                  <li value="14">Carry on excitedly</li>
+                  <li value="17">Metal source</li>
+                  <li value="18">Dope</li>
+                  <li value="19">Formerly named</li>
+                  <li value="25">Remove, as a ruler</li>
+                  <li value="26">Embrace</li>
+                  <li value="27">Tilt</li>
+                  <li value="32">Adherent (suff.)</li>
+                  <li value="37">Just ___ ("Hold on.")</li>
+                  <li value="38">Rep.</li>
+                  <li value="44">Home for pigeons</li>
+                  <li value="47">Anger</li>
+                </ol>
+                <p><b>Hubward</b></p>
+                <ol>
+                  <li value="2">Maneuvers adroitly</li>
+                  <li value="3">Neglected</li>
+                  <li value="4">Affirmative response</li>
+                  <li value="5">Bothered</li>
+                </ol>
+              </td>
+              <td style="vertical-align:top; width:33%">
+                <ol>
+                  <li value="6">Double-cross</li>
+                  <li value="7">A social gathering for a particular purpose</li>
+                  <li value="9">The tooth cart driver</li>
+                  <li value="18">Crowning ceremony</li>
+                  <li value="22">Lord Vetinari</li>
+                  <li value="30">Provincial</li>
+                  <li value="35">Begetting</li>
+                  <li value="36">Takes by surprise</li>
+                  <li value="41">Hogswatchnight, elsewhere</li>
+                  <li value="43">It follows aleph</li>
+                </ol>
+                <p><b>Rimward</b></p>
+                <ol>
+                  <li value="13">Male cat</li>
+                  <li value="15">A maiden's last words?</li>
+                  <li value="23">Shall, slangily</li>
+                  <li value="31">Clubs, and others</li>
+                  <li value="33">Heavenly light show</li>
+                  <li value="40">"No lie!"</li>
+                  <li value="42">Ecksian animal</li>
+                </ol>
+              </td>
+            </tr>
+          </table>
+
+        </div><!--end of id="page-content"-->
+      </div><!--end of id="page-center"-->
+
+      <div id="page-bottom">&nbsp;</div>
+
+    </div><!--end of id="page"-->
+  </div><!--end of id="main"-->
+
+</div><!--end of id="container"-->
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

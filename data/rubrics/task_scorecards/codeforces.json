@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.1",
+  "dataset": "codeforces",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "cf_231A",
+      "year": null,
+      "evaluation_status": "sample_tests_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/codeforces_programming_judge_v1.json",
+          "sha256": "7880452ed9bb1ec83b3d1fbfd86676f8ba3a175f4c2a8ce06a463cdfe7e67197",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "codeforces_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Local execution covers public samples only and cannot establish an accepted official verdict. Remote gateway availability is an independent runtime dependency.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cf_4A",
+      "year": null,
+      "evaluation_status": "sample_tests_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/codeforces_programming_judge_v1.json",
+          "sha256": "7880452ed9bb1ec83b3d1fbfd86676f8ba3a175f4c2a8ce06a463cdfe7e67197",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "codeforces_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

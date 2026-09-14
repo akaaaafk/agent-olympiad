@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>MIT Mystery Hunt: Palimpsest</title>
+<link href="../css/mydossier.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="../js/rollover.js"></script>
+</head>
+<body onload="MM_preloadImages('http://web.mit.edu/puzzle/www/08/images/dossier_1_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_2_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_3_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_4_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_5_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_6_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_7_active.gif')">
+<div id="container">
+<div id="header"><div id="headerIcon"><a href="../index.html"><img src="../images/spacer.gif" alt="Home page" width="94" height="94" border="0" /></a></div><div id="headerCheckAnswer"><a href="answer/">View Solution</a></div></div>
+<div id="content">
+  <div id="nav"><img src="http://web.mit.edu/puzzle/www/08/images/header_dossiers.gif" alt="Dossiers:" width="119" height="27" class="paddingRight4" />&nbsp;<a href="http://web.mit.edu/puzzle/www/08/dossier1.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_1_open.gif" alt="Dossier 1" name="dossier1" width="30" height="27" border="0" id="dossier1" onmouseover="MM_swapImage('dossier1','','http://web.mit.edu/puzzle/www/08/images/dossier_1_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier2.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_2_open.gif" alt="Dossier 2" name="dossier2" width="30" height="27" border="0" id="dossier2" onmouseover="MM_swapImage('dossier2','','http://web.mit.edu/puzzle/www/08/images/dossier_2_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier3.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_3_open.gif" alt="Dossier 3" name="dossier3" width="30" height="27" border="0" id="dossier3" onmouseover="MM_swapImage('dossier3','','http://web.mit.edu/puzzle/www/08/images/dossier_3_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier4.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_4_open.gif" alt="Dossier 4" name="dossier4" width="30" height="27" border="0" id="dossier4" onmouseover="MM_swapImage('dossier4','','http://web.mit.edu/puzzle/www/08/images/dossier_4_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier5.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_5_open.gif" alt="Dossier 5" name="dossier5" width="30" height="27" border="0" id="dossier5" onmouseover="MM_swapImage('dossier5','','http://web.mit.edu/puzzle/www/08/images/dossier_5_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier6.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_6_open.gif" alt="Dossier 6" name="dossier6" width="30" height="27" border="0" id="dossier6" onmouseover="MM_swapImage('dossier6','','http://web.mit.edu/puzzle/www/08/images/dossier_6_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier7.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_7_open.gif" alt="Dossier 7" name="dossier7" width="30" height="27" border="0" id="dossier7" onmouseover="MM_swapImage('dossier7','','http://web.mit.edu/puzzle/www/08/images/dossier_7_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a></div>
+
+  <h1>Palimpsest</h1>
+  <i>Why would a detective try to read a palimpsest, anyway? Some of them
+aren't even in English. If I'm going to stare at a semi-obscured skin for a few
+hours, it darn well better be wearing a tube top.</i>
+
+  <p>
+Anne Archer caper picture<br />
+April 14, in Korea<br />
+Australian WWI observation<br />
+Babe, say<br />
+Bay Ridge, formerly<br />
+<i>Betula alleghaniensis</i><br />
+Burden bearer, for Kipling<br />
+Caine/Young spy flick<br />
+Cheong Wa Dae<br />
+Cleveland domicile, twice<br />
+Coolio/Swanson thriller<br />
+Emilia in Olivier's <i>Othello</i><br />
+Enclosure for flora<br />
+Feature of <i>Mycteroperca interstitialis</i><br />
+Feature of personified envy<br />
+Feature of the Southern Cur<br />
+Film version of <i>Meet a Body</i><br />
+<i>Firefly</i> corporation<br />
+Flower-scented perfume<br />
+Gil Major's group<br />
+Group in <i>The Simpsons Movie</i><br />
+Institute built by Galileo Galilei<br />
+Invisible wintertime danger<br />
+Jack Daniels, Dr. Pepper, and Coke<br />
+King/Straub novel<br />
+Late flight<br />
+Laurie Freelove song<br />
+March 14, in Japan<br />
+Mifune/Andress western<br />
+Mouse<br />
+<i>Moxostoma member</i><br />
+Object in front of Marilyn Chambers<br />
+Open comedo<br />
+Position sought by Tobias Funke<br />
+Protestant Ulsterite<br />
+<i>Pseudomugil</i> member<br />
+Rapids<br />
+Restaurant next to Tommy Doyle's (the other one)<br />
+Rigg predecessor<br />
+Rob Merrifield's district<br />
+Sect founded by Kirin Tor<br />
+Setting of <i>A View from the Bridge</i><br />
+Source of Superman's power<br />
+Source of bark for canoe-making<br />
+Suitable for open-sea naval action<br />
+Town near Alexander Bay<br />
+Unwed Sailor disc<br />
+Wi-Fi alternative<br />
+Yukon's capital<br />
+<i>Zosteropidae</i> member  </p>
+  <p><img src="images/palimpsest.png" alt="palimpsest image" width="468" height="641" /></p>
+</div>
+</div>
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

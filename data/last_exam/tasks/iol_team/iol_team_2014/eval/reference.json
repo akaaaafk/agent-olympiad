@@ -3,8 +3,26 @@
   "gold_pointer": "data/benchmarks/iol_team/benchmark.json#iol_team_2014.gold_label",
   "has_gold_answer": true,
   "evaluator_id": "rubric_llm_v1",
-  "evaluator_status": "ready",
-  "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-  "deliverable": "worked_answers",
-  "solution_file": "data/raw/iol/iol-2014-team-sol.m.pdf"
+  "evaluator_status": "ready_with_limitations",
+  "solution_file": "data/raw/iol/iol-2014-team-sol.m.pdf",
+  "evaluation": {
+    "evaluator_id": "rubric_llm_v1",
+    "status": "ready_with_limitations",
+    "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+    "deliverable": "team_worked_answer",
+    "judge_assets": [
+      "data/raw/iol/iol-2014-team-sol.m.pdf"
+    ],
+    "limitations": [
+      "Supplement and solution are multilingual, not Mongolian-language editions.",
+      "Original English PDF and three-page alphabetized Armenian supplement are both required. Font-control artifacts in the English text aid are normalized from visual inspection.",
+      "The existing 100-point worked-answer rubric is a benchmark proxy, not a recovered official maximum; official partial-credit rules remain unverified."
+    ],
+    "scorecard_path": "data/rubrics/task_scorecards/iol_team.json",
+    "scorecard_key": "iol_team_2014",
+    "source_repair_report": "data/benchmarks/iol_source_repair_20260913.json",
+    "score_basis": "100-point benchmark proxy only; no verified official maximum for this edition."
+  },
+  "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+  "deliverable": "team_worked_answer"
 }

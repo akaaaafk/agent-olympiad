@@ -18,7 +18,8 @@
     "session_track": "power_round_only"
   },
   "allowed_tools": [
-    "query_rules"
+    "query_rules",
+    "check_arml_national_power_proofs"
   ],
   "resources": {
     "internet": "forbidden",

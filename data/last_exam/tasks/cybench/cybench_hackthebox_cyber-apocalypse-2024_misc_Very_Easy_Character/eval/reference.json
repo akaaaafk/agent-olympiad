@@ -1,10 +1,24 @@
 {
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/cybench/benchmark.json#cybench_hackthebox_cyber-apocalypse-2024_misc_Very_Easy_Character.gold_label",
-  "has_gold_answer": false,
+  "has_gold_answer": true,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Character/metadata/metadata.json",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+    "deliverable": "ctf_flag",
+    "limitations": [
+      "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+      "The original challenge service, target routing and protected server-side state are not running in the task package."
+    ],
+    "scorecard_path": "data/rubrics/task_scorecards/cybench.json",
+    "scorecard_key": "cybench_hackthebox_cyber-apocalypse-2024_misc_Very_Easy_Character",
+    "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+    "score_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation."
+  },
+  "rubric_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+  "deliverable": "ctf_flag"
 }

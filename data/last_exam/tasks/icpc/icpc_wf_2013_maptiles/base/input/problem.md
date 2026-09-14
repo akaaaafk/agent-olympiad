@@ -1,5 +1,3 @@
-# Map Tiles
-
 Hide 
  Map Tiles 
 

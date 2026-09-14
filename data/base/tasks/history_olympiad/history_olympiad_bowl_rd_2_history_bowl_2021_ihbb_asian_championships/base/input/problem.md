@@ -1,5 +1,3 @@
-# Rd.-2-History-Bowl-2021-IHBB-Asian-Championships
-
 [Q1] The ships Shokaku [[shoh-KAH-koo]] and Zuikaku [[zwee-KAH-koo]] missed this battle due to losses in the Battle of the Coral Sea a month earlier. Tamon Yamaguchi [[tah - MOHN yah -mah-GOO-chee]] was killed during this battle when his ship was scuttled following attacks by aircraft from the Enterprise. One side in this battle lost the carrier Yorktown but, under Chester Nimitz, managed to sink four Japanese carriers. For ten points, name this 19 42 naval battle near a namesake atoll, a decisive American victory in the Pacific.
 
 [Q2] An admiral from this country survived the shipwreck of the Flower of the Sea , but lost treasure obtained from the conquest of Malacca. Matchlock guns were introduced to Japan by this country, whose general Afonso de Albuquerque served as the first Duke of Goa. Caravels were developed by, for ten points, what country which was home to Vasco da Gama?

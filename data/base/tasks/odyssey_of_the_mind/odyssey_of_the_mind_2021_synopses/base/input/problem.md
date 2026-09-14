@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2021
-
 # Odyssey of the Mind — 2021 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. It’s a Trap!Oh no, it’s a trap! Or is it? In this problem, teams will design and build a structure made of only balsa wood and glue, if desired, that holds as much weight as possible after it is used to trap a moving object. However, an oblivious character will unwittingly avoid traps it does not recognize in a humorous performance. The performance will also include a narrator character that alerts the audience to the action and the traps.
 5. Superhero Socks: A Cliffhanger BeginningGet ready for a story that begins with a cliffhanger “ending.” A Superhero is in peril and needs help to escape. Just as all hope seems lost, the Superhero puts on a pair of Super Socks that give the hero a special power. The Superhero uses the power to escape and fend off an adversary who caused the cliffhanger situation. Teams will also create an extreme weather setting, a humorous character, and a sound effect that occurs whenever the character activates the Super Socks.
 6. Primary: Animals are People Too!People see the world in different ways. Imagine looking at one thing and seeing something else. In this problem, teams will create and present a humorous performance about a magical pair of glasses that when looked through, make people look like animals. Teams will design a costume that transforms a character’s appearance from human to an animal, and another costume that transforms an animal to a different animal. A character will attempt to duplicate the glasses, but the copycat version doesn’t work the same way. What is seen through the copycat glasses will be represented by an artistic representation.
+

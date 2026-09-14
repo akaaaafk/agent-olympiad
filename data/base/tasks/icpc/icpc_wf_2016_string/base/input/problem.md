@@ -1,5 +1,3 @@
-# String Theory
-
 Hide 
  String Theory 
 

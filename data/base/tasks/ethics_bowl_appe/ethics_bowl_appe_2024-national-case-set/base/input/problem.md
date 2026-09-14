@@ -1,5 +1,3 @@
-# 2024-national-case-set
-
 CASE SET:
 28th APPE Intercollegiate Ethics Bowl® 
 National Championship

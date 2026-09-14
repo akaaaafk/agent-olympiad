@@ -1,9 +1,10 @@
-# HMMT November 2014 — Guts Round
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
 
-[Page 1]
-HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
+
+
+
+                HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
 
    Organization                         Team                         Team ID#
 
@@ -14,6 +15,15 @@ HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
                   contest. However, donuts only come in multiples of twelve. Assuming every twelve donuts cost $7.49,
               what is the minimum amount Victoria needs to pay, in dollars? (Because HMMT is aﬃliated with
              MIT, the purchase is tax exempt. Moreover, because of the size of the order, there is no delivery fee.)
+
+
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
 
 
                 HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
@@ -40,6 +50,7 @@ HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
                                 O  M
 
 
+
                                   C
                                              R
 
@@ -47,8 +58,13 @@ HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
                 Point D (not to scale in the diagram) is selected on segment RE so that polygons COMPUTED and
          CDR have the same area. Find DR.
 
-[Page 2]
-HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
+
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+                HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
 
    Organization                         Team                         Team ID#
 
@@ -58,6 +74,15 @@ HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
                 8. [7] Find the number of digits in the decimal representation of 241.
 
                 9. [7] Let f be a function from the nonnegative integers to the positive reals such that f(x+y) = f(x)·f(y)                holds for all nonnegative integers x and y. If f(19) = 524288k, ﬁnd f(4) in terms of k.
+
+
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
 
 
                 HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
@@ -72,6 +97,15 @@ HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
              12. [8] Sindy writes down the positive integers less than 200 in increasing order, but skips the multiples
                   of 10. She then alternately places + and −signs before each of the integers, yielding an expression
             +1 −2 + 3 −4 + 5 −6 + 7 −8 + 9 −11 + 12 −· · · −199. What is the value of the resulting expression?
+
+
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
 
 
                 HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
@@ -90,8 +124,13 @@ HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
                 (each with probability 12) and walks along the edge to it. What is the probability that after 10 minutes,
                he ends up where he had started?
 
-[Page 3]
-HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
+
+                HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
 
    Organization                         Team                         Team ID#
 
@@ -109,6 +148,15 @@ HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
                                                    a20 + a21 + a22 + a23 + a24 + a25.
 
 
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
+
                 HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
 
    Organization                         Team                         Team ID#
@@ -124,8 +172,13 @@ HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
              21. [11]  If you ﬂip a fair coin 1000 times, what is the expected value of the product of the number of
                heads and the number of tails?
 
-[Page 4]
-HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
+
+                HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
 
    Organization                         Team                         Team ID#
 
@@ -145,6 +198,15 @@ HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
                   triangle ACD with ∠ADC = 90◦, where D, B are on the same side of line AC, and let lines AD and
           CB meet at F. Similarly, we construct isosceles right triangle BCE with ∠BEC = 90◦, where E, A
                  are on the same side of line BC, and let lines BE and CA meet at G. Find cos ∠AGF.
+
+
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
 
 
                 HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
@@ -168,8 +230,13 @@ HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
                       If triangle ABC has sides of length 5, 12, and 13, ﬁnd the area of the triangle determined by lines
               A1C2, B1A2 and C1B2.
 
-[Page 5]
-HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
+
+                HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
 
    Organization                         Team                         Team ID#
              28. [15] Let x be a complex number such that x + x−1 is a root of the polynomial p(t) = t3 + t2 −2t −1.              Find all possible values of x7 + x−7.
@@ -180,6 +247,15 @@ HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
              30. [15]  Suppose we keep rolling a fair 2014-sided die (whose faces are labelled 1, 2, . . . , 2014) until we
                 obtain a value less than or equal to the previous roll. Let E be the expected number of times we roll
                 the die. Find the nearest integer to 100E.
+
+
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
 
 
                 HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
@@ -202,8 +278,13 @@ HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
                can be tiled by 1 × 3 and 3 × 1 rectangles?
               Warning: The next set of three problems will consist of estimation problems.
 
-[Page 6]
-HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+
+
+                HMMT NOVEMBER 2014, 15 NOVEMBER 2014 — GUTS ROUND
 
    Organization                         Team                         Team ID#
 

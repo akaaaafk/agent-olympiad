@@ -1,5 +1,3 @@
-# IHBB-Asia-Bowl-Round-5
-
 [Q1] This man liberated Bulgaria from 400 years of Ottoman rule following a successful siege of Pleven. He employed Dmitri Milyutin to open army recruitment to all social classes, and he encouraged the new zemstvo system of local government. Loris -Melikov’s work with this leader to establish a parliament was thwarted when this leader was assassinated by the People’s Will in St. Petersburg. For ten points, name this Russian tsar who emancipated the serfs.
 
 [Q2] For ten points, name this country where a gas leak at a Union Carbide facility in Bhopal killed thousands of people in Madhya Pradesh.

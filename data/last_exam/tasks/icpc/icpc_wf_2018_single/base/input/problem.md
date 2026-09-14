@@ -1,5 +1,3 @@
-# Single Cut of Failure
-
 Hide 
  Single Cut of Failure 
 

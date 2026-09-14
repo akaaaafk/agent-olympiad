@@ -1,0 +1,19 @@
+{
+  "status": "completed",
+  "records": 13,
+  "public_source_files": 477,
+  "judge_source_files": 0,
+  "publisher_files": 179,
+  "backup": "data/excluded/integrity_repair_20260913T225303Z",
+  "answers_scores_readiness_unchanged": true,
+  "records_removed": 0,
+  "protected_files_unchanged": 2008,
+  "verification": {
+    "source_packets": 13,
+    "task_input_copies": 26,
+    "initial_scope_not_extended_to_endgame": true,
+    "explicit_allowlists_valid": true,
+    "original_sources_unchanged": true,
+    "legacy_answers_not_recertified": true
+  }
+}

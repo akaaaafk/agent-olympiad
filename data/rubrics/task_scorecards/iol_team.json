@@ -1,0 +1,1115 @@
+{
+  "schema_version": "1.1",
+  "dataset": "iol_team",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "iol_team_2003",
+      "year": 2003,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+          "sha256": "555b776f06f1145ed89fd1005f5bd2e4d463e0faf079c27548f40a2acd69d357",
+          "format": "numeric_rubric",
+          "rubric_id": "iol_team_worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/iol-2003-team-sol.en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "0452d8366d2b6f692aebb892610860506760af57f0e513db724cbdebc034359a",
+          "source_url": "https://ioling.org/booklets/iol-2003-team-sol.en.pdf"
+        }
+      ],
+      "limitations": [
+        "Both official problem and solution PDFs exist. The solution matches the publisher download byte-for-byte; both solution pages visually checked.",
+        "Both task and reference require image-aware delivery, which is not validated end-to-end. No text-only readiness is asserted."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "iol_team_2007",
+      "year": 2007,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+          "sha256": "555b776f06f1145ed89fd1005f5bd2e4d463e0faf079c27548f40a2acd69d357",
+          "format": "numeric_rubric",
+          "rubric_id": "iol_team_worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/recovered_20260913/2007/iol-2007-team-sol.m.pdf",
+          "sha256": "9b7f2e7aa0fb1454ff7885fd1ba3252bd74ee5b5d5dab7564afc497a56fdb8a8",
+          "source_url": "https://ioling.org/booklets/iol-2007-team-sol.m.pdf",
+          "role": "judge_only",
+          "mime_type": "application/pdf"
+        }
+      ],
+      "limitations": [
+        "Official one-page diagram recovers the section 1 family tree. A flat list of names does not encode its parent-child edges.",
+        "No explicit section 2 mapping of eleven numbered people or edition point allocation was recovered; no answers inferred.",
+        "Image-aware delivery and graph grading have not been validated end to end."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "100-point benchmark proxy only; no verified official maximum for this edition.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "iol_team_2008",
+      "year": 2008,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+          "sha256": "555b776f06f1145ed89fd1005f5bd2e4d463e0faf079c27548f40a2acd69d357",
+          "format": "numeric_rubric",
+          "rubric_id": "iol_team_worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/iol-2008-team-sol.en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "94fd99bd73b69b596cee22c107007d787a4fcc18471672b4228c8dbd7f4060da"
+        }
+      ],
+      "limitations": "Uses the archived official solution as a judge-only reference.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "iol_team_2009",
+      "year": 2009,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+          "sha256": "555b776f06f1145ed89fd1005f5bd2e4d463e0faf079c27548f40a2acd69d357",
+          "format": "numeric_rubric",
+          "rubric_id": "iol_team_worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/iol-2009-team-sol.en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "8f65084528cfa2dc5e18700179e6dee9e3f905a91b46ea9cb6f37681e41ab156"
+        }
+      ],
+      "limitations": "Uses the archived official solution as a judge-only reference.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "iol_team_2010",
+      "year": 2010,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+          "sha256": "555b776f06f1145ed89fd1005f5bd2e4d463e0faf079c27548f40a2acd69d357",
+          "format": "numeric_rubric",
+          "rubric_id": "iol_team_worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/iol-2010-team-sol.en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "17bee8b5a68f6b532f5d22419353c6f605178a3fb044fac24d6de3013d335b63"
+        }
+      ],
+      "limitations": "Uses the archived official solution as a judge-only reference.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "iol_team_2011",
+      "year": 2011,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+          "sha256": "555b776f06f1145ed89fd1005f5bd2e4d463e0faf079c27548f40a2acd69d357",
+          "format": "numeric_rubric",
+          "rubric_id": "iol_team_worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/iol-2011-team-prob.en-gb.pdf",
+          "sha256": "d5f5363e1c29e4be311d3fe34e6b808ab5f9fa5c70888d873a90466c77fb51f9",
+          "mime_type": "application/pdf",
+          "role": "judge_only"
+        },
+        {
+          "path": "data/raw/iol/iol-2011-team-sol.en-gb.pdf",
+          "sha256": "8661dcdbd6811680a690e266c4be3375970f54dfde42d41071829f786cee975b",
+          "mime_type": "application/pdf",
+          "role": "judge_only"
+        }
+      ],
+      "limitations": [
+        "Only original pages 1-2 belong in initial input. Pages 3-7 disclose cumulative hints at 30/60/90/120/150 minutes.",
+        "Timed hint release and six answer snapshots are not implemented; do not treat this as a validated single-shot contest.",
+        "The 100-point rubric remains a benchmark proxy, not recovered official phase-dependent scoring."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "100-point benchmark proxy only. Official timed-release/snapshot scoring and maximum remain unverified.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "iol_team_2012",
+      "year": 2012,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_2012_structured_reference_v1.json",
+          "sha256": "bd36cd1f886b53f35b5b029eb42e109bdddc93be9967e75265a92c111fa95a1b",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "iol_team_2012_structured_reference_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": [
+            "Official overall/part/item point allocation",
+            "Acceptable alternative country names and pronunciation variants; partial-credit rules"
+          ]
+        }
+      ],
+      "answer_key_path": "data/rubrics/iol_team_2012_structured_reference_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/iol-2012-team-sol.en.pdf",
+          "sha256": "70b95c0b3c3bc4d7533f3ef459f3db398c5110f7ec714473a4534739d00124e8",
+          "mime_type": "application/pdf",
+          "role": "judge_only"
+        },
+        {
+          "path": "data/raw/iol/lao_20260913/judge/iol_2012_lao_solution.png",
+          "sha256": "6ba2f3123ade1092b657070d4ee0c9157999b1c01637c94577db944d7305d1f7",
+          "mime_type": "image/png",
+          "role": "judge_only",
+          "derived_from": "data/raw/iol/iol-2012-team-sol.en.pdf",
+          "original_sha256": "70b95c0b3c3bc4d7533f3ef459f3db398c5110f7ec714473a4534739d00124e8",
+          "original_pdf_page": 1,
+          "rendering": "Poppler 26.07.0, 220 dpi, unedited full page"
+        },
+        {
+          "path": "data/rubrics/iol_team_2012_structured_reference_v1.json",
+          "sha256": "bd36cd1f886b53f35b5b029eb42e109bdddc93be9967e75265a92c111fa95a1b",
+          "mime_type": "application/json",
+          "role": "judge_only"
+        }
+      ],
+      "limitations": [
+        "All 57 Lao input forms are present in the original problem image but absent from plain-text extraction.",
+        "Official country names and pronunciation references for all 57 entries are present; the solution PDF, rendered page and country map are now linked as judge-only assets.",
+        "Flattened pronunciation extraction loses or moves superscripts/diacritics. Only the original page images are authoritative; no Unicode pronunciation key is asserted.",
+        "Official total, part/item weights, acceptable variants and partial-credit rules remain unverified. The old 100-point 50/30/20 benchmark proxy is disabled for this record.",
+        "Image-aware task delivery and pronunciation grading have not been validated end to end; keep not_ready."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Official points unknown; 57 entries and two requested outputs per entry are not point weights. Legacy 100-point benchmark proxy disabled.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "iol_team_2014",
+      "year": 2014,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+          "sha256": "555b776f06f1145ed89fd1005f5bd2e4d463e0faf079c27548f40a2acd69d357",
+          "format": "numeric_rubric",
+          "rubric_id": "iol_team_worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/iol-2014-team-sol.m.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "98fd381fa7bd3600efee0c7da304219f665efbacd913ac907b13f42db50ee9b1"
+        }
+      ],
+      "limitations": [
+        "Supplement and solution are multilingual, not Mongolian-language editions.",
+        "Original English PDF and three-page alphabetized Armenian supplement are both required. Font-control artifacts in the English text aid are normalized from visual inspection.",
+        "The existing 100-point worked-answer rubric is a benchmark proxy, not a recovered official maximum; official partial-credit rules remain unverified."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "100-point benchmark proxy only; no verified official maximum for this edition.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "iol_team_2015",
+      "year": 2015,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+          "sha256": "555b776f06f1145ed89fd1005f5bd2e4d463e0faf079c27548f40a2acd69d357",
+          "format": "numeric_rubric",
+          "rubric_id": "iol_team_worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/iol-2015-team-sol.en-gb.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "d764a52fdf92cc9fad07073f5f525e6041c54383bd9580fd66f729f23c4453b2"
+        }
+      ],
+      "limitations": "Uses the archived official solution as a judge-only reference.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "iol_team_2016",
+      "year": 2016,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_2016_printed_points_v1.json",
+          "sha256": "7a8f7d3fb236ac420d3bdd07c854f7f88f98477a6962c16b53a99f1d4dec5fda",
+          "format": "numeric_rubric",
+          "rubric_id": "iol_team_2016_printed_points_v1",
+          "total_points": 120,
+          "criteria": [
+            {
+              "id": "a",
+              "name": "Assignment a",
+              "max_score": 114,
+              "source_page": 1,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "b",
+              "name": "Assignment b",
+              "max_score": 6,
+              "source_page": 1,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": "data/rubrics/iol_team_2016_audio_answer_map.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/iol-2016-team-sol.m.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "77828f76cc41a2a84308f1be78513f9875dfe78768d39156d894fdb47615e453"
+        }
+      ],
+      "limitations": [
+        "Official multilingual solution provides the 114 word-to-audio matches; all 114 WAV recordings are now contestant-visible.",
+        "The six-point observation/explanation part has no explicit marking reference in the recovered answer table.",
+        "Audio-capable runtime delivery and grading have not been validated end to end; the source's unspecified Creative Commons notice is preserved."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Printed official allocations: 120 regular points; partial reference only. Part a: 114; part b: 6.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "iol_team_2017",
+      "year": 2017,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_2017_structured_reference_v1.json",
+          "sha256": "540316d9a3b1f6175595fc5cc735cfe8410bda1a874d7e5935d4f917209203c1",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "iol_team_2017_structured_reference_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": [
+            "Official part/item weights and full dictionary/grammar credit allocation"
+          ]
+        }
+      ],
+      "answer_key_path": "data/rubrics/iol_team_2017_structured_reference_v1.json",
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/iol-2017-team-sol.en.pdf",
+          "sha256": "e831b2003e0c4cb7ade36cfc003f1650146ac9781485a57183f77559c14bbdfc",
+          "role": "judge_only",
+          "mime_type": "application/pdf"
+        },
+        {
+          "path": "data/rubrics/iol_team_2017_structured_reference_v1.json",
+          "sha256": "540316d9a3b1f6175595fc5cc735cfe8410bda1a874d7e5935d4f917209203c1",
+          "role": "judge_only",
+          "mime_type": "application/json"
+        }
+      ],
+      "limitations": [
+        "Original emoji page images are required; plain-text font extraction corrupts glyph identity (including black versus blue heart).",
+        "Official (a) label-to-ID and (b) four unmatched-emoji references recovered; do not deduplicate the 93 description labels into 83 items.",
+        "The official solution gives phrase glosses but no separate full word-dictionary or short-grammar answer/marking rubric for (c)-(d).",
+        "No official total, part weights or partial-credit rules recovered. The old 100-point 50/30/20 benchmark proxy is disabled for this record.",
+        "Image-aware task delivery and full four-part grading have not been validated end to end."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Official points unknown; structured partial reference only. Legacy 100-point benchmark proxy disabled; 93 matches and 4 descriptions are not point weights.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "iol_team_2018",
+      "year": 2018,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+          "sha256": "555b776f06f1145ed89fd1005f5bd2e4d463e0faf079c27548f40a2acd69d357",
+          "format": "numeric_rubric",
+          "rubric_id": "iol_team_worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/iol-2018-team-sol.en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "a7c5b8a76079484c37811368012ee23051d7a7f0314b73adc2e661a9f1bb9486"
+        }
+      ],
+      "limitations": "Uses the archived official solution as a judge-only reference.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "iol_team_2019",
+      "year": 2019,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+          "sha256": "555b776f06f1145ed89fd1005f5bd2e4d463e0faf079c27548f40a2acd69d357",
+          "format": "numeric_rubric",
+          "rubric_id": "iol_team_worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/iol-2019-team-sol.en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "ab10444122608383f22627845f48b28302ae8c1f7488a2d7d8ceae21f427e16b"
+        }
+      ],
+      "limitations": [
+        "All 18 official example videos are restored unchanged; their overlaid symbols/scores correspond to given examples 1-48, not answers 49-77.",
+        "Symbolic gymnastics notation in both problem and solution is lost in plain-text extraction. PDF images and video-capable delivery/grading remain unvalidated.",
+        "Gymnastics difficulty marks such as 0.2/0.4 are values to infer, not IOL item weights. The 100-point rubric is a proxy, not an official maximum."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "100-point benchmark proxy only; official IOL item weights/maximum unverified. Gymnastics marks are task answer values, not evaluation weights.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "iol_team_2021",
+      "year": 2021,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+          "sha256": "555b776f06f1145ed89fd1005f5bd2e4d463e0faf079c27548f40a2acd69d357",
+          "format": "numeric_rubric",
+          "rubric_id": "iol_team_worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/iol-2021-team-sol.en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "cdb82b3025afd36f4a1aea2957f25c084d2200be10e7aedbbd8eacb73664c9f4"
+        }
+      ],
+      "limitations": "Uses the archived official solution as a judge-only reference.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "iol_team_2022",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_2022_printed_points_v1.json",
+          "sha256": "57bdd432bac25a90e63c6e0121a1211ebe00d98a1dfaeefc307b1db4e2e8559c",
+          "format": "numeric_rubric",
+          "rubric_id": "iol_team_2022_printed_points_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "I",
+              "name": "Part I",
+              "max_score": 25,
+              "source_pdf_page": 2,
+              "description": "Official part subtotal only; within-part partial-credit weights have not been recovered."
+            },
+            {
+              "id": "II",
+              "name": "Part II",
+              "max_score": 25,
+              "source_pdf_page": 6,
+              "description": "Official part subtotal only; within-part partial-credit weights have not been recovered."
+            },
+            {
+              "id": "III",
+              "name": "Part III",
+              "max_score": 25,
+              "source_pdf_page": 8,
+              "description": "Official part subtotal only; within-part partial-credit weights have not been recovered."
+            },
+            {
+              "id": "IV",
+              "name": "Part IV",
+              "max_score": 25,
+              "source_pdf_page": 9,
+              "description": "Official part subtotal only; within-part partial-credit weights have not been recovered."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/iol-2022-team-sol.en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "7cb48ba494a2e59eab42ef2e12c1fee5629685f98957dcaa1149cf9028f1678d"
+        }
+      ],
+      "limitations": [
+        "Printed Parts I-IV each carry 25 points, totaling 100. The previous generic accuracy/method/coverage split is not the official allocation.",
+        "Parts I and III require the Manchu script. Embedded font extraction corrupts its glyphs; original PDF images are authoritative for problem and answers.",
+        "Within-part partial credit and image/script-aware delivery/grading have not been validated. Printed subtotals alone do not make an executable official grader."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Official printed part subtotals: I=25, II=25, III=25, IV=25; maximum 100. Within-part partial credit unverified.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "iol_team_2023",
+      "year": 2023,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+          "sha256": "555b776f06f1145ed89fd1005f5bd2e4d463e0faf079c27548f40a2acd69d357",
+          "format": "numeric_rubric",
+          "rubric_id": "iol_team_worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/iol-2023-team-sol.en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "09b1e2323501b70f1fde27ff9db2527bd81f8ccb726119b1f00902119a6d06a6"
+        }
+      ],
+      "limitations": "Uses the archived official solution as a judge-only reference.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "iol_team_2024",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_2024_printed_points_v1.json",
+          "sha256": "f30e39ebec5446beac0014e71be82d08e6f8a42811b7eb7cadb4ef85a5687f7c",
+          "format": "numeric_rubric",
+          "rubric_id": "iol_team_2024_printed_points_v1",
+          "total_points": 90,
+          "criteria": [
+            {
+              "id": "A",
+              "name": "Assignment A",
+              "max_score": 2,
+              "source_page": 3,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "B",
+              "name": "Assignment B",
+              "max_score": 2,
+              "source_page": 3,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "C",
+              "name": "Assignment C",
+              "max_score": 2,
+              "source_page": 3,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "D",
+              "name": "Assignment D",
+              "max_score": 2,
+              "source_page": 3,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "E",
+              "name": "Assignment E",
+              "max_score": 10,
+              "source_page": 6,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "F",
+              "name": "Assignment F",
+              "max_score": 8,
+              "source_page": 7,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "G",
+              "name": "Assignment G",
+              "max_score": 20,
+              "source_page": 7,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "H",
+              "name": "Assignment H",
+              "max_score": 3,
+              "source_page": 7,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "I",
+              "name": "Assignment I",
+              "max_score": 4,
+              "source_page": 7,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "J",
+              "name": "Assignment J",
+              "max_score": 5,
+              "source_page": 7,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "K",
+              "name": "Assignment K",
+              "max_score": 4,
+              "source_page": 7,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "L",
+              "name": "Assignment L",
+              "max_score": 28,
+              "source_page": 8,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/recovered_20260913/2024/iol-2024-t-1-slide.pdf",
+          "sha256": "2cf4f42d75ab64f65132d501b108e48b802f6e7562f575beceeb5d7da68c50ab",
+          "source_url": "https://ioling.org/slides/iol-2024-t-1-slide.pdf",
+          "role": "judge_only",
+          "mime_type": "application/pdf"
+        }
+      ],
+      "limitations": [
+        "Official 12-page presentation supplies partial worked solutions, including graphical trees; not a complete marking scheme.",
+        "No explicit Assignment E answer list or tie-breaker M answer was found in the presentation.",
+        "A-L total 90 regular points. Assignment M is a separate 10-point tie-breaker, not part of the regular denominator.",
+        "Image-aware tree interpretation and per-item grading have not been validated end to end."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Printed official allocations: 90 regular points; partial reference only. M has 10 separate tie-break points.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "iol_team_2025",
+      "year": 2025,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+          "sha256": "555b776f06f1145ed89fd1005f5bd2e4d463e0faf079c27548f40a2acd69d357",
+          "format": "numeric_rubric",
+          "rubric_id": "iol_team_worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/iol/iol-2025-team-sol.en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "05b1643cceda8b566ac68986fb068c5c9c64d28d20b2bf99fef4a8c85870d869"
+        }
+      ],
+      "limitations": "Uses the archived official solution as a judge-only reference.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ],
+  "active_score_membership_path": "data/rubrics/iol_team_active_score_membership.json"
+}

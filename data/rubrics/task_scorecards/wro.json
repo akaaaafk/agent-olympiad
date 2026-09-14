@@ -1,0 +1,547 @@
+{
+  "schema_version": "1.1",
+  "dataset": "wro",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "wro_2022_future_innovators",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2022_future_innovators",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2022_robomission_elementary",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2022_robomission_elementary",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2022_robomission_junior",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2022_robomission_junior",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2022_robomission_senior",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2022_robomission_senior",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2023_future_innovators",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2023_future_innovators",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2023_robomission_elementary",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2023_robomission_elementary",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2023_robomission_junior",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2023_robomission_junior",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2023_robomission_senior",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2023_robomission_senior",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2024_future_innovators",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2024_future_innovators",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2024_robomission_elementary",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2024_robomission_elementary",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2024_robomission_junior",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2024_robomission_junior",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2024_robomission_senior",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2024_robomission_senior",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2025_future_innovators",
+      "year": 2025,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2025_future_innovators",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2025_robomission_elementary",
+      "year": 2025,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2025_robomission_elementary",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2025_robomission_junior",
+      "year": 2025,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2025_robomission_junior",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2025_robomission_senior",
+      "year": 2025,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2025_robomission_senior",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2026_future_innovators",
+      "year": 2026,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2026_future_innovators",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2026_robomission_elementary",
+      "year": 2026,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2026_robomission_elementary",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2026_robomission_junior",
+      "year": 2026,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2026_robomission_junior",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wro_2026_robomission_senior",
+      "year": 2026,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/wro_official_rubrics.json",
+          "sha256": "7ada4464ba6a6781731c76c6130e3ed59fb6b005ef22bd78320727be3850a4c9",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "wro_official_rubrics",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": "wro_2026_robomission_senior",
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The official mission and scoring material is archived, but the runner cannot observe a physical robot, field randomization, inspection, timed attempt, judge decisions, or signed score sheet.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

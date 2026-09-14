@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>--MESSAGE REDACTED--: Solution</title>
+<link rel="stylesheet" href="../../../styles/puzzle-solution.css"/>
+</head>
+<body class="solution orbital_nexus message_redacted">
+<div id="header">
+<div class="planet"><img src="../../../images/title-orbital_nexus.png" alt="Orbital Nexus"/></div>
+</div>
+
+<div id="content">
+    <h1>--MESSAGE REDACTED--</h1>
+
+<p><i>by Fred Gay</i><br />
+<b>Answer:</b> LINE DANCING, GOSPEL SONGS, SLIDE GUITAR, ROCK AND ROLL
+</p><p>A la the robots in Jonathan Coulton's song "<a href="http://www.jonathancoulton.com/music/thingaweek/ChironBetaPrime.mp3" class="external text" rel="nofollow">Chiron Beta Prime</a>," these overlords want you to produce for them—in this case, record producing. In each of the four phases, you're given three audio files labeled FF0000, 00FF00, and 0000FF. Each contains the same clip of the first chorus from Coulton's moon-themed “<a href="http://www.jonathancoulton.com/mp3/I'm%20Your%20Moon.mp3" class="external text" rel="nofollow">I'm Your Moon</a>”. Using the background color of the display page for each phase as your key, use an audio editing program like Audacity to mix each file in the appropriate RGB percentages. In the background, the answer word for that phase will be spelled out.
+</p><p><b>Head Quarter:</b><br />
+127 red: FF0000 at 50% amplitude<br />
+255 green: 00FF00 at 100% amplitude<br />
+255 blue: 0000FF at 100% amplitude<br />
+The <a href="HeadAnswer.mp3" class="internal">mixed track</a> spells out LINE DANCING.
+</p><p><b>French Quarter:</b><br />
+127 red: FF0000 at 50% amplitude<br />
+127 green: 00FF00 at 50% amplitude<br />
+255 blue: 0000FF at 100% amplitude<br />
+The <a href="HeadAnswer.mp3" class="internal">mixed track</a> spells out GOSPEL SONGS.
+</p><p><b>Fiscal Quarter:</b><br />
+255 red: FF0000 at 100% amplitude<br />
+127 green: 00FF00 at 50% amplitude<br />
+127 blue: 0000FF at 50% amplitude<br />
+The <a href="HeadAnswer.mp3" class="internal">mixed track</a> spells out SLIDE GUITAR.
+</p><p><b>Last Quarter:</b><br />
+255 red: FF0000 at 100% amplitude<br />
+127 green: 00FF00 at 50% amplitude<br />
+255 blue: 0000FF at 100% amplitude<br />
+The <a href="HeadAnswer.mp3" class="internal">mixed track</a> spells out ROCK AND ROLL.
+</p><p>Aside: Jonathan Coulton sent us a nice note before the hunt, wishing us a fun hunt. From Flickr user el-finco, here's a picture of Coulton with our puzzle. Thanks, Jonathan!
+</p><p><img src="Coulton.jpg" width="500" height="334" border="0" />
+</p><p><br />
+</p>
+
+</div>
+
+<div id="footer"></div>
+</body>
+</html>

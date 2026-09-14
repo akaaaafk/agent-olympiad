@@ -1,0 +1,56 @@
+{
+  "schema_version": "iiot-reference-archive/v1",
+  "problem_id": "iiot_2022_05",
+  "task_code": "picnic",
+  "round": "international_final",
+  "archive_url": "https://iio.team/competition/tasks/2022",
+  "source_links": {
+    "Statement": "https://drive.google.com/file/d/1TACaAQpv179q0I5yAulPt3Bqqo9krfA4/view?usp=drive_link",
+    "Solutions": "https://drive.google.com/file/d/1l8MVcr8fV5X0DVZJyLZC1tZvM5hTpBko/view?usp=drive_link",
+    "Test cases": "https://drive.google.com/drive/folders/1THXzM3J_OEIZUX2e7GhFZhKnHoPjbtfI?usp=drive_link"
+  },
+  "reference": {
+    "path": "data/raw/iiot/2022/picnic/references/picnic.cpp",
+    "source_url": "https://drive.google.com/uc?id=1l8MVcr8fV5X0DVZJyLZC1tZvM5hTpBko&export=download",
+    "sha256": "0c450c7ddc4d7443561ae0595395d18edb2ae1cd7f5ebde43eeea54fe2efb8d5",
+    "bytes": 1330,
+    "classification": "publisher_reference_source",
+    "execution_validation": "not_run"
+  },
+  "official_scoring": {
+    "total_points": 100,
+    "subtasks": [
+      {
+        "id": 1,
+        "points": 0
+      },
+      {
+        "id": 2,
+        "points": 10
+      },
+      {
+        "id": 3,
+        "points": 15
+      },
+      {
+        "id": 4,
+        "points": 15
+      },
+      {
+        "id": 5,
+        "points": 25
+      },
+      {
+        "id": 6,
+        "points": 35
+      }
+    ],
+    "mode": "all_cases_required_per_subtask",
+    "test_to_subtask_mapping": "not_archived"
+  },
+  "public_test_listing": {
+    "status": "no_testcase_link_in_publisher_archive"
+  },
+  "readiness": "not_ready",
+  "license_policy": "No redistribution permission inferred."
+}

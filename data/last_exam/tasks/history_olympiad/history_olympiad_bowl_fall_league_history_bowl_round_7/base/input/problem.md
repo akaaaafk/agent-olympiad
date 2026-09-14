@@ -1,5 +1,3 @@
-# Fall-League-History-Bowl_Round-7
-
 [Q1] British philosopher G.E. Moore wrote a famous "defense of" this phrase that inspired his later "Proof of an External World." This phrase titles a pamphlet that argues it is absurd for an island to rule a continent and which advocates for replacing the Magna Carta with a Continental Charter. For ten points, give this two word phrase that titles a Thomas Paine pamphlet advocating for American independence, a term which indicates obviously correct beliefs.
 
 [Q2] The geology concept known as stratigraphy was applied to this science by Danish antiquarian Christian Jürgensen Thomsen. William Cunnington, a founding father of this science, conducted a s eries of expeditions to Wiltshire, where he recorded findings in barrows. Notable developments in this science include the discoveries of Hissarlik in Turkey and Mycenae [[my -SEE-nee]] in Greece by Heinrich Schliemann [[SHLEE -mahn]]. For ten points, name this science which conducts excavations of ancient sites.

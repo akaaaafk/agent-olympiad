@@ -1,4 +1,4 @@
-# Environment — `icpc`
+# Environment
 
 ## Roster
 
@@ -17,8 +17,12 @@
 
 ## Allowed tools
 
-- query_rules
-- execute_code
+```json
+[
+  "query_rules",
+  "execute_code"
+]
+```
 
 ## Resources
 
@@ -92,12 +96,10 @@
     "Python3"
   ],
   "official_mime_types": [
-    "text/x-csrc",
     "text/x-c++src",
-    "text/x-java",
-    "text/x-kotlin",
     "text/x-python"
   ],
   "io_model": "stdin_stdout"
 }
 ```
+

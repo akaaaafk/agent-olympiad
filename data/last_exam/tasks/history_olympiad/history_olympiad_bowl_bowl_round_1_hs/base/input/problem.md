@@ -1,5 +1,3 @@
-# Bowl-Round-1-HS
-
 [Q1] Following the arrival of the Dartmouth this man and James Otis distributed the "circular letter" to organize a meeting at Faneuil [[FAN -yoo-il]] Hall. Many years after his best known action, this man succeeded John Hancock to become the fourth governor of Massachusetts. For ten points, name th is American Founding Father and leader of the Sons of Liberty who orchestrated the Boston Tea Party.
 
 [Q2] This polity's ruling family came to power after its scion, Francesco the Malicious, captured its chief fortres s while disguised as a Franciscan monk. In 2015, the prince of this polity apologized for its role in the deportation of 90 Jews during the Holocaust. That prince is the child of this country's Prince Rainier III and American actress Grace Kelly. The Grimaldi family has traditionally ruled, for ten points, what wealthy city -state on the Franco-Italian border known for its yearly Grand Prix?

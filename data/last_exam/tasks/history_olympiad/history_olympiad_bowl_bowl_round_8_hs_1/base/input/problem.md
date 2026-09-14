@@ -1,5 +1,3 @@
-# Bowl-Round-8-HS-1
-
 [Q1] Upon taking the throne, this king was read the Declaration of Right by Parliament; that later became part of the English Bill of Rights. This King’s forces defeated James II’s Jacobite uprising at the Battle of the Boyne, after which this Dutch stadtholder assumed power in the Glorious Revolution. For ten points, name this husband of Mary II, a Prince of Orange and 17th century king of England.
 
 [Q2] The “massive resistance” movement attempted to circumvent this case’s ruling, which was to be carried out with “all deliberate speed.” Thurgood Marshall argued for the plaintiffs in this case, which struck down Plessy vs. Ferguson. For ten points, name this Supreme Court case that overturned the “separate but equal” principle in public schools.

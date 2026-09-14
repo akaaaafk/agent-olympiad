@@ -1,0 +1,3335 @@
+{
+  "visibility": "judge_only",
+  "records": {
+    "debatebench_Astana Open 2023 Round 3_edited_transcript": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Astana Open 2023 Round 3_edited_transcript.txt",
+      "transcript_sha256": "fadee8584cb440a6f2edfb93827f5cefa3f1819810734e1e666ef15ac78ef39a",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Astana Open 2023 Round 3_edited_transcript",
+      "filename_alias_applied": false,
+      "identity_status": "missing",
+      "selected_scores": null,
+      "candidates": [],
+      "role_alignment": {
+        "valid_role_boundaries": false,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MO",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MO",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_Astana Open Round 4": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Astana Open Round 4.txt",
+      "transcript_sha256": "6db78b678671f6d655a469363ed9d396f613be118f2185feefb3a79dba639fb8",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Astana Open Round 4",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 43,
+        "cell_range": "A43:M43",
+        "tournament_title": "Astana Open Round 4",
+        "speaker_scores": {
+          "PM": 82.0,
+          "LO": 84.0,
+          "DPM": 81.0,
+          "DLO": 83.0,
+          "MG": 77.0,
+          "MO": 79.0,
+          "GW": 77.0,
+          "OW": 80.0
+        },
+        "house_order": [
+          "OO",
+          "OG",
+          "CO",
+          "CG"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 43,
+          "cell_range": "A43:M43",
+          "tournament_title": "Astana Open Round 4",
+          "speaker_scores": {
+            "PM": 82.0,
+            "LO": 84.0,
+            "DPM": 81.0,
+            "DLO": 83.0,
+            "MG": 77.0,
+            "MO": 79.0,
+            "GW": 77.0,
+            "OW": 80.0
+          },
+          "house_order": [
+            "OO",
+            "OG",
+            "CO",
+            "CG"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_Astana Open Round 5": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Astana Open Round 5.txt",
+      "transcript_sha256": "9d96ba2115a7014e498f42cb35c2405f6d5730d03f4356264e5f2d2f18227a87",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Astana Open Round 5",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 45,
+        "cell_range": "A45:M45",
+        "tournament_title": "Astana Open Round 5",
+        "speaker_scores": {
+          "PM": 82.0,
+          "LO": 82.0,
+          "DPM": 82.0,
+          "DLO": 81.0,
+          "MG": 86.0,
+          "MO": 80.0,
+          "GW": 82.0,
+          "OW": 80.0
+        },
+        "house_order": [
+          "CG",
+          "OG",
+          "OO",
+          "CO"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 45,
+          "cell_range": "A45:M45",
+          "tournament_title": "Astana Open Round 5",
+          "speaker_scores": {
+            "PM": 82.0,
+            "LO": 82.0,
+            "DPM": 82.0,
+            "DLO": 81.0,
+            "MG": 86.0,
+            "MO": 80.0,
+            "GW": 82.0,
+            "OW": 80.0
+          },
+          "house_order": [
+            "CG",
+            "OG",
+            "OO",
+            "CO"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": false,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "PM",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "PM",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_Belgrade WUDC 2022 Round 6": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Belgrade WUDC 2022 Round 6.txt",
+      "transcript_sha256": "00894664e334a3a383f1ecd1aacec92ff1ffc1412cec93c23e01a036cbc4a15d",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Belgrade WUDC 2022 Round 6",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 29,
+        "cell_range": "A29:M29",
+        "tournament_title": "Belgrade WUDC 2022 Round 6",
+        "speaker_scores": {
+          "PM": 82.0,
+          "LO": 81.0,
+          "DPM": 82.0,
+          "DLO": 80.0,
+          "MG": 80.0,
+          "MO": 78.0,
+          "GW": 79.0,
+          "OW": 77.0
+        },
+        "house_order": [
+          "OG",
+          "OO",
+          "CG",
+          "CO"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 29,
+          "cell_range": "A29:M29",
+          "tournament_title": "Belgrade WUDC 2022 Round 6",
+          "speaker_scores": {
+            "PM": 82.0,
+            "LO": 81.0,
+            "DPM": 82.0,
+            "DLO": 80.0,
+            "MG": 80.0,
+            "MO": 78.0,
+            "GW": 79.0,
+            "OW": 77.0
+          },
+          "house_order": [
+            "OG",
+            "OO",
+            "CG",
+            "CO"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_Belgrade WUDC 2022 Round 7": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Belgrade WUDC 2022 Round 7.txt",
+      "transcript_sha256": "c2ce7c806c2730fa9c5df4870b146fda98fbe73f18c61ece41506561a7f1f299",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Belgrade WUDC 2022 Round 7",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 30,
+        "cell_range": "A30:M30",
+        "tournament_title": "Belgrade WUDC 2022 Round 7",
+        "speaker_scores": {
+          "PM": 80.0,
+          "LO": 83.0,
+          "DPM": 82.0,
+          "DLO": 83.0,
+          "MG": 83.0,
+          "MO": 83.0,
+          "GW": 82.0,
+          "OW": 82.0
+        },
+        "house_order": [
+          "CG",
+          "OO",
+          "CO",
+          "OG"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 30,
+          "cell_range": "A30:M30",
+          "tournament_title": "Belgrade WUDC 2022 Round 7",
+          "speaker_scores": {
+            "PM": 80.0,
+            "LO": 83.0,
+            "DPM": 82.0,
+            "DLO": 83.0,
+            "MG": 83.0,
+            "MO": 83.0,
+            "GW": 82.0,
+            "OW": 82.0
+          },
+          "house_order": [
+            "CG",
+            "OO",
+            "CO",
+            "OG"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": false,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "MG",
+          "MO",
+          "GW",
+          "MO",
+          "GW",
+          "CO"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "CO",
+          "/CO"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_Belgrade WUDC 2022 Round 8": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Belgrade WUDC 2022 Round 8.txt",
+      "transcript_sha256": "28007b87f6675ea88f63f923784a13b562d9864bbf700728723571b355f0e01f",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Belgrade WUDC 2022 Round 8",
+      "filename_alias_applied": false,
+      "identity_status": "missing",
+      "selected_scores": null,
+      "candidates": [],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_Belgrade WUDC 2022 Round 9 Room 2": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Belgrade WUDC 2022 Round 9 Room 2.txt",
+      "transcript_sha256": "13fa7742d910ce657cf7084129f58e5e081bbbab8f608d252ea7b15bc4d0131c",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Belgrade WUDC 2022 Round 9 Room 2",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 26,
+        "cell_range": "A26:M26",
+        "tournament_title": "Belgrade WUDC 2022 Round 9 Room 2",
+        "speaker_scores": {
+          "PM": 80.0,
+          "LO": 85.0,
+          "DPM": 80.0,
+          "DLO": 84.0,
+          "MG": 80.0,
+          "MO": 83.0,
+          "GW": 81.0,
+          "OW": 83.0
+        },
+        "house_order": [
+          "OO",
+          "CO",
+          "CG",
+          "OG"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 26,
+          "cell_range": "A26:M26",
+          "tournament_title": "Belgrade WUDC 2022 Round 9 Room 2",
+          "speaker_scores": {
+            "PM": 80.0,
+            "LO": 85.0,
+            "DPM": 80.0,
+            "DLO": 84.0,
+            "MG": 80.0,
+            "MO": 83.0,
+            "GW": 81.0,
+            "OW": 83.0
+          },
+          "house_order": [
+            "OO",
+            "CO",
+            "CG",
+            "OG"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": false,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MG",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_Cambridge IV 2020 Round 1": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Cambridge IV 2020 Round 1.txt",
+      "transcript_sha256": "e773799c93bdb549ec03e6c42f71e51938b33e5c9cd79dfdfeba48d4f076b809",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Cambridge IV 2020 Round 1",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 35,
+        "cell_range": "A35:M35",
+        "tournament_title": "Cambridge IV 2020 Round 1",
+        "speaker_scores": {
+          "PM": 77.0,
+          "LO": 82.0,
+          "DPM": 75.0,
+          "DLO": 83.0,
+          "MG": 72.0,
+          "MO": 75.0,
+          "GW": 75.0,
+          "OW": 76.0
+        },
+        "house_order": [
+          "OO",
+          "OG",
+          "CO",
+          "CG"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 35,
+          "cell_range": "A35:M35",
+          "tournament_title": "Cambridge IV 2020 Round 1",
+          "speaker_scores": {
+            "PM": 77.0,
+            "LO": 82.0,
+            "DPM": 75.0,
+            "DLO": 83.0,
+            "MG": 72.0,
+            "MO": 75.0,
+            "GW": 75.0,
+            "OW": 76.0
+          },
+          "house_order": [
+            "OO",
+            "OG",
+            "CO",
+            "CG"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_Cambridge IV 2020 Round 2": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Cambridge IV 2020 Round 2.txt",
+      "transcript_sha256": "4fb9b5b2a498ea84a1b7ccaaa733c3e785976b6e0d59c8251e485c74c0342574",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Cambridge IV 2020 Round 2",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 36,
+        "cell_range": "A36:M36",
+        "tournament_title": "Cambridge IV 2020 Round 2",
+        "speaker_scores": {
+          "PM": 80.0,
+          "LO": 79.0,
+          "DPM": 78.0,
+          "DLO": 77.0,
+          "MG": 77.0,
+          "MO": 76.0,
+          "GW": 77.0,
+          "OW": 75.0
+        },
+        "house_order": [
+          "OG",
+          "OO",
+          "CG",
+          "CO"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 36,
+          "cell_range": "A36:M36",
+          "tournament_title": "Cambridge IV 2020 Round 2",
+          "speaker_scores": {
+            "PM": 80.0,
+            "LO": 79.0,
+            "DPM": 78.0,
+            "DLO": 77.0,
+            "MG": 77.0,
+            "MO": 76.0,
+            "GW": 77.0,
+            "OW": 75.0
+          },
+          "house_order": [
+            "OG",
+            "OO",
+            "CG",
+            "CO"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": false,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "OG",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "OG",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_d_oxbridge_3_round_3_cvr_cr_box_df_4_vid2txt_Jan-08-2025_-13_full": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/d_oxbridge_3_round_3_cvr_cr_box_df_4_vid2txt_Jan-08-2025_-13_full.txt",
+      "transcript_sha256": "2bfd678475a0c973c23dc482a0eff3a3c2ef49bc63fb1274d12e377d56cbf2a0",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Doxbridge 3 Round 3",
+      "filename_alias_applied": true,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 33,
+        "cell_range": "A33:M33",
+        "tournament_title": "Doxbridge 3 Round 3",
+        "speaker_scores": {
+          "PM": 82.0,
+          "LO": 81.0,
+          "DPM": 80.0,
+          "DLO": 82.0,
+          "MG": 84.0,
+          "MO": 80.0,
+          "GW": 82.0,
+          "OW": 79.0
+        },
+        "house_order": [
+          "CG",
+          "OO",
+          "OG",
+          "CO"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 33,
+          "cell_range": "A33:M33",
+          "tournament_title": "Doxbridge 3 Round 3",
+          "speaker_scores": {
+            "PM": 82.0,
+            "LO": 81.0,
+            "DPM": 80.0,
+            "DLO": 82.0,
+            "MG": 84.0,
+            "MO": 80.0,
+            "GW": 82.0,
+            "OW": 79.0
+          },
+          "house_order": [
+            "CG",
+            "OO",
+            "OG",
+            "CO"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_Doxbridge 3 Round 4": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Doxbridge 3 Round 4.txt",
+      "transcript_sha256": "779f5c99525924257d17a53c17c542f538dcd277bd736e693bf40b10e0de39f3",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Doxbridge 3 Round 4",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 34,
+        "cell_range": "A34:M34",
+        "tournament_title": "Doxbridge 3 Round 4",
+        "speaker_scores": {
+          "PM": 83.0,
+          "LO": 83.0,
+          "DPM": 84.0,
+          "DLO": 82.0,
+          "MG": 79.0,
+          "MO": 80.0,
+          "GW": 78.0,
+          "OW": 82.0
+        },
+        "house_order": [
+          "OG",
+          "OO",
+          "CO",
+          "CG"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 34,
+          "cell_range": "A34:M34",
+          "tournament_title": "Doxbridge 3 Round 4",
+          "speaker_scores": {
+            "PM": 83.0,
+            "LO": 83.0,
+            "DPM": 84.0,
+            "DLO": 82.0,
+            "MG": 79.0,
+            "MO": 80.0,
+            "GW": 78.0,
+            "OW": 82.0
+          },
+          "house_order": [
+            "OG",
+            "OO",
+            "CO",
+            "CG"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_Doxbridge 4 Round 1": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Doxbridge 4 Round 1.txt",
+      "transcript_sha256": "d093c1ce20914d974fe299e184fe529f90f7f9a077fb3f77899a70d83b8bf8b2",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Doxbridge 4 Round 1",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 3,
+        "cell_range": "A3:M3",
+        "tournament_title": "Doxbridge 4 Round 1",
+        "speaker_scores": {
+          "PM": 77.0,
+          "LO": 79.0,
+          "DPM": 76.0,
+          "DLO": 79.0,
+          "MG": 80.0,
+          "MO": 79.0,
+          "GW": 79.0,
+          "OW": 78.0
+        },
+        "house_order": [
+          "CG",
+          "OO",
+          "CO",
+          "OG"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 3,
+          "cell_range": "A3:M3",
+          "tournament_title": "Doxbridge 4 Round 1",
+          "speaker_scores": {
+            "PM": 77.0,
+            "LO": 79.0,
+            "DPM": 76.0,
+            "DLO": 79.0,
+            "MG": 80.0,
+            "MO": 79.0,
+            "GW": 79.0,
+            "OW": 78.0
+          },
+          "house_order": [
+            "CG",
+            "OO",
+            "CO",
+            "OG"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_Doxbridge 4 Round 2": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Doxbridge 4 Round 2.txt",
+      "transcript_sha256": "459bb58cf6d2ccfebaa28f74bdfdbe271994f79135a0f43a6c133ceac19f5a76",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Doxbridge 4 Round 2",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 2,
+        "cell_range": "A2:M2",
+        "tournament_title": "Doxbridge 4 Round 2",
+        "speaker_scores": {
+          "PM": 79.0,
+          "LO": 83.0,
+          "DPM": 77.0,
+          "DLO": 82.0,
+          "MG": 80.0,
+          "MO": 82.0,
+          "GW": 81.0,
+          "OW": 82.0
+        },
+        "house_order": [
+          "OO",
+          "CO",
+          "CG",
+          "OG"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 2,
+          "cell_range": "A2:M2",
+          "tournament_title": "Doxbridge 4 Round 2",
+          "speaker_scores": {
+            "PM": 79.0,
+            "LO": 83.0,
+            "DPM": 77.0,
+            "DLO": 82.0,
+            "MG": 80.0,
+            "MO": 82.0,
+            "GW": 81.0,
+            "OW": 82.0
+          },
+          "house_order": [
+            "OO",
+            "CO",
+            "CG",
+            "OG"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_Doxbridge Worlds 2021 West Round 4": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Doxbridge Worlds 2021 West Round 4.txt",
+      "transcript_sha256": "2e551adcae894db4eabcd9a003414d6eab037d92f197423ce99eb53f3d2cd6a5",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Doxbridge Worlds 2021 West Round 4",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 39,
+        "cell_range": "A39:M39",
+        "tournament_title": "Doxbridge Worlds 2021 West Round 4",
+        "speaker_scores": {
+          "PM": 82.0,
+          "LO": 76.0,
+          "DPM": 83.0,
+          "DLO": 77.0,
+          "MG": 78.0,
+          "MO": 79.0,
+          "GW": 76.0,
+          "OW": 80.0
+        },
+        "house_order": [
+          "OG",
+          "CO",
+          "CG",
+          "OO"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 39,
+          "cell_range": "A39:M39",
+          "tournament_title": "Doxbridge Worlds 2021 West Round 4",
+          "speaker_scores": {
+            "PM": 82.0,
+            "LO": 76.0,
+            "DPM": 83.0,
+            "DLO": 77.0,
+            "MG": 78.0,
+            "MO": 79.0,
+            "GW": 76.0,
+            "OW": 80.0
+          },
+          "house_order": [
+            "OG",
+            "CO",
+            "CG",
+            "OO"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_doxbridge_pre_wu_dc_2022_round_5": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/doxbridge_pre_wu_dc_2022_round_5.txt",
+      "transcript_sha256": "087336b1c0a9b70f17a5409ea98476dbb083c15de783df152a7fb9a7ccfcc36c",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Doxbridge Pre-WUDC 2022 Round 5",
+      "filename_alias_applied": true,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 31,
+        "cell_range": "A31:M31",
+        "tournament_title": "Doxbridge Pre-WUDC 2022 Round 5",
+        "speaker_scores": {
+          "PM": 80.0,
+          "LO": 82.0,
+          "DPM": 79.0,
+          "DLO": 81.0,
+          "MG": 83.0,
+          "MO": 79.0,
+          "GW": 81.0,
+          "OW": 79.0
+        },
+        "house_order": [
+          "CG",
+          "OO",
+          "OG",
+          "CO"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 31,
+          "cell_range": "A31:M31",
+          "tournament_title": "Doxbridge Pre-WUDC 2022 Round 5",
+          "speaker_scores": {
+            "PM": 80.0,
+            "LO": 82.0,
+            "DPM": 79.0,
+            "DLO": 81.0,
+            "MG": 83.0,
+            "MO": 79.0,
+            "GW": 81.0,
+            "OW": 79.0
+          },
+          "house_order": [
+            "CG",
+            "OO",
+            "OG",
+            "CO"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_doxbridge_worlds_2021_west_round_5": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/doxbridge_worlds_2021_west_round_5.txt",
+      "transcript_sha256": "6c4915b475e152b11870b958e90036b16b4a2cc272c7395ff9cbe523a68a0bde",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Doxbridge Worlds 2021 West Round 5",
+      "filename_alias_applied": true,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 38,
+        "cell_range": "A38:M38",
+        "tournament_title": "Doxbridge Worlds 2021 West Round 5",
+        "speaker_scores": {
+          "PM": 79.0,
+          "LO": 78.0,
+          "DPM": 81.0,
+          "DLO": 80.0,
+          "MG": 78.0,
+          "MO": 82.0,
+          "GW": 79.0,
+          "OW": 83.0
+        },
+        "house_order": [
+          "CO",
+          "OG",
+          "OO",
+          "CG"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 38,
+          "cell_range": "A38:M38",
+          "tournament_title": "Doxbridge Worlds 2021 West Round 5",
+          "speaker_scores": {
+            "PM": 79.0,
+            "LO": 78.0,
+            "DPM": 81.0,
+            "DLO": 80.0,
+            "MG": 78.0,
+            "MO": 82.0,
+            "GW": 79.0,
+            "OW": 83.0
+          },
+          "house_order": [
+            "CO",
+            "OG",
+            "OO",
+            "CG"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_LSE Open 2023 Round 2 Room 2": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/LSE Open 2023 Round 2 Room 2.txt",
+      "transcript_sha256": "9f215f6677fe0c95f979df4c164e7e0c9635d3df12f8f7540d9883306bf49a03",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "LSE Open 2023 Round 2 Room 2",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 23,
+        "cell_range": "A23:M23",
+        "tournament_title": "LSE Open 2023 Round 2 Room 2",
+        "speaker_scores": {
+          "PM": 78.0,
+          "LO": 83.0,
+          "DPM": 76.0,
+          "DLO": 82.0,
+          "MG": 79.0,
+          "MO": 81.0,
+          "GW": 79.0,
+          "OW": 79.0
+        },
+        "house_order": [
+          "OO",
+          "CO",
+          "CG",
+          "OG"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 23,
+          "cell_range": "A23:M23",
+          "tournament_title": "LSE Open 2023 Round 2 Room 2",
+          "speaker_scores": {
+            "PM": 78.0,
+            "LO": 83.0,
+            "DPM": 76.0,
+            "DLO": 82.0,
+            "MG": 79.0,
+            "MO": 81.0,
+            "GW": 79.0,
+            "OW": 79.0
+          },
+          "house_order": [
+            "OO",
+            "CO",
+            "CG",
+            "OG"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_LSE Open 2023 Round 3 Room 1": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/LSE Open 2023 Round 3 Room 1.txt",
+      "transcript_sha256": "b4d7b8e3db4a1ae70273f77561c0b2c83d93d6e61edf2855761dbc57d465394f",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "LSE Open 2023 Round 3 Room 1",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 20,
+        "cell_range": "A20:M20",
+        "tournament_title": "LSE Open 2023 Round 3 Room 1",
+        "speaker_scores": {
+          "PM": 85.0,
+          "LO": 79.0,
+          "DPM": 84.0,
+          "DLO": 80.0,
+          "MG": 83.0,
+          "MO": 81.0,
+          "GW": 84.0,
+          "OW": 80.0
+        },
+        "house_order": [
+          "OG",
+          "CG",
+          "CO",
+          "OO"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 20,
+          "cell_range": "A20:M20",
+          "tournament_title": "LSE Open 2023 Round 3 Room 1",
+          "speaker_scores": {
+            "PM": 85.0,
+            "LO": 79.0,
+            "DPM": 84.0,
+            "DLO": 80.0,
+            "MG": 83.0,
+            "MO": 81.0,
+            "GW": 84.0,
+            "OW": 80.0
+          },
+          "house_order": [
+            "OG",
+            "CG",
+            "CO",
+            "OO"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_LSE Open 2023 Round 3 Room 2_edited": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/LSE Open 2023 Round 3 Room 2_edited.txt",
+      "transcript_sha256": "0235abb39f3f40661b7a97b42f31ebb5034006f5e4daae6b994b98c038aaf105",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "LSE Open 2023 Round 3 Room 2",
+      "filename_alias_applied": true,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 25,
+        "cell_range": "A25:M25",
+        "tournament_title": "LSE Open 2023 Round 3 Room 2",
+        "speaker_scores": {
+          "PM": 80.0,
+          "LO": 79.0,
+          "DPM": 81.0,
+          "DLO": 79.0,
+          "MG": 83.0,
+          "MO": 83.0,
+          "GW": 82.0,
+          "OW": 83.0
+        },
+        "house_order": [
+          "CO",
+          "CG",
+          "OG",
+          "OO"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 25,
+          "cell_range": "A25:M25",
+          "tournament_title": "LSE Open 2023 Round 3 Room 2",
+          "speaker_scores": {
+            "PM": 80.0,
+            "LO": 79.0,
+            "DPM": 81.0,
+            "DLO": 79.0,
+            "MG": 83.0,
+            "MO": 83.0,
+            "GW": 82.0,
+            "OW": 83.0
+          },
+          "house_order": [
+            "CO",
+            "CG",
+            "OG",
+            "OO"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_LSE Open 2024 Round 1A": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/LSE Open 2024 Round 1A.txt",
+      "transcript_sha256": "94771015112316aae95c76adf7b0304321d5ccc9c0514c83e44199c7c1eb03e6",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "LSE Open 2024 Round 1A",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 13,
+        "cell_range": "A13:M13",
+        "tournament_title": "LSE Open 2024 Round 1A",
+        "speaker_scores": {
+          "PM": 82.0,
+          "LO": 82.0,
+          "DPM": 80.0,
+          "DLO": 81.0,
+          "MG": 77.0,
+          "MO": 78.0,
+          "GW": 76.0,
+          "OW": 77.0
+        },
+        "house_order": [
+          "OO",
+          "OG",
+          "CO",
+          "CG"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 13,
+          "cell_range": "A13:M13",
+          "tournament_title": "LSE Open 2024 Round 1A",
+          "speaker_scores": {
+            "PM": 82.0,
+            "LO": 82.0,
+            "DPM": 80.0,
+            "DLO": 81.0,
+            "MG": 77.0,
+            "MO": 78.0,
+            "GW": 76.0,
+            "OW": 77.0
+          },
+          "house_order": [
+            "OO",
+            "OG",
+            "CO",
+            "CG"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_LSE Open 2024 Round 3 A": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/LSE Open 2024 Round 3 A.txt",
+      "transcript_sha256": "142a866ff69ccda05278a7e63d99c615da1cceb89c0043494a7918ab99cf928d",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "LSE Open 2024 Round 3 A",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 10,
+        "cell_range": "A10:M10",
+        "tournament_title": "LSE Open 2024 Round 3 A",
+        "speaker_scores": {
+          "PM": 83.0,
+          "LO": 82.0,
+          "DPM": 83.0,
+          "DLO": 80.0,
+          "MG": 83.0,
+          "MO": 81.0,
+          "GW": 81.0,
+          "OW": 79.0
+        },
+        "house_order": [
+          "OG",
+          "CG",
+          "OO",
+          "CO"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 10,
+          "cell_range": "A10:M10",
+          "tournament_title": "LSE Open 2024 Round 3 A",
+          "speaker_scores": {
+            "PM": 83.0,
+            "LO": 82.0,
+            "DPM": 83.0,
+            "DLO": 80.0,
+            "MG": 83.0,
+            "MO": 81.0,
+            "GW": 81.0,
+            "OW": 79.0
+          },
+          "house_order": [
+            "OG",
+            "CG",
+            "OO",
+            "CO"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_LSE Open 2024 Round 3 B": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/LSE Open 2024 Round 3 B.txt",
+      "transcript_sha256": "6844a088a57ee4f7a232ed78aef7b6bac34170897df0d797ffeffc9d703b163a",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "LSE Open 2024 Round 3 B",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 9,
+        "cell_range": "A9:M9",
+        "tournament_title": "LSE Open 2024 Round 3 B",
+        "speaker_scores": {
+          "PM": 75.0,
+          "LO": 77.0,
+          "DPM": 74.0,
+          "DLO": 78.0,
+          "MG": 73.0,
+          "MO": 77.0,
+          "GW": 73.0,
+          "OW": 77.0
+        },
+        "house_order": [
+          "OO",
+          "CO",
+          "OG",
+          "CG"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 9,
+          "cell_range": "A9:M9",
+          "tournament_title": "LSE Open 2024 Round 3 B",
+          "speaker_scores": {
+            "PM": 75.0,
+            "LO": 77.0,
+            "DPM": 74.0,
+            "DLO": 78.0,
+            "MG": 73.0,
+            "MO": 77.0,
+            "GW": 73.0,
+            "OW": 77.0
+          },
+          "house_order": [
+            "OO",
+            "CO",
+            "OG",
+            "CG"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_lse_open_2023_round_5": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/lse_open_2023_round_5.txt",
+      "transcript_sha256": "ed5d2b3e60c3d371e321950e1829eee023d69bce96846d814e553d554c5ed35f",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "LSE Open 2023 Round 5",
+      "filename_alias_applied": true,
+      "identity_status": "ambiguous",
+      "selected_scores": null,
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 19,
+          "cell_range": "A19:M19",
+          "tournament_title": "LSE Open 2023 Round 5",
+          "speaker_scores": {
+            "PM": 78.0,
+            "LO": 82.0,
+            "DPM": 83.0,
+            "DLO": 83.0,
+            "MG": 76.0,
+            "MO": 84.0,
+            "GW": 81.0,
+            "OW": 84.0
+          },
+          "house_order": [
+            "CO",
+            "OO",
+            "OG",
+            "CG"
+          ]
+        },
+        {
+          "sheet": "Sheet1",
+          "excel_row": 22,
+          "cell_range": "A22:M22",
+          "tournament_title": "LSE Open 2023 Round 5",
+          "speaker_scores": {
+            "PM": 78.0,
+            "LO": 84.0,
+            "DPM": 81.0,
+            "DLO": 82.0,
+            "MG": 82.0,
+            "MO": 82.0,
+            "GW": 80.0,
+            "OW": 82.0
+          },
+          "house_order": [
+            "OO",
+            "CO",
+            "CG",
+            "OG"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": false,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/GW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_Pakistan Pre ABP 2024 - Round 5": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Pakistan Pre ABP 2024 - Round 5.txt",
+      "transcript_sha256": "139a4731bd0443e699fe64c34caad301d75ff9d983aca50c62c19fd9e33756db",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Pakistan Pre ABP 2024 - Round 5",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 46,
+        "cell_range": "A46:M46",
+        "tournament_title": "Pakistan Pre ABP 2024 - Round 5",
+        "speaker_scores": {
+          "PM": 78.0,
+          "LO": 81.0,
+          "DPM": 77.0,
+          "DLO": 81.0,
+          "MG": 82.0,
+          "MO": 80.0,
+          "GW": 81.0,
+          "OW": 79.0
+        },
+        "house_order": [
+          "CG",
+          "OO",
+          "CO",
+          "OG"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 46,
+          "cell_range": "A46:M46",
+          "tournament_title": "Pakistan Pre ABP 2024 - Round 5",
+          "speaker_scores": {
+            "PM": 78.0,
+            "LO": 81.0,
+            "DPM": 77.0,
+            "DLO": 81.0,
+            "MG": 82.0,
+            "MO": 80.0,
+            "GW": 81.0,
+            "OW": 79.0
+          },
+          "house_order": [
+            "CG",
+            "OO",
+            "CO",
+            "OG"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_Panama WUDC 2025 Round 1": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Panama WUDC 2025 Round 1.txt",
+      "transcript_sha256": "361fda7acd5b6c948b1a3cba218712af2bd68e1465a4b901831458975eccb060",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Panama WUDC 2025 Round 1",
+      "filename_alias_applied": false,
+      "identity_status": "missing",
+      "selected_scores": null,
+      "candidates": [],
+      "role_alignment": {
+        "valid_role_boundaries": false,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_Panama WUDC 2025 Round 5": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Panama WUDC 2025 Round 5.txt",
+      "transcript_sha256": "312c325114d8949974dad029fbbc3d5be70f60e16a33ab853ece6405f813d435",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Panama WUDC 2025 Round 5",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 44,
+        "cell_range": "A44:M44",
+        "tournament_title": "Panama WUDC 2025 Round 5",
+        "speaker_scores": {
+          "PM": 81.0,
+          "LO": 82.0,
+          "DPM": 83.0,
+          "DLO": 84.0,
+          "MG": 79.0,
+          "MO": 85.0,
+          "GW": 80.0,
+          "OW": 84.0
+        },
+        "house_order": [
+          "CO",
+          "OO",
+          "OG",
+          "CG"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 44,
+          "cell_range": "A44:M44",
+          "tournament_title": "Panama WUDC 2025 Round 5",
+          "speaker_scores": {
+            "PM": 81.0,
+            "LO": 82.0,
+            "DPM": 83.0,
+            "DLO": 84.0,
+            "MG": 79.0,
+            "MO": 85.0,
+            "GW": 80.0,
+            "OW": 84.0
+          },
+          "house_order": [
+            "CO",
+            "OO",
+            "OG",
+            "CG"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": false,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/GW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_Panama WUDC 2025 Round 7": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Panama WUDC 2025 Round 7.txt",
+      "transcript_sha256": "d797926ab6766d640ea2128afd9319b5403a78009bcfd701f682d1b9afdcead0",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "Panama WUDC 2025 Round 7",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 42,
+        "cell_range": "A42:M42",
+        "tournament_title": "Panama WUDC 2025 Round 7",
+        "speaker_scores": {
+          "PM": 79.0,
+          "LO": 84.0,
+          "DPM": 80.0,
+          "DLO": 84.0,
+          "MG": 85.0,
+          "MO": 81.0,
+          "GW": 84.0,
+          "OW": 82.0
+        },
+        "house_order": [
+          "CG",
+          "OO",
+          "CO",
+          "OG"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 42,
+          "cell_range": "A42:M42",
+          "tournament_title": "Panama WUDC 2025 Round 7",
+          "speaker_scores": {
+            "PM": 79.0,
+            "LO": 84.0,
+            "DPM": 80.0,
+            "DLO": 84.0,
+            "MG": 85.0,
+            "MO": 81.0,
+            "GW": 84.0,
+            "OW": 82.0
+          },
+          "house_order": [
+            "CG",
+            "OO",
+            "CO",
+            "OG"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": false,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MO",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MO",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_The Natolin European Round Robin Debating Championships Round 1": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/The Natolin European Round Robin Debating Championships Round 1.txt",
+      "transcript_sha256": "7437362f4f1073239d6989f5e56926ff2231ecc7464f29c81a9e94f8be65aef7",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "The Natolin European Round Robin Debating Championships Round 1",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 14,
+        "cell_range": "A14:M14",
+        "tournament_title": "The Natolin European Round Robin Debating Championships Round 1",
+        "speaker_scores": {
+          "PM": 82.0,
+          "LO": 81.0,
+          "DPM": 79.0,
+          "DLO": 84.0,
+          "MG": 79.0,
+          "MO": 83.0,
+          "GW": 79.0,
+          "OW": 84.0
+        },
+        "house_order": [
+          "CO",
+          "OO",
+          "OG",
+          "CG"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 14,
+          "cell_range": "A14:M14",
+          "tournament_title": "The Natolin European Round Robin Debating Championships Round 1",
+          "speaker_scores": {
+            "PM": 82.0,
+            "LO": 81.0,
+            "DPM": 79.0,
+            "DLO": 84.0,
+            "MG": 79.0,
+            "MO": 83.0,
+            "GW": 79.0,
+            "OW": 84.0
+          },
+          "house_order": [
+            "CO",
+            "OO",
+            "OG",
+            "CG"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": false,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_The Natolin European Round Robin Debating Championships Round 2": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/The Natolin European Round Robin Debating Championships Round 2.txt",
+      "transcript_sha256": "f01865d80b3de3317f673a542222ae10c3ee77d0db5187175068e2a4d1544576",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "The Natolin European Round Robin Debating Championships Round 2",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 15,
+        "cell_range": "A15:M15",
+        "tournament_title": "The Natolin European Round Robin Debating Championships Round 2",
+        "speaker_scores": {
+          "PM": 85.0,
+          "LO": 80.0,
+          "DPM": 86.0,
+          "DLO": 80.0,
+          "MG": 78.0,
+          "MO": 81.0,
+          "GW": 79.0,
+          "OW": 84.0
+        },
+        "house_order": [
+          "OG",
+          "CO",
+          "OO",
+          "CG"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 15,
+          "cell_range": "A15:M15",
+          "tournament_title": "The Natolin European Round Robin Debating Championships Round 2",
+          "speaker_scores": {
+            "PM": 85.0,
+            "LO": 80.0,
+            "DPM": 86.0,
+            "DLO": 80.0,
+            "MG": 78.0,
+            "MO": 81.0,
+            "GW": 79.0,
+            "OW": 84.0
+          },
+          "house_order": [
+            "OG",
+            "CO",
+            "OO",
+            "CG"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_The Natolin European Round Robin Debating Championships Round 3": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/The Natolin European Round Robin Debating Championships Round 3.txt",
+      "transcript_sha256": "dc75c782610e9e5bb21f5ccd31c29413ba69f9980b78df5c70c17b6e21e871e0",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "The Natolin European Round Robin Debating Championships Round 3",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 16,
+        "cell_range": "A16:M16",
+        "tournament_title": "The Natolin European Round Robin Debating Championships Round 3",
+        "speaker_scores": {
+          "PM": 81.0,
+          "LO": 82.0,
+          "DPM": 83.0,
+          "DLO": 81.0,
+          "MG": 85.0,
+          "MO": 80.0,
+          "GW": 84.0,
+          "OW": 80.0
+        },
+        "house_order": [
+          "CG",
+          "OG",
+          "OO",
+          "CO"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 16,
+          "cell_range": "A16:M16",
+          "tournament_title": "The Natolin European Round Robin Debating Championships Round 3",
+          "speaker_scores": {
+            "PM": 81.0,
+            "LO": 82.0,
+            "DPM": 83.0,
+            "DLO": 81.0,
+            "MG": 85.0,
+            "MO": 80.0,
+            "GW": 84.0,
+            "OW": 80.0
+          },
+          "house_order": [
+            "CG",
+            "OG",
+            "OO",
+            "CO"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_The Natolin European Round Robin Debating Championships Round 4": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/The Natolin European Round Robin Debating Championships Round 4.txt",
+      "transcript_sha256": "e66e8b618c5f59ec41d6c9674d98d5b938b35e99edcd91c2fcf5b7ade538cde9",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "The Natolin European Round Robin Debating Championships Round 4",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 17,
+        "cell_range": "A17:M17",
+        "tournament_title": "The Natolin European Round Robin Debating Championships Round 4",
+        "speaker_scores": {
+          "PM": 81.0,
+          "LO": 81.0,
+          "DPM": 81.0,
+          "DLO": 82.0,
+          "MG": 84.0,
+          "MO": 79.0,
+          "GW": 85.0,
+          "OW": 79.0
+        },
+        "house_order": [
+          "CG",
+          "OO",
+          "OG",
+          "CO"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 17,
+          "cell_range": "A17:M17",
+          "tournament_title": "The Natolin European Round Robin Debating Championships Round 4",
+          "speaker_scores": {
+            "PM": 81.0,
+            "LO": 81.0,
+            "DPM": 81.0,
+            "DLO": 82.0,
+            "MG": 84.0,
+            "MO": 79.0,
+            "GW": 85.0,
+            "OW": 79.0
+          },
+          "house_order": [
+            "CG",
+            "OO",
+            "OG",
+            "CO"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    },
+    "debatebench_The Natolin European Round Robin Debating Championships Round 5": {
+      "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/The Natolin European Round Robin Debating Championships Round 5.txt",
+      "transcript_sha256": "c033aa3cc793ab200353459123132830172e43ae4069cbfb5bb429e72ceb9216",
+      "score_workbook": "data/raw/debatebench/scores.xlsx",
+      "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+      "score_column_order": [
+        "PM",
+        "DPM",
+        "LO",
+        "DLO",
+        "MG",
+        "GW",
+        "MO",
+        "OW"
+      ],
+      "score_matching_title": "The Natolin European Round Robin Debating Championships Round 5",
+      "filename_alias_applied": false,
+      "identity_status": "matched",
+      "selected_scores": {
+        "sheet": "Sheet1",
+        "excel_row": 18,
+        "cell_range": "A18:M18",
+        "tournament_title": "The Natolin European Round Robin Debating Championships Round 5",
+        "speaker_scores": {
+          "PM": 82.0,
+          "LO": 80.0,
+          "DPM": 82.0,
+          "DLO": 80.0,
+          "MG": 81.0,
+          "MO": 83.0,
+          "GW": 80.0,
+          "OW": 84.0
+        },
+        "house_order": [
+          "CO",
+          "OG",
+          "CG",
+          "OO"
+        ]
+      },
+      "candidates": [
+        {
+          "sheet": "Sheet1",
+          "excel_row": 18,
+          "cell_range": "A18:M18",
+          "tournament_title": "The Natolin European Round Robin Debating Championships Round 5",
+          "speaker_scores": {
+            "PM": 82.0,
+            "LO": 80.0,
+            "DPM": 82.0,
+            "DLO": 80.0,
+            "MG": 81.0,
+            "MO": 83.0,
+            "GW": 80.0,
+            "OW": 84.0
+          },
+          "house_order": [
+            "CO",
+            "OG",
+            "CG",
+            "OO"
+          ]
+        }
+      ],
+      "role_alignment": {
+        "valid_role_boundaries": true,
+        "opening_role_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "expected_speaking_order": [
+          "PM",
+          "LO",
+          "DPM",
+          "DLO",
+          "MG",
+          "MO",
+          "GW",
+          "OW"
+        ],
+        "observed_role_tags": [
+          "PM",
+          "/PM",
+          "LO",
+          "/LO",
+          "DPM",
+          "/DPM",
+          "DLO",
+          "/DLO",
+          "MG",
+          "/MG",
+          "MO",
+          "/MO",
+          "GW",
+          "/GW",
+          "OW",
+          "/OW"
+        ],
+        "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+      },
+      "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+    }
+  },
+  "source_revision": "196733d7f542c0057a05632c7d7ec93b51300e46",
+  "source_workbook": "data/raw/debatebench/scores.xlsx",
+  "source_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+}

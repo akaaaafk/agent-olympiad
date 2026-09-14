@@ -1,9 +1,6 @@
-# HMMT November 2009 — Guts Round
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
-
-[Page 1]
-2nd ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 7 NOVEMBER 2009 — GUTS ROUND
+    2nd ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 7 NOVEMBER 2009 — GUTS ROUND
 
  1. [5] If f(x) = x/(x + 1), what is f(f(f(f(2009))))?
 
@@ -14,6 +11,8 @@
  3. [5] Consider a square, inside which is inscribed a circle, inside which is inscribed a square, inside which
      is inscribed a circle, and so on, with the outermost square having side length 1. Find the diﬀerence
     between the sum of the areas of the squares and the sum of the areas of the circles.
+
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
        2nd ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 7 NOVEMBER 2009 — GUTS ROUND
@@ -27,6 +26,8 @@
 
  6. [6] Find the last two digits of 10321032. Express your answer as a two-digit number.
 
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
 
        2nd ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 7 NOVEMBER 2009 — GUTS ROUND
 
@@ -39,6 +40,8 @@
 
  9. [7] Daniel wrote all the positive integers from 1 to n inclusive on a piece of paper.  After careful
     observation, he realized that the sum of all the digits that he wrote was exactly 10,000. Find n.
+
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
        2nd ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 7 NOVEMBER 2009 — GUTS ROUND
@@ -57,8 +60,12 @@
    ω at B. Let A be on l such that ∠AOB = 60◦. Let C be the foot of the perpendicular from B to OA.
    Find the length of line segment OC.
 
-[Page 2]
-2nd ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 7 NOVEMBER 2009 — GUTS ROUND
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+       2nd ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 7 NOVEMBER 2009 — GUTS ROUND
 
 13. [8] 8 students are practicing for a math contest, and they divide into pairs to take a practice test. In
    how many ways can they be split up?
@@ -68,6 +75,8 @@
 
 15. [8] The curves x2 + y2 = 36 and y = x2 −7 intersect at four points. Find the sum of the squares of
     the x-coordinates of these points.
+
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
        2nd ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 7 NOVEMBER 2009 — GUTS ROUND
@@ -94,6 +103,8 @@
     for all integers a, b, c. What is the minimum number of triples at which we need to evaluate f in order
     to know its value everywhere?
 
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
 
        2nd ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 7 NOVEMBER 2009 — GUTS ROUND
 
@@ -113,9 +124,12 @@
                              g(x) = x22009 + a22009−1x22009−1 + · · · + a1x + a0,
 
    where the ai are constants. Compute a22009−1.
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
-[Page 3]
-2nd ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 7 NOVEMBER 2009 — GUTS ROUND
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+       2nd ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 7 NOVEMBER 2009 — GUTS ROUND
 
 22. [12] Five cards labeled A, B, C, D, and E are placed consecutively in a row. How many ways can they
    be re-arranged so that no card is moved more than one position away from where it started? (Not
@@ -131,6 +145,8 @@
 24. [12] Penta chooses 5 of the vertices of a unit cube. What is the maximum possible volume of the ﬁgure
    whose vertices are the 5 chosen points?
 
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
 
        2nd ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 7 NOVEMBER 2009 — GUTS ROUND
 
@@ -142,6 +158,8 @@
 
 27. [14] ABCD is a regular tetrahedron of volume 1. Maria glues regular tetrahedra A′BCD, AB′CD,
    ABC′D, and ABCD′ to the faces of ABCD. What is the volume of the tetrahedron A′B′C′D′?
+
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
        2nd ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 7 NOVEMBER 2009 — GUTS ROUND
@@ -158,8 +176,12 @@
 30. [17] Regular hexagon ABCDEF has side length 2. A laser beam is ﬁred inside the hexagon from point
   A and hits BC at point G. The laser then reﬂects oﬀBC and hits the midpoint of DE. Find BG.
 
-[Page 4]
-2nd ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 7 NOVEMBER 2009 — GUTS ROUND
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+       2nd ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 7 NOVEMBER 2009 — GUTS ROUND
 
 31. [20] There are two buildings facing each other, each 5 stories high. How many ways can Kevin string
     ziplines between the buildings so that:
@@ -184,6 +206,7 @@
                                                n=2009  2009
 
    Note that  nk  is deﬁned as k!(n−k)!.n!
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
        2nd ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 7 NOVEMBER 2009 — GUTS ROUND
@@ -200,3 +223,5 @@
 36. [25] Write down a pair of integers (a, b), where −100000 < a < b < 100000. You will get max(25, k)
     points, where k is the number of other teams’ pairs that you interleave. (Two pairs (a, b) and (c, d) of
     integers interleave each other if a < c < b < d or c < a < d < b.)
+
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .

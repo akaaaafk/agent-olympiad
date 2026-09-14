@@ -1,0 +1,442 @@
+{
+  "operation": "source_verified_iiot_2021_sample_and_math_repair",
+  "backup": "data/excluded/integrity_repair_20260913T204753Z",
+  "changes": [
+    {
+      "task_id": "iiot/iiot_2021_01",
+      "source_file": "data/raw/iiot/2021/iiot_2021_problem_01.pdf",
+      "source_sha256": "bf7b1f26c297a9f6851fc70b8b337e94b0a3af9e370600da27423b110b5cb121",
+      "reviewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "edits": [
+        {
+          "before": "III ((( OOO TTT +++ III ))) ;;;",
+          "after": "[IIOT logo]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 4 orange, 1 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 1 orange, 4 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 3 orange, 2 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 4 orange, 1 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 4 orange, 1 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 4 orange, 1 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 4 orange, 1 grey]"
+        },
+        {
+          "before": "Examples input output 2 4 5 4 3 4 7 1 2 1 0 3 4 5 4 3 4 7 1 4 10 2 2 1 0 1 2 chimneys Page 2 of 19\n\n",
+          "after": "\n\nExamples\n\nSample 1 input:\n```text\n2\n4 5 4\n3 4 7\n```\n\nSample 1 output:\n```text\n1\n2\n1 0\n```\n\nSample 2 input:\n```text\n3\n4 5 4\n3 4 7\n1 4 10\n```\n\nSample 2 output:\n```text\n2\n2\n1 0\n1\n2\n```\n\n"
+        },
+        {
+          "before": "Li≤109",
+          "after": "Li≤10^9"
+        },
+        {
+          "before": "or Sout Sref otherwise",
+          "after": "or S_out / S_ref otherwise"
+        },
+        {
+          "before": "A B L By combining",
+          "after": "[Pipe diagram: smaller end diameter A, larger end diameter B, axial length L.] By combining"
+        }
+      ],
+      "samples": 2
+    },
+    {
+      "task_id": "iiot/iiot_2021_02",
+      "source_file": "data/raw/iiot/2021/iiot_2021_problem_02.pdf",
+      "source_sha256": "5f8541d05d756aa369c545b2f2af06965361c83a32e372bb0061faf3c9b4ed7c",
+      "reviewed_pages": [
+        1,
+        2
+      ],
+      "edits": [
+        {
+          "before": "III ((( OOO TTT +++ III ))) ;;;",
+          "after": "[IIOT logo]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 5 orange, 0 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 1 orange, 4 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 2 orange, 3 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 1 orange, 4 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 3 orange, 2 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 3 orange, 2 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 5 orange, 0 grey]"
+        },
+        {
+          "before": "Examples input output 4 4 aabb a b bb ab 3 4 4 aabb a ab aa aba 0 ",
+          "after": "\n\nExamples\n\nSample 1 input:\n```text\n4 4\naabb\na\nb\nbb\nab\n```\n\nSample 1 output:\n```text\n3\n```\n\nSample 2 input:\n```text\n4 4\naabb\na\nab\naa\naba\n```\n\nSample 2 output:\n```text\n0\n```\n\n"
+        },
+        {
+          "before": "Ai̸= Aj for each i̸= j",
+          "after": "Ai ≠ Aj for each i ≠ j"
+        },
+        {
+          "before": "Y→a e →ab s →bc ! →c N →aa o →bb ? →cc",
+          "after": "\n```text\nY -> a\ne -> ab\ns -> bc\n! -> c\nN -> aa\no -> bb\n? -> cc\n```\n"
+        }
+      ],
+      "samples": 2
+    },
+    {
+      "task_id": "iiot/iiot_2021_03",
+      "source_file": "data/raw/iiot/2021/iiot_2021_problem_03.pdf",
+      "source_sha256": "816597c54a2d5965ee43fd334334372d4faa029487417a86595f56499312cdef",
+      "reviewed_pages": [
+        1,
+        2
+      ],
+      "edits": [
+        {
+          "before": "III ((( OOO TTT +++ III ))) ;;;",
+          "after": "[IIOT logo]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 4 orange, 1 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 1 orange, 4 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 1 orange, 4 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 1 orange, 4 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 2 orange, 3 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 4 orange, 1 grey]"
+        },
+        {
+          "before": "Examples input output 5 2 1 3 5 10 4 6 2 7 3 8 4 7 4 ",
+          "after": "\n\nExamples\n\nSample 1 input:\n```text\n5\n2 1 3 5 10\n```\n\nSample 1 output:\n```text\n4\n```\n\nSample 2 input:\n```text\n6\n2 7 3 8 4 7\n```\n\nSample 2 output:\n```text\n4\n```\n\n"
+        },
+        {
+          "before": "Di≤109",
+          "after": "Di≤10^9"
+        }
+      ],
+      "samples": 2
+    },
+    {
+      "task_id": "iiot/iiot_2021_04",
+      "source_file": "data/raw/iiot/2021/iiot_2021_problem_04.pdf",
+      "source_sha256": "34577fed715ef45b24393c4f120753abda9bcdc42862d124f90acea7e785a164",
+      "reviewed_pages": [
+        1,
+        2
+      ],
+      "edits": [
+        {
+          "before": "III ((( OOO TTT +++ III ))) ;;;",
+          "after": "[IIOT logo]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 3 orange, 2 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 1 orange, 4 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 2 orange, 3 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 2 orange, 3 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 3 orange, 2 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 3 orange, 2 grey]"
+        },
+        {
+          "before": "Examples input output 3 11 2 4 10 21 3 101 49 50 51 152 ",
+          "after": "\n\nExamples\n\nSample 1 input:\n```text\n3 11\n2 4 10\n```\n\nSample 1 output:\n```text\n21\n```\n\nSample 2 input:\n```text\n3 101\n49 50 51\n```\n\nSample 2 output:\n```text\n152\n```\n\n"
+        },
+        {
+          "before": "M≤108",
+          "after": "M≤10^8"
+        },
+        {
+          "before": "2 1 3 0 3 7 3 5 8 7 4 Figure 1:",
+          "after": "[Figure 1 array, zero-based positions: 2,1,3,0,3,7,3,5,8,7,4; position 4 is shaded.] Figure 1:"
+        },
+        {
+          "before": "1 0 2 3 3 7 3 5 7 4 8 Figure 2:",
+          "after": "[Figure 2 array, zero-based positions: 1,0,2,3,3,7,3,5,7,4,8; positions 2,4,10 are shaded.] Figure 2:"
+        }
+      ],
+      "samples": 2
+    },
+    {
+      "task_id": "iiot/iiot_2021_05",
+      "source_file": "data/raw/iiot/2021/iiot_2021_problem_05.pdf",
+      "source_sha256": "9ce103da1da32f2da89ef16fc6c914be98ae1a79897d70f4eeb121255c7453da",
+      "reviewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "edits": [
+        {
+          "before": "[five-book difficulty indicator; see original colors]",
+          "after": "[book indicator: 4 orange, 1 grey]"
+        },
+        {
+          "before": "[five-book difficulty indicator; see original colors]",
+          "after": "[book indicator: 1 orange, 4 grey]"
+        },
+        {
+          "before": "[five-book difficulty indicator; see original colors]",
+          "after": "[book indicator: 3 orange, 2 grey]"
+        },
+        {
+          "before": "[five-book difficulty indicator; see original colors]",
+          "after": "[book indicator: 3 orange, 2 grey]"
+        },
+        {
+          "before": "[five-book difficulty indicator; see original colors]",
+          "after": "[book indicator: 4 orange, 1 grey]"
+        },
+        {
+          "before": "[five-book difficulty indicator; see original colors]",
+          "after": "[book indicator: 4 orange, 1 grey]"
+        },
+        {
+          "before": "[five-book difficulty indicator; see original colors]",
+          "after": "[book indicator: 4 orange, 1 grey]"
+        }
+      ],
+      "samples": 2
+    },
+    {
+      "task_id": "iiot/iiot_2021_06",
+      "source_file": "data/raw/iiot/2021/iiot_2021_problem_06.pdf",
+      "source_sha256": "342e98ecccdf39c0cfde4a9a651f568ab2e365c2e88c571ae538d0dea8ba3fe3",
+      "reviewed_pages": [
+        1,
+        2
+      ],
+      "edits": [
+        {
+          "before": "III ((( OOO TTT +++ III ))) ;;;",
+          "after": "[IIOT logo]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 2 orange, 3 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 1 orange, 4 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 1 orange, 4 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 2 orange, 3 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 2 orange, 3 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 2 orange, 3 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 2 orange, 3 grey]"
+        },
+        {
+          "before": "Examples input output 4 9 11 oh sfera sk sk skuh ma rs ei ll e milano oh oui bang bang 7 sfera ebbasta oh come un bang oh 4 amo milano oh sfera 5 sfera ti bang bang ebbasta 2 3 0 0 0 0 1 2 0 2 2 5 7 14 che vi che mi avolta che qui dale merale merale dale avolta merale che 6 mi nisti nisti nisti mi mi 11 mi avolta che cele mi dale avolta cele dale cele mi 7 dale merale che che merale mi cele 8 merale merale cele avolta che dale avolta che 3 0 3 3 2 3 0 3 2 2 3 2 2 3 ",
+          "after": "\n\nExamples\n\nSample 1 input:\n```text\n4 9\n11 oh sfera sk sk skuh marseille milano oh oui bang bang\n7 sfera ebbasta oh come un bang oh\n4 amo milano oh sfera\n5 sfera ti bang bang ebbasta\n```\n\nSample 1 output:\n```text\n2 3 0 0 0 0 1 2 0 2 2\n```\n\nSample 2 input:\n```text\n5 7\n14 che vi che mi avolta che qui dale merale merale dale avolta merale che\n6 mi nisti nisti nisti mi mi\n11 mi avolta che cele mi dale avolta cele dale cele mi\n7 dale merale che che merale mi cele\n8 merale merale cele avolta che dale avolta che\n```\n\nSample 2 output:\n```text\n3 0 3 3 2 3 0 3 2 2 3 2 2 3\n```\n\n"
+        }
+      ],
+      "samples": 2
+    },
+    {
+      "task_id": "iiot/iiot_2021_07",
+      "source_file": "data/raw/iiot/2021/iiot_2021_problem_07.pdf",
+      "source_sha256": "de1aa971489f20170b8aba145090a234f1143e207d39c89fabe58d3975308f6d",
+      "reviewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "edits": [
+        {
+          "before": "III ((( OOO TTT +++ III ))) ;;;",
+          "after": "[IIOT logo]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 4 orange, 1 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 1 orange, 4 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 1 orange, 4 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 1 orange, 4 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 2 orange, 3 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 4 orange, 1 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 4 orange, 1 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 4 orange, 1 grey]"
+        },
+        {
+          "before": "Examples input output 4 3 0 1 10 0 1 5 0 2 2 1 2 4 12 7 6 6 3 4 0 1 1 0 2 2 0 3 3 6 6 6 vsmovies Page 16 of 19\n\n",
+          "after": "\n\nExamples\n\nSample 1 input:\n```text\n4 3\n0 1 10\n0 1 5\n0 2 2\n1 2 4\n```\n\nSample 1 output:\n```text\n12\n7\n6\n6\n```\n\nSample 2 input:\n```text\n3 4\n0 1 1\n0 2 2\n0 3 3\n```\n\nSample 2 output:\n```text\n6\n6\n6\n```\n\n"
+        },
+        {
+          "before": "Ai̸= Bi",
+          "after": "Ai ≠ Bi"
+        },
+        {
+          "before": "Ti≤109",
+          "after": "Ti≤10^9"
+        }
+      ],
+      "samples": 2
+    },
+    {
+      "task_id": "iiot/iiot_2021_08",
+      "source_file": "data/raw/iiot/2021/iiot_2021_problem_08.pdf",
+      "source_sha256": "e5d8524978f90e87b4198dccb8859fffa4f5c664f5a6d056af8635d6f2dd6abc",
+      "reviewed_pages": [
+        1,
+        2
+      ],
+      "edits": [
+        {
+          "before": "III ((( OOO TTT +++ III ))) ;;;",
+          "after": "[IIOT logo]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 2 orange, 3 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 1 orange, 4 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 1 orange, 4 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 2 orange, 3 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 2 orange, 3 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 2 orange, 3 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 2 orange, 3 grey]"
+        },
+        {
+          "before": "ὖEὖEὖEὖEὖE",
+          "after": "[book indicator: 2 orange, 3 grey]"
+        },
+        {
+          "before": "Examples input output 1 4 1 2 8 4 ",
+          "after": "\n\nExamples\n\nSample 1 input:\n```text\n1 4\n```\n\nSample 1 output:\n```text\n1\n```\n\nSample 2 input:\n```text\n2 8\n```\n\nSample 2 output:\n```text\n4\n```\n\n"
+        },
+        {
+          "before": "for holding x2",
+          "after": "for holding x^2"
+        }
+      ],
+      "samples": 2
+    }
+  ],
+  "status": "completed",
+  "validation": {
+    "records": 8,
+    "content_files": 17,
+    "sample_pairs": 16,
+    "reviewed_pages": 19,
+    "protected_files_unchanged": 603,
+    "sources_tests_scores_readiness_unchanged": true
+  }
+}

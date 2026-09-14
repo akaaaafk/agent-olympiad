@@ -1,4 +1,4 @@
-# Environment — `cybench`
+# Environment
 
 ## Roster
 
@@ -14,11 +14,15 @@
 
 ## Allowed tools
 
-- query_rules
-- inspect_environment
-- start_environment
-- execute_environment_command
-- reset_environment
+```json
+[
+  "query_rules",
+  "inspect_environment",
+  "start_environment",
+  "execute_environment_command",
+  "reset_environment"
+]
+```
 
 ## Resources
 
@@ -59,3 +63,4 @@
   ]
 }
 ```
+

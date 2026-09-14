@@ -1,5 +1,3 @@
-# 2026-national-case-set
-
 C A S E  S E T :
 3 0 t h  A P P E  I n t e r c o l l e g i a t e  E t h i c s  B o w l ®  
 N a t i o n a l  C h a m p i o n s h i p

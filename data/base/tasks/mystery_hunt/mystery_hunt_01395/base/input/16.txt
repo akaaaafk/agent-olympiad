@@ -1,0 +1,45 @@
+> load game
+> learn bash
+> north
+> kill wolf
+> kill wolf
+> kill wolf
+> get ring
+> heal
+> north
+> kill wolf
+> kill wolf
+> learn aura
+> kill wolf
+> kill wolf
+> kill wolf
+> get amulet
+> heal
+> east
+> rest
+> north
+> kill wolf
+> kill wolf
+> kill sasquatch
+> kill sasquatch
+> learn heal
+> kill sasquatch
+> learn ultimate
+> get potion
+> get book
+> heal
+> north
+> east
+> kill ghost
+> kill ghost
+> kill skeleton
+> kill skeleton
+> kill skeleton
+> kill skeleton
+> kill skeleton
+> kill skeleton
+> heal
+> east
+> kill guardian
+> learn aura
+> get ??????????? (6)

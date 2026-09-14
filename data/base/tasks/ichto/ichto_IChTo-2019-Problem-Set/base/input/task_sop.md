@@ -1,30 +1,13 @@
-# Task SOP
+# Task
 
-## Reference Environment
-- Competition: International Chemistry Tournament
-- Competition id: `ichto`
-- Problem id: `ichto_IChTo-2019-Problem-Set`
-- Task type: `chemistry_tournament_problem_set`
-- Team size: 3
-- Year / edition: 2019
-- Source: http://ichto.org/en/problems/
+Competition: ichto
 
-## Goal
-As a multi-agent team, solve the olympiad-style team task using only the materials under `base/input`. Produce the required deliverable (`team_submission`).
+Task: ichto_IChTo-2019-Problem-Set
 
-## Task directory
-- Variant root: `base`
-- Input directory: `base/input`
+Edition: 2019
 
-## Inputs
-- `problem.md`
-- `IChTo-2019-Problem-Set.pdf`
+Team size: 4
 
-## Title
-IChTo-2019-Problem-Set
+Deliverable: chemistry_theory_answer_packet
 
-## Deterministic Evaluation Rule
-Gold answers and official solution booklets are not provided in `input/`. Scoring uses the evaluator declared on the task card (gold match, rubric LLM judge, slide judge, or deferred sandbox).
-
-## Deliverables
-Return the team `team_submission` expected by this competition.
+Use the attached problem materials and the inherited competition and collaboration instructions.

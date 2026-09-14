@@ -1,9 +1,6 @@
-# HMMT November 2020 — Guts Round
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
-
-[Page 1]
-HMMO 2020, November 14–21, 2020 — GUTS ROUND
+           HMMO 2020, November 14–21, 2020 — GUTS ROUND
 
 Organization                      Team                      Team ID#
 
@@ -15,6 +12,11 @@ Organization                      Team                      Team ID#
 
 3. [5] How many six-digit multiples of 27 have only 3, 6, or 9 as their digits?
 
+
+
+
+
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
            HMMO 2020, November 14–21, 2020 — GUTS ROUND
 
@@ -32,8 +34,9 @@ Organization                      Team                      Team ID#
 
 6. [6] If x, y, z are real numbers such that xy = 6, x −z = 2, and x + y + z = 9, compute xy −zx −z2xy.
 
-[Page 2]
-HMMO 2020, November 14–21, 2020 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+            HMMO 2020, November 14–21, 2020 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -51,6 +54,11 @@ HMMO 2020, November 14–21, 2020 — GUTS ROUND
     of consecutive ﬂips that are both heads and exactly one pair of consecutive ﬂips that are both tails.  If
     p = ab , where a, b are relatively prime positive integers, compute 100a + b.
 
+
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
             HMMO 2020, November 14–21, 2020 — GUTS ROUND
 
@@ -74,8 +82,9 @@ HMMO 2020, November 14–21, 2020 — GUTS ROUND
     results of all 511 matches and must create a list of teams such that she can guarantee that the third-best
    team is on the list. What is the minimum possible length of Joy’s list?
 
-[Page 3]
-HMMO 2020, November 14–21, 2020 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+            HMMO 2020, November 14–21, 2020 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -93,6 +102,11 @@ HMMO 2020, November 14–21, 2020 — GUTS ROUND
     root. The sum of the possible values of r can be expressed as ab , where a, b are relatively prime positive
     integers. Compute 100a + b.
 
+
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
             HMMO 2020, November 14–21, 2020 — GUTS ROUND
 
@@ -112,8 +126,9 @@ HMMO 2020, November 14–21, 2020 — GUTS ROUND
      If s is the minimum distance between two dorms, the maximum possible value of s can be expressed as    √
    a −  b where a, b are positive integers. Compute 100a + b.
 
-[Page 4]
-HMMO 2020, November 14–21, 2020 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+            HMMO 2020, November 14–21, 2020 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -135,6 +150,11 @@ HMMO 2020, November 14–21, 2020 — GUTS ROUND
                                              n=1
 
 
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
             HMMO 2020, November 14–21, 2020 — GUTS ROUND
 
  Organization                      Team                      Team ID#
@@ -150,8 +170,9 @@ HMMO 2020, November 14–21, 2020 — GUTS ROUND
 24. [12] Compute the number of positive integers less than 10! which can be expressed as the sum of at most
     4 (not necessarily distinct) factorials.
 
-[Page 5]
-HMMO 2020, November 14–21, 2020 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+            HMMO 2020, November 14–21, 2020 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 25. [13] Let a1, a2, a3, . . . be a sequence of positive integers where a1 = P100i=0 i! and ai +ai+1 is an odd perfect
@@ -167,6 +188,11 @@ HMMO 2020, November 14–21, 2020 — GUTS ROUND
 27. [13] In △ABC, D and E are the midpoints of BC and CA, respectively. AD and BE intersect at G.
    Given that GECD is cyclic, AB = 41, and AC = 31, compute BC.
 
+
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
             HMMO 2020, November 14–21, 2020 — GUTS ROUND
 
@@ -193,8 +219,9 @@ HMMO 2020, November 14–21, 2020 — GUTS ROUND
     for all positive integers k. The value of a1 −a2 + a3 −a4 + · · · can be expressed as ab , where a, b are
     relatively prime positive integers. Compute 100a + b.
 
-[Page 6]
-HMMO 2020, November 14–21, 2020 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+            HMMO 2020, November 14–21, 2020 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -210,6 +237,11 @@ HMMO 2020, November 14–21, 2020 — GUTS ROUND
     right angle. Additionally, the area of triangle CED is 27 times more than the area of triangle AEB.  If
   ∠EBC = ∠EAB, ∠ECB = ∠EDC, and BC = 6, compute the value of AD2.
 
+
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
             HMMO 2020, November 14–21, 2020 — GUTS ROUND
 

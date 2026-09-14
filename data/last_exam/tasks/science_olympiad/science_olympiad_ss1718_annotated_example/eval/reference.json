@@ -1,10 +1,28 @@
 {
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/science_olympiad/benchmark.json#science_olympiad_ss1718_annotated_example.gold_label",
-  "has_gold_answer": false,
+  "has_gold_answer": true,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/science_olympiad/separated_20260913/judge/solar_system_2017_2018_answer_key.pdf",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/science_olympiad_ss1718_answer_key_v1.json",
+    "deliverable": "event_answer_sheet",
+    "limitations": [
+      "The complete contestant packet and 100 printed answer references are separated; image-aware end-to-end delivery and grading have not been validated.",
+      "Set/sequence answers, numeric ranges and free-text alternatives require a compatible grader; a single normalized string comparison does not implement the printed key.",
+      "This is a 2017-2018 Division B Solar System example, not a tournament. Binding season rules, active event team size, timing and permitted-reference limits are not fully archived.",
+      "The existing 15-agent research roster is retained as an adaptation, not asserted to be the official active event team size.",
+      "Original question wording, image labels, historical claims and printed answer variants are retained; source typos and ambiguous prompts are not silently rewritten."
+    ],
+    "scorecard_path": "data/rubrics/task_scorecards/science_olympiad.json",
+    "scorecard_key": "science_olympiad_ss1718_annotated_example",
+    "answer_key_path": "data/raw/science_olympiad/separated_20260913/judge/answer_reference.json",
+    "score_basis": "Cover says all questions have equal value; answer pages 14 and 15 each contain 50 distinct numbered answers and a 50/50 header. Together they support 100 one-point items for this sample.",
+    "answer_contract": "Per-question semantic reference; preserve printed unordered-set, ordered-sequence and numeric-range requirements."
+  },
+  "rubric_path": "data/rubrics/science_olympiad_ss1718_answer_key_v1.json",
+  "deliverable": "event_answer_sheet"
 }

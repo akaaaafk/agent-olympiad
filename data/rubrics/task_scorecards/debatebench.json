@@ -1,0 +1,2481 @@
+{
+  "schema_version": "1.1",
+  "dataset": "debatebench",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "debatebench_Astana Open 2023 Round 3_edited_transcript",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Astana Open 2023 Round 3_edited_transcript.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "fadee8584cb440a6f2edfb93827f5cefa3f1819810734e1e666ef15ac78ef39a"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/8a3bfca82fd9/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "6cd4b6af0260bc1073521e26dd35e7fd88e0b11a274d8d27755033bfc9bbe702"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+        "The publisher score workbook has no matching debate row.",
+        "The original transcript has incomplete, inconsistent or out-of-order speaker-role tags; no speech-label alignment was guessed."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2023,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_Astana Open Round 4",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Astana Open Round 4.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "6db78b678671f6d655a469363ed9d396f613be118f2185feefb3a79dba639fb8"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/ba79fe237e50/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "95f9677f5e76ba4b186251241beaec7b20d486ff496ec9ff0f4f43816860c1ab"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2023,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_Astana Open Round 5",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Astana Open Round 5.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "9d96ba2115a7014e498f42cb35c2405f6d5730d03f4356264e5f2d2f18227a87"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/cf02c5db3783/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "22d960050d81d81cacd93254c574460e9acc3326ad1039f03c936be7e8bb635f"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/cf02c5db3783/motion.txt",
+          "role": "judge_only",
+          "mime_type": "text/plain",
+          "sha256": "3b1c79b5f3362887b40ad5e9105cf9c57c5ac3bf3229fc29ee219393225f4218"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+        "The original transcript has incomplete, inconsistent or out-of-order speaker-role tags; no speech-label alignment was guessed.",
+        "Source-review limitation: the published Round 5 page pairs this motion with a toy-history background slide whose relevance to the motion is unverified. That slide is withheld from the active task input and retained in the judge-only original archive. This does not establish that the original round had no background slide; no replacement slide is invented. This task remains not_ready for evaluation."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2023,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_Belgrade WUDC 2022 Round 6",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Belgrade WUDC 2022 Round 6.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "00894664e334a3a383f1ecd1aacec92ff1ffc1412cec93c23e01a036cbc4a15d"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/01ba495455b2/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "e68c3f40fe8ec363d859e537eba92655cd7a29fb83b111d68e2ac91dd0ef8a71"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2022,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_Belgrade WUDC 2022 Round 7",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Belgrade WUDC 2022 Round 7.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "c2ce7c806c2730fa9c5df4870b146fda98fbe73f18c61ece41506561a7f1f299"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/0a3d2bebd982/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "2e5fa4ff1dd6f87cdcb6c12df549d961d3f74c261fd2cf8ed1c957a9fe0e2946"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+        "The original transcript has incomplete, inconsistent or out-of-order speaker-role tags; no speech-label alignment was guessed."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2022,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_Belgrade WUDC 2022 Round 8",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Belgrade WUDC 2022 Round 8.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "28007b87f6675ea88f63f923784a13b562d9864bbf700728723571b355f0e01f"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/3d7aa573f76a/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "7d77d181fa5a87915bf79ad0268aa377336064ab88f88ce64dc47915297dad5f"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+        "The publisher score workbook has no matching debate row."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2022,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_Belgrade WUDC 2022 Round 9 Room 2",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Belgrade WUDC 2022 Round 9 Room 2.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "13fa7742d910ce657cf7084129f58e5e081bbbab8f608d252ea7b15bc4d0131c"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/3d55317a1d67/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "23b9e03cf550a98772855d97e12da710663f99b3010c2a6c596046f59e58f2ec"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+        "The original transcript has incomplete, inconsistent or out-of-order speaker-role tags; no speech-label alignment was guessed."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2022,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_Cambridge IV 2020 Round 1",
+      "year": 2020,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Cambridge IV 2020 Round 1.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "e773799c93bdb549ec03e6c42f71e51938b33e5c9cd79dfdfeba48d4f076b809"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/b73b039ad4ef/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "05fc078a12391c616763ab720c4b91cb3d1016813c92856af003448c047e3805"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        },
+        {
+          "path": "data/raw/debatebench/header_year_review_20260913/cambridge.html",
+          "role": "judge_only",
+          "mime_type": "text/html",
+          "sha256": "7fdabdcfc1b6d2ed8824032df77a5ee6d56f0eeabce75908e6035c4dcfc338a6"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+        "Only the explicitly stated archived motion has been recovered; the complete original background slide and tournament input packet are not certified. No speaker arguments or completed speeches are contestant inputs."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2020,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_Cambridge IV 2020 Round 2",
+      "year": 2020,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Cambridge IV 2020 Round 2.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "4fb9b5b2a498ea84a1b7ccaaa733c3e785976b6e0d59c8251e485c74c0342574"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/a6805ee78314/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "f8d129140ca8385f85b06204d9799d707c3ab9d98eeed23bf485ecd8fe09b6cc"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+        "An event-and-round verified original motion/infoslide packet is still missing.",
+        "The original transcript has incomplete, inconsistent or out-of-order speaker-role tags; no speech-label alignment was guessed."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2020,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_d_oxbridge_3_round_3_cvr_cr_box_df_4_vid2txt_Jan-08-2025_-13_full",
+      "year": 2020,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/d_oxbridge_3_round_3_cvr_cr_box_df_4_vid2txt_Jan-08-2025_-13_full.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "2bfd678475a0c973c23dc482a0eff3a3c2ef49bc63fb1274d12e377d56cbf2a0"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/99d56bd33641/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "da3c3af6423dde339e86ca324de1ce05f642d21d6f707fbc3863d6626cc527ee"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        },
+        {
+          "path": "data/raw/debatebench/event_year_verified_20260913/tournament_report.html",
+          "mime_type": "text/html",
+          "role": "judge_only",
+          "sha256": "940d001c6177c8ce5149eea28151f766dc274999e3804fab5cd0cbd4b9e6fcac"
+        },
+        {
+          "path": "data/raw/debatebench/event_year_verified_20260913/event_year.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "d1cfaf5b66bf6da658a30baf158fdea90ff40d79a4a26ec46e853c86a52b2f14"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2020,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_Doxbridge 3 Round 4",
+      "year": 2020,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Doxbridge 3 Round 4.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "779f5c99525924257d17a53c17c542f538dcd277bd736e693bf40b10e0de39f3"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/cdf32b49b4b2/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "ac6b5fc764888465fc34717a88df126a67bc75f7c6e160c59236242686cd2949"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2020,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_Doxbridge 4 Round 1",
+      "year": 2021,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Doxbridge 4 Round 1.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "d093c1ce20914d974fe299e184fe529f90f7f9a077fb3f77899a70d83b8bf8b2"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/9b2ec9c8c823/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "cf3c60487222d65018ed48a5aca851cc14dda8362b42210017763f1fccbe8343"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2021,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_Doxbridge 4 Round 2",
+      "year": 2021,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Doxbridge 4 Round 2.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "459bb58cf6d2ccfebaa28f74bdfdbe271994f79135a0f43a6c133ceac19f5a76"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/121b84860bd3/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "6ab4ee75768d98da3a2e7b9aa1d1b5b5a0b131b5dfddea1a42249e3c249004da"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2021,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_Doxbridge Worlds 2021 West Round 4",
+      "year": 2021,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Doxbridge Worlds 2021 West Round 4.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "2e551adcae894db4eabcd9a003414d6eab037d92f197423ce99eb53f3d2cd6a5"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/6d8839e923df/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "a71e58b26b543f23561a62e135c0d5908d02aa2f9f8cc997f80fcf49ebc05095"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2021,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_doxbridge_pre_wu_dc_2022_round_5",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/doxbridge_pre_wu_dc_2022_round_5.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "087336b1c0a9b70f17a5409ea98476dbb083c15de783df152a7fb9a7ccfcc36c"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/12249c82d616/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "d4b7984436c760f1c15637c2aea12569b7c0c7c502f630c058ce093824df63fa"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2022,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_doxbridge_worlds_2021_west_round_5",
+      "year": 2021,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/doxbridge_worlds_2021_west_round_5.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "6c4915b475e152b11870b958e90036b16b4a2cc272c7395ff9cbe523a68a0bde"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/9c742f6318af/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "359bdce9ad739b13907788e3abd9f09c066b15f0ea913de8299e60261bc2a659"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2021,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_LSE Open 2023 Round 2 Room 2",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/LSE Open 2023 Round 2 Room 2.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "9f215f6677fe0c95f979df4c164e7e0c9635d3df12f8f7540d9883306bf49a03"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/b4bb9b11c77a/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "630d673ef095c916d2fee73e4d2236c2c523b722b1006487a271fdc57501588f"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2023,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_LSE Open 2023 Round 3 Room 1",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/LSE Open 2023 Round 3 Room 1.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "b4d7b8e3db4a1ae70273f77561c0b2c83d93d6e61edf2855761dbc57d465394f"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/5d6f89831272/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "8a01f52a6107baf0a9aa9269f20372a7c60a07156e7f92036e1bc28cb9a74d4b"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2023,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_LSE Open 2023 Round 3 Room 2_edited",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/LSE Open 2023 Round 3 Room 2_edited.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "0235abb39f3f40661b7a97b42f31ebb5034006f5e4daae6b994b98c038aaf105"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/ff36138b8269/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "0431bc00535c17c13426c0a4e3cb4b7fbe0dd4684bda33c60523cce5930e883e"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2023,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_LSE Open 2024 Round 1A",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/LSE Open 2024 Round 1A.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "94771015112316aae95c76adf7b0304321d5ccc9c0514c83e44199c7c1eb03e6"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/c2a99bde067a/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "bee421745550fef11f75e8330566a6640d882631cb071ffb674d28404a8fc59f"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2024,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_LSE Open 2024 Round 3 A",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/LSE Open 2024 Round 3 A.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "142a866ff69ccda05278a7e63d99c615da1cceb89c0043494a7918ab99cf928d"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/bada50e4f7be/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "bad3ea35e6dce3ab50b9e419ac1a64e48522ba1644743329e2d57cc0ddfb489e"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2024,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_LSE Open 2024 Round 3 B",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/LSE Open 2024 Round 3 B.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "6844a088a57ee4f7a232ed78aef7b6bac34170897df0d797ffeffc9d703b163a"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/5b534851300b/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "3053235da6fc36446bc5501a838e4c188d2fdf95435e95e5d7192426ca9668ce"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2024,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_lse_open_2023_round_5",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/lse_open_2023_round_5.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "ed5d2b3e60c3d371e321950e1829eee023d69bce96846d814e553d554c5ed35f"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/ef56c6322850/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "4fb30cd5c95322357e42212ae0777026203531d9d3b3f86559e0e63b0782086b"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+        "The publisher workbook contains two conflicting same-title debate rows; neither is selected.",
+        "The original transcript has incomplete, inconsistent or out-of-order speaker-role tags; no speech-label alignment was guessed."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2023,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_Pakistan Pre ABP 2024 - Round 5",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Pakistan Pre ABP 2024 - Round 5.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "139a4731bd0443e699fe64c34caad301d75ff9d983aca50c62c19fd9e33756db"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/0060fa21a872/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "8eaad5b4e2494955cbea2d079dd85da8a467c0deb5847661395819db84966bd6"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2024,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_Panama WUDC 2025 Round 1",
+      "year": 2025,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Panama WUDC 2025 Round 1.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "361fda7acd5b6c948b1a3cba218712af2bd68e1465a4b901831458975eccb060"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/69a30572aa7c/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "69160fcd9ff0d5e73cda3b8c1c6be290261384f5ed65c5fa8b6623c1eb24f1b8"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+        "The publisher score workbook has no matching debate row.",
+        "The original transcript has incomplete, inconsistent or out-of-order speaker-role tags; no speech-label alignment was guessed."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2025,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_Panama WUDC 2025 Round 5",
+      "year": 2025,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Panama WUDC 2025 Round 5.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "312c325114d8949974dad029fbbc3d5be70f60e16a33ab853ece6405f813d435"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/4c59e8419393/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "c0be7a3827a0b673a60830b9318e439ee242c8f78185ef5ce19968121523f59d"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+        "The original transcript has incomplete, inconsistent or out-of-order speaker-role tags; no speech-label alignment was guessed."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2025,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_Panama WUDC 2025 Round 7",
+      "year": 2025,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Panama WUDC 2025 Round 7.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "d797926ab6766d640ea2128afd9319b5403a78009bcfd701f682d1b9afdcead0"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/e88229ec54fe/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "9c91758107190b325dc951c8f94432c26283d61f7e4a50c3abd0de071b707e4b"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+        "The original transcript has incomplete, inconsistent or out-of-order speaker-role tags; no speech-label alignment was guessed."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2025,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_The Natolin European Round Robin Debating Championships Round 1",
+      "year": 2019,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/The Natolin European Round Robin Debating Championships Round 1.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "7437362f4f1073239d6989f5e56926ff2231ecc7464f29c81a9e94f8be65aef7"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/c35ffd886949/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "9bbf1c8ea6213e6acec8915b97167bdf249a4838e1bebd54864fd17d498305fe"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        },
+        {
+          "path": "data/raw/debatebench/header_year_review_20260913/event_source_review.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "b994f905d2722a8ebdfa7fcb40f1a4bce527db6d12a24d11626a92fd1e1989a0"
+        },
+        {
+          "path": "data/raw/debatebench/header_year_review_20260913/report.html",
+          "role": "judge_only",
+          "mime_type": "text/html",
+          "sha256": "8c6660922b3abb432bea0329df9137de1eb4c574c19445006ee62e5d99c1857b"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+        "The original transcript has incomplete, inconsistent or out-of-order speaker-role tags; no speech-label alignment was guessed.",
+        "Only the explicitly stated archived motion has been recovered; the complete original background slide and tournament input packet are not certified. No speaker arguments or completed speeches are contestant inputs."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2019,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_The Natolin European Round Robin Debating Championships Round 2",
+      "year": 2019,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/The Natolin European Round Robin Debating Championships Round 2.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "f01865d80b3de3317f673a542222ae10c3ee77d0db5187175068e2a4d1544576"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/40f1b7b73a7e/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "bad83d71d2a98a34773b716bf787536f2c0d37f122992647e537213b6758b35f"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        },
+        {
+          "path": "data/raw/debatebench/header_year_review_20260913/event_source_review.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "b994f905d2722a8ebdfa7fcb40f1a4bce527db6d12a24d11626a92fd1e1989a0"
+        },
+        {
+          "path": "data/raw/debatebench/header_year_review_20260913/report.html",
+          "role": "judge_only",
+          "mime_type": "text/html",
+          "sha256": "8c6660922b3abb432bea0329df9137de1eb4c574c19445006ee62e5d99c1857b"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+        "Only the explicitly stated archived motion has been recovered; the complete original background slide and tournament input packet are not certified. No speaker arguments or completed speeches are contestant inputs."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2019,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_The Natolin European Round Robin Debating Championships Round 3",
+      "year": 2019,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/The Natolin European Round Robin Debating Championships Round 3.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "dc75c782610e9e5bb21f5ccd31c29413ba69f9980b78df5c70c17b6e21e871e0"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/d3b82cfa40c9/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "77ec2cab3d9fdb9c71828e6560448c4bb2a173f2bee43926f6bf2201aa7794a1"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        },
+        {
+          "path": "data/raw/debatebench/header_year_review_20260913/event_source_review.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "b994f905d2722a8ebdfa7fcb40f1a4bce527db6d12a24d11626a92fd1e1989a0"
+        },
+        {
+          "path": "data/raw/debatebench/header_year_review_20260913/report.html",
+          "role": "judge_only",
+          "mime_type": "text/html",
+          "sha256": "8c6660922b3abb432bea0329df9137de1eb4c574c19445006ee62e5d99c1857b"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+        "Only the explicitly stated archived motion has been recovered; the complete original background slide and tournament input packet are not certified. No speaker arguments or completed speeches are contestant inputs."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2019,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_The Natolin European Round Robin Debating Championships Round 4",
+      "year": 2019,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/The Natolin European Round Robin Debating Championships Round 4.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "e66e8b618c5f59ec41d6c9674d98d5b938b35e99edcd91c2fcf5b7ade538cde9"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/a5be8b9f2ace/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "b3908bb9cbd79ef1a4db18b42c4d622c26c5900fef69ce378e0a78e17a20a877"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        },
+        {
+          "path": "data/raw/debatebench/header_year_review_20260913/event_source_review.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "b994f905d2722a8ebdfa7fcb40f1a4bce527db6d12a24d11626a92fd1e1989a0"
+        },
+        {
+          "path": "data/raw/debatebench/header_year_review_20260913/report.html",
+          "role": "judge_only",
+          "mime_type": "text/html",
+          "sha256": "8c6660922b3abb432bea0329df9137de1eb4c574c19445006ee62e5d99c1857b"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+        "An event-and-round verified original motion/infoslide packet is still missing."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2019,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "debatebench_The Natolin European Round Robin Debating Championships Round 5",
+      "year": 2019,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/debatebench_wudc_speaker_100_v1.json",
+          "sha256": "e2a4e81e0ccdabf4d353142c28e5082096258cc9ec95e775796db73f8f97959d",
+          "format": "numeric_rubric",
+          "rubric_id": "debatebench_wudc_speaker_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "persuasiveness",
+              "name": "Persuasiveness of the speech",
+              "max_score": 100,
+              "observable": true,
+              "description": "Assign the official WUDC speaker score from 50 to 100 for the speaker's contribution. Judge persuasiveness as an integrated assessment of the plausible reasons showing that arguments are true and important (analysis or matter) and the clarity and rhetorical power with which those reasons are explained (style or manner). The official manual expressly says analysis and style are not separate scoring criteria, so no invented split is used."
+            }
+          ],
+          "not_observable_from_deck": [
+            "vocal delivery not preserved by transcription",
+            "accent-neutral delivery assessment",
+            "timing and nonverbal presentation not preserved by transcription",
+            "points of information that are omitted or ambiguously transcribed"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/The Natolin European Round Robin Debating Championships Round 5.txt",
+          "mime_type": "text/plain",
+          "role": "judge_only",
+          "sha256": "c033aa3cc793ab200353459123132830172e43ae4069cbfb5bb429e72ceb9216"
+        },
+        {
+          "path": "data/raw/debatebench/recovered_20260913/bc916d6319e2/historical_scores.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "27558339990c093b5b6b258a4e7b42bc34c7cdddda86bc513d1fc1546446e7d1"
+        },
+        {
+          "path": "data/raw/debatebench/scores.xlsx",
+          "role": "judge_only",
+          "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a"
+        },
+        {
+          "path": "data/raw/debatebench/header_year_review_20260913/event_source_review.json",
+          "role": "judge_only",
+          "mime_type": "application/json",
+          "sha256": "b994f905d2722a8ebdfa7fcb40f1a4bce527db6d12a24d11626a92fd1e1989a0"
+        },
+        {
+          "path": "data/raw/debatebench/header_year_review_20260913/report.html",
+          "role": "judge_only",
+          "mime_type": "text/html",
+          "sha256": "8c6660922b3abb432bea0329df9137de1eb4c574c19445006ee62e5d99c1857b"
+        }
+      ],
+      "limitations": [
+        "The current task asks for new speeches, while DebateBench's original labels evaluate an archived human debate; historical scores cannot grade newly generated speeches.",
+        "An eight-speech judging protocol and transcript-only/interactive delivery have not been validated for this adaptation.",
+        "An event-and-round verified original motion/infoslide packet is still missing."
+      ],
+      "rubric_reuse": {
+        "source_competition": "debatebench",
+        "target_competition": "debatebench",
+        "target_year": 2019,
+        "source_rubric_paths": [
+          "data/rubrics/debatebench_wudc_speaker_100_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

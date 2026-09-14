@@ -1,0 +1,53 @@
+{
+  "schema_version": "iiot-reference-archive/v1",
+  "problem_id": "iiot_2023_06",
+  "task_code": "matgame",
+  "round": "international_final",
+  "archive_url": "https://iio.team/competition/tasks/2023",
+  "source_links": {
+    "Statement": "https://drive.google.com/file/d/1Yi59cswMN2PPUQPgdzbVyKPGE4xx3zHJ/view?usp=drive_link",
+    "Solutions": "https://drive.google.com/drive/folders/10FhoUfb_v150u2E-RXW54Jhqcy5BfVoq?usp=drive_link",
+    "Test cases": "https://drive.google.com/drive/folders/1BKo3OQk3sNNFcQdYZDMWvQ9Ua-0GAlOH?usp=drive_link"
+  },
+  "reference": {
+    "path": "data/raw/iiot/2023/matgame/references/solution.cpp",
+    "source_url": "https://drive.google.com/uc?id=1eOVdp8YGS9usfzPoON9GUqVb1ICTOjZi&export=download",
+    "sha256": "6f514503c722c57b7288d096a5c2b7f2cafc76e7212ddf05e67d55cb7c1c8d9d",
+    "bytes": 2628,
+    "classification": "publisher_reference_source",
+    "execution_validation": "not_run"
+  },
+  "official_scoring": {
+    "total_points": 100,
+    "subtasks": [
+      {
+        "id": 1,
+        "points": 0
+      },
+      {
+        "id": 2,
+        "points": 10
+      },
+      {
+        "id": 3,
+        "points": 30
+      },
+      {
+        "id": 4,
+        "points": 45
+      },
+      {
+        "id": 5,
+        "points": 15
+      }
+    ],
+    "mode": "all_cases_required_per_subtask",
+    "test_to_subtask_mapping": "not_archived"
+  },
+  "public_test_listing": {
+    "status": "pagination_incomplete",
+    "local_tests_archived": false
+  },
+  "readiness": "not_ready",
+  "license_policy": "No redistribution permission inferred."
+}

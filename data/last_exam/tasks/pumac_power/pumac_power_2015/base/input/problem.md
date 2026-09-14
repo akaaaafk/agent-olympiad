@@ -1,5 +1,3 @@
-# PUMaC Power Round 2015
-
 PUMaC 2015 Power Round
 “We have a new theorem—that mathematicians can prove only trivial theorems,
 because every theorem that’s proved is trivial.” —Richard Feynman

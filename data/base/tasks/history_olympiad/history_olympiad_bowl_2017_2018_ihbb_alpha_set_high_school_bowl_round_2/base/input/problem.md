@@ -1,5 +1,3 @@
-# 2017-2018-IHBB-Alpha-Set-High-School-Bowl-Round-2
-
 [Q1] After the Battle of the Allia, one of these structures was built and named for Servius Tullius. That structure was surpassed by the Aurelian line, built in the 3rd century AD. For ten points, name this type of defensive structure that was built by the Qin Dynasty to guard the northern border of China.
 
 [Q2] For ten points, name this business icon and longtime CEO of Apple.

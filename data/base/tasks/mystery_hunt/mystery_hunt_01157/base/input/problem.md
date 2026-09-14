@@ -1,3 +1,5 @@
-# 2009/puzzles/hyperextensions/PUZZLE
+# Hyperextensions
 
-Hyperextensions Hyperextensions file.001 file.002 file.003 file.004 file.005 file.006 file.007 file.008 file.009 file.010 file.011 file.012 file.013 file.014 file.015 file.016 file.017 file.018 file.019 file.020 file.021 file.022
+Open `puzzle.html` for the original layout and explicit local inputs.
+
+Archive limitation: All 22 explicitly linked original files retain their opaque names and bytes. No filename extensions are inferred, no code or shortcuts are executed, and no contents are unpacked or replaced with interpreted outputs. Source recovery does not certify file safety, interpretation or executable evaluation.

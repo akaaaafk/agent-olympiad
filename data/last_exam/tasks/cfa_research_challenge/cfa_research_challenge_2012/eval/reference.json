@@ -1,10 +1,53 @@
 {
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/cfa_research_challenge/benchmark.json#cfa_research_challenge_2012.gold_label",
-  "has_gold_answer": true,
+  "has_gold_answer": false,
   "evaluator_id": null,
-  "evaluator_status": null,
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/cfa_research_challenge/rc-2012-winning-rpt-thammasat-univ.pdf",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_paths": [
+      "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+      "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+    ],
+    "deliverable": "equity_research_report_and_presentation",
+    "limitations": [
+      "Champion recommendations are examples, not unique gold answers.",
+      "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+      "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+      "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+      "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+    ],
+    "pre_reuse_evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "deliverable": "equity_research_report_and_presentation",
+      "limitations": "The original case packet, contemporaneous information cutoff, and official year-specific score sheet are absent. The champion recommendation must not be treated as a unique gold label."
+    },
+    "rubric_reuse": {
+      "source_competition": "cfa_research_challenge",
+      "target_competition": "cfa_research_challenge",
+      "target_year": 2012,
+      "source_rubric_paths": [
+        "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+        "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+      ],
+      "source_editions": [
+        "existing same-competition rubric; edition unspecified"
+      ],
+      "official_year_equivalence": false,
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+    },
+    "scorecard_path": "data/rubrics/task_scorecards/cfa_research_challenge.json",
+    "scorecard_key": "cfa_research_challenge_2012",
+    "reason": "Only champion artifacts are archived; original research inputs, historical information boundary and season-specific scoring remain unresolved."
+  },
   "rubric_path": null,
-  "deliverable": null,
-  "solution_file": "data/raw/cfa_research_challenge/rc-2012-winning-rpt-thammasat-univ.pdf"
+  "deliverable": "equity_research_report_and_presentation"
 }

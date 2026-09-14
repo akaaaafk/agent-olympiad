@@ -1,0 +1,48 @@
+> new game
+> north
+> east
+> north
+> east
+> east
+> east
+> east
+> east
+> north
+> north
+> touch statue
+> enter secret
+> get money
+> exit
+> south
+> south
+> west
+> west
+> north
+> west
+> enter cave
+> buy bombs
+> exit
+> east
+> south
+> south
+> south
+> use bomb
+> enter cave
+> get heart
+> exit
+> north
+> north
+> north
+> north
+> north
+> east
+> use bomb
+> enter cave
+> get heart
+> exit
+> north
+> west
+> west
+> north
+> enter cave
+> get ?????????? (8)

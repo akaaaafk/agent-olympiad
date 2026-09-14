@@ -1,5 +1,3 @@
-# Hand of the Free Marked
-
 Hide 
  Hand of the Free Marked 
 

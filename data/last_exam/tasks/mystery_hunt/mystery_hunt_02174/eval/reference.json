@@ -3,8 +3,18 @@
   "gold_pointer": "data/benchmarks/mystery_hunt/benchmark.json#mystery_hunt_02174.gold_label",
   "has_gold_answer": true,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+    "short_answer_source": "data/rubrics/mystery_hunt_short_answers.json",
+    "deliverable": "puzzle_answer",
+    "limitations": "The original 29-row image-and-formula table is static. Its puzzle.js is MathJax 2.6.0 with five archive-rewritten regular expressions; no puzzle-specific state logic was found by exact comparison to the pinned upstream library after reversing those five substitutions. Neither script is executed or exposed. All 29 literal TeX fragments are mechanically projected to native MathML, preserving their original TeX in annotations, without calculating, sorting, simplifying or answering. Native mathematical font metrics are not certified identical to historical MathJax. Original image bytes, GIF frames, row order, example labels, blank answer line, capitalization and historical number descriptions remain. Archive solution navigation and sheep/status scripts are removed; round navigation is inert. Same-year CSS repairs follow the static batch; current source-named Google fonts include OFL texts, not certified 2016 binaries. Gold, total points, splits, license and grading/runtime readiness are unchanged and not recertified. Prior limitations: The answer key exists, but the contestant puzzle page has not been separated from embedded answers and media dependencies.",
+    "scorecard_path": "data/rubrics/task_scorecards/mystery_hunt.json",
+    "scorecard_key": "mystery_hunt_02174"
+  },
+  "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+  "deliverable": "puzzle_answer"
 }

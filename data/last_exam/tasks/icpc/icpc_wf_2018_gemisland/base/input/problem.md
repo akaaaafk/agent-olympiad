@@ -1,5 +1,3 @@
-# Gem Island
-
 Hide 
  Gem Island 
 

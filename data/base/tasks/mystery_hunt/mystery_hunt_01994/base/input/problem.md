@@ -1,3 +1,5 @@
-# 2015/puzzle/check_out_this_sticked_asiatic_music
+# Check Out This Sticked Asiatic Music
 
-Check Out This Sticked Asiatic Music &mdash; MIT Mystery Hunt 2015 Toggle navigation World Map The Story So Far... Useful links List of Puzzles Events Schedule Updates from Sealab Full team log FAQ Sponsors 2015 Archive Overview Location: Atlantis, Golden Tower Depth: 450 View Solution Check Out This Sticked Asiatic Music Answer: click here to reveal Sorry, your browser does not support viewing this video. (Download)
+Open `puzzle.html` with its explicitly linked original input files.
+
+Archive limitation: Only explicitly linked original inputs and their static publisher dependencies are restored. Archive solution navigation, answer-reveal header and gold-bearing scripts are removed; no puzzle code is run. Fonts and CSS dependencies are original publisher files or mechanical local URL rewrites. Gold, total points, splits, licensing and grading/runtime readiness are unchanged, not recertified. The original MP4 and WebM retain their published bytes, order and embedded audio. Both audio/video streams decode to EOF (about 91 seconds); this does not certify complete viewing/listening, semantic equivalence or equal visual quality between formats. Native playback controls are retained with preload disabled; no transcript or inferred subtitles are added.

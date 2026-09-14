@@ -1,0 +1,95 @@
+> load game
+> east
+> west
+> west
+> kill bat
+> get ring
+> west
+> kill knight
+> kill knight
+> west
+> west
+> kill knight
+> kill knight
+> dodge heads
+> kill knight
+> dodge heads
+> kill knight
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> west
+> dodge heads
+> kill knight
+> dodge heads
+> kill knight
+> dodge heads
+> kill knight
+> dodge heads
+> kill knight
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> rotate gear
+> dodge heads
+> east
+> dodge heads
+> east
+> get diamond
+> get apple
+> get ???????? (4)
+> west
+> dodge heads
+> west
+> dodge heads
+> west
+> dodge heads
+> west

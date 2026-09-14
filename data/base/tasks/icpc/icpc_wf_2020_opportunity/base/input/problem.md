@@ -1,5 +1,3 @@
-# Opportunity Cost
-
 Hide 
  Opportunity Cost 
 

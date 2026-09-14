@@ -1,0 +1,112 @@
+{
+  "rubric_id": "iol_team_2024_printed_points_v1",
+  "dataset": "iol_team",
+  "title": "IOL 2024 printed weights with partial answer reference",
+  "visibility": "judge_only",
+  "rubric_type": "printed_point_allocation_with_partial_reference",
+  "grading_validation_status": "not_validated",
+  "source_file": "data/raw/iol/iol-2024-team-prob.en.pdf",
+  "source_sha256": "18468f120f70da0a9fde17b6077a5fb969156435c1866ed99eccd7ffe22a6d8f",
+  "source_url": "https://ioling.org/problems/2024/",
+  "limitations": [
+    "Official 12-page presentation supplies partial worked solutions, including graphical trees; not a complete marking scheme.",
+    "No explicit Assignment E answer list or tie-breaker M answer was found in the presentation.",
+    "A-L total 90 regular points. Assignment M is a separate 10-point tie-breaker, not part of the regular denominator.",
+    "Image-aware tree interpretation and per-item grading have not been validated end to end."
+  ],
+  "not_observable_from_deck": [],
+  "total_points": 90,
+  "criteria": [
+    {
+      "id": "A",
+      "name": "Assignment A",
+      "max_score": 2,
+      "source_page": 3,
+      "description": "Printed allocation; full marking/executable evaluation not validated."
+    },
+    {
+      "id": "B",
+      "name": "Assignment B",
+      "max_score": 2,
+      "source_page": 3,
+      "description": "Printed allocation; full marking/executable evaluation not validated."
+    },
+    {
+      "id": "C",
+      "name": "Assignment C",
+      "max_score": 2,
+      "source_page": 3,
+      "description": "Printed allocation; full marking/executable evaluation not validated."
+    },
+    {
+      "id": "D",
+      "name": "Assignment D",
+      "max_score": 2,
+      "source_page": 3,
+      "description": "Printed allocation; full marking/executable evaluation not validated."
+    },
+    {
+      "id": "E",
+      "name": "Assignment E",
+      "max_score": 10,
+      "source_page": 6,
+      "description": "Printed allocation; full marking/executable evaluation not validated."
+    },
+    {
+      "id": "F",
+      "name": "Assignment F",
+      "max_score": 8,
+      "source_page": 7,
+      "description": "Printed allocation; full marking/executable evaluation not validated."
+    },
+    {
+      "id": "G",
+      "name": "Assignment G",
+      "max_score": 20,
+      "source_page": 7,
+      "description": "Printed allocation; full marking/executable evaluation not validated."
+    },
+    {
+      "id": "H",
+      "name": "Assignment H",
+      "max_score": 3,
+      "source_page": 7,
+      "description": "Printed allocation; full marking/executable evaluation not validated."
+    },
+    {
+      "id": "I",
+      "name": "Assignment I",
+      "max_score": 4,
+      "source_page": 7,
+      "description": "Printed allocation; full marking/executable evaluation not validated."
+    },
+    {
+      "id": "J",
+      "name": "Assignment J",
+      "max_score": 5,
+      "source_page": 7,
+      "description": "Printed allocation; full marking/executable evaluation not validated."
+    },
+    {
+      "id": "K",
+      "name": "Assignment K",
+      "max_score": 4,
+      "source_page": 7,
+      "description": "Printed allocation; full marking/executable evaluation not validated."
+    },
+    {
+      "id": "L",
+      "name": "Assignment L",
+      "max_score": 28,
+      "source_page": 8,
+      "description": "Printed allocation; full marking/executable evaluation not validated."
+    }
+  ],
+  "tie_breaker": {
+    "id": "M",
+    "max_score": 10,
+    "source_page": 9,
+    "graded_only_on_top_score_tie": true,
+    "included_in_regular_total": false
+  }
+}

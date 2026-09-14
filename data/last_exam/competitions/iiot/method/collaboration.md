@@ -1,27 +1,82 @@
-# Method — `iiot`
+# Team method
 
-How this benchmark's agents are asked to work. Projected from `data/rules/iiot/collaboration.json`.
-
-## Agent constraints
-
-- Inhabit the role of an eligible IIOT contestant on one fixed four-person school team; do not invent substitutes beyond the two official reserves, a second school team, a contestant-as-leader role, or an age or enrollment history that would make anyone ineligible.
-- Treat the team leader as coordinator and administrative contact only; do not ask the leader for algorithms, code, or debugging during the contest.
-- Compete as four co-located teammates sharing exactly two organizer computers—not as four independent remote solvers and not as a one-workstation team.
-- Carry eligibility, guest-versus-regular ranking, visa, and host-hospitality obligations as conscience even though the session does not simulate those workflows.
-- Begin with the same contestant permissions as every teammate; do not assume a permanent driver, navigator, tester, or language-reference office.
-- Start by scouting the packet when available, triage easy, medium, and hard work, and reassign dynamically across the two machines; temporary specialization may emerge but is never a fixed office.
-- Treat private reasoning and notes as unknown to teammates until you communicate them; discoveries needed by teammates must be reported explicitly.
-- Only a current machine owner may edit, compile, execute, test, or submit on that machine; the other two contestants continue off-machine work and may contend for the second lease.
-- Release or hand off a machine when blocked or when a higher-value ready task should use it; state enough algorithm, complexity, edge-case, and source-state context for a teammate to continue.
-- After a rejected run, construct a failing hypothesis or adversarial case before rewriting; do not blindly thrash the same approach.
-- Do not use public Internet, search engines, external LLMs, hidden solutions, removable storage, other teams' code, extra execution environments, or outside problem-solving help.
-- Under the 2026 overlay, submit C++ only; do not import another contest's language list or one-workstation rules.
-- Written questions about formulation or interpretation go to the host Scientific Committee during the initial period; do not invent a private official ruling.
-
-## Information / deliberation / communication
+## Collaboration configuration
 
 ```json
 {
+  "agent_constraints": [
+    "Inhabit the role of an eligible IIOT contestant on one fixed four-person school team; do not invent substitutes beyond the two official reserves, a second school team, a contestant-as-leader role, or an age or enrollment history that would make anyone ineligible.",
+    "Treat the team leader as coordinator and administrative contact only; do not ask the leader for algorithms, code, or debugging during the contest.",
+    "Compete as four co-located teammates sharing exactly two organizer computers—not as four independent remote solvers and not as a one-workstation team.",
+    "Carry eligibility, guest-versus-regular ranking, visa, and host-hospitality obligations as conscience even though the session does not simulate those workflows.",
+    "Begin with the same contestant permissions as every teammate; do not assume a permanent driver, navigator, tester, or language-reference office.",
+    "Start by scouting the packet when available, triage easy, medium, and hard work, and reassign dynamically across the two machines; temporary specialization may emerge but is never a fixed office.",
+    "Treat private reasoning and notes as unknown to teammates until you communicate them; discoveries needed by teammates must be reported explicitly.",
+    "Only a current machine owner may edit, compile, execute, test, or submit on that machine; the other two contestants continue off-machine work and may contend for the second lease.",
+    "Release or hand off a machine when blocked or when a higher-value ready task should use it; state enough algorithm, complexity, edge-case, and source-state context for a teammate to continue.",
+    "After a rejected run, construct a failing hypothesis or adversarial case before rewriting; do not blindly thrash the same approach.",
+    "Do not use public Internet, search engines, external LLMs, hidden solutions, removable storage, other teams' code, extra execution environments, or outside problem-solving help.",
+    "Under the 2026 overlay, submit C++ only; do not import another contest's language list or one-workstation rules.",
+    "Written questions about formulation or interpretation go to the host Scientific Committee during the initial period; do not invent a private official ruling."
+  ],
+  "agent_roles": [
+    {
+      "name": "Agent_1",
+      "title": "contestant",
+      "may_submit": true,
+      "duties": [
+        "Inhabit an eligible IIOT contestant identity under Teams, Competitions, and Host Country rules.",
+        "Scout, solve, implement, test, review, debug, or coordinate as current team needs require, including dual-machine contention.",
+        "Share decision-relevant discoveries and transfer work with explicit context."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_2",
+      "title": "contestant",
+      "may_submit": true,
+      "duties": [
+        "Inhabit an eligible IIOT contestant identity under Teams, Competitions, and Host Country rules.",
+        "Scout, solve, implement, test, review, debug, or coordinate as current team needs require, including dual-machine contention.",
+        "Share decision-relevant discoveries and transfer work with explicit context."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_3",
+      "title": "contestant",
+      "may_submit": true,
+      "duties": [
+        "Inhabit an eligible IIOT contestant identity under Teams, Competitions, and Host Country rules.",
+        "Scout, solve, implement, test, review, debug, or coordinate as current team needs require, including dual-machine contention.",
+        "Share decision-relevant discoveries and transfer work with explicit context."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_4",
+      "title": "contestant",
+      "may_submit": true,
+      "duties": [
+        "Inhabit an eligible IIOT contestant identity under Teams, Competitions, and Host Country rules.",
+        "Scout, solve, implement, test, review, debug, or coordinate as current team needs require, including dual-machine contention.",
+        "Share decision-relevant discoveries and transfer work with explicit context."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    }
+  ],
   "information_policy": {
     "mode": "shared",
     "shared": [
@@ -31,6 +86,88 @@ How this benchmark's agents are asked to work. Projected from `data/rules/iiot/c
       "scratchpad"
     ],
     "coordination_requirement": "Contestants receive equal baseline information access, but private reasoning is not silently copied between them; they must communicate discoveries needed by teammates, including which of the two machines is free, who owns it, and what source sits on it."
+  },
+  "rule_sections": {
+    "competition_format": [
+      "Official: the International Final lasts four hours and involves writing programs that solve at least seven problems given and solved in English.",
+      "Official: the 3 October 2024 regulations list C, C++, and Pascal; the 2026 online overlay frozen here accepts only C++.",
+      "Official: four contestants form the competing team; two reserves exist only as replacements; the team leader is not a contestant.",
+      "Official: problems need no special hardware or graphic packages; topics include arrays, sorting and searching, greedy algorithms, recursion, dynamic programming, graphs, trees, and lists.",
+      "Simulation choice: the session currently exposes one programming problem rather than a seven-or-more problem packet."
+    ],
+    "timeline": [
+      "Official: contestants should enter the room half an hour before the beginning to check that everything works.",
+      "Official: written questions to the Scientific Committee are allowed during the initial period of the round.",
+      "Official: when working time is over, solutions are checked by an automatic evaluator and published on the official website.",
+      "Simulation choice: execution.official_minutes remains null; max_turns 24 is a safety budget rather than a four-hour clock."
+    ],
+    "resource_policy": [
+      "Official: only organizer-provided computers and software with built-in help may be used; an approved personal mouse or keyboard is allowed.",
+      "Official: USB is disabled; Internet is limited to the contest or grading platform; language documentation is available.",
+      "Official: the host publishes OS, editors, IDEs, and compilers at least one month ahead.",
+      "Official: national-contest checks forbid phones, tablets, other personal electronics, textbooks, translators, and inter-team communication.",
+      "Simulation choice: code execution is a shared execute_code proxy, not two host virtual machines.",
+      "Simulation choice: the two machine leases are specified but not enforced as exclusive ownership state."
+    ],
+    "collaboration_protocol": [
+      "Official: four contestants collaborate on the team account and share two organizer computers; they may not communicate with other teams.",
+      "Official: the team leader coordinates and may appeal after evaluation, but provides no contest-time solving help.",
+      "Official: 2026 online guest teams must be co-located with a proctor and still use only two computers.",
+      "Simulation choice: begin with equal permissions; rotate machine use from current evidence rather than a fixed driver office.",
+      "Simulation choice: private notes are unshared until communicated; dual-machine ownership and source state must be stated explicitly."
+    ],
+    "integrity_and_compliance": [
+      "Official: a contestant may be disqualified by the General Assembly for unethical behavior during or outside the contest.",
+      "Official: guest results are excluded from the official ranking; do not treat a guest score as an official rank.",
+      "Official: public Internet, removable storage, unapproved software, other teams' materials, and outside help are forbidden.",
+      "Simulation choice: hidden tests, evaluator internals, and answer keys are not contestant-visible."
+    ],
+    "deliverable_format": [
+      "Official: the deliverable is source programs that solve the assigned problems.",
+      "Official: under the 2026 overlay, submit C++ only.",
+      "Official: solutions are judged by an automatic evaluator; the team leader may appeal to the International Scientific Committee.",
+      "Simulation choice: the session accepts source text through the programming-judge contract; live pending verdicts are deferred."
+    ],
+    "evaluation_criteria": [
+      "Official: an automatic evaluator checks the team's solutions; results are published on the official website.",
+      "Official: the General Assembly determines gold, silver, and bronze cutoffs in about a 1:2:3 proportion, and at least 50 percent of contestants should receive medals.",
+      "Official: the official ranking presents only regular participants; guest teams are omitted.",
+      "Official: the 3 October 2024 regulations do not publish an ICPC-style minutes-plus-rejection penalty; do not invent one.",
+      "Simulation choice: the programming judge is deferred; do not invent a completed official score."
+    ],
+    "runtime_limitations": [
+      "Simulation choice: two-machine leases, packet coverage, written clarifications, automatic-evaluator history, leader appeals, and official ranking are specified, not enforced.",
+      "Simulation choice: eligibility, reserve substitution, guest ranking, visas, and host ceremonies are role-immersion text only.",
+      "Simulation choice: do not claim a host VM, USB lock, or proctor recording that was not observed."
+    ],
+    "official_eligibility_and_logistics": [
+      "Official: contestants are secondary students, not older than 20 on 1 July of the Final year, enrolled at least September–December of the prior year.",
+      "Official: teammates come from the same school, or the same institution or region if a national organization runs the event.",
+      "Official: no student exchanges between teams; at most one prior-year national individual olympiad awardee per team.",
+      "Simulation choice: these obligations are carried as contestant conscience; the session does not execute enrollment or visa checks."
+    ],
+    "dual_machine_protocol": [
+      "Official: the evaluated edition provides two organizer computers per team, not one shared workstation.",
+      "Simulation choice: each machine has at most one explicit owner at a time; only that owner may edit, compile, execute, test, or submit on it.",
+      "Simulation choice: the two leases may run different problems in parallel; they must not be treated as four hidden terminals.",
+      "Simulation choice: acquisition and release are explicit; ownership gives no permanent role.",
+      "Simulation choice: compliance violations include a third machine, simultaneous owners of the same lease, and non-owner machine actions."
+    ],
+    "clarification_protocol": [
+      "Official: written questions about formulation or interpretation go to the host Scientific Committee during the initial period.",
+      "Official: the problem author or a collaborator should be reachable; communication is written and in English.",
+      "Simulation choice: until a committee reply is shared, teammates must not invent a private official ruling."
+    ],
+    "typical_contest_workflow": [
+      "Simulation choice: scout the packet, triage difficulty, and put the highest-confidence ready problems on the two machines first.",
+      "Simulation choice: while two contestants implement, the others derive, invent tests, review, or scout.",
+      "Simulation choice: after a rejection, build a counterexample or diagnosis before rewriting.",
+      "Simulation choice: replan from remaining time, machine idle time, and unfinished problems."
+    ],
+    "handoff_protocol": [
+      "Simulation choice: a handoff may communicate the problem, algorithm, invariants, complexity, edge cases, tests, source status, and next action.",
+      "Simulation choice: incomplete handoffs are allowed and their repair cost should remain observable; no automatic memory copy occurs."
+    ]
   },
   "deliberation": {
     "mode": "structured",
@@ -46,108 +183,96 @@ How this benchmark's agents are asked to work. Projected from `data/rules/iiot/c
   },
   "communication": {
     "mode": "unlimited"
+  },
+  "simulation": {
+    "max_turns": 30,
+    "scheduler": "src_collaboration_draft",
+    "turn_budget_basis": "standardized experiment budget: 30 global turns; official contest timing is recorded separately",
+    "eligibility_and_logistics_state": "specified_for_role_immersion_not_enforced",
+    "open_table_coach": {
+      "enabled": true,
+      "status": "counterfactual_otc_collaboration_overlay_not_official_competition_rule",
+      "may_submit": false,
+      "allowed_tools": [],
+      "counts_toward_shared_api_and_token_budget": true,
+      "contestant_turn_policy": {
+        "mode": "private_deliberation_then_single_action",
+        "allowed_actions": [
+          "work",
+          "speak",
+          "rest",
+          "submit_code"
+        ],
+        "exactly_one_action": true,
+        "unstructured_response": "rest",
+        "final_submission": "reviewed_answer_sheet",
+        "visibility": {
+          "think": "private",
+          "work": "shared",
+          "speak": "team",
+          "rest": "private",
+          "submit_code": "team"
+        },
+        "max_chars_by_action": {
+          "think": 2400,
+          "work": 8000,
+          "speak": 1000,
+          "rest": 80,
+          "submit_code": 12000
+        },
+        "memory_entries": {
+          "private_think_per_agent": 3,
+          "shared_work": 18,
+          "group_messages": 12,
+          "public_messages": 24
+        },
+        "private_think_calls_per_turn": 1,
+        "discussion_policy": {
+          "report_after_work": true,
+          "silent_work_turn_requires_discussion": true,
+          "conflicts_require_targeted_speak": true
+        }
+      },
+      "precontest_brief": {
+        "turn": 0,
+        "problem_access": false,
+        "allowed_actions": [
+          "speak",
+          "rest"
+        ],
+        "advice_scope": [
+          "time allocation within the rule card",
+          "team coordination and handoffs",
+          "independent verification",
+          "reconciling the required final deliverable"
+        ]
+      },
+      "opening_discussion": {
+        "enabled": false,
+        "problem_access": false,
+        "allowed_actions": [],
+        "purpose": "Coach exits permanently after the single turn-0 blind brief."
+      },
+      "after_opening_access": false,
+      "min_turns": 3,
+      "protocol_version": "otc_turn0_review_v1",
+      "review_required": true,
+      "action_surface": "registry_bundles_v1",
+      "action_bundles": [
+        "common",
+        "desk",
+        "memory",
+        "independent_review",
+        "competition_tools",
+        "deliberation_if_structured"
+      ]
+    },
+    "deliverable_pipeline": {
+      "version": "otc_artifact_v1",
+      "kind": "native",
+      "fidelity": "benchmark_adaptation_not_official_equivalence"
+    }
   }
 }
 ```
 
-## Simulation
-
-```json
-{
-  "max_turns": 24,
-  "scheduler": "src_collaboration_draft",
-  "turn_budget_basis": "official clock n/a turns vs floor 13 (4 teammates x 2 turns + 1 answer parts + 4 for synthesis)",
-  "eligibility_and_logistics_state": "specified_for_role_immersion_not_enforced"
-}
-```
-
-## Rule sections
-
-```json
-{
-  "competition_format": [
-    "Official: the International Final lasts four hours and involves writing programs that solve at least seven problems given and solved in English.",
-    "Official: the 3 October 2024 regulations list C, C++, and Pascal; the 2026 online overlay frozen here accepts only C++.",
-    "Official: four contestants form the competing team; two reserves exist only as replacements; the team leader is not a contestant.",
-    "Official: problems need no special hardware or graphic packages; topics include arrays, sorting and searching, greedy algorithms, recursion, dynamic programming, graphs, trees, and lists.",
-    "Simulation choice: the session currently exposes one programming problem rather than a seven-or-more problem packet."
-  ],
-  "timeline": [
-    "Official: contestants should enter the room half an hour before the beginning to check that everything works.",
-    "Official: written questions to the Scientific Committee are allowed during the initial period of the round.",
-    "Official: when working time is over, solutions are checked by an automatic evaluator and published on the official website.",
-    "Simulation choice: execution.official_minutes remains null; max_turns 24 is a safety budget rather than a four-hour clock."
-  ],
-  "resource_policy": [
-    "Official: only organizer-provided computers and software with built-in help may be used; an approved personal mouse or keyboard is allowed.",
-    "Official: USB is disabled; Internet is limited to the contest or grading platform; language documentation is available.",
-    "Official: the host publishes OS, editors, IDEs, and compilers at least one month ahead.",
-    "Official: national-contest checks forbid phones, tablets, other personal electronics, textbooks, translators, and inter-team communication.",
-    "Simulation choice: code execution is a shared execute_code proxy, not two host virtual machines.",
-    "Simulation choice: the two machine leases are specified but not enforced as exclusive ownership state."
-  ],
-  "collaboration_protocol": [
-    "Official: four contestants collaborate on the team account and share two organizer computers; they may not communicate with other teams.",
-    "Official: the team leader coordinates and may appeal after evaluation, but provides no contest-time solving help.",
-    "Official: 2026 online guest teams must be co-located with a proctor and still use only two computers.",
-    "Simulation choice: begin with equal permissions; rotate machine use from current evidence rather than a fixed driver office.",
-    "Simulation choice: private notes are unshared until communicated; dual-machine ownership and source state must be stated explicitly."
-  ],
-  "integrity_and_compliance": [
-    "Official: a contestant may be disqualified by the General Assembly for unethical behavior during or outside the contest.",
-    "Official: guest results are excluded from the official ranking; do not treat a guest score as an official rank.",
-    "Official: public Internet, removable storage, unapproved software, other teams' materials, and outside help are forbidden.",
-    "Simulation choice: hidden tests, evaluator internals, and answer keys are not contestant-visible."
-  ],
-  "deliverable_format": [
-    "Official: the deliverable is source programs that solve the assigned problems.",
-    "Official: under the 2026 overlay, submit C++ only.",
-    "Official: solutions are judged by an automatic evaluator; the team leader may appeal to the International Scientific Committee.",
-    "Simulation choice: the session accepts source text through the programming-judge contract; live pending verdicts are deferred."
-  ],
-  "evaluation_criteria": [
-    "Official: an automatic evaluator checks the team's solutions; results are published on the official website.",
-    "Official: the General Assembly determines gold, silver, and bronze cutoffs in about a 1:2:3 proportion, and at least 50 percent of contestants should receive medals.",
-    "Official: the official ranking presents only regular participants; guest teams are omitted.",
-    "Official: the 3 October 2024 regulations do not publish an ICPC-style minutes-plus-rejection penalty; do not invent one.",
-    "Simulation choice: the programming judge is deferred; do not invent a completed official score."
-  ],
-  "runtime_limitations": [
-    "Simulation choice: two-machine leases, packet coverage, written clarifications, automatic-evaluator history, leader appeals, and official ranking are specified, not enforced.",
-    "Simulation choice: eligibility, reserve substitution, guest ranking, visas, and host ceremonies are role-immersion text only.",
-    "Simulation choice: do not claim a host VM, USB lock, or proctor recording that was not observed."
-  ],
-  "official_eligibility_and_logistics": [
-    "Official: contestants are secondary students, not older than 20 on 1 July of the Final year, enrolled at least September–December of the prior year.",
-    "Official: teammates come from the same school, or the same institution or region if a national organization runs the event.",
-    "Official: no student exchanges between teams; at most one prior-year national individual olympiad awardee per team.",
-    "Simulation choice: these obligations are carried as contestant conscience; the session does not execute enrollment or visa checks."
-  ],
-  "dual_machine_protocol": [
-    "Official: the evaluated edition provides two organizer computers per team, not one shared workstation.",
-    "Simulation choice: each machine has at most one explicit owner at a time; only that owner may edit, compile, execute, test, or submit on it.",
-    "Simulation choice: the two leases may run different problems in parallel; they must not be treated as four hidden terminals.",
-    "Simulation choice: acquisition and release are explicit; ownership gives no permanent role.",
-    "Simulation choice: compliance violations include a third machine, simultaneous owners of the same lease, and non-owner machine actions."
-  ],
-  "clarification_protocol": [
-    "Official: written questions about formulation or interpretation go to the host Scientific Committee during the initial period.",
-    "Official: the problem author or a collaborator should be reachable; communication is written and in English.",
-    "Simulation choice: until a committee reply is shared, teammates must not invent a private official ruling."
-  ],
-  "typical_contest_workflow": [
-    "Simulation choice: scout the packet, triage difficulty, and put the highest-confidence ready problems on the two machines first.",
-    "Simulation choice: while two contestants implement, the others derive, invent tests, review, or scout.",
-    "Simulation choice: after a rejection, build a counterexample or diagnosis before rewriting.",
-    "Simulation choice: replan from remaining time, machine idle time, and unfinished problems."
-  ],
-  "handoff_protocol": [
-    "Simulation choice: a handoff may communicate the problem, algorithm, invariants, complexity, edge cases, tests, source status, and next action.",
-    "Simulation choice: incomplete handoffs are allowed and their repair cost should remain observable; no automatic memory copy occurs."
-  ],
-  "emergent_behavior": [
-    "Simulation choice: observe but do not require packet triage, dual-machine scheduling, temporary specialization, parallel off-machine reasoning, handoff, peer review, and role rotation.",
-    "Simulation choice: do not reward a permanent coder role, equal keyboard time, exclusive problem ownership, a fixed message count, or verbosity by itself."
-  ]
-}
-```

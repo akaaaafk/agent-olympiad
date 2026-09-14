@@ -1,5 +1,3 @@
-# Blackboard Game
-
 Hide 
  Blackboard Game 
 

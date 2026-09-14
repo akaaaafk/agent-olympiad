@@ -1,5 +1,3 @@
-# PUMaC 2018 Power Round
-
 PUMaC 2018 Power Round Page 1
 PUMaC 2018 Power Round:
 “Life is a game I lost...”

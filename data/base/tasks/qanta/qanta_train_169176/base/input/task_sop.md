@@ -1,29 +1,13 @@
-# Task SOP
+# Task
 
-## Reference Environment
-- Competition: QANTA Quiz Bowl
-- Competition id: `qanta`
-- Problem id: `qanta_train_169176`
-- Task type: `quizbowl`
-- Team size: 4
-- Year / edition: 2013
-- Source: https://www.qanta.org/
+Competition: qanta
 
-## Goal
-As a multi-agent team, solve the olympiad-style team task using only the materials under `base/input`. Produce the required deliverable (`team_submission`).
+Task: qanta_train_169176
 
-## Task directory
-- Variant root: `base`
-- Input directory: `base/input`
+Edition: 2013
 
-## Inputs
-- `problem.md`
+Team size: 4
 
-## Title
-Science
+Deliverable: spoken_answer
 
-## Deterministic Evaluation Rule
-Gold answers and official solution booklets are not provided in `input/`. Scoring uses the evaluator declared on the task card (gold match, rubric LLM judge, slide judge, or deferred sandbox).
-
-## Deliverables
-Return the team `team_submission` expected by this competition.
+Use the attached problem materials and the inherited competition and collaboration instructions.

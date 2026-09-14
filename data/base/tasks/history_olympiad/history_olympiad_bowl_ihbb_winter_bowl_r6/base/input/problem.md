@@ -1,5 +1,3 @@
-# IHBB-Winter_Bowl-R6
-
 [Q1] The merger of the Sveno and the Bolshevik Workers Party into the Fatherland Front overthrew this nation's monarchy following a Soviet invasion. This European nation lost the Second Balkan War against its former allies of Serbia and Greece, losing territory in Macedonia and Thrace. Tsars such as Ferdinand I and Boris III led, for ten points, what member of the Axis governed from the city of Sofia?
 
 [Q2] A contingent of this European people populated the Haitian city of Cazale [[kah-SAL]] after they betrayed Napoleon's troops. Over 20,000 officers and other intelligentsia of these people were murdered by the NKVD in the Katyn [[kah -TEEN]] Forest Massacre. With Hungarian Michael Kovats [[KOH -vach]], a nobleman of this nationality named Casimir Pulaski [[poo-WAH-skee]] reformed the American Cavalry Corps. For ten points, name these people who's country was invaded on September 1, 1939 to begin World War Two.

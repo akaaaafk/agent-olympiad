@@ -1,5 +1,3 @@
-# Visual Python++
-
 Hide 
  Visual Python++ 
 

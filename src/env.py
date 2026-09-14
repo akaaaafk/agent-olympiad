@@ -1626,6 +1626,15 @@ class OlympiadEnvironment:
         return f"Submission finalized by {agent_name}.{self._board_submission_note()}"
 
     def _act_tool(self, agent_name: str, arguments: dict[str, Any], invocation: Invocation) -> str:
+        from action_modules.competition_tools import ACTION_NAMES
+        if invocation.action in ACTION_NAMES:
+            from competition_tool_runtime import execute_preparation_tool, public_context
+            if invocation.action not in self.allowed_tools:
+                raise ValueError("preparation tool is not permitted by this competition")
+            context = public_context(self.competition_id, self.problem_id,
+                                     expected_ids=tuple(self.workboard.items) if self.workboard is not None else (),
+                                     task_metadata=self.problem_data)
+            return json.dumps(execute_preparation_tool(invocation.action, arguments, context), ensure_ascii=False)
         key = invocation.spec.primary_argument if invocation.spec else None
         payload = str(arguments.get(key) or "") if key else invocation.text_payload
         dispatched = dispatch_environment_action(

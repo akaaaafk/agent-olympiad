@@ -1,5 +1,3 @@
-# euso2014_Task_B
-
 page 1 
 April 3d, 2014 – TASK B 
 All about Sea Water 

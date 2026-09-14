@@ -1,10 +1,33 @@
 {
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/iol_team/benchmark.json#iol_team_2012.gold_label",
-  "has_gold_answer": true,
-  "evaluator_id": "rubric_llm_v1",
-  "evaluator_status": "ready",
-  "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-  "deliverable": "worked_answers",
-  "solution_file": "data/raw/iol/iol-2012-team-sol.en.pdf"
+  "has_gold_answer": false,
+  "evaluator_id": null,
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/iol/iol-2012-team-sol.en.pdf",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/iol_team_2012_structured_reference_v1.json",
+    "deliverable": "team_worked_answer",
+    "judge_assets": [
+      "data/raw/iol/iol-2012-team-sol.en.pdf",
+      "data/raw/iol/lao_20260913/judge/iol_2012_lao_solution.png",
+      "data/rubrics/iol_team_2012_structured_reference_v1.json"
+    ],
+    "limitations": [
+      "All 57 Lao input forms are present in the original problem image but absent from plain-text extraction.",
+      "Official country names and pronunciation references for all 57 entries are present; the solution PDF, rendered page and country map are now linked as judge-only assets.",
+      "Flattened pronunciation extraction loses or moves superscripts/diacritics. Only the original page images are authoritative; no Unicode pronunciation key is asserted.",
+      "Official total, part/item weights, acceptable variants and partial-credit rules remain unverified. The old 100-point 50/30/20 benchmark proxy is disabled for this record.",
+      "Image-aware task delivery and pronunciation grading have not been validated end to end; keep not_ready."
+    ],
+    "scorecard_path": "data/rubrics/task_scorecards/iol_team.json",
+    "scorecard_key": "iol_team_2012",
+    "answer_key_path": "data/rubrics/iol_team_2012_structured_reference_v1.json",
+    "score_basis": "Official points unknown; 57 entries and two requested outputs per entry are not point weights. Legacy 100-point benchmark proxy disabled.",
+    "scoring_validation_status": "source_repaired_pronunciation_grading_not_validated"
+  },
+  "rubric_path": "data/rubrics/iol_team_2012_structured_reference_v1.json",
+  "deliverable": "team_worked_answer"
 }

@@ -1,0 +1,19 @@
+{
+  "visibility": "hidden_until_grade",
+  "gold_pointer": "data/benchmarks/icm/benchmark.json#icm_2021_F.gold_label",
+  "has_gold_answer": false,
+  "evaluator_id": "rubric_llm_v1",
+  "evaluator_status": "ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": "rubric_llm_v1",
+    "status": "ready",
+    "rubric_path": "data/rubrics/icm_modeling_report_100_v1.json",
+    "deliverable": "modeling_report",
+    "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+    "scorecard_path": "data/rubrics/task_scorecards/icm.json",
+    "scorecard_key": "icm_2021_F"
+  },
+  "rubric_path": "data/rubrics/icm_modeling_report_100_v1.json",
+  "deliverable": "modeling_report"
+}

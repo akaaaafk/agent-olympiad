@@ -1,0 +1,3 @@
+# Competition rules
+
+Global Case Competition at Harvard. The team researches, authors, and defends a judged artifact. The source-recorded active team may have 2 to 5 members; the runner default is 4. Collaborate only within the team under contest rules. Conditional: internet access is not verified, calculator permission is not verified and code-execution permission is not verified. Paper and pencil are always available. Submit one shared slide deck; Submit a structured report or slide outline covering analysis, recommendation, and evidence. Treat unexposed physical, oral, live-opponent, judge, timing, or environment mechanisms as unavailable rather than simulated facts.

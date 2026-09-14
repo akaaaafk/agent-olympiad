@@ -1,0 +1,464 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=1240, user-scalable=yes"></meta>
+    
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="icon" href="https://web.mit.edu/puzzle/www/2015/static/images/hunt/icon32.png" type="image/x-icon" />
+    <title>A Push in the Right Direction &mdash; MIT Mystery Hunt 2015</title>
+    
+    <link href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/puzzle.css" rel="stylesheet" type="text/css" />
+
+    
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/logbook.css" />
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/atlantis.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+ <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="https://web.mit.edu/puzzle/www/2015/intro.html">World Map</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="https://web.mit.edu/puzzle/www/2015/storylog.html">The Story So Far...</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Useful links <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="https://web.mit.edu/puzzle/www/2015/toc.html">List of Puzzles</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/eventschedule.html">Events Schedule</a></li>
+	    
+            <li></li>
+	    
+            <li><a href="https://web.mit.edu/puzzle/www/2015/updates.html">Updates from Sealab</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/completelog.html">Full team log</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/faq.html">FAQ</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/sponsors.html">Sponsors</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/">2015 Archive Overview</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    
+    
+    
+        <li></li>
+        
+    
+
+         
+    </ul>
+  </div><!-- /.navbar-collapse -->
+ </div>
+</nav> 
+
+  
+    <div id="artstuff">
+        <div id="atlantiscontainer">
+        <div id="leftdecor"></div>
+        <div id="rightdecor"></div>
+        </div>
+        <div id="atlantisdecor">
+            <div id="puzzle-obj"><img src="https://web.mit.edu/puzzle/www/2015//assets/puzzimages/343.png"></img></div>
+            <div id="infowindow">Location: Atlantis, Colorful Tower <br />Depth: 460</div>
+        </div>
+    </div>
+
+    <div id="paper">
+       <div class="puzzle-page-header">
+        
+            <div class="sol"><a href="solution/">View Solution</a></div>
+        
+        <h1>A Push in the Right Direction</h1>
+        
+	    
+	        <p class="answer" id="answer_343"> Answer: click here to reveal</p>
+            
+        
+        </div>
+      <div class='puzzle'>
+        <!-- Puzzle content begins here -->
+         <style>
+	.puzzle-container {
+		display: inline-block;
+		padding-top: 30px;
+	}
+	.sokoban {
+		position: relative;
+		float: left;
+		background-color: #DED6AD;
+		width: 484px;
+		height: 800px;
+	}
+	.sokoban img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		top: 152px;
+	}
+	.sokoban span {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		bottom: 100px;
+		spacing: 10px;
+		background-color: #F2F2F2;
+		letter-spacing: 1px;
+	}
+	.chat {
+		position: relative;
+		width: 371px;
+		height: 800px;
+		float: left;
+		background-image: url("images/chat.png");
+	}
+	.chat span {
+		position: relative;
+		top: 60px;
+		left: 22px;
+		font-size: 90%;
+		line-height: 17px;
+		display: block;
+	}
+</style>
+<div class="puzzle-container"><div class="sokoban"><img src="images/1.gif"><span>DRDDRRUUUDRDDLULUUUURDDDLRULLLURUR</span></div><div class="chat"><span>
+<font color="#2E8B57"><b>Taili1</b></font>: D
+<br><font color="#D2691E"><b>HearBliki</b></font>: R
+<br><font color="#FF69B4"><b>Elvirum</b></font>: D
+<br><font color="#FF0000"><b>Sliplalege6</b></font>: D
+<br><font color="#DAA520"><b>Calesion</b></font>: R
+<br><font color="#D2691E"><b>Reenwark</b></font>: R
+<br><font color="#FF69B4"><b>Exclusiveri_12</b></font>: U
+<br><font color="#00FF7F"><b>Eschony</b></font>: U
+<br><font color="#2E8B57"><b>Notemospers</b></font>: U
+<br><font color="#00FF7F"><b>NinjaTopics</b></font>: D
+<br><font color="#D2691E"><b>Arachopodys7</b></font>: R
+<br><font color="#5F9EA0"><b>MomBobo</b></font>: D
+<br><font color="#5F9EA0"><b>EdgyClawGrant</b></font>: D
+<br><font color="#DAA520"><b>Sesilijum</b></font>: L
+<br><font color="#008000"><b>Angurisahan</b></font>: U
+<br><font color="#0000FF"><b>RocksSon</b></font>: L
+<br><font color="#00FF7F"><b>Econisti</b></font>: U
+<br><font color="#FF69B4"><b>Tinlhui</b></font>: U
+<br><font color="#0000FF"><b>Orphichi</b></font>: U
+<br><font color="#DAA520"><b>Tacanhadaw</b></font>: U
+<br><font color="#FF7F50"><b>Angelsoreg</b></font>: R
+<br><font color="#5F9EA0"><b>LunchLocust87</b></font>: D
+<br><font color="#D2691E"><b>Landsonto</b></font>: D
+<br><font color="#0000FF"><b>Ywrspfbgprtkrp</b></font>: D
+<br><font color="#FF7F50"><b>Ilostmysoc7w</b></font>: L
+<br><font color="#DAA520"><b>Reedhyclemi</b></font>: R
+<br><font color="#DAA520"><b>RottenAlligator</b></font>: U
+<br><font color="#DAA520"><b>Enteler</b></font>: L
+<br><font color="#FF69B4"><b>LingAttractive</b></font>: L
+<br><font color="#DAA520"><b>Exispace</b></font>: L
+<br><font color="#FF4500"><b>VaguePetal</b></font>: U
+<br><font color="#2E8B57"><b>Actimodo</b></font>: R
+<br><font color="#FF7F50"><b>NateSharkMadd</b></font>: U
+<br><font color="#FF69B4"><b>Turnclubh</b></font>: R
+</span></div></div>
+
+<div class="puzzle-container"><div class="sokoban"><img src="images/2.gif"><span>LRLDRUULLURRRDDUULDD</span></div><div class="chat"><span>
+<font color="#8A2BE2"><b>Alosolia2</b></font>: L
+<br><font color="#8A2BE2"><b>LazyToffee</b></font>: R
+<br><font color="#FF69B4"><b>Luebooks</b></font>: L
+<br><font color="#9ACD32"><b>SmoothProphet</b></font>: D
+<br><font color="#FF0000"><b>Insiderryst</b></font>: R
+<br><font color="#FF69B4"><b>Mentresh</b></font>: U
+<br><font color="#8A2BE2"><b>PressMonRider</b></font>: U
+<br><font color="#FF0000"><b>Limezineti</b></font>: L
+<br><font color="#D2691E"><b>YesOrKnow</b></font>: L
+<br><font color="#FF7F50"><b>Relynnec40</b></font>: U
+<br><font color="#FF7F50"><b>Enbersapo6</b></font>: R
+<br><font color="#D2691E"><b>Davilogrops4</b></font>: R
+<br><font color="#FF0000"><b>HeheDrama99</b></font>: R
+<br><font color="#FF7F50"><b>Exelotec</b></font>: D
+<br><font color="#00FF7F"><b>RunningBuffy</b></font>: D
+<br><font color="#FF0000"><b>Relmerer</b></font>: U
+<br><font color="#FF0000"><b>Interesten</b></font>: U
+<br><font color="#2E8B57"><b>NameActive</b></font>: L
+<br><font color="#DAA520"><b>GardenLemur</b></font>: D
+<br><font color="#1E90FF"><b>Sekiser</b></font>: D
+</span></div></div>
+
+<div class="puzzle-container"><div class="sokoban"><img src="images/3.gif"><span>LURRUDDLLLUURDLLDRRDRRRUDLULLDRDR</span></div><div class="chat"><span>
+<font color="#B22222"><b>Neritale5</b></font>: L
+<br><font color="#FF69B4"><b>Outseli</b></font>: U
+<br><font color="#FF69B4"><b>NetworkTales51</b></font>: R
+<br><font color="#1E90FF"><b>Equorks_72</b></font>: R
+<br><font color="#FF0000"><b>Otterminate</b></font>: U
+<br><font color="#FF0000"><b>Flameshago</b></font>: D
+<br><font color="#1E90FF"><b>TravelAngel</b></font>: D
+<br><font color="#B22222"><b>HungryWarrior</b></font>: L
+<br><font color="#008000"><b>Ensentwe</b></font>: L
+<br><font color="#FF69B4"><b>MitziGal</b></font>: L
+<br><font color="#0000FF"><b>MiracleSnowboard35</b></font>: U
+<br><font color="#008000"><b>ApenguinTinker</b></font>: U
+<br><font color="#8A2BE2"><b>TroubledCod</b></font>: R
+<br><font color="#008000"><b>Tangoddess</b></font>: D
+<br><font color="#B22222"><b>Estrepiva8</b></font>: L
+<br><font color="#5F9EA0"><b>Ridergisler93</b></font>: L
+<br><font color="#5F9EA0"><b>SoftCamera</b></font>: D
+<br><font color="#1E90FF"><b>Felseren_1</b></font>: R
+<br><font color="#FF4500"><b>Othigr</b></font>: R
+<br><font color="#FF0000"><b>RacingLink</b></font>: D
+<br><font color="#B22222"><b>AirFrog</b></font>: R
+<br><font color="#FF0000"><b>NateXo</b></font>: R
+<br><font color="#B22222"><b>Yanyan8188n</b></font>: R
+<br><font color="#5F9EA0"><b>TrustyVillain</b></font>: U
+<br><font color="#1E90FF"><b>HeadlinesMovie</b></font>: D
+<br><font color="#FF4500"><b>Insbytel</b></font>: L
+<br><font color="#00FF7F"><b>Nismomya</b></font>: U
+<br><font color="#FF4500"><b>Growled</b></font>: L
+<br><font color="#0000FF"><b>Agentlace</b></font>: L
+<br><font color="#2E8B57"><b>Thehibikisw</b></font>: D
+<br><font color="#FF4500"><b>Adistons</b></font>: R
+<br><font color="#9ACD32"><b>Lolavapost</b></font>: D
+<br><font color="#D2691E"><b>Ludanterin</b></font>: R
+</span></div></div>
+
+<div class="puzzle-container"><div class="sokoban"><img src="images/4.gif"><span>LUUUURLLDDUUDDRRULDRRUU</span></div><div class="chat"><span>
+<font color="#8A2BE2"><b>Aprilogis</b></font>: L
+<br><font color="#DAA520"><b>NayborWillow</b></font>: U
+<br><font color="#D2691E"><b>Driblanoji</b></font>: U
+<br><font color="#FF69B4"><b>ShabbyWitty</b></font>: U
+<br><font color="#8A2BE2"><b>Acendiant</b></font>: U
+<br><font color="#B22222"><b>Marshummie</b></font>: R
+<br><font color="#0000FF"><b>Enterte1</b></font>: L
+<br><font color="#9ACD32"><b>FashionPerfect</b></font>: L
+<br><font color="#DAA520"><b>Olympicha</b></font>: D
+<br><font color="#B22222"><b>RyothRazu</b></font>: D
+<br><font color="#D2691E"><b>Turbogre</b></font>: U
+<br><font color="#FF0000"><b>Hieltydx</b></font>: U
+<br><font color="#0000FF"><b>EatsWasWiz</b></font>: D
+<br><font color="#0000FF"><b>Frederergi</b></font>: D
+<br><font color="#FF4500"><b>Otosenti</b></font>: R
+<br><font color="#0000FF"><b>Nicenesson</b></font>: R
+<br><font color="#FF7F50"><b>Tabutcher</b></font>: U
+<br><font color="#00FF7F"><b>CalmMaverick</b></font>: L
+<br><font color="#FF69B4"><b>Oreoreo</b></font>: D
+<br><font color="#8A2BE2"><b>Lloyder</b></font>: R
+<br><font color="#1E90FF"><b>Obsestbanna1</b></font>: R
+<br><font color="#5F9EA0"><b>RainbowBuffy</b></font>: U
+<br><font color="#0000FF"><b>Sasquire</b></font>: U
+</span></div></div>
+
+<div class="puzzle-container"><div class="sokoban"><img src="images/5.gif"><span>RRDRDDRUUULUDDRRRL</span></div><div class="chat"><span>
+<font color="#D2691E"><b>Digestre1</b></font>: R
+<br><font color="#1E90FF"><b>OneTwo3Four</b></font>: R
+<br><font color="#FF7F50"><b>WaxWatermelon</b></font>: D
+<br><font color="#B22222"><b>Nicerisers</b></font>: R
+<br><font color="#B22222"><b>Rockethrom</b></font>: D
+<br><font color="#FF69B4"><b>InsiderFarJim</b></font>: D
+<br><font color="#00FF7F"><b>GravityAttractive</b></font>: R
+<br><font color="#FF0000"><b>Helpoirene</b></font>: U
+<br><font color="#9ACD32"><b>TerrificWillows</b></font>: U
+<br><font color="#1E90FF"><b>Alertient</b></font>: U
+<br><font color="#1E90FF"><b>RingExclusive</b></font>: L
+<br><font color="#B22222"><b>Beariment</b></font>: U
+<br><font color="#8A2BE2"><b>Idellarin</b></font>: D
+<br><font color="#FF4500"><b>Tomlium</b></font>: D
+<br><font color="#9ACD32"><b>ReaderLucy8</b></font>: R
+<br><font color="#9ACD32"><b>Amafibe</b></font>: R
+<br><font color="#9ACD32"><b>RunningTrendy</b></font>: R
+<br><font color="#8A2BE2"><b>Y2k</b></font>: L
+</span></div></div>
+
+<div class="puzzle-container"><div class="sokoban"><img src="images/6.gif"><span>RRRDRLLDRULDRRLUURDRUDUULLDR</span></div><div class="chat"><span>
+<font color="#B22222"><b>Trabiag</b></font>: R
+<br><font color="#00FF7F"><b>Hemotwork</b></font>: R
+<br><font color="#2E8B57"><b>Eravenz</b></font>: R
+<br><font color="#8A2BE2"><b>Ylandra_Vales</b></font>: D
+<br><font color="#2E8B57"><b>Chattyphas</b></font>: R
+<br><font color="#008000"><b>Oesrestek</b></font>: L
+<br><font color="#0000FF"><b>Unduloseq</b></font>: L
+<br><font color="#FF7F50"><b>Loveriserim</b></font>: D
+<br><font color="#FF0000"><b>Donovaccu</b></font>: R
+<br><font color="#008000"><b>ViolentArrow</b></font>: U
+<br><font color="#8A2BE2"><b>E2d1nd32</b></font>: L
+<br><font color="#0000FF"><b>BWithCrescent5</b></font>: D
+<br><font color="#1E90FF"><b>Enterviry</b></font>: R
+<br><font color="#0000FF"><b>Engenslee6</b></font>: R
+<br><font color="#9ACD32"><b>Ninjacarp</b></font>: L
+<br><font color="#2E8B57"><b>Sluipgatj</b></font>: U
+<br><font color="#FF7F50"><b>Oerrtlloo</b></font>: U
+<br><font color="#FF69B4"><b>MjSuave</b></font>: R
+<br><font color="#FF4500"><b>EagerKing</b></font>: D
+<br><font color="#00FF7F"><b>Termight</b></font>: R
+<br><font color="#D2691E"><b>Hellonghard</b></font>: U
+<br><font color="#FF4500"><b>Interve</b></font>: D
+<br><font color="#2E8B57"><b>Naisarb1</b></font>: U
+<br><font color="#9ACD32"><b>Gamettech</b></font>: U
+<br><font color="#2E8B57"><b>Eigheria</b></font>: L
+<br><font color="#FF69B4"><b>Luckyozit</b></font>: L
+<br><font color="#FF69B4"><b>Saddled</b></font>: D
+<br><font color="#FF4500"><b>Elbodoter</b></font>: R
+</span></div></div>
+
+<div class="puzzle-container"><div class="sokoban"><img src="images/7.gif"><span>RURDULULDDLDLLUUURDRRUULDRUDDLLULUD</span></div><div class="chat"><span>
+<font color="#9ACD32"><b>Ilhexica</b></font>: R
+<br><font color="#2E8B57"><b>Tiradetad</b></font>: U
+<br><font color="#DAA520"><b>Wahooligan</b></font>: R
+<br><font color="#8A2BE2"><b>Onwareig</b></font>: D
+<br><font color="#D2691E"><b>UglyFlash</b></font>: U
+<br><font color="#5F9EA0"><b>Leprecocoa</b></font>: L
+<br><font color="#9ACD32"><b>DailyBalInformer9</b></font>: U
+<br><font color="#FF4500"><b>Nobiarest</b></font>: L
+<br><font color="#B22222"><b>Over_da_rainbow</b></font>: D
+<br><font color="#5F9EA0"><b>Tarifah6</b></font>: D
+<br><font color="#2E8B57"><b>Heyworx</b></font>: L
+<br><font color="#8A2BE2"><b>Acecaller9</b></font>: D
+<br><font color="#FF4500"><b>ViolentChief</b></font>: L
+<br><font color="#FF0000"><b>Episodellia</b></font>: L
+<br><font color="#D2691E"><b>Moanneto</b></font>: U
+<br><font color="#D2691E"><b>AncientGrasshopper</b></font>: U
+<br><font color="#2E8B57"><b>Dziersken5</b></font>: U
+<br><font color="#1E90FF"><b>ExoticReindeer</b></font>: R
+<br><font color="#D2691E"><b>Akuyeg47_1</b></font>: D
+<br><font color="#FF7F50"><b>Darityview</b></font>: R
+<br><font color="#1E90FF"><b>Rojakp</b></font>: R
+<br><font color="#008000"><b>Oorareal</b></font>: U
+<br><font color="#00FF7F"><b>PunkLoven</b></font>: U
+<br><font color="#DAA520"><b>Orangutangle</b></font>: L
+<br><font color="#FF0000"><b>Foolpac</b></font>: D
+<br><font color="#1E90FF"><b>DressyPong</b></font>: R
+<br><font color="#DAA520"><b>Islandfone</b></font>: U
+<br><font color="#FF4500"><b>Focallocu</b></font>: D
+<br><font color="#D2691E"><b>FlawlessLamb</b></font>: D
+<br><font color="#00FF7F"><b>ExecRpgTicko</b></font>: L
+<br><font color="#FF0000"><b>Ransort</b></font>: L
+<br><font color="#0000FF"><b>ExclusiveSexy</b></font>: U
+<br><font color="#FF4500"><b>NotClassyBuddie</b></font>: L
+<br><font color="#00FF7F"><b>Cameranova</b></font>: U
+<br><font color="#2E8B57"><b>Eliminature</b></font>: D
+</span></div></div>
+
+<div class="puzzle-container"><div class="sokoban"><img src="images/8.gif"><span>ULDLDRRDLLDDDDRDUUULDLDRRRRUL</span></div><div class="chat"><span>
+<font color="#1E90FF"><b>TinyBeetle</b></font>: U
+<br><font color="#DAA520"><b>HeesWeisuttb</b></font>: L
+<br><font color="#0000FF"><b>Equisign</b></font>: D
+<br><font color="#5F9EA0"><b>Yumyumz</b></font>: L
+<br><font color="#0000FF"><b>Agorardea</b></font>: D
+<br><font color="#2E8B57"><b>Ravageraldt</b></font>: R
+<br><font color="#8A2BE2"><b>EatsSumoSunny</b></font>: R
+<br><font color="#0000FF"><b>Reporterxi</b></font>: D
+<br><font color="#B22222"><b>Amesmari</b></font>: L
+<br><font color="#5F9EA0"><b>Niejoodsm</b></font>: L
+<br><font color="#D2691E"><b>Donaldozer</b></font>: D
+<br><font color="#FF4500"><b>OmahaMomStyx</b></font>: D
+<br><font color="#B22222"><b>Martionix</b></font>: D
+<br><font color="#00FF7F"><b>Leaderackm</b></font>: D
+<br><font color="#00FF7F"><b>Y3ll0wSubmarine</b></font>: R
+<br><font color="#FF0000"><b>Goldanci</b></font>: D
+<br><font color="#8A2BE2"><b>Euroupta</b></font>: U
+<br><font color="#8A2BE2"><b>Ngwiredduc</b></font>: U
+<br><font color="#0000FF"><b>EyeMyhero</b></font>: U
+<br><font color="#FF7F50"><b>ReggaeSpice</b></font>: L
+<br><font color="#5F9EA0"><b>Aloneyers</b></font>: D
+<br><font color="#FF0000"><b>Truekaryq</b></font>: L
+<br><font color="#00FF7F"><b>Ebendorfh</b></font>: D
+<br><font color="#8A2BE2"><b>DigestEats</b></font>: R
+<br><font color="#1E90FF"><b>NameScreenKrypto</b></font>: R
+<br><font color="#9ACD32"><b>Aimilogan</b></font>: R
+<br><font color="#5F9EA0"><b>Merrium</b></font>: R
+<br><font color="#9ACD32"><b>Eufoniev</b></font>: U
+<br><font color="#8A2BE2"><b>Skiervers</b></font>: L
+</span></div></div>
+
+<div class="puzzle-container"><div class="sokoban"><img src="images/9.gif"><span>ULDLLUUURRDDUDLUURRUUDDDRDLL</span></div><div class="chat"><span>
+<font color="#FF69B4"><b>Withaakp2</b></font>: U
+<br><font color="#00FF7F"><b>Halahatroq</b></font>: L
+<br><font color="#FF4500"><b>Yrrebwarts</b></font>: D
+<br><font color="#FF69B4"><b>Antailde</b></font>: L
+<br><font color="#FF4500"><b>RyothParis</b></font>: L
+<br><font color="#9ACD32"><b>Eidacety</b></font>: U
+<br><font color="#1E90FF"><b>Ydnasandy0</b></font>: U
+<br><font color="#9ACD32"><b>Orangutank</b></font>: U
+<br><font color="#D2691E"><b>UglyGod</b></font>: R
+<br><font color="#FF0000"><b>Spinettau</b></font>: R
+<br><font color="#B22222"><b>Teriyaking</b></font>: D
+<br><font color="#D2691E"><b>Istaffer14</b></font>: D
+<br><font color="#FF0000"><b>Lakomims</b></font>: U
+<br><font color="#FF7F50"><b>LastingWwjd</b></font>: D
+<br><font color="#D2691E"><b>Loincolph28</b></font>: L
+<br><font color="#9ACD32"><b>Oopsydaisy</b></font>: U
+<br><font color="#1E90FF"><b>Ok1ablg</b></font>: U
+<br><font color="#DAA520"><b>Keepupetra</b></font>: R
+<br><font color="#0000FF"><b>I1or0</b></font>: R
+<br><font color="#1E90FF"><b>Natextolec</b></font>: U
+<br><font color="#0000FF"><b>Glycanya</b></font>: U
+<br><font color="#FF4500"><b>Articlesis</b></font>: D
+<br><font color="#5F9EA0"><b>T3k2lb</b></font>: D
+<br><font color="#FF7F50"><b>Teledisc7</b></font>: D
+<br><font color="#008000"><b>Holydashit</b></font>: R
+<br><font color="#FF0000"><b>EverBiggRose</b></font>: D
+<br><font color="#0000FF"><b>SisterTricked</b></font>: L
+<br><font color="#5F9EA0"><b>Eyewinglecr</b></font>: L
+</span></div></div>
+
+<div class="puzzle-container"><div class="sokoban"><img src="images/10.gif"><span>UULRDRRLLDLDLDULURUURRDRLL</span></div><div class="chat"><span>
+<font color="#FF69B4"><b>Diddyfilman26</b></font>: U
+<br><font color="#0000FF"><b>OysterSauce</b></font>: U
+<br><font color="#FF4500"><b>NersDindbrirld</b></font>: L
+<br><font color="#5F9EA0"><b>Tinmynd</b></font>: R
+<br><font color="#B22222"><b>YardGard</b></font>: D
+<br><font color="#00FF7F"><b>Oblongorable</b></font>: R
+<br><font color="#FF4500"><b>Urformen5</b></font>: R
+<br><font color="#B22222"><b>HockeyCetic</b></font>: L
+<br><font color="#B22222"><b>Amazonof</b></font>: L
+<br><font color="#5F9EA0"><b>Verkmenna</b></font>: D
+<br><font color="#2E8B57"><b>Easetsbu</b></font>: L
+<br><font color="#FF69B4"><b>Aqbjeytizlv</b></font>: D
+<br><font color="#D2691E"><b>Pattypybodi</b></font>: L
+<br><font color="#FF69B4"><b>Uveseljen6</b></font>: D
+<br><font color="#FF4500"><b>Zamrljag</b></font>: U
+<br><font color="#DAA520"><b>Zehenderw</b></font>: L
+<br><font color="#B22222"><b>LonelySpike</b></font>: U
+<br><font color="#FF4500"><b>Exisonix</b></font>: R
+<br><font color="#8A2BE2"><b>Talkern</b></font>: U
+<br><font color="#FF0000"><b>Outlaught</b></font>: U
+<br><font color="#FF0000"><b>WHYYh</b></font>: R
+<br><font color="#D2691E"><b>Ofotitr9</b></font>: R
+<br><font color="#8A2BE2"><b>RipUnique</b></font>: D
+<br><font color="#D2691E"><b>Knotsandties0</b></font>: R
+<br><font color="#9ACD32"><b>Ogenofrint</b></font>: L
+<br><font color="#FF69B4"><b>Noptonos</b></font>: L
+</span></div></div>
+
+<img src="images/0.gif" width="384" height="384" style="padding-top: 30px;">
+        <!-- Puzzle content ends here -->
+      </div>
+    </div>
+
+
+    
+    <script type="text/javascript" src="https://web.mit.edu/puzzle/www/2015/static/bootstrap/javascripts/bootstrap.js" charset="utf-8"></script>
+    
+<script type="text/javascript">
+  $(document).ready(function(e) { $('#answer_343').click(function(e) { $('#answer_343').text("Answer: " + "HERO");});});
+</script>
+
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

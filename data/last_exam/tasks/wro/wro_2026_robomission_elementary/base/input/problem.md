@@ -1,5 +1,3 @@
-# RoboMission Elementary 2026
-
 RoboMission Elementary Game Rules Season 2026  
 Robot Rockstars   Official Game Rules for the WRO International Final. Version: January 15th 2026 (Note: Rules for local WRO events may vary!)     
 WRO International Premium Partners 

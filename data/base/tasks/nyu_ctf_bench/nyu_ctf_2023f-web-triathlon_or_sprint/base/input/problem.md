@@ -1,3 +1,1 @@
-# CSAW-Finals / web / triathlon_or_sprint
-
 ...

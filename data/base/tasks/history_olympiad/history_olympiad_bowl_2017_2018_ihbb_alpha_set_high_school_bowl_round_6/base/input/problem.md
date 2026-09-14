@@ -1,5 +1,3 @@
-# 2017-2018-IHBB-Alpha-Set-High-School-Bowl-Round-6
-
 [Q1] The Genoese admiral Andrea Doria fought in this battle after a defeat at the Battle of Preveza. Six powerful galleasses were provided by Venice to this battle’s winning side, which was commanded by Don John, the brother of the Holy Roman Emperor Philip II. For ten points, name this decisive 1571 naval victory for a Christian alliance, stopping the Ottoman advance into the Mediterranean Sea.
 
 [Q2] This composer quoted “Der Landesvater” and the drinking song “Gaudeamus Igitur” in a piece written to celebrate an honorary doctorate from the University of Breslau. Hans von Bulow called this man’s first symphony “Beethoven’s Tenth.” The Academic Festival Overture was written by, for ten points, what German composer whose Wiegenlied [vee--gen--leed] is known as his “Lullaby?”

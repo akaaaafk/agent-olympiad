@@ -1,5 +1,3 @@
-# wsc_writing_gq_020
-
 Explore the following futuristic technologies that failed to be widely adopted. What prevented their success, and is there a situation in the future where they might find popularity? 
 
  rocket mail | flying car | maglev | zeppelin | suspension railway 

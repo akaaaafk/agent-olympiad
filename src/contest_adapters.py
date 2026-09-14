@@ -209,6 +209,17 @@ class EnvironmentTaskExecutor:
     ) -> dict[str, Any]:
         if action == "render_pdf" and self.renderer is not None:
             return self.renderer(task, action, arguments)
+        from action_modules.competition_tools import ACTION_NAMES
+        if action in ACTION_NAMES:
+            from competition_tool_runtime import execute_preparation_tool, public_context
+            from tool_registry import competition_permissions
+            if action not in (competition_permissions(self.manifest.competition_id, rule_card=self.rule_card) or set()):
+                raise ValueError("preparation tool is not permitted by this competition")
+            return execute_preparation_tool(action, arguments, public_context(
+                self.manifest.competition_id, task.task_id,
+                expected_ids=[t.task_id for t in self.manifest.tasks],
+                metadata=self.manifest.metadata, task_metadata=task.benchmark,
+            ))
         env = self._environment(task)
         spec = ACTION_REGISTRY.get(action)
         if spec is None or not (spec.is_tool or action == "submit_code"):
@@ -481,6 +492,15 @@ def grade_contest_result(
             rows[task.task_id] = _non_programming_evaluation(
                 task, str(submissions.get(task.task_id) or ""), manifest.competition_id,
             )
+            if manifest.metadata.get("competition_flow") == "science_bowl_buzzer_v1":
+                # Stored question proxies use unit weights; the opt-in paired
+                # flow uses 4/10 without modifying the source benchmark.
+                row = rows[task.task_id]
+                weight = 4.0 if task.benchmark["tossup_or_bonus"] == "toss_up" else 10.0
+                scale = weight / row["max_score"]
+                for key in ("score", "max_score", "partial_score", "graded_max_score"):
+                    if row[key] is not None:
+                        row[key] *= scale
     normalized = [row["utility"] for row in rows.values() if row["graded"]]
     assessed = [row["partial_score"] for row in rows.values() if row["partial_score"] is not None]
     total_max = sum(row["max_score"] for row in rows.values())

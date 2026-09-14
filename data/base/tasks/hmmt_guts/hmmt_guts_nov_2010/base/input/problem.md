@@ -1,8 +1,3 @@
-# HMMT November 2010 — Guts Round
-
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
-
-[Page 1]
 3rdAnnual Harvard-MIT November Tournament
                            Sunday 7 November 2010
 
@@ -67,7 +62,6 @@
 
                                        Page 1 of 3
 
-[Page 2]
 17. [9] A triangle with side lengths 5, 7, 8 is inscribed in a circle C. The diameters of C parallel to the
     sides of lengths 5 and 8 divide C into four sectors. What is the area of either of the two smaller ones?
 
@@ -133,8 +127,7 @@
 
                                        Page 2 of 3
 
-[Page 3]
-worth four points per planet card held. You start with no planet cards and no hegemon cards, and, on
+    worth four points per planet card held. You start with no planet cards and no hegemon cards, and, on
     each turn, starting at turn one, you take either a planet card or a hegemon card, whichever is worth
    more points given the hand you currently hold. Deﬁne a sequence {an} for all positive integers n by
     setting an to be 0 if on turn n you take a planet card and 1 if you take a hegemon card. What is the
@@ -180,6 +173,9 @@ worth four points per planet card held. You start with no planet cards and no he
     average Erd˝os number according to the Erd˝os Number Project?  If the correct answer is X and you
     write down A, your team will receive max (25 −⌊100|X −A|⌋, 0) points where ⌊x⌋is the largest integer
      less than or equal to x.
+
+
+
 
 
                                        Page 3 of 3

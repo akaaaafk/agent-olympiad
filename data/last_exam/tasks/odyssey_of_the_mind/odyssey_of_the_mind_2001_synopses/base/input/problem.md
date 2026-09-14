@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2001
-
 # Odyssey of the Mind — 2001 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Achilles’ HeelDivisions I, II, III & IVTeams will design and build a structure of balsa wood that will hold as much weight as possible while withstanding impacts from a free-wheeling vehicle designed and built by the team. After placing certain weight increments onto the structure, the team will roll its vehicle down a ramp so it crashes into part of the structure its Achilles’ Heel! All the while, the team will continue to add as much weight to the structure as it can hold. Time limit: 8 min. Cost limit: $85 USD.
 5. Idiom InspirationDivisions I & IILet the cat out of the bag does not mean to literally open a bag to release a cat. It’s an idiomatic phrase that means “to inadvertently reveal a secret.” In this problem, teams will present a humorous performance that includes four idioms. One idiom will be created by the team, along with a skit showing the team’s version of how it originated. The other idioms will be selected from a list. Two will be demonstrated “literally and figuratively” by the team, and another will be incorporated into an original poem. Time limit: 8 min. Cost limit: $100 USD.
 6. Game ShowPrimaryGame shows have been broadcast on TV since way back when. In this non-competitive problem, teams will create a made-for-television game show that includes a host, contestants, and prizes. Something good will happen to one contestant – winning a million dollars maybe? Time limit: 8 min. Cost limit: $60 USD.
+

@@ -1,5 +1,3 @@
-# RoboMission Junior 2024
-
 RoboMission Junior Game Rules Season 2024    
    Earth Allies Green City       Oﬃcial Game Rules for WRO RoboMission Junior.  Version: Febuary 16th 2024 (Note: Rules for local WRO events may vary!)      WRO International Premium Partner 
  

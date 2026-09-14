@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>MIT Mystery Hunt: That'll Tichu to Mess With Us</title>
+<link href="../css/mydossier.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="../js/rollover.js"></script>
+</head>
+<body onload="MM_preloadImages('http://web.mit.edu/puzzle/www/08/images/dossier_1_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_2_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_3_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_4_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_5_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_6_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_7_active.gif')">
+<div id="container">
+<div id="header"><div id="headerIcon"><a href="../index.html"><img src="../images/spacer.gif" alt="Home page" width="94" height="94" border="0" /></a></div><div id="headerCheckAnswer"><a href="answer/">View Solution</a></div></div>
+<div id="content">
+  <div id="nav"><img src="http://web.mit.edu/puzzle/www/08/images/header_dossiers.gif" alt="Dossiers:" width="119" height="27" class="paddingRight4" />&nbsp;<a href="http://web.mit.edu/puzzle/www/08/dossier1.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_1_open.gif" alt="Dossier 1" name="dossier1" width="30" height="27" border="0" id="dossier1" onmouseover="MM_swapImage('dossier1','','http://web.mit.edu/puzzle/www/08/images/dossier_1_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier2.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_2_open.gif" alt="Dossier 2" name="dossier2" width="30" height="27" border="0" id="dossier2" onmouseover="MM_swapImage('dossier2','','http://web.mit.edu/puzzle/www/08/images/dossier_2_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier3.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_3_open.gif" alt="Dossier 3" name="dossier3" width="30" height="27" border="0" id="dossier3" onmouseover="MM_swapImage('dossier3','','http://web.mit.edu/puzzle/www/08/images/dossier_3_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier4.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_4_open.gif" alt="Dossier 4" name="dossier4" width="30" height="27" border="0" id="dossier4" onmouseover="MM_swapImage('dossier4','','http://web.mit.edu/puzzle/www/08/images/dossier_4_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier5.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_5_open.gif" alt="Dossier 5" name="dossier5" width="30" height="27" border="0" id="dossier5" onmouseover="MM_swapImage('dossier5','','http://web.mit.edu/puzzle/www/08/images/dossier_5_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier6.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_6_open.gif" alt="Dossier 6" name="dossier6" width="30" height="27" border="0" id="dossier6" onmouseover="MM_swapImage('dossier6','','http://web.mit.edu/puzzle/www/08/images/dossier_6_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier7.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_7_open.gif" alt="Dossier 7" name="dossier7" width="30" height="27" border="0" id="dossier7" onmouseover="MM_swapImage('dossier7','','http://web.mit.edu/puzzle/www/08/images/dossier_7_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a></div>
+
+  <h1>That'll Tichu to Mess With Us </h1>
+  
+  <p><i>A good detective benefits from having a good partner. Sometimes it's
+due to teamwork and knowing how the partner thinks. Other times, the abilities
+of the two complement one another, such as when the mostly fearless detective
+is scared stiff by the sudden appearance of a snake, and his partner reassures
+him that it's a harmless garter snake.</i></p>
+
+  <p>Have two people learn (if they don't already know it) the rules of the
+partnership card game <b>Tichu</b> and send them to headquarters to win a hand
+against expert players.  Both people must know the rules and will not be
+allowed to consult either the rules or with each other during play and if they
+make illegal plays will be sent away and forced to come back at a later time.
+Learn the game and then call HQ to set up an appointment to play.</p>
+
+</div>
+</div>
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

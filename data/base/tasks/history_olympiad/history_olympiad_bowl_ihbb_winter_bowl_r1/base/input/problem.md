@@ -1,5 +1,3 @@
-# IHBB-Winter_Bowl-R1
-
 [Q1] The chief religious role of these people was dispelling chaos, or isfet, and maintaining harmony, or ma'at. These people wore the pschent crown, representing the northern and southern portions of their kingdom. One of these people established a monotheistic religion centered on the sun disk, Aten. These rulers were believed to be human incarnations of the gods Osiris and Ra. For ten points, name these kings who ruled Ancient Egypt.
 
 [Q2] An ultranationalist group named for blue examples of these objects supported Chiang Kai-Shek’s New Life Movement. The Expedition of the Thousand w as conducted by the Red [these objects], who followed Giuseppe Garibaldi. A 1922 March on Rome was led by Benito Mussolini and his followers, nicknamed for black [objects of this type]. For ten points, name this article of clothing whose “Brown” types were worn by the SA [[ESS-AY]].

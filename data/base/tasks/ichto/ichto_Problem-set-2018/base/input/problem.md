@@ -1,5 +1,3 @@
-# Problem-set-2018
-
 Problems set 
 of the International Chemistry Tournament 2018
 Problem 1. Redox memory

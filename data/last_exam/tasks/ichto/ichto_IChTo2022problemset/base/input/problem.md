@@ -1,5 +1,3 @@
-# IChTo2022problemset
-
 International Chemistry 
 Tournament 2022 
 Problem Set 

@@ -1,5 +1,3 @@
-# 28th-2021-problem-incl-appendix
-
 THE PROBLEM 
  
  

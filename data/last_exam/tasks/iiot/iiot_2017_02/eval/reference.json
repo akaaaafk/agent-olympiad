@@ -2,9 +2,55 @@
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/iiot/benchmark.json#iiot_2017_02.gold_label",
   "has_gold_answer": false,
-  "evaluator_id": "programming_judge",
-  "evaluator_status": "deferred",
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_id": null,
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/iiot/2017/laser/references/laser.c",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/iiot_programming_judge_v1.json",
+    "deliverable": "source_code",
+    "reason": "Publisher reference source and official 100-point subtask weights are archived; missing judge material/configuration still prevents official automatic grading.",
+    "scorecard_path": "data/rubrics/task_scorecards/iiot.json",
+    "scorecard_key": "iiot_2017_02",
+    "limitations": [
+      "The publisher archive has no test-case link for this task.",
+      "Original test-to-subtask assignments, checker configuration and execution limits are not archived.",
+      "Reference source is archived but has not been compiled or executed in an isolated judge.",
+      "This task uses fractional per-case scoring; a plain exact-output acceptance checker would not reproduce its official scoring."
+    ],
+    "official_subtasks": [
+      {
+        "id": 1,
+        "points": 5
+      },
+      {
+        "id": 2,
+        "points": 15
+      },
+      {
+        "id": 3,
+        "points": 20
+      },
+      {
+        "id": 4,
+        "points": 20
+      },
+      {
+        "id": 5,
+        "points": 20
+      },
+      {
+        "id": 6,
+        "points": 20
+      }
+    ],
+    "official_max_score": 100,
+    "official_scoring_mode": "minimum_case_fraction_times_subtask_weight",
+    "source_archive_manifest": "data/raw/iiot/2017/laser/reference_manifest.json",
+    "source_repair_status": "publisher_reference_and_subtask_weights_archived",
+    "score_basis": "Publisher statement: minimum fractional case score times each official subtask weight. No binary substitute is enabled."
+  },
+  "rubric_path": "data/rubrics/iiot_programming_judge_v1.json",
+  "deliverable": "source_code"
 }

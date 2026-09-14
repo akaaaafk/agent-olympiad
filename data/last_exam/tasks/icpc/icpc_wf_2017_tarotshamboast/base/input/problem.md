@@ -1,5 +1,3 @@
-# Tarot Sham Boast
-
 Hide 
  Tarot Sham Boast 
 

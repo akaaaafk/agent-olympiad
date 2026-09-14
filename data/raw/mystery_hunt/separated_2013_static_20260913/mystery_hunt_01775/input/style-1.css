@@ -1,0 +1,269 @@
+@media screen {
+  html {
+    height: 100%;
+  }
+  body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+  }
+  body h1,
+  body h2,
+  body h3 {
+    font-family: 'Kaushan Script', cursive;
+  }
+  body.vegas-day {
+    background-color: #F9FF99;
+    background-image: url("css-1.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-attachment: fixed;
+  }
+  body.vegas-day #pre-container {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    min-width: 100%;
+    float: left;
+    margin-bottom: -20px;
+    background-image: url("css-2.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-attachment: fixed;
+  }
+  body.vegas-day #casinos {
+    background: url("css-3.png") repeat-x;
+  }
+  body.vegas-day .back-button {
+    font-family: 'Kaushan Script', cursive;
+    font-weight: bold;
+  }
+  body.vegas-day .back-button a {
+    color: #745c2a;
+  }
+  body.vegas-day .back-button a:hover {
+    border-bottom: 2pt dotted #745c2a;
+  }
+  body.vegas-night {
+    background-color: #031544;
+    background-image: url("css-4.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-attachment: fixed;
+    color: white;
+  }
+  body.vegas-night #pre-container {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    min-width: 100%;
+    float: left;
+    margin-bottom: -20px;
+    background-image: url("css-5.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-attachment: fixed;
+  }
+  body.vegas-night a {
+    color: #031544;
+  }
+  body.vegas-night a:hover {
+    border-color: #031544;
+  }
+  body.vegas-night .answer {
+    text-shadow: none;
+    color: #0088ee;
+  }
+  body.vegas-night #content h1 {
+    margin-top: 0;
+  }
+  body.vegas-night .puzzlebody {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    color: black;
+  }
+  body.vegas-night .back-button {
+    font-family: 'Kaushan Script', cursive;
+    font-weight: bold;
+  }
+  body.vegas-night .back-button a {
+    color: #0088ee;
+  }
+  body.vegas-night .back-button a:hover {
+    border-bottom: 2pt dotted #0088ee;
+  }
+  body a {
+    color: #0088ee;
+    text-decoration: none;
+  }
+  body a:hover {
+    border-bottom: 2pt dotted #0088ee;
+  }
+  #header #casinos {
+    width: 100%;
+  }
+  #header #casinos a,
+  #header #casinos a:hover {
+    text-decoration: none;
+    border: none;
+  }
+  #header #casinos img {
+    margin: 0 -5px 0 0;
+    padding: 0;
+  }
+  #header #casinos img#stratosphere {
+    width: 15.24%;
+  }
+  #header #casinos img#treasure-island {
+    width: 15.40%;
+  }
+  #header #casinos img#caesars-palace {
+    width: 19.39%;
+  }
+  #header #casinos img#aria {
+    width: 17.35%;
+  }
+  #header #casinos img#excalibur {
+    width: 16.99%;
+  }
+  #header #casinos img#luxor {
+    width: 15.63%;
+  }
+  .puzzle .answer,
+  #listing .puzzle-title {
+    text-shadow: 4px 5px 0 rgba(0, 150, 250, 0.5), -5px 2px 0 rgba(255, 240, 0, 0.7);
+  }
+  .puzzle h1 {
+    font-size: 32pt;
+  }
+  #content {
+    padding: 20px 10px 30px 10px;
+    margin: 0 160px;
+  }
+  #content #conspirators {
+    list-style-type: none;
+    margin-left: 50px;
+    padding: 0;
+    display: block;
+  }
+  #content #conspirators li {
+    display: block;
+    clear: both;
+  }
+  #content #conspirators li .right-stuff {
+    float: left;
+    width: 400px;
+  }
+  #content #conspirators li .casinos {
+    float: left;
+    clear: both;
+  }
+  #content #conspirators li .thumbnail {
+    width: 150px;
+    height: 150px;
+    margin: 4px 4px 20px 0;
+    background-color: #ffd700;
+    border-top: 4px solid #ffff66;
+    border-left: 4px solid #ffff66;
+    border-right: 4px solid #cca400;
+    border-bottom: 4px solid #cca400;
+    float: left;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  #content #conspirators li .thumbnail.casino {
+    width: 75px;
+    height: 75px;
+    background-color: #031544;
+    border-top: 4px solid #697baa;
+    border-left: 4px solid #697baa;
+    border-right: 4px solid #000011;
+    border-bottom: 4px solid #000011;
+    border-top: 4px solid #0088ee;
+    border-left: 4px solid #0088ee;
+    margin-bottom: 0;
+  }
+  #content #conspirators li .puzzle-title {
+    font-family: 'Kaushan Script', cursive;
+    clear: both;
+    float: left;
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 36pt;
+    width: 100%;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+  #content #conspirators li .puzzle-title {
+    text-transform: none;
+    margin-top: -8px;
+    padding-bottom: 10px;
+  }
+  .back-button {
+    margin-top: 10px;
+  }
+  .centered {
+    width: 500px;
+    margin: -10px auto 20px auto;
+    color: white;
+    padding: 0;
+    font-size: 20pt;
+    border-top: 1pt solid white;
+    border-bottom: 1pt solid white;
+  }
+  .centered span {
+    position: relative;
+    top: -4px;
+  }
+  .centered marquee {
+    font-size: 14pt;
+    margin: 0 10px;
+    width: 480px;
+    color: #0088ee;
+  }
+}
+/* end of @media screen */
+@media print {
+  font-size: 14pt;body {
+    font-family: Arial, sans-serif;
+  }
+  body h1,
+  body h2,
+  body h3 {
+    font-family: 'Kaushan Script', cursive;
+  }
+  #header {
+    visibility: hidden;
+  }
+  #stratosphere {
+    height: 0px;
+  }
+  #treasure-island {
+    height: 0px;
+  }
+  #caesars-palace {
+    height: 0px;
+  }
+  #aria {
+    height: 0px;
+  }
+  #excalibur {
+    height: 0px;
+  }
+  #luxor {
+    height: 0px;
+  }
+  .puzzle h1 {
+    font-size: 32pt;
+  }
+  .puzzle-title {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 36pt;
+  }
+  .back-button {
+    visibility: hidden;
+  }
+  #fixie-nav {
+    visibility: hidden;
+  }
+}

@@ -1,5 +1,3 @@
-# IHBB-Asia-Bowl-Round-7
-
 [Q1] Apollodorus of Damascus was a military engineer for this man and designed a structure named for him that includes the Basilica Ulpia. A statue of this man was replaced by one of Saint Peter, standing on top of a monument to this man decorated with reliefs culminating in the suicide of Decebalus. This man built a bridge over the Danube River in his most famous campaign. For ten points, name this second of the Five Good Emperors who commemorated his conquest of Dacia with a namesake column.
 
 [Q2] Shortly after reports of this scandal emerged, the Bybee Memo was leaked, which was followed shortly by the resignation of Jack Goldsmith. Antonio Taguba’s report on this scandal concluded that Brigadier General Janis Karpinski allowed it to conti nue. One picture that emerged from this scandal depicts Charles Graner and Lynnie England giving a thumbs up behind a naked human pyramid. For ten points, name this scandal regarding US military personnel torturing detainees of an Iraqi prison.

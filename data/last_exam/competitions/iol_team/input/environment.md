@@ -1,4 +1,4 @@
-# Environment — `iol_team`
+# Environment
 
 ## Roster
 
@@ -16,7 +16,11 @@
 
 ## Allowed tools
 
-- query_rules
+```json
+[
+  "query_rules"
+]
+```
 
 ## Resources
 
@@ -66,3 +70,4 @@
   ]
 }
 ```
+

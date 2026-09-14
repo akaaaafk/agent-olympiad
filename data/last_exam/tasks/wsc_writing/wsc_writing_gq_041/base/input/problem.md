@@ -1,5 +1,3 @@
-# wsc_writing_gq_041
-
 People on the road have historically needed places to park themselves too. With your team, explore the history of inns and hotels , including what might be the oldest hotel in the world . What differentiates a hotel from earlier forms of accommodation, such as post houses? 
 
  The rise of hotels coincided with the rise of tourism—travel for leisure, instead of for migration or business. Historians trace the roots of modern tourism to the grand tours of the 17th and 18th centuries, in which young aristocrats would travel across Europe as a rite of passage. Review a typical grand tourist itinerary , then discuss with your team: in what sense does this tradition continue today? 

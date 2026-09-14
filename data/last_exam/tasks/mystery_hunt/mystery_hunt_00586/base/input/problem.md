@@ -1,3 +1,5 @@
-# 2004/yukon/T6o/
+# YUKON : Sage of the Arctic
 
-Sage of the Arctic Sage of the Arctic Serenade The warmth from the foundry can be felt even outside, and the snow has melted from in front of the store. Inside, the dirty air hangs with metal and heat. A dirty old man works away, covered in soot and grime. "You come to help me increase the town's wealth, boy? Heh. Where would those righteous bastards be if it weren't for me. I turn lead into gold for them so they don't have to go digging in the snow! But nooo, that's not enough. Now they want me to turn graphite to diamonds . What am I, an alchemist?!" "Silbey, don't be mad, that will require huge amounts of energy!" "How much? I have 340 grams of graphite, and it all has to be made into diamond. I don't care how endothermic it is, it has to happen, in kilojoules, now!"
+Open `puzzle.html`, the original entry point, and follow its local links for the complete puzzle. All original subpages, styles and referenced images are included. No flattened preview replaces their layout.
+
+Archive limitation: Historical references, multi-page interpretation and end-to-end evaluation remain uncertified.

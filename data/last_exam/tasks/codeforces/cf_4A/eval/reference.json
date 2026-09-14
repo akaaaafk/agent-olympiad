@@ -1,0 +1,26 @@
+{
+  "visibility": "hidden_until_grade",
+  "gold_pointer": "data/benchmarks/codeforces/benchmark.json#cf_4A.gold_label",
+  "has_gold_answer": false,
+  "evaluator_id": "programming_judge",
+  "evaluator_status": "sample_tests_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": "programming_judge",
+    "status": "sample_tests_ready",
+    "reason": "Public Codeforces samples materialized locally.",
+    "official_bundle_path": "data/benchmarks/codeforces/packages/4A",
+    "sample_tests_path": "data/benchmarks/codeforces/packages/4A/tests/sample",
+    "vjudge_oj": "CodeForces",
+    "vjudge_prob_num": "4A",
+    "rubric_path": "data/rubrics/codeforces_programming_judge_v1.json",
+    "test_scope": "sample_only_local",
+    "deliverable": "source_code",
+    "official_verdict_requires": "Remote authoritative verdict or authorized secret tests; public samples alone do not establish acceptance.",
+    "notes": "Automatic judging is available for sample scope immediately. Add tests/secret/*.in/*.ans and rebuild package.json to grade secrets. Remote upload uses VJudge problem mode CodeForces-{probNum} (no private contest required).",
+    "scorecard_path": "data/rubrics/task_scorecards/codeforces.json",
+    "scorecard_key": "cf_4A"
+  },
+  "rubric_path": "data/rubrics/codeforces_programming_judge_v1.json",
+  "deliverable": "source_code"
+}

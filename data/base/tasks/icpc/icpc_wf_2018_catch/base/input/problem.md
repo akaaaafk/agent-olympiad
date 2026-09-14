@@ -1,5 +1,3 @@
-# Catch the Plane
-
 Hide 
  Catch the Plane 
 

@@ -1,5 +1,3 @@
-# a2
-
 A2 Country: ___ Team: _ 
 Cover 
  

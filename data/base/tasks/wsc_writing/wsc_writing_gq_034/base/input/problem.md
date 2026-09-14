@@ -1,5 +1,3 @@
-# wsc_writing_gq_034
-
 As returning scholars might remember, some big projects take much too long to finish—high speed rail in California, the Haunted Chocolatier, these outlines. Some never get there at all. Explore the following examples of projects that weren’t finished on time, then discuss with your team: What factors, if any, did these delays have in common? How would you have overcome them? And are there projects out there in the world today that you predict will suffer a similar fate? 
 
  La Sagrada Familia | Spain 

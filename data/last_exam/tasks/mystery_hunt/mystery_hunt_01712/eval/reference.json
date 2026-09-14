@@ -3,8 +3,18 @@
   "gold_pointer": "data/benchmarks/mystery_hunt/benchmark.json#mystery_hunt_01712.gold_label",
   "has_gold_answer": true,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+    "short_answer_source": "data/rubrics/mystery_hunt_short_answers.json",
+    "deliverable": "puzzle_answer",
+    "limitations": "The original MP4 and WebM were incorrectly linked through a repeated highlight_reel directory (both 404); their surviving same-directory publisher files are now localized without changing video bytes. All 26 original script-defined captions and their start/end times are converted mechanically to a local WebVTT track. Native subtitle layout is an adaptation, not a certification of historical pixel layout; local-file subtitle restrictions may require a compatible player and the linked VTT file. The original final cue ends at 319 seconds, beyond the approximately 314-second video, and remains unchanged: no padding or timing inference. Both original audio/video streams decode to EOF using an isolated PyAV 16.0.1 tool; this is not full viewing/listening or cross-format semantic equivalence. No puzzle scripts execute. Archive status, solution navigation and scripted fullscreen controls are removed. Current font revisions and missing unused evilfg.png follow the explicitly documented static-page limitations. Gold, total points, membership, licensing and grading/runtime readiness are unchanged, not recertified. Prior limitations: The answer key exists, but the contestant puzzle page has not been separated from embedded answers and media dependencies.",
+    "scorecard_path": "data/rubrics/task_scorecards/mystery_hunt.json",
+    "scorecard_key": "mystery_hunt_01712"
+  },
+  "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+  "deliverable": "puzzle_answer"
 }

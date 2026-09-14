@@ -1,5 +1,3 @@
-# wsc_writing_gq_042
-
 “Science has not yet mastered prophecy,” Neil Armstrong (the first man on the moon) once said. “We predict too much for the next year and yet far too little for the next ten.” Indeed, some technologies exist in a tantalizing but perpetual “almost there”, always just a few years away. Consider the examples below, then discuss with your team: why are these technologies stuck in the near future, and which one would you be most excited to see in action? 
 
  fusion power | cure for cancer | graphene | flying cars | virtual reality 

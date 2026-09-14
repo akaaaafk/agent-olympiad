@@ -1,5 +1,3 @@
-# Wireless is the New Fiber
-
 Hide 
  Wireless is the New Fiber 
 

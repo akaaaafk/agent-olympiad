@@ -1,9 +1,6 @@
-# HMMT November 2024 — Guts Round
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
-
-[Page 1]
-HMMT November 2024, November 09, 2024 — GUTS ROUND
+         HMMT November 2024, November 09, 2024 — GUTS ROUND
 
 Organization                      Team                      Team ID#
 
@@ -20,6 +17,11 @@ Organization                      Team                      Team ID#
     is divided into.
 
 
+
+
+
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
          HMMT November 2024, November 09, 2024 — GUTS ROUND
 
 Organization                      Team                      Team ID#
@@ -34,8 +36,9 @@ Organization                      Team                      Team ID#
   be the maximum sum of the labels of two edge-adjacent vertices. Compute the minimum possible value
    of s over all such labelings.
 
-[Page 2]
-HMMT November 2024, November 09, 2024 — GUTS ROUND
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+         HMMT November 2024, November 09, 2024 — GUTS ROUND
 
 Organization                      Team                      Team ID#
 
@@ -50,6 +53,8 @@ Organization                      Team                      Team ID#
    central circle).
 
 
+
+
                                            A3  A2
 
                                         A4       A1
@@ -59,14 +64,17 @@ Organization                      Team                      Team ID#
                                            A6  A7
 
 
+
+
 9. [7] Compute the remainder when
 
                                   1 002 003 004 005 006 007 008 009
 
     is divided by 13.
 
-[Page 3]
-HMMT November 2024, November 09, 2024 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2024, November 09, 2024 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -80,11 +88,18 @@ HMMT November 2024, November 09, 2024 — GUTS ROUND
    Compute the label of the face opposite to P.
 
 
+
+
                                                             10         9                                          4      P
                                      5         3
                                                          2         8
                                                     1         7                                  6         11
 
+
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
           HMMT November 2024, November 09, 2024 — GUTS ROUND
 
@@ -103,8 +118,9 @@ HMMT November 2024, November 09, 2024 — GUTS ROUND
 
      is an integer.
 
-[Page 4]
-HMMT November 2024, November 09, 2024 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2024, November 09, 2024 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -119,6 +135,11 @@ HMMT November 2024, November 09, 2024 — GUTS ROUND
   AD = 60. Rectangle AB′C′D′ is constructed by rotating ABCD counterclockwise about A by 60◦. Given
     that lines BB′ and DD′ intersect at point X, compute CX.
 
+
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
           HMMT November 2024, November 09, 2024 — GUTS ROUND
 
@@ -135,8 +156,9 @@ HMMT November 2024, November 09, 2024 — GUTS ROUND
    shown below. Compute the probability that the line segment between these two points lies entirely within
     the X-pentomino.
 
-[Page 5]
-HMMT November 2024, November 09, 2024 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2024, November 09, 2024 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -151,6 +173,11 @@ HMMT November 2024, November 09, 2024 — GUTS ROUND
 
 24. [12] Let f(x) = x2 + 6x + 6. Compute the greatest real number x such that f(f(f(f(f(f(x)))))) = 0.
 
+
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
           HMMT November 2024, November 09, 2024 — GUTS ROUND
 
@@ -175,8 +202,9 @@ HMMT November 2024, November 09, 2024 — GUTS ROUND
 
    Compute f(1) + f(2) + · · · + f(100).
 
-[Page 6]
-HMMT November 2024, November 09, 2024 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2024, November 09, 2024 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -189,6 +217,11 @@ HMMT November 2024, November 09, 2024 — GUTS ROUND
 30. [15] Compute the number of ways to shade exactly 4 distinct cells of a 4×4 grid such that no two shaded
      cells share one or more vertices.
 
+
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
           HMMT November 2024, November 09, 2024 — GUTS ROUND
 
@@ -205,8 +238,9 @@ HMMT November 2024, November 09, 2024 — GUTS ROUND
     not appear below it in the same column or to the left of it in the same row. Compute the sum of the
     entries of a groovy 14 × 14 grid whose bottom left entry is 1.
 
-[Page 7]
-HMMT November 2024, November 09, 2024 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2024, November 09, 2024 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 

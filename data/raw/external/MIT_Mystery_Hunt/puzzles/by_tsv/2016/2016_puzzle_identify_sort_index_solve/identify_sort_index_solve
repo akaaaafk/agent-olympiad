@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1240, user-scalable=yes"></meta>
+  
+  <link rel="icon" href="../../static/hunt/images/icon32.png" type="image/x-icon" />
+  <title>identify, SORT, index, solve &mdash; Sleeping Beauty &mdash; MIT Mystery Hunt 2016</title>
+  <link rel="stylesheet" href="../../static/stylesheets/puzzle.css" />
+  <link rel="stylesheet" href="../../static/spoilr/css/extra.css" />
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  
+
+<link rel="stylesheet" href="../../static/round/sleeping_beauty/stylesheets/puzzle.css" />
+
+
+  <style>
+  .navtooltip.hover {
+    display: block;
+  }
+  .navtooltip {
+    display: none;
+    position: absolute;
+    background-color: rgba(20,20,20, 1);
+    border: 1px solid #888;
+    padding: 10px 10px;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 7px black;
+    width: 13em;
+    margin: 10px 10px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body class="puzzle-page">
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation" id="nav">
+  <div class="container">
+    <div class="navbar-header">
+      <!-- mobile toggle -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-left">
+        <li><a class="navbar-link visible-xs" href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b class="caret"></b></a>
+          <ul class="dropdown-menu inverse-dropdown">
+            <li><a href="../../toc.html">All Puzzles</a></li>
+            <li><a href="../../faq.html">FAQ</a></li>
+          </ul>
+        </li>
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        
+        
+        
+        <li class="dropdown">
+
+          
+            
+            <!--<a href="../../submit/puzzle/identify_sort_index_solve/">Call in Answer</a>-->
+            <a href="solution/">Solution</a>
+            
+          
+
+        </li>
+      </ul>
+
+      
+        
+          <a class="navbar-brand logo" href="../../"></a>
+        
+      
+    </div><!-- /.navbar-collapse -->
+  </div>
+</nav>
+
+  
+
+<div class="back">
+  <div class="main">
+    <a class="btn back-to-round" href="../../round/sleeping_beauty"><span class="glyphicon glyphicon-menu-left"></span></a>
+    
+    <img id="bg-desat" src="../../static/round/sleeping_beauty/images/bg-desat.jpg"/>
+    
+  </div>
+  <div class="puzzle">
+    <div class="header">
+      
+      <img class="puzzle-logo" src="../../static/round/sleeping_beauty/images/identify_sort_index_solve/header.png">
+      
+      <h2>identify, SORT, index, solve</h2>
+      
+    </div>
+    <div class="content">
+      
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+
+
+
+<p><i>Just how huge are things from Thumbelina's perspective? The answer may be well beyond the powers of Google.</i></p>
+<br>
+<table style="vertical-align: middle;">
+  <tr><td style="text-align: right;"><img src="images/a01.jpg"></td><td>\(= 2 \uparrow^{10^{100}} 2\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a02.jpg"></td><td>\(=\)Number of particles in the known Universe</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a03.jpg"></td><td>\(=43^{45^{47^{49^{41^{3}}}}}\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a04.jpg"></td><td>(eg)\(=\)<img src="images/square6.gif"></td></tr>
+  <tr><td style="text-align: right;"><img src="images/a05.jpg"></td><td>\(=3 \rightarrow 2 \rightarrow 3 \rightarrow 3\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a06.jpg"></td><td>\(=3^{2^{2^{4^{35^{15}}}}}\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a07.jpg"></td><td>\(=\)Graham's number</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a08.jpg"></td><td>\(=3^{4^{5^{6^{...^{(10^{100})}}}}}\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a09.jpg"></td><td>\(=2 \rightarrow 3 \rightarrow 3 \rightarrow 3\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a10.jpg"></td><td>(eg)\(=\)Largest named number in the <i>Avata&#x1E43;saka S&#x16B;tra</i></td></tr>
+  <tr><td style="text-align: right;"><img src="images/a11.jpg"></td><td>\(=(((10^{100}!)!)!)!\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a12.jpg"></td><td>(eg)\(=13^{315760124882724518}\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a13.jpg"></td><td>\(=20^{270354175698445357}\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a14.jpg"></td><td>\(=A(4,5)\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a15.jpg"></td><td>\(=2 \rightarrow 10^{100} \rightarrow 2\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a16.jpg"></td><td>\(=A(10^{100},10^{100})\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a17.jpg"></td><td>\(=2 \uparrow\uparrow 8\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a18.jpg"></td><td>\(=BB(100)\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a19.jpg"></td><td>\(=\)Number of permutations of these numbers</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a20.jpg"></td><td>\(=\)Loader's number</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a21.jpg"></td><td>(eg)\(=\)Largest named number in <i>The Sand Reckoner</i></td></tr>
+  <tr><td style="text-align: right;"><img src="images/a22.jpg"></td><td>\(=A(5,1)\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a23.jpg"></td><td>\(=68^{75^{96^{92^{39^{3}}}}}\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a24.jpg"></td><td>\(=2^{38^{64^{20^{57^{13}}}}}\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a25.jpg"></td><td>\(=(10^{100})^{...^{6^{5^{4^{3}}}}}\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a26.jpg"></td><td>(eg)\(=A(BB(99),BB(99))\)</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a27.jpg"></td><td>\(=\)BIG FOOT + 1</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a28.jpg"></td><td>(eg)\(=\)Moser's number</td></tr>
+  <tr><td style="text-align: right;"><img src="images/a29.jpg"></td><td>\(=3 \uparrow^{10^{100}} 3\)</td></tr>
+</table>
+
+<br>
+<p><b>Lexicographic rank of this permutation:</b><br>
+_____________________________</p>
+<br>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+  <script src="../../static/bootstrap/javascript/bootstrap.js"></script>
+  <!--<script src="../..//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>-->
+  <script>
+    $(document).ready(function(){
+
+      $.getJSON('../../sheep.json')
+        .done(function(data) {
+          $('span.current-sheep').html(data.sheep);
+          $('span.next-update').html(data.update);
+        });
+
+      $("#nextupdate").hover(function(){
+        $('#navtooltip').addClass('hover');
+      }, function(){
+        $('#navtooltip').removeClass('hover');
+      });
+    });
+  </script>
+  
+
+<script src="puzzle.js"></script>
+
+
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

@@ -1,0 +1,379 @@
+{
+  "operation": "formal_only_iiot_and_ccdc_source_repair",
+  "timestamp_utc": "20260913T032421Z",
+  "status": "completed_with_recorded_readiness_blockers",
+  "program_execution_performed": false,
+  "post_write_validation_performed": false,
+  "backup": "data/excluded/integrity_repair_20260913T032421Z",
+  "iiot_before": 38,
+  "iiot_after": 31,
+  "practice_removed": 7,
+  "iiot_new_reference_files": 30,
+  "iiot_official_reference_records": 31,
+  "iiot_official_point_tables": 31,
+  "ccdc_ocr_documents": 6,
+  "ccdc_ocr_pages": 159,
+  "ccdc_missing_map_2022": true,
+  "readiness_promotions": 0,
+  "before_records": 1748,
+  "after_records": 1741,
+  "new_source_files": [
+    {
+      "path": "data/raw/iiot/2017/dreamteam/references/dreamteam.cpp",
+      "bytes": 913,
+      "sha256": "8c68aa706262dd227b6cc2d084a8fb0bc2552baaafe887063ccd5bba1b66c18d"
+    },
+    {
+      "path": "data/raw/iiot/2017/laser/references/laser.c",
+      "bytes": 727,
+      "sha256": "9464f7bdb54c179473a3660304147122eedc49d71e976afac031a2af4b4de3b1"
+    },
+    {
+      "path": "data/raw/iiot/2017/manhole/references/manhole.cpp",
+      "bytes": 906,
+      "sha256": "fadf2c1d2746b47d0c2ed3d6662f50906cb720e77e9f85dfb11479bdf1c9d233"
+    },
+    {
+      "path": "data/raw/iiot/2017/neighborly/references/neighborly.cpp",
+      "bytes": 1183,
+      "sha256": "732a85085acd56cf0c8d5db6f9a30e93513b260a12c3873fefe04ff829b3d82e"
+    },
+    {
+      "path": "data/raw/iiot/2017/paintings/references/paintings.cpp",
+      "bytes": 1029,
+      "sha256": "3e4f22dd1ed2c209061d687febb04622a76429e16a2d79e9b3b6f92c5879c32e"
+    },
+    {
+      "path": "data/raw/iiot/2017/proxies/references/proxies.cpp",
+      "bytes": 2009,
+      "sha256": "82bf20ee023da785ed3baf3f9760cd949e10354a9132294654230cfa88f9ab0c"
+    },
+    {
+      "path": "data/raw/iiot/2017/spam/references/spam.cpp",
+      "bytes": 637,
+      "sha256": "2165df0710d43698e25d906f42d8ae4a5f225955976147084d3471208f8eb320"
+    },
+    {
+      "path": "data/raw/iiot/2021/chimneys/references/chimneys.cpp",
+      "bytes": 4539,
+      "sha256": "c5d343aa2b8ab879ae57bdccaa3fc47a9b43898b4ba1c8574807dd516b366f05"
+    },
+    {
+      "path": "data/raw/iiot/2021/morse/references/morse.cpp",
+      "bytes": 1752,
+      "sha256": "1a94078b2757d16ad013a72843df231023de6c8041c13004ad248ae4a4bd458d"
+    },
+    {
+      "path": "data/raw/iiot/2021/run/references/run.cpp",
+      "bytes": 1882,
+      "sha256": "fd18cd3f73819ac543acb593d4d19285196fcaf6f249fd9a3dcf11f5bc0661eb"
+    },
+    {
+      "path": "data/raw/iiot/2021/selection/references/selection.cpp",
+      "bytes": 907,
+      "sha256": "c5a594adfd356cd605a15acaa247e62f8f9e4b7a28652c713f7353ae338ab4a2"
+    },
+    {
+      "path": "data/raw/iiot/2021/tasks/references/tasks.cpp",
+      "bytes": 1447,
+      "sha256": "bf2958078a9398d0fd8d2aab66a77807fc8c0b03184a301a537dc892dff50612"
+    },
+    {
+      "path": "data/raw/iiot/2021/trap/references/trap.cpp",
+      "bytes": 1113,
+      "sha256": "5c285b03000874313f1126138b419d5a9ed05e5710f61dc8dcb36c4bcb277f00"
+    },
+    {
+      "path": "data/raw/iiot/2021/vsmovies/references/vsmovies.cpp",
+      "bytes": 3976,
+      "sha256": "ac2818666b5fc4431082c1c2f794ba79cb046737f3fd058be3766aae2c67996d"
+    },
+    {
+      "path": "data/raw/iiot/2021/weakhash/references/weakhash.cpp",
+      "bytes": 1945,
+      "sha256": "265611ac7cc3d06a8d225537cba0b3d13c0f89602a728d8c9277beb53a3c292a"
+    },
+    {
+      "path": "data/raw/iiot/2022/discount/references/discount.cpp",
+      "bytes": 2861,
+      "sha256": "6fe92a0aaa0df0dd518ad23fcf05f4b8e08f4739597e896cc1574ff025fba88d"
+    },
+    {
+      "path": "data/raw/iiot/2022/glass/references/glass.cpp",
+      "bytes": 1186,
+      "sha256": "93b5dd95303d2991b837242bf0e5d6a99c4e8e2e0945c88550468013556a3836"
+    },
+    {
+      "path": "data/raw/iiot/2022/icecream/references/icecream.cpp",
+      "bytes": 1456,
+      "sha256": "eb1ce59a3afa619f46ae2ac40140204e28b0aba3c3e1e770c40897e47d77a3e7"
+    },
+    {
+      "path": "data/raw/iiot/2022/nostar/references/nostar.cpp",
+      "bytes": 1533,
+      "sha256": "31edf4f199983fdde0ba9536385c96cb301b69cec582a3a2cb1151362bce0fba"
+    },
+    {
+      "path": "data/raw/iiot/2022/picnic/references/picnic.cpp",
+      "bytes": 1330,
+      "sha256": "0c450c7ddc4d7443561ae0595395d18edb2ae1cd7f5ebde43eeea54fe2efb8d5"
+    },
+    {
+      "path": "data/raw/iiot/2022/plagiarism/references/plagiarism.cpp",
+      "bytes": 1945,
+      "sha256": "baa422400198278ef8489c5319b7273ac612aac681786cf18396f2a0341e241f"
+    },
+    {
+      "path": "data/raw/iiot/2022/stonks/references/stonks.cpp",
+      "bytes": 970,
+      "sha256": "93fbe13cecf81e7148984104e77c3e975b1afcdb4ae454aaad6cde3bbe305e62"
+    },
+    {
+      "path": "data/raw/iiot/2023/binge/references/sol_dox.cpp",
+      "bytes": 511,
+      "sha256": "707930452113f26bea51affbbae1d30647461ce6c91a238aceccd1bba8a96947"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/references/solution.cpp",
+      "bytes": 3171,
+      "sha256": "3c933eaa11337415976843939372e9fed036d643a5a650ae387dd8f03eb5d900"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/references/solution.cpp",
+      "bytes": 645,
+      "sha256": "515aba55fcc86182d3f9c306a7397a398f1b6624e2a6efab47a6804e6483a9bb"
+    },
+    {
+      "path": "data/raw/iiot/2023/ktree/references/solution.cpp",
+      "bytes": 4175,
+      "sha256": "03715cc463326831eda49782a62c4c04b2896b9bf028ac645aa21d36067ed354"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/references/solution.cpp",
+      "bytes": 2628,
+      "sha256": "6f514503c722c57b7288d096a5c2b7f2cafc76e7212ddf05e67d55cb7c1c8d9d"
+    },
+    {
+      "path": "data/raw/iiot/2023/publictransport/references/solution.cpp",
+      "bytes": 3645,
+      "sha256": "fdc3f60402031280076dda09d2294a12b61b18d416f59b86e6567d368e28da5e"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/references/solution.cpp",
+      "bytes": 1229,
+      "sha256": "4210b5845a91b795da3a1bf8372b16dc58bd2fd1e6fbe6378f98f76e0b8e5ca6"
+    },
+    {
+      "path": "data/raw/iiot/2023/tourdetree/references/solution.cpp",
+      "bytes": 920,
+      "sha256": "fb0c769a8aadccf3d3e15737b8489bff98273e53496a07632e13bc299276a89b"
+    },
+    {
+      "path": "data/raw/iiot/2017/dreamteam/reference_manifest.json",
+      "bytes": 1614,
+      "sha256": "53f4a30521f25316ad1f073f47271db847346e9fc580edfd9db58631c12b6027"
+    },
+    {
+      "path": "data/raw/iiot/2017/laser/reference_manifest.json",
+      "bytes": 1607,
+      "sha256": "8c16cf991d60ad01e4199ab9069f4d51aa8fa5fcbeab7af1c412c2717db7b5d9"
+    },
+    {
+      "path": "data/raw/iiot/2017/manhole/reference_manifest.json",
+      "bytes": 1548,
+      "sha256": "a6a66fec1adc106e5b7bed4f7e3d18e643b3d2f8af97f19e446e44ffc4abde24"
+    },
+    {
+      "path": "data/raw/iiot/2017/neighborly/reference_manifest.json",
+      "bytes": 1625,
+      "sha256": "ecde1b6acc3eb7cb45ef4acf3fe537a9b157b8121e913ddc99ca7202f70c20c8"
+    },
+    {
+      "path": "data/raw/iiot/2017/paintings/reference_manifest.json",
+      "bytes": 1555,
+      "sha256": "162260215c941cdd940fbfd47b9b23403635d4e2e51b98f1ba560bb4a04645d2"
+    },
+    {
+      "path": "data/raw/iiot/2017/proxies/reference_manifest.json",
+      "bytes": 1549,
+      "sha256": "5bf53f06568bfdd6d568fc02c4db0c475cad3bc9228a63a74c152588f99e96d7"
+    },
+    {
+      "path": "data/raw/iiot/2017/spam/reference_manifest.json",
+      "bytes": 1484,
+      "sha256": "8823cb5a73ac953530985dbd674f4200a7ac382d06b004909d48f0a3e0bcb812"
+    },
+    {
+      "path": "data/raw/iiot/2021/chimneys/reference_manifest.json",
+      "bytes": 1497,
+      "sha256": "adbc700a0f5ee0a1a9682870f919aa973dbba4da900485af3a39de75579b7700"
+    },
+    {
+      "path": "data/raw/iiot/2021/morse/reference_manifest.json",
+      "bytes": 1598,
+      "sha256": "f8777b19e3acc7250da7c13442ff25bf626c29c4f0bf9c74acbacc2e650cdc21"
+    },
+    {
+      "path": "data/raw/iiot/2021/run/reference_manifest.json",
+      "bytes": 1537,
+      "sha256": "fa6bc0929260d61bcc42f04e79c81d6bbba25225bfe64286a1857719db3915bb"
+    },
+    {
+      "path": "data/raw/iiot/2021/selection/reference_manifest.json",
+      "bytes": 1554,
+      "sha256": "fd098f046433f3c6ac8d610096aa1d87b539d355dd6fd8ceb50aeea362b82bb6"
+    },
+    {
+      "path": "data/raw/iiot/2021/tasks/reference_manifest.json",
+      "bytes": 1597,
+      "sha256": "e76ee63c3eaf5771bb23d853b909e0d4ff8841033373135171b0a638a0670878"
+    },
+    {
+      "path": "data/raw/iiot/2021/trap/reference_manifest.json",
+      "bytes": 1595,
+      "sha256": "67119fb8df2a2b8bbd516bc90cf71969ac72ade1579ed85198b6e6031dfcb2b6"
+    },
+    {
+      "path": "data/raw/iiot/2021/vsmovies/reference_manifest.json",
+      "bytes": 1661,
+      "sha256": "0f88ae6910c7e44266cd4563bc657e0f8f917e94651e7f3e4b7298d88d6fe62b"
+    },
+    {
+      "path": "data/raw/iiot/2021/weakhash/reference_manifest.json",
+      "bytes": 1659,
+      "sha256": "98613ab3ba97c3b0d66b0e8949b018af613238eb09a274ccdeb826bb5db8a6e4"
+    },
+    {
+      "path": "data/raw/iiot/2022/discount/reference_manifest.json",
+      "bytes": 1662,
+      "sha256": "380efa9f0e771fb4eb2bc0f6e69c41ad847351aef9d0b5477526563b54e3cb2c"
+    },
+    {
+      "path": "data/raw/iiot/2022/glass/reference_manifest.json",
+      "bytes": 1543,
+      "sha256": "b568d1cce25b472c59ccfebd80eea0ac100b48798ee562a13c32986fff1cb790"
+    },
+    {
+      "path": "data/raw/iiot/2022/icecream/reference_manifest.json",
+      "bytes": 1554,
+      "sha256": "6f2d7a0d1b904c64544c975b1053930c52fce620e046f8a9c09d546bdf1e19a1"
+    },
+    {
+      "path": "data/raw/iiot/2022/nostar/reference_manifest.json",
+      "bytes": 1493,
+      "sha256": "90319fa6183dc3f35e626c39d1394da8a00fcdf113b5f3457656e7f4434e3770"
+    },
+    {
+      "path": "data/raw/iiot/2022/picnic/reference_manifest.json",
+      "bytes": 1601,
+      "sha256": "ecccb0ee1886809a6eb1ddfb504b093d668a3dadd39a9ad12f5ca985e4e76166"
+    },
+    {
+      "path": "data/raw/iiot/2022/plagiarism/reference_manifest.json",
+      "bytes": 1613,
+      "sha256": "0d015796158db56bf656d92dabfeb40eb64c1fe16d1491fe975b9eedd01b6d4d"
+    },
+    {
+      "path": "data/raw/iiot/2022/stonks/reference_manifest.json",
+      "bytes": 1492,
+      "sha256": "14bd6c08175cf292d91bfd5936e5ed578107dde45b5c8429b12c7b1e3faf0891"
+    },
+    {
+      "path": "data/raw/iiot/2023/binge/reference_manifest.json",
+      "bytes": 1574,
+      "sha256": "235d3fa163eb0cda871b34d8c2dee1be936f2dc3854303867578d8f2e9fc9933"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/reference_manifest.json",
+      "bytes": 1514,
+      "sha256": "8b286b783c8abb1ba619f17e969f7b5a573551248046641aaeb7a87629fd4d57"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/reference_manifest.json",
+      "bytes": 1520,
+      "sha256": "8778ce03f17d1031f0e2ac518d24caf4e6174fabbf46e5d7f77b10825c1c34f5"
+    },
+    {
+      "path": "data/raw/iiot/2023/ktree/reference_manifest.json",
+      "bytes": 1740,
+      "sha256": "a3a75e328d28a97488755b16a65ec64a22a9b5d357e530f1c9c26f50a110eb0d"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/reference_manifest.json",
+      "bytes": 1571,
+      "sha256": "72bfd292cc8c4334f2002047712b8900481eac0da53926f011e15b39d3a38cb2"
+    },
+    {
+      "path": "data/raw/iiot/2023/publictransport/reference_manifest.json",
+      "bytes": 1697,
+      "sha256": "78aaaa91f90a359cf42247c7ad430f74a9d877f46c043c0c82db4240182bd10e"
+    },
+    {
+      "path": "data/raw/iiot/2023/tetris/reference_manifest.json",
+      "bytes": 1523,
+      "sha256": "b4413d57f1a12b11eab77dcdaba0c3fd91f1f04ee27d67594d14d116174814e2"
+    },
+    {
+      "path": "data/raw/iiot/2023/tourdetree/reference_manifest.json",
+      "bytes": 1530,
+      "sha256": "3f4c09970d1434e5e2cfb47a77a522a44f04528c6bdea94f4f8d2f6dd7945416"
+    },
+    {
+      "path": "data/raw/ccdc/nationals/ocr/2011-NCCDC-TeamPacket.ocr.md",
+      "bytes": 41699,
+      "sha256": "4ecde968c8640492b0c98732d7c1d30d404e998e56ad8ff5fe177e79fb4449d9"
+    },
+    {
+      "path": "data/raw/ccdc/nationals/ocr/2015-NCCDC-TeamPacket.ocr.md",
+      "bytes": 52522,
+      "sha256": "8d969721e1f2aea36f282503c4facb9ec8ad392a5910c83c2c2d1103cea83e3b"
+    },
+    {
+      "path": "data/raw/ccdc/nationals/ocr/2016-NCCDC-TeamPacket.ocr.md",
+      "bytes": 52645,
+      "sha256": "2d50ed7d12da6eace1cac33c9e24968f0365d5762d60220498f5539b9781fb6f"
+    },
+    {
+      "path": "data/raw/ccdc/nationals/ocr/2017-NCCDC-TeamPacket.ocr.md",
+      "bytes": 52997,
+      "sha256": "3c02ae05f851b08dfcbc9efd71fca9b7c73b7dc65b710f018a921ad8e0d52c47"
+    },
+    {
+      "path": "data/raw/ccdc/nationals/ocr/2018-NCCDC-TeamPacket.ocr.md",
+      "bytes": 52805,
+      "sha256": "647456b4ef1e2eb9fc47a02ab696ccb25ef3a2edfcf389b6e9e6dcf48f9773ae"
+    },
+    {
+      "path": "data/raw/ccdc/nationals/ocr/2019-NCCDC-TeamPacket.ocr.md",
+      "bytes": 50537,
+      "sha256": "d45d24ae884a5827b4cfec69b63fc7a59ed28e637720de8b2976205ec3dd84f3"
+    }
+  ],
+  "excluded_problem_ids": [
+    "iiot_2017_08",
+    "iiot_2017_09",
+    "iiot_2017_10",
+    "iiot_2017_11",
+    "iiot_2017_12",
+    "iiot_2017_13",
+    "iiot_2017_14"
+  ],
+  "original_source_policy": "Preserve formal sources; archive only unused practice PDFs.",
+  "readiness_policy": "No source-only repair is promoted to ready.",
+  "packages": {
+    "n_tasks": 1741,
+    "n_competitions": 43,
+    "staged_assets": 767
+  },
+  "evaluation_status_counts": {
+    "ready_with_limitations": 196,
+    "not_ready": 716,
+    "ready": 669,
+    "remote_judge_ready": 158,
+    "sample_tests_ready": 2
+  },
+  "unresolved": {
+    "iiot": "Original judge data/configuration and isolated execution remain incomplete.",
+    "ccdc": "Original environments/scoring services and the 2022 network map are unavailable; OCR is advisory."
+  }
+}

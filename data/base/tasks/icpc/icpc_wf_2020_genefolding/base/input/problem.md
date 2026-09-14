@@ -1,5 +1,3 @@
-# Gene Folding
-
 Hide 
  Gene Folding 
 

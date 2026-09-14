@@ -1,0 +1,118 @@
+@import "style-1.css";
+
+body {
+  background-color: #f8a2cc;
+}
+#background {
+  background-image: url("css-0.jpg");
+  background-position-x: center;
+  background-position-y: bottom;
+
+  position:absolute;
+  top: 0; bottom:0; left: 0; right: 0;
+}
+#background .screen {
+  position: absolute;
+  left: 120px; right: 120px;
+  top: 0; bottom: 0;
+  background: rgba(255,255,255,0.65);
+}
+#side-border div {
+  position: absolute;
+}
+#side-border .left, #side-border .right {
+  position: absolute;
+  width: 120px;
+  bottom: 0px;
+  top: 0px;
+  background-repeat: repeat-y;
+}
+#side-border .left {
+  left: 0;
+  background-image: url("css-1.png");
+}
+#side-border .right {
+  right: 0;
+  background-image: url("css-2.png");
+}
+#main {
+  margin-left: 120px;
+  margin-right: 120px;
+}
+#bottom-border {
+  position: absolute; left: 105px; right: 105px; bottom: 0;
+  height: 40px;
+  background: url("css-3.png") bottom center repeat-x;
+}
+
+body.index #index-image {
+  position: absolute;
+  top: 31px;
+  left: 50%;
+  margin-left: -400px;
+}
+body.index #index-image, body.index #index-image > img {
+  display: block;
+  width: 800px; height: 535px;
+  border: none;
+}
+body.index #index-image > * {
+  position: absolute; top: 0; left: 0;
+}
+body.index #puzzle-list .num {
+  width: 85px; text-align: right; padding-right: 4px;
+}
+body.index #puzzle-list a {
+  display: block;
+  /* a little bit of space on right */
+  padding-right: 5px;
+  /* overlap on top of .num field and put icon there. */
+  margin-left: -93px; padding-left: 93px;
+  background: url("css-4.png") no-repeat; /* 33px high */
+  padding-top: 0px;
+  height: 45px; /* subtract padding-top from height */
+  white-space: nowrap;
+}
+body.index #puzzle-list a.unsolved {
+  background-image: url("css-5.png");
+}
+
+#main {
+  padding: 10px 0 60px 0;
+  position: relative;
+}
+
+body.index {
+  min-width: 1070px;
+}
+body.index #main {
+  padding-top: 580px;
+}
+
+/* puzzle page */
+body.puzzle {
+  min-width: 940px;
+}
+#show-title { top: 52px; }
+#show-title .title {
+  width: 750px; left: -375px; /* centered */
+  height: 56px;
+  background: url("css-6.png") no-repeat;
+}
+body.puzzle #main {
+  padding-top: 120px;
+}
+#content {
+  padding: 0 1em;
+}
+#link {
+  left: 300px; top: 60px;
+}
+.ptitle {
+  position: relative; /* put in front of banner */
+  z-index: 99;        /* put in front of banner */
+  background: url("css-7.png") no-repeat;
+  height: 52px; /* 89px minus padding-top */
+  padding: 37px 0 0 140px;
+  margin: 0px 0 0px -20px;
+}

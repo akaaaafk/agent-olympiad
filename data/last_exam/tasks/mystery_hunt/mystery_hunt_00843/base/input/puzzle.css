@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.clear {
+	clear: both;
+}
+body {
+	background: #999999;
+	font-family: verdana, sans-serif;
+	font-size: 14px;
+	color: #000000;
+}
+@media print {
+	body {
+		background: #ffffff;
+	}
+}
+#nav {
+	height: 32px;
+	background: url(logo.png) 1px 1px no-repeat #000000;
+	border-bottom: 1px solid #666666;
+	text-align: center;
+	color: #ffffff;
+}
+@media print {
+	#nav {
+		display: none;
+	}
+}
+#nav a {
+	margin: 0 10px;
+}
+#nav a img {
+	margin-top: 7px;
+	border: none;
+}
+#container {
+	width: 780px;
+	margin: 0 auto;
+}
+#header {
+	margin: 0 auto;
+	width: 615px;
+	height: 240px;
+	/* Missing shared background is covered by the original opaque title image. */
+}
+#header h1 {
+	margin-left: -100em;
+}
+#shadow {
+	position: absolute;
+	top: 0;
+	right: -20px;
+}
+@media print {
+	#shadow {
+		display: none;
+	}
+}
+#puzzlebody {
+	position: relative;
+	margin-bottom: 20px;
+	padding: 20px 40px;
+	background: #ffffff;
+}
+#puzzlebody p {
+	margin: 20px 0;
+}
+#puzzlebody a img {
+	border: 0;
+}
+#ask #puzzlebody p.courier {
+	font-family: Monaco, Courier, monospace;
+}
+#blu #puzzlebody p.spacer {
+	height: 100px;
+}
+#con #puzzlebody p,
+#rev #puzzlebody p {
+	line-height: 1.4;
+}
+#dis #puzzlebody {
+	padding: 20px;
+}

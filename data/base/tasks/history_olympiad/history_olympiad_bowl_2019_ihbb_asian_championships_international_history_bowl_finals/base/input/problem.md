@@ -1,5 +1,3 @@
-# 2019-IHBB-Asian-Championships-International-History-Bowl-Finals
-
 [Q1] An event involving these two countries is the subject of a Quentin Tarantino--produced documentary, Freedom’s Fury. During that event, one participant saw “about 4,000 stars” after being struck by Valentin Prokopov. Ervin Zador’s face wound nearly led to a riot in Melbourne during a 1956 Olympic water polo match between, for ten points, what two countries, one of which had just had a revolution crushed in Budapest by the other?
 
 [Q2] An infamous doctrine developed by this man prevented the extradition of terrorists back to Italy. This man signed the Gayssot Act to make denial of the Holocaust illegal. This man controversially ordered Operation Satan, the bombing of the Greenpeace ship Rainbow Warrior in New Zealand waters. This leader’s tenure featured two cohabitations with Edouard Balladur and Jacques Chirac. For ten points, name this first socialist president of France.

@@ -1,0 +1,65 @@
+body { 
+  background-color: #4c5a7f;
+  padding: 2em; 
+}
+
+#content {
+  width: 800px;
+  margin: auto;
+  background-color: #0c1429;
+  color: white; 
+  font-family: Arial, sans-serif;
+  padding: 24px;
+
+}
+
+#header {
+  width: 752px;
+  height: 83px;
+  margin: auto;
+  background: url(../images/virtual-sectors/VS-title.png) no-repeat;
+}
+
+#spin-area { 
+  margin-right: 24px;
+  float: right;
+  background: url(../images/virtual-sectors/VS-area.png) no-repeat;
+  width: 353px;
+  height: 428px;
+  text-align: center;
+}
+
+.spin-counter { height: 40px; padding-top: 6px;  }
+
+.spin-image { height: 30px; margin-top: 12px; }
+.spin-button { margin-top: 160px; }
+.spin-button img { border: 0px; }
+
+#spin-area .result { margin-top: 1em !important;}
+
+.extra-info {
+  text-align: center; 
+  margin: auto;
+  clear: both; 
+  padding-top: 2em; 
+}
+
+.entry-blank { width: 15em; text-decoration: underline; }
+
+.puzzles ul { list-style-type: none; line-height: 1.5em; }
+.puzzles ul img { vertical-align: middle; }
+
+.puzzles { width: 420px; }
+.puzzles a { color: #ddd; text-decoration: none; }
+.puzzles a.solved { text-decoration: line-through; }
+.puzzles a:hover { text-decoration: underline; }
+
+.starmap-link a { display: block; height: 22px; width: 77px; float: right; }
+.starmap-link a:hover { background-color: #2c3449; }
+.starmap-link a img { border: none; }
+
+.extra-info a { color: #aaf; }
+
+.intro a.player { display:block; width: 320px; height: 30px; margin-left: 60px; text-align: center; }
+.intro a.player img { border: 0; }
+.intro .text { font-size: 85%; padding-left: 20px; margin-bottom: 0.5em; }

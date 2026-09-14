@@ -1,6 +1,6 @@
 {
   "rubric_id": "arml_national_power_2014_v1",
-  "title": "Power Round \u2014 2014 \u2014 ARML Power sub-problem rubric",
+  "title": "Power Round — 2014 — ARML Power sub-problem rubric",
   "total_points": 50.0,
   "criteria": [
     {
@@ -22,7 +22,7 @@
       "name": "Problem 1c",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 1c (2 pts). Statement: 1c. Let T be a full town and let D\u2208 dish(T ). Let T\u2032 be the town consisting of all residents of T who do not know how to make D. Prove that T\u2032 is full."
+      "description": "Correct, justified solution to Problem 1c (2 pts). Statement: 1c. Let T be a full town and let D∈ dish(T ). Let T′ be the town consisting of all residents of T who do not know how to make D. Prove that T′ is full."
     },
     {
       "id": "problem_02a",
@@ -71,21 +71,21 @@
       "name": "Problem 5d",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 5d (2 pts). Statement: For a dish D, a resident is called a D-chef if he or she knows how to make the dish D. De\ufb01ne chefT (D) to be the set of residents in T who are D-chefs. For example, in ARMLville, David is a steak-chef and a pancakes-chef. Further, chef ARMLville(steak) ={Sally, David}. 5. Prove that \u2211 D\u2208dish(T ) |chefT (D)| = 2 pop(T )."
+      "description": "Correct, justified solution to Problem 5d (2 pts). Statement: For a dish D, a resident is called a D-chef if he or she knows how to make the dish D. Deﬁne chefT (D) to be the set of residents in T who are D-chefs. For example, in ARMLville, David is a steak-chef and a pancakes-chef. Further, chef ARMLville(steak) ={Sally, David}. 5. Prove that ∑ D∈dish(T ) |chefT (D)| = 2 pop(T )."
     },
     {
       "id": "problem_06",
       "name": "Problem 6",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 6 (2 pts). Statement: 6. Show that for any town T and any D\u2208 dish(T ), gr(T )\u2265| chefT (D)|."
+      "description": "Correct, justified solution to Problem 6 (2 pts). Statement: 6. Show that for any town T and any D∈ dish(T ), gr(T )≥| chefT (D)|."
     },
     {
       "id": "problem_07",
       "name": "Problem 7",
       "max_score": 3.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 7 (3 pts). Statement: 7. For n = 5, 6, and 7, \ufb01nd a heterogeneous town T of population 5 for which |dish(T )| =n."
+      "description": "Correct, justified solution to Problem 7 (3 pts). Statement: 7. For n = 5, 6, and 7, ﬁnd a heterogeneous town T of population 5 for which |dish(T )| =n."
     },
     {
       "id": "problem_08a",
@@ -99,7 +99,7 @@
       "name": "Problem 8b",
       "max_score": 1.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 8b (1 pt). Statement: 8b. In terms of k andd, \ufb01nd the number of distinguishable resident cycles of lengthk inFd."
+      "description": "Correct, justified solution to Problem 8b (1 pt). Statement: 8b. In terms of k andd, ﬁnd the number of distinguishable resident cycles of lengthk inFd."
     },
     {
       "id": "problem_09",
@@ -113,7 +113,7 @@
       "name": "Problem 10a",
       "max_score": 3.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 10a (3 pts). Statement: 10. Let T be a town such that, for each D\u2208 dish(T ),|chefT (D)| = 2. a. Prove that there are \ufb01nitely many resident cyclesC1,C 2,...,C j inT so that each resident belongs to exactly one of the Ci."
+      "description": "Correct, justified solution to Problem 10a (3 pts). Statement: 10. Let T be a town such that, for each D∈ dish(T ),|chefT (D)| = 2. a. Prove that there are ﬁnitely many resident cyclesC1,C 2,...,C j inT so that each resident belongs to exactly one of the Ci."
     },
     {
       "id": "problem_10b",
@@ -127,28 +127,28 @@
       "name": "Problem 11a",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 11a (2 pts). Statement: 11. Let T be a town such that, for each D\u2208 dish(T ),|chefT (D)| = 3. a. Either \ufb01nd such a town T for which|dish(T )| is odd, or show that no such town exists."
+      "description": "Correct, justified solution to Problem 11a (2 pts). Statement: 11. Let T be a town such that, for each D∈ dish(T ),|chefT (D)| = 3. a. Either ﬁnd such a town T for which|dish(T )| is odd, or show that no such town exists."
     },
     {
       "id": "problem_11b",
       "name": "Problem 11b",
       "max_score": 3.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 11b (3 pts). Statement: b. Prove that if T contains a resident cycle such that for every dish D\u2208 dish(T ), there exists a chef in the cycle that can prepare D, then gr(T ) = 3."
+      "description": "Correct, justified solution to Problem 11b (3 pts). Statement: b. Prove that if T contains a resident cycle such that for every dish D∈ dish(T ), there exists a chef in the cycle that can prepare D, then gr(T ) = 3."
     },
     {
       "id": "problem_12a",
       "name": "Problem 12a",
       "max_score": 1.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 12a (1 pt). Statement: 12. Let k be a positive integer, and let T be a town in which |chefT (D)| = k for every dish D\u2208 dish(T ). Suppose further that |dish(T )| is odd. a. Show that k is even."
+      "description": "Correct, justified solution to Problem 12a (1 pt). Statement: 12. Let k be a positive integer, and let T be a town in which |chefT (D)| = k for every dish D∈ dish(T ). Suppose further that |dish(T )| is odd. a. Show that k is even."
     },
     {
       "id": "problem_12b",
       "name": "Problem 12b",
       "max_score": 3.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 12b (3 pts). Statement: b. Prove the following: for every group in T , there is some dish D\u2208 dish(T ) such that no one in the group is a D-chef."
+      "description": "Correct, justified solution to Problem 12b (3 pts). Statement: b. Prove the following: for every group in T , there is some dish D∈ dish(T ) such that no one in the group is a D-chef."
     },
     {
       "id": "problem_12c",
@@ -162,14 +162,14 @@
       "name": "Problem 13a",
       "max_score": 3.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 13a (3 pts). Statement: 13a. For each odd positive integer d\u2265 3, prove that gr(Fd) =d."
+      "description": "Correct, justified solution to Problem 13a (3 pts). Statement: 13a. For each odd positive integer d≥ 3, prove that gr(Fd) =d."
     },
     {
       "id": "problem_13b",
       "name": "Problem 13b",
       "max_score": 4.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 13b (4 pts). Statement: 13b. For each even positive integer d, prove that gr(Fd) =d\u2212 1."
+      "description": "Correct, justified solution to Problem 13b (4 pts). Statement: 13b. For each even positive integer d, prove that gr(Fd) =d− 1."
     }
   ],
   "not_observable_from_deck": [

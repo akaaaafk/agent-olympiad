@@ -1,0 +1,87 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.clear {
+	clear: both;
+}
+body {
+	background: #f3e7cc;
+	font-family: verdana, sans-serif;
+	font-size: 14px;
+	color: #000000;
+}
+#nav {
+	height: 32px;
+	background: url(logo.png) 1px 1px no-repeat #000000;
+	border-bottom: 1px solid #666666;
+	text-align: center;
+	color: #ffffff;
+}
+@media print {
+	#nav {
+		display: none;
+	}
+}
+#nav a {
+	margin: 0 10px;
+}
+#nav a img {
+	margin-top: 7px;
+	border: none;
+}
+#container {
+	width: 780px;
+	margin: 20px auto;
+	padding-bottom: 1px;
+	background: #ffffff;
+}
+#header {
+	width: 780px;
+	height: 180px;
+	margin: 0 auto;
+	padding: 20px 0 30px 0;
+	background: #f3e7cc;
+	text-align: center;
+}
+#header img {
+	position: relative;
+	top: -45px;
+}
+#header a img {
+	position: static;
+	margin-right: 80px;
+	border: 0;
+}
+#puzzlebody {
+	margin: 20px;
+	padding-top: 1px;
+}
+#puzzlebody p {
+	margin-bottom: 20px;
+}
+#puzzlebody table {
+	margin-bottom: 20px;
+}
+#puzzlebody a img {
+	border: 0;
+}
+#abu #puzzlebody p,
+#fun #puzzlebody p,
+#the #puzzlebody p {
+	text-align: center;
+}
+#fun #puzzlebody p {
+	margin-top: 15px;
+	padding-bottom: 15px;
+}
+#sac #puzzlebody td {
+	padding-bottom: 10px;
+}
+#sac #puzzlebody td.left {
+	width: 200px;
+}
+#the #puzzlebody p {
+	margin-top: 10px;
+	padding-bottom: 10px;
+}

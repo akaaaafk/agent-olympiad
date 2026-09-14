@@ -18,7 +18,8 @@
     "query_rules",
     "use_calculator",
     "execute_code",
-    "web_search"
+    "web_search",
+    "prepare_ieo_case_recommendation"
   ],
   "resources": {
     "internet": "allowed",

@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "records": 3,
+  "public_source_files": 56,
+  "judge_source_files": 1,
+  "publisher_files": 54,
+  "backup": "data/excluded/integrity_repair_20260913T230348Z",
+  "answers_scores_readiness_unchanged": true,
+  "records_removed": 0,
+  "protected_files_unchanged": 1928,
+  "verification": {
+    "source_packets": 2,
+    "source_only_corrections": 1,
+    "task_input_copies": 4,
+    "explicit_allowlists_valid": true,
+    "original_sources_unchanged": true,
+    "legacy_answers_not_recertified": true,
+    "dynamic_round_public_packet_still_pending": true
+  }
+}

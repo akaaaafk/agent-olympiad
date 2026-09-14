@@ -52,6 +52,9 @@ def _append_action_error(
     session: ContestSession,
     agent: str,
     error: str,
+    *,
+    action: str | None = None,
+    arguments: dict[str, Any] | None = None,
 ) -> None:
     memory.append(
         task_id=session.active_task.task_id if session.active_task else None,
@@ -59,7 +62,10 @@ def _append_action_error(
         actor=agent,
         visibility="private",
         kind="action_error",
-        payload={"error": error},
+        payload={"error": error,
+                 **({"action": action,
+                     "target_task_id": arguments.get("problem_id") if isinstance(arguments, dict) else None}
+                    if action else {})},
         turn=session.budget.turns_used,
     )
 
@@ -84,7 +90,8 @@ def _participation_metrics(
     manifest: ContestManifest,
     team_size: int,
 ) -> tuple[float, float]:
-    substantive = {"speak", "direct_message", "work", "submit", "submit_code"}
+    substantive = {"speak", "direct_message", "work", "submit", "submit_code",
+                   "submit_set", "buzz", "answer_tossup", "answer_bonus"}
     agent_names = [f"Agent_{index + 1}" for index in range(team_size)]
     aar_values: list[float] = []
     balance_values: list[float] = []

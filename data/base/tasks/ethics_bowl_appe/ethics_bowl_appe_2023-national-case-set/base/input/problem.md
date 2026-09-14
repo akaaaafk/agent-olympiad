@@ -1,5 +1,3 @@
-# 2023-national-case-set
-
 Page 2 
 27th APPE Intercollegiate Ethics Bowl® National Championship 
 © 2022 Robert Boyd Skipper, Robert A. Currie, Abigail Feldman, Cynthia Jones, Sophia McWilliams, Heather Pease, and Mal-

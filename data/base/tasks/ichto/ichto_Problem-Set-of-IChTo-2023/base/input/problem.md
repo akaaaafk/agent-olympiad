@@ -1,5 +1,3 @@
-# Problem-Set-of-IChTo-2023
-
 PROBLEMS
 SET
  

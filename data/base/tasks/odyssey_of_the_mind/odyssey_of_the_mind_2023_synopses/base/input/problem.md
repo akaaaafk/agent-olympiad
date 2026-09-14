@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2023
-
 # Odyssey of the Mind — 2023 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -19,3 +17,4 @@ OMG! Can you believe that happened? Teams will create a humorous performance abo
 3. Classics… The Walls of TroyOMers know there is more than one way to get past any type of barrier–and, in this problem, they will prove it! Ancient Greek Poet Homer created The Iliad, which tells the story of Achilles and the Trojan War. Now, OM teams will put their spin on the popular concept of the “Trojan Horse” by creating one of their own. It will be used to get past a wall in a performance that also includes a character from The Iliad, an original Greek Chorus, and an unusual statue.
 4. Where’s the Structure?In this problem, teams will have audiences wondering, “Where’s the structure?” Teams will design and build a structure made of only balsa wood and glue that balances and holds as much weight as possible. It will have three parts and each part will be hidden in plain sight. During the performance the team will reveal each part and assemble them into a final structure for testing. The performance will also include a poem about searching for something special.
 5. Dinos on Parade!What better way to celebrate a new discovery than with a parade? Teams will create a performance all about dinosaurs. There will be a paleontologist character that discovers a “new” dinosaur that is invented by the team, an artistic representation of an already discovered dinosaur, and another portrayed by a team member in costume. These will all be presented in a fun parade!
+

@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "backup": "data/excluded/integrity_repair_20260914T012833Z",
+  "records": 6,
+  "year_corrections": 5,
+  "explicit_motions": 4,
+  "record_count_change": 0,
+  "readiness_promotions": 0,
+  "summary": "Natolin: 5 event years corrected from 2017 to 2019. Four explicit motions recovered from original transcripts (Natolin 1-3, Cambridge 1), corroborated independently. No inferred infoslides, gold, score or readiness changes.",
+  "verification": {
+    "records": 6,
+    "year_corrections": 5,
+    "explicit_motions": 4,
+    "transcripts_and_historical_scores_unchanged": true,
+    "no_background_slides_invented": true
+  },
+  "protected_files_unchanged": 93
+}

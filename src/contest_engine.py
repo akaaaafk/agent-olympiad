@@ -10,6 +10,9 @@ from datetime import datetime, timezone
 from typing import Any, Literal
 
 import otc_runtime
+import automatic_memory
+import contest_observation
+from answer_identity import WORK_TASK_BINDING_VERSION
 from action_modules.coach import prepare_brief
 from action_modules.contracts import ArgumentSpec
 from action_modules import memory as memory_module
@@ -37,7 +40,7 @@ from contest_config import PROTOCOL_VERSION, CheckpointCallback, ContestRunConfi
 
 from contest_prompts import _needs_programming_source, _shared_review_history, _reported_version_hashes, _system_prompt, _user_prompt
 
-from contest_policy import _resolved_actions, _actions_for_agent, _leader_plan_prompts, _normalize_coach_plan, _card_focus_task, _scheduled_agent_task, _rejected_version_count
+from contest_policy import OTC_FOCUS_VERSION, _resolved_actions, _actions_for_agent, _leader_plan_prompts, _normalize_coach_plan, _card_focus_task, _scheduled_agent_task, _rejected_version_count
 
 from contest_lifecycle import (
     _default_executor,
@@ -127,6 +130,10 @@ class _ContestEngine:
                 ),
             )
         )
+        if (self.config.current_turn_only and session_checkpoint is not None
+                and not session_checkpoint.get("current_turn_only")):
+            raise ValueError("current-turn-only context requires a new run or a matching checkpoint")
+        self.session.current_turn_only = self.config.current_turn_only
         if not self.session.budget.wall_started_at:
             self.session.budget.wall_started_at = self.segment_started_at
         self.prior_wall_seconds = float(self.session.budget.wall_seconds_used or 0.0)
@@ -135,6 +142,8 @@ class _ContestEngine:
             task.task_id for task in self.manifest.tasks
         }:
             raise ValueError("session checkpoint task set does not match manifest")
+        from competition_flow import bind_competition_flow
+        self.competition_flow = bind_competition_flow(self.manifest, self.session, self.config)
         self.memory = (
             ContestMemory.from_checkpoint_json(
                 memory_checkpoint,
@@ -217,9 +226,11 @@ class _ContestEngine:
             if item.name not in {
                 "features", "rule_card", "otc_policy", "require_review",
                 "require_final_review", "start_seat",
+                "precontest_brief",
             }
         }
         settings.update(
+            work_task_binding_version=WORK_TASK_BINDING_VERSION,
             baseline=asdict(self.config.features),
             review_required=self.config.review_required,
             final_review_required=self.config.final_review_required,
@@ -228,6 +239,15 @@ class _ContestEngine:
                 card_content_hash(self.config.rule_card) if self.config.rule_card else None
             ),
         )
+        if self.config.modules.memory:
+            settings["automatic_memory_version"] = automatic_memory.VERSION
+        if self.config.current_turn_only:
+            settings["current_turn_context_version"] = contest_observation.VERSION
+        if self.policy is not None:
+            settings['otc_focus_version'] = OTC_FOCUS_VERSION
+        if self.config.precontest_brief is not None:
+            import hashlib
+            settings['precontest_brief_sha256'] = hashlib.sha256(self.config.precontest_brief.encode()).hexdigest()
         return settings
 
     def _initialize_runtime(self, checkpoint: dict[str, Any] | None) -> None:
@@ -405,17 +425,26 @@ class _ContestEngine:
         brief = prepare_brief(
             enabled=self.config.modules.coach, card=self.card, policy=self.policy,
             memory_enabled=self.config.modules.memory,
-            manifest=self.manifest, session=self.session, memory=self.memory,
+            manifest=(self.competition_flow.public_manifest() if self.competition_flow else self.manifest), session=self.session, memory=self.memory,
             team_size=self.config.team_size, max_turns=self.config.max_turns,
             max_api_calls=self.config.max_api_calls,
             query=self.coach_query_fn or self.query_llm_fn,
             charge_tokens=self._charge_tokens,
+            supplied_brief=self.config.precontest_brief,
         )
         if self.config.modules.coach:
             self.coach_guidance = brief.guidance
             self.coach_budget_exhausted = brief.budget_exhausted
         if brief.created:
             self._persist_checkpoint()
+
+        planning_manifest = (self.competition_flow.public_manifest()
+                             if self.competition_flow else self.manifest)
+        if self.competition_flow and self.manifest.competition_id == "science_bowl":
+            # An opening team plan must not become conferral on the first
+            # tossup. The contestant leader may plan roles, not see questions.
+            from dataclasses import replace
+            planning_manifest = replace(planning_manifest, tasks=())
 
         # Who writes the opening plan: the exiting Coach seat, or the leader who
         # then stays in the contest as an ordinary (submitting) contestant.
@@ -431,7 +460,7 @@ class _ContestEngine:
             except BudgetExceededError:
                 self.coach_budget_exhausted = True
             else:
-                coach_system, coach_user = _leader_plan_prompts(self.manifest, self.config)
+                coach_system, coach_user = _leader_plan_prompts(planning_manifest, self.config)
                 coach_response = plan_query(coach_system, coach_user)
                 coach_tokens = estimate_tokens(coach_response)
                 remaining_tokens = (
@@ -449,13 +478,13 @@ class _ContestEngine:
                 )
                 self.session.consume_budget(tokens=charged_tokens)
                 self.coach_budget_exhausted = charged_tokens < coach_tokens
-                self.coach_plan = _normalize_coach_plan(coach_response, self.manifest, self.config)
+                self.coach_plan = _normalize_coach_plan(coach_response, planning_manifest, self.config)
                 if self.config.leader is not None:
                     # The leader may touch every problem; workers keep their lists.
                     # No review workflow: review routes would only pull workers
                     # onto problems they cannot act on.
                     self.coach_plan["work_assignments"][self.config.leader] = [
-                        task.task_id for task in self.manifest.tasks
+                        task.task_id for task in planning_manifest.tasks
                     ]
                     if not (self.config.review_required or self.config.final_review_required):
                         self.coach_plan["review_assignments"] = {
@@ -613,6 +642,7 @@ class _ContestEngine:
         active = self.session.active_task
         if (
             not self.finished
+            and not self.config.current_turn_only
             and active is not None
             and not (active.kind == "programming" and self.config.review_required)
             and self.switches == switches_at_turn_start
@@ -687,6 +717,9 @@ class _ContestEngine:
             visible_before = len(self.memory.view(turn.agent)) if auxiliary else 0
             succeeded = self._apply_agent_action(turn)
             if not auxiliary:
+                if self.config.modules.memory:
+                    automatic_memory.sync(self.memory, viewer=turn.agent,
+                                          turn=self.session.budget.turns_used, session=self.session)
                 return
             # Failed memory operations also use the bounded side-call allowance,
             # but leave the seat's ordinary action available.
@@ -705,9 +738,35 @@ class _ContestEngine:
                          "turn_cost": 0, "simulated_minutes_cost": 0},
                 turn=self.session.budget.turns_used,
             )
+            # A public share can satisfy the discussion requirement. Refresh
+            # runtime gates without rescheduling the seat or repeating think.
+            self._refresh_agent_actions(turn)
             self._persist_checkpoint()
 
     def _prepare_agent(self, turn: _AgentTurn) -> bool:
+        if self.config.current_turn_only:
+            return self._prepare_current_turn_agent(turn)
+        if self.competition_flow is not None:
+            if self.competition_flow.state["phase"] == "complete" or self.competition_flow.state["closed"]:
+                self.finished = True
+                return False
+            current_ids = self.competition_flow.current_ids
+            assignment = self.personal_assignments.get(turn.agent)
+            if assignment and self.manifest.competition_id == "hmmt_guts":
+                work = [tid for tid in assignment["work_tasks"] if tid in current_ids]
+                review = [tid for tid in assignment["review_tasks"] if tid in current_ids]
+                if work or review:
+                    turn.personal_assignment = {**assignment, "work_tasks": work, "review_tasks": review}
+                    turn.work_task_ids, turn.review_task_ids = set(work), set(review)
+                    scheduled = _scheduled_agent_task(
+                        self.session, agent=turn.agent, work_task_ids=work,
+                        review_task_ids=set(review), reported_version_hashes=_reported_version_hashes(self.memory))
+                    if scheduled is not None:
+                        self.session.select_task(scheduled.task_id)
+            if self.session.active_task is None and current_ids:
+                self.session.select_task(current_ids[0])
+            self._refresh_agent_actions(turn)
+            return True
         turn.personal_assignment = self.personal_assignments.get(turn.agent)
         rescue_task_ids = {
             task.task_id
@@ -756,7 +815,9 @@ class _ContestEngine:
             # Each seat keeps its own focus: the problem it last selected,
             # else the coach's first suggestion, else the scheduler's pick.
             focus = _card_focus_task(
-                self.session, self.memory, turn.agent, turn.personal_assignment, self.strategic_policy
+                self.session, self.memory, turn.agent, turn.personal_assignment, self.strategic_policy,
+                review_required=self.config.review_required,
+                work_task_ids=turn.work_task_ids, review_task_ids=turn.review_task_ids,
             )
             if focus is not None and (
                 self.session.active_task is None
@@ -836,7 +897,33 @@ class _ContestEngine:
                     or self.session.active_task.task_id != eligible[0].task_id
                 ):
                     self.session.select_task(eligible[0].task_id)
+        self._refresh_agent_actions(turn)
+        return True
+
+    def _prepare_current_turn_agent(self, turn: _AgentTurn) -> bool:
+        """Use the same OTC focus rule, with no archival assignments or choices."""
+        if self.competition_flow is not None and (
+                self.competition_flow.state["phase"] == "complete"
+                or self.competition_flow.state["closed"]):
+            self.finished = True
+            return False
+        session, memory = contest_observation.observe(self.session, self.memory, self.config)
+        if not any(e['type'] == 'task_selected' for e in session.events):
+            session._active_task_id = None
+        turn.personal_assignment = None
+        turn.work_task_ids = turn.review_task_ids = None
+        focus = _card_focus_task(session, memory, turn.agent, None, self.strategic_policy,
+                                review_required=self.config.review_required)
+        if focus is not None:
+            self.session.select_task(focus.task_id)
+        self._refresh_agent_actions(turn)
+        return True
+
+    def _refresh_agent_actions(self, turn: _AgentTurn) -> None:
+        """Recompute availability for the already scheduled seat and task."""
         turn.programming_source_required = bool(
+            not self.config.current_turn_only
+            and
             self.config.review_required
             and self.session.active_task is not None
             and _needs_programming_source(self.session.active_task)
@@ -880,11 +967,15 @@ class _ContestEngine:
         turn.programming_source_required = turn.programming_source_required and (
             {spec.name for spec in turn.available_actions} == {"execute_code"}
         )
-        return True
 
     def _build_agent_prompts(self, turn: _AgentTurn) -> bool:
+        if self.config.modules.memory:
+            automatic_memory.sync(self.memory, viewer=turn.agent,
+                                  turn=self.session.budget.turns_used, session=self.session)
         turn.function_tools = tuple(render_function_tools(turn.available_actions))
         card_protocol = ""
+        protocol_memory = (contest_observation.current_memory(self.memory, self.session.budget.turns_used)
+                           if self.config.current_turn_only else self.memory)
         card_block_text = ""
         think_ledger: list[dict[str, Any]] | None = None
         if self.policy is not None and self.card is not None:
@@ -914,10 +1005,10 @@ class _ContestEngine:
                         latency_turns=self.policy.run_judging_latency_turns,
                     )
                 ),
-                silent_streak=otc_runtime.silent_work_streak(self.memory, turn.agent),
+                silent_streak=otc_runtime.silent_work_streak(protocol_memory, turn.agent),
                 programming=self.programming_contest,
                 open_proposals=(
-                    tuple(otc_runtime.deliberation_ledger(self.memory).report()["open_proposals"])
+                    contest_observation.open_proposals(self.memory, self.session, self.config)
                     if self.policy.structured_deliberation
                     else ()
                 ),
@@ -959,14 +1050,22 @@ class _ContestEngine:
                 ) + "\n" + card_protocol
                 if self.coach_guidance:
                     think_system += f"\nPRE-CONTEST COACH BRIEF\n{self.coach_guidance}"
-                if self.opening_summary:
+                if self.opening_summary and not self.config.current_turn_only:
                     think_system += f"\nCOACH OPENING SUMMARY\n{self.opening_summary}"
+                if self.config.modules.memory:
+                    think_system += "\n" + automatic_memory.think_guidance(
+                        self.session.active_task.task_id if self.session.active_task else None)
+                if self.config.current_turn_only:
+                    think_system += "\n" + contest_observation.GUIDANCE
                 think_response = self.query_llm_fn(think_system, think_prompt)
                 if not self._charge_tokens(think_response):
                     think_ok = False
-                thought, cut = clip_text(
+                bounded_response, cut = clip_text(
                     think_response.strip(), self.policy.char_limit("think")
                 )
+                thought, essence = (automatic_memory.split_think(bounded_response,
+                                    task_id=self.session.active_task.task_id if self.session.active_task else None)
+                                    if self.config.modules.memory else (bounded_response, None))
                 self.memory.append(
                     task_id=(
                         self.session.active_task.task_id if self.session.active_task else None
@@ -976,9 +1075,18 @@ class _ContestEngine:
                     visibility="private",
                     recipients=(turn.agent,),
                     kind=otc_runtime.THINK_EVENT,
-                    payload={"content": thought, "compacted": cut},
+                    payload={"content": thought, "compacted": cut,
+                             **({"raw_content": think_response,
+                                 "memory_update_valid": essence is not None}
+                                if self.config.modules.memory else {})},
                     turn=self.session.budget.turns_used,
                 )
+                if self.config.modules.memory:
+                    automatic_memory.sync(
+                        self.memory, viewer=turn.agent, turn=self.session.budget.turns_used,
+                        task_id=self.session.active_task.task_id if self.session.active_task else None,
+                        essence=essence, session=self.session,
+                    )
                 if not think_ok:
                     break
             if not think_ok:
@@ -1158,7 +1266,13 @@ class _ContestEngine:
                 response, turn.available_actions
             )
         if error:
-            _append_action_error(self.memory, self.session, turn.agent, error)
+            native = response.tool_calls[0] if self.action_request_fn and response.tool_calls else None
+            _append_action_error(self.memory, self.session, turn.agent, error,
+                                 action=native.name if native else turn.action,
+                                 arguments=native.arguments if native else turn.arguments)
+            if self.config.modules.memory:
+                automatic_memory.sync(self.memory, viewer=turn.agent,
+                                      turn=self.session.budget.turns_used, session=self.session)
             return False
         assert turn.action is not None
         return True
@@ -1186,7 +1300,8 @@ class _ContestEngine:
             )
             self.switches += switch_delta
         except (KeyError, RuntimeError, ValueError) as exc:
-            _append_action_error(self.memory, self.session, turn.agent, str(exc))
+            _append_action_error(self.memory, self.session, turn.agent, str(exc),
+                                 action=turn.action, arguments=turn.arguments)
             return False
         if turn.transport_log_index is not None:
             self.action_transport_log[turn.transport_log_index]["executed"] = True
@@ -1228,6 +1343,7 @@ class _ContestEngine:
                     self.final_review_approvals.pop(reviewed.task_id, None)
         if (
             self.config.final_review_required
+            and self.competition_flow is None
             and not self.final_review_started
             and any(task.kind != "programming" for task in self.session.tasks)
             and (
@@ -1253,7 +1369,7 @@ class _ContestEngine:
             acted_task is not None and len(acted_task.versions) > before_versions
         )
         programming_visit = bool(
-            self.config.review_required
+            not self.config.current_turn_only and self.config.review_required
             and acted_task is not None and acted_task.kind == "programming"
             and (turn.work_task_ids is None or acted_task.task_id in turn.work_task_ids)
             and (
@@ -1400,6 +1516,15 @@ class _ContestEngine:
         return True
 
     def _collect_deadline(self) -> None:
+        if self.competition_flow is not None:
+            if not self.competition_flow.state["closed"]:
+                self.competition_flow.close()
+                self.memory.append(task_id=None, question_id=None, actor="Contest_Control",
+                                   visibility="public", kind="competition_flow_closed",
+                                   payload=self.competition_flow.public_state(),
+                                   turn=self.session.budget.turns_used)
+                self._persist_checkpoint()
+            return
         from contest_judging import deliver_verdicts
         deliver_verdicts(self.session, self.memory, final=True)
         if not self.config.deadline_submit:
@@ -1639,12 +1764,22 @@ class _ContestEngine:
             },
             "memory_action_policy": {
                 "enabled": self.config.modules.memory,
+                **contest_observation.policy_metadata(self.config),
                 "turn_cost": 0,
                 "max_side_calls_per_agent_turn": (
                     memory_module.MAX_SIDE_CALLS_PER_TURN if self.config.modules.memory else 0
                 ),
                 "api_and_tokens_charged": True,
                 "side_calls": event_kind_counts.get("memory_auxiliary_call", 0),
+                **({"automatic_memory_version": automatic_memory.VERSION,
+                    "automatic_records": event_kind_counts.get(automatic_memory.EVENT_KIND, 0),
+                    "automatic_extra_api_calls": 0,
+                    "semantic_updates": sum(e["kind"] == otc_runtime.THINK_EVENT
+                        and e["payload"].get("memory_update_valid", False)
+                        for e in all_events),
+                    "automatic_retrieval": "before_each_decision",
+                    "consolidation": "existing_private_think_with_excerpt_fallback"}
+                   if self.config.modules.memory else {}),
             },
             "shared_review_history": _shared_review_history(self.session),
             "budget": asdict(self.session.budget),
@@ -1661,7 +1796,9 @@ class _ContestEngine:
                 "programming_workflow_v4" if self.config.review_required and any(task.programming for task in self.manifest.tasks)
                 else None
             ),
-            "deadline_policy": "attempt_available_candidates_v1" if self.config.deadline_submit else "disabled",
+            "deadline_policy": ("explicit_handins_only" if self.competition_flow else
+                                "attempt_available_candidates_v1" if self.config.deadline_submit else "disabled"),
+            **({"competition_flow": self.competition_flow.public_state()} if self.competition_flow else {}),
             "deadline_submit": self.config.deadline_submit,
             "programming_deadline_submit": self.config.deadline_submit,
             "programming_deadline": {

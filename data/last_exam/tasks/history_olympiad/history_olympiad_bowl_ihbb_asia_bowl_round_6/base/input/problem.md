@@ -1,5 +1,3 @@
-# IHBB-Asia-Bowl-Round-6
-
 [Q1] A shipment of arms to this group aboard the Eksund was intercepted by the French and discovered to have been sent by Muammar Gaddafi. Bobby Sands died in a hunger strike protesting the lack of prison rights afforded to members of this group, which began to disarm after Sinn Fein [shin fayn] signed the Good Friday Accords with Tony Blair. For ten points, name this paramilitary group that during The Troubles fought for a united Ireland.
 
 [Q2] This man gained a nickname after he insulted Frank Galluccio’s sister and was attacked. Frankie Yale mentored this man, an opponent of Adelard Cunin and the target of Eliot Ness’ Untouchables unit. Though this man’s agents attempted to kill Bugs Moran during the Saint Valentine’s Day massacre, this man was ultimately jailed for tax evasion. For ten points, name this Prohibition -era gangster, known as Scarface, who led the 1920s era Chicago Outfit.

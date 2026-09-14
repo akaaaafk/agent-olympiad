@@ -1,5 +1,3 @@
-# PUMaC Power Round 2019
-
 PUMaC 2019 Power Round
 “There is an explicit way to deﬁne what explicit is.” — Noga
 Alon

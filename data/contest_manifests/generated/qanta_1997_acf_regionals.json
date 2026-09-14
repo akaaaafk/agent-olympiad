@@ -1,0 +1,13 @@
+{
+  "session_id": "qanta_1997_acf_regionals",
+  "competition_id": "qanta",
+  "problem_ids": [
+    "qanta_train_77359",
+    "qanta_train_77468",
+    "qanta_train_77473"
+  ],
+  "description": "OTC contest-session manifest for qanta_1997_acf_regionals (3 tasks)",
+  "split_parts": false,
+  "task_family": "short_answer",
+  "competition_description": "Academic quiz-bowl questions: identify the requested person, place, work, event, or concept from progressively specific clues."
+}

@@ -1,0 +1,65 @@
+{
+  "policy": {
+    "same_competition_only": true,
+    "cross_year_rubric_reuse": true,
+    "copy_other_year_answers": false,
+    "invent_official_weights": false,
+    "missing_packet_or_environment_stays_not_ready": true,
+    "excluded_competitions": [
+      "envirothon"
+    ]
+  },
+  "restored_by_track": {
+    "ijso_practical": 9,
+    "cfa_research_challenge": 19,
+    "debatebench": 32,
+    "odyssey_of_the_mind": 49
+  },
+  "tracks": {
+    "ijso_practical": {
+      "records": 22,
+      "statuses": {
+        "ready_with_limitations": 13,
+        "not_ready": 9
+      }
+    },
+    "cfa_research_challenge": {
+      "records": 19,
+      "statuses": {
+        "not_ready": 19
+      }
+    },
+    "debatebench": {
+      "records": 32,
+      "statuses": {
+        "not_ready": 32
+      }
+    },
+    "eoes": {
+      "records": 31,
+      "statuses": {
+        "not_ready": 31
+      }
+    },
+    "gcch_harvard": {
+      "records": 7,
+      "statuses": {
+        "not_ready": 7
+      }
+    },
+    "ichto": {
+      "records": 9,
+      "statuses": {
+        "ready_with_limitations": 9
+      }
+    },
+    "odyssey_of_the_mind": {
+      "records": 50,
+      "statuses": {
+        "not_ready": 50
+      }
+    }
+  },
+  "active_tracks": 43,
+  "total_records": 1738
+}

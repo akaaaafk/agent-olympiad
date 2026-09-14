@@ -1,5 +1,3 @@
-# Trailing Digits
-
 Hide 
  Trailing Digits 
 

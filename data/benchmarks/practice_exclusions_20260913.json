@@ -1,0 +1,518 @@
+{
+  "schema_version": "1.0",
+  "policy": "Exclude publisher-labeled practice tasks at user request.",
+  "scope": "Individual tasks, not the entire 2017 edition.",
+  "records": [
+    {
+      "competition_id": "iiot",
+      "problem_id": "iiot_2017_08",
+      "year": 2017,
+      "task_code": "antibiotics",
+      "reason": "Publisher labels this task as practice; excluded at user request. Official 2017 final tasks remain active.",
+      "archive_url": "https://iio.team/competition/tasks/2017",
+      "source_file": "data/raw/iiot/2017/iiot_2017_problem_08.pdf",
+      "source_sha256": "42efe201ce93d26141ca6bb7fc393084e7c050e960aa97cfe10d2a71f9d84806",
+      "record": {
+        "problem_id": "iiot_2017_08",
+        "competition": "IIOT — International Informatics Olympiad in Teams",
+        "year": 2017,
+        "problem_number": 8,
+        "topic": "IIOT 2017 Edition — Problem 8",
+        "task_type": "algorithmic_programming",
+        "team_size": 4,
+        "source_url": "https://iio-team.github.io/competition/tasks/2017",
+        "source_file": "data/raw/iiot/2017/iiot_2017_problem_08.pdf",
+        "solution_file": null,
+        "total_points": null,
+        "problem_description": "III OOO III ((( ))) ;;; +++ TTT IOI in Teams 2017 - Practice Bologna, May 17-20th 2017 antibiotics •EN Treatment Planning ( antibiotics) William just got an aggressive form of the seasonal ﬂu, and the doctor prescribed him a broad-spectrum antibiotic to ﬁght it, thePanaceaxyl TM . This antibiotic has to be assumed in a strictly controlled pattern, exactly once everyT hours, until the ﬂu is defeated: never stop a treatment early, or the illness will get much worse! Even the slightest transgression to the prescription, such as anticipating the timing by just a few minutes, might result in one of the numerousPanaceaxyl TM side eﬀects. Figure 1: List ofPanaceaxyl TM side eﬀects, as reported in0.1 sec by the drug’s commercial. However, William is a very busy person, having already takenN commitments on his agenda, each on a diﬀerent hourHi. It would not be a good idea to plan the antibiotic for one of these hours: William is deﬁnitely going to forget about it if he is distracted by other business! More precisely, if William is going to start the treatment in hourX, he needs to have hours: X, X + T, X + 2T, . . . , X+ iT, . . . free from commitments for alli > 0. Help William calculate the ﬁrst hour in which he can start the treatment without risking the dreadful side eﬀects. Among the attachments of this task you may ﬁnd a template ﬁleantibiotics.*with a sample incomplete implementation. Input The ﬁrst line contains integersN, T. The second line containsN integers Hi. Output You need to write a single line with an integer: the smallest hourX that is safe for starting the treatment. antibiotics Page 1 of 14\n\nIII OOO III ((( ))) ;;; +++ TTT IOI in Teams 2017 - Practice Bologna, May 17-20th 2017 antibiotics •EN Constraints •1≤N≤100 000. •1≤T≤109. •0≤Hi≤109 for each i = 0 . . . N−1. •There are no repeated commitments. Scoring Your program will be tested against several test cases grouped in subtasks. In order to obtain the score of a subtask, your program needs to correctly solve all of its test cases. •Subtask 1 [ 5 points]: Examples. •Subtask 2 [10 points]: T = 1. •Subtask 3 [30 points]: N, T, Hi≤1000 for all i. •Subtask 4 [25 points]: N, T≤1000. •Subtask 5 [20 points]: T≤1000. •Subtask 6 [10 points]: No additional limitations. Examples input.txt output.txt 6 8 16 1 4 10 15 12 3 9 3 16 9 20 11 13 3 0 12 2 15 Explanation In theﬁrst sample case, starting hour 0 is not feasible due to the commitment in hour16, hour 1 is already occupied and hour2 is not feasible due to the commitment in hour10. Starting hours 5 and 6 are also feasible but not optimal. In thesecond sample case, any hour before15 is not feasible due to one of the commitments in hours 12, 16 or 20. antibiotics Page 2 of 14",
+        "gold_label": {
+          "expected_answer": null,
+          "grading_rubric": "Automated judge: accepted if output matches expected for all test cases within time/memory limits.",
+          "human_baseline": null
+        },
+        "status": "partial",
+        "competition_id": "iiot",
+        "evaluation": {
+          "evaluator_id": null,
+          "status": "not_ready",
+          "rubric_path": "data/rubrics/iiot_programming_judge_v1.json",
+          "deliverable": "source_code",
+          "reason": "Official tests, checker configuration, and an isolated execution package are not archived for this problem.",
+          "scorecard_path": "data/rubrics/task_scorecards/iiot.json",
+          "scorecard_key": "iiot_2017_08"
+        },
+        "eval_unit": "problem",
+        "is_multi_agent": true,
+        "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+        "assets": [
+          {
+            "path": "data/raw/iiot/2017/iiot_2017_problem_08.pdf",
+            "mime_type": "application/pdf",
+            "role": "agent_visible",
+            "sha256": "42efe201ce93d26141ca6bb7fc393084e7c050e960aa97cfe10d2a71f9d84806"
+          }
+        ],
+        "split": "unspecified",
+        "license": {
+          "status": "not_verified",
+          "spdx_id": null,
+          "redistribution_allowed": null,
+          "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+        },
+        "provenance": {
+          "status": "source_linked",
+          "source_url": "https://iio-team.github.io/competition/tasks/2017",
+          "source_file": "data/raw/iiot/2017/iiot_2017_problem_08.pdf",
+          "solution_file": null,
+          "files": [
+            {
+              "path": "data/raw/iiot/2017/iiot_2017_problem_08.pdf",
+              "role": "agent_visible",
+              "sha256": "42efe201ce93d26141ca6bb7fc393084e7c050e960aa97cfe10d2a71f9d84806"
+            }
+          ],
+          "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+        }
+      },
+      "archived_source_file": "data/excluded/integrity_repair_20260913T032421Z/data/raw/iiot/2017/iiot_2017_problem_08.pdf"
+    },
+    {
+      "competition_id": "iiot",
+      "problem_id": "iiot_2017_09",
+      "year": 2017,
+      "task_code": "arena2",
+      "reason": "Publisher labels this task as practice; excluded at user request. Official 2017 final tasks remain active.",
+      "archive_url": "https://iio.team/competition/tasks/2017",
+      "source_file": "data/raw/iiot/2017/iiot_2017_problem_09.pdf",
+      "source_sha256": "7b430f0b01fbd6872d62262d54cc3e4e5545499e0e7dda9345d35f6438d36c1e",
+      "record": {
+        "problem_id": "iiot_2017_09",
+        "competition": "IIOT — International Informatics Olympiad in Teams",
+        "year": 2017,
+        "problem_number": 9,
+        "topic": "IIOT 2017 Edition — Problem 9",
+        "task_type": "algorithmic_programming",
+        "team_size": 4,
+        "source_url": "https://iio-team.github.io/competition/tasks/2017",
+        "source_file": "data/raw/iiot/2017/iiot_2017_problem_09.pdf",
+        "solution_file": null,
+        "total_points": null,
+        "problem_description": "III OOO III ((( ))) ;;; +++ TTT IOI in Teams 2017 - Practice Bologna, May 17-20th 2017 arena2 •EN Capture the Flag ( arena2) William’s new web portalarenafreaks.net is struggling to take oﬀ. As the large bill from the virtual machines provider is expected to arrive sooner and sooner, William is getting frenzied by the addition of new features to the portal, and in particular to its ﬂagship: the game database. As a matter of fact, a couple of days ago William added a database section forcapture-the-ﬂaggames, as usual transcribed in arenaic notation. Figure 1: The earliest known reportage of acapture-the-ﬂaggame (E. Delacroix, 1830). The transcription of a capture-the-ﬂag game betweenN teams in arenaic notation consists in a series of E events, each described by two integersXi and Yi from 0 to N−1 representing: •if Xi̸= Yi, that teamXi stole Yi’s ﬂag and is running to score a point; •if Xi = Yi, that team Xi recovered his ﬂag (from the last team which stole it) preventing them from scoring a point. Help William calculate the ﬁnal score of each game given its transcription in arenaic notation, assuming that each point that is not later prevented is eventually scored. Among the attachments of this task you may ﬁnd a template ﬁlearena2.* with a sample incomplete implementation. Input The ﬁrst line contains the two integersN and E. The followingE lines contains integersXi, Yi. Output You need to write a single line withN integer: the score of each team in the match. arena2 Page 3 of 14\n\nIII OOO III ((( ))) ;;; +++ TTT IOI in Teams 2017 - Practice Bologna, May 17-20th 2017 arena2 •EN Constraints •2≤N≤10 000. •1≤E≤1 000 000. •0≤Xi, Yi≤N−1 for each i = 0 . . . N−1. •The events are consistent, that is, there is no “ﬂag recover” event without a “ﬂag conquer” event about the same ﬂag preceding it (and after the previous “ﬂag recover” event). Scoring Your program will be tested against several test cases grouped in subtasks. In order to obtain the score of a subtask, your program needs to correctly solve all of its test cases. •Subtask 1 [ 5 points]: Examples. •Subtask 2 [25 points]: N = 2. •Subtask 3 [40 points]: N≤10. •Subtask 4 [30 points]: No additional limitations. Examples input.txt output.txt 3 4 0 2 1 2 2 0 2 2 1 0 1 2 7 0 1 1 0 1 1 0 0 1 0 0 1 0 1 2 1 Explanation In theﬁrst sample case, the second event (team1 captures ﬂag2) is prevented by the last event (team 2 recovers ﬂag2), thus only teams0 and 2 score a point. In thesecond sample case, the ﬁrst event is prevented by the third and the second event by the fourth. The last three events determine the ﬁnal2 –1 score. arena2 Page 4 of 14",
+        "gold_label": {
+          "expected_answer": null,
+          "grading_rubric": "Automated judge: accepted if output matches expected for all test cases within time/memory limits.",
+          "human_baseline": null
+        },
+        "status": "partial",
+        "competition_id": "iiot",
+        "evaluation": {
+          "evaluator_id": null,
+          "status": "not_ready",
+          "rubric_path": "data/rubrics/iiot_programming_judge_v1.json",
+          "deliverable": "source_code",
+          "reason": "Official tests, checker configuration, and an isolated execution package are not archived for this problem.",
+          "scorecard_path": "data/rubrics/task_scorecards/iiot.json",
+          "scorecard_key": "iiot_2017_09"
+        },
+        "eval_unit": "problem",
+        "is_multi_agent": true,
+        "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+        "assets": [
+          {
+            "path": "data/raw/iiot/2017/iiot_2017_problem_09.pdf",
+            "mime_type": "application/pdf",
+            "role": "agent_visible",
+            "sha256": "7b430f0b01fbd6872d62262d54cc3e4e5545499e0e7dda9345d35f6438d36c1e"
+          }
+        ],
+        "split": "unspecified",
+        "license": {
+          "status": "not_verified",
+          "spdx_id": null,
+          "redistribution_allowed": null,
+          "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+        },
+        "provenance": {
+          "status": "source_linked",
+          "source_url": "https://iio-team.github.io/competition/tasks/2017",
+          "source_file": "data/raw/iiot/2017/iiot_2017_problem_09.pdf",
+          "solution_file": null,
+          "files": [
+            {
+              "path": "data/raw/iiot/2017/iiot_2017_problem_09.pdf",
+              "role": "agent_visible",
+              "sha256": "7b430f0b01fbd6872d62262d54cc3e4e5545499e0e7dda9345d35f6438d36c1e"
+            }
+          ],
+          "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+        }
+      },
+      "archived_source_file": "data/excluded/integrity_repair_20260913T032421Z/data/raw/iiot/2017/iiot_2017_problem_09.pdf"
+    },
+    {
+      "competition_id": "iiot",
+      "problem_id": "iiot_2017_10",
+      "year": 2017,
+      "task_code": "chores",
+      "reason": "Publisher labels this task as practice; excluded at user request. Official 2017 final tasks remain active.",
+      "archive_url": "https://iio.team/competition/tasks/2017",
+      "source_file": "data/raw/iiot/2017/iiot_2017_problem_10.pdf",
+      "source_sha256": "e644b43f013023a19481c44567fe0b5608f54024a6a15663e5778c0cd5bc6041",
+      "record": {
+        "problem_id": "iiot_2017_10",
+        "competition": "IIOT — International Informatics Olympiad in Teams",
+        "year": 2017,
+        "problem_number": 10,
+        "topic": "IIOT 2017 Edition — Problem 10",
+        "task_type": "algorithmic_programming",
+        "team_size": 4,
+        "source_url": "https://iio-team.github.io/competition/tasks/2017",
+        "source_file": "data/raw/iiot/2017/iiot_2017_problem_10.pdf",
+        "solution_file": null,
+        "total_points": null,
+        "problem_description": "III OOO III ((( ))) ;;; +++ TTT IOI in Teams 2017 - Practice Bologna, May 17-20th 2017 chores •EN Boring Chores ( chores) The best thing aboutonline programming contests is that you don’t need to set up an actual server, you just connect to youronline server and then install what you need. Foroﬄinecontests, instead, you are often faced with the hard reality: servers break, burst into ﬂames, and you always need to replace parts. Figure 1: Doing chores can be very tedious. Having prepared a lot of oﬄine contests, William and Giorgio know full well how boring these “chores” can be, so they are now trying to predict how much time will be lost to them. The main problem, is that you don’t know in advance where you will need to go: it may be possible that the parts you need are located insome far away city, and retrieving them may take a long time. Furthermore, the contest venue may be decided at the last minute, so we don’t even know in advance which city will host the contest! Luckily, Giorgio has a map of all the cities and a selected set of roads (the “best” ones), so that there is exactly one path between any two cities following the map. The roads are bidirectional. The contest plan (after the contest city is revealed) is this: •William will check which parts of the server need to be replaced. •Then he will go to take the replacement parts. •Finally, he will come back to the contest city. Given that we don’t know which city will host the contest, nor which city has the server parts we need, help William compute how long it will take himin the worst caseto go take the server parts and then come back to the contest city. Among the attachments of this task you may ﬁnd a template ﬁlechores.* with a sample incomplete implementation. Input The ﬁrst line contains the only integerN. The nextN−1 lines contain pairs of integersAi and Bi. Each pair represents a bidirectional road between theAi-th and Bi-th cities. Output You need to write a single line with an integer: the total “number of roads” it will take from the contest venue to the farthest city and come back home (in the worst case). chores Page 5 of 14\n\nIII OOO III ((( ))) ;;; +++ TTT IOI in Teams 2017 - Practice Bologna, May 17-20th 2017 chores •EN Constraints •1≤N≤100 000. •0≤Ai, Bi≤N−1 for each i = 0 . . . N−1. Scoring Your program will be tested against several test cases grouped in subtasks. In order to obtain the score of a subtask, your program needs to correctly solve all of its test cases. •Subtask 1 [ 5 points]: Examples. •Subtask 2 [20 points]: The cities lay on a single line of roads.1 •Subtask 3 [20 points]: N≤10. •Subtask 4 [25 points]: N≤100. •Subtask 5 [30 points]: No additional limitations. Examples input.txt output.txt 6 5 3 5 4 0 5 1 5 4 2 6 10 3 9 0 9 2 9 4 7 2 1 2 7 9 6 5 3 2 8 10 Explanation In theﬁrst sample caseit could happen that the contest venue is on the3-th city and the parts are in the 2-th city. In this case, William would need to cross6 roads (3−5−4−2−4−5−3). In thesecond sample caseit could happen to have the contest in the4-th city and the server parts in the 5-th city. 1In other words, each city is connected with at most 2 other cities. chores Page 6 of 14",
+        "gold_label": {
+          "expected_answer": null,
+          "grading_rubric": "Automated judge: accepted if output matches expected for all test cases within time/memory limits.",
+          "human_baseline": null
+        },
+        "status": "partial",
+        "competition_id": "iiot",
+        "evaluation": {
+          "evaluator_id": null,
+          "status": "not_ready",
+          "rubric_path": "data/rubrics/iiot_programming_judge_v1.json",
+          "deliverable": "source_code",
+          "reason": "Official tests, checker configuration, and an isolated execution package are not archived for this problem.",
+          "scorecard_path": "data/rubrics/task_scorecards/iiot.json",
+          "scorecard_key": "iiot_2017_10"
+        },
+        "eval_unit": "problem",
+        "is_multi_agent": true,
+        "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+        "assets": [
+          {
+            "path": "data/raw/iiot/2017/iiot_2017_problem_10.pdf",
+            "mime_type": "application/pdf",
+            "role": "agent_visible",
+            "sha256": "e644b43f013023a19481c44567fe0b5608f54024a6a15663e5778c0cd5bc6041"
+          }
+        ],
+        "split": "unspecified",
+        "license": {
+          "status": "not_verified",
+          "spdx_id": null,
+          "redistribution_allowed": null,
+          "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+        },
+        "provenance": {
+          "status": "source_linked",
+          "source_url": "https://iio-team.github.io/competition/tasks/2017",
+          "source_file": "data/raw/iiot/2017/iiot_2017_problem_10.pdf",
+          "solution_file": null,
+          "files": [
+            {
+              "path": "data/raw/iiot/2017/iiot_2017_problem_10.pdf",
+              "role": "agent_visible",
+              "sha256": "e644b43f013023a19481c44567fe0b5608f54024a6a15663e5778c0cd5bc6041"
+            }
+          ],
+          "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+        }
+      },
+      "archived_source_file": "data/excluded/integrity_repair_20260913T032421Z/data/raw/iiot/2017/iiot_2017_problem_10.pdf"
+    },
+    {
+      "competition_id": "iiot",
+      "problem_id": "iiot_2017_11",
+      "year": 2017,
+      "task_code": "gitube",
+      "reason": "Publisher labels this task as practice; excluded at user request. Official 2017 final tasks remain active.",
+      "archive_url": "https://iio.team/competition/tasks/2017",
+      "source_file": "data/raw/iiot/2017/iiot_2017_problem_11.pdf",
+      "source_sha256": "5209ca4d6d459ef502e6c494ef0f752e7774033d1d29421c7e92eefecc04d66f",
+      "record": {
+        "problem_id": "iiot_2017_11",
+        "competition": "IIOT — International Informatics Olympiad in Teams",
+        "year": 2017,
+        "problem_number": 11,
+        "topic": "IIOT 2017 Edition — Problem 11",
+        "task_type": "algorithmic_programming",
+        "team_size": 4,
+        "source_url": "https://iio-team.github.io/competition/tasks/2017",
+        "source_file": "data/raw/iiot/2017/iiot_2017_problem_11.pdf",
+        "solution_file": null,
+        "total_points": null,
+        "problem_description": "III OOO III ((( ))) ;;; +++ TTT IOI in Teams 2017 - Practice Bologna, May 17-20th 2017 gitube •EN GitUbe Graph ( gitube) The Italian Olympic staﬀ is very active onGitUbe, a website that is used by a lot of developers around the world to collaborate on open source code. William likes GitUbe so much that he wrote a “GitUbe-like” system, for his personal use. Sadly, a key feature is missing in William’s system: theGitUbe Graph. Figure 1: A sampleGitUbe Graph. The “GitUbe Graph” is a neat way to show users’ activity. For each user, the graph shows a grid where each cell is colored with some color depending on the number ofcommits made by the user in that day (e.g. dark green for a very active day, light green for a less active day, and so on). The grid has7 rows (one for each day of the week) and some amount of columns (depending on how many days we want to show; GitUbe, for example, always shows the whole year). For the purpose of this task, we can assume: •We want the graph to showD days (numbered from1 to D). •The ﬁrst day (or “day number1 of D”) is always a Monday. •The week starts on Monday. •Like GitUbe, we will number the days in the graph going column by colum, starting from the top left cell of the grid and ending in the bottom right cell. •To better support colorblind people, we won’t use colors at all, and instead use special symbols: –The ‘.’ symbol, when there are less than10 commits in the day. –The ‘o’ letter, when there are from10 to 19 commits in the day. –The ‘O’ letter, when there are20 or more commits in the day. This is an example graph: OoOOoo.oOOO.OO.OOo..O..O.OO.O.oooO.ooo.. oOOOOOOOOOO.o..oOoOoOooO.O..Oo.oo.ooo.oO .o..oO.o.Oo.Oo..o.OOO.O.O.O.oO.o.o.o.ooO ..OOoOO.O.OoOoOo..OO..o...OooooOO.ooOoO. .OoOoOoOoooOO..oooOooo.oO....o.OO.OoO.oO OOOoooOOoooO.o.O.o.oOOOoo...OO..OOOo..O. OO.OOoooOO...O.oo.o.OO..o....Oo..O.o.ooO You will be given the number of daysD, the number of commitsN made by some user, and then the actual list of commits. For each commit, you are given a single integerCi which represents the day in which the commit was made. Help William compute the user graph! gitube Page 7 of 14\n\nIII OOO III ((( ))) ;;; +++ TTT IOI in Teams 2017 - Practice Bologna, May 17-20th 2017 gitube •EN Among the attachments of this task you may ﬁnd a template ﬁlegithub.* with a sample incomplete implementation. Input The ﬁrst line contains two integersD and N. The second line containsN integers Ci. Output You need to print the user graph as previously described. Constraints •1≤D≤366 (it might be a leap year, or a1-day long period, and so on). •1≤N≤100 000. •1≤Ci≤D for each i = 0 . . . N−1. Scoring Your program will be tested against several test cases grouped in subtasks. In order to obtain the score of a subtask, your program needs to correctly solve all of its test cases. •Subtask 1 [ 5 points]: Examples. •Subtask 2 [25 points]: N≤1000. •Subtask 3 [40 points]: D≤7. •Subtask 4 [30 points]: No additional limitations. Examples input.txt output.txt 20 37 4 8 15 5 5 13 13 5 3 11 13 13 16 18 5 13 13 1 13 18 13 13 5 5 12 4 5 8 5 6 4 14 9 13 5 1 5 ... ... ... ... o .. . o . .. 7 40 1 2 6 2 2 4 2 2 1 2 6 2 6 1 4 6 2 7 2 2 2 2 7 3 2 3 1 2 2 4 2 2 2 4 2 2 6 4 5 2 . O . . . . . gitube Page 8 of 14",
+        "gold_label": {
+          "expected_answer": null,
+          "grading_rubric": "Automated judge: accepted if output matches expected for all test cases within time/memory limits.",
+          "human_baseline": null
+        },
+        "status": "partial",
+        "competition_id": "iiot",
+        "evaluation": {
+          "evaluator_id": null,
+          "status": "not_ready",
+          "rubric_path": "data/rubrics/iiot_programming_judge_v1.json",
+          "deliverable": "source_code",
+          "reason": "Official tests, checker configuration, and an isolated execution package are not archived for this problem.",
+          "scorecard_path": "data/rubrics/task_scorecards/iiot.json",
+          "scorecard_key": "iiot_2017_11"
+        },
+        "eval_unit": "problem",
+        "is_multi_agent": true,
+        "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+        "assets": [
+          {
+            "path": "data/raw/iiot/2017/iiot_2017_problem_11.pdf",
+            "mime_type": "application/pdf",
+            "role": "agent_visible",
+            "sha256": "5209ca4d6d459ef502e6c494ef0f752e7774033d1d29421c7e92eefecc04d66f"
+          }
+        ],
+        "split": "unspecified",
+        "license": {
+          "status": "not_verified",
+          "spdx_id": null,
+          "redistribution_allowed": null,
+          "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+        },
+        "provenance": {
+          "status": "source_linked",
+          "source_url": "https://iio-team.github.io/competition/tasks/2017",
+          "source_file": "data/raw/iiot/2017/iiot_2017_problem_11.pdf",
+          "solution_file": null,
+          "files": [
+            {
+              "path": "data/raw/iiot/2017/iiot_2017_problem_11.pdf",
+              "role": "agent_visible",
+              "sha256": "5209ca4d6d459ef502e6c494ef0f752e7774033d1d29421c7e92eefecc04d66f"
+            }
+          ],
+          "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+        }
+      },
+      "archived_source_file": "data/excluded/integrity_repair_20260913T032421Z/data/raw/iiot/2017/iiot_2017_problem_11.pdf"
+    },
+    {
+      "competition_id": "iiot",
+      "problem_id": "iiot_2017_12",
+      "year": 2017,
+      "task_code": "magnamagna",
+      "reason": "Publisher labels this task as practice; excluded at user request. Official 2017 final tasks remain active.",
+      "archive_url": "https://iio.team/competition/tasks/2017",
+      "source_file": "data/raw/iiot/2017/iiot_2017_problem_12.pdf",
+      "source_sha256": "e94578e63ae26675a5cabc43322f44c99d8cd4e76be0b9329c4cdd0402b0849c",
+      "record": {
+        "problem_id": "iiot_2017_12",
+        "competition": "IIOT — International Informatics Olympiad in Teams",
+        "year": 2017,
+        "problem_number": 12,
+        "topic": "IIOT 2017 Edition — Problem 12",
+        "task_type": "algorithmic_programming",
+        "team_size": 4,
+        "source_url": "https://iio-team.github.io/competition/tasks/2017",
+        "source_file": "data/raw/iiot/2017/iiot_2017_problem_12.pdf",
+        "solution_file": null,
+        "total_points": null,
+        "problem_description": "III OOO III ((( ))) ;;; +++ TTT IOI in Teams 2017 - Practice Bologna, May 17-20th 2017 magnamagna •EN Winning Strategies ( magnamagna) Figure 1: The long line of bribes, to be taken in turns. Giorgio and William enjoy playing to- gether theMagnamagna game, a typical Italian two-player game inspired by the well-known practice. After collecting bribes from contes- tants2, they ﬁrst arrange them into a long line of N items of nominal value Vi for i = 0 . . . N−1 (from left to right). Then, they play in turns each time choosing between two possibilities: •take the leftmost item and gain its value (‘L’), •take the rightmost item and gain its value (‘R’). In any case, taking items from the interior of the line is never allowed. Thanks to months of exhaustive research, Giorgio claims to have ﬁnally found the optimal strategy for this game, allowing him to collect the most possible money on every play. He thus decided to let William play ﬁrst so as to compensate the strategic gap. Giorgio’s strategy is indeed very simple: each time he chooses the move with the highestsmartness. The smartness of a move is the quantity: x0−x1 2 + x2 4 −x3 8 + . . . where x0, x1, . . .are the values in the line of items, takenfrom the chosen endon. For example, consider the following line of items: 6 3 0 8 In this case, the smartness of move‘L’ is 6−3/2 + 0/4−8/8 = 3 .5 and the smartness of move‘R’ is 8−0/2 + 3/4−6/8 = 8. Thus in this case, Giorgio would choose move‘R’. In the very unlikely case of the two moves having exactly the same smartness, Giorgio will let William choose for him. \u000e Realnumberscloserthan 10−6 areconsideredequalforthepurposeofthistask(werecommend to use double precision ﬂoating point numbers). Despite Giorgio’s claims, William is not that convinced of the optimality of this strategy. Help William collect the highest possible value, knowing that Giorgio always follows the above strategy! Among the attachments of this task you may ﬁnd a template ﬁlemagnamagna.* with a sample incomplete implementation. Input The ﬁrst line contains the only integerN. The second line containsN integers Vi. 2Any reference to people and facts is purely ﬁctional. magnamagna Page 9 of 14\n\nIII OOO III ((( ))) ;;; +++ TTT IOI in Teams 2017 - Practice Bologna, May 17-20th 2017 magnamagna •EN Output You need to write a single line with a sequence ofN characters ‘L’ or ‘R’, representing the moves taken by William and Giorgio. Constraints •1≤N≤1000. •0≤Vi≤100 000 for each i = 0 . . . N−1. Scoring Your program will be tested against several test cases grouped in subtasks. The score in each subtask will be calculated as theminimum score obtained in any of its test cases, multiplied by the value of the subtask. The score in a test case will be0 if Giorgio’s moves in the produced sequence do not follow the strategy described above. Otherwise, it will be calculated as: max ( W−Wavg Wopt−Wavg ,0 ) where W is the value collected by William through your program,Wopt is the maximum value that William can possibly collect, andWavg is the value collected by William in average.3 •Subtask 1 [ 5 points]: Examples. •Subtask 2 [35 points]: N≤10. •Subtask 3 [40 points]: N≤100. •Subtask 4 [20 points]: No additional limitations. Examples input.txt output.txt 4 6 3 0 8 RLLR 5 84 75 42 25 51 LLRLR Explanation In theﬁrst sample case, William gains8 + 3 = 11 and Giorgio gains6 + 0 = 6. In thesecond sample case, William gains84 + 51 + 25 = 160 and Giorgio gains75 + 42 = 117. 3The average is computed assuming that William chooses‘L’ with probability 50% and ‘R’ also with probability50%. magnamagna Page 10 of 14",
+        "gold_label": {
+          "expected_answer": null,
+          "grading_rubric": "Automated judge: accepted if output matches expected for all test cases within time/memory limits.",
+          "human_baseline": null
+        },
+        "status": "partial",
+        "competition_id": "iiot",
+        "evaluation": {
+          "evaluator_id": null,
+          "status": "not_ready",
+          "rubric_path": "data/rubrics/iiot_programming_judge_v1.json",
+          "deliverable": "source_code",
+          "reason": "Official tests, checker configuration, and an isolated execution package are not archived for this problem.",
+          "scorecard_path": "data/rubrics/task_scorecards/iiot.json",
+          "scorecard_key": "iiot_2017_12"
+        },
+        "eval_unit": "problem",
+        "is_multi_agent": true,
+        "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+        "assets": [
+          {
+            "path": "data/raw/iiot/2017/iiot_2017_problem_12.pdf",
+            "mime_type": "application/pdf",
+            "role": "agent_visible",
+            "sha256": "e94578e63ae26675a5cabc43322f44c99d8cd4e76be0b9329c4cdd0402b0849c"
+          }
+        ],
+        "split": "unspecified",
+        "license": {
+          "status": "not_verified",
+          "spdx_id": null,
+          "redistribution_allowed": null,
+          "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+        },
+        "provenance": {
+          "status": "source_linked",
+          "source_url": "https://iio-team.github.io/competition/tasks/2017",
+          "source_file": "data/raw/iiot/2017/iiot_2017_problem_12.pdf",
+          "solution_file": null,
+          "files": [
+            {
+              "path": "data/raw/iiot/2017/iiot_2017_problem_12.pdf",
+              "role": "agent_visible",
+              "sha256": "e94578e63ae26675a5cabc43322f44c99d8cd4e76be0b9329c4cdd0402b0849c"
+            }
+          ],
+          "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+        }
+      },
+      "archived_source_file": "data/excluded/integrity_repair_20260913T032421Z/data/raw/iiot/2017/iiot_2017_problem_12.pdf"
+    },
+    {
+      "competition_id": "iiot",
+      "problem_id": "iiot_2017_13",
+      "year": 2017,
+      "task_code": "mode",
+      "reason": "Publisher labels this task as practice; excluded at user request. Official 2017 final tasks remain active.",
+      "archive_url": "https://iio.team/competition/tasks/2017",
+      "source_file": "data/raw/iiot/2017/iiot_2017_problem_13.pdf",
+      "source_sha256": "15977d1e65aa586f6926518fb8fedaeeeb9d1c7cf64a90c8b60b55fa4ae786ae",
+      "record": {
+        "problem_id": "iiot_2017_13",
+        "competition": "IIOT — International Informatics Olympiad in Teams",
+        "year": 2017,
+        "problem_number": 13,
+        "topic": "IIOT 2017 Edition — Problem 13",
+        "task_type": "algorithmic_programming",
+        "team_size": 4,
+        "source_url": "https://iio-team.github.io/competition/tasks/2017",
+        "source_file": "data/raw/iiot/2017/iiot_2017_problem_13.pdf",
+        "solution_file": null,
+        "total_points": null,
+        "problem_description": "III OOO III ((( ))) ;;; +++ TTT IOI in Teams 2017 - Practice Bologna, May 17-20th 2017 mode •EN Fickle Trends ( mode) Giorgio enjoys doing endless statistical calculations in his spare time. Today, he collected the history of songs he ever played on his laptop, and started wondering about the many diﬀerent music genres he followed during these last years. Figure 1: A spatial representation of music genres. In particular, the list comprisesN songs ordered chronologically, each of them tagged with a music genre Gi. Giorgio deﬁne as atrend at timei = 1 . . . Nany music genre which was a mode4 among the genres G0, . . . , Gi−1 (that is, among the songs played before timei). How many diﬀerent music genres were a trend at any past point in time? Among the attachments of this task you may ﬁnd a template ﬁlemode.* with a sample incomplete implementation. Input The ﬁrst line contains the only integerN. The second line containsN integers Gi. Output You need to write a single line with an integer: the number of diﬀerent trends ever followed by Giorgio. Constraints •1≤N≤100 000. •1≤Gi≤109 for each i = 0 . . . N−1. 4An element x is a mode in a listℓif it is one of the elements present most often inℓ. A list can have multiple modes, for example, ℓ= [2,0,2,1,1] has modes 1 and 2. mode Page 11 of 14\n\nIII OOO III ((( ))) ;;; +++ TTT IOI in Teams 2017 - Practice Bologna, May 17-20th 2017 mode •EN Scoring Your program will be tested against several test cases grouped in subtasks. In order to obtain the score of a subtask, your program needs to correctly solve all of its test cases. •Subtask 1 [ 5 points]: Examples. •Subtask 2 [35 points]: N, Gi≤100 for all i. •Subtask 3 [40 points]: Gi≤1000 for all i. •Subtask 4 [20 points]: No additional limitations. Examples input.txt output.txt 6 1 10 10 5 10 5 2 11 7 4 3 7 2 5 7 5 2 6 5 4 Explanation In theﬁrst sample case, the trends are genres1 and 10 which where both trending in timei = 2. Even though 5 is overall more frequent than1, it has never been a trend. In thesecond sample case, the trends are genres3, 4, 7 (in time i = 3) and 5 (in time i = 11). mode Page 12 of 14",
+        "gold_label": {
+          "expected_answer": null,
+          "grading_rubric": "Automated judge: accepted if output matches expected for all test cases within time/memory limits.",
+          "human_baseline": null
+        },
+        "status": "partial",
+        "competition_id": "iiot",
+        "evaluation": {
+          "evaluator_id": null,
+          "status": "not_ready",
+          "rubric_path": "data/rubrics/iiot_programming_judge_v1.json",
+          "deliverable": "source_code",
+          "reason": "Official tests, checker configuration, and an isolated execution package are not archived for this problem.",
+          "scorecard_path": "data/rubrics/task_scorecards/iiot.json",
+          "scorecard_key": "iiot_2017_13"
+        },
+        "eval_unit": "problem",
+        "is_multi_agent": true,
+        "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+        "assets": [
+          {
+            "path": "data/raw/iiot/2017/iiot_2017_problem_13.pdf",
+            "mime_type": "application/pdf",
+            "role": "agent_visible",
+            "sha256": "15977d1e65aa586f6926518fb8fedaeeeb9d1c7cf64a90c8b60b55fa4ae786ae"
+          }
+        ],
+        "split": "unspecified",
+        "license": {
+          "status": "not_verified",
+          "spdx_id": null,
+          "redistribution_allowed": null,
+          "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+        },
+        "provenance": {
+          "status": "source_linked",
+          "source_url": "https://iio-team.github.io/competition/tasks/2017",
+          "source_file": "data/raw/iiot/2017/iiot_2017_problem_13.pdf",
+          "solution_file": null,
+          "files": [
+            {
+              "path": "data/raw/iiot/2017/iiot_2017_problem_13.pdf",
+              "role": "agent_visible",
+              "sha256": "15977d1e65aa586f6926518fb8fedaeeeb9d1c7cf64a90c8b60b55fa4ae786ae"
+            }
+          ],
+          "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+        }
+      },
+      "archived_source_file": "data/excluded/integrity_repair_20260913T032421Z/data/raw/iiot/2017/iiot_2017_problem_13.pdf"
+    },
+    {
+      "competition_id": "iiot",
+      "problem_id": "iiot_2017_14",
+      "year": 2017,
+      "task_code": "rescaling",
+      "reason": "Publisher labels this task as practice; excluded at user request. Official 2017 final tasks remain active.",
+      "archive_url": "https://iio.team/competition/tasks/2017",
+      "source_file": "data/raw/iiot/2017/iiot_2017_problem_14.pdf",
+      "source_sha256": "ddfc49aaffd972047472ea12768803c873bce5e0ac26304f6c4ed4bc71c0c57e",
+      "record": {
+        "problem_id": "iiot_2017_14",
+        "competition": "IIOT — International Informatics Olympiad in Teams",
+        "year": 2017,
+        "problem_number": 14,
+        "topic": "IIOT 2017 Edition — Problem 14",
+        "task_type": "algorithmic_programming",
+        "team_size": 4,
+        "source_url": "https://iio-team.github.io/competition/tasks/2017",
+        "source_file": "data/raw/iiot/2017/iiot_2017_problem_14.pdf",
+        "solution_file": null,
+        "total_points": null,
+        "problem_description": "III OOO III ((( ))) ;;; +++ TTT IOI in Teams 2017 - Practice Bologna, May 17-20th 2017 rescaling •EN Rescaling Sequence ( rescaling) Giorgio is working on a new research paper, this time about integer sequences. Today, he’s looking for a speciﬁc kind of sequence: therescaling sequence. A rescaling sequence is a sequence of integers such that, for each pair of adjacent elements, one of the following statements is true: •The second element is smaller than the ﬁrst element. •The second element is a multiple of the ﬁrst element. So, this is a rescaling sequence: 4,8,7,21,19. This however is not: 4,8,7,20,19 because 20 is not a multiple of 7. Figure 1: What Giorgio’s whiteboard looks like. You are given a sequence ofN integers. Giorgio can delete some elements from the sequence, but he wants to delete as few as possible of them (possibly zero!). Help Giorgio obtain a rescaling sequence by computing the minimum number of elements to be deleted. Among the attachments of this task you may ﬁnd a template ﬁlerescaling.* with a sample incomplete implementation. Input The ﬁrst line contains the only integerN. The second line containsN integers Si. Output You need to write a single line with an integer: the minimum number of elements to delete. rescaling Page 13 of 14\n\nIII OOO III ((( ))) ;;; +++ TTT IOI in Teams 2017 - Practice Bologna, May 17-20th 2017 rescaling •EN Constraints •1≤N≤5000. •1≤Si≤1 000 000 for each i = 0 . . . N−1. Scoring Your program will be tested against several test cases grouped in subtasks. In order to obtain the score of a subtask, your program needs to correctly solve all of its test cases. •Subtask 1 [ 5 points]: Examples. •Subtask 2 [25 points]: N≤10. •Subtask 3 [30 points]: N≤100. •Subtask 4 [20 points]: All the elements of the sequence areprime numbers. •Subtask 5 [20 points]: No additional limitations. Examples input.txt output.txt 5 4 8 7 21 19 0 5 4 8 7 20 19 2 Explanation The ﬁrst sample caseis the one described above. In thesecond sample case, it is suﬃcient to erase either8,7 or 20,19. rescaling Page 14 of 14",
+        "gold_label": {
+          "expected_answer": null,
+          "grading_rubric": "Automated judge: accepted if output matches expected for all test cases within time/memory limits.",
+          "human_baseline": null
+        },
+        "status": "partial",
+        "competition_id": "iiot",
+        "evaluation": {
+          "evaluator_id": null,
+          "status": "not_ready",
+          "rubric_path": "data/rubrics/iiot_programming_judge_v1.json",
+          "deliverable": "source_code",
+          "reason": "Official tests, checker configuration, and an isolated execution package are not archived for this problem.",
+          "scorecard_path": "data/rubrics/task_scorecards/iiot.json",
+          "scorecard_key": "iiot_2017_14"
+        },
+        "eval_unit": "problem",
+        "is_multi_agent": true,
+        "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+        "assets": [
+          {
+            "path": "data/raw/iiot/2017/iiot_2017_problem_14.pdf",
+            "mime_type": "application/pdf",
+            "role": "agent_visible",
+            "sha256": "ddfc49aaffd972047472ea12768803c873bce5e0ac26304f6c4ed4bc71c0c57e"
+          }
+        ],
+        "split": "unspecified",
+        "license": {
+          "status": "not_verified",
+          "spdx_id": null,
+          "redistribution_allowed": null,
+          "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+        },
+        "provenance": {
+          "status": "source_linked",
+          "source_url": "https://iio-team.github.io/competition/tasks/2017",
+          "source_file": "data/raw/iiot/2017/iiot_2017_problem_14.pdf",
+          "solution_file": null,
+          "files": [
+            {
+              "path": "data/raw/iiot/2017/iiot_2017_problem_14.pdf",
+              "role": "agent_visible",
+              "sha256": "ddfc49aaffd972047472ea12768803c873bce5e0ac26304f6c4ed4bc71c0c57e"
+            }
+          ],
+          "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+        }
+      },
+      "archived_source_file": "data/excluded/integrity_repair_20260913T032421Z/data/raw/iiot/2017/iiot_2017_problem_14.pdf"
+    }
+  ]
+}

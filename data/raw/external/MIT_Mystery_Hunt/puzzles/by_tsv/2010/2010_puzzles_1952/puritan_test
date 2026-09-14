@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb"> 
+<head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta http-equiv="Content-Style-Type" content="text/css" /> 
+  <meta http-equiv="Content-Language" content="en-GB" /> 
+  <title>Puritan Test</title> 
+  <link rel="stylesheet" type="text/css" href="../../../styles/puzzles.css" media="screen" /> 
+  <link rel="stylesheet" type="text/css" href="../../../styles/puzzles.css" media="print" /> 
+</head> 
+ 
+<body>
+<div id="container">
+
+  <div id="header">
+    <div id="header-content">
+      <a id="back-to-round" href="../"><img src="../../../images/return-to-1952.gif" /></a>
+      <a id="solution" href="solution.html"><img src="../../../images/solution.gif" /></a>
+    </div><!--end of id="header-content"-->
+  </div><!--end of id="header"-->
+
+  <div id="main">
+    <div id="page">
+      <div id="page-top">
+        <img id="page-stamp" src="../../../images/stamp-1952.gif" />
+        <h1 id="page-heading">Puritan Test</h1>
+      </div>
+
+      <div id="page-center">
+        <div id="page-left">&nbsp;</div>
+        <div id="page-right">&nbsp;</div>
+
+        <div id="page-content">
+          <span class="flavortext">
+            <p>We must endeavor foremost to follow that which is entirely Puritan in character. Else, we are no better than Wilhelmina W. Witchiepoo or other sinners.</p>
+          </span>
+          
+          <ol>
+            <li>What be the correct show of devotion to the LORD?
+            <ol style="list-style-type:lower-alpha">
+              <li>Hands folded at bowed head</li>
+              <li>Rapt, oiled torso writhing</li>
+              <li>Whispering in obscure profanities</li>
+            </ol></li>
+            <li>Which maketh the finest hair shirt? 
+            <ol style="list-style-type:lower-alpha">
+              <li>Stinging ant mesh</li>
+              <li>Squash and turnip strands</li>
+              <li>Two pair otter pelts</li>
+            </ol></li>
+            <li>Filleth the blank: "Goody Wright ____ to the Devil!"
+            <ol style="list-style-type:lower-alpha">
+              <li>Art unnaturally akin</li> 
+              <li>Ain't too averse</li>
+              <li>Doth turn her soul over</li>
+            </ol></li>
+            <li>What doth this picture suggest?<br/>
+            <img src="puritan_test.jpg" />
+            <ol style="list-style-type:lower-alpha">
+              <li>An earthly delight</li>
+              <li>Thanksgiving feast nap swoon</li>
+              <li>Pain, tragedy, and giant birds</li>
+            </ol></li>
+            <li>Jabots - how poofy is TOO poofy?
+            <ol style="list-style-type:lower-alpha">
+              <li>Two pleats should be apt enough</li>
+              <li>Hills of frills! Lakes of lace! With floral print rims!</li>
+              <li>Fanciful neckwear means ruin, whatever the style</li>
+            </ol></li>
+            <li>Be thou sinful?
+            <ol style="list-style-type:lower-alpha">
+              <li>Part of me is naughty</li>
+              <li>Is this query or trap, rather?</li>
+              <li>Regularly as rain each April</li>
+            </ol></li>
+            <li>Thy neighbor's child is possessed. How should he be exorcised?
+            <ol style="list-style-type:lower-alpha">
+              <li>Tar and feathers</li>
+              <li>Bible raised high, rant thunderingly of the LORD's power</li>
+              <li>Nutria hair on the abdomen - marvelous against ye olde spin-and-spew</li>
+            </ol></li>
+            <li>Hast thou ever "Smacked the flapjack?"
+            <ol style="list-style-type:lower-alpha">
+              <li>My motto: do it every day for good health</li>
+              <li>No, the spattered paint really makes a mess (I'm told)</li>
+              <li>'Tis difficult to train each waterfowl (I'm told)</li>
+            </ol></li>
+          </ol>
+        </div><!--end of id="page-content"-->
+      </div><!--end of id="page-center"-->
+
+      <div id="page-bottom">&nbsp;</div>
+
+    </div><!--end of id="page"-->
+  </div><!--end of id="main"-->
+
+</div><!--end of id="container"-->
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

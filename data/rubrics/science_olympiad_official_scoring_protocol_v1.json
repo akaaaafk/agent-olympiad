@@ -41,24 +41,49 @@
       "source_type": "official_organizer",
       "title": "Science Olympiad Scoring Guidelines",
       "url": "https://www.soinc.org/scoring-guidelines",
-      "supports": ["event ranking", "ties", "tiers", "P/NS/DQ", "overall sum", "team tie-breaker"]
+      "supports": [
+        "event ranking",
+        "ties",
+        "tiers",
+        "P/NS/DQ",
+        "overall sum",
+        "team tie-breaker"
+      ]
     },
     {
       "source_type": "official_organizer",
       "title": "Science Olympiad Scoring Guidelines PDF",
       "url": "https://www.soinc.org/sites/default/files/uploaded_files/SO_ScoringGuidelines_2022.pdf",
-      "supports": ["official protocol in downloadable form"]
+      "supports": [
+        "official protocol in downloadable form"
+      ]
     },
     {
       "source_type": "local_benchmark_evidence",
       "path": "data/benchmarks/science_olympiad/benchmark.json",
-      "supports": ["annotated Solar System sample", "event-author guidance", "50-point answer key", "single-event scope"]
+      "supports": [
+        "annotated Solar System sample",
+        "event-author guidance",
+        "two 50-point key pages, 100 numbered answers",
+        "single-event scope"
+      ]
     }
   ],
   "limitations": [
     "There is no universal content rubric or raw-score maximum across Science Olympiad events.",
-    "The benchmark sample's cover says questions are equally valued, while its answer key is labeled 50/50 for 100 numbered prompts; the extract does not provide a reliable official mapping from every prompt to raw points.",
     "Do not infer the approximately 23-event tournament program, event weights, or current event rules from the single archived sample.",
     "Local Tournament Directors may explicitly revise these guidelines."
-  ]
+  ],
+  "archived_sample_raw_score": {
+    "max_score": 100,
+    "question_count": 100,
+    "points_per_question": 1,
+    "source_pages": [
+      1,
+      14,
+      15
+    ],
+    "basis": "Cover says all questions have equal value; answer pages 14 and 15 each contain 50 distinct numbered answers and a 50/50 header. Together they support 100 one-point items for this sample.",
+    "scope": "Only this archived example, not universal event scoring."
+  }
 }

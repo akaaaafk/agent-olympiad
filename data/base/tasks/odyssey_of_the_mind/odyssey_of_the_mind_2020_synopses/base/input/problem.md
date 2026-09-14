@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2020
-
 # Odyssey of the Mind — 2020 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Balsa LimboDivisions I, II, III & IVTeams will build balsa wood structures that are created by adjusting its interconnected parts. When the parts are not in the final form for weight testing, they must be able to pass under a limbo bar. Higher score will be awarded for how low the bar is when the structure passes under it. However, the bar is not allowed to be lower than ½”! The limbo bar test and maneuvering the structure for testing will take place during the performance time. Testing of the structure will take place during a performance with a theme about dancing and movement.
 5. Gibberish or NotDivisions I, II, III & IVGenius or not so smart, statements change from Gibberish at the start. Do the thoughts shine or miss the mark? Masses think they’re being led out of the dark. A Champion arranges meetings with those in power, and gibberish ideas bloom like a flower. The crowd replaces thoughts with wisdom, and a Child sees it is all just humdrum. Misinterpreted over and again, twisted words fly in the end. Music blares and the celebration is wild, and misunderstanding is accepted by the child. The performance will explain why the child does not reveal the truth that what they believe is wisdom was really just gibberish.
 6. Primary: The Fashion BugGrades K-2The team’s problem is to create and present a humorous performance that includes a fashion show for insects. An up-and-coming designer will be highlighted as a narrator describes the odd and curious fashions as they are modeled. A team-created song, a commercial, and a critic who reviews the Fashion Show are all part of the performance.
+

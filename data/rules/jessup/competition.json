@@ -16,7 +16,8 @@
   },
   "allowed_tools": [
     "query_rules",
-    "web_search"
+    "web_search",
+    "check_jessup_authority_table"
   ],
   "resources": {
     "internet": "allowed",

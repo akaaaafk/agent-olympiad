@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Virtual Sectors</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="expires" content="0"/>
+  <!--meta http-equiv="refresh" content="900"/-->
+  <link rel="stylesheet" href="../styles/virtual-sectors.css"/>
+  <script src="../support/flowplayer/example/flowplayer-3.0.1.min.js"></script>
+  <script type="text/javascript" src="../support/jquery-1.2.6.min.js"></script>
+  <style type="text/css">
+  </style>
+</head>
+<body>
+ <div id="content">
+   <div id="header"></div>
+
+   <div id="spin-area">
+     <div class="spin-counter">You have unlocked all the puzzles.</div>
+     <div class="spin-image"></div>
+     <div class="spin-button">
+       <img src="../images/virtual-sectors/VS-spinbutton-disabled.png"/>
+     </div>
+     <div class="result">
+            </div>
+   </div>
+
+<script>
+  $(function () {
+    $f("a.player", "../support/flowplayer/flowplayer-3.0.1.swf", {
+        // open up player to larger size
+  onBeforeClick: function() {
+    // unload previously opened player
+    $f().unload();
+    // get wrapper
+    var wrap = $(this.getParent());
+    wrap.find("img").fadeOut(); // goodbye play image
+    //grow
+    wrap.animate({width:320, height:240},500,function() {
+      // load when done
+      $f(this).load();
+    });
+    // disable default click
+    return false;
+ },
+
+ //unload resumes to orig state
+ onUnload: function() {
+  $(this.getParent()).animate({width:320, height:30},500, function() {
+    $(this).find("img").fadeIn();
+  });
+ },
+
+ // when finished, do unload
+ onFinish: function() {
+   this.unload();
+ }
+});
+});
+</script>
+
+   <div class="intro">
+     <div class="text">Leaving Inner Zyzzlvaria, you've entered the Virtual Sectors -- a subdivision of space where death comes at you in all manner of ways -- where you've picked up a transmission from Harold:</div>
+     <a class="player" href="../images/virtual-sectors/intro.flv"><img src="../images/virtual-sectors/harold-transmission.png"/></a>
+   </div>
+
+   <div class="puzzles">
+    <ul>
+     <li>
+     Sector A: 
+     <a class="" href="sorry_wrong_number/PUZZLE">Sorry, Wrong Number</a>
+     </li>
+     <li>
+     Sector C: 
+     <a class="" href="mos_eisley_spaceport/PUZZLE">Mos Eisley Spaceport</a>
+     </li>
+     <li>
+     Sector E: 
+     <a class="" href="nurse_charnels_reports_from_the_sickbay_of_the_iuss_parkerstonei/PUZZLE">Nurse Charnel's Reports from the Sickbay of the <i>U.S.S. Parkerstone</i></a>
+     </li>
+     <li>
+     Sector F: 
+     <a class="" href="fantastic_voyage/PUZZLE">Fantastic Voyage</a>
+     </li>
+     <li>
+     Sector H: 
+     <a class="" href="zyzzlvaria_we_love_you/PUZZLE">Zyzzlvaria, We Love You!</a>
+     </li>
+     <li>
+     Sector I: 
+     <a class="" href="wellcoordinated/PUZZLE">Well-Coordinated</a>
+     </li>
+     <li>
+     Sector K: 
+     <a class="" href="malthusian_catastrophes/PUZZLE">Malthusian Catastrophes</a>
+     </li>
+     <li>
+     Sector L: 
+     <a class="" href="soylent_partners/PUZZLE">Soylent Partners</a>
+     </li>
+     <li>
+     Sector N: 
+     <a class="" href="discworld/PUZZLE">Discworld</a>
+     </li>
+     <li>
+     Sector O: 
+     <a class="" href="plan_4_from_outer_space/PUZZLE">Plan 4 From Outer Space</a>
+     </li>
+     <li>
+     Sector Q: 
+     <a class="" href="crop_squares/PUZZLE">Crop Squares</a>
+     </li>
+     <li>
+     Sector T: 
+     <a class="" href="showcases/PUZZLE">Showcases</a>
+     </li>
+     <li>
+     Sector V: 
+     <a class="" href="lets_play_spaceball/PUZZLE">Let's Play Spaceball!</a>
+     </li>
+     <li>
+     Sector W: 
+     <a class="" href="supercollider/PUZZLE">Supercollider</a>
+     </li>
+   </div>
+
+   <div class="extra-info">
+<p>Please call HQ when you discover the name of Harold's captor and how he can be defeated.</p>
+
+<p>Once you know who's responsible, use <a href="../images/virtual-sectors/VS-wheel-a129e25f1a2a864e.png">this image</a>
+to locate Harold.</p>
+   </div>
+
+
+  <div class="starmap-link"><a href="index.html"><img src="../images/starmap-link.png"/></a></div>
+  <div style="clear: both"></div>
+
+ </div>
+
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

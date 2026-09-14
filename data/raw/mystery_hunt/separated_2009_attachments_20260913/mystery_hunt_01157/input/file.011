@@ -1,0 +1,16 @@
+-module(file2).
+-export([h2k9/2,test_h2k9/0]).
+
+h2k9(X,0) -> [];
+h2k9(X,N) when N>0 -> 
+  T=X * 256,
+  [trunc(T)|h2k9(T-trunc(T),N - 1)].
+
+% A little test runner.  Running this should exercise the function nicely.
+test_h2k9() ->
+  io:fwrite(h2k9(0.282950246111796, 5)),
+  io:fwrite(" "),
+  io:fwrite(h2k9(0.380590677261353, 3)),
+  io:fwrite(" "),
+  io:fwrite(h2k9(0.302268171541983, 5)),
+  io:fwrite("~n",[]).

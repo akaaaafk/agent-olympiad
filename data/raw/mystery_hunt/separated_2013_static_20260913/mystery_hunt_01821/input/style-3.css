@@ -1,0 +1,71 @@
+table.grid {
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    border-spacing: .25em;
+    border-collapse: separate;
+}
+.c {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+.grid tr {
+    height: 30px;
+}
+.grid td {
+    position: relative;
+    background-color: none;
+    border-bottom: 1px solid #000;
+    width: 26px;
+    height: 26px;
+    vertical-align: bottom;
+    text-align: center;
+
+    border-spacing: 2px;
+    margin: 0.5em;
+}
+.grid td.gap {
+    border: none;
+    background-color: none;
+}
+.grid td .number {
+    display: block;
+    position: relative;
+    z-index: 2;
+    font-size: 8pt;
+    line-height: 1em;
+    bottom: -24pt;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul.puzzle {
+    list-style: none;
+    font-size: 12pt;
+}
+
+span.letter {
+    font-size: 18pt;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+table {
+    display: inline-block;
+    vertical-align: -50%;
+    margin-left: .1em;
+    border-spacing: 2px;
+}
+
+table.last {
+    display: block;
+    margin-left: 8em;
+}
+
+table.last td {
+    width: 40px;
+}

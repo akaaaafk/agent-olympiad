@@ -1,0 +1,55 @@
+{
+  "schema_version": "iiot-reference-archive/v1",
+  "problem_id": "iiot_2021_01",
+  "task_code": "chimneys",
+  "round": "international_final",
+  "archive_url": "https://iio.team/competition/tasks/2021",
+  "source_links": {
+    "Statement": "https://drive.google.com/file/d/1Rfh46GiVV7aAj7Y0AI7zIVj3sSXpjMZQ/view?usp=drive_link",
+    "Solutions": "https://drive.google.com/file/d/1xFBJPYPiiCceba16AKCJly-NRAHq7b36/view?usp=drive_link"
+  },
+  "reference": {
+    "path": "data/raw/iiot/2021/chimneys/references/chimneys.cpp",
+    "source_url": "https://drive.google.com/uc?id=1xFBJPYPiiCceba16AKCJly-NRAHq7b36&export=download",
+    "sha256": "c5d343aa2b8ab879ae57bdccaa3fc47a9b43898b4ba1c8574807dd516b366f05",
+    "bytes": 4539,
+    "classification": "publisher_reference_source",
+    "execution_validation": "not_run"
+  },
+  "official_scoring": {
+    "total_points": 100,
+    "subtasks": [
+      {
+        "id": 1,
+        "points": 0
+      },
+      {
+        "id": 2,
+        "points": 7
+      },
+      {
+        "id": 3,
+        "points": 18
+      },
+      {
+        "id": 4,
+        "points": 27
+      },
+      {
+        "id": 5,
+        "points": 16
+      },
+      {
+        "id": 6,
+        "points": 32
+      }
+    ],
+    "mode": "all_cases_required_per_subtask",
+    "test_to_subtask_mapping": "not_archived"
+  },
+  "public_test_listing": {
+    "status": "no_testcase_link_in_publisher_archive"
+  },
+  "readiness": "not_ready",
+  "license_policy": "No redistribution permission inferred."
+}

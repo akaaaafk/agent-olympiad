@@ -3,8 +3,21 @@
   "gold_pointer": "data/benchmarks/icpc/benchmark.json#icpc_wf_2017_visual.gold_label",
   "has_gold_answer": false,
   "evaluator_id": "programming_judge",
-  "evaluator_status": "deferred",
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "remote_judge_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": "programming_judge",
+    "status": "remote_judge_ready",
+    "reason": "VJudge problem-mode mapping configured; the remote verdict is authoritative.",
+    "vjudge_oj": "Kattis",
+    "vjudge_prob_num": "visual",
+    "vjudge_submit_mode": "problem",
+    "notes": "Remote upload uses VJudge problem mode Kattis-{probNum}.",
+    "rubric_path": "data/rubrics/icpc_programming_judge_v1.json",
+    "remote_execution_dependency": "A reachable VJudge gateway and accepted upstream judge mapping are required at run time.",
+    "scorecard_path": "data/rubrics/task_scorecards/icpc.json",
+    "scorecard_key": "icpc_wf_2017_visual"
+  },
+  "rubric_path": "data/rubrics/icpc_programming_judge_v1.json",
+  "deliverable": null
 }

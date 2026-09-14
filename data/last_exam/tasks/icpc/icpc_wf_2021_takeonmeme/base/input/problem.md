@@ -1,5 +1,3 @@
-# Take On Meme
-
 Hide 
  Take On Meme 
 

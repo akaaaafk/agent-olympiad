@@ -1,5 +1,3 @@
-# Minimum Cost Flow
-
 Hide 
  Minimum Cost Flow 
 

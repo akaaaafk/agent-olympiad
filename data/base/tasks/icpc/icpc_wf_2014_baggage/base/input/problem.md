@@ -1,5 +1,3 @@
-# Baggage
-
 Hide 
  Baggage 
 

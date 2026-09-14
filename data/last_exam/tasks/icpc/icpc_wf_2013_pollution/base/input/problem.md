@@ -1,5 +1,3 @@
-# Pollution Solution
-
 Hide 
  Pollution Solution 
 

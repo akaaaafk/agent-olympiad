@@ -1,0 +1,182 @@
+[
+  {
+    "competition": "arml_national_team",
+    "year": 2016,
+    "archive": "data/raw/arml_national/2016/2016_Contest_Final_Version.pdf",
+    "archive_sha256": "55c71ca8eded4ba03e254ef093a8afc9f4e435fe044c1af165e5069c32888b1e",
+    "problem_pages": [
+      2,
+      2
+    ],
+    "solution_pages": [
+      3,
+      8
+    ],
+    "problem_pdf": "data/raw/arml_national/2016/arml_national_team_2016_problems.pdf",
+    "problem_sha256": "39c6f5a3e69669ae88a9b43a4f11d297821fb7ee0422bd8c44ee85334d2f9660",
+    "solution_pdf": "data/raw/arml_national/2016/arml_national_team_2016_solutions.pdf",
+    "solution_sha256": "72fe1ede56fe5449f00c57f158cdff6cc968803e6deab70c03a241b790034efb"
+  },
+  {
+    "competition": "arml_national_power",
+    "year": 2016,
+    "archive": "data/raw/arml_national/2016/2016_Contest_Final_Version.pdf",
+    "archive_sha256": "55c71ca8eded4ba03e254ef093a8afc9f4e435fe044c1af165e5069c32888b1e",
+    "problem_pages": [
+      9,
+      11
+    ],
+    "solution_pages": [
+      12,
+      17
+    ],
+    "problem_pdf": "data/raw/arml_national/2016/arml_national_power_2016_problems.pdf",
+    "problem_sha256": "c3875ef5e045ce6ea48c20b62800cbbd2c9db8c08a0b6c30c53b9d3a44e13683",
+    "solution_pdf": "data/raw/arml_national/2016/arml_national_power_2016_solutions.pdf",
+    "solution_sha256": "9504a61f118ae35ac46a0db099bab43b0acf772a191d2255ef96ba57a18e9a50"
+  },
+  {
+    "competition": "arml_national_team",
+    "year": 2017,
+    "archive": "data/raw/arml_national/2017/2017_Contest_Final_Version.pdf",
+    "archive_sha256": "bad605a71cba8067808314c3bd28075d4991cfedef2dd0f8a9b04dd59092d975",
+    "problem_pages": [
+      3,
+      3
+    ],
+    "solution_pages": [
+      4,
+      14
+    ],
+    "problem_pdf": "data/raw/arml_national/2017/arml_national_team_2017_problems.pdf",
+    "problem_sha256": "e0b45dc11e9e6a27a22cb28dcfa7da173a4b37d6fe103137a860fa35b2a61e14",
+    "solution_pdf": "data/raw/arml_national/2017/arml_national_team_2017_solutions.pdf",
+    "solution_sha256": "00ceea4ffa96895febbea6556f7e07a1886f1cb64133f682643e12ab9ee07874"
+  },
+  {
+    "competition": "arml_national_power",
+    "year": 2017,
+    "archive": "data/raw/arml_national/2017/2017_Contest_Final_Version.pdf",
+    "archive_sha256": "bad605a71cba8067808314c3bd28075d4991cfedef2dd0f8a9b04dd59092d975",
+    "problem_pages": [
+      15,
+      16
+    ],
+    "solution_pages": [
+      17,
+      19
+    ],
+    "problem_pdf": "data/raw/arml_national/2017/arml_national_power_2017_problems.pdf",
+    "problem_sha256": "41b429365ee41d98c934216c93328fcffe187260567237e91f26039f5a87cfc8",
+    "solution_pdf": "data/raw/arml_national/2017/arml_national_power_2017_solutions.pdf",
+    "solution_sha256": "f2233c3a1668ece73ff203cb2f8c1d9fd40524501f64f87474d3d2503ac28121"
+  },
+  {
+    "competition": "arml_national_team",
+    "year": 2018,
+    "archive": "data/raw/arml_national/2018/2018_Contest_Final_Version.pdf",
+    "archive_sha256": "47cb3b35b41df6bb94b23427ea69c07393ef47d1043ce4a3d273c375287384fe",
+    "problem_pages": [
+      2,
+      2
+    ],
+    "solution_pages": [
+      3,
+      11
+    ],
+    "problem_pdf": "data/raw/arml_national/2018/arml_national_team_2018_problems.pdf",
+    "problem_sha256": "5932202e6484909713012d235bb7081cafe46a108f8a693ebf1f9070febe51e1",
+    "solution_pdf": "data/raw/arml_national/2018/arml_national_team_2018_solutions.pdf",
+    "solution_sha256": "2faef786bd3269ea80737de4cc70fa02227e0a9f63564b8c6799462dc00d7d67"
+  },
+  {
+    "competition": "arml_national_power",
+    "year": 2018,
+    "archive": "data/raw/arml_national/2018/2018_Contest_Final_Version.pdf",
+    "archive_sha256": "47cb3b35b41df6bb94b23427ea69c07393ef47d1043ce4a3d273c375287384fe",
+    "problem_pages": [
+      12,
+      14
+    ],
+    "solution_pages": [
+      15,
+      19
+    ],
+    "problem_pdf": "data/raw/arml_national/2018/arml_national_power_2018_problems.pdf",
+    "problem_sha256": "554cfbfd9e53a141f5c2839add0738b45157447f856b29fd5b6dd96f842ed061",
+    "solution_pdf": "data/raw/arml_national/2018/arml_national_power_2018_solutions.pdf",
+    "solution_sha256": "9cf2a727c3ab18291b10c76bd1cfc17a53a689dba31822df5cf917d54d8e7ee9"
+  },
+  {
+    "competition": "arml_national_team",
+    "year": 2019,
+    "archive": "data/raw/arml_national/2019/2019_Contest_Final_Version.pdf",
+    "archive_sha256": "3abb81471a25a70f0e1414568524ac08da5e7a27e6e711803eb5ddf1dd16ba8e",
+    "problem_pages": [
+      2,
+      2
+    ],
+    "solution_pages": [
+      3,
+      11
+    ],
+    "problem_pdf": "data/raw/arml_national/2019/arml_national_team_2019_problems.pdf",
+    "problem_sha256": "992f684d432a8d5b184859aebcfbf27b39eba1522f774988bf9a19828e146767",
+    "solution_pdf": "data/raw/arml_national/2019/arml_national_team_2019_solutions.pdf",
+    "solution_sha256": "813c4e85075af996bc45e60b9e64194c8cc01e99d6f6346a25e628cdbebfb4cd"
+  },
+  {
+    "competition": "arml_national_power",
+    "year": 2019,
+    "archive": "data/raw/arml_national/2019/2019_Contest_Final_Version.pdf",
+    "archive_sha256": "3abb81471a25a70f0e1414568524ac08da5e7a27e6e711803eb5ddf1dd16ba8e",
+    "problem_pages": [
+      12,
+      13
+    ],
+    "solution_pages": [
+      14,
+      18
+    ],
+    "problem_pdf": "data/raw/arml_national/2019/arml_national_power_2019_problems.pdf",
+    "problem_sha256": "193c158055af20b040bc8b426d44c62a822ccc91d140612f83ae34ce73384b3f",
+    "solution_pdf": "data/raw/arml_national/2019/arml_national_power_2019_solutions.pdf",
+    "solution_sha256": "180d171a78262d7ac184c127a11f22e5d1427b4b03497bf6d4683415d6bcc78b"
+  },
+  {
+    "competition": "arml_national_team",
+    "year": 2023,
+    "archive": "data/raw/arml_national/2023/ARML_2023Contest.pdf",
+    "archive_sha256": "7e4fd74c557465e8227f39cd398916841c97520e20b9627313cf789cd1a3916a",
+    "problem_pages": [
+      2,
+      2
+    ],
+    "solution_pages": [
+      3,
+      9
+    ],
+    "problem_pdf": "data/raw/arml_national/2023/arml_national_team_2023_problems.pdf",
+    "problem_sha256": "d320a7f0995de5cb801f8a4bd72cc2947bd98ea7e36855806a8bcb55fb832244",
+    "solution_pdf": "data/raw/arml_national/2023/arml_national_team_2023_solutions.pdf",
+    "solution_sha256": "106e13d5b8f59a519219f9b423bfcb10ab1f73166e3a2a15e32c54418e72b7ec"
+  },
+  {
+    "competition": "arml_national_power",
+    "year": 2023,
+    "archive": "data/raw/arml_national/2023/ARML_2023Contest.pdf",
+    "archive_sha256": "7e4fd74c557465e8227f39cd398916841c97520e20b9627313cf789cd1a3916a",
+    "problem_pages": [
+      10,
+      11
+    ],
+    "solution_pages": [
+      12,
+      14
+    ],
+    "problem_pdf": "data/raw/arml_national/2023/arml_national_power_2023_problems.pdf",
+    "problem_sha256": "c2c80bb859269c12769d2e9ed87713c16deacc6073d2ad75e2c4c030ee22ee66",
+    "solution_pdf": "data/raw/arml_national/2023/arml_national_power_2023_solutions.pdf",
+    "solution_sha256": "53153fea8c673271a359e35ce3a0378bcc7d509627e5651527bf650e371eb143"
+  }
+]

@@ -1,0 +1,925 @@
+{
+  "rubric_id": "science_olympiad_ss1718_answer_key_v1",
+  "dataset": "science_olympiad",
+  "title": "Solar System 2017-2018 example exam - original 100-item answer key",
+  "visibility": "judge_only",
+  "total_points": 100,
+  "rubric_type": "source_anchored_sample_answer_key",
+  "answer_key_path": "data/raw/science_olympiad/separated_20260913/judge/answer_reference.json",
+  "scoring_basis": "Cover says all questions have equal value; answer pages 14 and 15 each contain 50 distinct numbered answers and a 50/50 header. Together they support 100 one-point items for this sample.",
+  "grading_validation_status": "not_validated",
+  "criteria": [
+    {
+      "id": "1",
+      "title": "Question 1",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: A",
+      "reference_answer": "A",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "2",
+      "title": "Question 2",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: P",
+      "reference_answer": "P",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "3",
+      "title": "Question 3",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Caloris (Planitia/Basin)",
+      "reference_answer": "Caloris (Planitia/Basin)",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "4",
+      "title": "Question 4",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: M",
+      "reference_answer": "M",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "5",
+      "title": "Question 5",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Stickney",
+      "reference_answer": "Stickney",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "6",
+      "title": "Question 6",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Deimos",
+      "reference_answer": "Deimos",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "7",
+      "title": "Question 7",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: closer",
+      "reference_answer": "closer",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "8",
+      "title": "Question 8",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: comets",
+      "reference_answer": "comets",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "9",
+      "title": "Question 9",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: D F K L N (any order)",
+      "reference_answer": "D F K L N (any order)",
+      "response_semantics": "unordered_set",
+      "source_page": 14
+    },
+    {
+      "id": "10",
+      "title": "Question 10",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: O",
+      "reference_answer": "O",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "11",
+      "title": "Question 11",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Galileo",
+      "reference_answer": "Galileo",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "12",
+      "title": "Question 12",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: J",
+      "reference_answer": "J",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "13",
+      "title": "Question 13",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: radar",
+      "reference_answer": "radar",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "14",
+      "title": "Question 14",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Magellan",
+      "reference_answer": "Magellan",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "15",
+      "title": "Question 15",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: tessera",
+      "reference_answer": "tessera",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "16",
+      "title": "Question 16",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: K",
+      "reference_answer": "K",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "17",
+      "title": "Question 17",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: young",
+      "reference_answer": "young",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "18",
+      "title": "Question 18",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: wrinkle ridges",
+      "reference_answer": "wrinkle ridges",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "19",
+      "title": "Question 19",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: maria",
+      "reference_answer": "maria",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "20",
+      "title": "Question 20",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: basalt",
+      "reference_answer": "basalt",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "21",
+      "title": "Question 21",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Apollo 11",
+      "reference_answer": "Apollo 11",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "22",
+      "title": "Question 22",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Late Heavy Bombardment",
+      "reference_answer": "Late Heavy Bombardment",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "23",
+      "title": "Question 23",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: 3.8-4.1 billion years ago",
+      "reference_answer": "3.8-4.1 billion years ago",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "24",
+      "title": "Question 24",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Mars",
+      "reference_answer": "Mars",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "25",
+      "title": "Question 25",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Iron",
+      "reference_answer": "Iron",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "26",
+      "title": "Question 26",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: G",
+      "reference_answer": "G",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "27",
+      "title": "Question 27",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Hellas (Impact Basin)",
+      "reference_answer": "Hellas (Impact Basin)",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "28",
+      "title": "Question 28",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Mercury",
+      "reference_answer": "Mercury",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "29",
+      "title": "Question 29",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: artists/authors/composers",
+      "reference_answer": "artists/authors/composers",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "30",
+      "title": "Question 30",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: MESSENGER",
+      "reference_answer": "MESSENGER",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "31",
+      "title": "Question 31",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Tycho",
+      "reference_answer": "Tycho",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "32",
+      "title": "Question 32",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: 20-100 million years",
+      "reference_answer": "20-100 million years",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "33",
+      "title": "Question 33",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Giant Impact Hypothesis (Big Splash)",
+      "reference_answer": "Giant Impact Hypothesis (Big Splash)",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "34",
+      "title": "Question 34",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Theia",
+      "reference_answer": "Theia",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "35",
+      "title": "Question 35",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Solar Eclipse",
+      "reference_answer": "Solar Eclipse",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "36",
+      "title": "Question 36",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: penumbra",
+      "reference_answer": "penumbra",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "37",
+      "title": "Question 37",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: umbra",
+      "reference_answer": "umbra",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "38",
+      "title": "Question 38",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: August 21st, 2017",
+      "reference_answer": "August 21st, 2017",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "39",
+      "title": "Question 39",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Bailey’s Beads",
+      "reference_answer": "Bailey’s Beads",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "40",
+      "title": "Question 40",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Lunar Craters",
+      "reference_answer": "Lunar Craters",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "41",
+      "title": "Question 41",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Lunar Eclipse",
+      "reference_answer": "Lunar Eclipse",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "42",
+      "title": "Question 42",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Spring Tides",
+      "reference_answer": "Spring Tides",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "43",
+      "title": "Question 43",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: tidal locking",
+      "reference_answer": "tidal locking",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "44",
+      "title": "Question 44",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: 59%",
+      "reference_answer": "59%",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "45",
+      "title": "Question 45",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: latitudinal libration",
+      "reference_answer": "latitudinal libration",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "46",
+      "title": "Question 46",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: third quarter",
+      "reference_answer": "third quarter",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "47",
+      "title": "Question 47",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: 6 hours after midnight (6 AM)",
+      "reference_answer": "6 hours after midnight (6 AM)",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "48",
+      "title": "Question 48",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: January 20-22nd",
+      "reference_answer": "January 20-22nd",
+      "response_semantics": "printed_reference",
+      "source_page": 14
+    },
+    {
+      "id": "49",
+      "title": "Question 49",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: C D A E B (correct order)",
+      "reference_answer": "C D A E B (correct order)",
+      "response_semantics": "ordered_sequence",
+      "source_page": 14
+    },
+    {
+      "id": "50",
+      "title": "Question 50",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: B E (any order)",
+      "reference_answer": "B E (any order)",
+      "response_semantics": "unordered_set",
+      "source_page": 14
+    },
+    {
+      "id": "51",
+      "title": "Question 51",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: A E (any order)",
+      "reference_answer": "A E (any order)",
+      "response_semantics": "unordered_set",
+      "source_page": 15
+    },
+    {
+      "id": "52",
+      "title": "Question 52",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: C D E (any order)",
+      "reference_answer": "C D E (any order)",
+      "response_semantics": "unordered_set",
+      "source_page": 15
+    },
+    {
+      "id": "53",
+      "title": "Question 53",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Curiosity (Rover)",
+      "reference_answer": "Curiosity (Rover)",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "54",
+      "title": "Question 54",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: ChemCam",
+      "reference_answer": "ChemCam",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "55",
+      "title": "Question 55",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: MRO (Mars Reconnaissance Orbiter)",
+      "reference_answer": "MRO (Mars Reconnaissance Orbiter)",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "56",
+      "title": "Question 56",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Opportunity",
+      "reference_answer": "Opportunity",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "57",
+      "title": "Question 57",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: X",
+      "reference_answer": "X",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "58",
+      "title": "Question 58",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: V",
+      "reference_answer": "V",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "59",
+      "title": "Question 59",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: U",
+      "reference_answer": "U",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "60",
+      "title": "Question 60",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: 4 billion years",
+      "reference_answer": "4 billion years",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "61",
+      "title": "Question 61",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: B",
+      "reference_answer": "B",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "62",
+      "title": "Question 62",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: A",
+      "reference_answer": "A",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "63",
+      "title": "Question 63",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: 5.0-5.3 years",
+      "reference_answer": "5.0-5.3 years",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "64",
+      "title": "Question 64",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: 5-6 AU",
+      "reference_answer": "5-6 AU",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "65",
+      "title": "Question 65",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Sun and Earth",
+      "reference_answer": "Sun and Earth",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "66",
+      "title": "Question 66",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Mars and Jupiter",
+      "reference_answer": "Mars and Jupiter",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "67",
+      "title": "Question 67",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Kirkwood Gaps",
+      "reference_answer": "Kirkwood Gaps",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "68",
+      "title": "Question 68",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: S (Stony)",
+      "reference_answer": "S (Stony)",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "69",
+      "title": "Question 69",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: M (Metallic) or X (X-Group)",
+      "reference_answer": "M (Metallic) or X (X-Group)",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "70",
+      "title": "Question 70",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: C (Carbonaceous)",
+      "reference_answer": "C (Carbonaceous)",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "71",
+      "title": "Question 71",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: 1",
+      "reference_answer": "1",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "72",
+      "title": "Question 72",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: 3",
+      "reference_answer": "3",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "73",
+      "title": "Question 73",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Koronis Family",
+      "reference_answer": "Koronis Family",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "74",
+      "title": "Question 74",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Amors",
+      "reference_answer": "Amors",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "75",
+      "title": "Question 75",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Apollos",
+      "reference_answer": "Apollos",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "76",
+      "title": "Question 76",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Atens",
+      "reference_answer": "Atens",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "77",
+      "title": "Question 77",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: red",
+      "reference_answer": "red",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "78",
+      "title": "Question 78",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Spaceguard",
+      "reference_answer": "Spaceguard",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "79",
+      "title": "Question 79",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: PHO (Potentially Hazardous Objects)",
+      "reference_answer": "PHO (Potentially Hazardous Objects)",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "80",
+      "title": "Question 80",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: BB",
+      "reference_answer": "BB",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "81",
+      "title": "Question 81",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Kinetic Impactor",
+      "reference_answer": "Kinetic Impactor",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "82",
+      "title": "Question 82",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: F",
+      "reference_answer": "F",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "83",
+      "title": "Question 83",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: E",
+      "reference_answer": "E",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "84",
+      "title": "Question 84",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: B",
+      "reference_answer": "B",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "85",
+      "title": "Question 85",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: D",
+      "reference_answer": "D",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "86",
+      "title": "Question 86",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: A",
+      "reference_answer": "A",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "87",
+      "title": "Question 87",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: C",
+      "reference_answer": "C",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "88",
+      "title": "Question 88",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Y",
+      "reference_answer": "Y",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "89",
+      "title": "Question 89",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: W",
+      "reference_answer": "W",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "90",
+      "title": "Question 90",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: X",
+      "reference_answer": "X",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "91",
+      "title": "Question 91",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: Z",
+      "reference_answer": "Z",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "92",
+      "title": "Question 92",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: V",
+      "reference_answer": "V",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "93",
+      "title": "Question 93",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: U",
+      "reference_answer": "U",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "94",
+      "title": "Question 94",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: JJ",
+      "reference_answer": "JJ",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "95",
+      "title": "Question 95",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: EE, HH, GG (any order)",
+      "reference_answer": "EE, HH, GG (any order)",
+      "response_semantics": "unordered_set",
+      "source_page": 15
+    },
+    {
+      "id": "96",
+      "title": "Question 96",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: II, FF (any order)",
+      "reference_answer": "II, FF (any order)",
+      "response_semantics": "unordered_set",
+      "source_page": 15
+    },
+    {
+      "id": "97",
+      "title": "Question 97",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: craters",
+      "reference_answer": "craters",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "98",
+      "title": "Question 98",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: 400",
+      "reference_answer": "400",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "99",
+      "title": "Question 99",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: plasma torus",
+      "reference_answer": "plasma torus",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    },
+    {
+      "id": "100",
+      "title": "Question 100",
+      "max_score": 1,
+      "description": "Grade only this numbered response against the printed reference: sulfur",
+      "reference_answer": "sulfur",
+      "response_semantics": "printed_reference",
+      "source_page": 15
+    }
+  ],
+  "provenance": {
+    "source_file": "data/raw/science_olympiad/samples/082317_SS1718_AnnotatedExampleExam.pdf",
+    "source_url": "https://www.soinc.org/sites/default/files/uploaded_files/082317_SS1718_AnnotatedExampleExam.pdf",
+    "source_sha256": "f99c10143552aa71d98333852a86faed7ac2cf82821c5803503de6e28c212b55"
+  },
+  "limitations": [
+    "The complete contestant packet and 100 printed answer references are separated; image-aware end-to-end delivery and grading have not been validated.",
+    "Set/sequence answers, numeric ranges and free-text alternatives require a compatible grader; a single normalized string comparison does not implement the printed key.",
+    "This is a 2017-2018 Division B Solar System example, not a tournament. Binding season rules, active event team size, timing and permitted-reference limits are not fully archived.",
+    "The existing 15-agent research roster is retained as an adaptation, not asserted to be the official active event team size.",
+    "Original question wording, image labels, historical claims and printed answer variants are retained; source typos and ambiguous prompts are not silently rewritten."
+  ]
+}

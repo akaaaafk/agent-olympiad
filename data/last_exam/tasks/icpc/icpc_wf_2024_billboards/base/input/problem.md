@@ -1,5 +1,3 @@
-# Billboards
-
 Hide 
  Billboards 
 

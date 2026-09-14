@@ -1,5 +1,3 @@
-# History-Bowl-Round-7
-
 [Q1] 19th century scholar Franz Mone [[MOH -nuh]] suggested the site of this battle was also the place where the hero of the Song of the Nibelung , Sigurd, slew the dragon Fafnir. Following this battle, a chieftain of the Cherusci [[keh -ROO-skee]] sent the head o f his opponent to the Marcomanni to secure an alliance. At Kalkriese Hill, Germanic chieftain Arminius ambushed the forces of Varus, beginning this battle. Emperor Augustus cried "Give me back my Legions" following, for ten points, which devastating Roman defeat in the first century?
 
 [Q2] Opponents of this man called the Erasistrateans resisted his theory that blood flowed through arteries, instead wrongly claiming pneuma did so. This man's records of treating the Antonine Plague while in Aquileia [[ah-KWIH-leh-uh]] led historians to identify the blight as smallpox. This man had his theories from On Anatomical Procedure untested for a millennium, until the 16th -century human dissections of Andreas Vesalius. For ten points, name this extremely influential Greco -Roman physician and scholar who expanded the Hippocratic views on humors.

@@ -1,5 +1,3 @@
-# Scenery
-
 Hide 
  Scenery 
 

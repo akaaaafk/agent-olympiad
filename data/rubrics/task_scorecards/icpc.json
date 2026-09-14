@@ -1,0 +1,4273 @@
+{
+  "schema_version": "1.1",
+  "dataset": "icpc",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "icpc_wf_2012_bottles",
+      "year": 2012,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2012_bustour",
+      "year": 2012,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2012_fibonacci",
+      "year": 2012,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2012_flightpath",
+      "year": 2012,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2012_infiltration2",
+      "year": 2012,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2012_keys",
+      "year": 2012,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2012_minflow",
+      "year": 2012,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2012_rangers",
+      "year": 2012,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2012_roomservice",
+      "year": 2012,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2012_safebet",
+      "year": 2012,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2012_stacking",
+      "year": 2012,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2012_takeover",
+      "year": 2012,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2013_assembly",
+      "year": 2013,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2013_bettor",
+      "year": 2013,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2013_congest",
+      "year": 2013,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2013_factors",
+      "year": 2013,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2013_harvard",
+      "year": 2013,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2013_low",
+      "year": 2013,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2013_maptiles",
+      "year": 2013,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2013_matryoshka",
+      "year": 2013,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2013_pirate",
+      "year": 2013,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2013_pollution",
+      "year": 2013,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2013_tree",
+      "year": 2013,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2014_baggage",
+      "year": 2014,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2014_buffet",
+      "year": 2014,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2014_crane",
+      "year": 2014,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2014_game",
+      "year": 2014,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2014_maze",
+      "year": 2014,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2014_messenger",
+      "year": 2014,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2014_metal",
+      "year": 2014,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2014_pachinko",
+      "year": 2014,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2014_sensor",
+      "year": 2014,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2014_skiing",
+      "year": 2014,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2014_surveillance",
+      "year": 2014,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2014_wire",
+      "year": 2014,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2015_artichoke",
+      "year": 2015,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2015_asteroids",
+      "year": 2015,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2015_catering",
+      "year": 2015,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2015_cheese",
+      "year": 2015,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2015_evolution",
+      "year": 2015,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2015_keyboard",
+      "year": 2015,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2015_pipe",
+      "year": 2015,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2015_qanat",
+      "year": 2015,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2015_ship",
+      "year": 2015,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2015_tiles",
+      "year": 2015,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2015_tours",
+      "year": 2015,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2015_weather",
+      "year": 2015,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2015_windows",
+      "year": 2015,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2016_balanceddiet2",
+      "year": 2016,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2016_branch",
+      "year": 2016,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2016_ceiling",
+      "year": 2016,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2016_clock",
+      "year": 2016,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2016_foreveryoung",
+      "year": 2016,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2016_mars",
+      "year": 2016,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2016_oil2",
+      "year": 2016,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2016_puzzle2",
+      "year": 2016,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2016_rivers",
+      "year": 2016,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2016_roadtimes",
+      "year": 2016,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2016_spin",
+      "year": 2016,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2016_string",
+      "year": 2016,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2016_swapspace",
+      "year": 2016,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2017_airport",
+      "year": 2017,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2017_clue",
+      "year": 2017,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2017_improbable",
+      "year": 2017,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2017_money",
+      "year": 2017,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2017_posterize",
+      "year": 2017,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2017_replicate",
+      "year": 2017,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2017_scenery",
+      "year": 2017,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2017_secretchamber",
+      "year": 2017,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2017_sonofpipestream",
+      "year": 2017,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2017_speed",
+      "year": 2017,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2017_tarotshamboast",
+      "year": 2017,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2017_visual",
+      "year": 2017,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2018_catch",
+      "year": 2018,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2018_comma",
+      "year": 2018,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2018_conquertheworld",
+      "year": 2018,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2018_gemisland",
+      "year": 2018,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2018_gettingjump",
+      "year": 2018,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2018_gowithflow",
+      "year": 2018,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2018_newfiber",
+      "year": 2018,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2018_pandapreserve",
+      "year": 2018,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2018_single",
+      "year": 2018,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2018_triangles3",
+      "year": 2018,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2018_uncrossedknights",
+      "year": 2018,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2019_azulejos",
+      "year": 2019,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2019_beautifulbridges",
+      "year": 2019,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2019_checks",
+      "year": 2019,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2019_circular",
+      "year": 2019,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2019_deadend",
+      "year": 2019,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2019_directingrainfall",
+      "year": 2019,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2019_firstofhername",
+      "year": 2019,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2019_hobsonstrains",
+      "year": 2019,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2019_karel",
+      "year": 2019,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2019_minigolf",
+      "year": 2019,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2019_trafficblights",
+      "year": 2019,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2020_cardiology",
+      "year": 2020,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2020_domes",
+      "year": 2020,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2020_genefolding",
+      "year": 2020,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2020_landscape",
+      "year": 2020,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2020_leylines",
+      "year": 2020,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2020_opportunity",
+      "year": 2020,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2020_planets",
+      "year": 2020,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2020_qcqc",
+      "year": 2020,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2020_quests",
+      "year": 2020,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2020_snoproblem",
+      "year": 2020,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2020_space",
+      "year": 2020,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2020_speedlimit2",
+      "year": 2020,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2020_sweepstakes",
+      "year": 2020,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2020_trailingdigits",
+      "year": 2020,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2020_vector",
+      "year": 2020,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2021_crystalcrosswind",
+      "year": 2021,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2021_dungeoncrawler",
+      "year": 2021,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2021_fairdivision2",
+      "year": 2021,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2021_guardiansofthegallery",
+      "year": 2021,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2021_handofthefreemarked",
+      "year": 2021,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2021_islandsfromthesky",
+      "year": 2021,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2021_mosaicbrowsing",
+      "year": 2021,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2021_prehistoricprograms",
+      "year": 2021,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2021_spiderwalk",
+      "year": 2021,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2021_splitstream",
+      "year": 2021,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2021_takeonmeme",
+      "year": 2021,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2021_whereami",
+      "year": 2021,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2022_archaeologicalrecovery",
+      "year": 2022,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2022_compression2",
+      "year": 2022,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2022_doingthecontainershuffle",
+      "year": 2022,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2022_quartets",
+      "year": 2022,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2022_toytraintracks",
+      "year": 2022,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2022_zoomanagement",
+      "year": 2022,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2023_aleaiactaest",
+      "year": 2023,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2023_arecurringproblem",
+      "year": 2023,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2023_jetlag",
+      "year": 2023,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2023_schedule",
+      "year": 2023,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2023_tiltingtiles",
+      "year": 2023,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2023_waterworld",
+      "year": 2023,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2024_billboards",
+      "year": 2024,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2024_bingoforthewin",
+      "year": 2024,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2024_citizenship",
+      "year": 2024,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2024_doubleshorsebackwrestling",
+      "year": 2024,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2024_flippingcontainer",
+      "year": 2024,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2024_friendlyrivalry",
+      "year": 2024,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2024_kindergarten2",
+      "year": 2024,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2024_maxwellsdemon",
+      "year": 2024,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2024_steppeonit",
+      "year": 2024,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2024_thesilkroad",
+      "year": 2024,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2024_towerofnoiha",
+      "year": 2024,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2024_whereaminow",
+      "year": 2024,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2025_askewedreasoning",
+      "year": 2025,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2025_blackboardgame",
+      "year": 2025,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2025_brideofpipestream",
+      "year": 2025,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2025_buggyrover",
+      "year": 2025,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2025_deliveryservice",
+      "year": 2025,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2025_herdingcats",
+      "year": 2025,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2025_lavamoat",
+      "year": 2025,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2025_scorevalues",
+      "year": 2025,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2025_slotmachine",
+      "year": 2025,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2025_stackingcups",
+      "year": 2025,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2025_treasuremap2",
+      "year": 2025,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icpc_wf_2025_walkingonsunshine",
+      "year": 2025,
+      "evaluation_status": "remote_judge_ready",
+      "evaluator_id": "programming_judge",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icpc_programming_judge_v1.json",
+          "sha256": "355e0764a52a280223ee9c6b34cd219ca08baa5378c3c5c1c04eca9597886258",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "icpc_programming_judge_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+@import "../fonts.css";
+@import url(http://fonts.googleapis.com/css?family=Coustard|Nothing+You+Could+Do|Buenard:700);
+@import "../shortcuts.css";
+
+/* layout */
+html, body { padding: 0; margin: 0; position: relative; }
+html { height: 100%; /* of viewport */ }
+body { min-height: 100%; /* of viewport */ }
+body { font-size: 16px; line-height: 1.4; }
+
+body {
+  background: url("back-tile.jpg") repeat;
+}
+
+#folder {
+  position: absolute; left: 0; top: 0;
+  width: 900px; min-height: 100%;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  background: url("blue-seamless-swatch.jpg") repeat;
+}
+#middle {
+  position: absolute; left: 0; top: 0;
+  width: 900px; height: 100%;
+}
+#middle > div {
+  position: absolute; left: 0; bottom: 0; right: 0;
+  top: 656px; /* 706px - 50px */
+  background-image: url("middle-tile.png");
+  background-repeat: repeat-y;
+}
+#header {
+  position: absolute; left: 0; top: -50px;/* compensate for top border */
+  background: url("top-tile.png") no-repeat;
+  width: 900px; height: 765px;
+}
+#footer {
+  position: absolute; left: 0; bottom: -50px; /* compensate for bottom border*/
+  width: 950px; height: 190px;
+  background: url("bottom-tile.png") no-repeat;
+}
+#sidebar {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+}
+
+#main {
+  position: relative; left: 0; top: 0; /* make positioned so it's in z order */
+  padding: 47px 105px 10px 102px;
+  min-height: 650px;
+}
+#title {
+  position: absolute; left: 130px; top: 5px;
+  background: url("agency-title.png") no-repeat;
+}
+#title, #title a {
+  width: 600px; height: 39px;
+}
+#title a { display: block; }
+#label {
+  position: absolute; left: 771px; top: 65px;
+  font-size: 28px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+  white-space: nowrap;
+  padding: 0 3px;
+  background: #eee;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+#label a { color: black; text-decoration: none; }
+
+#notation {
+  position: absolute; left: 45px; top: -8px;
+  font-family: 'Coustard', 'Alice', serif;
+  line-height: 1.0;
+  color: #5d2727;
+  text-align: left;
+  width: 400px;
+}
+#notation a {
+  margin-right: 1em;
+  text-decoration: none;
+}
+
+body.index #main {
+  padding-top: 520px;
+}
+body.index #main .desc {
+  position: absolute;
+  top: -22px; left: 25px;
+  width: 275px;
+  backgroundx: #fefefe;
+  border: 2px solid black;
+  padding: 1.5em;
+  padding-top: 15px !important;
+  line-height: 1.6;
+  z-index: 99;
+  background: #fefefe url("index-card.jpg") repeat;
+}
+body.index #main .desc .paperclip {
+ position: absolute;
+ background: url("paperclip.png");
+ width: 62px; height: 115px;
+ top: -21px; right: -1px;
+}
+body.index #photo {
+  position: absolute;
+  top: -40px; left: 150px;
+  width: 695px; height: 583px;
+}
+body.index #photo img {
+  position: absolute; top: 0; left: 0;
+  width: 695px; height: 583px;
+}
+body.index #photo .paperclip {
+  position: absolute;
+  bottom: 90px; right: 19px;
+  width: 80px; height: 86px;
+  background: url("paperclip-2.png");
+}
+
+body.index #check-answer, body.solution #check-answer {
+  display: none !important;
+}
+
+/* stylin' */
+body.index #main { font-family: Coustard, Courier, serif; font-weight: 400; }
+body.puzzle #main h1, body.report #main h1 {
+  font-size: 32px; margin: 10px 0 0 0; padding: 0;
+}
+body.puzzle #main h1, body.report #main h1, body.solution #main h2 {
+  font-family: 'Buenard', 'Alice', serif;
+  font-weight: 700;
+}
+body.puzzle #main h1 {
+  background: url("icon.png") no-repeat 0 8px;
+  padding-left: 60px;
+  min-height: 31px;
+}
+@media print {
+  body.puzzle #main h1 {
+    /* would be nice to make this printable */
+    background: transparent;
+    padding-left: 0;
+  }
+}
+body.index .critic, body.index h2, body.index .report {
+  font-weight: 400;
+  font-size: 24px;
+  margin: 10px 0 10px 0; padding: 0;
+}
+body.solution h2 {
+  font-size: 18px;
+  padding: 0; margin: 0;
+  padding-left: 5em;
+  text-indent: -1em;
+}
+body.index .critic .name, body.index .materials, #label {
+  font-family: 'Nothing You Could Do', cursive;
+  font-weight: 400;
+}
+body.index .critic .name {
+  text-decoration: underline;
+  white-space: pre; /* allow extra space before/after name */
+}
+/* could use \0000a0 for nbsp; */
+body.index .critic .name:before,
+body.index .critic .name:after {
+  content: "  ";
+}
+body.index a {
+  text-decoration: none;
+}
+body.index .materials {
+  width: 100%;
+  font-size: 24px;
+  text-decoration: none;
+}
+body.index .materials td {
+  vertical-align: middle;
+  height: 62px;
+  padding-left: 45px;
+  padding-right: 20px;
+  width: 50%;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+body.index .materials td a {
+  border-bottom: 1px solid black;
+  display: block;
+  padding-left: 0.6em;
+}
+body.index .materials td a > span { position: relative; top: 1ex; }
+body.index .materials .a_circus_line {
+  background: url("../a_circus_line/icon.png") no-repeat;
+}
+body.index .materials .a_circus_line.unsolved {
+  background-image: url("../a_circus_line/icon-unsolved.png");
+}
+body.index .materials .betsy_johnson {
+  background: url("icon.png") no-repeat 0px 20px;
+}
+body.index .materials .betsy_johnson.unsolved {
+  background-image: url("icon-unsolved.png");
+}
+body.index .materials tr.spacer { height: 1em; }
+
+@media print {
+  body { background: white; }
+  #header, #middle, #footer, #sidebar, #label, #title, #notation {
+    display: none;
+  }
+  #folder {
+    position: relative;
+    width: 100%;
+    border: none;
+    background: transparent;
+  }
+  #main {
+    padding: 0 0 0 0;
+  }
+  img {
+    page-break-inside: avoid;
+  }
+  body.index #main {
+    padding-top: 0;
+  }
+  body.index #main .desc {
+    position: absolute;
+    left: 0; top: 0;
+  }
+  body.index .paperclip {
+    display: none;
+  }
+  body.index #photo {
+    position: absolute; left: 0;
+    top: 80px; /* make room for notecard */
+    page-break-inside: avoid;
+  }
+  body.index #main .critic {
+    /* make room for photo: should be photo top position + 583px */
+    padding-top: 663px;
+  }
+  body.index #main .materials {
+    page-break-inside: avoid;
+  }
+}

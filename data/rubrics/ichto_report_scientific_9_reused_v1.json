@@ -1,0 +1,78 @@
+{
+  "rubric_id": "ichto_report_scientific_9_reused_v1",
+  "title": "IChTo 2025 scientific subcriteria reused for written reports",
+  "total_points": 9,
+  "criteria": [
+    {
+      "id": "scientific_1",
+      "name": "Task interpretation",
+      "max_score": 1,
+      "min_score": 0,
+      "description": "Solution model: Task interpretation. Score 0, 0.5, or 1 from submitted scientific evidence; do not assume unreported experiments occurred."
+    },
+    {
+      "id": "scientific_2",
+      "name": "No task parts omitted to simplify the problem",
+      "max_score": 1,
+      "min_score": 0,
+      "description": "Solution model: No task parts omitted to simplify the problem. Score 0, 0.5, or 1 from submitted scientific evidence; do not assume unreported experiments occurred."
+    },
+    {
+      "id": "scientific_3",
+      "name": "Suitable methodological framework",
+      "max_score": 1,
+      "min_score": 0,
+      "description": "Solution model: Suitable methodological framework. Score 0, 0.5, or 1 from submitted scientific evidence; do not assume unreported experiments occurred."
+    },
+    {
+      "id": "scientific_4",
+      "name": "Scientific correctness of solution parts and answers",
+      "max_score": 1,
+      "min_score": 0,
+      "description": "Scientific correctness and completeness: Scientific correctness of solution parts and answers. Score 0, 0.5, or 1 from submitted scientific evidence; do not assume unreported experiments occurred."
+    },
+    {
+      "id": "scientific_5",
+      "name": "Scientific consistency of solution parts",
+      "max_score": 1,
+      "min_score": 0,
+      "description": "Scientific correctness and completeness: Scientific consistency of solution parts. Score 0, 0.5, or 1 from submitted scientific evidence; do not assume unreported experiments occurred."
+    },
+    {
+      "id": "scientific_6",
+      "name": "Completeness and feasibility details",
+      "max_score": 1,
+      "min_score": 0,
+      "description": "Scientific correctness and completeness: Completeness and feasibility details. Score 0, 0.5, or 1 from submitted scientific evidence; do not assume unreported experiments occurred."
+    },
+    {
+      "id": "scientific_7",
+      "name": "Use of multiple scientific sources",
+      "max_score": 1,
+      "min_score": 0,
+      "description": "Originality: Use of multiple scientific sources. Score 0, 0.5, or 1 from submitted scientific evidence; do not assume unreported experiments occurred."
+    },
+    {
+      "id": "scientific_8",
+      "name": "Clear citation and distinction of literature from original contribution",
+      "max_score": 1,
+      "min_score": 0,
+      "description": "Originality: Clear citation and distinction of literature from original contribution. Score 0, 0.5, or 1 from submitted scientific evidence; do not assume unreported experiments occurred."
+    },
+    {
+      "id": "scientific_9",
+      "name": "Novelty and creativity",
+      "max_score": 1,
+      "min_score": 0,
+      "description": "Originality: Novelty and creativity. Score 0, 0.5, or 1 from submitted scientific evidence; do not assume unreported experiments occurred."
+    }
+  ],
+  "source_rubric_path": "data/rubrics/ichto_2025_official_scoring_v1.json",
+  "source_edition": 2025,
+  "scoring_basis": "Published scientific subcriterion subtotal; benchmark report-only adaptation, not official technical/rating points.",
+  "not_observable_from_deck": [
+    "Live debate",
+    "Opponent and reviewer performance",
+    "Official jury aggregation and ranking"
+  ]
+}

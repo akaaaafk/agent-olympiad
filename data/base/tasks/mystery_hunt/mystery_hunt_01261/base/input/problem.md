@@ -1,3 +1,5 @@
-# 2010/puzzles/1752/conquering_the_world/
+# Conquering the World
 
-Conquering the World Conquering the World Minerva advises that if one wishes to conquer continents, one must plot one's course carefully, and get as many armies as possible.
+Open `puzzle.html` for the original styled task and its image links. The visual packet, including image-map regions, is not replaced by a text preview.
+
+Archive limitation: The original standalone archive page, diagrams, image-map links and applicable style artwork are preserved. Historical wording, repeated names, ordering and fictional premises are not modernized. No physical enactment, cross-task state or end-to-end grading is supplied.

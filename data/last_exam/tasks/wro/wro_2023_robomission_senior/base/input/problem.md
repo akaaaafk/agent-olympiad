@@ -1,5 +1,3 @@
-# RoboMission Senior 2023
-
 RoboMission
 Senior Game Rules 
 Season 2023

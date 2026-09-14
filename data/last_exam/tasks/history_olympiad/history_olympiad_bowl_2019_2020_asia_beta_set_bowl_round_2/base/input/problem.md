@@ -1,5 +1,3 @@
-# 2019-2020-Asia-Beta-Set_Bowl-Round-2
-
 [Q1] IHBB Asian Beta Set Bowl Round 2 2019-2020 History Bowl Round 2 First Quarter 1.A religion that developed in this country exclusively uses oral tradition and syncretizes the Orishas of Yoruban belief with the vodun of West Africa. That faith of this country, Candomble, is practiced by the povo de santo and incorporates aspects of Roman Catholicism, this country’s majority religion. A 100-foot-tall statue of Christ overlooks a city in this country that hosts the world’s largest post-Lenten Carnival. For ten points, name this country where the Cristo Redentor statue stands in Rio de Janeiro.
 
 [Q2] 2.A president of this country tried to avoid the ramiﬁcations of the Rywingate corruption scandal by claiming parliamentary commissions couldn’t investigate him. The President of the European Council, Donald Tusk, was Prime Minister of this country during the early 2010s. A trade union founded in this country’s Lenin Shipyards in 1980 was led by electrician and future President Lech Walesa [lek vah-WEN-sah]. For ten points, name this eastern European country where Solidarity rose to power in Warsaw.

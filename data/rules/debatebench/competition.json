@@ -46,7 +46,8 @@
     ]
   },
   "allowed_tools": [
-    "query_rules"
+    "query_rules",
+    "check_bp_speech_order"
   ],
   "resources": {
     "internet": "forbidden",

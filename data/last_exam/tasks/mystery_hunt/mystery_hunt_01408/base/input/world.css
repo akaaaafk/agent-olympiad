@@ -1,0 +1,192 @@
+@media print {
+ #puzzletopbar {
+   display: none;
+ }
+}
+
+@media screen {
+html, body {
+  color:#ffffff;
+  font-family: "Trebuchet MS", Calibri, Verdana, Arial, sans-serif;
+  font-size:1em;
+  line-height:1.5em;
+  position:relative;
+  display:block;
+  background-color: #87744d;
+  height: 100%;
+  min-width:1000px;
+  background:url(pagebackground.jpg) top center;
+}
+
+.maincentralcolumn {
+  width: 1000px;
+  min-width: 1000px;
+}
+
+#civmap {
+  margin-top:25px;
+  position:relative;
+}
+
+#centralcolumn {
+  position:relative;
+  width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+
+#puzzletopbar {
+  width:930px;
+  height:25px;
+  min-width:930px;
+  margin: auto;
+  background-color: #403522;
+  -moz-box-shadow:inset 0 0 3px 1px #000000;
+  -webkit-box-shadow:inset 0 0 3px 1px #000000;
+  box-shadow:inset 0 0 3px 1px #000000;
+}
+
+#navbar li ul {
+   background-color: #403522;}
+#navbar li:hover li a, #navbar li.hover li a {
+   background-color: #403522;
+}
+.info { background: #403522;}
+
+
+#puzzletitle, #techtitle {
+  color: #111111;
+  float:none;
+  position:relative;
+  font-family: "Century Gothic", "Avant Garde", "Gill Sans", "Trebuchet MS", Calibri, Arial, sans-serif;
+  width:950px;
+  margin: 25px auto;
+  background-color: #b3ab9b;
+  height:100px;
+  -moz-box-shadow:inset 0 0 3px 1px #000000;
+  -webkit-box-shadow:inset 0 0 3px 1px #000000;
+  box-shadow:inset 0 0 3px 1px #000000;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0px 1px 0px #e1e1e8;
+}
+
+
+#puzzletitle em {
+ display: block;
+ padding-top:20px;
+ padding-bottom:5px;
+ font-style: normal;
+ font-weight: bold;
+ font-size: 20px;
+}
+
+#puzzletitle h1 {
+ font-size: 40px;
+ font-weight: bold;
+}
+
+.puzzlelist, #puzzlecontent, #techcontent, #technote {
+  color: #000000;
+  float:none;
+  position:relative;
+  width:950px;
+  margin: 50px auto;
+  background-color: #b3ab9b;
+  -moz-box-shadow:inset 0 0 3px 1px #000000;
+  -webkit-box-shadow:inset 0 0 3px 1px #000000;
+  box-shadow:inset 0 0 3px 1px #000000;
+}
+
+.puzzlelist {
+  padding-bottom: 25px;
+}
+
+
+.puzzle {
+  font-size:0.8em;
+}
+
+.puzzle a {
+  font-size:1.25em;
+}
+
+
+.puzzlelist h2 {
+ font-size: 30px;
+ font-weight: bold;
+ text-shadow: 0px 1px 0px #e1e1e8;
+ text-align: center;
+ padding-top:20px;
+ padding-bottom:20px;
+}
+
+#techcontent {
+  margin: -5px auto;
+  padding-top:25px;
+  border-bottom: 5px solid #403522;
+}
+
+#technote {
+  margin-top:50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 5px solid #403522;
+}
+
+
+#puzzlecontent #puzzle {
+  padding: 20px;
+  border-bottom: 5px solid #403522;
+}
+
+#techcontent #puzzle {
+  padding: 20px;
+  border-bottom: 5px solid #403522;
+}
+
+#technote #content {
+  padding: 20px;
+  border-bottom: 5px solid #403522;
+}
+
+#techtitle {
+  z-index:10;
+  height: 250px;
+  margin: 75px auto;
+}
+
+#techtitle em {
+  display:block;
+  font-style:normal;
+  font-weight:bold;
+  padding-top:100px;
+}
+
+#techimage {
+  float:right;
+  margin-top:-70px;
+}
+
+#techtitle h1 {
+    display: block;
+    font-size: 40px;
+    font-weight:bold;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ol li {
+  list-style-type: decimal;
+  margin-left: 1.5em;
+}
+
+}

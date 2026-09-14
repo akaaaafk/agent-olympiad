@@ -1,5 +1,3 @@
-# What's Our Vector, Victor?
-
 Hide 
  What's Our Vector, Victor? 
 

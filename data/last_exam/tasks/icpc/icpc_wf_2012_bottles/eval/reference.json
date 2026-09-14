@@ -3,14 +3,23 @@
   "gold_pointer": "data/benchmarks/icpc/benchmark.json#icpc_wf_2012_bottles.gold_label",
   "has_gold_answer": false,
   "evaluator_id": "programming_judge",
-  "evaluator_status": "pilot",
-  "problem_package": "data/private/icpc/icpc_wf_2012_bottles",
-  "test_provenance": "benchmark_native_deterministic_v1",
-  "rubric_path": null,
-  "deliverable": null,
-  "limitations": [
-    "Pilot package uses benchmark-native tests rather than official ICPC judge data.",
-    "Pilot sandbox currently supports Python 3 submissions only."
-  ],
-  "solution_file": null
+  "evaluator_status": "remote_judge_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": "programming_judge",
+    "status": "remote_judge_ready",
+    "reason": "VJudge problem-mode mapping configured; the remote verdict is authoritative.",
+    "sample_tests_path": "data/benchmarks/icpc/samples/icpc_wf_2012_bottles",
+    "notes": "Local ao.icpc-package/v1 bundle from Kattis public samples. Add tests/secret/*.in/*.ans under the package for authorized hidden tests. Remote upload uses VJudge problem mode Kattis-{probNum}.",
+    "official_bundle_path": "data/benchmarks/icpc/packages/icpc_wf_2012_bottles",
+    "vjudge_oj": "Kattis",
+    "vjudge_prob_num": "bottles",
+    "vjudge_submit_mode": "problem",
+    "rubric_path": "data/rubrics/icpc_programming_judge_v1.json",
+    "remote_execution_dependency": "A reachable VJudge gateway and accepted upstream judge mapping are required at run time.",
+    "scorecard_path": "data/rubrics/task_scorecards/icpc.json",
+    "scorecard_key": "icpc_wf_2012_bottles"
+  },
+  "rubric_path": "data/rubrics/icpc_programming_judge_v1.json",
+  "deliverable": null
 }

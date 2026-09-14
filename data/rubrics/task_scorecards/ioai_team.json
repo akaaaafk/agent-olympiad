@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.1",
+  "dataset": "ioai_team",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "ioai_team_2024_practical",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ioai_team_2024_official_scoring_v1.json",
+          "sha256": "76e9cbee2cb8572436d625cea021791987d34f60c5458370606964e37821c06c",
+          "format": "numeric_rubric",
+          "rubric_id": "ioai_team_2024_official_scoring_v1",
+          "total_points": 80,
+          "criteria": [
+            {
+              "id": "image_visual_impact",
+              "task": "image_cover",
+              "name": "Visual impact and clarity",
+              "max_score": 5,
+              "description": "Visual impact and clarity. Apply the criterion-specific anchors in the original task statement."
+            },
+            {
+              "id": "image_thematic_relevance",
+              "task": "image_cover",
+              "name": "Thematic relevance",
+              "max_score": 5,
+              "description": "Thematic relevance. Apply the criterion-specific anchors in the original task statement."
+            },
+            {
+              "id": "image_composition",
+              "task": "image_cover",
+              "name": "Composition and balance",
+              "max_score": 5,
+              "description": "Composition and balance. Apply the criterion-specific anchors in the original task statement."
+            },
+            {
+              "id": "image_objects",
+              "task": "image_cover",
+              "name": "Predefined object inclusion",
+              "max_score": 7,
+              "scoring": "1 point for each of the first five included objects; 0.25 for each additional object, capped at 7.",
+              "description": "Predefined object inclusion: {\"scoring\": \"1 point for each of the first five included objects; 0.25 for each additional object, capped at 7.\"}"
+            },
+            {
+              "id": "image_palette",
+              "task": "image_cover",
+              "name": "Color palette adherence",
+              "max_score": 5,
+              "description": "Color palette adherence. Apply the criterion-specific anchors in the original task statement."
+            },
+            {
+              "id": "image_originality",
+              "task": "image_cover",
+              "name": "Originality and creativity",
+              "max_score": 5,
+              "description": "Originality and creativity. Apply the criterion-specific anchors in the original task statement."
+            },
+            {
+              "id": "image_ai_tools",
+              "task": "image_cover",
+              "name": "Effective use of AI tools",
+              "max_score": 5,
+              "description": "Effective use of AI tools. Apply the criterion-specific anchors in the original task statement."
+            },
+            {
+              "id": "image_delivery",
+              "task": "image_cover",
+              "name": "Delivery",
+              "max_score": 3,
+              "scoring": "Image is at least 1024×1024 and appropriately sized and placed in the provided frame.",
+              "description": "Delivery: {\"scoring\": \"Image is at least 1024×1024 and appropriately sized and placed in the provided frame.\"}"
+            },
+            {
+              "id": "video_artist_likeness",
+              "task": "music_video",
+              "name": "Artist likeness",
+              "max_score": 5,
+              "description": "Artist likeness. Apply the criterion-specific anchors in the original task statement."
+            },
+            {
+              "id": "video_objects",
+              "task": "music_video",
+              "name": "Predefined object inclusion",
+              "max_score": 7,
+              "scoring": "1 point for each of the first five included objects; 0.25 for each additional object, capped at 7.",
+              "description": "Predefined object inclusion: {\"scoring\": \"1 point for each of the first five included objects; 0.25 for each additional object, capped at 7.\"}"
+            },
+            {
+              "id": "video_style",
+              "task": "music_video",
+              "name": "Homogeneous art style",
+              "max_score": 5,
+              "description": "Homogeneous art style. Apply the criterion-specific anchors in the original task statement."
+            },
+            {
+              "id": "video_sync",
+              "task": "music_video",
+              "name": "Music synchronization",
+              "max_score": 5,
+              "description": "Music synchronization. Apply the criterion-specific anchors in the original task statement."
+            },
+            {
+              "id": "video_accuracy",
+              "task": "music_video",
+              "name": "Generation accuracy",
+              "max_score": 5,
+              "description": "Generation accuracy. Apply the criterion-specific anchors in the original task statement."
+            },
+            {
+              "id": "video_prompting",
+              "task": "music_video",
+              "name": "Prompting strategies",
+              "max_score": 5,
+              "description": "Prompting strategies. Apply the criterion-specific anchors in the original task statement."
+            },
+            {
+              "id": "video_duration",
+              "task": "music_video",
+              "name": "Video duration",
+              "max_score": 3,
+              "levels": [
+                {
+                  "condition": "shorter than 37 seconds",
+                  "score": 1
+                },
+                {
+                  "condition": "at least 37 but shorter than 47 seconds",
+                  "score": 2
+                },
+                {
+                  "condition": "full 47 seconds",
+                  "score": 3
+                }
+              ],
+              "description": "Video duration: {\"levels\": [{\"condition\": \"shorter than 37 seconds\", \"score\": 1}, {\"condition\": \"at least 37 but shorter than 47 seconds\", \"score\": 2}, {\"condition\": \"full 47 seconds\", \"score\": 3}]}"
+            },
+            {
+              "id": "video_neuralframes",
+              "task": "music_video",
+              "name": "Effective use of NeuralFrames",
+              "max_score": 5,
+              "description": "Effective use of NeuralFrames. Apply the criterion-specific anchors in the original task statement."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/Practical-round-best-solutions.zip",
+          "mime_type": "application/zip",
+          "role": "judge_only",
+          "sha256": "c09210914c0d1544983dc27aa79c8a9c9645a843ca615ce3ad1a99b5503b58a4"
+        }
+      ],
+      "limitations": [
+        "Creative-tool accounts and multimodal judging have not been reproduced.",
+        "The raw 40+40 criterion sum is not the final ranking: image/video weights are 40:60 and full jury/peer aggregation is unresolved."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "raw_criterion_sum_not_official_final_ranking",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ioai_team_2025_factory",
+      "year": 2025,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/ioai_team_2025_official_scoring_protocol_v1.json",
+          "sha256": "e62226ad137f6b2bf54eb145260602a16ddbdf37651fdd4b9f4563bbcb676274",
+          "format": "official_protocol_or_answer_map",
+          "rubric_id": "ioai_team_2025_official_scoring_protocol_v1",
+          "total_points": null,
+          "criteria": [],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": [
+        "The official guide and current simulator/referee repository are identified, but the original contest revision, scene assets and execution/scoring equivalence remain unverified.",
+        "The guide's ioai/master branch is not in the current branch list; the observed master commit postdates the event.",
+        "The upstream license restricts reuse; public repository access is not a redistribution grant.",
+        "PDF code snippets retain source line wrapping and are not validated executable scripts."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": false,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

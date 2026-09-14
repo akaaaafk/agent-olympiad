@@ -1,5 +1,3 @@
-# Islands from the Sky
-
 Hide 
  Islands from the Sky 
 

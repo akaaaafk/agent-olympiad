@@ -3,12 +3,26 @@
   "type": "official_scoring_protocol",
   "title": "Wharton/KWHS Investment Competition 2019 judging considerations",
   "competition_id": "wharton_investment",
-  "applicable_years": [2019],
+  "applicable_years": [
+    2019
+  ],
   "criteria": [
-    {"id": "client_understanding", "name": "Understanding of the client"},
-    {"id": "strategy_articulation", "name": "Strategy articulation"},
-    {"id": "analysis", "name": "Analysis"},
-    {"id": "teamwork", "name": "Teamwork"}
+    {
+      "id": "client_understanding",
+      "name": "Understanding of the client"
+    },
+    {
+      "id": "strategy_articulation",
+      "name": "Strategy articulation"
+    },
+    {
+      "id": "analysis",
+      "name": "Analysis"
+    },
+    {
+      "id": "teamwork",
+      "name": "Teamwork"
+    }
   ],
   "additional_official_considerations": [
     "Addressing the client's short- and long-term needs",

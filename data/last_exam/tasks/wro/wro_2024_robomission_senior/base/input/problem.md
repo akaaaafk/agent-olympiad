@@ -1,5 +1,3 @@
-# RoboMission Senior 2024
-
 RoboMission Senior Game Rules Season 2024    
    Earth Allies Force of Nature       Oﬃcial Game Rules for WRO RoboMission Senior.  Version: January 15th 2024  (Note: Rules for local WRO events may vary!)      WRO International Premium Partner 
  

@@ -1,5 +1,3 @@
-# IHBB-Winter_Bowl-R2
-
 [Q1] Sybil Ludington is nicknamed the “female” counterpart of this figure. William Dawes and this man were given similar tasks by Joseph Warren. This man’s most famous act occurred on “the eighteenth of April, in Seventy-Five” and is the subject of a Henry Wadsworth Longfellow poem that states "one if by land, and two if by sea." For ten points, name this silversmith who warned of approaching British troops during a “midnight ride.”
 
 [Q2] One of t hese structures built by the Axumite Kingdom was taken to Rome but returned to Ethiopia after Italy signed a UN agreement. The earliest known type of this object was comprised of 120 metric tons of red granite, and was meant to commemorate Senusret I in Heliopolis. These structures were said to symbolize the sun god Ra and are topped with a pyramid-shaped capstone. For ten points, name this type of tall, four-sided, monument from Ancient Egypt.

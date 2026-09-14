@@ -1,20 +1,11 @@
-# `data/last_exam`
+# data/last_exam
 
-Generated Agents' Last Exam layout. Canonical sources stay in `data/rules`
-and `data/benchmarks`. `data/base` is a previous generator output.
+Generated from data/benchmarks and data/rules: 43 tracks, 1720 records.
 
-```bash
-python collectors/build_last_exam_from_rules.py
-```
+Only explicitly agent_visible files are copied into task inputs. Judge-only references remain outside input.
 
-## Layers
+Resolve task directories through task_cards.json source_repo_path; case-colliding IDs use stable hash suffixes.
 
-| Layer | Path | Audience |
-|---|---|---|
-| Input | `competitions/<cid>/input/` | Agent at start: official ground rules |
-| Method | `competitions/<cid>/method/` | Agent at start: how this benchmark's team works |
-| Problem | `tasks/<cid>/<pid>/base/input/` | Agent at start: this problem only |
-| Eval | `competitions/<cid>/eval/` and `tasks/<cid>/<pid>/eval/` | Hidden until grade |
+Task availability is defined by the canonical record's evaluation.status. A staged task is not necessarily ready.
 
-Tasks do not copy `collaboration.json`. They inherit `competitions/<cid>`.
-Gold answers stay in `data/benchmarks` and are only pointed at from `eval/`.
+Regenerate with `python scripts/repair_data_catalog.py --derived-only`. Previous outputs are archived under data/excluded.

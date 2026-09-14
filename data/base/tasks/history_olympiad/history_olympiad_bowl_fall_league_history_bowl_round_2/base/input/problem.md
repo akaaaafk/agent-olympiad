@@ -1,5 +1,3 @@
-# Fall-League-History-Bowl_Round-2
-
 [Q1] The northern half of this peninsula was controlled in the 600s by an Exarchate [[EKS- ar-kate]] based in Ravenna. Hannibal Barca crossed the Alps with a mercenary army to raid this peninsula which hosts ancient cities like Mediolanum. The Umbrians and Samnites fought a nascent republic on this peninsula. For ten points, name this peninsula, the former home of the Etruscan civilization and the heart of the Roman Empire.
 
 [Q2] For ten points, n ame this first female chancellor of Germany.

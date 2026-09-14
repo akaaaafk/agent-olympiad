@@ -1,5 +1,3 @@
-# worshippers-of_scientific_method
-
 Presuming you are familiar with a previous practical approach to synthesising  our native 
 dish, we bring you another possible, well-tested and approved combination of various items that 
 can easily be obtained withing your backyard, or in a worst case scenario – your local grocery.  

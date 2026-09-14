@@ -1,3 +1,5 @@
-# 2009/puzzles/crossed_wires/PUZZLE
+# Crossed Wires
 
-Crossed Wires Crossed Wires Track 1 Track 2 Track 3 Track 4 Track 5 Track 6 Track 7 Track 8 Track 9 Track 10
+Open `puzzle.html` and its explicit local attachments for the original task. No text-only preview replaces images, audio/video or PDF sheets.
+
+Archive limitation: The original explicitly linked standalone archive materials are preserved byte-for-byte. Audio/video structure checks are not listening, watching, transcription or semantic grading. Historical full-hunt progression and host interaction are not reproduced.

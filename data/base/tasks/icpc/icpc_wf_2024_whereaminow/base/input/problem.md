@@ -1,5 +1,3 @@
-# Where Am I Now?
-
 Hide 
  Where Am I Now? 
 

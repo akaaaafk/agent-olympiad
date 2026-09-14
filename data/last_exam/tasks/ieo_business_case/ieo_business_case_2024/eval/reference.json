@@ -4,7 +4,20 @@
   "has_gold_answer": false,
   "evaluator_id": "slide_deck_v1",
   "evaluator_status": "ready",
-  "rubric_path": "data/rubrics/business_case_slides_50.json",
-  "deliverable": "slide_deck",
-  "solution_file": null
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": "slide_deck_v1",
+    "status": "ready",
+    "rubric_path": "data/rubrics/ieo_business_case_slides_50_v1.json",
+    "media": [
+      "images",
+      "pdf"
+    ],
+    "deliverable": "slide_deck",
+    "limitations": "The PDF deck is scored; live delivery, jury questions, and team-speaking balance are not reproduced.",
+    "scorecard_path": "data/rubrics/task_scorecards/ieo_business_case.json",
+    "scorecard_key": "ieo_business_case_2024"
+  },
+  "rubric_path": "data/rubrics/ieo_business_case_slides_50_v1.json",
+  "deliverable": "slide_deck"
 }

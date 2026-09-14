@@ -1,5 +1,3 @@
-# IChTo-2024-problems
-
 International Chemistry Tournament
 PROBLEMS SET
 AUGUST 25-30, 2024

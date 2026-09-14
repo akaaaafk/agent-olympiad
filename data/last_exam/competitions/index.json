@@ -1,24 +1,51 @@
 {
-  "description": "One last-exam pack per data/rules competition.",
-  "n_competitions": 37,
+  "description": "One pack per canonical track",
+  "n_competitions": 43,
   "competitions": [
     {
-      "competition_id": "arml_local",
-      "rule_id": "arml_local:official_shared_answer",
+      "competition_id": "ijso_practical",
+      "rule_id": "ijso_practical:draft_v1",
       "profile": "proxy",
-      "protocol": "shared_answer",
-      "n_roles": 6,
-      "path": "data/last_exam/competitions/arml_local",
-      "source": "data/rules/arml_local"
+      "protocol": "lab_practical_proxy",
+      "n_roles": 3,
+      "path": "data/last_exam/competitions/ijso_practical",
+      "source": "data/rules/ijso_practical"
     },
     {
-      "competition_id": "arml_national_power",
-      "rule_id": "arml_national_power:draft_v1",
+      "competition_id": "ieo_business_case",
+      "rule_id": "ieo_business_case:draft_v1",
+      "profile": "proxy",
+      "protocol": "research_artifact",
+      "n_roles": 5,
+      "path": "data/last_exam/competitions/ieo_business_case",
+      "source": "data/rules/ieo_business_case"
+    },
+    {
+      "competition_id": "iol_team",
+      "rule_id": "iol_team:draft_v1",
+      "profile": "proxy",
+      "protocol": "shared_answer",
+      "n_roles": 4,
+      "path": "data/last_exam/competitions/iol_team",
+      "source": "data/rules/iol_team"
+    },
+    {
+      "competition_id": "ioaa_group",
+      "rule_id": "ioaa_group:draft_v1",
+      "profile": "proxy",
+      "protocol": "shared_answer",
+      "n_roles": 5,
+      "path": "data/last_exam/competitions/ioaa_group",
+      "source": "data/rules/ioaa_group"
+    },
+    {
+      "competition_id": "arml_power",
+      "rule_id": "arml_power:draft_v1",
       "profile": "proxy",
       "protocol": "shared_answer",
       "n_roles": 15,
-      "path": "data/last_exam/competitions/arml_national_power",
-      "source": "data/rules/arml_national_power"
+      "path": "data/last_exam/competitions/arml_power",
+      "source": "data/rules/arml_power"
     },
     {
       "competition_id": "arml_national_team",
@@ -30,13 +57,130 @@
       "source": "data/rules/arml_national_team"
     },
     {
-      "competition_id": "arml_power",
-      "rule_id": "arml_power:draft_v1",
+      "competition_id": "arml_national_power",
+      "rule_id": "arml_national_power:draft_v1",
       "profile": "proxy",
       "protocol": "shared_answer",
       "n_roles": 15,
-      "path": "data/last_exam/competitions/arml_power",
-      "source": "data/rules/arml_power"
+      "path": "data/last_exam/competitions/arml_national_power",
+      "source": "data/rules/arml_national_power"
+    },
+    {
+      "competition_id": "arml_local",
+      "rule_id": "arml_local:official_shared_answer",
+      "profile": "proxy",
+      "protocol": "shared_answer",
+      "n_roles": 6,
+      "path": "data/last_exam/competitions/arml_local",
+      "source": "data/rules/arml_local"
+    },
+    {
+      "competition_id": "wsc_writing",
+      "rule_id": "wsc_writing:draft_v1",
+      "profile": "proxy",
+      "protocol": "staged_collaborative_writing",
+      "n_roles": 3,
+      "path": "data/last_exam/competitions/wsc_writing",
+      "source": "data/rules/wsc_writing"
+    },
+    {
+      "competition_id": "jessup",
+      "rule_id": "jessup:draft_v1",
+      "profile": "proxy",
+      "protocol": "presentation_and_cross_examination",
+      "n_roles": 5,
+      "path": "data/last_exam/competitions/jessup",
+      "source": "data/rules/jessup"
+    },
+    {
+      "competition_id": "iiot",
+      "rule_id": "iiot:draft_v1",
+      "profile": "proxy",
+      "protocol": "two_workstation_programming",
+      "n_roles": 4,
+      "path": "data/last_exam/competitions/iiot",
+      "source": "data/rules/iiot"
+    },
+    {
+      "competition_id": "icpc",
+      "rule_id": "icpc:world_finals_2026_v1",
+      "profile": "proxy",
+      "protocol": "human_team_shared_workstation_programming",
+      "n_roles": 3,
+      "path": "data/last_exam/competitions/icpc",
+      "source": "data/rules/icpc"
+    },
+    {
+      "competition_id": "iypt",
+      "rule_id": "iypt:current_proxy_v1",
+      "profile": "proxy",
+      "protocol": "research_physics_fight",
+      "n_roles": 5,
+      "path": "data/last_exam/competitions/iypt",
+      "source": "data/rules/iypt"
+    },
+    {
+      "competition_id": "hmmt_team",
+      "rule_id": "hmmt_team:archive_v1",
+      "profile": "proxy",
+      "protocol": "fixed_packet",
+      "n_roles": 8,
+      "path": "data/last_exam/competitions/hmmt_team",
+      "source": "data/rules/hmmt_team"
+    },
+    {
+      "competition_id": "hmmt_guts",
+      "rule_id": "hmmt_guts:draft_v1",
+      "profile": "proxy",
+      "protocol": "progressive_release",
+      "n_roles": 8,
+      "path": "data/last_exam/competitions/hmmt_guts",
+      "source": "data/rules/hmmt_guts"
+    },
+    {
+      "competition_id": "mcm",
+      "rule_id": "mcm:current_proxy_v1",
+      "profile": "proxy",
+      "protocol": "long_horizon_report",
+      "n_roles": 3,
+      "path": "data/last_exam/competitions/mcm",
+      "source": "data/rules/mcm"
+    },
+    {
+      "competition_id": "icm",
+      "rule_id": "icm:current_proxy_v1",
+      "profile": "proxy",
+      "protocol": "long_horizon_report",
+      "n_roles": 3,
+      "path": "data/last_exam/competitions/icm",
+      "source": "data/rules/icm"
+    },
+    {
+      "competition_id": "fyziklani",
+      "rule_id": "fyziklani:draft_v1",
+      "profile": "non_comparable",
+      "protocol": "progressive_release",
+      "n_roles": 5,
+      "path": "data/last_exam/competitions/fyziklani",
+      "source": "data/rules/fyziklani"
+    },
+    {
+      "competition_id": "purple_comet",
+      "rule_id": "purple_comet:official_shared_answer",
+      "profile": "non_comparable",
+      "protocol": "shared_answer",
+      "n_roles": 6,
+      "path": "data/last_exam/competitions/purple_comet",
+      "source": "data/rules/purple_comet"
+    },
+    {
+      "competition_id": "itym",
+      "rule_id": "itym:current_proxy_v1",
+      "profile": "proxy",
+      "protocol": "research_math_fight",
+      "n_roles": 6,
+      "path": "data/last_exam/competitions/itym",
+      "source": "data/rules/itym"
     },
     {
       "competition_id": "ccdc",
@@ -55,6 +199,15 @@
       "n_roles": 4,
       "path": "data/last_exam/competitions/cfa_research_challenge",
       "source": "data/rules/cfa_research_challenge"
+    },
+    {
+      "competition_id": "codeforces",
+      "rule_id": "codeforces:vjudge_team_sim_v1",
+      "profile": "proxy",
+      "protocol": "human_team_shared_workstation_programming",
+      "n_roles": 3,
+      "path": "data/last_exam/competitions/codeforces",
+      "source": "data/rules/codeforces"
     },
     {
       "competition_id": "cybench",
@@ -102,15 +255,6 @@
       "source": "data/rules/ethics_bowl_nhseb"
     },
     {
-      "competition_id": "fyziklani",
-      "rule_id": "fyziklani:draft_v1",
-      "profile": "non_comparable",
-      "protocol": "progressive_release",
-      "n_roles": 5,
-      "path": "data/last_exam/competitions/fyziklani",
-      "source": "data/rules/fyziklani"
-    },
-    {
       "competition_id": "gcch_harvard",
       "rule_id": "gcch_harvard:draft_v1",
       "profile": "non_comparable",
@@ -129,15 +273,6 @@
       "source": "data/rules/history_olympiad"
     },
     {
-      "competition_id": "hmmt_guts",
-      "rule_id": "hmmt_guts:draft_v1",
-      "profile": "proxy",
-      "protocol": "progressive_release",
-      "n_roles": 8,
-      "path": "data/last_exam/competitions/hmmt_guts",
-      "source": "data/rules/hmmt_guts"
-    },
-    {
       "competition_id": "ichto",
       "rule_id": "ichto:draft_v1",
       "profile": "proxy",
@@ -147,51 +282,6 @@
       "source": "data/rules/ichto"
     },
     {
-      "competition_id": "icpc",
-      "rule_id": "icpc:world_finals_2026_v1",
-      "profile": "proxy",
-      "protocol": "human_team_shared_workstation_programming",
-      "n_roles": 3,
-      "path": "data/last_exam/competitions/icpc",
-      "source": "data/rules/icpc"
-    },
-    {
-      "competition_id": "ieo_business_case",
-      "rule_id": "ieo_business_case:draft_v1",
-      "profile": "proxy",
-      "protocol": "research_artifact",
-      "n_roles": 5,
-      "path": "data/last_exam/competitions/ieo_business_case",
-      "source": "data/rules/ieo_business_case"
-    },
-    {
-      "competition_id": "iiot",
-      "rule_id": "iiot:draft_v1",
-      "profile": "proxy",
-      "protocol": "two_workstation_programming",
-      "n_roles": 4,
-      "path": "data/last_exam/competitions/iiot",
-      "source": "data/rules/iiot"
-    },
-    {
-      "competition_id": "ijso_practical",
-      "rule_id": "ijso_practical:draft_v1",
-      "profile": "proxy",
-      "protocol": "lab_practical_proxy",
-      "n_roles": 3,
-      "path": "data/last_exam/competitions/ijso_practical",
-      "source": "data/rules/ijso_practical"
-    },
-    {
-      "competition_id": "ioaa_group",
-      "rule_id": "ioaa_group:draft_v1",
-      "profile": "proxy",
-      "protocol": "shared_answer",
-      "n_roles": 5,
-      "path": "data/last_exam/competitions/ioaa_group",
-      "source": "data/rules/ioaa_group"
-    },
-    {
       "competition_id": "ioai_team",
       "rule_id": "ioai_team:draft_v1",
       "profile": "proxy",
@@ -199,24 +289,6 @@
       "n_roles": 4,
       "path": "data/last_exam/competitions/ioai_team",
       "source": "data/rules/ioai_team"
-    },
-    {
-      "competition_id": "iol_team",
-      "rule_id": "iol_team:draft_v1",
-      "profile": "proxy",
-      "protocol": "shared_answer",
-      "n_roles": 4,
-      "path": "data/last_exam/competitions/iol_team",
-      "source": "data/rules/iol_team"
-    },
-    {
-      "competition_id": "jessup",
-      "rule_id": "jessup:draft_v1",
-      "profile": "proxy",
-      "protocol": "presentation_and_cross_examination",
-      "n_roles": 5,
-      "path": "data/last_exam/competitions/jessup",
-      "source": "data/rules/jessup"
     },
     {
       "competition_id": "mystery_hunt",
@@ -253,15 +325,6 @@
       "n_roles": 8,
       "path": "data/last_exam/competitions/pumac_power",
       "source": "data/rules/pumac_power"
-    },
-    {
-      "competition_id": "purple_comet",
-      "rule_id": "purple_comet:official_shared_answer",
-      "profile": "non_comparable",
-      "protocol": "shared_answer",
-      "n_roles": 6,
-      "path": "data/last_exam/competitions/purple_comet",
-      "source": "data/rules/purple_comet"
     },
     {
       "competition_id": "qanta",
@@ -325,15 +388,6 @@
       "n_roles": 3,
       "path": "data/last_exam/competitions/wro",
       "source": "data/rules/wro"
-    },
-    {
-      "competition_id": "wsc_writing",
-      "rule_id": "wsc_writing:draft_v1",
-      "profile": "proxy",
-      "protocol": "staged_collaborative_writing",
-      "n_roles": 3,
-      "path": "data/last_exam/competitions/wsc_writing",
-      "source": "data/rules/wsc_writing"
     }
   ]
 }

@@ -1,0 +1,205 @@
+/* LAYER DEFINITIONS */
+
+#container {
+	width: 790px;
+	text-align: left;
+	margin: 0 auto;
+}
+
+#content {
+	top: 113px;
+	text-align: left;
+	padding: 0px 24px;
+}
+
+#dossier { /* YES, THIS IS SUPPOSED TO BE EMPTY */
+}
+
+#header {
+	top: 0px;
+	width: 790px;
+	height: 113px;
+	background-image: url(header_bg.gif);
+	background-repeat: no-repeat;
+}
+
+#headerCheckAnswer {
+	font-family: "Lucida Grande", Helvetica, sans-serif;
+	font-size: 21px;
+	color: #FFFFFF;
+	margin: 0px 20px 0px 600px;
+	padding-top: 20px;
+}
+
+#headerIcon {
+	padding-left: 25px;
+	float: left;
+}
+
+#headerCheckAnswer a:link, #headerCheckAnswer a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#headerCheckAnswer a:hover, #headerCheckAnswer a:active {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#nav
+{
+	text-align: left;
+	margin: 4px 0px;
+	padding-left: 0px;
+	clear: left;
+}
+
+
+/* TAG REDEFINITIONS */
+
+a:link {
+	color: #003399;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #666666;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #003399;
+	text-decoration: underline;
+}
+
+body {
+	font-family: "Lucida Grande", Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #000000;
+	text-align: center;
+	background-color: #303B41;
+	background-image: url(bg_page.gif);
+	background-repeat: repeat-y;
+	background-position: center;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 24px;
+	line-height: 26px;
+	color: #003399;
+	padding: 2px 0px;
+}
+
+h2 {
+	font-size: 18px;
+	line-height: 20px;
+	color: #000000;
+	padding: 2px 0px -8px 0px;
+	margin-bottom: 0px;
+}
+
+h3 {
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 18px;
+	color: #000000;
+	padding: 2px 0px -8px 0px;
+	margin-bottom: 0px;
+}
+
+h4 {
+	font-size: 14px;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 16px;
+	color: #000000;
+	padding: 2px 0px -8px 0px;
+	margin-bottom: 0px;
+}
+
+html { 
+	min-height: 100%; 
+	margin-bottom: 1px; 
+}
+
+p {
+	background-color: none;
+	padding: 2px 0px 10px 0px;
+}
+
+ol, ul {
+	margin-top: -12px;
+}
+
+
+/* CUSTOM CLASSES */
+
+
+
+
+
+#content ul.check {
+	margin-top: 8px;
+}
+
+#dossier h1, #dossier h2, #dossier h3, #dossier p {
+	padding-left: 50px;
+}
+
+#dossier ul {
+	margin-left: 50px;
+}
+
+
+
+
+
+.dossier2 {
+	width: 651px;
+	background-image: url(dossier_2_folder_slice.gif);
+	background-repeat: repeat-y;
+}
+
+.dossier2Right {
+	width: 82px;
+	background-image: url(dossier_2_folder_side_slice.gif);
+	background-repeat: repeat-y;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.paddingRight4 {
+	padding-right: 4px;
+}
+
+.paddingRight15 {
+	padding-right: 15px;
+}
+
+.small {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.archive-puzzle-label { color: #003399; text-decoration: none; }

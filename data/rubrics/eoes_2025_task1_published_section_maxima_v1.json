@@ -1,0 +1,51 @@
+{
+  "rubric_id": "eoes_2025_task1_published_section_maxima_v1",
+  "total_points": 120,
+  "official_problem_maxima": [
+    {
+      "id": "1",
+      "title": "Ready, Set, Go!",
+      "max_score": 47,
+      "source_page": 2,
+      "source_file": "data/raw/eoes/eoes/2025/EOES2025_Task1_MarkingScheme.pdf",
+      "source_sha256": "897d983bbbf6a6b79d4fab264d6cddfe7bb5bc416bbb67c9c296855e963bad4a"
+    },
+    {
+      "id": "2",
+      "title": "Salts from Croatian Saltworks",
+      "max_score": 37,
+      "source_page": 10,
+      "source_file": "data/raw/eoes/eoes/2025/EOES2025_Task1_MarkingScheme.pdf",
+      "source_sha256": "897d983bbbf6a6b79d4fab264d6cddfe7bb5bc416bbb67c9c296855e963bad4a"
+    },
+    {
+      "id": "3",
+      "title": "Bending Light in Aqueous NaCl Solution",
+      "max_score": 36,
+      "source_page": 22,
+      "source_file": "data/raw/eoes/eoes/2025/EOES2025_Task1_MarkingScheme.pdf",
+      "source_sha256": "897d983bbbf6a6b79d4fab264d6cddfe7bb5bc416bbb67c9c296855e963bad4a"
+    }
+  ],
+  "criteria": [],
+  "source_file": "data/raw/eoes/eoes/2025/EOES2025_Task1_MarkingScheme.pdf",
+  "source_sha256": "897d983bbbf6a6b79d4fab264d6cddfe7bb5bc416bbb67c9c296855e963bad4a",
+  "source_url": "https://www.eoes.science/Previous%20olympiads/previous.html",
+  "visibility": "judge_only",
+  "executable": false,
+  "score_basis": "Sum of the three section maxima printed in the 2025 marking scheme, not a normalized tournament score.",
+  "limitations": [
+    "Section maxima only; detailed answer-dependent grading rules are still in the original marking PDF.",
+    "No simulated measurements, missing spreadsheet calculator, observer signatures or physical evidence are invented.",
+    "No cross-day or cross-discipline normalization is inferred."
+  ],
+  "visual_review": {
+    "renderer": "Poppler",
+    "pages": [
+      2,
+      10,
+      22
+    ],
+    "date": "2026-09-13"
+  }
+}

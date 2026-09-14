@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Cambridge: Solution</title>
+</head>
+<body>
+<h1>Cambridge: Solution</h1>
+
+<p>This puzzle is the final meta for this Hunt, and required the Warrant answers as input. It has two parts. The first part is a really simple cryptogram which gives the algorithm used to encode the secret message. The second part is the encoded message.</p>
+
+<p><strong>Here's the answer to the simple cryptogram:</strong></p>
+<hr>
+<pre>
+Example:
+If the secret message were "Message to y'all", and the warrant
+answers, in order, were "this", "is", "our", and "test", then
+line up the words like this:
+
+MESSAGETOYALL   (cap everything, remove spaces and punctuation)
+THISISOURTEST   (The warrant answers, capped, in order)
+TESTTHISIOURO   (Below every warrant answer, the previous one,
+                 duplicated and truncated as necessary)
+
+Add them up:
+ZQTECGBGOGZVT  (That's the encrypted text)
+</pre>
+<hr>
+
+
+
+<p>The order of the warrant answers is the order of their crooks as defined in the <a href="../../Dossiers/crook_pecking_order.txt">special bulletin</a> and a later
+<a href="../../Dossiers/intercepted_message.txt">message from Carmen to Tracy</a>. The warrant answers, in order, are:</p>
+
+<p>VALERIE STEREO JABIR MUSE ANIME SEVENTY RAINBOW INTERACT GENERIC DONUTS BOKCHOY RHYTHM</p>
+
+<p>The encoded message is:</p>
+
+<p>ABC order the city answers. Using this order on the cities, read fifth letter to find the loot.</p>
+
+<p>Indeed if you follow the instructions (except for counting spaces as letters, spelling out all acronyms except for ROTC, misordering FUNK and FREQUENCY, and spelling "millennium" incorrectly in the solution) you get:</p>
+
+<p><strong>PENULTIMATE MYSTERY HUNT COIN OF THIS MILLENIUM.</strong></p>
+
+<p>If you call in this solution to Acme, you are told you come to their headquarters to get a warrant for
+Carmen. This <a href="../../Endgame/MH1999-runaround.pdf">final puzzle</a> is a riddle trail leading to the coin.</p>
+
+
+<hr>
+
+<br>
+<h2>Composer's notes</h2>
+<ol>
+  <li>
+  	<p>The original idea for the warrant ordering was to have the hunters take the mysterious zsigs and make
+a big list (by putting zsig A after zsig B if zsig B started with the word ending zsig A).</p>
+<ul>
+ <li>contemplating the navel</li>
+<li>navel orange</li>
+<li>Orange Tour</li>
+<li>tour group</li>
+<li>group theory</li>
+<li>Theory of Everything</li>
+<li>everything else</li>
+<li>else return</li>
+</ul>
+<p>They were then to find out how the loots would fit in this list (*** need example ***). This would then
+order the loots, and hence the warrant answers. Unfortunately, the order given to me was incorrect. We
+decided to simply give the hunters the order. Which was just as well, considering how long the hunt
+went on.</p>
+</li>
+<li><p>The originally proposed encryption scheme was to have the key be the warrant answers in order
+(instead of the more complicated one presented). It was observed that it would be very easy to determine
+the correct position of a warrant answer by passing it over the encrypted text and finding where the
+deciphered plaintext made sense. The implemented scheme forces you to know the order.</p>
+</li>
+</ol>
+
+</body>
+</html>

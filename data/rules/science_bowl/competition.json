@@ -13,11 +13,18 @@
     "range_basis": "source_record"
   },
   "execution": {
+    "optional_runtime_profiles": {
+      "science_bowl_buzzer_v1": "ContestSession manifest opt-in: complete same-source tossup/bonus pairs, fully displayed tossup, recognized speaker, first response, conditional bonus, captain hand-in and 4/10 scoring. Single-team turn-budget adaptation; no opponent, interrupts, live clock or challenges. Default question proxies retain the limitations below."
+    },
     "rules_edition": "2026_01_29",
     "official_minutes": null
   },
   "allowed_tools": [
-    "query_rules"
+    "query_rules",
+    "prepare_science_bowl_answer",
+    "buzz",
+    "answer_tossup",
+    "answer_bonus"
   ],
   "resources": {
     "internet": "forbidden",

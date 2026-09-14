@@ -1,29 +1,13 @@
-# Task SOP
+# Task
 
-## Reference Environment
-- Competition: MIT Mystery Hunt
-- Competition id: `mystery_hunt`
-- Problem id: `mystery_hunt_01712`
-- Task type: `puzzle`
-- Team size: 12
-- Year / edition: 2013
-- Source: https://puzzles.mit.edu/
+Competition: mystery_hunt
 
-## Goal
-As a multi-agent team, solve the olympiad-style team task using only the materials under `base/input`. Produce the required deliverable (`team_submission`).
+Task: mystery_hunt_01712
 
-## Task directory
-- Variant root: `base`
-- Input directory: `base/input`
+Edition: 2013
 
-## Inputs
-- `problem.md`
+Team size: 12
 
-## Title
-2013/coinheist.com/get_smart/highlight_reel/index.html
+Deliverable: puzzle_answer
 
-## Deterministic Evaluation Rule
-Gold answers and official solution booklets are not provided in `input/`. Scoring uses the evaluator declared on the task card (gold match, rubric LLM judge, slide judge, or deferred sandbox).
-
-## Deliverables
-Return the team `team_submission` expected by this competition.
+Use the attached problem materials and the inherited competition and collaboration instructions.

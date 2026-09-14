@@ -1,30 +1,13 @@
-# Task SOP
+# Task
 
-## Reference Environment
-- Competition: International History Bee & Bowl (Asia) — History Bowl
-- Competition id: `history_olympiad`
-- Problem id: `history_olympiad_bowl_ihbb_winter_bowl_r5`
-- Task type: `history_bowl_session`
-- Team size: 4
-- Year / edition: 2022
-- Source: https://iacompetitionsasia.com/history-bee-bowl-practice-materials/
+Competition: history_olympiad
 
-## Goal
-As a multi-agent team, solve the olympiad-style team task using only the materials under `base/input`. Produce the required deliverable (`team_submission`).
+Task: history_olympiad_bowl_ihbb_winter_bowl_r5
 
-## Task directory
-- Variant root: `base`
-- Input directory: `base/input`
+Edition: 2022
 
-## Inputs
-- `problem.md`
-- `IHBB-Winter_Bowl-R5.pdf`
+Team size: 4
 
-## Title
-IHBB-Winter_Bowl-R5
+Deliverable: answer_sheet
 
-## Deterministic Evaluation Rule
-Gold answers and official solution booklets are not provided in `input/`. Scoring uses the evaluator declared on the task card (gold match, rubric LLM judge, slide judge, or deferred sandbox).
-
-## Deliverables
-Return the team `team_submission` expected by this competition.
+Use the attached problem materials and the inherited competition and collaboration instructions.

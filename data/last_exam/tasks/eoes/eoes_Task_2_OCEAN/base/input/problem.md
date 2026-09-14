@@ -1,5 +1,3 @@
-# Task_2_OCEAN
-
 Task 2 
 OCEAN 
 11th of May 2017 

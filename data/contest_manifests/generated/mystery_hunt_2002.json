@@ -1,0 +1,17 @@
+{
+  "session_id": "mystery_hunt_2002",
+  "competition_id": "mystery_hunt",
+  "problem_ids": [
+    "mystery_hunt_00196",
+    "mystery_hunt_00199",
+    "mystery_hunt_00201",
+    "mystery_hunt_00203",
+    "mystery_hunt_00215",
+    "mystery_hunt_00220",
+    "mystery_hunt_00226"
+  ],
+  "description": "OTC contest-session manifest for mystery_hunt_2002 (7 tasks)",
+  "split_parts": false,
+  "task_family": "puzzle",
+  "competition_description": "MIT Mystery Hunt-style puzzles: infer the puzzle mechanism and extract a final answer word or phrase."
+}

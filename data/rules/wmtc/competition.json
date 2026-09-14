@@ -16,7 +16,8 @@
     "official_minutes": null
   },
   "allowed_tools": [
-    "query_rules"
+    "query_rules",
+    "prepare_wmtc_team_sheet"
   ],
   "resources": {
     "internet": "forbidden",

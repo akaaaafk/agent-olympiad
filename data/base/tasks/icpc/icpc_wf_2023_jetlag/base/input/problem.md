@@ -1,5 +1,3 @@
-# Jet Lag
-
 Hide 
  Jet Lag 
 

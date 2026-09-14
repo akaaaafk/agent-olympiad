@@ -1,0 +1,49 @@
+{
+  "schema_version": "iiot-reference-archive/v1",
+  "problem_id": "iiot_2023_08",
+  "task_code": "tetris",
+  "round": "international_final",
+  "archive_url": "https://iio.team/competition/tasks/2023",
+  "source_links": {
+    "Statement": "https://drive.google.com/file/d/1UuCucfbo8g-u810el2tBOhfJ0qTvkEjz/view?usp=drive_link",
+    "Solutions": "https://drive.google.com/drive/folders/1uKY5j0ogRoYQGntbsSQbuzglg5D5K1_k?usp=drive_link",
+    "Test cases": "https://drive.google.com/drive/folders/1NvOd83jNecnFfgQvELWePg9QppUQX6K7?usp=drive_link"
+  },
+  "reference": {
+    "path": "data/raw/iiot/2023/tetris/references/solution.cpp",
+    "source_url": "https://drive.google.com/uc?id=1gTgz7AQvtmcz5ZKdrVQKe8YpyhOitjCi&export=download",
+    "sha256": "4210b5845a91b795da3a1bf8372b16dc58bd2fd1e6fbe6378f98f76e0b8e5ca6",
+    "bytes": 1229,
+    "classification": "publisher_reference_source",
+    "execution_validation": "not_run"
+  },
+  "official_scoring": {
+    "total_points": 100,
+    "subtasks": [
+      {
+        "id": 1,
+        "points": 0
+      },
+      {
+        "id": 2,
+        "points": 20
+      },
+      {
+        "id": 3,
+        "points": 30
+      },
+      {
+        "id": 4,
+        "points": 50
+      }
+    ],
+    "mode": "all_cases_required_per_subtask",
+    "test_to_subtask_mapping": "not_archived"
+  },
+  "public_test_listing": {
+    "status": "paired_file_listings_available",
+    "local_tests_archived": false
+  },
+  "readiness": "not_ready",
+  "license_policy": "No redistribution permission inferred."
+}

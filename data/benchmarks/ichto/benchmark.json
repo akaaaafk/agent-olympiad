@@ -17,9 +17,73 @@
       "grading_rubric": "Oral report + opposition/review",
       "human_baseline": null
     },
-    "status": "collected",
+    "status": "partial",
     "is_solution_pdf": false,
-    "team_size_note": "Official national-team range is 4-6; benchmark default is 4."
+    "team_size_note": "Official national-team range is 4-6; benchmark default is 4.",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "assets": [
+      {
+        "path": "data/raw/ichto/IChTo-2019-Problem-Set.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "2a01016ffc4541b14a4c8cb9755103842b4b928a4a272382dfc616499513e06c"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": "rubric_llm_v1",
+      "status": "ready_with_limitations",
+      "rubric_path": "data/rubrics/ichto_report_scientific_9_reused_v1.json",
+      "deliverable": "chemistry_theory_answer_packet",
+      "limitations": "2025 scientific criteria reused across years as a 9-point written-report subtotal. No live debate, official TP conversion, or team ranking is reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+      "scorecard_key": "ichto_IChTo-2019-Problem-Set",
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_path": "data/rubrics/ichto_2025_official_scoring_v1.json",
+        "deliverable": "chemistry_theory_answer_packet",
+        "limitations": "The available official scoring rubric is edition-specific to 2025.",
+        "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+        "scorecard_key": "ichto_IChTo-2019-Problem-Set"
+      },
+      "rubric_reuse": {
+        "source_competition": "ichto",
+        "target_competition": "ichto",
+        "target_year": 2019,
+        "source_rubric_paths": [
+          "data/rubrics/ichto_2025_official_scoring_v1.json"
+        ],
+        "source_editions": [
+          2025
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      }
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "http://ichto.org/en/problems/",
+      "source_file": "data/raw/ichto/IChTo-2019-Problem-Set.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/ichto/IChTo-2019-Problem-Set.pdf",
+          "role": "agent_visible",
+          "sha256": "2a01016ffc4541b14a4c8cb9755103842b4b928a4a272382dfc616499513e06c"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "competition_id": "ichto"
   },
   {
     "problem_id": "ichto_IChTo-2020-Problem-Set",
@@ -39,9 +103,73 @@
       "grading_rubric": "Oral report + opposition/review",
       "human_baseline": null
     },
-    "status": "collected",
+    "status": "partial",
     "is_solution_pdf": false,
-    "team_size_note": "Official national-team range is 4-6; benchmark default is 4."
+    "team_size_note": "Official national-team range is 4-6; benchmark default is 4.",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "assets": [
+      {
+        "path": "data/raw/ichto/IChTo-2020-Problem-Set.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "e1ae73002ab3a77728de8f4299e4520dd465703c917131f9a66fa052e37bc516"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": "rubric_llm_v1",
+      "status": "ready_with_limitations",
+      "rubric_path": "data/rubrics/ichto_report_scientific_9_reused_v1.json",
+      "deliverable": "chemistry_theory_answer_packet",
+      "limitations": "2025 scientific criteria reused across years as a 9-point written-report subtotal. No live debate, official TP conversion, or team ranking is reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+      "scorecard_key": "ichto_IChTo-2020-Problem-Set",
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_path": "data/rubrics/ichto_2025_official_scoring_v1.json",
+        "deliverable": "chemistry_theory_answer_packet",
+        "limitations": "The available official scoring rubric is edition-specific to 2025.",
+        "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+        "scorecard_key": "ichto_IChTo-2020-Problem-Set"
+      },
+      "rubric_reuse": {
+        "source_competition": "ichto",
+        "target_competition": "ichto",
+        "target_year": 2020,
+        "source_rubric_paths": [
+          "data/rubrics/ichto_2025_official_scoring_v1.json"
+        ],
+        "source_editions": [
+          2025
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      }
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "http://ichto.org/en/problems/",
+      "source_file": "data/raw/ichto/IChTo-2020-Problem-Set.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/ichto/IChTo-2020-Problem-Set.pdf",
+          "role": "agent_visible",
+          "sha256": "e1ae73002ab3a77728de8f4299e4520dd465703c917131f9a66fa052e37bc516"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "competition_id": "ichto"
   },
   {
     "problem_id": "ichto_IChTo-2024-problems",
@@ -61,9 +189,73 @@
       "grading_rubric": "Oral report + opposition/review",
       "human_baseline": null
     },
-    "status": "collected",
+    "status": "partial",
     "is_solution_pdf": false,
-    "team_size_note": "Official national-team range is 4-6; benchmark default is 4."
+    "team_size_note": "Official national-team range is 4-6; benchmark default is 4.",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "assets": [
+      {
+        "path": "data/raw/ichto/IChTo-2024-problems.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "4d11a23397a5ac6d38c09075ff5b6aa9508098a0597c7f0fbf9e79bfad0bbc19"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": "rubric_llm_v1",
+      "status": "ready_with_limitations",
+      "rubric_path": "data/rubrics/ichto_report_scientific_9_reused_v1.json",
+      "deliverable": "chemistry_theory_answer_packet",
+      "limitations": "2025 scientific criteria reused across years as a 9-point written-report subtotal. No live debate, official TP conversion, or team ranking is reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+      "scorecard_key": "ichto_IChTo-2024-problems",
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_path": "data/rubrics/ichto_2025_official_scoring_v1.json",
+        "deliverable": "chemistry_theory_answer_packet",
+        "limitations": "The available official scoring rubric is edition-specific to 2025.",
+        "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+        "scorecard_key": "ichto_IChTo-2024-problems"
+      },
+      "rubric_reuse": {
+        "source_competition": "ichto",
+        "target_competition": "ichto",
+        "target_year": 2024,
+        "source_rubric_paths": [
+          "data/rubrics/ichto_2025_official_scoring_v1.json"
+        ],
+        "source_editions": [
+          2025
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      }
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "http://ichto.org/en/problems/",
+      "source_file": "data/raw/ichto/IChTo-2024-problems.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/ichto/IChTo-2024-problems.pdf",
+          "role": "agent_visible",
+          "sha256": "4d11a23397a5ac6d38c09075ff5b6aa9508098a0597c7f0fbf9e79bfad0bbc19"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "competition_id": "ichto"
   },
   {
     "problem_id": "ichto_IChTo-2025-problem-set",
@@ -85,7 +277,71 @@
     },
     "status": "collected",
     "is_solution_pdf": false,
-    "team_size_note": "Official national-team range is 4-6; benchmark default is 4."
+    "team_size_note": "Official national-team range is 4-6; benchmark default is 4.",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "assets": [
+      {
+        "path": "data/raw/ichto/IChTo-2025-problem-set.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "e597e28cdbb3f092346fb747fe8fc694bbd0868e8681dd382dff63506817f8d6"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": "rubric_llm_v1",
+      "status": "ready_with_limitations",
+      "rubric_path": "data/rubrics/ichto_report_scientific_9_reused_v1.json",
+      "deliverable": "chemistry_theory_answer_packet",
+      "limitations": "2025 scientific criteria reused across years as a 9-point written-report subtotal. No live debate, official TP conversion, or team ranking is reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+      "scorecard_key": "ichto_IChTo-2025-problem-set",
+      "pre_reuse_evaluation": {
+        "evaluator_id": "rubric_llm_v1",
+        "status": "ready",
+        "rubric_path": "data/rubrics/ichto_2025_official_scoring_v1.json",
+        "deliverable": "chemistry_theory_answer_packet",
+        "limitations": "Uses the archived 2025 official scoring rubric; practical/live mechanisms are outside this theory packet.",
+        "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+        "scorecard_key": "ichto_IChTo-2025-problem-set"
+      },
+      "rubric_reuse": {
+        "source_competition": "ichto",
+        "target_competition": "ichto",
+        "target_year": 2025,
+        "source_rubric_paths": [
+          "data/rubrics/ichto_2025_official_scoring_v1.json"
+        ],
+        "source_editions": [
+          2025
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      }
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "http://ichto.org/en/problems/",
+      "source_file": "data/raw/ichto/IChTo-2025-problem-set.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/ichto/IChTo-2025-problem-set.pdf",
+          "role": "agent_visible",
+          "sha256": "e597e28cdbb3f092346fb747fe8fc694bbd0868e8681dd382dff63506817f8d6"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "competition_id": "ichto"
   },
   {
     "problem_id": "ichto_IChTo-2026-problem-set_260203-modified",
@@ -105,9 +361,73 @@
       "grading_rubric": "Oral report + opposition/review",
       "human_baseline": null
     },
-    "status": "collected",
+    "status": "partial",
     "is_solution_pdf": false,
-    "team_size_note": "Official national-team range is 4-6; benchmark default is 4."
+    "team_size_note": "Official national-team range is 4-6; benchmark default is 4.",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "assets": [
+      {
+        "path": "data/raw/ichto/IChTo-2026-problem-set_260203-modified.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "93d0a1fbdeb97198efda80044eab7b347b11ebf7d2a9fb18adf80a011a34beaa"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": "rubric_llm_v1",
+      "status": "ready_with_limitations",
+      "rubric_path": "data/rubrics/ichto_report_scientific_9_reused_v1.json",
+      "deliverable": "chemistry_theory_answer_packet",
+      "limitations": "2025 scientific criteria reused across years as a 9-point written-report subtotal. No live debate, official TP conversion, or team ranking is reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+      "scorecard_key": "ichto_IChTo-2026-problem-set_260203-modified",
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_path": "data/rubrics/ichto_2025_official_scoring_v1.json",
+        "deliverable": "chemistry_theory_answer_packet",
+        "limitations": "The available official scoring rubric is edition-specific to 2025.",
+        "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+        "scorecard_key": "ichto_IChTo-2026-problem-set_260203-modified"
+      },
+      "rubric_reuse": {
+        "source_competition": "ichto",
+        "target_competition": "ichto",
+        "target_year": 2026,
+        "source_rubric_paths": [
+          "data/rubrics/ichto_2025_official_scoring_v1.json"
+        ],
+        "source_editions": [
+          2025
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      }
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "http://ichto.org/en/problems/",
+      "source_file": "data/raw/ichto/IChTo-2026-problem-set_260203-modified.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/ichto/IChTo-2026-problem-set_260203-modified.pdf",
+          "role": "agent_visible",
+          "sha256": "93d0a1fbdeb97198efda80044eab7b347b11ebf7d2a9fb18adf80a011a34beaa"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "competition_id": "ichto"
   },
   {
     "problem_id": "ichto_IChTo-Problem-Set",
@@ -127,9 +447,73 @@
       "grading_rubric": "Oral report + opposition/review",
       "human_baseline": null
     },
-    "status": "collected",
+    "status": "partial",
     "is_solution_pdf": false,
-    "team_size_note": "Official national-team range is 4-6; benchmark default is 4."
+    "team_size_note": "Official national-team range is 4-6; benchmark default is 4.",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "assets": [
+      {
+        "path": "data/raw/ichto/IChTo-Problem-Set.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "20fa0f19c1b97b2cc42736db1663096caca9832028341aa43e738694096d491f"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": "rubric_llm_v1",
+      "status": "ready_with_limitations",
+      "rubric_path": "data/rubrics/ichto_report_scientific_9_reused_v1.json",
+      "deliverable": "chemistry_theory_answer_packet",
+      "limitations": "2025 scientific criteria reused across years as a 9-point written-report subtotal. No live debate, official TP conversion, or team ranking is reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+      "scorecard_key": "ichto_IChTo-Problem-Set",
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_path": "data/rubrics/ichto_2025_official_scoring_v1.json",
+        "deliverable": "chemistry_theory_answer_packet",
+        "limitations": "The available official scoring rubric is edition-specific to 2025.",
+        "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+        "scorecard_key": "ichto_IChTo-Problem-Set"
+      },
+      "rubric_reuse": {
+        "source_competition": "ichto",
+        "target_competition": "ichto",
+        "target_year": 2017,
+        "source_rubric_paths": [
+          "data/rubrics/ichto_2025_official_scoring_v1.json"
+        ],
+        "source_editions": [
+          2025
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      }
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "http://ichto.org/en/problems/",
+      "source_file": "data/raw/ichto/IChTo-Problem-Set.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/ichto/IChTo-Problem-Set.pdf",
+          "role": "agent_visible",
+          "sha256": "20fa0f19c1b97b2cc42736db1663096caca9832028341aa43e738694096d491f"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "competition_id": "ichto"
   },
   {
     "problem_id": "ichto_IChTo2022problemset",
@@ -149,9 +533,73 @@
       "grading_rubric": "Oral report + opposition/review",
       "human_baseline": null
     },
-    "status": "collected",
+    "status": "partial",
     "is_solution_pdf": false,
-    "team_size_note": "Official national-team range is 4-6; benchmark default is 4."
+    "team_size_note": "Official national-team range is 4-6; benchmark default is 4.",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "assets": [
+      {
+        "path": "data/raw/ichto/IChTo2022problemset.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "aeefe337a9f92b5acf0d27c52ccbe9497476a684def3564d35ca3a4a28e0cac8"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": "rubric_llm_v1",
+      "status": "ready_with_limitations",
+      "rubric_path": "data/rubrics/ichto_report_scientific_9_reused_v1.json",
+      "deliverable": "chemistry_theory_answer_packet",
+      "limitations": "2025 scientific criteria reused across years as a 9-point written-report subtotal. No live debate, official TP conversion, or team ranking is reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+      "scorecard_key": "ichto_IChTo2022problemset",
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_path": "data/rubrics/ichto_2025_official_scoring_v1.json",
+        "deliverable": "chemistry_theory_answer_packet",
+        "limitations": "The available official scoring rubric is edition-specific to 2025.",
+        "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+        "scorecard_key": "ichto_IChTo2022problemset"
+      },
+      "rubric_reuse": {
+        "source_competition": "ichto",
+        "target_competition": "ichto",
+        "target_year": 2022,
+        "source_rubric_paths": [
+          "data/rubrics/ichto_2025_official_scoring_v1.json"
+        ],
+        "source_editions": [
+          2025
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      }
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "http://ichto.org/en/problems/",
+      "source_file": "data/raw/ichto/IChTo2022problemset.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/ichto/IChTo2022problemset.pdf",
+          "role": "agent_visible",
+          "sha256": "aeefe337a9f92b5acf0d27c52ccbe9497476a684def3564d35ca3a4a28e0cac8"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "competition_id": "ichto"
   },
   {
     "problem_id": "ichto_Problem-set-2018",
@@ -171,9 +619,73 @@
       "grading_rubric": "Oral report + opposition/review",
       "human_baseline": null
     },
-    "status": "collected",
+    "status": "partial",
     "is_solution_pdf": false,
-    "team_size_note": "Official national-team range is 4-6; benchmark default is 4."
+    "team_size_note": "Official national-team range is 4-6; benchmark default is 4.",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "assets": [
+      {
+        "path": "data/raw/ichto/Problem-set-2018.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "b23d40ba77c553b6ba1053a2a8751790681ecba62d066d78964ba507868b2acb"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": "rubric_llm_v1",
+      "status": "ready_with_limitations",
+      "rubric_path": "data/rubrics/ichto_report_scientific_9_reused_v1.json",
+      "deliverable": "chemistry_theory_answer_packet",
+      "limitations": "2025 scientific criteria reused across years as a 9-point written-report subtotal. No live debate, official TP conversion, or team ranking is reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+      "scorecard_key": "ichto_Problem-set-2018",
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_path": "data/rubrics/ichto_2025_official_scoring_v1.json",
+        "deliverable": "chemistry_theory_answer_packet",
+        "limitations": "The available official scoring rubric is edition-specific to 2025.",
+        "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+        "scorecard_key": "ichto_Problem-set-2018"
+      },
+      "rubric_reuse": {
+        "source_competition": "ichto",
+        "target_competition": "ichto",
+        "target_year": 2018,
+        "source_rubric_paths": [
+          "data/rubrics/ichto_2025_official_scoring_v1.json"
+        ],
+        "source_editions": [
+          2025
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      }
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "http://ichto.org/en/problems/",
+      "source_file": "data/raw/ichto/Problem-set-2018.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/ichto/Problem-set-2018.pdf",
+          "role": "agent_visible",
+          "sha256": "b23d40ba77c553b6ba1053a2a8751790681ecba62d066d78964ba507868b2acb"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "competition_id": "ichto"
   },
   {
     "problem_id": "ichto_Problem-Set-of-IChTo-2023",
@@ -193,8 +705,72 @@
       "grading_rubric": "Oral report + opposition/review",
       "human_baseline": null
     },
-    "status": "collected",
+    "status": "partial",
     "is_solution_pdf": false,
-    "team_size_note": "Official national-team range is 4-6; benchmark default is 4."
+    "team_size_note": "Official national-team range is 4-6; benchmark default is 4.",
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "assets": [
+      {
+        "path": "data/raw/ichto/Problem-Set-of-IChTo-2023.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "07ba2eba7bce372d882dcfb046c26736edf4917b13729fe1fba36ee8914ec3a0"
+      }
+    ],
+    "evaluation": {
+      "evaluator_id": "rubric_llm_v1",
+      "status": "ready_with_limitations",
+      "rubric_path": "data/rubrics/ichto_report_scientific_9_reused_v1.json",
+      "deliverable": "chemistry_theory_answer_packet",
+      "limitations": "2025 scientific criteria reused across years as a 9-point written-report subtotal. No live debate, official TP conversion, or team ranking is reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+      "scorecard_key": "ichto_Problem-Set-of-IChTo-2023",
+      "pre_reuse_evaluation": {
+        "evaluator_id": null,
+        "status": "not_ready",
+        "rubric_path": "data/rubrics/ichto_2025_official_scoring_v1.json",
+        "deliverable": "chemistry_theory_answer_packet",
+        "limitations": "The available official scoring rubric is edition-specific to 2025.",
+        "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+        "scorecard_key": "ichto_Problem-Set-of-IChTo-2023"
+      },
+      "rubric_reuse": {
+        "source_competition": "ichto",
+        "target_competition": "ichto",
+        "target_year": 2023,
+        "source_rubric_paths": [
+          "data/rubrics/ichto_2025_official_scoring_v1.json"
+        ],
+        "source_editions": [
+          2025
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      }
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "http://ichto.org/en/problems/",
+      "source_file": "data/raw/ichto/Problem-Set-of-IChTo-2023.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/ichto/Problem-Set-of-IChTo-2023.pdf",
+          "role": "agent_visible",
+          "sha256": "07ba2eba7bce372d882dcfb046c26736edf4917b13729fe1fba36ee8914ec3a0"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "competition_id": "ichto"
   }
 ]

@@ -1,5 +1,3 @@
-# wsc_writing_gq_011
-
 Examine these postcards in which 19th century French artists tried to imagine their world a century in the future, along with this set from the year 1900 doing the same for the year 2000 (and totally missing Y2K), then discuss with your team: what can we learn from such projects about how the present informs people’s visions of the future? Whom would you hire to make postcards to illustrate the world of 2124—or is it a job for ChatGPT? Would people today still be able to dream up such optimistic visions of the world of tomorrow, or do we live in a deeply pessimistic age? 
  Explore the following visions of the future that have not played out as predicted—at least, not yet. Which ones are the closest to having been realized? 
 

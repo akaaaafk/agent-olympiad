@@ -1,0 +1,22 @@
+{
+  "retrieved_at_utc": "20260913T062851Z",
+  "publisher_revision": "4c5744f55a31a58e03d6118c9dbb1c18e5bbdfa9",
+  "sources": {
+    "README.md": {
+      "url": "https://raw.githubusercontent.com/NYU-LLM-CTF/NYU_CTF_Bench/4c5744f55a31a58e03d6118c9dbb1c18e5bbdfa9/README.md",
+      "local_path": "data/raw/nyu_ctf_bench/separated_20260913/source_evidence/README.md",
+      "sha256": "f0ffc22cc6a6f713a75d4b6c2f30870b89e6d1cfbcd6aaa0b8a79e90e0304d2b"
+    },
+    "challenge.py": {
+      "url": "https://raw.githubusercontent.com/NYU-LLM-CTF/NYU_CTF_Bench/4c5744f55a31a58e03d6118c9dbb1c18e5bbdfa9/python/nyuctf/challenge.py",
+      "local_path": "data/raw/nyu_ctf_bench/separated_20260913/source_evidence/challenge.py",
+      "sha256": "5cd2a1dcf3d76d7ebacfb25ab61ff3e196876a44694876ee08dc436680833e74"
+    },
+    "des2bites_symlink.json": {
+      "url": "https://api.github.com/repos/NYU-LLM-CTF/NYU_CTF_Bench/contents/test/2019/CSAW-Quals/crypto/DES2Bites/Challenge?ref=4c5744f55a31a58e03d6118c9dbb1c18e5bbdfa9",
+      "local_path": "data/raw/nyu_ctf_bench/separated_20260913/source_evidence/des2bites_symlink.json",
+      "sha256": "ec37260222cad68866d107c3d4ceabd5674ec1a50e3061f1401e07ab177110d8"
+    }
+  },
+  "revision_scope": "Current loader and symlink evidence only; existing challenge trees are frozen by local file hashes, not asserted to be this revision."
+}

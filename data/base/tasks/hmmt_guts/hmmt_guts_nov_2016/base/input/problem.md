@@ -1,9 +1,7 @@
-# HMMT November 2016 — Guts Round
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
 
-[Page 1]
-HMMT November 2016, November 12, 2016 — GUTS ROUND
+               HMMT November 2016, November 12, 2016 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -15,11 +13,17 @@ Organization                         Team                         Team ID#
                                2016!2                              Here n! denotes 1 × 2 × · · · × n.         3. [5] Evaluate 2015!2017!.
 
 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
                HMMT November 2016, November 12, 2016 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
          4. [6] A square can be divided into four congruent ﬁgures as shown:
+
+
+
 
 
           For how many n with 1 ≤n ≤100 can a unit square be divided into n congruent ﬁgures?
@@ -29,8 +33,10 @@ Organization                         Team                         Team ID#
          6. [6] Let ABCD be a rectangle, and let E and F be points on segment AB such that AE = EF = FB.
               If CE intersects the line AD at P, and PF intersects BC at Q, determine the ratio of BQ to CQ.
 
-[Page 2]
-HMMT November 2016, November 12, 2016 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2016, November 12, 2016 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -47,6 +53,10 @@ Organization                         Team                         Team ID#
           gcd(n, 2015) = 1?
 
          9. [7] How many 3-element subsets of the set {1, 2, 3, . . . , 19} have sum of elements divisible by 4?
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2016, November 12, 2016 — GUTS ROUND
@@ -66,8 +76,10 @@ Organization                         Team                         Team ID#
 
          Find ABC.
 
-[Page 3]
-HMMT November 2016, November 12, 2016 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2016, November 12, 2016 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -84,6 +96,10 @@ Organization                         Team                         Team ID#
        15. [9] Let ABCD be an isosceles trapezoid with parallel bases AB = 1 and CD = 2 and height 1. Find
           the area of the region containing all points inside ABCD whose projections onto the four sides of the
            trapezoid lie on the segments formed by AB,BC,CD and DA.
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2016, November 12, 2016 — GUTS ROUND
@@ -108,8 +124,10 @@ Organization                         Team                         Team ID#
 
         What is the number in the 8th row and 8th column?
 
-[Page 4]
-HMMT November 2016, November 12, 2016 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2016, November 12, 2016 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -125,6 +143,10 @@ Organization                         Team                         Team ID#
        21. [11] Zlatan has 2017 socks of various colours. He wants to proudly display one sock of each of the
             colours, and he counts that there are N ways to select socks from his collection for display. Given this
            information, what is the maximum value of N?
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2016, November 12, 2016 — GUTS ROUND
@@ -147,8 +169,10 @@ Organization                         Team                         Team ID#
            adjecent vertices consists of edges with at least two diﬀerent colors. What is the smallest possible value
             of N?
 
-[Page 5]
-HMMT November 2016, November 12, 2016 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2016, November 12, 2016 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -164,6 +188,9 @@ Organization                         Team                         Team ID#
 
                                       r21             r22             r23             r24                          +        +        +
                                  r22 + r23 + r24    r21 + r23 + r24    r21 + r22 + r24    r21 + r22 + r23
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2016, November 12, 2016 — GUTS ROUND
@@ -185,8 +212,10 @@ Organization                         Team                         Team ID#
           same. Catherine then notices she can erase a digit from Betsy’s number and change the base to base-c
           such that the value still remains the same. Compute, in decimal, a + b + c.
 
-[Page 6]
-HMMT November 2016, November 12, 2016 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2016, November 12, 2016 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -208,6 +237,10 @@ Organization                         Team                         Team ID#
             of the face with vertices P1, P2, P3, P4, P5. This face has a perimeter of 5. Camille wants to get to
           the point on the dodecahedron farthest away from P1. To do so, he must travel along the surface a
            distance at least L. What is L2?
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2016, November 12, 2016 — GUTS ROUND

@@ -1,6 +1,6 @@
 {
   "rubric_id": "arml_national_power_2009_v1",
-  "title": "Power Round \u2014 2009 \u2014 ARML Power sub-problem rubric",
+  "title": "Power Round — 2009 — ARML Power sub-problem rubric",
   "total_points": 50.0,
   "criteria": [
     {
@@ -64,7 +64,7 @@
       "name": "Problem 3b",
       "max_score": 3.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 3b (3 pts). Statement: (b) Compute two di\ufb00erent 6-labels with the 2-signature you found in part (a)."
+      "description": "Correct, justified solution to Problem 3b (3 pts). Statement: (b) Compute two diﬀerent 6-labels with the 2-signature you found in part (a)."
     },
     {
       "id": "problem_04a",
@@ -113,7 +113,7 @@
       "name": "Problem 6c",
       "max_score": 1.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 6c (1 pt). Statement: (b) Notice that a ( p + 1)-label has only two windows in its p-signature. For a given window \u03c91, compute the number of windows \u03c92 such that Sp[L] = ( \u03c91,\u03c9 2) for some (p + 1)-labelL."
+      "description": "Correct, justified solution to Problem 6c (1 pt). Statement: (b) Notice that a ( p + 1)-label has only two windows in its p-signature. For a given window ω1, compute the number of windows ω2 such that Sp[L] = ( ω1,ω 2) for some (p + 1)-labelL."
     },
     {
       "id": "problem_06d",
@@ -169,7 +169,7 @@
       "name": "Problem 9a",
       "max_score": 1.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 9a (1 pt). Statement: 9. (a) For a general n\u2265 2, compute all n-labels that have unique 2-signatures."
+      "description": "Correct, justified solution to Problem 9a (1 pt). Statement: 9. (a) For a general n≥ 2, compute all n-labels that have unique 2-signatures."
     },
     {
       "id": "problem_09b",
@@ -190,7 +190,7 @@
       "name": "Problem 10",
       "max_score": 5.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 10 (5 pts). Statement: 10. Show that for each k\u2265 2, the number of unique 2 k\u22121-signatures on the set of 2 k-labels is at least 22k\u22123."
+      "description": "Correct, justified solution to Problem 10 (5 pts). Statement: 10. Show that for each k≥ 2, the number of unique 2 k−1-signatures on the set of 2 k-labels is at least 22k−3."
     }
   ],
   "not_observable_from_deck": [

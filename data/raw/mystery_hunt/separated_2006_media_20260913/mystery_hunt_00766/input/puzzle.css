@@ -1,0 +1,112 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.clear {
+	clear: both;
+}
+body {
+	background: #e2e3bb;
+	font-family: verdana, sans-serif;
+	font-size: 14px;
+	color #000000;
+}
+#nav {
+	height: 32px;
+	background: url(logo.png) 1px 1px no-repeat #000000;
+	border-bottom: 1px solid #666666;
+	text-align: center;
+	color: #ffffff;
+}
+@media print {
+	#nav {
+		display: none;
+	}
+}
+#nav a {
+	margin: 0 10px;
+}
+#nav a img {
+	margin-top: 7px;
+	border: none;
+}
+#container {
+	width: 780px;
+	margin: 20px auto;
+	padding-bottom: 1px;
+	background: #ffffff;
+}
+#header {
+	width: 780px;
+	height: 240px;
+	margin: 0 auto;
+}
+#header img {
+	padding-bottom: 40px;
+	background: #e2e3bb;
+}
+#puzzlebody {
+	margin: 20px;
+	padding-top: 1px;
+	font-family: "Trebuchet MS", Verdana, "Arial Narrow", Arial;
+	font-size: 12pt;
+	color: #000000;
+}
+#puzzlebody p {
+	margin-bottom: 20px;
+}
+#puzzlebody table {
+	margin-bottom: 20px;
+}
+#puzzlebody a img {
+	border: 0;
+}
+#ame #puzzlebody td.number {
+	text-align: right;
+	vertical-align: top;
+	padding-right: 10px;
+}
+#ame #puzzlebody td.letter {
+	vertical-align: top;
+	padding-right: 20px;
+}
+#fee #puzzlebody {
+	margin: 0;
+}
+#fee #puzzlebody p.text {
+	text-align: center;
+}
+#hea #puzzlebody img {
+	display: block;
+	margin: 0 auto 10px auto;
+}
+#jus #puzzlebody table {
+	margin: 0;
+	display: inline;
+}
+#jus #puzzlebody td {
+	width: 15px;
+	text-align: center;
+}
+#jus #puzzlebody td.bottom {
+	font-size: 75%;
+}
+#jus #puzzlebody span {
+	font-size: 300%;
+	line-height: 0em;
+}
+#pen #puzzlebody table {
+	width: 511px;
+	margin: 0 auto;
+}
+#pip #puzzlebody table {
+	width: 100%;
+	margin: 0 auto 20px auto;
+}
+#pip #puzzlebody img.right {
+	position: relative;
+	left: 50px;
+}
+#pip #puzzlebody table.align-top td {
+	vertical-align: top;
+}

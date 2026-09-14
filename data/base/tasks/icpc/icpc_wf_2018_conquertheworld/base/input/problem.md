@@ -1,5 +1,3 @@
-# Conquer The World
-
 Hide 
  Conquer The World 
 

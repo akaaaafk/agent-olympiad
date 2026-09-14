@@ -124,7 +124,8 @@ class PlainBaselineBoundaryTests(unittest.TestCase):
                 def request(req):
                     requests.append(req)
                     names = {tool["name"] for tool in req.tools}
-                    self.assertTrue(all(ACTION_REGISTRY[name].module == "common" for name in names))
+                    self.assertTrue(all(ACTION_REGISTRY[name].module == "common"
+                                        or name == "prepare_arml_local_sheet" for name in names))
                     self.assertFalse(names & (DELIBERATION_ACTION_NAMES | {
                         "remember", "recall", "share_note", "review_answer", "request_review"}))
                     self.assertNotIn("ELIGIBLE PENDING REVIEWS", req.user_prompt)

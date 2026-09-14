@@ -1,5 +1,3 @@
-# RoboMission Senior 2025
-
 RoboMission 
 Senior Game Rules 
 Season 2025 

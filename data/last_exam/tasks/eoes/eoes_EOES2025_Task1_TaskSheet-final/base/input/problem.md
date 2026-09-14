@@ -1,5 +1,3 @@
-# EOES2025_Task1_TaskSheet-final
-
 Task 1 
 Task Sheet 
  
@@ -403,12 +401,11 @@ Test tube  Procedure
 T1 Detection of iodine Into T1 add 1–2 drops of I 2 and 1–2 drops of starch solution. 
 T2 Detection of iodate Into T2 add 1–2 drops of KIO 3, followed by 1–2 drops of HNO 3, 
 then 1–2 drops of starch solution, and finally 1–2 drops of KI. 
-  
- ( ) + 5( ) +  6( )  →  3  ( ) +  3 () 
+IO_3^−(aq) + 5I^−(aq) + 6H^+(aq) → 3I_2(aq) + 3H_2O(l) 
  
 T3 Detection of iodide  Into T3 add 1–2 drops of KI, f ollowed by 1–2 drops of starch 
 solution, and then 1–2 drops of FeCl 3. 
-2  ( ) + 2 ( ) →  2  ( ) +  ( ) 
+2Fe^{3+}(aq) + 2I^−(aq) → 2Fe^{2+}(aq) + I_2(aq) 
  
 T4 Detection of iodide  a)  Into T4 add 1–2 drops of KI, and then 1–2 drops of AgNO 3. 
 b)  Then add 4–5 drops of NH 3 solution to the same test tube 
@@ -491,25 +488,14 @@ anionic forms are converted to I
 2: 
 A)  Iodine is present in the form of I 2,  and it can be directly titrated with thiosulfate i n the pres- 
 ence of starch. 
-  	 
-  2
-  	 →  2   	 
-  
- 	  
+I_2(aq) + 2S_2O_3^{2−}(aq) → 2I^−(aq) + S_4O_6^{2−}(aq)  
 B)  Iodine is present in the form of IO 3– so the first step is reduction of iodate to iodine. 
-  
- 	  
- 5 	 
-  6 	  →  3   	 
-  3 	 
+IO_3^−(aq) + 5I^−(aq) + 6H^+(aq) → 3I_2(aq) + 3H_2O(l) 
 C)  Iodine is present in the form of I – so the first step is oxidation of iodide, removal of excess 
-oxidant and addition of potassium iodide to form free iodine. 
- 
-  
- 	  
- 5 	 
-  6 	  →  3   	 
-  3 	 
+oxidant and addition of potassium iodide to form free iodine.
+I^−(aq) + 3ClO^−(aq) → IO_3^−(aq) + 3Cl^−(aq)
+
+IO_3^−(aq) + 5I^−(aq) + 6H^+(aq) → 3I_2(aq) + 3H_2O(l) 
 
 EOES2025, TASK 1, ENGLISH, Team A T12  
  
@@ -666,13 +652,13 @@ mass fraction  aqueous table salt (NaCl) solution.
  
 In a (partially) transparent homogeneous optical me dium (e.g. air, vacuum, water, glass …) light 
 propagates in a straight line. When light passes from one medium to another, it refracts  as described 
-by Snell’s law, and as shown on Figure 3.1. The constants 
-and  are called the indices of refraction 
+by Snell’s law, and as shown on Figure 3.1. The constants n_1 and n_2 are called the indices of refraction 
 of corresponding media and are numbers without units. 
  
+Snell's law: n_1 sin(α_1) = n_2 sin(α_2).
 Figure 3.1. The propagation of a light ray passing from one medium to another. ' U ' - 
 incoming ray, ' L ' - refracted ray, ' g ' – a line normal to the plane border of the media, 
- () - angles of the incoming and the refracted ray fr om the line ' g'. and - 
+α_1 (α_2) - angles of the incoming and the refracted ray fr om the line ' g'. n_1 and n_2- 
 indices of refraction of the media. 
  
  
@@ -681,13 +667,13 @@ indices of refraction of the media.
 EOES2025, TASK 1, ENGLISH, Team A T16  
  
 The approximate value of the refractive indices of some materials is given in Table 3.1. In this task,  
-we use the approximate value for air air   1.000 . 
+we use the approximate value for air n_air =  1.000 . 
  
-    Table 3.1: Several approximate values of refractive indices  for visible light. 
+    Table 3.1: Several approximate values of refractive indices n for visible light. 
 Substance Refractive 
-index   
+index  n 
  Substance Refractive 
-index  
+index n 
 vacuum 1.000  glycerin 1.473 
 air 1.0003  ethanol 1.362 
 glass 1.551  ice 1.310 
@@ -715,8 +701,7 @@ EOES2025, TASK 1, ENGLISH, Team A T17
 Figure 3.3. The black line with an 
 arrow represents the direction of the 
 incoming light ray in medium A (with 
-refractive index 
-).  
+refractive index n_1).  
  
 3.1.2.  In Figure 3.3, a ray of light is successively refracted at several boundaries of different media. 
 For the incoming ray in medium A, as indicated in the figure, qualitatively sketch the approximate 
@@ -730,22 +715,22 @@ direction of the rays in media A and C.  (3 p)
 To measure the refractive index of demineralized wa ter (and later also the aqueous table salt 
 solution), we will use the set-up sketched in Figure 3.4. which is based on tracking a light beam, i.e. 
 its refraction at the air-water interface, by measu ring the entry angle of the light beam and the 
-distance $. 
+distance d. 
  
  
  
 Figure 3.4. A sketch of the setup used to measure the refractive index n of a liquid. 
  
-We see that the distance $ between the perpendicular lines to the points where the light ray enters 
-and exits the water depends on the angle of incidence . From Snell's law we can obtain the relation 
+We see that the distance d between the perpendicular lines to the points where the light ray enters 
+and exits the water depends on the angle of incidence α. From Snell's law we can obtain the relation 
  
 
 EOES2025, TASK 1, ENGLISH, Team A T18  
  
- (3. 1)  
+d(α; n) = w sin(α) / sqrt(n^2 − sin^2(α))  (3.1)  
 This is the main relation we will use to determine the value of the refractive index of the liquid by 
-using the measured data for various angles  and distances $. Measuring distance $ for various 
-angles  we can determine refractive index . 
+using the measured data for various angles α and distances d. Measuring distance d for various 
+angles α we can determine refractive index n. 
  
 Given that the values of the refractive indices of demineralized water and an aqueous salt solution 
 are very similar, it is of particular interest to perform the measurements as accurately as possible.  
@@ -763,32 +748,32 @@ On the Answer Sheet is a partially completed Table in which you can enter your m
 calculated values. The explanation of the columns in the Table is: 
  
 Column title Meaning 
- (deg) The angle of incident light rays.  
-% exact (cm) Exact (calculated) values of the distan ces from the origin, which  
-depend on angle . & exact (cm) 
-% (cm) 
+α (deg) The angle of incident light rays.  
+x exact (cm) Exact (calculated) values of the distan ces from the origin, which  
+depend on angle α. y exact (cm) 
+x (cm) 
  
 The values of the x and y coordinates which will approximately 
-correspond to the angle , and which use a half- integer value in 
+correspond to the angle α, and which use a half- integer value in 
 centimeters (such suitable values are, for example, 2.0 cm or 4.5 
-cm, while inappropriate values are, for example, 2.3 cm or 4.6 cm).  & (cm) 
-$ (cm) 0%  Experimentally determined distance values  $ for the demineralized 
-water (0%) and for aqueous table salt solution (20% mass fraction).  $ (cm) 20% 
+cm, while inappropriate values are, for example, 2.3 cm or 4.6 cm).  y (cm) 
+d (cm) 0%  Experimentally determined distance values  d for the demineralized 
+water (0%) and for aqueous table salt solution (20% mass fraction).  d (cm) 20% 
  
 
 EOES2025, TASK 1, ENGLISH, Team A T19  
  
-3.3.2.1 Determination of the angle   
+3.3.2.1 Determination of the angle  α 
  
 As the values of the refractive indices of water an d the aqueous salt solution are slightly different,  
-we will set angles  by choosing convenient positions/coordinates on th e graphing paper. We will 
+we will set angles α by choosing convenient positions/coordinates on th e graphing paper. We will 
 start with integer angles and try to choose the coordinates on the graphing paper that approximately 
 correspond to them. This will enable us to determin e the angles more precisely (e.g. instead of 
 choosing the coordinate 1.487 cm which would corres pond to an integer angle, it is more accurate 
 to choose the coordinate 1.5 cm). The partially fil led Table will help us for this purpose (see an 
 example in Table 3.3). 
  
- (deg) % exact (cm) & exact (cm) %(cm) &(cm) $(cm) 0% $(cm) 20% 
+α (deg) x exact (cm) y exact (cm) x(cm) y(cm) d(cm) 0% d(cm) 20% 
 0 17 0 17 0 0 0 
 5 17 1.487 17 1.5 ... ... 
 10 17 2.998 17 3.0 ... ... 
@@ -800,11 +785,11 @@ example in Table 3.3).
 Table 3.3: An example of a Table used to enter the measured and the calculated 
 values. 
  
-In the first column are predetermined angles α for which we want to determine the distances $. We 
+In the first column are predetermined angles α for which we want to determine the distances d. We 
 set the beam path by sticking two pins into the graphing paper placed on the Styrofoam. One pin is 
 placed in the corner of the graphing paper next to the tub containing the liquid (see Figure 3.6. a). 
-This pin is given the coordinates %, &	  0,0	. The other pin is placed on the graphing paper on 
-given %, &	 coordinates. We can trace light direction by looking from the side, when pins overlap in 
+This pin is given the coordinates (x, y) = (0,0). The other pin is placed on the graphing paper on 
+given (x, y) coordinates. We can trace light direction by looking from the side, when pins overlap in 
 your view. 
  
       
@@ -813,27 +798,27 @@ the position of pins for the outgoing light ray.
 
 EOES2025, TASK 1, ENGLISH, Team A T20  
  
-3.2.1. To define the angle  as accurately as possible, the pins should be as far as possible from each 
-other. Given the dimensions of the graphing paper, fill in the columns ' % exact (cm)' and ' & exact (cm)' 
+3.2.1. To define the angle α as accurately as possible, the pins should be as far as possible from each 
+other. Given the dimensions of the graphing paper, fill in the columns ' x exact (cm)' and ' y exact (cm)' 
 in the Table 3.3 on the Answer Sheet. (For non-integer values you may specify only three significant 
 digits.)  Make sure that all the coordinates can be placed on the given graphing paper!  (1 p)  
  
 3.2.2.  Since 'exact' coordinates have a decimal part, plac ing the pin in the specified coordinates 
 would require an accuracy that is smaller than a mi llimeter. That's why we replace the 'exact' 
 coordinates with coordinates that are close to them , expressed in halves of centimeters. Fill in the 
-'%(cm)' and ' &(cm)' columns in Table 3.3 on the Answer Sheet acco rdingly. Make sure that all 
+'x(cm)' and ' y(cm)' columns in Table 3.3 on the Answer Sheet acco rdingly. Make sure that all 
 coordinates can be placed on the given graphing paper!  
 (3 p)  
  
-The coordinates ' % (cm)' and ' & (cm)' are the coordinates for which we can now accurately determine 
-the new angle , and where you can place your pins. 
+The coordinates ' x (cm)' and ' y (cm)' are the coordinates for which we can now accurately determine 
+the new angle α, and where you can place your pins. 
  
  
-3.3.2.2 Determination of the distance $ 
+3.3.2.2 Determination of the distance d 
  
 You can follow the path of the imagined light beam exiting the tub by looking from the side and 
 placing two pins on the second graphing paper (see Figure 3.6. b). Pay attention to the placement 
-and the alignment of the graphing paper to make sur e you determine the distances $ correctly. To 
+and the alignment of the graphing paper to make sur e you determine the distances d correctly. To 
 maximize the accuracy of the measurement for an individual light beam, do not place the two pins 
 too close to each other. Plan your experimental setup as to not move graphing papers while tracing 
 various rays, as it would incur additional errors in measurements. 
@@ -842,8 +827,8 @@ various rays, as it would incur additional errors in measurements.
 3.2.3. Fill less than half of the tub with demineralized water and place the pins on the graphing paper 
 as described. After placing (all) the pins on the s econd graphing paper, use a ruler to draw lines 
 connecting the pins for each of the rays, and exten d them to the edge of the graphing paper. This 
-will allow you to determine the distance $ for each of the rays and enter it in Table 3.3 in the column 
-' $(cm) 0%' on the Answer Sheet (see Figure 3.6. b). (9 p)  
+will allow you to determine the distance d for each of the rays and enter it in Table 3.3 in the column 
+' d(cm) 0%' on the Answer Sheet (see Figure 3.6. b). (9 p)  
  
 3.2.4.  Add the appropriate amount of table salt to the tub  so that you get a 20 % mass fraction 
 aqueous solution. (The ’20 % mass fraction’ means: for 24 g of demineralized water add 6 g of salt.) 
@@ -851,38 +836,37 @@ Write the mass and height of demineralized water, a nd mass of added salt on the
 Make sure all the salt is dissolved in water. 
 (1 p)  
  
-3.2.5. To determine the distances $ follow the procedure in 3.2.3., filling up the column ' $(cm) 20%'. 
+3.2.5. To determine the distances d follow the procedure in 3.2.3., filling up the column ' d(cm) 20%'. 
 (9 p)  
  
 3.3.3 Determination of the refractive indices 
  
-The expression for the dependence of the distance $ on angle  (equation (3.1)) is complicated. 
-However, we can reduce it to (the index 
- ) indicates a particular measurement): 
+The expression for the dependence of the distance d on angle α (equation (3.1)) is complicated. 
+However, we can reduce it to (the index i indicates a particular measurement): 
  
-(3.2)  
-(Here, angles * correspond to new angles with half-integer coordinates, and + is outer width of the 
+sin(α_i) sqrt(w^2 + d_i^2) = n d_i  (3.2)  
+(Here, angles α_i correspond to new angles with half-integer coordinates, and w is outer width of the 
 tub.) By introducing the variables 
  
-(3.3)  
+X_i = d_i; Y_i = sin(α_i) sqrt(w^2 + d_i^2)  (3.3)  
 
 EOES2025, TASK 1, ENGLISH, Team A T21  
  
 the above relation can be written as 
- (3.4)  
+Y_i = n X_i  (3.4)  
 which is an equation of a line through the origin. Using this expression, we can easily find the value 
-of the refractive index  as the slope of the line ,  ,-	 . 
+of the refractive index n as the slope of the line Y = Y(X) . 
 To find the slope of the line in expression (3.4), we will use a computer and the MS Excel  program 
 (use filename as: COUNTRY -TEAM-A.xlsx) , which helps us do two things: calculate the pairs of values 
--*, ,*) using  the measured data and then determine the slope (and its error) of the line ,  ,-	 , 
-which is equal to the refractive index . To do this, enter the obtained measurements from the 
-columns ' %(cm)', ' &(cm)', ' $(cm) 0% ' and ' $(cm) 20%' in the Excel table on the computer.  Afte r 
-that, form two columns in which you determine the angles  (both in radians and  in degrees). Finally, 
-form two additional columns in which you calculate the pairs of values -*, ,*) according to 
+(X_i, Y_i) using  the measured data and then determine the slope (and its error) of the line Y = Y(X) , 
+which is equal to the refractive index n. To do this, enter the obtained measurements from the 
+columns ' x(cm)', ' y(cm)', ' d(cm) 0% ' and ' d(cm) 20%' in the Excel table on the computer.  Afte r 
+that, form two columns in which you determine the angles α (both in radians and  in degrees). Finally, 
+form two additional columns in which you calculate the pairs of values (X_i, Y_i) according to 
 expressions (3.3), and perform a linear fit using t hat data. Do not force the intercept of the fitted 
 line to zero. (If you have problems when fitting, raise the red card for help.) 
  
-3.3.1. Using a linear fit, determine the slope of ,  ,-	 , and hence the refractive indices for 
+3.3.1. Using a linear fit, determine the slope of Y = Y(X) , and hence the refractive indices for 
 demineralized water and the aqueous table salt solu tion. Write the obtained values (together with 
 their errors with two significant digits) on the Answer Sheet. 
 (4 p)  
@@ -891,4 +875,4 @@ their errors with two significant digits) on the Answer Sheet.
 Based on the value of the refractive index of plexi glass from Table 3.1, estimate whether the true 
 values of the refractive indices of the liquids are higher , the same, or lower than the ones measured 
 in the experiment. Check the answer (
-) on the Answer Sheet.  (2 p)
+☒) on the Answer Sheet.  (2 p)

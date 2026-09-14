@@ -1,5 +1,3 @@
-# Ceiling Function
-
 Hide 
  Ceiling Function 
 

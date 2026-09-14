@@ -1,5 +1,3 @@
-# Crane Balancing
-
 Hide 
  Crane Balancing 
 

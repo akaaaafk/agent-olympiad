@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=1240, user-scalable=yes"></meta>
+    
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="icon" href="https://web.mit.edu/puzzle/www/2015/static/images/hunt/icon32.png" type="image/x-icon" />
+    <title>Coins &mdash; MIT Mystery Hunt 2015</title>
+    
+    <link href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/puzzle.css" rel="stylesheet" type="text/css" />
+
+    
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/logbook.css" />
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/ocean.css" />
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015//static/stylesheets/treasure_chest.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+ <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="https://web.mit.edu/puzzle/www/2015/intro.html">World Map</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="https://web.mit.edu/puzzle/www/2015/storylog.html">The Story So Far...</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Useful links <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="https://web.mit.edu/puzzle/www/2015/toc.html">List of Puzzles</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/eventschedule.html">Events Schedule</a></li>
+	    
+            <li></li>
+	    
+            <li><a href="https://web.mit.edu/puzzle/www/2015/updates.html">Updates from Sealab</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/completelog.html">Full team log</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/faq.html">FAQ</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/sponsors.html">Sponsors</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/">2015 Archive Overview</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    
+    
+    
+        <li></li>
+        
+    
+
+         
+    </ul>
+  </div><!-- /.navbar-collapse -->
+ </div>
+</nav> 
+
+  
+    <div id="artstuff">
+        <div id="oceandecor">
+            <div id="puzzle-obj"><img src="https://web.mit.edu/puzzle/www/2015//assets/puzzimages/179.png"></img></div>
+            <div id="infowindow">Location: Treasure Chest <br />Depth: 210</div>
+        <div id="leftdecor"></div>
+        <div id="rightdecor"></div>
+        </div>
+    </div>
+    <div id="paper">
+      
+
+
+
+        <div class="puzzle-page-header">
+        
+            <div class="sol"><a href="solution/">View Solution</a></div>
+        
+        <h1>Coins</h1>
+        
+	    
+	        <p class="answer" id="answer_179"> Answer: click here to reveal</p>
+            
+        
+        </div>
+      <div class='puzzle'>
+        <!-- Puzzle content begins here -->
+         <style>
+.solution-table td {
+    padding-right: 20px;
+    font-size:20px;
+    text-align: center;
+}
+.solution-table th {
+    padding-right: 20px;
+}
+.solution-table th {
+    text-align: left;
+}
+
+</style>
+
+<p>There are 72 coins in the chest of 16 unique designs. They look like this:</p>
+<center>
+<p>
+</p><table class="solution-table">
+<tbody><tr><th>Obverse</th><th>Reverse</th><th>Number in the Chest</th></tr>
+<tr><td><img style="width:100px;" src="images/1front.jpg"></td><td><img style="width:100px;" src="images/1back.jpg"></td><td>5</td></tr>
+<tr><td><img style="width:100px;" src="images/2front.jpg"></td><td><img style="width:100px;" src="images/2back.jpg"></td><td>2</td></tr>
+<tr><td><img style="width:100px;" src="images/3front.jpg"></td><td><img style="width:100px;" src="images/3back.jpg"></td><td>1</td></tr>
+<tr><td><img style="width:100px;" src="images/4front.jpg"></td><td><img style="width:100px;" src="images/4back.jpg"></td><td>3</td></tr>
+<tr><td><img style="width:100px;" src="images/5front.jpg"></td><td><img style="width:100px;" src="images/5back.jpg"></td><td>4</td></tr>
+<tr><td><img style="width:100px;" src="images/6front.jpg"></td><td><img style="width:100px;" src="images/6back.jpg"></td><td>7</td></tr>
+<tr><td><img style="width:100px;" src="images/7front.jpg"></td><td><img style="width:100px;" src="images/7back.jpg"></td><td>2</td></tr>
+<tr><td><img style="width:100px;" src="images/8front.jpg"></td><td><img style="width:100px;" src="images/8back.jpg"></td><td>4</td></tr>
+<tr><td><img style="width:100px;" src="images/9front.jpg"></td><td><img style="width:100px;" src="images/9back.jpg"></td><td>7</td></tr>
+<tr><td><img style="width:100px;" src="images/10front.jpg"></td><td><img style="width:100px;" src="images/10back.jpg"></td><td>8</td></tr>
+<tr><td><img style="width:100px;" src="images/11front.jpg"></td><td><img style="width:100px;" src="images/11back.jpg"></td><td>5</td></tr>
+<tr><td><img style="width:100px;" src="images/12front.jpg"></td><td><img style="width:100px;" src="images/12back.jpg"></td><td>8</td></tr>
+<tr><td><img style="width:100px;" src="images/13front.jpg"></td><td><img style="width:100px;" src="images/13back.jpg"></td><td>6</td></tr>
+<tr><td><img style="width:100px;" src="images/14front.jpg"></td><td><img style="width:100px;" src="images/14back.jpg"></td><td>1</td></tr>
+<tr><td><img style="width:100px;" src="images/15front.jpg"></td><td><img style="width:100px;" src="images/15back.jpg"></td><td>3</td></tr>
+<tr><td><img style="width:100px;" src="images/16front.jpg"></td><td><img style="width:100px;" src="images/16back.jpg"></td><td>6</td></tr>
+</tbody></table>
+<p></p>
+
+</center>
+        <!-- Puzzle content ends here -->
+      </div>
+    </div>
+
+
+<div class="clickbaitbannerbox" style="background-color: white; position: relative">
+  <div class="clickbaitbanner" style="visibility: hidden">
+    <div class="byline">Recommended for puzzlers like you:</div>
+    <div class="clickbaitlink"><a href="clickbait.html">4 Names for Pizza Places That are Full of Win</a></div>
+  </div>
+  <div class="clickbaitbanner attop" style="font-size: 15px">
+    We've noticed that you are blocking ads.  You'll miss out on
+    our subtle suggestions!
+  </div>
+  <div class="clickbaitbanner attop" id="AdArea">
+    <div class="byline">Recommended for puzzlers like you:</div>
+    <div class="clickbaitlink"><a href=clickbait.html>4 Names for Pizza Places That are Full of Win</a></div>
+  </div>
+</div>
+
+
+
+
+    
+    <script type="text/javascript" src="https://web.mit.edu/puzzle/www/2015/static/bootstrap/javascripts/bootstrap.js" charset="utf-8"></script>
+    
+<script type="text/javascript">
+  $(document).ready(function(e) { $('#answer_179').click(function(e) { $('#answer_179').text("Answer: " + "DRESDEN");});});
+</script>
+
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

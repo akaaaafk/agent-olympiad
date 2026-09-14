@@ -2,9 +2,54 @@
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/iiot/benchmark.json#iiot_2023_06.gold_label",
   "has_gold_answer": false,
-  "evaluator_id": "programming_judge",
-  "evaluator_status": "deferred",
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_id": null,
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/iiot/2023/matgame/references/solution.cpp",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/iiot_programming_judge_v1.json",
+    "deliverable": "source_code",
+    "reason": "Official public test files and reference sources are archived; missing original judge configuration still prevents official automatic grading.",
+    "scorecard_path": "data/rubrics/task_scorecards/iiot.json",
+    "scorecard_key": "iiot_2023_06",
+    "limitations": [
+      "All publicly listed test files are archived; original test-to-subtask assignments, checker configuration and execution limits remain unavailable.",
+      "Reference source has not been compiled or executed in an isolated judge; test presence does not establish runtime readiness.",
+      "Contestant template files mentioned in the statement are not supplied by this test-folder archive."
+    ],
+    "official_subtasks": [
+      {
+        "id": 1,
+        "points": 0
+      },
+      {
+        "id": 2,
+        "points": 10
+      },
+      {
+        "id": 3,
+        "points": 30
+      },
+      {
+        "id": 4,
+        "points": 45
+      },
+      {
+        "id": 5,
+        "points": 15
+      }
+    ],
+    "official_max_score": 100,
+    "official_scoring_mode": "all_cases_required_per_subtask",
+    "source_archive_manifest": "data/raw/iiot/2023/matgame/reference_manifest.json",
+    "source_repair_status": "publisher_reference_subtask_weights_and_public_test_files_archived",
+    "score_basis": "Publisher statement: sum of official subtask weights, with all cases in each subtask required. No inferred test grouping is enabled.",
+    "test_source_manifest": "data/raw/iiot/2023/matgame/test_source_manifest.json",
+    "official_test_pair_count": 79,
+    "archived_test_files": 158,
+    "verified_input_alias_count": 0
+  },
+  "rubric_path": "data/rubrics/iiot_programming_judge_v1.json",
+  "deliverable": "source_code"
 }

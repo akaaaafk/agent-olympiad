@@ -1,5 +1,3 @@
-# Stacking Cups
-
 Hide 
  Stacking Cups 
 

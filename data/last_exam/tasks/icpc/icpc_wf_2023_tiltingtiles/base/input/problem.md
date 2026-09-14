@@ -1,5 +1,3 @@
-# Tilting Tiles
-
 Hide 
  Tilting Tiles 
 

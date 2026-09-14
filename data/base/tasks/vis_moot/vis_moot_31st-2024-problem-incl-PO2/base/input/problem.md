@@ -1,5 +1,3 @@
-# 31st-2024-problem-incl-PO2
-
 © Association for the Organisation and Promotion of the Willem C. Vis International Commercial Arbitration Moot  1 
 Prof. Dr. Stefan Kröll 
  

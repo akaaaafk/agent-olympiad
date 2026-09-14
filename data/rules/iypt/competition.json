@@ -22,7 +22,8 @@
     "use_calculator",
     "execute_code",
     "work",
-    "render_pdf"
+    "render_pdf",
+    "prepare_physics_research_outline"
   ],
   "resources": {
     "internet": "allowed_with_citation_during_preparation",

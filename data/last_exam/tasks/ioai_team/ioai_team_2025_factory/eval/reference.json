@@ -3,8 +3,24 @@
   "gold_pointer": "data/benchmarks/ioai_team/benchmark.json#ioai_team_2025_factory.gold_label",
   "has_gold_answer": false,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/ioai_team_2025_official_scoring_protocol_v1.json",
+    "deliverable": "robot_control_program_for_factory_navigation_and_manipulation",
+    "reason": "Historical source contract restored; required execution and final scoring remain unvalidated.",
+    "scorecard_path": "data/rubrics/task_scorecards/ioai_team.json",
+    "scorecard_key": "ioai_team_2025_factory",
+    "task_contract_path": "data/raw/ioai/Team-Challenge/recovered_20260913/2025/task_contract.json",
+    "limitations": [
+      "The official guide and current simulator/referee repository are identified, but the original contest revision, scene assets and execution/scoring equivalence remain unverified.",
+      "The guide's ioai/master branch is not in the current branch list; the observed master commit postdates the event.",
+      "The upstream license restricts reuse; public repository access is not a redistribution grant.",
+      "PDF code snippets retain source line wrapping and are not validated executable scripts."
+    ]
+  },
+  "rubric_path": "data/rubrics/ioai_team_2025_official_scoring_protocol_v1.json",
+  "deliverable": "robot_control_program_for_factory_navigation_and_manipulation"
 }

@@ -1,0 +1,50 @@
+> load game
+> fly airship
+> enter castle
+> west stairs
+> talk oldman
+> move castle
+> stop
+> explore
+> east stairs
+> east stairs
+> enter cave
+> southeast
+> open chest
+> kill lanternbearer
+> get boomerang
+> north
+> southwest
+> west
+> down stairs
+> touch sparkles
+> save
+> northwest stairs
+> northwest
+> open chest
+> kill samurai
+> get relic
+> south
+> north
+> north
+> touch statue
+> get shard
+> east
+> search bucket
+> get potion
+> search bookshelf
+> get diary
+> west
+> sit throne
+> step south
+> step south
+> step south
+> step south
+> step south
+> trigger secret
+> east
+> east stairs
+> kill dragon
+> get sword
+> touch statue
+> get ?????? (2)

@@ -21,11 +21,43 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/moot_memorial_100_v1.json",
+      "rubric_path": "data/rubrics/jessup_memorial_100_v1.json",
       "deliverable": "written_memorial",
-      "limitations": [
-        "oral advocacy not scored"
-      ]
+      "limitations": "Evaluates the written memorial only; oral advocacy is not scored.",
+      "scorecard_path": "data/rubrics/task_scorecards/jessup.json",
+      "scorecard_key": "jessup_2024"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "assets": [
+      {
+        "path": "data/raw/jessup/2024/jessup_2024_compromis.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "9c071136093c0f682088bf452936520fee49cf4c4fded41caea8df59bcf17fad"
+      }
+    ],
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.ilsa.org/Jessup/Jessup2024/",
+      "source_file": "data/raw/jessup/2024/jessup_2024_compromis.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/jessup/2024/jessup_2024_compromis.pdf",
+          "role": "agent_visible",
+          "sha256": "9c071136093c0f682088bf452936520fee49cf4c4fded41caea8df59bcf17fad"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   }
 ]

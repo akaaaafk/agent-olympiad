@@ -1,5 +1,3 @@
-# Schedule
-
 Hide 
  Schedule 
 

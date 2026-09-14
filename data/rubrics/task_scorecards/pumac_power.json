@@ -1,0 +1,852 @@
+{
+  "schema_version": "1.1",
+  "dataset": "pumac_power",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "pumac_power_2009",
+      "year": 2009,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/team_power_proof_40_v1.json",
+          "sha256": "dcb91ca1bc6e6e3bb157210a08503d56eb6fb00eefde60fb0d9d305747a3893e",
+          "format": "numeric_rubric",
+          "rubric_id": "team_power_proof_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "correctness",
+              "name": "Mathematical correctness",
+              "max_score": 16,
+              "observable": true,
+              "description": "Results and proofs are mathematically correct against the official marking notes."
+            },
+            {
+              "id": "completeness",
+              "name": "Coverage of required parts",
+              "max_score": 12,
+              "observable": true,
+              "description": "All required sub-parts are attempted with substantive solutions."
+            },
+            {
+              "id": "reasoning",
+              "name": "Clarity of reasoning",
+              "max_score": 8,
+              "observable": true,
+              "description": "Arguments are structured, justified, and readable."
+            },
+            {
+              "id": "presentation",
+              "name": "Written presentation",
+              "max_score": 4,
+              "observable": true,
+              "description": "Notation, organization, and exposition are professional."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": "data/rubrics/pumac_power_official_rubrics.json",
+      "judge_assets": [
+        {
+          "path": "data/raw/pumac_power/PUMaC2009_PowerSol.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "d1045ec857f23d3179bbb0228f181c7378ab750d2b0357c390a31f0c8cfad4be"
+        }
+      ],
+      "limitations": "Official solutions anchor mathematical correctness; historical hand-grading calibration and exact partial-credit allocation are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized 40-point proof rubric, not reconstructed official year points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "pumac_power_2010",
+      "year": 2010,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/team_power_proof_40_v1.json",
+          "sha256": "dcb91ca1bc6e6e3bb157210a08503d56eb6fb00eefde60fb0d9d305747a3893e",
+          "format": "numeric_rubric",
+          "rubric_id": "team_power_proof_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "correctness",
+              "name": "Mathematical correctness",
+              "max_score": 16,
+              "observable": true,
+              "description": "Results and proofs are mathematically correct against the official marking notes."
+            },
+            {
+              "id": "completeness",
+              "name": "Coverage of required parts",
+              "max_score": 12,
+              "observable": true,
+              "description": "All required sub-parts are attempted with substantive solutions."
+            },
+            {
+              "id": "reasoning",
+              "name": "Clarity of reasoning",
+              "max_score": 8,
+              "observable": true,
+              "description": "Arguments are structured, justified, and readable."
+            },
+            {
+              "id": "presentation",
+              "name": "Written presentation",
+              "max_score": 4,
+              "observable": true,
+              "description": "Notation, organization, and exposition are professional."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": "data/rubrics/pumac_power_official_rubrics.json",
+      "judge_assets": [
+        {
+          "path": "data/raw/pumac_power/PUMaC2010_PowerSol.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "97396533af61c4752199a0bbf45343711073ef94437e57465b4d3ff67bb2c8bb"
+        }
+      ],
+      "limitations": "Official solutions anchor mathematical correctness; historical hand-grading calibration and exact partial-credit allocation are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized 40-point proof rubric, not reconstructed official year points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "pumac_power_2011",
+      "year": 2011,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/team_power_proof_40_v1.json",
+          "sha256": "dcb91ca1bc6e6e3bb157210a08503d56eb6fb00eefde60fb0d9d305747a3893e",
+          "format": "numeric_rubric",
+          "rubric_id": "team_power_proof_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "correctness",
+              "name": "Mathematical correctness",
+              "max_score": 16,
+              "observable": true,
+              "description": "Results and proofs are mathematically correct against the official marking notes."
+            },
+            {
+              "id": "completeness",
+              "name": "Coverage of required parts",
+              "max_score": 12,
+              "observable": true,
+              "description": "All required sub-parts are attempted with substantive solutions."
+            },
+            {
+              "id": "reasoning",
+              "name": "Clarity of reasoning",
+              "max_score": 8,
+              "observable": true,
+              "description": "Arguments are structured, justified, and readable."
+            },
+            {
+              "id": "presentation",
+              "name": "Written presentation",
+              "max_score": 4,
+              "observable": true,
+              "description": "Notation, organization, and exposition are professional."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": "data/rubrics/pumac_power_official_rubrics.json",
+      "judge_assets": [
+        {
+          "path": "data/raw/pumac_power/PUMaC2011_PowerSol.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "0dc0c4d6af245de2b34b8d6f8f84686d2e33f0ca274dfeb91751d3001c78a004"
+        }
+      ],
+      "limitations": "Official solutions anchor mathematical correctness; historical hand-grading calibration and exact partial-credit allocation are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized 40-point proof rubric, not reconstructed official year points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "pumac_power_2012",
+      "year": 2012,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/team_power_proof_40_v1.json",
+          "sha256": "dcb91ca1bc6e6e3bb157210a08503d56eb6fb00eefde60fb0d9d305747a3893e",
+          "format": "numeric_rubric",
+          "rubric_id": "team_power_proof_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "correctness",
+              "name": "Mathematical correctness",
+              "max_score": 16,
+              "observable": true,
+              "description": "Results and proofs are mathematically correct against the official marking notes."
+            },
+            {
+              "id": "completeness",
+              "name": "Coverage of required parts",
+              "max_score": 12,
+              "observable": true,
+              "description": "All required sub-parts are attempted with substantive solutions."
+            },
+            {
+              "id": "reasoning",
+              "name": "Clarity of reasoning",
+              "max_score": 8,
+              "observable": true,
+              "description": "Arguments are structured, justified, and readable."
+            },
+            {
+              "id": "presentation",
+              "name": "Written presentation",
+              "max_score": 4,
+              "observable": true,
+              "description": "Notation, organization, and exposition are professional."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": "data/rubrics/pumac_power_official_rubrics.json",
+      "judge_assets": [
+        {
+          "path": "data/raw/pumac_power/PUMaC2012_PowerSol.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "960b976463bde59bb26e99aeb2f8dadc5315e51cf2d11907c0aba3cd7a429f09"
+        }
+      ],
+      "limitations": "Official solutions anchor mathematical correctness; historical hand-grading calibration and exact partial-credit allocation are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized 40-point proof rubric, not reconstructed official year points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "pumac_power_2013",
+      "year": 2013,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/team_power_proof_40_v1.json",
+          "sha256": "dcb91ca1bc6e6e3bb157210a08503d56eb6fb00eefde60fb0d9d305747a3893e",
+          "format": "numeric_rubric",
+          "rubric_id": "team_power_proof_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "correctness",
+              "name": "Mathematical correctness",
+              "max_score": 16,
+              "observable": true,
+              "description": "Results and proofs are mathematically correct against the official marking notes."
+            },
+            {
+              "id": "completeness",
+              "name": "Coverage of required parts",
+              "max_score": 12,
+              "observable": true,
+              "description": "All required sub-parts are attempted with substantive solutions."
+            },
+            {
+              "id": "reasoning",
+              "name": "Clarity of reasoning",
+              "max_score": 8,
+              "observable": true,
+              "description": "Arguments are structured, justified, and readable."
+            },
+            {
+              "id": "presentation",
+              "name": "Written presentation",
+              "max_score": 4,
+              "observable": true,
+              "description": "Notation, organization, and exposition are professional."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": "data/rubrics/pumac_power_official_rubrics.json",
+      "judge_assets": [
+        {
+          "path": "data/raw/pumac_power/PUMaC2013_PowerSol.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "b8f69b7d5c63b5daf392685a8b2a42ffb451bf03ff95d7fbbf43c15baf47c162"
+        }
+      ],
+      "limitations": "Official solutions anchor mathematical correctness; historical hand-grading calibration and exact partial-credit allocation are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized 40-point proof rubric, not reconstructed official year points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "pumac_power_2015",
+      "year": 2015,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/team_power_proof_40_v1.json",
+          "sha256": "dcb91ca1bc6e6e3bb157210a08503d56eb6fb00eefde60fb0d9d305747a3893e",
+          "format": "numeric_rubric",
+          "rubric_id": "team_power_proof_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "correctness",
+              "name": "Mathematical correctness",
+              "max_score": 16,
+              "observable": true,
+              "description": "Results and proofs are mathematically correct against the official marking notes."
+            },
+            {
+              "id": "completeness",
+              "name": "Coverage of required parts",
+              "max_score": 12,
+              "observable": true,
+              "description": "All required sub-parts are attempted with substantive solutions."
+            },
+            {
+              "id": "reasoning",
+              "name": "Clarity of reasoning",
+              "max_score": 8,
+              "observable": true,
+              "description": "Arguments are structured, justified, and readable."
+            },
+            {
+              "id": "presentation",
+              "name": "Written presentation",
+              "max_score": 4,
+              "observable": true,
+              "description": "Notation, organization, and exposition are professional."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": "data/rubrics/pumac_power_official_rubrics.json",
+      "judge_assets": [
+        {
+          "path": "data/raw/pumac_power/PUMaC2015_PowerwithSol.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "bad6f689d68f00dc7c92cd371c96dec9f908ba9a3637d6bf3cbdfb4b69fba411"
+        }
+      ],
+      "limitations": "Official solutions anchor mathematical correctness; historical hand-grading calibration and exact partial-credit allocation are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized 40-point proof rubric, not reconstructed official year points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "pumac_power_2016",
+      "year": 2016,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/team_power_proof_40_v1.json",
+          "sha256": "dcb91ca1bc6e6e3bb157210a08503d56eb6fb00eefde60fb0d9d305747a3893e",
+          "format": "numeric_rubric",
+          "rubric_id": "team_power_proof_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "correctness",
+              "name": "Mathematical correctness",
+              "max_score": 16,
+              "observable": true,
+              "description": "Results and proofs are mathematically correct against the official marking notes."
+            },
+            {
+              "id": "completeness",
+              "name": "Coverage of required parts",
+              "max_score": 12,
+              "observable": true,
+              "description": "All required sub-parts are attempted with substantive solutions."
+            },
+            {
+              "id": "reasoning",
+              "name": "Clarity of reasoning",
+              "max_score": 8,
+              "observable": true,
+              "description": "Arguments are structured, justified, and readable."
+            },
+            {
+              "id": "presentation",
+              "name": "Written presentation",
+              "max_score": 4,
+              "observable": true,
+              "description": "Notation, organization, and exposition are professional."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": "data/rubrics/pumac_power_official_rubrics.json",
+      "judge_assets": [
+        {
+          "path": "data/raw/pumac_power/PUMaC2016_PowerSol-n7bg.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "69b5981d8db4be738851715073b19dad570d98ede23d7b54d610f020bf59a36f"
+        }
+      ],
+      "limitations": "Official solutions anchor mathematical correctness; historical hand-grading calibration and exact partial-credit allocation are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized 40-point proof rubric, not reconstructed official year points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "pumac_power_2017",
+      "year": 2017,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/team_power_proof_40_v1.json",
+          "sha256": "dcb91ca1bc6e6e3bb157210a08503d56eb6fb00eefde60fb0d9d305747a3893e",
+          "format": "numeric_rubric",
+          "rubric_id": "team_power_proof_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "correctness",
+              "name": "Mathematical correctness",
+              "max_score": 16,
+              "observable": true,
+              "description": "Results and proofs are mathematically correct against the official marking notes."
+            },
+            {
+              "id": "completeness",
+              "name": "Coverage of required parts",
+              "max_score": 12,
+              "observable": true,
+              "description": "All required sub-parts are attempted with substantive solutions."
+            },
+            {
+              "id": "reasoning",
+              "name": "Clarity of reasoning",
+              "max_score": 8,
+              "observable": true,
+              "description": "Arguments are structured, justified, and readable."
+            },
+            {
+              "id": "presentation",
+              "name": "Written presentation",
+              "max_score": 4,
+              "observable": true,
+              "description": "Notation, organization, and exposition are professional."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": "data/rubrics/pumac_power_official_rubrics.json",
+      "judge_assets": [
+        {
+          "path": "data/raw/pumac_power/PUMaC2017_Power_Solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "6e9724855076ff07a58ae517c6bed6f8f102b0201564a7369ce433aead2ace16"
+        }
+      ],
+      "limitations": "Official solutions anchor mathematical correctness; historical hand-grading calibration and exact partial-credit allocation are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized 40-point proof rubric, not reconstructed official year points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "pumac_power_2018",
+      "year": 2018,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/team_power_proof_40_v1.json",
+          "sha256": "dcb91ca1bc6e6e3bb157210a08503d56eb6fb00eefde60fb0d9d305747a3893e",
+          "format": "numeric_rubric",
+          "rubric_id": "team_power_proof_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "correctness",
+              "name": "Mathematical correctness",
+              "max_score": 16,
+              "observable": true,
+              "description": "Results and proofs are mathematically correct against the official marking notes."
+            },
+            {
+              "id": "completeness",
+              "name": "Coverage of required parts",
+              "max_score": 12,
+              "observable": true,
+              "description": "All required sub-parts are attempted with substantive solutions."
+            },
+            {
+              "id": "reasoning",
+              "name": "Clarity of reasoning",
+              "max_score": 8,
+              "observable": true,
+              "description": "Arguments are structured, justified, and readable."
+            },
+            {
+              "id": "presentation",
+              "name": "Written presentation",
+              "max_score": 4,
+              "observable": true,
+              "description": "Notation, organization, and exposition are professional."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": "data/rubrics/pumac_power_official_rubrics.json",
+      "judge_assets": [
+        {
+          "path": "data/raw/pumac_power/Power-Solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "9a80893f8287f4945dde98a6197301180b7fbd74bb394de694020c69333c463d"
+        }
+      ],
+      "limitations": "Official solutions anchor mathematical correctness; historical hand-grading calibration and exact partial-credit allocation are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized 40-point proof rubric, not reconstructed official year points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "pumac_power_2019",
+      "year": 2019,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/team_power_proof_40_v1.json",
+          "sha256": "dcb91ca1bc6e6e3bb157210a08503d56eb6fb00eefde60fb0d9d305747a3893e",
+          "format": "numeric_rubric",
+          "rubric_id": "team_power_proof_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "correctness",
+              "name": "Mathematical correctness",
+              "max_score": 16,
+              "observable": true,
+              "description": "Results and proofs are mathematically correct against the official marking notes."
+            },
+            {
+              "id": "completeness",
+              "name": "Coverage of required parts",
+              "max_score": 12,
+              "observable": true,
+              "description": "All required sub-parts are attempted with substantive solutions."
+            },
+            {
+              "id": "reasoning",
+              "name": "Clarity of reasoning",
+              "max_score": 8,
+              "observable": true,
+              "description": "Arguments are structured, justified, and readable."
+            },
+            {
+              "id": "presentation",
+              "name": "Written presentation",
+              "max_score": 4,
+              "observable": true,
+              "description": "Notation, organization, and exposition are professional."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": "data/rubrics/pumac_power_official_rubrics.json",
+      "judge_assets": [
+        {
+          "path": "data/raw/pumac_power/2019Power-SOLS.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "69f6d5724317be5d568314b187a464b4272cf0bf8b1a7bd83c2c287ffcf76062"
+        }
+      ],
+      "limitations": "Official solutions anchor mathematical correctness; historical hand-grading calibration and exact partial-credit allocation are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized 40-point proof rubric, not reconstructed official year points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "pumac_power_2020",
+      "year": 2020,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/team_power_proof_40_v1.json",
+          "sha256": "dcb91ca1bc6e6e3bb157210a08503d56eb6fb00eefde60fb0d9d305747a3893e",
+          "format": "numeric_rubric",
+          "rubric_id": "team_power_proof_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "correctness",
+              "name": "Mathematical correctness",
+              "max_score": 16,
+              "observable": true,
+              "description": "Results and proofs are mathematically correct against the official marking notes."
+            },
+            {
+              "id": "completeness",
+              "name": "Coverage of required parts",
+              "max_score": 12,
+              "observable": true,
+              "description": "All required sub-parts are attempted with substantive solutions."
+            },
+            {
+              "id": "reasoning",
+              "name": "Clarity of reasoning",
+              "max_score": 8,
+              "observable": true,
+              "description": "Arguments are structured, justified, and readable."
+            },
+            {
+              "id": "presentation",
+              "name": "Written presentation",
+              "max_score": 4,
+              "observable": true,
+              "description": "Notation, organization, and exposition are professional."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": "data/rubrics/pumac_power_official_rubrics.json",
+      "judge_assets": [
+        {
+          "path": "data/raw/pumac_power/PUMaC_2020__Power_Round___Solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "b2812f06f15559c4c62c40cd05da28947c5edf1bba68b91362feee49a123c7b3"
+        }
+      ],
+      "limitations": "Official solutions anchor mathematical correctness; historical hand-grading calibration and exact partial-credit allocation are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized 40-point proof rubric, not reconstructed official year points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "pumac_power_2021",
+      "year": 2021,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/team_power_proof_40_v1.json",
+          "sha256": "dcb91ca1bc6e6e3bb157210a08503d56eb6fb00eefde60fb0d9d305747a3893e",
+          "format": "numeric_rubric",
+          "rubric_id": "team_power_proof_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "correctness",
+              "name": "Mathematical correctness",
+              "max_score": 16,
+              "observable": true,
+              "description": "Results and proofs are mathematically correct against the official marking notes."
+            },
+            {
+              "id": "completeness",
+              "name": "Coverage of required parts",
+              "max_score": 12,
+              "observable": true,
+              "description": "All required sub-parts are attempted with substantive solutions."
+            },
+            {
+              "id": "reasoning",
+              "name": "Clarity of reasoning",
+              "max_score": 8,
+              "observable": true,
+              "description": "Arguments are structured, justified, and readable."
+            },
+            {
+              "id": "presentation",
+              "name": "Written presentation",
+              "max_score": 4,
+              "observable": true,
+              "description": "Notation, organization, and exposition are professional."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": "data/rubrics/pumac_power_official_rubrics.json",
+      "judge_assets": [
+        {
+          "path": "data/raw/pumac_power/pumac2021powersols.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "0dd01315a987ae7e270b37a17b664d282b01c4f53a757c41ed3e469b5e0c355e"
+        }
+      ],
+      "limitations": "Official solutions anchor mathematical correctness; historical hand-grading calibration and exact partial-credit allocation are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized 40-point proof rubric, not reconstructed official year points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "pumac_power_2023",
+      "year": 2023,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/team_power_proof_40_v1.json",
+          "sha256": "dcb91ca1bc6e6e3bb157210a08503d56eb6fb00eefde60fb0d9d305747a3893e",
+          "format": "numeric_rubric",
+          "rubric_id": "team_power_proof_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "correctness",
+              "name": "Mathematical correctness",
+              "max_score": 16,
+              "observable": true,
+              "description": "Results and proofs are mathematically correct against the official marking notes."
+            },
+            {
+              "id": "completeness",
+              "name": "Coverage of required parts",
+              "max_score": 12,
+              "observable": true,
+              "description": "All required sub-parts are attempted with substantive solutions."
+            },
+            {
+              "id": "reasoning",
+              "name": "Clarity of reasoning",
+              "max_score": 8,
+              "observable": true,
+              "description": "Arguments are structured, justified, and readable."
+            },
+            {
+              "id": "presentation",
+              "name": "Written presentation",
+              "max_score": 4,
+              "observable": true,
+              "description": "Notation, organization, and exposition are professional."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral defense"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": "data/rubrics/pumac_power_official_rubrics.json",
+      "judge_assets": [
+        {
+          "path": "data/raw/pumac_power/PUMaC_2023_Power_Round_Sol.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "47b90c584661cccb3ef8111c6da68c93cbc63a4e4b43b412234e1c248f685b4a"
+        }
+      ],
+      "limitations": "Official solutions anchor mathematical correctness; historical hand-grading calibration and exact partial-credit allocation are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized 40-point proof rubric, not reconstructed official year points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

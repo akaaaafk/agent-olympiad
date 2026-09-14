@@ -223,7 +223,7 @@ class CheckpointCursorTests(unittest.TestCase):
                     "--output", str(out)]
             query = Mock(return_value=json.dumps({
                 "action": "work", "arguments": {
-                    "problem_id": "q1", "content": "Final answer: 42"}}))
+                    "problem_id": "q1", "content": "Problem q1: Final answer: 42"}}))
             original_write = cli._write_json_atomic
             def interrupted_write(path, payload):
                 if path.name == "contest_session.json":
@@ -242,7 +242,7 @@ class CheckpointCursorTests(unittest.TestCase):
                 self.assertIsNotNone(checkpoint["session"]["final_summary"])
                 self.assertEqual(
                     checkpoint["session"]["tasks"][0]["versions"][-1]["content"],
-                    "Final answer: 42",
+                    "Problem q1: Final answer: 42",
                 )
                 self.assertFalse(any(
                     event["kind"] == "action_error"
@@ -252,7 +252,7 @@ class CheckpointCursorTests(unittest.TestCase):
                     cli.main()
             result = json.loads((out / "contest_session.json").read_text(encoding="utf-8"))
             self.assertEqual(query.call_count, calls_before)
-            self.assertEqual(result["submissions"]["q1"], "Final answer: 42")
+            self.assertEqual(result["submissions"]["q1"], "Problem q1: Final answer: 42")
             self.assertTrue(result["grade"]["graded"])
 
 

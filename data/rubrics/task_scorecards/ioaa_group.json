@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.1",
+  "dataset": "ioaa_group",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "ioaa_group_2025",
+      "year": 2025,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ioaa_group_worked_answer_100_v1.json",
+          "sha256": "d27f4569cefb019de865d8984180954d9d210239a38af4483da5f252f2be7f08",
+          "format": "numeric_rubric",
+          "rubric_id": "ioaa_group_worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ioaa/2025/group-sol.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "289f4b125723d07def92fc35cd0bae46df8faf1ce3b4c4bfba1a8748c97ea9c7"
+        }
+      ],
+      "limitations": "Uses the archived year-specific official solution; live group-task logistics are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ioaa_group_2021",
+      "year": 2021,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ioaa_group_worked_answer_100_v1.json",
+          "sha256": "d27f4569cefb019de865d8984180954d9d210239a38af4483da5f252f2be7f08",
+          "format": "numeric_rubric",
+          "rubric_id": "ioaa_group_worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ioaa/2021/group-sol.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "2f8a9d818a6cc14c7f305f0cf20be4271f4e6a9f585e357762036b29de148724"
+        }
+      ],
+      "limitations": "Uses the archived year-specific official solution; live group-task logistics are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ioaa_group_2015",
+      "year": 2015,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ioaa_group_worked_answer_100_v1.json",
+          "sha256": "d27f4569cefb019de865d8984180954d9d210239a38af4483da5f252f2be7f08",
+          "format": "numeric_rubric",
+          "rubric_id": "ioaa_group_worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ioaa/2015/group-sol.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "828f8fe62ddba9024380b7d2ebaac66d60f48dc8a882b0ae331b1ecbbc781f9f"
+        }
+      ],
+      "limitations": "Uses the archived year-specific official solution; live group-task logistics are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ioaa_group_2014",
+      "year": 2014,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ioaa_group_worked_answer_100_v1.json",
+          "sha256": "d27f4569cefb019de865d8984180954d9d210239a38af4483da5f252f2be7f08",
+          "format": "numeric_rubric",
+          "rubric_id": "ioaa_group_worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/ioaa/2014/group-sol.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "cd67c03ade2a1b8eb7af68fafcf856e978b812a426eee8e0c96d171e6c401f07"
+        }
+      ],
+      "limitations": "Uses the archived year-specific official solution; live group-task logistics are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

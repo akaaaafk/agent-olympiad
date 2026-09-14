@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from dataclasses import asdict, dataclass
 from typing import Any, Iterable, Literal
 
@@ -405,6 +406,7 @@ class ContestMemory:
                 "programming_source_required",
                 # Private deliberation is surfaced through its own ledger.
                 "think",
+                "automatic_memory",
             }
         ][-max_current_events:] if max_current_events else []
         team_messages = [
@@ -503,33 +505,46 @@ class ContestMemory:
     ) -> list[dict[str, Any]]:
         """Search visible notes; an empty query explicitly browses recent notes.
 
-        Nonempty keywords must match content. Among matches, prefer the problem
-        tag, then keyword hits and recency. Collapse identical note contents.
+        An explicit problem_id filters the search; omit it for cross-task recall.
+        Nonempty keywords must match whole terms, not substrings of unrelated
+        words. Rank by keyword hits and recency, deduplicating within each task.
         """
         viewer = self._required_id("viewer", viewer)
-        terms = {term.lower() for term in str(query or "").split()}
+        # Queries often contain prose punctuation or quoted keywords. Keep
+        # mathematical signs and internal punctuation (e.g. n-1) meaningful.
+        terms = {term.lower().strip('.,;:!?()[]{}\"\'\u201c\u201d\u2018\u2019\uff0c\u3002\uff1b\uff1a\uff01\uff1f')
+                 for term in str(query or "").split()}
+        terms.discard("")
+        terms -= {"a", "an", "the", "and", "or", "of", "for", "to", "in", "on",
+                  "at", "by", "with", "from", "is", "are", "was", "were"}
+        patterns = [re.compile(r"(?<!\w)" + re.escape(term) + r"(?!\w)", re.I)
+                    for term in terms]
         wanted = str(problem_id or "").strip().lower()
         candidates = [
             self._note_row(event)
             for event in self.view(viewer, groups=groups)
             if self._is_note(event)
         ]
+        if wanted:
+            candidates = [row for row in candidates
+                          if str(row["task_id"] or "").lower() == wanted]
+        def hits(row):
+            return sum(bool(pattern.search(row["content"])) for pattern in patterns)
         if str(query or "").strip():
             candidates = [row for row in candidates
-                          if any(term in row["content"].lower() for term in terms)]
+                          if hits(row)]
         candidates.sort(
             key=lambda row: (
-                bool(wanted) and str(row["task_id"] or "").lower() == wanted,
-                sum(term in row["content"].lower() for term in terms),
+                hits(row),
                 row["turn"],
                 row["note_id"],
             ),
             reverse=True,
         )
         selected: list[dict[str, Any]] = []
-        seen: set[str] = set()
+        seen: set[tuple[str | None, str]] = set()
         for row in candidates:
-            key = row["content"].strip()
+            key = (row["task_id"], row["content"].strip())
             if key in seen:
                 continue
             seen.add(key)

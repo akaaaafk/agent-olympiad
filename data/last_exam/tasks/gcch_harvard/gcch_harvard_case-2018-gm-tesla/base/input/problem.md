@@ -1,5 +1,3 @@
-# case-2018-gm-tesla
-
 HARVARD
 2 01 9   CAS E
 GLOBAL CASE COMPETITION AT

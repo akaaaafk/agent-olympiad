@@ -1,0 +1,123 @@
+body, html {
+  width:100%;
+  height:100%;
+  background-color: #834737;
+  background-image: url(bodybackground.jpg);
+  color:#ffffff;
+  font-family:Georgia,Cambria,Palatino,serif;
+  font-size:1em;
+  line-height:1.5em;
+  position:relative;
+}
+
+a {
+  color:#ffffff;
+  }
+
+h1 {
+  font-size:1.7em;
+  font-weight:bold;
+  margin-bottom:1em;
+}
+
+h2 {
+  font-size:1.5em;
+  font-weight:bold;
+  margin-bottom:0.7em;
+}
+
+img {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style-type: disc;
+}
+
+ul,ol {
+  padding-left: 2em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#puzzletopbar {	
+  float:left;
+  position:absolute;
+  margin-left:85px;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+hr {
+  border: none;
+  color: #555555;
+  background-color: #555555;
+  height:1px;
+}
+
+#breaker {
+  margin-left:85px;
+  margin-right:85px;
+  clear:both;
+  min-height:5px;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+#centralcolumn {
+  background-image: url(pagebackground.jpg);
+  background-repeat: repeat-y;
+  min-height:100%;
+  position:relative;
+  width: 1097px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+   margin-bottom: 10px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+#puzzlecolumn {
+  min-height:100%;
+  min-width: 1050px;
+  background-position: right top;
+  background-repeat: repeat-y;
+  position:relative;
+}
+
+#puzzlecontent {
+  padding-top: 60px;
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-bottom: 100px;
+}
+
+#puzzletitle {
+  text-align: left;
+  font-size:2em;
+  font-weight:bold;
+  margin-bottom: 20px;
+}
+
+.puzzlecube {
+  display: inline;
+  vertical-align: middle;
+  padding-right: 15px;
+}
+
+.fileicon {
+  display: inline;
+  text-decoration: none;
+  vertical-align: middle;
+  padding-right: 10px;
+}

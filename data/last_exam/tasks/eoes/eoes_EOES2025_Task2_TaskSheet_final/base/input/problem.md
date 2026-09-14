@@ -1,5 +1,3 @@
-# EOES2025_Task2_TaskSheet_final
-
 Task 2 
 Task Sheet 
  
@@ -106,16 +104,14 @@ In this task, the term 'concentration' written in the square brackets always ref
 molar concentration (M = mol/L).  
 To obtain the absorbance, both the voltage for the solvent (distilled water,  U BL ) and the solution 
 (UCV ) should be measured. According to the following equation, the absorbance can be calculated: 
-  (2) 
+A_CV = log(U_BL / U_CV)  (2) 
  
 From the obtained absorbance and known molar absorp tion coefficient ( ε), the concentration of 
 the absorbing species in the solution can be calculated:  
-CV =  	BL 
-	CV 
- 
+ 
 EOES2025, TASK 2, ENGLISH, Team A T5  
  
-    (3) 
+[CV] = A_CV / (ε · l) = log(U_BL / U_CV) / (ε · l)  (3) 
  
 This opens up the possibility to monitor the concentration of the colored species during a chemical 
 reaction and thus study the reaction rate, e.g.  chemical kinetics, which is a very important area of 
@@ -123,7 +119,7 @@ chemistry with the main goal of determining the reaction mechanism.
 In this experiment, you will study the kinetics of the reaction between CV and hydroxide ions in an 
 aqueous solution (Fig. 1.2.). Crystal violet exists as a cation (C 25H30 N3⁺) with chloride as its counter- 
 ion (C 25H30 N3Cl). Chloride ion does not absorb in the visible sp ectrum and does not influence the 
-reaction between the CV cation and OH⁻, thus it can be omiJed from equaKons like in Fig. 1.2. 
+reaction between the CV cation and OH⁻, thus it can be omitted from equations like in Fig. 1.2. 
 N
 N
 N
@@ -135,16 +131,16 @@ OH
  
  
 Figure 1.2.  Reaction of crystal violet with hydroxide ions. 
-In this reaction, two species are involved (CV and OH ⁻), meaning the reacKon rate depends on fre- 
+In this reaction, two species are involved (CV and OH ⁻), meaning the reaction rate depends on fre- 
 quency of their collisions, which is directly propo rtional to their concentrations. In today's experi-
 ment, the concentration of OH − is significantly higher than that of the CV (by a factor of 300-500). 
 As a result, the concentration of OH⁻ can be considered constant during the reaction which leads to 
 pseudo-first-order rate of reaction, depending only on concentration of CV. The integrated rate law 
 can be expressed as: 
-    (4) 
+ln([CV]_t / [CV]_0) = −k′t  (4) 
  
 where: 
-     (5) 
+k′ = k[OH^−]  (5) 
 and where: 
 t – time 
 [CV] 
@@ -152,27 +148,19 @@ t – concentration of CV at time t
 [CV] 0  – concentration of CV at time t = 0 
 k’ is pseudo-first order rate coefficient 
 k is the second order rate coefficient 
-′ = [OH −] 
+ 
 crystal violet (CV) 
 VIOLET SOLUTION 
 leucocrystal violet 
 COLORLESS 
-[CV ] = CV 
- ∙  =
- 	BL 
-	CV 
-
- ∙   
- 
-[CV ]
-[CV ]0
- = −′ 
+  
+ 
 EOES2025, TASK 2, ENGLISH, Team A T6  
  
 However, determining [CV] would typically require k nowledge of its molar absorptivity ( ε) and op- 
 tical path length ( l). In this experiment, this will not be necessary, as substituting the absorbance 
 into expression (4) causes the terms ε and l to cancel out: 
-  (6) 
+ln([CV]_t / [CV]_0) = ln((A_t / (ε · l)) / (A_0 / (ε · l))) = ln(A_t / A_0) = ln(A_t) − ln(A_0)  (6) 
  
 where:  
 A
@@ -181,7 +169,7 @@ A0 – absorbance of the solution at time t = 0
  
 Finally, combining eqns. (4) and (6) yields the expression that will be used to process the data from 
 today’s experiment: 
-    (7) 
+ln(A_t) = ln(A_0) − k′t  (7) 
 Your task is to assemble the photometer and use it to determine rate constants k’ and k. The rate 
 constant k’ depends on the [OH 
 -] (acc. to eqn. (5)), while the rate constant k is independent of the 
@@ -205,17 +193,8 @@ keep it on.
  
 Step 1.2: Preparation of solutions for measurement 
 1.2.1. Preparation of sodium hydroxide solutions 
- [CV ]
-[CV ]0
- =  
-
- ∙ 
-0
- ∙ 
-=  
-0
- =   −  0 
-  =  0 − ′  
+ 
+  
 EOES2025, TASK 2, ENGLISH, Team A T7  
  
 Stock solutions A ([NaOH] ST  = [OH -] = 0.080 M) and B ([NaCl] ST  = 0.30 M) are provided for the prep- 
@@ -227,9 +206,9 @@ to be calculated, all in accordance with Table 1.2.1  (Answer Sheet).  The purpo
 to keep the total ion concentration constant for al l three experiments. This means that the sum of 
 NaOH and NaCl concentrations for each solution ( I, II , and III ) must be equal in each experiment:  
 [NaOH]  + [NaCl]  = const. = 3.00×10 −2 M    (8) 
-• 1.2.1. Fill in Table 1.2.1. and detail your calcula.ons only for the ﬁrst line on the Answer Sheet 
-below Table 1.2.1. ! Indicate your ﬁnal result for [NaCl] using the scie n.ﬁc nota.on with 3 
-signiﬁcant ﬁgures (example: 1.21×10 −5). For calculated volumes of solu.ons A and B, indicate 
+• 1.2.1. Fill in Table 1.2.1. and detail your calculations only for the ﬁrst line on the Answer Sheet 
+below Table 1.2.1. ! Indicate your ﬁnal result for [NaCl] using the scie n.ﬁc notation with 3 
+signiﬁcant ﬁgures (example: 1.21×10 −5). For calculated volumes of solutions A and B, indicate 
 the result as a number with 2 signiﬁcant ﬁgures. (4.5 p + 1.5 p ) 
  
 1.2.2. Preparation of CV solution 
@@ -237,7 +216,7 @@ From stock solution C ([CV]
 ST  = 4.80×10 -4 M) prepare 10 mL of the CV solution with the concentration 
 [CV] 1 = 2.16×10 -5 M. Using a permanent marker, write corresponding labels on the flask and beakers 
 (CV stock, CV diluted). 
-• 1.2.2. Show details of your calcula.ons on the Answ er Sheet.  Indicate your ﬁnal result for 
+• 1.2.2. Show details of your calculations on the Answ er Sheet.  Indicate your ﬁnal result for 
 VST (CV) as a number without decimal places in the µL units. (1 p)  
   
 Step 1.3: Measurement of the reaction rate 
@@ -255,9 +234,9 @@ receive negative points for this.
 Remove the cuvette from the instrument, wait for the value on the multimeter to stabilize  and return 
 the cuvette to the instrument. Repeat the measurement two more times. 
 • Record the values in Table 1.3.1.  (on the Answer Sheet).  
-• 1.3.1. Calculate the average value ( 	 !!!!!) for the blank sample on the Answer Sheet. That is 
-the value you will use in data processing. Show details of your calcula.ons and indicate 
-your ﬁnal result for 	 !!!!!  as a number without decimal places in mV units.  
+• 1.3.1. Calculate the average value ( mean(U_BL)) for the blank sample on the Answer Sheet. That is 
+the value you will use in data processing. Show details of your calculations and indicate 
+your ﬁnal result for mean(U_BL)  as a number without decimal places in mV units.  
 EOES2025, TASK 2, ENGLISH, Team A T8  
  
  
@@ -295,7 +274,7 @@ Before continuing, raise the red card for the lab assistant to record the temper
 The rate constant is temperature-dependent and it is very important to record the temperature. 
  
 Step 1.4: Data processing 
-1.4.1. Calculation of the absorbances and "# $% (10.8 p + 1 p ) 
+1.4.1. Calculation of the absorbances and ln(A_t) (10.8 p + 1 p ) 
 • From the measured voltages, calculate the data need ed to draw a graph and fill in Tables 
 1.4.1. on the Answer Sheet. Absorbances and ln(A) must be indicated as numbers with 4 dec- 
 imal places.  
@@ -305,12 +284,12 @@ EOES2025, TASK 2, ENGLISH, Team A T9
 Sheet. Absorbances and ln(A) must be indicated as numbers with 4 decimal places.  
  
 1.4.2. Calculation of the k' (11.1 p)  
-• 1.4.2.1. Draw a graph of  & versus t on the graphing paper. Data for all three experi- 
+• 1.4.2.1. Draw a graph of ln(A_t) versus t on the graphing paper. Data for all three experi- 
 ments must be shown in the same graph. Data points must be shown as ×, points used for 
-the calcula.on of the slope must be shown as ⊗. Label the paper with your team/country's 
-s.cker. 
-• 1.4.2.2. Determine the reac.on rate constants k' fo r each of the three measurements  
-from Graph 1.4.2.1.  Detail your calcula.ons only for the Experiment with soluon I on the 
+the calculation of the slope must be shown as ⊗. Label the paper with your team/country's 
+sticker. 
+• 1.4.2.2. Determine the reaction rate constants k' fo r each of the three measurements  
+from Graph 1.4.2.1.  Detail your calculations only for the Experiment with solution I on the 
 Answer Sheet. Express the values in units min −1 having 4 decimal places  and ﬁll in the Table 
 1.4.2. 
 •  
@@ -319,20 +298,20 @@ Answer Sheet. Express the values in units min −1 having 4 decimal places  and 
 (8 p) 
  
  
-• 1.4.3.1. Assuming the OH − concentra.on remains constant during the experiment, calculate 
-its concentra.on in the cuveCe for all three experi ments. Results must be given using the 
-scien.ﬁc nota.on with 1 decimal place (example: 1.2×10 -5). 
+• 1.4.3.1. Assuming the OH − concentration remains constant during the experiment, calculate 
+its concentration in the cuvette for all three experi ments. Results must be given using the 
+scien.ﬁc notation with 1 decimal place (example: 1.2×10 -5). 
  
 Determined k' depends on the [OH⁻]. Now, you have all the necessary data to calculate the reaction 
 rate constant  k, which is independent of the reactant concentrations. 
  
  
 • 1.4.3. 2.  Draw the graph on the graphing paper using the data from Table 1.4.2. and concen- 
-tra.ons of [OH ⁻] in all three experiments calculated in 1.4.3.1. Data points must be shown as 
-×, points used for the calcula.on of the slope must be shown as ⊗. Label the paper with your 
-team/ country's s.cker. 
+trations of [OH ⁻] in all three experiments calculated in 1.4.3.1. Data points must be shown as 
+×, points used for the calculation of the slope must be shown as ⊗. Label the paper with your 
+team/ country's sticker. 
 • 1.4.3.3. From Graph 1.4.3.1.  calculate the value of the rate constant k. Show t he details of 
-your calcula.ons. Final value of k that you report must be in M −1 min −1 units and have 2 sig- 
+your calculations. Final value of k that you report must be in M −1 min −1 units and have 2 sig- 
 niﬁcant ﬁgures. 
  
  
@@ -345,16 +324,16 @@ Problem 2. Velocity and Drag
  
 Materials and equipment 
  
-• PlasKc body with string (the pendulum) 
+• Plastic body with string (the pendulum) 
 • Styrofoam (larger than A3 paper) 
-• PlasKc Styrofoam holder 
+• Plastic Styrofoam holder 
 • A3 paper with printed angles 
 • Clamp stand with three angle clamps 
 • Pins 
 • Stopwatch 
-• PlasKc pivot holder (S-shaped shaU) 
+• Plastic pivot holder (S-shaped shaft) 
 • Papers of varying dimensions (3.5 cm, 5.0 cm, 7.0 cm, 14.0 cm and 21.0 cm), with a marked 
-line of symmetry – mulKple copies 
+line of symmetry – multiple copies 
 • Scotch tape 
 • Ruler 
  
@@ -372,27 +351,27 @@ For this experiment we will utilize (a physical) pe ndulum consisting of a cylin
 heights. The time dependence of the pendulum's angu lar displacement on timewhen drag is 
 neglected, and for small displacements, is sinusoidal (see the dashed gray line in Figure 2.1), and the 
 movement corresponds to that of a simple harmonic oscillator. However, with drag proportional to 
-speed, the time dependence of the displacement ( decreases (Figure 2.1, solid red line), with 
+speed, the time dependence of the displacement θ decreases (Figure 2.1, solid red line), with 
 maxima that decrease exponentially (Figure 2.1, dashed blue line). The expression used to describe 
 the blue dashed line is: 
  
-( = (0 *+,&  (2.1)  
+θ(t) = θ(0) exp(−γt)  (2.1)  
  
-where ((0) is the deflection at time  = 0, and - is the so -called damping constant. 
+where θ(0) is the deflection at time t = 0, and γ is the so -called damping constant. 
  
 EOES2025, TASK 2, ENGLISH, Team A T11  
  
  
  
-Figure 2.1 Time dependence of the pendulum displace ment ( without drag (gray 
+Figure 2.1 Time dependence of the pendulum displacement θ without drag (gray 
 dashed line), and with drag (solid red line). The b lue dashed line shows the 
-exponential decrease of the maxima of the pendulum with drag. (  0 corresponds 
-to pendulum equilibrium position. Period . is time between two maxima, either 
+exponential decrease of the maxima of the pendulum with drag. θ = 0 corresponds 
+to pendulum equilibrium position. Period T is time between two maxima, either 
 without or with drag. (Here we present the simplifi ed case valid for small damping 
-constant -).  
+constant γ).  
  
  
-Your task is to measure the damping constants - for cylindrical bodies of different dimensions /, by 
+Your task is to measure the damping constants γ for cylindrical bodies of different dimensions L, by 
 measuring the time dependence of the falloff of the  maximal displacement at prescribed points. 
 Furthermore, you will check whether the damping constant is proportional to the dimensions /. 
  
@@ -414,7 +393,7 @@ EOES2025, TASK 2, ENGLISH, Team A T12
 Figure 2.2  Figure 2.3 
  
  
-Cylindrical bodies of different heights will be mad e by securing papers of different dimensions / = 
+Cylindrical bodies of different heights will be mad e by securing papers of different dimensions L = 
 3.5  cm, 5.0 cm, 7.0 cm, 14 cm, and 21 cm with a Scotch tape (see Figure 2.3.a)). Align the middle of 
 the paper with the groove. Wind the paper several t urns and secure it with additional Scotch tape 
 (see Figure 2.3.b)). In order to eliminate unwanted air friction effects, use Scotch tape to straighten 
@@ -445,13 +424,12 @@ The measurement process consists of measuring the t ime elapsed from the initial
 (20 deg) to several other marked angles. It is easiest to keep these angles fixed, so the experimental 
 setup is set up according to the following table: 
  
-angle 
-( comment  
+angle θ comment  
 20 deg 
 The maximum deflection that we 
 consider as the initial maximum 
 deflection 
- ((0) 
+ θ(0) 
 13 deg The values of the maximum 
 deflection angles for which you 
 will measure the elapsed time 
@@ -475,26 +453,25 @@ EOES2025, TASK 2, ENGLISH, Team A T14
  
 2.3. Measurements 
  
-2.1. Using the Scotch tape attach the paper with dimension of / = 3.5 cm to a pendulum, forming a 
+2.1. Using the Scotch tape attach the paper with dimension of L = 3.5 cm to a pendulum, forming a 
 cylindrical-like body. Make sure that the middle line of the paper (thin line) is aligned with the center-
 of-mass groove. Start the pendulum by releasing it from rest so that its initial deflection is at leas t 
 25 deg. Then observe when the maximum deflection coincides with 20 deg and start timing with the 
 stopwatch. Measure the time it takes for the maximu m deflection to reach the values in Table 2.1. 
-Record your measurements in Table 2.2 marked ‘ / = 3.5 cm’ o n the Answer Sheet. Repeat the 
+Record your measurements in Table 2.2 marked ‘ L = 3.5 cm’ o n the Answer Sheet. Repeat the 
 described series of measurements once more. 
  (3.2 p)  
  
 2.2. Determine the period of oscillations more accurately, by measuring the time required for at least 
 20 consecutive periods. (For period measurements, e nsure that the deflection is not larger than 
-approximately 8 deg.) Write the value in Table 2.2 marked ‘ / = 3.5 cm’ on the Answer Sheet.  
+approximately 8 deg.) Write the value in Table 2.2 marked ‘ L = 3.5 cm’ on the Answer Sheet.  
 (0.4 p)  
  
-The expression for the period . of a pendulum of length 0, when drag is neglected, is 
+The expression for the period T of a pendulum of length R, when drag is neglected, is 
  
-. = 2230
- (2.2)  
-where 0 is the distance between the pivot and the center of  mass of the pendulum (Figure 2.2 a)), 
-and  is the acceleration due to gravity (  = 9.81 m/s 2). 
+T = 2π sqrt(R/g) (2.2)  
+where R is the distance between the pivot and the center of  mass of the pendulum (Figure 2.2 a)), 
+and g is the acceleration due to gravity ( g = 9.81 m/s^2). 
  
 2.3. Calculate the period of oscillation using equation (2.2). Determine the relative error between the 
 measured and the calculated period values (relative  to calculated value) and enter them on the 
@@ -502,7 +479,7 @@ Answer Sheet. Show your calculations.
 (3 p)  
  
 2.4. Repeat the measurements described in 2.1 and 2 .2, but with attached paper of the dimensions 
-/ = 5.0 cm, 7.0 cm, 14.0 cm, and 21.0 cm Enter all measurements in the appropriate Table(s) 2.2 on 
+L = 5.0 cm, 7.0 cm, 14.0 cm, and 21.0 cm Enter all measurements in the appropriate Table(s) 2.2 on 
 the Answer Sheet.  
 (14.4 p)  
  
@@ -514,72 +491,52 @@ on the Answer Sheet.
 We say that the influence of drag  on the period of the pendulum is negligible (non-negligible) if the 
 measured values differ by less (more than or equal to) 5%. 
  
-2.6. Given the measured values of the oscillation p eriod ., is the drag  caused by the paper cylinder 
+2.6. Given the measured values of the oscillation period T, is the drag  caused by the paper cylinder 
 negligible , or non-negligible ? Write the answer on the Answer Sheet. Show your calculations. Does 
-the period . of the pendulum decrease or increase as the height of the cylinder increases?  
+the period T of the pendulum decrease or increase as the height of the cylinder increases?  
 (1 p)  
  
 Taking the natural logarithm of both sides of Eq. (2.1), we get: 
  
-ln ( = ln (0 − - , 
+ln θ(t) = ln θ(0) − γt, 
  (2.3)  
 which means that the time dependence of the logarithm of the maximum deflections on time has a 
-slope '–-'. 
+slope '−γ'. 
 EOES2025, TASK 2, ENGLISH, Team A T15  
  
 2.7 Using the values from Table 2.2, plot time dependence of calculated values of the logarit hm of 
-the angle ( ln  (), on graphing paper (Plot 2.1) on the Answer Sheet. Plot ALL data, without averaging.  
+the angle (ln θ), on graphing paper (Plot 2.1) on the Answer Sheet. Plot ALL data, without averaging.  
 (6. 5 p)  
  
-2.8. For each dimensions /, draw a straight line that best follows the points , and from the slope of 
-that line determine the damping factor - to three significant figures. Fill in the first two  columns of 
+2.8. For each dimensions L, draw a straight line that best follows the points , and from the slope of 
+that line determine the damping factor γ to three significant figures. Fill in the first two  columns of 
 Table 2.3. on the Answer Sheet with the obtained values.  
 (7.5 p)  
  
-From theoretical considerations it can be shown that the constant - is proportional to the length of 
-the cylinder (/) and inversely proportional to the total mass 6 of the pendulum: 
+From theoretical considerations it can be shown that the constant γ is proportional to the length of 
+the cylinder (L) and inversely proportional to the total mass m of the pendulum: 
  
-- = 7
+γ = C L/m, (2.4)  
  
-8 , (2.4)  
- 
-where 7 is some constant. Since we increased the mass suspe nded from the pendulum by adding 
+where C is some constant. Since we increased the mass suspe nded from the pendulum by adding 
 paper (but did not change the distance of the cente r of mass from the suspension point), the 
-measured values depend not only on /, but also on the total mass 6 of the pendulum and the paper. 
-The dependence on 6, however, can be ‘absorbed’ in the dimension /, so we renormalize  it ( 6
-0 is 
+measured values depend not only on L, but also on the total mass m of the pendulum and the paper. 
+The dependence on m, however, can be ‘absorbed’ in the dimension L, so we renormalize  it ( m_0 is 
 the mass of the cylinder without paper): 
  
-/9
-             
-:⎯⎯< /9
-6=
-69
-= /9
-6=
-6= + 69,@A@BC 
-= /CBD ,9 (2.5)  
+L_i → L_i m_0/m_i = L_i m_0/(m_0 + m_{i,paper}) = L_{ren,i} (2.5)  
  
 and expression (2.4) can be written as 
-- =  7
-6=
- /9
-6=
-6= + 69,@A@BC 
- =  7
-6=
- /CBD ,9 (2.6) 
+γ = (C/m_0)(L_i m_0/(m_0 + m_{i,paper})) = (C/m_0)L_{ren,i} (2.6) 
  
-2.9. For each value of the cylinder dimension /
-E, determine the corresponding renormalized value 
-/ren, E, and enter the value in the last column of Table 2.3 on the Answer Sheet.  (2.5 p)  
+2.9. For each value of the cylinder dimension L_i, determine the corresponding renormalized value 
+L_{ren,i}, and enter the value in the last column of Table 2.3 on the Answer Sheet.  (2.5 p)  
  
-2.10. On the graphing paper (Plot 2.2) on the Answe r Sheet, plot values of - as a function of the 
-renormalized  dimension /
-ren, E. (2 p)  
+2.10. On the graphing paper (Plot 2.2) on the Answe r Sheet, plot values of γ as a function of the 
+renormalized  dimension L_{ren,i}. (2 p)  
  
 2.11. Using a ruler, draw the line of best fit on the gra phing paper (Plot 2.2), and from its slope 
-determine the value of constant 7 and enter it on the Answer Sheet. Show your calculations.  
+determine the value of constant C and enter it on the Answer Sheet. Show your calculations.  
 (2 p)  
  
  
@@ -609,7 +566,7 @@ Materials and equipment
 • Glass tubes – 10 
 • Rubber stopper designed for glass tubes - 10 
 • Sterile medical needles – 10 
-• PlasKc syringe (5 mL volume) – 10 
+• Plastic syringe (5 mL volume) – 10 
 • Thermostat/incubator – in the laboratory, set at 35 °C 
 • Tube rack 
 • Indoor air thermometer and clock located in the laboratory 
@@ -621,11 +578,11 @@ Materials and equipment
 • Laboratory tweezers – 1 
 • Sterile swabs – 3 
 • Disposable gloves 
-• Paper towel (for protecKng the table and drying stained samples) 
-• Staining dish, plasKc – 1 
+• Paper towel (for protecting the table and drying stained samples) 
+• Staining dish, plastic – 1 
 • Crystal violet stain in a dropper 
-• Wash boJle with demineralized water 
-• Wash boJle with ethanol 
+• Wash bottle with demineralized water 
+• Wash bottle with ethanol 
 • Immersion oil for microscopy in a dropper 
  
  
@@ -711,16 +668,7 @@ EOES2025, TASK 2, ENGLISH, Team A T19
  
 STEP 3.2. Calculate the Q 10  coefficient 
 To calculate the Q 10  coefficient, use the widely accepted Arrhenius model, that says: 
-( )
-( )
-( )2 1 10°C/ 
-2
-10 
-1
-t t 
-k t Q k t 
-−  =   
-  
+Q_10 = [k(t_2) / k(t_1)]^(10 °C / (t_2 − t_1))
  
 If we assume that the value of k is proportional to the volume of expelled suspension in your ex- 
 periment, we can define the following: 
@@ -778,7 +726,7 @@ tures. Write down the data in the Table 3.3.2. on the Answer Sheet.
 Instructions: 
 • The number of bacteria at given time point can be calculated according to following equa- 
 tion:  
-0 2nN N = ×  
+N = N_0 × 2^n  
 where N is the number of bacteria at given time, N0 is the starting number of the bacteria, and n is 
 the number of divisions. 
  
@@ -819,21 +767,21 @@ bin and allow the slide to dry for about two minutes on the work surface.
 assistants will assist with the fixation process. After fixation, place the slide back on the sur- 
 face and allow it to cool for two minutes. 
 5.  Stain the sample: Cover your work area with paper and wear disposable  gloves. Place the 
-slide on the holder of the staining dish. Using a plasKc dropper, completely cover the sample 
-area with Crystal violet stain soluKon, ensuring th e dropper does not touch the slide. Allow 
+slide on the holder of the staining dish. Using a plastic dropper, completely cover the sample 
+area with Crystal violet stain solution, ensuring th e dropper does not touch the slide. Allow 
 the stain to set for one minute. 
 6.  Rinse the slide:  Place several paper towel sheets on your work surfa ce under the staining 
-dish. While holding one end of the slide with tweez ers, Klt the slide and rinse it using the 
-wash boJle: ﬁrst rinse with ethanol (96 v/v/ %), an d quickly aBer rinse with demineralized 
+dish. While holding one end of the slide with tweez ers, tilt the slide and rinse it using the 
+wash bottle: ﬁrst rinse with ethanol (96 v/v/ %), an d quickly after rinse with demineralized 
 water. It’s important to be quick, otherwise ethano l will destroy your sample. Keep rinsing 
-with water unKl the runoﬀ is clear. Now, place the rinsed slide on the prepared paper and 
+with water until the runoﬀ is clear. Now, place the rinsed slide on the prepared paper and 
 blot with paper towels to remove excess water. Note:  It’s important to remove all water to 
 ensure proper viewing under the microscope with the immersion lens. 
-7.  Microscope examinaCon:  Finally, examine the stained sample under the micro scope using 
-the immersion objecKve to observe the bacteria. Note:  if you are unable to ﬁnd a picture, 
+7.  Microscope examination:  Finally, examine the stained sample under the micro scope using 
+the immersion objective to observe the bacteria. Note:  if you are unable to ﬁnd a picture, 
 ask the lab assistant to help you, but in that case you will lose 1.5 points. 
 8.  IMPORTANT:  Kindly ask you, when you are done with microscopy, call the lab assistant to 
-clean the immersion objecKve. Otherwise, the oil can dry out and harm the objecKve.  
+clean the immersion objective. Otherwise, the oil can dry out and harm the objective.  
  
 3.5.1. Observe and draw stained cells under the mic roscope, following the instructions on the 
 Answer Sheet.  

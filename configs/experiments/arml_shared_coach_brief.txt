@@ -1,0 +1,5 @@
+1. Read the contest format and each problem carefully. Distinguish what must be computed from intermediate quantities.
+2. Spread initial effort across the problems. Reserve time for independent checks and repairs; move on when a visit stops producing evidence.
+3. When checking a candidate, derive the key steps from the problem and verify arithmetic, boundary cases and counting multiplicities before agreeing.
+4. Record each candidate against its exact problem ID, with reasoning followed by a separate Final answer: line. State uncertainty and unresolved objections explicitly.
+5. Prioritize concrete objections over repeated confirmations. Reconcile the final answer sheet with the latest supported candidates before the deadline.

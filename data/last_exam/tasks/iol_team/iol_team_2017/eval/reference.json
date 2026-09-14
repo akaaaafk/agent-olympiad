@@ -1,10 +1,32 @@
 {
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/iol_team/benchmark.json#iol_team_2017.gold_label",
-  "has_gold_answer": true,
-  "evaluator_id": "rubric_llm_v1",
-  "evaluator_status": "ready",
-  "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-  "deliverable": "worked_answers",
-  "solution_file": "data/raw/iol/iol-2017-team-sol.en.pdf"
+  "has_gold_answer": false,
+  "evaluator_id": null,
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/iol/iol-2017-team-sol.en.pdf",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/iol_team_2017_structured_reference_v1.json",
+    "deliverable": "team_worked_answer",
+    "judge_assets": [
+      "data/raw/iol/iol-2017-team-sol.en.pdf",
+      "data/rubrics/iol_team_2017_structured_reference_v1.json"
+    ],
+    "limitations": [
+      "Original emoji page images are required; plain-text font extraction corrupts glyph identity (including black versus blue heart).",
+      "Official (a) label-to-ID and (b) four unmatched-emoji references recovered; do not deduplicate the 93 description labels into 83 items.",
+      "The official solution gives phrase glosses but no separate full word-dictionary or short-grammar answer/marking rubric for (c)-(d).",
+      "No official total, part weights or partial-credit rules recovered. The old 100-point 50/30/20 benchmark proxy is disabled for this record.",
+      "Image-aware task delivery and full four-part grading have not been validated end to end."
+    ],
+    "scorecard_path": "data/rubrics/task_scorecards/iol_team.json",
+    "scorecard_key": "iol_team_2017",
+    "answer_key_path": "data/rubrics/iol_team_2017_structured_reference_v1.json",
+    "score_basis": "Official points unknown; structured partial reference only. Legacy 100-point benchmark proxy disabled; 93 matches and 4 descriptions are not point weights.",
+    "scoring_validation_status": "source_repaired_full_grading_not_validated"
+  },
+  "rubric_path": "data/rubrics/iol_team_2017_structured_reference_v1.json",
+  "deliverable": "team_worked_answer"
 }

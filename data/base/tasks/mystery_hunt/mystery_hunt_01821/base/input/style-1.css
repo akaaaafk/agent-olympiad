@@ -1,0 +1,160 @@
+@media screen {
+  #sneakers {
+    font-family: "Andale Mono", "Monaco", monospace;
+    background: url("css-1.png");
+    color: white;
+    line-height: normal;
+  }
+  #sneakers #container {
+    margin: 0 0 0 5px;
+  }
+  #sneakers #content {
+    margin: 1em;
+    padding: 0;
+    word-wrap: break-word;
+  }
+  #sneakers #content .puzzles li {
+    background-color: none;
+    color: lime;
+    padding-left: 2em;
+  }
+  #sneakers #content .puzzles li a:before {
+    content: "[ ] ";
+  }
+  #sneakers #content .puzzles li a.solved:before {
+    content: "[X] ";
+  }
+  #sneakers #content .puzzles li a {
+    display: inline-block;
+    width: 24em;
+  }
+  #sneakers #content .puzzles li .datacenter {
+    display: inline-block;
+    color: #0ff;
+  }
+  #sneakers #content .puzzles li:hover {
+    background-color: green;
+  }
+  #sneakers #content #messages {
+    -moz-column-count: 3;
+    -moz-column-gap: 1em;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 1em;
+  }
+  #sneakers #content #messages li {
+    padding-bottom: 5px;
+  }
+  #sneakers.puzzle #container {
+    width: auto;
+    height: auto;
+    padding-right: 100px;
+  }
+  #sneakers.puzzle #content {
+    width: auto;
+    height: auto;
+  }
+  #sneakers.puzzle .window-outer {
+    border: 1px solid white;
+    background-color: #077;
+    margin-left: 40px;
+  }
+  #sneakers.puzzle .window-title {
+    padding-top: 4px;
+    background-position: 4px 4px;
+    width: auto;
+    height: 18px;
+    background-color: #077;
+    color: white;
+    padding-left: 24px;
+    background-image: url("css-2.png");
+    background-repeat: no-repeat;
+    font-family: Arial;
+    font-size: 10pt;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  #sneakers.puzzle .window-title .span {
+    text-transform: uppercase;
+  }
+  #sneakers.puzzle .window-inner {
+    background-color: #ddd;
+    color: black;
+    border-width: 3px;
+    border-color: #077;
+    border-style: solid;
+    font-family: "Times New Roman", serif;
+    padding: 1em;
+    padding-top: .5em;
+  }
+  #sneakers.puzzle .window-inner a {
+    color: green;
+  }
+  #sneakers .round a {
+    color: lime;
+    text-decoration: none;
+  }
+  #sneakers .round ul {
+    padding: 0;
+    margin: 0 0 10px 0;
+  }
+  #sneakers .round ul li {
+    list-style-type: none;
+  }
+  #sneakers h1,
+  #sneakers h2,
+  #sneakers h3,
+  #sneakers .highlight {
+    color: black;
+    background: lime;
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+  #sneakers h1 {
+    font-size: 200%;
+    letter-spacing: 10px;
+    background: none;
+    color: #afa;
+  }
+  #sneakers #footer {
+    color: lime;
+    margin-top: 40px;
+  }
+  #sneakers #footer .highlight {
+    color: black;
+    background: #afa;
+  }
+  #sneakers #footer a {
+    color: lime;
+    text-decoration: none;
+  }
+}
+@media print {
+  #sneakers {
+    font-family: "Andale Mono", "Monaco", monospace;
+  }
+  #sneakers .window-title {
+    font-family: Arial;
+    font-size: 10pt;
+    font-weight: bold;
+  }
+  #sneakers .window-inner {
+    font-family: "Times New Roman", serif;
+  }
+  #sneakers h1,
+  #sneakers h2,
+  #sneakers h3,
+  #sneakers .highlight {
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+  #sneakers h1 {
+    font-size: 200%;
+    letter-spacing: 10px;
+  }
+  #footer {
+    visibility: hidden;
+  }
+  #fixie-nav {
+    visibility: hidden;
+  }
+}

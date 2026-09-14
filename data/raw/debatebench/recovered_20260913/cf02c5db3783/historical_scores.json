@@ -1,0 +1,112 @@
+{
+  "problem_id": "debatebench_Astana Open Round 5",
+  "visibility": "judge_only",
+  "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Astana Open Round 5.txt",
+  "transcript_sha256": "9d96ba2115a7014e498f42cb35c2405f6d5730d03f4356264e5f2d2f18227a87",
+  "score_workbook": "data/raw/debatebench/scores.xlsx",
+  "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+  "score_column_order": [
+    "PM",
+    "DPM",
+    "LO",
+    "DLO",
+    "MG",
+    "GW",
+    "MO",
+    "OW"
+  ],
+  "score_matching_title": "Astana Open Round 5",
+  "filename_alias_applied": false,
+  "identity_status": "matched",
+  "selected_scores": {
+    "sheet": "Sheet1",
+    "excel_row": 45,
+    "cell_range": "A45:M45",
+    "tournament_title": "Astana Open Round 5",
+    "speaker_scores": {
+      "PM": 82.0,
+      "LO": 82.0,
+      "DPM": 82.0,
+      "DLO": 81.0,
+      "MG": 86.0,
+      "MO": 80.0,
+      "GW": 82.0,
+      "OW": 80.0
+    },
+    "house_order": [
+      "CG",
+      "OG",
+      "OO",
+      "CO"
+    ]
+  },
+  "candidates": [
+    {
+      "sheet": "Sheet1",
+      "excel_row": 45,
+      "cell_range": "A45:M45",
+      "tournament_title": "Astana Open Round 5",
+      "speaker_scores": {
+        "PM": 82.0,
+        "LO": 82.0,
+        "DPM": 82.0,
+        "DLO": 81.0,
+        "MG": 86.0,
+        "MO": 80.0,
+        "GW": 82.0,
+        "OW": 80.0
+      },
+      "house_order": [
+        "CG",
+        "OG",
+        "OO",
+        "CO"
+      ]
+    }
+  ],
+  "role_alignment": {
+    "valid_role_boundaries": false,
+    "opening_role_order": [
+      "PM",
+      "LO",
+      "DPM",
+      "DLO",
+      "PM",
+      "MG",
+      "MO",
+      "GW",
+      "OW"
+    ],
+    "expected_speaking_order": [
+      "PM",
+      "LO",
+      "DPM",
+      "DLO",
+      "MG",
+      "MO",
+      "GW",
+      "OW"
+    ],
+    "observed_role_tags": [
+      "PM",
+      "/PM",
+      "LO",
+      "/LO",
+      "DPM",
+      "/DPM",
+      "DLO",
+      "PM",
+      "/DLO",
+      "MG",
+      "/MG",
+      "MO",
+      "/MO",
+      "GW",
+      "/GW",
+      "OW",
+      "/OW"
+    ],
+    "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+  },
+  "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+}

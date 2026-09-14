@@ -1,10 +1,29 @@
 {
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/iol_team/benchmark.json#iol_team_2022.gold_label",
-  "has_gold_answer": true,
-  "evaluator_id": "rubric_llm_v1",
-  "evaluator_status": "ready",
-  "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-  "deliverable": "worked_answers",
-  "solution_file": "data/raw/iol/iol-2022-team-sol.en.pdf"
+  "has_gold_answer": false,
+  "evaluator_id": null,
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/iol/iol-2022-team-sol.en.pdf",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/iol_team_2022_printed_points_v1.json",
+    "deliverable": "team_worked_answer",
+    "judge_assets": [
+      "data/raw/iol/iol-2022-team-sol.en.pdf"
+    ],
+    "limitations": [
+      "Printed Parts I-IV each carry 25 points, totaling 100. The previous generic accuracy/method/coverage split is not the official allocation.",
+      "Parts I and III require the Manchu script. Embedded font extraction corrupts its glyphs; original PDF images are authoritative for problem and answers.",
+      "Within-part partial credit and image/script-aware delivery/grading have not been validated. Printed subtotals alone do not make an executable official grader."
+    ],
+    "scorecard_path": "data/rubrics/task_scorecards/iol_team.json",
+    "scorecard_key": "iol_team_2022",
+    "source_repair_report": "data/benchmarks/iol_followup_repair_20260913.json",
+    "scoring_validation_status": "source_repaired_runtime_and_grading_not_validated",
+    "score_basis": "Official printed part subtotals: I=25, II=25, III=25, IV=25; maximum 100. Within-part partial credit unverified."
+  },
+  "rubric_path": "data/rubrics/iol_team_2022_printed_points_v1.json",
+  "deliverable": "team_worked_answer"
 }

@@ -1,5 +1,3 @@
-# Rd.-5-History-Bowl-2021-IHBB-Asian-Championships
-
 [Q1] One leader at this battle ordered the mass execution of prisoners after Ysembart [[EE-zem-barht]] stole the victor's crown from a baggage train. This battle, which occurred on St. Crispin’s Day, led to the marriage of Charles VI's daughter and its victor in the Treaty of Troyes [[TWAH]]. For ten points, name this victory for Henry V during the Hundred Years’ War, which included heavy use of longbows.
 
 [Q2] In 1968, this artist was shot by radical feminist Valerie Solanas, which may have contributed to his death nineteen years later. In 2013, this artist’s Silver Car Crash (Double Disaster) sold for $105 million. This arti st’s Factory in New York City hosted a film studio, an assembly line for lithograph and silk -screening production, and drug -fueled parties featuring celebrities and free -thinkers. For ten points, name this pop artist best known for his Marilyn Diptych and depictions of Campbell’s Soup Cans.

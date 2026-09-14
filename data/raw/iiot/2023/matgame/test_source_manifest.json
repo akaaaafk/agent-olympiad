@@ -1,0 +1,2233 @@
+{
+  "task_code": "matgame",
+  "year": 2023,
+  "official_archive_url": "https://iio.team/competition/tasks/2023",
+  "publisher_test_folder": "https://drive.google.com/drive/folders/1BKo3OQk3sNNFcQdYZDMWvQ9Ua-0GAlOH?usp=drive_link",
+  "reference_manifest": "data/raw/iiot/2023/matgame/reference_manifest.json",
+  "files": [
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input0.txt",
+      "name": "input0.txt",
+      "kind": "input",
+      "sha256": "d1ee1f14dcc18223861096c349f695766a933f9de91b35ae226c9e5474d0a971",
+      "bytes": 20,
+      "publisher_file_id": "1-fdtkE0f8bJVUS0hi6S4el0Z1E0JsOAD",
+      "source_url": "https://drive.google.com/uc?export=download&id=1-fdtkE0f8bJVUS0hi6S4el0Z1E0JsOAD",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input1.txt",
+      "name": "input1.txt",
+      "kind": "input",
+      "sha256": "bf1e09ad5ec26fee33e530abb0649db76f472263c58c211d5dcf4495df5e21b1",
+      "bytes": 91,
+      "publisher_file_id": "1nmgvM--pgTW4BaDaBVLDB3-XIB5kRJ69",
+      "source_url": "https://drive.google.com/uc?export=download&id=1nmgvM--pgTW4BaDaBVLDB3-XIB5kRJ69",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input10.txt",
+      "name": "input10.txt",
+      "kind": "input",
+      "sha256": "1b4353143eaf750671e15934c277649d5901ddd7c6897b47b7b38bcbfb5a4e76",
+      "bytes": 987,
+      "publisher_file_id": "1GKpf0fbcvbvG-4STW4DgBB-ZU_lO7Fra",
+      "source_url": "https://drive.google.com/uc?export=download&id=1GKpf0fbcvbvG-4STW4DgBB-ZU_lO7Fra",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input11.txt",
+      "name": "input11.txt",
+      "kind": "input",
+      "sha256": "d5436611f0387d6a4f4b1c600e44e66f5202234ad23760f206e2d51c212d7a52",
+      "bytes": 203,
+      "publisher_file_id": "1OHK27MCKh_b5JbIf2ului9cSDbbHEpQ3",
+      "source_url": "https://drive.google.com/uc?export=download&id=1OHK27MCKh_b5JbIf2ului9cSDbbHEpQ3",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input12.txt",
+      "name": "input12.txt",
+      "kind": "input",
+      "sha256": "8b02fe0c3983feca4b936b61859c95182e8fb9a05bf4cacb0013524540edc33d",
+      "bytes": 391,
+      "publisher_file_id": "1cD-Ap0GJpfEF7hPKB9gC69ZrmNnPhmGn",
+      "source_url": "https://drive.google.com/uc?export=download&id=1cD-Ap0GJpfEF7hPKB9gC69ZrmNnPhmGn",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input13.txt",
+      "name": "input13.txt",
+      "kind": "input",
+      "sha256": "934c32fb91d0adaf8684688de1d0ccadaebd6cf4a14fe3ef0591ad00abe51f7c",
+      "bytes": 674,
+      "publisher_file_id": "1zRB-rh4_lp7HFMe1dOoeRi3a7OzZzzjh",
+      "source_url": "https://drive.google.com/uc?export=download&id=1zRB-rh4_lp7HFMe1dOoeRi3a7OzZzzjh",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input14.txt",
+      "name": "input14.txt",
+      "kind": "input",
+      "sha256": "ed287da4c215eb78b030dbeea4b0cffe2b1b77ae0cc3abbfcef67ee66e01b776",
+      "bytes": 979,
+      "publisher_file_id": "1wjcpcYs_5BIfDA_DYu7-EkspUfltWWFR",
+      "source_url": "https://drive.google.com/uc?export=download&id=1wjcpcYs_5BIfDA_DYu7-EkspUfltWWFR",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input15.txt",
+      "name": "input15.txt",
+      "kind": "input",
+      "sha256": "5a153118931f82d0d2c9d2f729ecb2a8ce334fbb0e725d25a4bfa1a28839320a",
+      "bytes": 995,
+      "publisher_file_id": "1_xrr76geh0CeD504PwLn7hQ_psRbjZp_",
+      "source_url": "https://drive.google.com/uc?export=download&id=1_xrr76geh0CeD504PwLn7hQ_psRbjZp_",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input16.txt",
+      "name": "input16.txt",
+      "kind": "input",
+      "sha256": "9600c36e7928981eba564a2b88482fb9b04c9fa5579a2fe3623e193ffe87d9c1",
+      "bytes": 997,
+      "publisher_file_id": "1vdTtEC8UC4a_LMjHrIverS5WGMVk7Fa0",
+      "source_url": "https://drive.google.com/uc?export=download&id=1vdTtEC8UC4a_LMjHrIverS5WGMVk7Fa0",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input17.txt",
+      "name": "input17.txt",
+      "kind": "input",
+      "sha256": "9679283df8ff40943b17a992a5b87dc6ccaed394323c1f3b6b06858da18a4838",
+      "bytes": 984,
+      "publisher_file_id": "13801AH-_ozE4WJ6wNMj0a-T4XH2cMlRC",
+      "source_url": "https://drive.google.com/uc?export=download&id=13801AH-_ozE4WJ6wNMj0a-T4XH2cMlRC",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input18.txt",
+      "name": "input18.txt",
+      "kind": "input",
+      "sha256": "88cdc510d9d7f07c7720a43e2f8960a02c8d3965be2cc237aeccde3aec6b7038",
+      "bytes": 1000,
+      "publisher_file_id": "15BpNc_ajT8LvkTNqdYhTe-H6qhlchfX7",
+      "source_url": "https://drive.google.com/uc?export=download&id=15BpNc_ajT8LvkTNqdYhTe-H6qhlchfX7",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input19.txt",
+      "name": "input19.txt",
+      "kind": "input",
+      "sha256": "825119190db11db1340ca8c813fbfab977127c9c037f37eaa8ad91d85e6ed733",
+      "bytes": 992,
+      "publisher_file_id": "16XAIl2BgqPyuOVCTbAtfr7z43LLCVDzb",
+      "source_url": "https://drive.google.com/uc?export=download&id=16XAIl2BgqPyuOVCTbAtfr7z43LLCVDzb",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input2.txt",
+      "name": "input2.txt",
+      "kind": "input",
+      "sha256": "bde5f057b4dc47a391d161cb46fc49b66b3a95343ab36b9b74d61836ae82f55a",
+      "bytes": 995,
+      "publisher_file_id": "1umWOxuyEyPrDGS7wL6bDaT7ai8EtrlcD",
+      "source_url": "https://drive.google.com/uc?export=download&id=1umWOxuyEyPrDGS7wL6bDaT7ai8EtrlcD",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input20.txt",
+      "name": "input20.txt",
+      "kind": "input",
+      "sha256": "764d6e7be5bac0d17aa759b4b06e6001f4721c4c3fe01c23cec5a5afe9939de5",
+      "bytes": 988,
+      "publisher_file_id": "1FTFWnvBcXwSaXSmXMsx_w3v5gOkRrCyF",
+      "source_url": "https://drive.google.com/uc?export=download&id=1FTFWnvBcXwSaXSmXMsx_w3v5gOkRrCyF",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input21.txt",
+      "name": "input21.txt",
+      "kind": "input",
+      "sha256": "2b2638361d37677b1b2e48113bce75c9cfec45547a062f2df3f90c0cf51a57ab",
+      "bytes": 993,
+      "publisher_file_id": "1EBzBd-CNHX8psQ-o7k9Eq2yIyP4gymvF",
+      "source_url": "https://drive.google.com/uc?export=download&id=1EBzBd-CNHX8psQ-o7k9Eq2yIyP4gymvF",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input22.txt",
+      "name": "input22.txt",
+      "kind": "input",
+      "sha256": "d36de9e701b480309647bc0b6b79ca12ede277b94b2ad15c7ec9a3376e42dd2e",
+      "bytes": 992,
+      "publisher_file_id": "1p2vnGcP5q-nW_jKZklB30Q-uvDaDsZ3I",
+      "source_url": "https://drive.google.com/uc?export=download&id=1p2vnGcP5q-nW_jKZklB30Q-uvDaDsZ3I",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input23.txt",
+      "name": "input23.txt",
+      "kind": "input",
+      "sha256": "914894b4b1aacf32586196b476656bd6d9899ce1bba44a7c55d222204b039911",
+      "bytes": 993,
+      "publisher_file_id": "1Z75PZpnoCS5LCnFSeqO_BuQQ_MW3yhM4",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Z75PZpnoCS5LCnFSeqO_BuQQ_MW3yhM4",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input24.txt",
+      "name": "input24.txt",
+      "kind": "input",
+      "sha256": "a00602f506712271a065aee7aa1ce0c7dfafa18537cafc6ee6af45f37278246c",
+      "bytes": 203,
+      "publisher_file_id": "1vVsJDrk45i2feCSZlrqWKexCZLyIme9u",
+      "source_url": "https://drive.google.com/uc?export=download&id=1vVsJDrk45i2feCSZlrqWKexCZLyIme9u",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input25.txt",
+      "name": "input25.txt",
+      "kind": "input",
+      "sha256": "d630a606a262aeb2c01472ed54d7de655dcb35304a432bedffc6e2f836bfe7d2",
+      "bytes": 5003,
+      "publisher_file_id": "1A4-QCLOxTMUZIqIhtqG-ekLUaMYfVSeT",
+      "source_url": "https://drive.google.com/uc?export=download&id=1A4-QCLOxTMUZIqIhtqG-ekLUaMYfVSeT",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input26.txt",
+      "name": "input26.txt",
+      "kind": "input",
+      "sha256": "e478e21b7f50c4564529aa041c311b486a096686eae8dd96d8f61931247a03b3",
+      "bytes": 20812,
+      "publisher_file_id": "1LYwjJZyvq1YoZipTWl0qQlN9mjg-bQpG",
+      "source_url": "https://drive.google.com/uc?export=download&id=1LYwjJZyvq1YoZipTWl0qQlN9mjg-bQpG",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input27.txt",
+      "name": "input27.txt",
+      "kind": "input",
+      "sha256": "fba9fd2f305c1a89f1c790c663ab8873316ee67f1ba1901f09f12380f7ae2dd8",
+      "bytes": 87366,
+      "publisher_file_id": "1PP1fzRPEwBasg88Zu2oPJerxSheW0P0G",
+      "source_url": "https://drive.google.com/uc?export=download&id=1PP1fzRPEwBasg88Zu2oPJerxSheW0P0G",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input28.txt",
+      "name": "input28.txt",
+      "kind": "input",
+      "sha256": "88a4f3265cd6df7b5c0ca82fb9f7d0821bb4f997716ff81783f603a62ec39b0a",
+      "bytes": 180004,
+      "publisher_file_id": "1e4p7uEJNfZ1ZEcn0gehI1COh8K1sE7QB",
+      "source_url": "https://drive.google.com/uc?export=download&id=1e4p7uEJNfZ1ZEcn0gehI1COh8K1sE7QB",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input29.txt",
+      "name": "input29.txt",
+      "kind": "input",
+      "sha256": "9deafeca94e642e35abc5bbb58d1e0100a5215e18088852897cc5cadd43f73b8",
+      "bytes": 174054,
+      "publisher_file_id": "1RqGvA6G0DgBFh1OjFnssDuVNxaoMAMdS",
+      "source_url": "https://drive.google.com/uc?export=download&id=1RqGvA6G0DgBFh1OjFnssDuVNxaoMAMdS",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input3.txt",
+      "name": "input3.txt",
+      "kind": "input",
+      "sha256": "6ae8e15f61d5037f019b9d1bbc2719ee9a438af2ed9f3f67f2d5ae340cb92f97",
+      "bytes": 693,
+      "publisher_file_id": "1EXY2Fn0XT9kUDDUFk0m6WT5jGez8qeH0",
+      "source_url": "https://drive.google.com/uc?export=download&id=1EXY2Fn0XT9kUDDUFk0m6WT5jGez8qeH0",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input30.txt",
+      "name": "input30.txt",
+      "kind": "input",
+      "sha256": "d520795fa86e425a666c561b1339c0826bd114f683e4c343197ed3d2391cfd53",
+      "bytes": 161316,
+      "publisher_file_id": "1VZTdlRePh-M85IvpVSgdPhpHACVfoR7_",
+      "source_url": "https://drive.google.com/uc?export=download&id=1VZTdlRePh-M85IvpVSgdPhpHACVfoR7_",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input31.txt",
+      "name": "input31.txt",
+      "kind": "input",
+      "sha256": "5aa63949d5c7f983a45e04b2a631a2aee42e3cfa526bfff8d9e539ba4b7a0e90",
+      "bytes": 74502,
+      "publisher_file_id": "1G1BM_PpDnqKv38oEseJbkjoYGFqxtAc6",
+      "source_url": "https://drive.google.com/uc?export=download&id=1G1BM_PpDnqKv38oEseJbkjoYGFqxtAc6",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input32.txt",
+      "name": "input32.txt",
+      "kind": "input",
+      "sha256": "f4eb38b4b01e7bd5c9eb6876489f677481c0551392abd332e41ccd4d27a448ab",
+      "bytes": 180004,
+      "publisher_file_id": "1uuOzPQ7GVIMnkRi72ls2T0sIbAcDNAEM",
+      "source_url": "https://drive.google.com/uc?export=download&id=1uuOzPQ7GVIMnkRi72ls2T0sIbAcDNAEM",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input33.txt",
+      "name": "input33.txt",
+      "kind": "input",
+      "sha256": "e2b9d158373c615b4700acd7724b1f130e9666edd6deeb660a99799fdc99c8f8",
+      "bytes": 45004,
+      "publisher_file_id": "1vx3Qu8jbzhfe83KsdReh8F_ez6dL7N-c",
+      "source_url": "https://drive.google.com/uc?export=download&id=1vx3Qu8jbzhfe83KsdReh8F_ez6dL7N-c",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input34.txt",
+      "name": "input34.txt",
+      "kind": "input",
+      "sha256": "3a7d6dc34674efa43a4198ac1f44bc0541d10e04944c89f8122d6bee98a9a9e5",
+      "bytes": 98665,
+      "publisher_file_id": "1SwOvAC_sdUrtBombJwYt7akpSQ4F3L3G",
+      "source_url": "https://drive.google.com/uc?export=download&id=1SwOvAC_sdUrtBombJwYt7akpSQ4F3L3G",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input35.txt",
+      "name": "input35.txt",
+      "kind": "input",
+      "sha256": "66526bd6727fb8837e70d0fd1755535185165bdcc62a10d70305f3f249ed224d",
+      "bytes": 98697,
+      "publisher_file_id": "1PytsOO7ivxUurVGO7X4rycn5485YTAlc",
+      "source_url": "https://drive.google.com/uc?export=download&id=1PytsOO7ivxUurVGO7X4rycn5485YTAlc",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input36.txt",
+      "name": "input36.txt",
+      "kind": "input",
+      "sha256": "25aa1ba2fcf955adb8ba6dffcfce7ac109718251016c19436effbaeb98c0147c",
+      "bytes": 98713,
+      "publisher_file_id": "17olG_cB1fRx5tiTvYRggAYch9f5LpwC-",
+      "source_url": "https://drive.google.com/uc?export=download&id=17olG_cB1fRx5tiTvYRggAYch9f5LpwC-",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input37.txt",
+      "name": "input37.txt",
+      "kind": "input",
+      "sha256": "73a9ec7352cfbe6d1b717e044f451e4911c6c646c30a6e708e0b767ddd644e61",
+      "bytes": 98755,
+      "publisher_file_id": "1F1WEHb02IO1Vw9d7JEbUXuhYPThgZawp",
+      "source_url": "https://drive.google.com/uc?export=download&id=1F1WEHb02IO1Vw9d7JEbUXuhYPThgZawp",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input38.txt",
+      "name": "input38.txt",
+      "kind": "input",
+      "sha256": "c539d1c8295bfb55143b64e3dce0b33a7d8845eabe534dea4e49b45d5d0025d0",
+      "bytes": 98650,
+      "publisher_file_id": "1ESj6N_Zymtsosuudh3ED5VhbasBkb-q8",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ESj6N_Zymtsosuudh3ED5VhbasBkb-q8",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input39.txt",
+      "name": "input39.txt",
+      "kind": "input",
+      "sha256": "1bea3f6af6db96e97899425bc966f32944e1feb146af537e1f09fcde22940257",
+      "bytes": 98799,
+      "publisher_file_id": "1c4ratEmJ6YBOAIa6zlqG1bw_7NpHvYAw",
+      "source_url": "https://drive.google.com/uc?export=download&id=1c4ratEmJ6YBOAIa6zlqG1bw_7NpHvYAw",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input4.txt",
+      "name": "input4.txt",
+      "kind": "input",
+      "sha256": "f4ded9af272b17eb3b5c685a5030afb61f4901ce26b2ed8a6da6e4079ca53839",
+      "bytes": 989,
+      "publisher_file_id": "1Crk3WFoRZGDiBd6nw3vqLms_jjYASI1J",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Crk3WFoRZGDiBd6nw3vqLms_jjYASI1J",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input40.txt",
+      "name": "input40.txt",
+      "kind": "input",
+      "sha256": "0030ef55801437ec0e7282894a39052f176ff01e83ff196228ce66ab0f1da02a",
+      "bytes": 98711,
+      "publisher_file_id": "1O1X_M-OWcT3xe5ZblmgkSkTQssFk-c_c",
+      "source_url": "https://drive.google.com/uc?export=download&id=1O1X_M-OWcT3xe5ZblmgkSkTQssFk-c_c",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input41.txt",
+      "name": "input41.txt",
+      "kind": "input",
+      "sha256": "2d28835088f80acfe54dcf5a9ccda566406797611e23595bb5ac7b31492c7e8e",
+      "bytes": 98646,
+      "publisher_file_id": "1-FHOgjt33LKUYto9cc1_r5iNaODNpQ41",
+      "source_url": "https://drive.google.com/uc?export=download&id=1-FHOgjt33LKUYto9cc1_r5iNaODNpQ41",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input42.txt",
+      "name": "input42.txt",
+      "kind": "input",
+      "sha256": "0eb930d01e57a2a672beee27e8277aa5f5ee01fe307ff090d4001cee7ec30daf",
+      "bytes": 98679,
+      "publisher_file_id": "1M45cxQ2rIVaMbNkA9HNjib1DDI7C_Bfa",
+      "source_url": "https://drive.google.com/uc?export=download&id=1M45cxQ2rIVaMbNkA9HNjib1DDI7C_Bfa",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input43.txt",
+      "name": "input43.txt",
+      "kind": "input",
+      "sha256": "6d3264f15637e9919701a179faf1a74b2a779d513d498d6ff1864f8b1845177d",
+      "bytes": 98663,
+      "publisher_file_id": "16AGaKjKXa4yiF8dQEdEIywimK4FpLCa9",
+      "source_url": "https://drive.google.com/uc?export=download&id=16AGaKjKXa4yiF8dQEdEIywimK4FpLCa9",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input44.txt",
+      "name": "input44.txt",
+      "kind": "input",
+      "sha256": "a50e954ee13a825d7a9de1264072b59c1a5ff71bd932706a6761d879b901d8b4",
+      "bytes": 98793,
+      "publisher_file_id": "1Itrg8ONt7cRX7OjO0F0En1K5Mpbqk-aD",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Itrg8ONt7cRX7OjO0F0En1K5Mpbqk-aD",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input45.txt",
+      "name": "input45.txt",
+      "kind": "input",
+      "sha256": "d331d9b97bfc1ea53ad92d5c934e9b6c46346a0f6ccd452ecdd6f19db3f18410",
+      "bytes": 98661,
+      "publisher_file_id": "1k-X8Ozo0SAE1hGgYXfMgFGOw5FIx_igx",
+      "source_url": "https://drive.google.com/uc?export=download&id=1k-X8Ozo0SAE1hGgYXfMgFGOw5FIx_igx",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input46.txt",
+      "name": "input46.txt",
+      "kind": "input",
+      "sha256": "c1f32860aba0ef692e77f55e7ddeb90aaec3be4ed919e8c34c5f3c3506a69089",
+      "bytes": 98781,
+      "publisher_file_id": "15UFutGepZcn9AVik5_aybwXQO4xBHbrb",
+      "source_url": "https://drive.google.com/uc?export=download&id=15UFutGepZcn9AVik5_aybwXQO4xBHbrb",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input47.txt",
+      "name": "input47.txt",
+      "kind": "input",
+      "sha256": "1c139961c2e711251ea28635d812398eae7295c6926bdf8c51ee54a606972a53",
+      "bytes": 98730,
+      "publisher_file_id": "1dV_jBPN2x8_KYA2Vdzk0NIktf7vah4EC",
+      "source_url": "https://drive.google.com/uc?export=download&id=1dV_jBPN2x8_KYA2Vdzk0NIktf7vah4EC",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input48.txt",
+      "name": "input48.txt",
+      "kind": "input",
+      "sha256": "992ce0882d968a14fadc3b71e9af4fdc32f7405b842dfcb49a66fc904cd4b1ca",
+      "bytes": 98648,
+      "publisher_file_id": "16i6Ts6MJ0khY2CC_lfTq113ZH5FoLRfC",
+      "source_url": "https://drive.google.com/uc?export=download&id=16i6Ts6MJ0khY2CC_lfTq113ZH5FoLRfC",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input49.txt",
+      "name": "input49.txt",
+      "kind": "input",
+      "sha256": "df0d1bf5e82114b2ffd76694d1c18b01c0099a40bb5383daacbddbe47f16cf48",
+      "bytes": 98867,
+      "publisher_file_id": "1lo3gEA6x9Fpep9UXDR3IEmbB_HILeDHx",
+      "source_url": "https://drive.google.com/uc?export=download&id=1lo3gEA6x9Fpep9UXDR3IEmbB_HILeDHx",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input5.txt",
+      "name": "input5.txt",
+      "kind": "input",
+      "sha256": "59b04cd70a3048e8f7f005ed21389d89903ae504d04e0fa01e79f7333f8a9ab7",
+      "bytes": 722,
+      "publisher_file_id": "1L3E4_5dxhxxK-qYeDyTS1XWtuIlQE_z6",
+      "source_url": "https://drive.google.com/uc?export=download&id=1L3E4_5dxhxxK-qYeDyTS1XWtuIlQE_z6",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input50.txt",
+      "name": "input50.txt",
+      "kind": "input",
+      "sha256": "29b74fa396e1e3829f2a5f6fa86d6d70e56245717974826893cf5059a5b4aa7c",
+      "bytes": 98839,
+      "publisher_file_id": "1-KEturvQHl0LKlmAoMiY-bDRQ6SE_Hk0",
+      "source_url": "https://drive.google.com/uc?export=download&id=1-KEturvQHl0LKlmAoMiY-bDRQ6SE_Hk0",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input51.txt",
+      "name": "input51.txt",
+      "kind": "input",
+      "sha256": "334f39ba7c0a9785eae9baf98b468609d4d1510c857c063814ed5b0959dbc1e2",
+      "bytes": 98855,
+      "publisher_file_id": "1FVsUlnIoDw9mUjs0K8saIMyHEGe7wIRf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1FVsUlnIoDw9mUjs0K8saIMyHEGe7wIRf",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input52.txt",
+      "name": "input52.txt",
+      "kind": "input",
+      "sha256": "62fef33ef5d035408a08bf54614ae857d331a0079f88713eb653bd0d5ae44a29",
+      "bytes": 98897,
+      "publisher_file_id": "1npLb2SeEiH52OnanjauU833CaGuVtngL",
+      "source_url": "https://drive.google.com/uc?export=download&id=1npLb2SeEiH52OnanjauU833CaGuVtngL",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input53.txt",
+      "name": "input53.txt",
+      "kind": "input",
+      "sha256": "9e68c4283a3f9e7d596ef5fcd5db5291dd88d63d77aa21a46ddc34f0c6b7614c",
+      "bytes": 98902,
+      "publisher_file_id": "1pB3WxlsQTJL4sU0vusPc-9twiLDi23tG",
+      "source_url": "https://drive.google.com/uc?export=download&id=1pB3WxlsQTJL4sU0vusPc-9twiLDi23tG",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input54.txt",
+      "name": "input54.txt",
+      "kind": "input",
+      "sha256": "2e024af65c733b3ea32ec63d33213b4ac502da4228982ba6d94c675542f139ea",
+      "bytes": 98950,
+      "publisher_file_id": "1-gzYOdz-zNHlT5lMLPLdzDWiJd739kvR",
+      "source_url": "https://drive.google.com/uc?export=download&id=1-gzYOdz-zNHlT5lMLPLdzDWiJd739kvR",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input55.txt",
+      "name": "input55.txt",
+      "kind": "input",
+      "sha256": "08ce601538fa9a2d50ffe9b73f4b52652bc5e985bea8a0c92a093080eadb3eb2",
+      "bytes": 98870,
+      "publisher_file_id": "1_Phln30z16KzaItQKlEkSlVsiwwV4H5L",
+      "source_url": "https://drive.google.com/uc?export=download&id=1_Phln30z16KzaItQKlEkSlVsiwwV4H5L",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input56.txt",
+      "name": "input56.txt",
+      "kind": "input",
+      "sha256": "a00602f506712271a065aee7aa1ce0c7dfafa18537cafc6ee6af45f37278246c",
+      "bytes": 203,
+      "publisher_file_id": "1GObNO4dStcGLTApjOR0Vd5448nHpzW7q",
+      "source_url": "https://drive.google.com/uc?export=download&id=1GObNO4dStcGLTApjOR0Vd5448nHpzW7q",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input57.txt",
+      "name": "input57.txt",
+      "kind": "input",
+      "sha256": "d630a606a262aeb2c01472ed54d7de655dcb35304a432bedffc6e2f836bfe7d2",
+      "bytes": 5003,
+      "publisher_file_id": "1CzN3--n25Bcu14DRI-1Eb_pKwcPybVcE",
+      "source_url": "https://drive.google.com/uc?export=download&id=1CzN3--n25Bcu14DRI-1Eb_pKwcPybVcE",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input58.txt",
+      "name": "input58.txt",
+      "kind": "input",
+      "sha256": "1463dfee1b45c613e1fafc39f70ceeae607eef7236ec819016b7cbfb3d6d3437",
+      "bytes": 9870129,
+      "publisher_file_id": "1d3uouuemizG4zWyRH2KsZcwuapA9XDiK",
+      "source_url": "https://drive.google.com/uc?export=download&id=1d3uouuemizG4zWyRH2KsZcwuapA9XDiK",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input59.txt",
+      "name": "input59.txt",
+      "kind": "input",
+      "sha256": "2fa1adeb651351c0b24e9b21a1b7d921687991de87cec278a9a8edff654644bf",
+      "bytes": 9870645,
+      "publisher_file_id": "16XeNiPJefL6g36Ybg1CqvWISmtAzORRL",
+      "source_url": "https://drive.google.com/uc?export=download&id=16XeNiPJefL6g36Ybg1CqvWISmtAzORRL",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input6.txt",
+      "name": "input6.txt",
+      "kind": "input",
+      "sha256": "a08f336157dd80b68a144b7be6d00f9be6c30442f1d3e15f73ff9cbad2386d0a",
+      "bytes": 986,
+      "publisher_file_id": "1nURpGj3eqGiRbtpnsMA2pO3w7o-1Bc5W",
+      "source_url": "https://drive.google.com/uc?export=download&id=1nURpGj3eqGiRbtpnsMA2pO3w7o-1Bc5W",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input60.txt",
+      "name": "input60.txt",
+      "kind": "input",
+      "sha256": "f738becae9a7f232628fbaedff7b62113d1a88b6721994cc19198f43a240a0ba",
+      "bytes": 9870783,
+      "publisher_file_id": "1qCK9RlrAww9tfP_Ytv3pG1ny_US8l2Fb",
+      "source_url": "https://drive.google.com/uc?export=download&id=1qCK9RlrAww9tfP_Ytv3pG1ny_US8l2Fb",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input61.txt",
+      "name": "input61.txt",
+      "kind": "input",
+      "sha256": "9b134d7bc0351d6b41cc9009d3f045767a1dc49af46f7aa7b15e51dbe61b0a10",
+      "bytes": 9871023,
+      "publisher_file_id": "1ImxzsKGsCRYl6dqwkio566ELhOAXLfwx",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ImxzsKGsCRYl6dqwkio566ELhOAXLfwx",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input62.txt",
+      "name": "input62.txt",
+      "kind": "input",
+      "sha256": "f678f24f2048e8b73c54aeccc0f4385063cdd5c73f5fd2932875d59bcbfe8be2",
+      "bytes": 9870735,
+      "publisher_file_id": "1OaM_yA3i973PGi8hJKnELqf6xbOhPcOu",
+      "source_url": "https://drive.google.com/uc?export=download&id=1OaM_yA3i973PGi8hJKnELqf6xbOhPcOu",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input63.txt",
+      "name": "input63.txt",
+      "kind": "input",
+      "sha256": "acb4d9b39cbe6dabf360ae34fde19f599ac9a0f1129d9d9bac6db3a9a4f1c8e9",
+      "bytes": 9870719,
+      "publisher_file_id": "1eHZ1IMJphMFBhBgv5Sxlg-cx4led2q6p",
+      "source_url": "https://drive.google.com/uc?export=download&id=1eHZ1IMJphMFBhBgv5Sxlg-cx4led2q6p",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input64.txt",
+      "name": "input64.txt",
+      "kind": "input",
+      "sha256": "dd4752b0b675145704f68be61e302c31e42f4c10d583f31e986415651e18621e",
+      "bytes": 9870937,
+      "publisher_file_id": "1lqlAFPkDsmSBQ3cwGkXrAB5i6-C7ETtz",
+      "source_url": "https://drive.google.com/uc?export=download&id=1lqlAFPkDsmSBQ3cwGkXrAB5i6-C7ETtz",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input65.txt",
+      "name": "input65.txt",
+      "kind": "input",
+      "sha256": "c7ea890bd56741a65a434c649a98ec1653954092ca2017ebf79d2d6690dc4773",
+      "bytes": 9869834,
+      "publisher_file_id": "1F1G3d9X1qrLfkQ5KwNhuFGBn4ODl2sCR",
+      "source_url": "https://drive.google.com/uc?export=download&id=1F1G3d9X1qrLfkQ5KwNhuFGBn4ODl2sCR",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input66.txt",
+      "name": "input66.txt",
+      "kind": "input",
+      "sha256": "ac5e258529c33f0cbd93a46d172fdac1633a353496a5ce138c81f8bb6c3567e9",
+      "bytes": 9870797,
+      "publisher_file_id": "1NOwo25nwjI1hDluTqKoTfCxgN8RSHMbQ",
+      "source_url": "https://drive.google.com/uc?export=download&id=1NOwo25nwjI1hDluTqKoTfCxgN8RSHMbQ",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input67.txt",
+      "name": "input67.txt",
+      "kind": "input",
+      "sha256": "329cbc6aafc2b4d8db36a2c2d8c7ff184b866c7debb482b1ad4fdace3c4554b5",
+      "bytes": 9870252,
+      "publisher_file_id": "1rCIIdzKZYGC7bYMGalwswoKgVc0BiNB5",
+      "source_url": "https://drive.google.com/uc?export=download&id=1rCIIdzKZYGC7bYMGalwswoKgVc0BiNB5",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input68.txt",
+      "name": "input68.txt",
+      "kind": "input",
+      "sha256": "93a1a0024e334189d2bb762bb12e33a55a56d906b758e96e413860ff48dd5312",
+      "bytes": 9870621,
+      "publisher_file_id": "1eqApBhgvDgFxI_f51AZRFYcPyH_dtHNR",
+      "source_url": "https://drive.google.com/uc?export=download&id=1eqApBhgvDgFxI_f51AZRFYcPyH_dtHNR",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input69.txt",
+      "name": "input69.txt",
+      "kind": "input",
+      "sha256": "661a6b4efe599ddf156f236f760915d6ba058950cc068d4b5c546df79ad3facc",
+      "bytes": 9870611,
+      "publisher_file_id": "1xGEyElxTPegb-rIomXBcRWRpCPEXQPWb",
+      "source_url": "https://drive.google.com/uc?export=download&id=1xGEyElxTPegb-rIomXBcRWRpCPEXQPWb",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input7.txt",
+      "name": "input7.txt",
+      "kind": "input",
+      "sha256": "3b511f239431f7e5cd40c985b1ed433d6c97dd73df8f7d015ea9ac57b16c4aa9",
+      "bytes": 399,
+      "publisher_file_id": "1r1jqy6JvhVJFLkOD1u2cs4okuSR-ie-T",
+      "source_url": "https://drive.google.com/uc?export=download&id=1r1jqy6JvhVJFLkOD1u2cs4okuSR-ie-T",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input70.txt",
+      "name": "input70.txt",
+      "kind": "input",
+      "sha256": "4f9737d8884ac3f2a906c04e571164e2310e13f5c083b4c589668e44a4cce078",
+      "bytes": 9795131,
+      "publisher_file_id": "11tL4XIrz0oVPpqStcDMyjNTNgVceSQ5Q",
+      "source_url": "https://drive.google.com/uc?export=download&id=11tL4XIrz0oVPpqStcDMyjNTNgVceSQ5Q",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input71.txt",
+      "name": "input71.txt",
+      "kind": "input",
+      "sha256": "c0c0f45c1f95c3a37a4a52a2a537fcaebcfe56ebffb4823c4c6efdbf906f9e3d",
+      "bytes": 8889279,
+      "publisher_file_id": "1dGrjKV-SBDhqZX3F1b0_QUPyNbb6Q4Yv",
+      "source_url": "https://drive.google.com/uc?export=download&id=1dGrjKV-SBDhqZX3F1b0_QUPyNbb6Q4Yv",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input72.txt",
+      "name": "input72.txt",
+      "kind": "input",
+      "sha256": "ff8121abc7561f0334c3dace045a156698d91d3fff4a092cea37964d874c8d80",
+      "bytes": 9870120,
+      "publisher_file_id": "1dkg97IyAMMgpxp1TQX96CwC3ohKLv7eb",
+      "source_url": "https://drive.google.com/uc?export=download&id=1dkg97IyAMMgpxp1TQX96CwC3ohKLv7eb",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input73.txt",
+      "name": "input73.txt",
+      "kind": "input",
+      "sha256": "bbda5a20a597e10dc03893819a507379fd949c2abc341a916024d90f63336af3",
+      "bytes": 9886071,
+      "publisher_file_id": "1nbilUyliLMKb2auXDCo34ATO11wlEQiw",
+      "source_url": "https://drive.google.com/uc?export=download&id=1nbilUyliLMKb2auXDCo34ATO11wlEQiw",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input74.txt",
+      "name": "input74.txt",
+      "kind": "input",
+      "sha256": "156d831afe361cda97b2b06495f1951d8feae5d554d466138d273484f60eb808",
+      "bytes": 9887071,
+      "publisher_file_id": "1vy6GfsKGoqIWC3NCl9viFJ5DCdSBQv0n",
+      "source_url": "https://drive.google.com/uc?export=download&id=1vy6GfsKGoqIWC3NCl9viFJ5DCdSBQv0n",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input75.txt",
+      "name": "input75.txt",
+      "kind": "input",
+      "sha256": "9156a878c082fb8d3b3733ff172702be70c4f0cc17a95c6711ff4fd712869f89",
+      "bytes": 9886151,
+      "publisher_file_id": "1BReer-SGAilhkpHMak_UKPqRi0DNabLQ",
+      "source_url": "https://drive.google.com/uc?export=download&id=1BReer-SGAilhkpHMak_UKPqRi0DNabLQ",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input76.txt",
+      "name": "input76.txt",
+      "kind": "input",
+      "sha256": "d3431aed716d024c17194c6090301f43a3e9ad7eda18fadaf82e202a7515d739",
+      "bytes": 9887453,
+      "publisher_file_id": "12Rw3Nw6msMxX1fDxo85lROkzcOeNoTbj",
+      "source_url": "https://drive.google.com/uc?export=download&id=12Rw3Nw6msMxX1fDxo85lROkzcOeNoTbj",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input77.txt",
+      "name": "input77.txt",
+      "kind": "input",
+      "sha256": "5394944892fe16e92b7d11d58f4113ceb20175194f343c787aafb63f127d04bc",
+      "bytes": 9886614,
+      "publisher_file_id": "14L_wsw5vmgdpMWcYO6eH0an55lH3DsUe",
+      "source_url": "https://drive.google.com/uc?export=download&id=14L_wsw5vmgdpMWcYO6eH0an55lH3DsUe",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input78.txt",
+      "name": "input78.txt",
+      "kind": "input",
+      "sha256": "5a6cab9de81ba765e3ca41eea51137f60944f0cd2ece8bca3fb52ad24a48468c",
+      "bytes": 9886582,
+      "publisher_file_id": "1A8vRZvE6TM_3twLji1PNsN5lKwr1SuJI",
+      "source_url": "https://drive.google.com/uc?export=download&id=1A8vRZvE6TM_3twLji1PNsN5lKwr1SuJI",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input8.txt",
+      "name": "input8.txt",
+      "kind": "input",
+      "sha256": "e9d8fedae0a101774d9c4201875b08b835ff85df0dc26e7bbc27977574253ce4",
+      "bytes": 985,
+      "publisher_file_id": "1wyC-sxJczJshkUpyAIAST_lNRpTlJmyA",
+      "source_url": "https://drive.google.com/uc?export=download&id=1wyC-sxJczJshkUpyAIAST_lNRpTlJmyA",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/input/input9.txt",
+      "name": "input9.txt",
+      "kind": "input",
+      "sha256": "d3efe340dcfb79461ad5bc07671b1f8388c6eccdbb8cfd1b84164ac0d3eb3d0b",
+      "bytes": 983,
+      "publisher_file_id": "1ItXbSI7b71jplHDmzmH63Rau_YqeWdRo",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ItXbSI7b71jplHDmzmH63Rau_YqeWdRo",
+      "folder_url": "https://drive.google.com/drive/folders/16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=16aRC60ntZUnZc6tgnTZKSq9I25VKSmb5"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output0.txt",
+      "name": "output0.txt",
+      "kind": "output",
+      "sha256": "10159baf262b43a92d95db59dae1f72c645127301661e0a3ce4e38b295a97c58",
+      "bytes": 2,
+      "publisher_file_id": "1wuPlZTSc3JU_bugBCcVrbG5SYHubpVwW",
+      "source_url": "https://drive.google.com/uc?export=download&id=1wuPlZTSc3JU_bugBCcVrbG5SYHubpVwW",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output1.txt",
+      "name": "output1.txt",
+      "kind": "output",
+      "sha256": "a5e45837a2959db847f7e67a915d0ecaddd47f943af2af5fa6453be497faabca",
+      "bytes": 4,
+      "publisher_file_id": "1LpRqMVhUVtaNnp1iaYF8crbPM5hpYp5d",
+      "source_url": "https://drive.google.com/uc?export=download&id=1LpRqMVhUVtaNnp1iaYF8crbPM5hpYp5d",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output10.txt",
+      "name": "output10.txt",
+      "kind": "output",
+      "sha256": "e9a1d701aff5831418970437456b639f5674161e0e72b37719c4257bd88c37c1",
+      "bytes": 10,
+      "publisher_file_id": "1MUm1OcIJFUcaeCNktP8X-QTy03wuSHn9",
+      "source_url": "https://drive.google.com/uc?export=download&id=1MUm1OcIJFUcaeCNktP8X-QTy03wuSHn9",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output11.txt",
+      "name": "output11.txt",
+      "kind": "output",
+      "sha256": "06e9d52c1720fca412803e3b07c4b228ff113e303f4c7ab94665319d832bbfb7",
+      "bytes": 2,
+      "publisher_file_id": "1W7k8WQL0O1wsIMmTcENZI3LpWdqxzScZ",
+      "source_url": "https://drive.google.com/uc?export=download&id=1W7k8WQL0O1wsIMmTcENZI3LpWdqxzScZ",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output12.txt",
+      "name": "output12.txt",
+      "kind": "output",
+      "sha256": "4f039e8bde0fde8d42ea25914df1238f0e34870f6f4efbfc3e5524fc535a133a",
+      "bytes": 4,
+      "publisher_file_id": "18_tSkxCIfCR5XrLKu6Z2xllccB-dCaxG",
+      "source_url": "https://drive.google.com/uc?export=download&id=18_tSkxCIfCR5XrLKu6Z2xllccB-dCaxG",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output13.txt",
+      "name": "output13.txt",
+      "kind": "output",
+      "sha256": "02cc4ecf26edd880bbc1983feef6ab7ededd0e9406183ebb24177942d10ab6f2",
+      "bytes": 7,
+      "publisher_file_id": "1kp-0ZUcBZ5tRuYgl9uAZoes3zguYshzA",
+      "source_url": "https://drive.google.com/uc?export=download&id=1kp-0ZUcBZ5tRuYgl9uAZoes3zguYshzA",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output14.txt",
+      "name": "output14.txt",
+      "kind": "output",
+      "sha256": "085e331784697037ce30e773252dad7773703b1f378c857b8efecd149620e8e3",
+      "bytes": 10,
+      "publisher_file_id": "18-6xq7FN6dIVt-41Vm-uvqcxbZGxpWEO",
+      "source_url": "https://drive.google.com/uc?export=download&id=18-6xq7FN6dIVt-41Vm-uvqcxbZGxpWEO",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output15.txt",
+      "name": "output15.txt",
+      "kind": "output",
+      "sha256": "89af4d406b403250a44e6931ec15ebf9ed9c4503f7787f7500137b3332065994",
+      "bytes": 10,
+      "publisher_file_id": "1WeCC5kDCzsXy5ORy234OToL7ltgUQWQQ",
+      "source_url": "https://drive.google.com/uc?export=download&id=1WeCC5kDCzsXy5ORy234OToL7ltgUQWQQ",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output16.txt",
+      "name": "output16.txt",
+      "kind": "output",
+      "sha256": "8950af063ac0b6151ea8b76fd4d8e7fa37b904c5fbf4dc7d4c8a912dc1bfd444",
+      "bytes": 10,
+      "publisher_file_id": "1PvKrmbIkpAT5zlFzgXdldhEXNfWwuswR",
+      "source_url": "https://drive.google.com/uc?export=download&id=1PvKrmbIkpAT5zlFzgXdldhEXNfWwuswR",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output17.txt",
+      "name": "output17.txt",
+      "kind": "output",
+      "sha256": "7aad8bc4a7f0595243186f2d55b6491718fd49bdbc46853afea531177d268b2e",
+      "bytes": 10,
+      "publisher_file_id": "1P_zlRY7LIgnXW62tQK-yHXgOPYqNp97F",
+      "source_url": "https://drive.google.com/uc?export=download&id=1P_zlRY7LIgnXW62tQK-yHXgOPYqNp97F",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output18.txt",
+      "name": "output18.txt",
+      "kind": "output",
+      "sha256": "cfcb244380361b90d476c2b23c0542e10b303ad65343f200e3b6a0b9d1451b6d",
+      "bytes": 10,
+      "publisher_file_id": "1LdTjdW0-mnXm9Bg3hZqkzv_7sZyx65iq",
+      "source_url": "https://drive.google.com/uc?export=download&id=1LdTjdW0-mnXm9Bg3hZqkzv_7sZyx65iq",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output19.txt",
+      "name": "output19.txt",
+      "kind": "output",
+      "sha256": "3d180ee202d238be105b85a8f8875cd59b6f008f4554df0fdb2ffcae843dedac",
+      "bytes": 10,
+      "publisher_file_id": "1JHQBTV3WbLKLhlxLg-n2lZe4q00JxCPF",
+      "source_url": "https://drive.google.com/uc?export=download&id=1JHQBTV3WbLKLhlxLg-n2lZe4q00JxCPF",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output2.txt",
+      "name": "output2.txt",
+      "kind": "output",
+      "sha256": "b5532fd9d559cc3fb391d26182c20caae9ff4e80bf8f616708711fc7eff6dfcf",
+      "bytes": 10,
+      "publisher_file_id": "1FveVCqw9P1DxiXFVQ_U4wq-xOHk3aGpn",
+      "source_url": "https://drive.google.com/uc?export=download&id=1FveVCqw9P1DxiXFVQ_U4wq-xOHk3aGpn",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output20.txt",
+      "name": "output20.txt",
+      "kind": "output",
+      "sha256": "9cdeca26b66739886ec491e428379a086926e7b2e40a5de5fad5b61efa52fb7a",
+      "bytes": 10,
+      "publisher_file_id": "16TEdOmuQN_Z_Zg1mXvKT7Qc772CdSXbn",
+      "source_url": "https://drive.google.com/uc?export=download&id=16TEdOmuQN_Z_Zg1mXvKT7Qc772CdSXbn",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output21.txt",
+      "name": "output21.txt",
+      "kind": "output",
+      "sha256": "58a9db18f45ec15adb0a59adde856171fe79a937d2a34bb1c2e9c8a1cb179d21",
+      "bytes": 10,
+      "publisher_file_id": "1Y3TvsVRP-_498q-djQIGwQXGdnK-P8CZ",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Y3TvsVRP-_498q-djQIGwQXGdnK-P8CZ",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output22.txt",
+      "name": "output22.txt",
+      "kind": "output",
+      "sha256": "f2bc1370d50e52297111576e5166bb0a9c7959a27825cd49f904875ba0e6613f",
+      "bytes": 10,
+      "publisher_file_id": "1ubeWNnixN1yI8T-TrItRHEpxx5Nfxb4X",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ubeWNnixN1yI8T-TrItRHEpxx5Nfxb4X",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output23.txt",
+      "name": "output23.txt",
+      "kind": "output",
+      "sha256": "ba03793a6e6040b80ee052504cb3fd216e6b71eaef562c19d2786a5173b3232a",
+      "bytes": 10,
+      "publisher_file_id": "11hbSwDrvXms6tpG1vhDh8S-N3saEpPAP",
+      "source_url": "https://drive.google.com/uc?export=download&id=11hbSwDrvXms6tpG1vhDh8S-N3saEpPAP",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output24.txt",
+      "name": "output24.txt",
+      "kind": "output",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2,
+      "publisher_file_id": "1E8IIB9Kp56GO0Hji4te5yggwBjj5Cmlm",
+      "source_url": "https://drive.google.com/uc?export=download&id=1E8IIB9Kp56GO0Hji4te5yggwBjj5Cmlm",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output25.txt",
+      "name": "output25.txt",
+      "kind": "output",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2,
+      "publisher_file_id": "1UkBaW4OkZ-pbY2xfMPrqXS-hcqZyBnG-",
+      "source_url": "https://drive.google.com/uc?export=download&id=1UkBaW4OkZ-pbY2xfMPrqXS-hcqZyBnG-",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output26.txt",
+      "name": "output26.txt",
+      "kind": "output",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2,
+      "publisher_file_id": "1K7t2D439eXfswBc4i0tsTFXPnZ4R-8M4",
+      "source_url": "https://drive.google.com/uc?export=download&id=1K7t2D439eXfswBc4i0tsTFXPnZ4R-8M4",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output27.txt",
+      "name": "output27.txt",
+      "kind": "output",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2,
+      "publisher_file_id": "1n2q4CqYv6rhdmSdqVn1yfVOD3_AhwtIJ",
+      "source_url": "https://drive.google.com/uc?export=download&id=1n2q4CqYv6rhdmSdqVn1yfVOD3_AhwtIJ",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output28.txt",
+      "name": "output28.txt",
+      "kind": "output",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2,
+      "publisher_file_id": "1CfDcl2cRIZDMOQUJH9FXytNN2OYgc_x7",
+      "source_url": "https://drive.google.com/uc?export=download&id=1CfDcl2cRIZDMOQUJH9FXytNN2OYgc_x7",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output29.txt",
+      "name": "output29.txt",
+      "kind": "output",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2,
+      "publisher_file_id": "1ab6iG96PHqdkOQC6ZCzP7lAuJlaSgk88",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ab6iG96PHqdkOQC6ZCzP7lAuJlaSgk88",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output3.txt",
+      "name": "output3.txt",
+      "kind": "output",
+      "sha256": "053e123b15e67ada726d5b44de706e6c3797a0add5b1a66f290e83b9139f13a4",
+      "bytes": 7,
+      "publisher_file_id": "1BRXN8-Q5X0koyqPLcv_b1lMiGv6OBxJn",
+      "source_url": "https://drive.google.com/uc?export=download&id=1BRXN8-Q5X0koyqPLcv_b1lMiGv6OBxJn",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output30.txt",
+      "name": "output30.txt",
+      "kind": "output",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2,
+      "publisher_file_id": "1LRR7BI8uDAoyQIjUf-CrHMof0qQTkq-4",
+      "source_url": "https://drive.google.com/uc?export=download&id=1LRR7BI8uDAoyQIjUf-CrHMof0qQTkq-4",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output31.txt",
+      "name": "output31.txt",
+      "kind": "output",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2,
+      "publisher_file_id": "1L7OI61CR9bvJr8pDIoKVReKLnB1U-Bp6",
+      "source_url": "https://drive.google.com/uc?export=download&id=1L7OI61CR9bvJr8pDIoKVReKLnB1U-Bp6",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output32.txt",
+      "name": "output32.txt",
+      "kind": "output",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2,
+      "publisher_file_id": "1v-qQZYMEuYn-1lCJbCTD5Y9wuVDQP2iM",
+      "source_url": "https://drive.google.com/uc?export=download&id=1v-qQZYMEuYn-1lCJbCTD5Y9wuVDQP2iM",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output33.txt",
+      "name": "output33.txt",
+      "kind": "output",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2,
+      "publisher_file_id": "1zcO9RVUFbyRMyxltkgT1d64Jd6pdrMOe",
+      "source_url": "https://drive.google.com/uc?export=download&id=1zcO9RVUFbyRMyxltkgT1d64Jd6pdrMOe",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output34.txt",
+      "name": "output34.txt",
+      "kind": "output",
+      "sha256": "3d9efeb9953c928fb0b08352bba47a3304498af449c7ea135d41257d737980c2",
+      "bytes": 10,
+      "publisher_file_id": "1iaGUiAAI6crwa7YOn8O4PiBZ4G2O1tGV",
+      "source_url": "https://drive.google.com/uc?export=download&id=1iaGUiAAI6crwa7YOn8O4PiBZ4G2O1tGV",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output35.txt",
+      "name": "output35.txt",
+      "kind": "output",
+      "sha256": "e965d42f96fe437bc03eb0e274de4be9f013f7cb69ab499dbc0d66cd28bb0eb7",
+      "bytes": 10,
+      "publisher_file_id": "1sUPPqwOfhZA115r2zoaoBlZj2SczrXi2",
+      "source_url": "https://drive.google.com/uc?export=download&id=1sUPPqwOfhZA115r2zoaoBlZj2SczrXi2",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output36.txt",
+      "name": "output36.txt",
+      "kind": "output",
+      "sha256": "b3e8bc7006c361dfe766da2ee3fd1f5952dfbdc850c5bd1285ebf9fdb736d87c",
+      "bytes": 10,
+      "publisher_file_id": "1lwXV_8maz8cLLgI-HjnSS1aXmu-n6tzG",
+      "source_url": "https://drive.google.com/uc?export=download&id=1lwXV_8maz8cLLgI-HjnSS1aXmu-n6tzG",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output37.txt",
+      "name": "output37.txt",
+      "kind": "output",
+      "sha256": "68593a74ec007d962af3b7148e494e486e2b05e4effa1dc4e17ec97b0a0d31d5",
+      "bytes": 10,
+      "publisher_file_id": "1nvmhv4D_5JSUU-3PCI1Nb9jzEQuE0rYl",
+      "source_url": "https://drive.google.com/uc?export=download&id=1nvmhv4D_5JSUU-3PCI1Nb9jzEQuE0rYl",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output38.txt",
+      "name": "output38.txt",
+      "kind": "output",
+      "sha256": "732aa1198561eff69e0fa0643842f4c2a4d3ed95ff143d7162de91cd02920387",
+      "bytes": 10,
+      "publisher_file_id": "1txVfWhEJSQ1JKI_pd9_z3nm7rsuDUidw",
+      "source_url": "https://drive.google.com/uc?export=download&id=1txVfWhEJSQ1JKI_pd9_z3nm7rsuDUidw",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output39.txt",
+      "name": "output39.txt",
+      "kind": "output",
+      "sha256": "3eff926584a91c9ef5eab9ed6afa17c46e596784024c3082eae3873fb537bffc",
+      "bytes": 10,
+      "publisher_file_id": "1K75cQPH8rkZoUR-oqvJFdSeTTKDIKL92",
+      "source_url": "https://drive.google.com/uc?export=download&id=1K75cQPH8rkZoUR-oqvJFdSeTTKDIKL92",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output4.txt",
+      "name": "output4.txt",
+      "kind": "output",
+      "sha256": "bebc4e9e0da135e3b5963c95018f433104a4476c54af31df8f29e0fa2ccaba37",
+      "bytes": 10,
+      "publisher_file_id": "1NDkQiz5_a9fAzQg7fYz88Ciupr5k8njU",
+      "source_url": "https://drive.google.com/uc?export=download&id=1NDkQiz5_a9fAzQg7fYz88Ciupr5k8njU",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output40.txt",
+      "name": "output40.txt",
+      "kind": "output",
+      "sha256": "f854ca5a114086b916c86739173dd7899141e954d08dabf351bf0c216ea29e8f",
+      "bytes": 10,
+      "publisher_file_id": "1H9Ns26LWbr5lkK4-mgwwVH2Ljd6NQne3",
+      "source_url": "https://drive.google.com/uc?export=download&id=1H9Ns26LWbr5lkK4-mgwwVH2Ljd6NQne3",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output41.txt",
+      "name": "output41.txt",
+      "kind": "output",
+      "sha256": "9741b930eee900e8a7aba58fc6765720d4c91d9b17046ba3abace3a6e52dda1f",
+      "bytes": 10,
+      "publisher_file_id": "1Wh14GccekscECq9R28bS3oRgwFQRJUTB",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Wh14GccekscECq9R28bS3oRgwFQRJUTB",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output42.txt",
+      "name": "output42.txt",
+      "kind": "output",
+      "sha256": "420c7199de395734b933f0db68d3dc03a3a3692bfe2ad5f8173b53f8fa51dd93",
+      "bytes": 10,
+      "publisher_file_id": "1BXdr9MJw1sybO0s0b3ReMXzTb6BZ4SWz",
+      "source_url": "https://drive.google.com/uc?export=download&id=1BXdr9MJw1sybO0s0b3ReMXzTb6BZ4SWz",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output43.txt",
+      "name": "output43.txt",
+      "kind": "output",
+      "sha256": "708406d852e83b393eb75fdb23cc7e12af864baecbcde6ec8bef6cb82f1b8c26",
+      "bytes": 10,
+      "publisher_file_id": "1HlChxvPPuwpdJGuAEab7EqvzYVbPcVqF",
+      "source_url": "https://drive.google.com/uc?export=download&id=1HlChxvPPuwpdJGuAEab7EqvzYVbPcVqF",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output44.txt",
+      "name": "output44.txt",
+      "kind": "output",
+      "sha256": "e05a04785919845d7077160328b975e46855cc4528dc6524613d063efb6aea58",
+      "bytes": 10,
+      "publisher_file_id": "1DsBLcNoGxa3L7S6J4NmaA8KESkCk9CkM",
+      "source_url": "https://drive.google.com/uc?export=download&id=1DsBLcNoGxa3L7S6J4NmaA8KESkCk9CkM",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output45.txt",
+      "name": "output45.txt",
+      "kind": "output",
+      "sha256": "c79118875a93d7afc5176c26bc795bbf24a0b48271d2cf315ac79401b4447dfb",
+      "bytes": 10,
+      "publisher_file_id": "1ejdH2LhGuyIdoCjJjDKHM6ciRglrh-85",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ejdH2LhGuyIdoCjJjDKHM6ciRglrh-85",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output46.txt",
+      "name": "output46.txt",
+      "kind": "output",
+      "sha256": "c7ce582d7974cfa04c6a478f6967973bcd7b8b4e5f66e1967a3a61e785de29f3",
+      "bytes": 10,
+      "publisher_file_id": "1pzaq5SJTwr6kDyUiimFNVq07iZFKz17f",
+      "source_url": "https://drive.google.com/uc?export=download&id=1pzaq5SJTwr6kDyUiimFNVq07iZFKz17f",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output47.txt",
+      "name": "output47.txt",
+      "kind": "output",
+      "sha256": "cfbc36736d41613b5af25df50459b4c8b96f87bb39ab0410acb56651ee5ba859",
+      "bytes": 10,
+      "publisher_file_id": "1EcQ2T54Ve6AwlPOOuD53f9Rb-_2K1O8F",
+      "source_url": "https://drive.google.com/uc?export=download&id=1EcQ2T54Ve6AwlPOOuD53f9Rb-_2K1O8F",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output48.txt",
+      "name": "output48.txt",
+      "kind": "output",
+      "sha256": "c0e343d6484bc761753a74e25bebafd1c2010b97e14ed0d0464ed5bb1a3eab0b",
+      "bytes": 10,
+      "publisher_file_id": "1sC7wf94wDkc3oGIW1QSf6oJ5YB_MGuBz",
+      "source_url": "https://drive.google.com/uc?export=download&id=1sC7wf94wDkc3oGIW1QSf6oJ5YB_MGuBz",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output49.txt",
+      "name": "output49.txt",
+      "kind": "output",
+      "sha256": "63572c49257be773795827bf04df1d729245289a59824d471229148e7344ea3b",
+      "bytes": 10,
+      "publisher_file_id": "1IuFmB4IjQoErRRDqUtr8nUVe_m1bTVSs",
+      "source_url": "https://drive.google.com/uc?export=download&id=1IuFmB4IjQoErRRDqUtr8nUVe_m1bTVSs",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output5.txt",
+      "name": "output5.txt",
+      "kind": "output",
+      "sha256": "3a061e0545ef81c05effb3e77f827225d696be40e61f5016fde0dce7f0aa10e8",
+      "bytes": 10,
+      "publisher_file_id": "192JjXGAqSSu3zAwUK0tuKli4bB9XWGaO",
+      "source_url": "https://drive.google.com/uc?export=download&id=192JjXGAqSSu3zAwUK0tuKli4bB9XWGaO",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output50.txt",
+      "name": "output50.txt",
+      "kind": "output",
+      "sha256": "a26fa1a4b993cc04d364ff20a90175f46d0c0915c722dac6fa79eb8db9fdef29",
+      "bytes": 10,
+      "publisher_file_id": "1SK1UF1NKZ_ZxAxJrxowOYXcvoDvbr2JI",
+      "source_url": "https://drive.google.com/uc?export=download&id=1SK1UF1NKZ_ZxAxJrxowOYXcvoDvbr2JI",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output51.txt",
+      "name": "output51.txt",
+      "kind": "output",
+      "sha256": "a5c51261ebd7864dc37e3304c3f7e601a1f350e25e08d899d2070e2504bbcf57",
+      "bytes": 10,
+      "publisher_file_id": "1DPjZI-uZnF1vkgk7YrmLnh-WJWDgeKCR",
+      "source_url": "https://drive.google.com/uc?export=download&id=1DPjZI-uZnF1vkgk7YrmLnh-WJWDgeKCR",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output52.txt",
+      "name": "output52.txt",
+      "kind": "output",
+      "sha256": "6e75d64aaff34c6b84d04486a3a3eeef0daf8a33a3c82ecf5a30ed658fefb033",
+      "bytes": 10,
+      "publisher_file_id": "1Z8TFumuupXSv3GWJCEdYRgqi_JaF5L7B",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Z8TFumuupXSv3GWJCEdYRgqi_JaF5L7B",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output53.txt",
+      "name": "output53.txt",
+      "kind": "output",
+      "sha256": "13a190682efab93cef4c73ae1d42bf417a7e862547cd3903e12dd093adbbe264",
+      "bytes": 10,
+      "publisher_file_id": "1z2HJ53OgmgwpEn5KCX8QtnG-jy6QWIVq",
+      "source_url": "https://drive.google.com/uc?export=download&id=1z2HJ53OgmgwpEn5KCX8QtnG-jy6QWIVq",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output54.txt",
+      "name": "output54.txt",
+      "kind": "output",
+      "sha256": "6399292dcc56f6deee7d37dfaec4b3b12fc81d46da51040e174af18937e09033",
+      "bytes": 10,
+      "publisher_file_id": "1gZDyADUVw6pNrt0ooxNxIkBGH4nCFulg",
+      "source_url": "https://drive.google.com/uc?export=download&id=1gZDyADUVw6pNrt0ooxNxIkBGH4nCFulg",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output55.txt",
+      "name": "output55.txt",
+      "kind": "output",
+      "sha256": "d5f13ba79de0463e52ba2ee83722e5535723f49499d9e24b0134940005e65202",
+      "bytes": 10,
+      "publisher_file_id": "1fgKVquqj6G-HrUw-qKlnUye6GbSQF7UG",
+      "source_url": "https://drive.google.com/uc?export=download&id=1fgKVquqj6G-HrUw-qKlnUye6GbSQF7UG",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output56.txt",
+      "name": "output56.txt",
+      "kind": "output",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2,
+      "publisher_file_id": "1PXNBzDSWxGI_nY0HBdyfLyM-dQ7mSLfs",
+      "source_url": "https://drive.google.com/uc?export=download&id=1PXNBzDSWxGI_nY0HBdyfLyM-dQ7mSLfs",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output57.txt",
+      "name": "output57.txt",
+      "kind": "output",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2,
+      "publisher_file_id": "1j-rJ5qDePt6mN26coEF6_OVQw54KU2WW",
+      "source_url": "https://drive.google.com/uc?export=download&id=1j-rJ5qDePt6mN26coEF6_OVQw54KU2WW",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output58.txt",
+      "name": "output58.txt",
+      "kind": "output",
+      "sha256": "6eb3ed6c013c89a7b61476d11a24e6c61f60fb70c4f32e93f4f88dc40cd4c0df",
+      "bytes": 10,
+      "publisher_file_id": "1MQjzp356Y896f2n6Gdk-LuGQHR1TaNJB",
+      "source_url": "https://drive.google.com/uc?export=download&id=1MQjzp356Y896f2n6Gdk-LuGQHR1TaNJB",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output59.txt",
+      "name": "output59.txt",
+      "kind": "output",
+      "sha256": "44705c53120fd7259bc561bfc5a112032b291a6267d1c6934e7dd1f622ea9b95",
+      "bytes": 10,
+      "publisher_file_id": "1t2NWcO-Q46bg5MrOfjAs4NZQIW3abw3o",
+      "source_url": "https://drive.google.com/uc?export=download&id=1t2NWcO-Q46bg5MrOfjAs4NZQIW3abw3o",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output6.txt",
+      "name": "output6.txt",
+      "kind": "output",
+      "sha256": "0d0cf01675df486bc06394705329613d9e741f176af0824edfaa3d2e8a611041",
+      "bytes": 10,
+      "publisher_file_id": "1aScmkvISzD9SEIAWvhxzjEko9aJZD64q",
+      "source_url": "https://drive.google.com/uc?export=download&id=1aScmkvISzD9SEIAWvhxzjEko9aJZD64q",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output60.txt",
+      "name": "output60.txt",
+      "kind": "output",
+      "sha256": "4fa506853066a6182686b518efeadfc9b2c72155fde420a157d60be65fee9dc6",
+      "bytes": 10,
+      "publisher_file_id": "1hoLQVXBtUgWSds5vRF3aSQoxS5PFvsJo",
+      "source_url": "https://drive.google.com/uc?export=download&id=1hoLQVXBtUgWSds5vRF3aSQoxS5PFvsJo",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output61.txt",
+      "name": "output61.txt",
+      "kind": "output",
+      "sha256": "aa6944fca417589ed227ef915d5981ec4a287664c1a576bbf61a94b3d3fd9650",
+      "bytes": 10,
+      "publisher_file_id": "1jz8OBLLYT284xQb_rWAR_gz3wShKKeLF",
+      "source_url": "https://drive.google.com/uc?export=download&id=1jz8OBLLYT284xQb_rWAR_gz3wShKKeLF",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output62.txt",
+      "name": "output62.txt",
+      "kind": "output",
+      "sha256": "a3aa149b648e531ec24454f080cb5107480a0245eb6bbe498a5828d301cff8ec",
+      "bytes": 10,
+      "publisher_file_id": "1r5unUWTbh6bs4xtPhSlffAL4G1N1dXI_",
+      "source_url": "https://drive.google.com/uc?export=download&id=1r5unUWTbh6bs4xtPhSlffAL4G1N1dXI_",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output63.txt",
+      "name": "output63.txt",
+      "kind": "output",
+      "sha256": "998f7839ed9c2783656878e48f8c2b1f0a4aa41b342ad61e0e472ce29a3020bb",
+      "bytes": 10,
+      "publisher_file_id": "1NHKmvCPTnzmLAQi1Jm-GVnIXRkFlITDh",
+      "source_url": "https://drive.google.com/uc?export=download&id=1NHKmvCPTnzmLAQi1Jm-GVnIXRkFlITDh",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output64.txt",
+      "name": "output64.txt",
+      "kind": "output",
+      "sha256": "9eadd9fbdaaecf296f3c9aa27745a52f4fe1ab4a451fde91595272ff08e46d30",
+      "bytes": 10,
+      "publisher_file_id": "1-IR__fpcAJKyoHfogtdr30t9K40ufG29",
+      "source_url": "https://drive.google.com/uc?export=download&id=1-IR__fpcAJKyoHfogtdr30t9K40ufG29",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output65.txt",
+      "name": "output65.txt",
+      "kind": "output",
+      "sha256": "6fdb89b13f2204dbfbb80fec01a81cae908898768015b1ea73cdb06a9a73b4df",
+      "bytes": 10,
+      "publisher_file_id": "1oSsJ-zbwqQsl0YsJ_-nEQ552_o9_88C5",
+      "source_url": "https://drive.google.com/uc?export=download&id=1oSsJ-zbwqQsl0YsJ_-nEQ552_o9_88C5",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output66.txt",
+      "name": "output66.txt",
+      "kind": "output",
+      "sha256": "866090900578678f4bfbab4a00b2091e88f27d9e9dfd538a6e7dc82af05c3753",
+      "bytes": 10,
+      "publisher_file_id": "1CCMufXHnebBoHkn-Venlrkt4COpt4MDe",
+      "source_url": "https://drive.google.com/uc?export=download&id=1CCMufXHnebBoHkn-Venlrkt4COpt4MDe",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output67.txt",
+      "name": "output67.txt",
+      "kind": "output",
+      "sha256": "13bba7f3197b0649970f1fb70d6df20d366807d13ec9c7494df8b0a0eafbf38e",
+      "bytes": 10,
+      "publisher_file_id": "1ygN02jN9kDJz2p7OnzagA-FbvNSTlAwd",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ygN02jN9kDJz2p7OnzagA-FbvNSTlAwd",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output68.txt",
+      "name": "output68.txt",
+      "kind": "output",
+      "sha256": "a710cb6b686066bfefa1d4d105d17f7f00f4a0a42d2d54d4877e0f43b969289a",
+      "bytes": 10,
+      "publisher_file_id": "1_cxvAl30NnlTG3s9iFv9rAYAuF8EhAOy",
+      "source_url": "https://drive.google.com/uc?export=download&id=1_cxvAl30NnlTG3s9iFv9rAYAuF8EhAOy",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output69.txt",
+      "name": "output69.txt",
+      "kind": "output",
+      "sha256": "84721d5e9ab6a476511ea7aeff58bf0c7eaa7af901539e27d37cd76df834fea3",
+      "bytes": 10,
+      "publisher_file_id": "1ZxSizm03Vwfg8od7rKfm4hwwhuQIuvfe",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ZxSizm03Vwfg8od7rKfm4hwwhuQIuvfe",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output7.txt",
+      "name": "output7.txt",
+      "kind": "output",
+      "sha256": "f1aca6f974237101f9218438c624085f95f8d3eebe9ff64ce5d36336a4bb5ad8",
+      "bytes": 4,
+      "publisher_file_id": "1xF9xvQ2GiByEkRCsbNKKmjvbG5WCprw_",
+      "source_url": "https://drive.google.com/uc?export=download&id=1xF9xvQ2GiByEkRCsbNKKmjvbG5WCprw_",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output70.txt",
+      "name": "output70.txt",
+      "kind": "output",
+      "sha256": "786437c25c12d5aec960eb1a18c591cf5da5209ee93cb419f11c5a76d565ad07",
+      "bytes": 10,
+      "publisher_file_id": "1gh49oSvyzwWbOcqekiClbYAADIVPxINA",
+      "source_url": "https://drive.google.com/uc?export=download&id=1gh49oSvyzwWbOcqekiClbYAADIVPxINA",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output71.txt",
+      "name": "output71.txt",
+      "kind": "output",
+      "sha256": "4d94c9f41814cddf80c6020a2ef5a9a172b7a875b45d081141831d5b8f778d22",
+      "bytes": 9,
+      "publisher_file_id": "10_b30BnwiheeAfVKNfM_DAGxRp5iILVa",
+      "source_url": "https://drive.google.com/uc?export=download&id=10_b30BnwiheeAfVKNfM_DAGxRp5iILVa",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output72.txt",
+      "name": "output72.txt",
+      "kind": "output",
+      "sha256": "199402157ea42d9d403d7a68909b009a03e9cc242fbe27297a373ba58eb00d6c",
+      "bytes": 10,
+      "publisher_file_id": "1gJQyEhy8dinp_D_J87tzPScdZKY20JYK",
+      "source_url": "https://drive.google.com/uc?export=download&id=1gJQyEhy8dinp_D_J87tzPScdZKY20JYK",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output73.txt",
+      "name": "output73.txt",
+      "kind": "output",
+      "sha256": "ecd2a6d5a404dc50fe4b6bcb778822e940b40517391a6fc231dd58dd734fd17b",
+      "bytes": 10,
+      "publisher_file_id": "1C3b7IeEx2j9ABSoJAZnq9zfs7nRa_n5v",
+      "source_url": "https://drive.google.com/uc?export=download&id=1C3b7IeEx2j9ABSoJAZnq9zfs7nRa_n5v",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output74.txt",
+      "name": "output74.txt",
+      "kind": "output",
+      "sha256": "8e6c464dd1f0a59332c4b6842ba76cd75c961f797121f91b6b34e01f47612bba",
+      "bytes": 10,
+      "publisher_file_id": "1K0nI2onTMcs3eExezo59Q5xjQNc693NO",
+      "source_url": "https://drive.google.com/uc?export=download&id=1K0nI2onTMcs3eExezo59Q5xjQNc693NO",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output75.txt",
+      "name": "output75.txt",
+      "kind": "output",
+      "sha256": "2257a354f2109a2e978138fd33014d74b35108a187aa1b7346acacd1b41c2050",
+      "bytes": 10,
+      "publisher_file_id": "1AEK8r08isapzgunGkjQ1h1K691IfTqzb",
+      "source_url": "https://drive.google.com/uc?export=download&id=1AEK8r08isapzgunGkjQ1h1K691IfTqzb",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output76.txt",
+      "name": "output76.txt",
+      "kind": "output",
+      "sha256": "0a29b97fd4567b8d2f537ea925310851fd9233fa6ed8443ce0fa0d67663fa72f",
+      "bytes": 10,
+      "publisher_file_id": "1qbAo04nSbIHfq28YX8gX_ugdJzTptvxF",
+      "source_url": "https://drive.google.com/uc?export=download&id=1qbAo04nSbIHfq28YX8gX_ugdJzTptvxF",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output77.txt",
+      "name": "output77.txt",
+      "kind": "output",
+      "sha256": "cd136e485f5cd7506a4243f63dbf42c4a0194c059d52781ab54391060545a9e3",
+      "bytes": 10,
+      "publisher_file_id": "1Rxqisk8AMK3p2NduogceMm97kyr2wHEM",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Rxqisk8AMK3p2NduogceMm97kyr2wHEM",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output78.txt",
+      "name": "output78.txt",
+      "kind": "output",
+      "sha256": "ef212f6a70b8a9495f4c9d0c4c84ba762f7bf041b7a262d16b4bfdb319277320",
+      "bytes": 10,
+      "publisher_file_id": "13WIsXgZAairwujdpI1o--_VtHYiX10Ux",
+      "source_url": "https://drive.google.com/uc?export=download&id=13WIsXgZAairwujdpI1o--_VtHYiX10Ux",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output8.txt",
+      "name": "output8.txt",
+      "kind": "output",
+      "sha256": "a1078a8d48648d163009c7e78cde5443a6cab3198601392753623bf9acdf4176",
+      "bytes": 10,
+      "publisher_file_id": "1vkCL6WKnPa4dnVR-Q871LES-lpXylpnx",
+      "source_url": "https://drive.google.com/uc?export=download&id=1vkCL6WKnPa4dnVR-Q871LES-lpXylpnx",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    },
+    {
+      "path": "data/raw/iiot/2023/matgame/tests/output/output9.txt",
+      "name": "output9.txt",
+      "kind": "output",
+      "sha256": "61e64ef9171c7e077019a0a02101476ae10b8571a17763b689f2abd073cea5b0",
+      "bytes": 10,
+      "publisher_file_id": "1o3-Qou90Ya97bGBLiaaEpiRQnOSJYty1",
+      "source_url": "https://drive.google.com/uc?export=download&id=1o3-Qou90Ya97bGBLiaaEpiRQnOSJYty1",
+      "folder_url": "https://drive.google.com/drive/folders/1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1auhThS3LWTx8MZq8UcOQcX_lJ5lq744w"
+    }
+  ],
+  "test_pairs": [
+    {
+      "id": "0",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input0.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output0.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "1",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input1.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output1.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "2",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input2.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output2.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "3",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input3.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output3.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "4",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input4.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output4.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "5",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input5.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output5.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "6",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input6.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output6.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "7",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input7.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output7.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "8",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input8.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output8.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "9",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input9.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output9.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "10",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input10.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output10.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "11",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input11.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output11.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "12",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input12.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output12.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "13",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input13.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output13.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "14",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input14.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output14.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "15",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input15.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output15.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "16",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input16.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output16.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "17",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input17.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output17.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "18",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input18.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output18.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "19",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input19.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output19.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "20",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input20.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output20.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "21",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input21.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output21.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "22",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input22.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output22.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "23",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input23.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output23.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "24",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input24.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output24.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "25",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input25.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output25.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "26",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input26.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output26.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "27",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input27.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output27.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "28",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input28.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output28.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "29",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input29.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output29.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "30",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input30.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output30.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "31",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input31.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output31.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "32",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input32.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output32.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "33",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input33.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output33.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "34",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input34.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output34.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "35",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input35.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output35.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "36",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input36.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output36.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "37",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input37.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output37.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "38",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input38.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output38.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "39",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input39.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output39.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "40",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input40.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output40.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "41",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input41.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output41.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "42",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input42.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output42.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "43",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input43.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output43.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "44",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input44.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output44.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "45",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input45.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output45.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "46",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input46.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output46.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "47",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input47.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output47.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "48",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input48.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output48.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "49",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input49.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output49.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "50",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input50.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output50.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "51",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input51.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output51.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "52",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input52.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output52.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "53",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input53.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output53.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "54",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input54.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output54.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "55",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input55.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output55.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "56",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input56.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output56.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "57",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input57.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output57.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "58",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input58.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output58.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "59",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input59.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output59.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "60",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input60.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output60.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "61",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input61.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output61.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "62",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input62.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output62.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "63",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input63.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output63.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "64",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input64.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output64.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "65",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input65.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output65.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "66",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input66.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output66.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "67",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input67.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output67.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "68",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input68.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output68.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "69",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input69.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output69.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "70",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input70.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output70.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "71",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input71.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output71.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "72",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input72.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output72.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "73",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input73.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output73.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "74",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input74.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output74.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "75",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input75.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output75.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "76",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input76.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output76.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "77",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input77.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output77.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "78",
+      "input": "data/raw/iiot/2023/matgame/tests/input/input78.txt",
+      "output": "data/raw/iiot/2023/matgame/tests/output/output78.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    }
+  ],
+  "input_aliases": [],
+  "unresolved_alias_files": [],
+  "official_test_pair_count": 79,
+  "listing_scope": "All files visible in the publisher-linked public embedded folder views at discovery time; no claim about unpublished/private files.",
+  "discovered_at_utc": "2026-09-13T19:21:25.479459+00:00",
+  "ordinary_view_truncation_avoided": true,
+  "test_subtask_mapping": null,
+  "checker_configuration": null,
+  "execution_limits": null,
+  "programs_executed": false
+}

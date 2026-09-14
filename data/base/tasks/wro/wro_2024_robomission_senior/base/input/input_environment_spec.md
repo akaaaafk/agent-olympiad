@@ -1,14 +1,74 @@
-# Input Environment and Settings
+# Environment
 
-## System
-- Competition id: `wro`
-- Problem id: `wro_2024_robomission_senior`
-- Task type: `robotics_mission`
-- Eval unit: `session`
-- Status: `collected`
+## Roster
 
-## Runtime
-- Status: `base_only`
-- Image: `cyberbotics/webots:R2025a-ubuntu22.04`
+```json
+{
+  "active_min": 2,
+  "active_default": 3,
+  "active_max": 3,
+  "collaboration": "The two or three student members design, build, and program the robot; a coach may guide learning but may not build or program it for the team.",
+  "range_basis": "source_record",
+  "official_roster_note": "A 2026 RoboMission team consists of two or three students and is guided by a coach."
+}
+```
 
-Webots is a valid robotics simulator base and is used in WRO Future Engineers preparation, but this repository does not yet contain edition-specific WRO worlds, robots, randomization, or score controllers. The base image alone is not a runnable WRO benchmark.
+## Allowed tools
+
+```json
+[
+  "query_rules",
+  "inspect_environment"
+]
+```
+
+## Resources
+
+```json
+{
+  "internet": "forbidden",
+  "calculator": "forbidden",
+  "code_execution": "forbidden",
+  "paper_pencil": "allowed",
+  "provided_materials_only": true
+}
+```
+
+## Official execution facts
+
+```json
+{
+  "official_minutes": null,
+  "required_selectors": [
+    "season",
+    "category",
+    "age_group",
+    "jurisdiction",
+    "game_document",
+    "q_and_a_snapshot"
+  ],
+  "rules_edition": "2026_robomission_general",
+  "robot_attempt_seconds": 120
+}
+```
+
+## Deliverable
+
+```json
+{
+  "answer_format": "Submit the program and a structured design/run analysis; label simulated or hypothetical behavior and do not report an unobserved physical score.",
+  "shared": true,
+  "mime_types": [
+    "text/plain"
+  ],
+  "task_types": [
+    "robotics_mission",
+    "robotics_project"
+  ],
+  "official_deliverable": "inspected_robot_program_and_scored_field_attempt",
+  "official_mime_types": [
+    "application/x-physical-robot-attempt"
+  ]
+}
+```
+

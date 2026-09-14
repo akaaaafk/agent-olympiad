@@ -1,5 +1,3 @@
-# RoboMission Junior 2026
-
 RoboMission Junior Game Rules Season 2026  
 Heritage Heroes  Official Game Rules for the WRO International Final. Version: January 15th 2026 (Note: Rules for local WRO events may vary!)     
 WRO International Premium Partners 

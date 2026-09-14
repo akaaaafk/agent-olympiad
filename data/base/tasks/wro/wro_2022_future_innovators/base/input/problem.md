@@ -1,5 +1,3 @@
-# Future Innovators Mission 2022
-
 MY ROBOT MY FRIEND 
 AGE GROUPS ELEMENTARY , JUNIOR AND SENIOR
 Future Innovators

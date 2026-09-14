@@ -1,5 +1,3 @@
-# Spin Doctor
-
 Hide 
  Spin Doctor 
 

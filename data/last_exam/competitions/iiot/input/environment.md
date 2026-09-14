@@ -1,4 +1,4 @@
-# Environment — `iiot`
+# Environment
 
 ## Roster
 
@@ -16,8 +16,12 @@
 
 ## Allowed tools
 
-- query_rules
-- execute_code
+```json
+[
+  "query_rules",
+  "execute_code"
+]
+```
 
 ## Resources
 
@@ -90,3 +94,4 @@
   ]
 }
 ```
+

@@ -1,5 +1,3 @@
-# Factors
-
 Hide 
  Factors 
 

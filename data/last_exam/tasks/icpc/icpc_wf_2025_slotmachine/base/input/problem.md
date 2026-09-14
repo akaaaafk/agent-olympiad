@@ -1,5 +1,3 @@
-# Slot Machine
-
 Hide 
  Slot Machine 
 

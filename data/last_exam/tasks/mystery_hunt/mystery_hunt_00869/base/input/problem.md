@@ -1,3 +1,5 @@
-# 2007/puzzles/atlas_shrugged
+# V-7: Atlas Shrugged
 
-V-7: Atlas Shrugged Lesson V-7: Travelogues What happens in Vegas stays in Vegas. That'd be why your book is missing twelve chapters. Atlas Shrugged 1 2 3 57&deg;55'27"N, 152&deg;30'39"W 4 Sister city of San Jose and Guangzhou 5 6 7 Home of Sidewinders and Wildcats 8 9 Original capital of the Uzbek SSR 10 11 Capital of Karakalpakstan 12 13 14 Site of the treaty that ended the War of 1812 15 16 Burial place of Ernest Shackleton 17 18 19 20 Capital on Guadalcanal 21 22 23 24 25 Northernmost host city of the World Puzzle Championship 26 27 28 Most recent host of the Asian Games 29 Capital of a Honshu prefecture with the same name as a popular breed of dog 30 31 Birthplace of the recently-deceased Ace of Spades in the "Personality Identification Playing Cards" deck
+Open `puzzle.html` for the original styled puzzle, figures and marked positions. No text-only preview replaces the visual layout.
+
+Archive limitation: The original 2007 clues, visual marks and wording are preserved. Historical facts are not modernized; image/layout-aware interpretation and end-to-end evaluation remain uncertified.

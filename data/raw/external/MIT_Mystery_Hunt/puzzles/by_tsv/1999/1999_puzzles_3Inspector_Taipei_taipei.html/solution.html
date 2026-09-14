@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Taipei: Solution</title>
+</head>
+<body>
+<h1>Taipei: Solution</h1>
+
+<p>First, consider each card's numerical value--suited cards have their face value with aces as 1 and the knight as 12 (as tarot cards run "...ten, page, knight, queen, king"); major arcana are numbered on the cards (e.g. the Wheel of Fortune is 10, the Hermit is 9).  We have (the rows being column number, top row card value, bottom row card value).</p>
+<PRE>
+1	2	3	4	5	6	7	8	9	10	11	12	13
+9	1	7	3	8	4	2	7	9	8	5	1	4
+10	4	9	7	5	1	12	6	11	13	2	8	3
+</PRE>
+<p>Notice that the bottom row contains the numbers 1 through 13, though not in order.  Match each card in the bottom row to the nth card in the top row, where n is the number of the bottom-row card.  So the Wheel of Fortune, with value 10, is matched to the 10th card in the top row, the 8 of swords.  This gives:</p>
+<PRE>
+8	wheel of fortune 
+3	four of cups
+9	the hermit 
+2	the chariot 
+8	five of wands
+9	ace of swords
+1	knight of swords
+4	the lovers 
+5	force 
+4	death 
+1	two of cups
+7	justice 
+7	the empress 
+</PRE>
+<p>Taking the nth letter of the card names in the bottom row, where n is the number of the associated card in the top row, gives FUTHARK LETTER.  A futhark letter is a <strong>RUNE</strong>, which is the answer.</p>
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,30 @@
+{
+  "session_id": "mystery_hunt_2012",
+  "competition_id": "mystery_hunt",
+  "problem_ids": [
+    "mystery_hunt_01543",
+    "mystery_hunt_01546",
+    "mystery_hunt_01558",
+    "mystery_hunt_01566",
+    "mystery_hunt_01582",
+    "mystery_hunt_01585",
+    "mystery_hunt_01591",
+    "mystery_hunt_01597",
+    "mystery_hunt_01603",
+    "mystery_hunt_01610",
+    "mystery_hunt_01616",
+    "mystery_hunt_01618",
+    "mystery_hunt_01640",
+    "mystery_hunt_01642",
+    "mystery_hunt_01645",
+    "mystery_hunt_01647",
+    "mystery_hunt_01651",
+    "mystery_hunt_01659",
+    "mystery_hunt_01666",
+    "mystery_hunt_01667"
+  ],
+  "description": "OTC contest-session manifest for mystery_hunt_2012 (20 tasks)",
+  "split_parts": false,
+  "task_family": "puzzle",
+  "competition_description": "MIT Mystery Hunt-style puzzles: infer the puzzle mechanism and extract a final answer word or phrase."
+}

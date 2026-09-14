@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "visibility": "maintainer_only",
+  "timestamp_utc": "20260913T000843Z",
+  "restoration_policy": "Original records retained verbatim; any reinstatement requires new edition evidence.",
+  "records": [
+    {
+      "competition_id": "ijso_practical",
+      "problem_id": "ijso_practical_2020_team_practical_2020",
+      "year": 2020,
+      "reason": "The 2020 International Junior Science Olympiad in Frankfurt was cancelled. This row has no problem text, source file, assets or answer and is a nonexistent-edition placeholder, not a recoverable missing packet.",
+      "evidence_url": "https://jsoc.ca/2021/01/31/ijso-2021/",
+      "evidence_file": "data/raw/source_verification/20260912/ijso_2020_cancelled.html",
+      "evidence_sha256": "5841f2f5b6c8ebb7125b07aac48cfc1b35bd2c2bf8e97424504687cdd7da13df",
+      "evidence_excerpt": "IJSO 2020, planned for December 2020 in Frankfurt, Germany, was cancelled because of the pandemic.",
+      "disposition": "Remove this single record from the active catalog; preserve its complete original record and historical backups.",
+      "original_record": {
+        "problem_id": "ijso_practical_2020_team_practical_2020",
+        "competition": "IJSO Practical",
+        "year": 2020,
+        "topic": "Team Practical 2020",
+        "task_type": "team_practical",
+        "team_size": 3,
+        "source_url": "https://ijsoweb.org/",
+        "source_file": null,
+        "total_points": null,
+        "problem_description": "",
+        "gold_label": {
+          "expected_answer": null,
+          "grading_rubric": null,
+          "human_baseline": null
+        },
+        "status": "placeholder",
+        "competition_id": "ijso_practical",
+        "evaluation": {
+          "evaluator_id": null,
+          "status": "not_ready",
+          "rubric_path": "data/rubrics/ijso_practical_report_40_v1.json",
+          "deliverable": "written_report",
+          "judge_assets": [],
+          "limitations": "The archived year lacks a complete contestant packet, task-specific marking material, or both.",
+          "pre_reuse_evaluation": {
+            "evaluator_id": null,
+            "status": "not_ready",
+            "rubric_path": "data/rubrics/ijso_practical_report_40_v1.json",
+            "deliverable": "written_report",
+            "judge_assets": [],
+            "limitations": "The archived year lacks a complete contestant packet, task-specific marking material, or both."
+          },
+          "rubric_reuse": {
+            "source_competition": "ijso_practical",
+            "target_competition": "ijso_practical",
+            "target_year": 2020,
+            "source_rubric_paths": [
+              "data/rubrics/ijso_practical_report_40_v1.json"
+            ],
+            "source_editions": [
+              "existing same-competition rubric; edition unspecified"
+            ],
+            "official_year_equivalence": false,
+            "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+          },
+          "scorecard_path": "data/rubrics/task_scorecards/ijso_practical.json",
+          "scorecard_key": "ijso_practical_2020_team_practical_2020"
+        },
+        "eval_unit": "session",
+        "is_multi_agent": true,
+        "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+        "assets": [],
+        "split": "unspecified",
+        "license": {
+          "status": "not_verified",
+          "spdx_id": null,
+          "redistribution_allowed": null,
+          "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+        },
+        "provenance": {
+          "status": "source_linked",
+          "source_url": "https://ijsoweb.org/",
+          "source_file": null,
+          "solution_file": null,
+          "files": [],
+          "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+        },
+        "restoration_review": {
+          "status": "restored_for_user_review",
+          "date": "2026-09-11",
+          "original_exclusion_reason": "No team practical question packet found in raw for this edition.",
+          "archive": "data/excluded/formal_packet_review_20260911/manifest.json"
+        }
+      }
+    }
+  ]
+}

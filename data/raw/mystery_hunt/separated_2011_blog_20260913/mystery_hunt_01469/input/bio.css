@@ -1,0 +1,22 @@
+body,html {
+  background: #ffffff;
+  background-image: url(biomanbackground.jpg);
+  background-position: left top;
+  background-repeat: repeat-x;
+  color:#000000;
+}
+
+a {
+  color:#000000;
+  }
+
+#centralcolumn {
+  background:url(bioman.jpg) no-repeat top center;
+}
+
+#maincontent {
+  position: absolute;
+  margin-top: 215px;
+  margin-left: 580px;
+  width: 220px;
+}

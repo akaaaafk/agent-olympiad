@@ -1,12 +1,9 @@
-# HMMT November 2011 — Guts Round
-
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
-
-[Page 1]
 4th Annual Harvard-MIT November Tournament
                             Saturday 12 November 2011
 
                            Guts Round
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
       4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011 — GUTS ROUND
@@ -22,6 +19,8 @@
    G is the point of intersection of DF and BC, ﬁnd BG.
 
    3. [5] Let x be a real number such that 2x = 3. Determine the value of 43x+2.
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
       4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011 — GUTS ROUND
@@ -43,6 +42,8 @@
     Chim Tu changes his outﬁt every three days, and otherwise never wears the same outﬁt twice, how
     many days of winter can Chim Tu survive? (Needless to say, he only has four t-shirts.)
 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
 
       4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011 — GUTS ROUND
 
@@ -59,8 +60,12 @@
   W be a point other than X in the plane such that triangle WY Z is also equilateral. Determine the
      area of the region inside triangle WY Z that lies outside circle Ω.
 
-[Page 2]
-4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+      4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011 — GUTS ROUND
 
 
                                  Round 4
@@ -79,6 +84,8 @@
  12. [8] Joe has written 5 questions of diﬀerent diﬃculties for a test with problems numbered 1 though 5.
     He wants to make sure that problem i is harder than problem j whenever i−j ≥3. In how many ways
      can he order the problems for his test?
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
       4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011 — GUTS ROUND
@@ -100,6 +107,8 @@
  15. [8] For positive integers n, let L(n) be the largest factor of n other than n itself. Determine the number
       of ordered pairs of composite positive integers (m, n) for which L(m)L(n) = 80.
 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
 
       4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011 — GUTS ROUND
 
@@ -119,8 +128,12 @@
      are edges of the cube. Let P be the center of face EFGH, and let O be the center of the cube. Given
      that AG = 1, determine the area of triangle AOP.
 
-[Page 3]
-4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+      4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011 — GUTS ROUND
 
 
                                  Round 7
@@ -141,6 +154,8 @@
      the quotient Q(x2)/P(x), leaving your answer in terms of x. (You may assume that x is not equal to
     any of r1, r2, r3, r4).
 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
 
       4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011 — GUTS ROUND
 
@@ -159,8 +174,12 @@
     new integer N. For example, if the integers written, in order, are 25, 6, and 12, then N = 25612 (and
      not N = 250612). Determine the number of possible values of N.
 
-[Page 4]
-4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+      4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011 — GUTS ROUND
 
 
                                  Round 9
@@ -190,6 +209,8 @@
 
     What is the expected value of the number of zeroes in her string?
 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
 
       4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011 — GUTS ROUND
 
@@ -209,8 +230,12 @@
  30. [14] Let S be a set of consecutive positive integers such that for any integer n in S, the sum of the
       digits of n is not a multiple of 11. Determine the largest possible number of elements of S.
 
-[Page 5]
-4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+      4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011 — GUTS ROUND
 
 
                                  Round 11
@@ -219,6 +244,9 @@
  31. [17] Each square in a 3 × 10 grid is colored black or white. Let N be the number of ways this can be
     done in such a way that no ﬁve squares in an ‘X’ conﬁguration (as shown by the black squares below)                      √
      are all white or all black. Determine  N.
+
+
+
 
 
  32. [17] Find all real numbers x satisfying
@@ -230,8 +258,12 @@
      to the circumcircle of ABC at A which is also tangent to segment BC. Γ intersects AB and AC at
      points D and E, respectively. Determine the length of segment DE.
 
-[Page 6]
-4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+      4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011 — GUTS ROUND
 
 
                                  Round 12
@@ -288,3 +320,160 @@
      O). Quicksort algorithm invented by Hoare
 
      Write your answer as a list of letters, without any commas or parentheses.
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+                     4th Annual Harvard-MIT November Tournament
+                                          Saturday 12 November 2011
+
+                                      Guts Round
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+           4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011— GUTS ROUND
+
+        School                         Team                         Team ID#
+
+                      1. [5]
+
+                      2. [5]
+
+                      3. [5]
+
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+             4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011— GUTS ROUND
+
+           School                         Team                         Team ID#
+
+                      4. [6]
+
+                      5. [6]
+
+                      6. [6]
+
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+             4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011— GUTS ROUND
+
+           School                         Team                         Team ID#
+
+                      7. [7]
+
+                      8. [7]
+
+                      9. [7]
+
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+             4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011— GUTS ROUND
+
+           School                         Team                         Team ID#
+
+                   10. [8]
+
+                   11. [8]
+
+                   12. [8]
+
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+             4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011— GUTS ROUND
+
+           School                         Team                         Team ID#
+
+                   13. [8]
+
+                   14. [8]
+
+                   15. [8]
+
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+         4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011— GUTS ROUND
+
+      School                         Team                         Team ID#
+
+             16. [10]
+
+             17. [10]
+
+             18. [10]
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+         4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011— GUTS ROUND
+
+      School                         Team                         Team ID#
+
+             19. [10]
+
+             20. [10]
+
+             21. [10]
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+         4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011— GUTS ROUND
+
+      School                         Team                         Team ID#
+
+             22. [12]
+
+             23. [12]
+
+             24. [12]
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+         4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011— GUTS ROUND
+
+      School                         Team                         Team ID#
+
+             25. [12]
+
+             26. [12]
+
+             27. [12]
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+         4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011— GUTS ROUND
+
+      School                         Team                         Team ID#
+
+             28. [14]
+
+             29. [14]
+
+             30. [14]
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+             4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011— GUTS ROUND
+
+           School                         Team                         Team ID#
+
+                   31. [17]
+
+                   32. [17]
+
+                   33. [17]
+
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+             4TH ANNUAL HARVARD-MIT NOVEMBER TOURNAMENT, 12 NOVEMBER 2011— GUTS ROUND
+
+           School                         Team                         Team ID#
+
+                   34. [20]
+
+                   35. [20]
+
+                   36. [20]
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .

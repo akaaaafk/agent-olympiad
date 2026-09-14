@@ -1,5 +1,3 @@
-# wsc_writing_gq_036
-
 Products can have rough drafts too. To see how well they work and what people think of them, companies often create early samples—or prototypes—of potential products. Here are some examples of prototypes that turned into popular gadgets and gizmos (aplenty); sometimes, as in the case of the iPhone , they may look nothing like the product that ultimately made it to market. Learn more about the prototyping cycle by researching the the terms below, then discuss with your team: are there other things in life that would benefit from prototyping? Is there any difference between a prototype and a draft? 
 
  sketches | storyboarding | paper prototypes | low vs. high fidelity 

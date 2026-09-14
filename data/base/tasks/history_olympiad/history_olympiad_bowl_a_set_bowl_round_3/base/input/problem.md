@@ -1,5 +1,3 @@
-# A-Set-Bowl-Round-3
-
 [Q1] A rebellion against this man occurred because Emma's marriage to Ralph deGaëlwas not sanctioned. That revolt against this man isknownastheRevolt of theEarls. ThismanorderedallegianceintheSalisburyOath, andatthesouthernendoftheLondonBridge,this man fought Ansgar [[ON-sgar]] the Staller and burnedSouthwark[[SUH-therk]]. Thismanbuilt theWhiteTower, createdtheNewForestforroyalhunting, andcommissionedtheDomesday [[DOOMS-day]] Bookfor listinglandholdings. For tenpoints, namethisNormanKing who won at Hastings.
 
 [Q2] In2010, variousartistsproclaimed"[Dothisaction]Day”afterEpisode201ofSouthPark was censored on Comedy Central. In2015, EltonSimpson, alongwithanaccomplice,attacked the Curtis Culwell Center, because the American FreedomDefense Initiative, orAFDI, didthis. TheAFDI hadheldtheevent becauseearlier that year, militantsslaughteredartistsat CharlieHebdowhohaddone, for tenpoints, whatharamactionrelatingtothelastprophet of Islam?

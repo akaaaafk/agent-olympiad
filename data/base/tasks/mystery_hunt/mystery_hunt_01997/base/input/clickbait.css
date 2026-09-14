@@ -1,0 +1,58 @@
+/* line 2, ../../sass/clickbait.scss */
+.list {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "ProximaNovaSemibold",Helvetica,Arial,sans-serif;
+  padding-bottom: 100px;
+  padding-top: 200px;
+  padding-left: 75px;
+}
+
+/* line 12, ../../sass/clickbait.scss */
+.puffpost .list {
+  padding-top: 370px;
+  padding-left: 0px;
+}
+
+/* line 17, ../../sass/clickbait.scss */
+.buzzdeep h1 {
+  font-family: "ProximaNovaSemibold",Helvetica,Arial,sans-serif;
+  font-size: 36px;
+  max-width: 470px;
+}
+
+/* line 23, ../../sass/clickbait.scss */
+.puffpost h1 {
+  font: bold 32px/36px Georgia,Century,Times,serif;
+  font-size: 32px;
+  max-width: 470px;
+}
+
+/* line 29, ../../sass/clickbait.scss */
+.buzzdeep li {
+  font: 17px/23px "ProximaNovaRegular",arial,helvetica,sans-serif;
+}
+
+/* line 32, ../../sass/clickbait.scss */
+.puffpost li {
+  font-family: Georgia, Century, Times, serif;
+}
+
+/* line 36, ../../sass/clickbait.scss */
+.buzzdeep {
+  background-image: url("css-18.jpg");
+}
+
+/* line 39, ../../sass/clickbait.scss */
+.puffpost {
+  background-image: url("css-19.jpg");
+}
+
+/* line 43, ../../sass/clickbait.scss */
+.bg {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 685px;
+}

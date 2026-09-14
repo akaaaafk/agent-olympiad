@@ -1,5 +1,3 @@
-# Window Manager
-
 Hide 
  Window Manager 
 

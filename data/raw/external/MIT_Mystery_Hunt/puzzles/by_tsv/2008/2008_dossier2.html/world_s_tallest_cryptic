@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>MIT Mystery Hunt: The World's Tallest Cryptic</title>
+<link href="../css/mydossier.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="../js/rollover.js"></script>
+</head>
+<body onload="MM_preloadImages('http://web.mit.edu/puzzle/www/08/images/dossier_1_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_2_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_3_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_4_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_5_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_6_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_7_active.gif')">
+<div id="container">
+<div id="header"><div id="headerIcon"><a href="../index.html"><img src="../images/spacer.gif" alt="Home page" width="94" height="94" border="0" /></a></div><div id="headerCheckAnswer"><a href="answer/">View Solution</a></div></div>
+<div id="content">
+  <div id="nav"><img src="http://web.mit.edu/puzzle/www/08/images/header_dossiers.gif" alt="Dossiers:" width="119" height="27" class="paddingRight4" />&nbsp;<a href="http://web.mit.edu/puzzle/www/08/dossier1.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_1_open.gif" alt="Dossier 1" name="dossier1" width="30" height="27" border="0" id="dossier1" onmouseover="MM_swapImage('dossier1','','http://web.mit.edu/puzzle/www/08/images/dossier_1_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier2.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_2_open.gif" alt="Dossier 2" name="dossier2" width="30" height="27" border="0" id="dossier2" onmouseover="MM_swapImage('dossier2','','http://web.mit.edu/puzzle/www/08/images/dossier_2_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier3.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_3_open.gif" alt="Dossier 3" name="dossier3" width="30" height="27" border="0" id="dossier3" onmouseover="MM_swapImage('dossier3','','http://web.mit.edu/puzzle/www/08/images/dossier_3_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier4.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_4_open.gif" alt="Dossier 4" name="dossier4" width="30" height="27" border="0" id="dossier4" onmouseover="MM_swapImage('dossier4','','http://web.mit.edu/puzzle/www/08/images/dossier_4_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier5.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_5_open.gif" alt="Dossier 5" name="dossier5" width="30" height="27" border="0" id="dossier5" onmouseover="MM_swapImage('dossier5','','http://web.mit.edu/puzzle/www/08/images/dossier_5_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier6.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_6_open.gif" alt="Dossier 6" name="dossier6" width="30" height="27" border="0" id="dossier6" onmouseover="MM_swapImage('dossier6','','http://web.mit.edu/puzzle/www/08/images/dossier_6_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier7.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_7_open.gif" alt="Dossier 7" name="dossier7" width="30" height="27" border="0" id="dossier7" onmouseover="MM_swapImage('dossier7','','http://web.mit.edu/puzzle/www/08/images/dossier_7_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a></div>
+
+  <h1>The World's Tallest Cryptic</h1>
+
+<a href="images/worldstallest.jpg"><img src="images/worldstallest-sm.jpg" align="right" border="0" /></a>
+  <p><i>&quot;Tall, isn't it?&quot;<br />
+&quot;It tries to be. Choose your entries right,
+and you can head up as high as you want.&quot;<br />
+&quot;But then I'll never reach a final answer!&quot;<br />
+&quot;Well, that you have to do in the altogether different way described.&quot;</i></p>
+
+<h3>ACROSS</h3>
+<p><b>2:<br />
+Lord Vader comprehends horrible woe, not the correct way to read the final
+answer to this puzzle (4, 2, 5)</b></p>
+
+<p>11:<br />
+Emotionless jerk comes after mug and ring (7)</p>
+
+<p>13:<br />
+Note about comedienne Margaret's academic organization (6)</p>
+
+<p><b>14:<br />
+Our lady, in shackles, reveals the exact length of the final answer to this puzzle
+(4, 7)</b></p>
+
+<p>16:<br />
+Revolutionary obtains submachine gun (4)</p>
+
+<p>18:<br />
+Celebrated getting the German area united into a larger political entity (9)</p>
+
+<p>19:<br />
+At last, that weirdo barber Sweeney (4)</p>
+
+<p>21:<br />
+Ripe to tangle with a supernatural being (4)</p>
+
+<p>22:<br />
+A bunch of stitches look sound (4)</p>
+
+<p>25 + 45n:<br />
+Semitic language lacks masculine word meaning &quot;beer&quot; (4)<br />
+Look and sound of resentment (4)<br />
+Noisily drops horseriding equipment (4)</p>
+
+<p>26 + 45n:<br />
+The French gutlessly honor the Cowardly Lion's portrayer (4)<br />
+Fifty-one-foot elevator (4)<br />
+Knocks box over (4)</p>
+
+<p>28 + 45n:<br />
+Change caused by an effect of the moon spinning (4)<br />
+Norse God in love with noise (4)<br />
+Behead cod; otherwise, it stinks (4)</p>
+
+<p>31 + 45n:<br />
+Network showing <i>Cavemen</i>, a cartoon about cavemen (3)<br />
+Do I fill the role of Pierre's friend? (3)<br />
+In Arles, you mostly work (3)</p>
+
+<p>32 + 45n:<br />
+One who is in love, dear -- or crazy (6)<br />
+One who positions things in real confusion (6, <i>var. spelling</i>)<br />
+Druggie starting to snort printer ink (6)</p>
+
+<p>33 + 45n:<br />
+Fired after getting old, misguided Dan bombed (10)<br />
+Hauled around a nob that's tossed back bubbly (10)<br />
+Vehicles containing Mr. Weasley, fruit drink, and guns (10)</p>
+
+<p>34 + 45n:<br />
+Spots headless boys (3)
+  <br />
+  Desire for the riches of the East (3)</p>
+
+<p>37 + 45n:<br />
+He'd misread an Old English letter (3)<br />
+Upset Playboy's founder with expression of disdain (3)<br />
+The ultimate in hyacinths (3)</p>
+
+<p>38 + 45n:<br />
+Lunatic erases things for relaxation (6)<br />
+Lets Ed hurt the presumptive heir (6)<br />
+Trees filled with, um, a kind of glue (6)</p>
+
+<p>39 + 45n:<br />
+Metal shirts and shades (5)<br />
+Ultimately, not suspicious of the Lone Ranger's sidekick (5)</p>
+
+<p>41 + 45n:<br />
+Fabrics of the first of seven types (5)<br />
+Each bird that sings a Weird Al parody (3, 2)</p>
+
+<p>42 + 45n:<br />
+Evacuated Ferrara with one Italian's animals (5)<br />
+Eye part of over-trimmed veal (5)<br />
+Perform numbers with one actress named Reed (5)</p>
+
+<p>43 + 45n:<br />
+Humongous nude actor named McKellen (3)<br />
+Attention: This is a serving of corn (3)<br />
+Californian airport is negligent (3)</p>
+
+<p>45 + 45n:<br />
+A mass of ice secondarily absorbs a ten-millionth of a joule (4)<br />
+Is in the wrong English train, son (4)<br />
+Shamuses mentioned in issues of an MIT paper (4)</p>
+
+<p>47 + 45n:<br />
+One unbelievably long time (3)<br />
+Stimpy's pal is almost torn apart (3)<br />
+Where you permanently store data for a Gypsy (3)</p>
+
+<p>49 + 45n:<br />
+Set is little help (4)<br />
+I run around, becoming a wreck (4)<br />
+Ashen after getting red alert (4)</p>
+
+<p>52 + 45n:<br />
+Some bread, left out for a dullard (3)<br />
+A cur's remark is far inferior (3)</p>
+
+<p>54 + 45n:<br />
+1,101 here in Quebec (3)<br />
+Electronic chips is complicated [<i>sic</i>] (3, <i>abbr.</i>)</p>
+
+<p>55 + 45n:<br />
+Stare with disgust, essentially, at a scripting language (4)<br />
+Exhibit surprise by staring at the tail-biting snake (4)</p>
+
+<p>56 + 45n:<br />
+Heard about Damon's pad (3)<br />
+Needlefish found in hangars (3)</p>
+
+<p>57 + 45n:<br />
+Not-quite-subdued Scotsman's cap (3)<br />
+Leg <i>Maxim</i> perhaps flipped over (3)<br />
+Lass is to delay heading back (3)</p>
+
+<p>58 + 45n:<br />
+Tail wild female singers (4)<br />
+Legendary king of the Huns, at Long Island (4)<br />
+Each hurt! (4)<br />
+Shaft put MDMA into beer (4)</p>
+
+<p>59 + 45n:<br />
+Prefix on &quot;form,&quot; &quot;phyll,&quot; or &quot;loch,&quot; oddly (6)<br />
+Dance in a medical facility, wearing a string tie (6)</p>
+
+<p>60 + 45n:<br />
+Variant lyre modified to serve the purposes of a bard (11)<br />
+Disturbed rest isn't his motivation for drinking (11)<br />
+That senior's remarkably husky vocal quality (11)</p>
+
+<p>63 + 45n:<br />
+Made certain act involving $5 pasta perverse (11)<br />
+Petey and Gertie Minuit will get drunk in cheap bars (11)<br />
+Zeroes in Met damaged coins again (11)</p>
+
+<p>65 + 45n:<br />
+Bed in a small house (3)<br />
+Mr. Serling's punishment (3)<br />
+Posed as madcap Tesla (3)</p>
+
+<p>67 + 45n:<br />
+Author and she almost get engaged (4)<br />
+Metro Goldwyn Meyer initially thinks they run things (4, <i>abbr.</i>)<br />
+Pat's failing a high school exam (4, <i>abbr.</i>)</p>
+
+<p>68 + 45n:<br />
+Weapon in a room (3)<br />
+Seldom ignoring every odd character with a teaching degree (3, <i>abbr.</i>)<br />
+Despot exhibits psychic power (3, <i>abbr.</i>)</p>
+
+
+<h3>UP</h3>
+<p>1:<br />
+Cold, reddish outer layer (5)</p>
+
+<p>3:<br />
+Wind ought to exist, with oxygen in it (4)</p>
+
+<p>4:<br />
+Twisted and hurt (5)</p>
+
+<p>5:<br />
+Scrabble piece shows ~ but not D (4)</p>
+
+<p>6:<br />
+Organic compound a biblical book discussed (5)</p>
+
+<p>7:<br />
+Hears about flightless birds (5)</p>
+
+<p>8:<br />
+Reason for a suit to reflect at both ends (4)</p>
+
+<p>9:<br />
+Socks a biblical prophet (5)</p>
+
+<p>10:<br />
+Lump of uranium extracted from mass of condensed vapor (4)</p>
+
+<p>12:<br />
+As announced, bishopric had to yield (4)</p>
+
+<p>15:<br />
+Three or four centers from the local football team (4)</p>
+
+<p>17, 62 + 45n:<br />
+Italian wines damage dateless veggie dishes (8)<br />
+Surveillance agents capturing one criminal with dead body parts (8)<br />
+Lab I rave about is not always the same (8)</p>
+
+<p>18, 64 + 45n:<br />
+Spilled dirt from large books (6)<br />
+Former Philippine president's manuscript about an oil company (6)<br />
+Mistakenly put Roman &quot;I&quot; in John Wayne's first name (6)</p>
+
+<p>20, 66 + 45n:<br />
+Naiad frolicking with goddess (5)<br />
+Weeping leaves Rory disheartened (5)<br />
+Cooked tater and fish (5)</p>
+
+<p>21, 67 + 45n:<br />
+Men's sad, pathetic, irrationality (7)<br />
+Ms. Zadora left fashionable street musician (7)<br />
+Shamus turned down pierced <i>Carya glabra</i> seeds (7)</p>
+
+<p>23, 68 + 45n:<br />
+Top-notch text from Mao, nevertheless (1-3)<br />
+Cry of rage in Dublin and environs (4)</p>
+
+<p>24, 69 + 45n:<br />
+Ares, keep gripping a grim, tawdry <i>Caltha palustris</i> (5, 8)<br />
+This part has no misdirected arrows fired while retreating (8, 5)</p>
+
+<p>25 + 45n:<br />
+Wild rice I got can be created by prokaryotes (13)<br />
+Cause excitment in Paris's summer with 999 (about a thousand) spacecraft
+components (6, 7)<br />
+One who pledges has abused coke, tritium, and a Bic, say (6, 7)</p>
+
+<p>27 + 45n:<br />
+Immoderate iron magnate John Jacob, by reputation, has pull (5, 2, 6)<br />
+The Riga banker is corrupt? Very sad (13)<br />
+Oy, Cain's plants adapted proteins used in photsynthesis (13)</p>
+
+<p>29 + 45n:<br />
+Legendary queen of Carthage finally uttered wedding vow (4)<br />
+A bird rendered extinct by party after party (4)<br />
+Deer takes small amount of drugs (4)</p>
+
+<p>30 + 45n:<br />
+Embarrassed after mostly unnecessary vehicle is frequently punctured (6-7)<br />
+Philosopher and seer can't see Dr. Awkward (4, 9)<br />
+Crusading group and mad doctor reunite (8, 5)</p>
+
+<p>32 + 45n:<br />
+Allows a bit of discussion of this school (6)<br />
+Powerful ditty about Roosevelt (6)</p>
+
+<p>35 + 45n:<br />
+Mentioned eatery in an Indian city (5)<br />
+Discourage retrospective about Senator Kennedy (5)<br />
+One who catches long fish U. S. Grant's opponent tossed back (5)</p>
+
+<p>36 + 45n:<br />
+Poorly written &quot;if&quot; ran further down the page (5)<br />
+Ruled by German and British Queen (5)</p>
+
+<p>40 + 45n:<br />
+The Way Grain Spills (3)<br />
+Using your tongue, draw a digit (3)<br />
+Also shouted at (3)</p>
+
+<p>44 + 45n:<br />
+In the style of Somerville's leadership, unfortunately (4)<br />
+A tavern turned Egyptian, perhaps (4)<br />
+That's cute -- a youngster's heading out (4)</p>
+
+<p>46 + 45n:<br />
+Six-legged critter infesting them Mets (5)<br />
+Send money found in clock back (5)<br />
+Nonsense about (for example) somersaulting thesaurus writer (5)</p>
+
+<p>48 + 45n:<br />
+No, I'm (gevalt!) the guy who played Spock (5)<br />
+Bloom and Minderbinder's Greek island (5)<br />
+Caroming truck follows Monsieur Marcel Marceau et al. (5)</p>
+
+<p>50 + 45n:<br />
+Prize is a reversible tie (5)<br />
+&quot;Flying Ur&quot; is a former name for a flying company (5)</p>
+
+<p><b>51 + 45n:<br />
+Morse code symbol had rotated (3)<br />
+That item following &quot;D&quot; is a Morse code symbol (3)<br />
+Name the Venetian &quot;Zilch&quot; (3)</b></p>
+
+<p>52 + 45n:<br />
+Dramatic sequence within farce (3)<br />
+Turned to codeine, originally not requiring a prescription (3, <i>abbr.</i>)<br />
+Sphere a male sib spun (3)</p>
+
+<p>53 + 45n:<br />
+Assemble like soldiers entirely enthralled by Flipper (4, 2)<br />
+Leaf is folded up to form a bra pad (6)</p>
+
+<p>57 + 45n:<br />
+Reportedly obtain water from the French Quarter of a city (6)<br />
+Leave unfinished number with Faust's author (6)<br />
+Band featuring Matt Johnson and wildly het twins (3, 3)</p>
+
+<p>61 + 45n:<br />
+Poetically superior to &quot;Titania&quot; or &quot;cinnabar&quot; in sound (1'2)<br />
+Rabbi and former actor Harrison (3)<br />
+Criticize inscription on a tombstone (3)</p>
+
+</div>
+</div>
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

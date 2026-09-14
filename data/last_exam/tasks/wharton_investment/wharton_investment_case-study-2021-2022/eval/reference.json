@@ -3,8 +3,17 @@
   "gold_pointer": "data/benchmarks/wharton_investment/benchmark.json#wharton_investment_case-study-2021-2022.gold_label",
   "has_gold_answer": false,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/wharton_investment_current_v1.json",
+    "deliverable": "investment_policy_statement_and_final_report",
+    "limitations": "The public case page is preserved, but the live OTIS market, approved stock list, season deliverable packet, private judge scorecard, and calibrated numeric weights are not all available.",
+    "scorecard_path": "data/rubrics/task_scorecards/wharton_investment.json",
+    "scorecard_key": "wharton_investment_case-study-2021-2022"
+  },
+  "rubric_path": "data/rubrics/wharton_investment_current_v1.json",
+  "deliverable": "investment_policy_statement_and_final_report"
 }

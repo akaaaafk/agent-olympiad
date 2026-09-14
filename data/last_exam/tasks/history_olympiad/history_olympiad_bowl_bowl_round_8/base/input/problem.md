@@ -1,5 +1,3 @@
-# Bowl-Round-8
-
 [Q1] Similarities of this speech to Abraham Lincoln’s Gettysburg Address have been noted by scholars, as both praise "the uniqueness of the State’s commitment to democracy.” The speaker of this address proclaims, “Thus choosing to die resisting, rather than to live submitting, they fled only from dishonor” when referring to a certain group of people. This speech was recorded by Thucydides in his book History of the Peloponnesian War . For ten points, what "Oration" was spoken by an Athenian politician to honor th e soldiers who perished fighting the Spartans?
 
 [Q2] With Indira Gandhi, a prime minister with this surname signed the Shimla Agreement, which established the Line of Control in Kashmir. For ten points, identify this surname shared by Pakistani prime ministers Benazir and Zulfikar Ali.

@@ -1,5 +1,3 @@
-# 2019-2020-Asia-Beta-Set_Bowl-Round-7
-
 [Q1] IHBB Asian Beta Set Bowl Round 7 2019-2020 Bowl Round 7 First Quarter 1.By defeating Eugenius at one of these locations in 394, Theodosius I quashed polytheism in favor of Christianity and brieﬂy reuniﬁed the Roman Empire. Before a battle at another one of these geographical locations, the winning commander saw the phrase “in hoc signo vinces” in a dream, after which he painted the Chi-Rho [kye-roh] on his soldiers’ shields. Constantine I defeated Maxentius in a 312 AD battle at, for ten points, what type of geographical location, an Italian one of which is crossed by the Milvian Bridge?
 
 [Q2] (accept bridge before read) 2.This novel was composed during the volcanic winter after the eruption of Mount Tambora, which may have inspired the setting of a frame story in which Robert Walton meets the protagonist while exploring the North Pole. In this novel, Elizabeth Lavenza is killed on her wedding night after her husband refuses to create a female companion for his ﬁrst creation. For ten points, name this novel about Victor, a mad scientist who creates life, written by Mary Shelley.

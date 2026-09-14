@@ -1,0 +1,750 @@
+{
+  "operation": "cybench_contestant_judge_separation",
+  "status": "completed_source_separation_readiness_deferred",
+  "timestamp_utc": "20260913T042416Z",
+  "backup": "data/excluded/integrity_repair_20260913T042416Z",
+  "total_records": 1741,
+  "records_retained": 39,
+  "record_count_change": 0,
+  "readiness_promotions": 0,
+  "public_attachment_files": 115,
+  "environment_kind_counts": {
+    "service": 26,
+    "static_artifacts": 13
+  },
+  "exact_final_answer_in_previous_description": 6,
+  "answer_references": 39,
+  "records": [
+    {
+      "problem_id": "cybench_hkcert-ctf_CTF-Challenges_CTF-2022_05-motp",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/05-motp",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/05-motp/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "otp:80",
+      "public_file_count": 8,
+      "exact_final_answer_in_old_description": true,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    },
+    {
+      "problem_id": "cybench_hkcert-ctf_CTF-Challenges_CTF-2022_21-elgamal",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/21-elgamal",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/21-elgamal/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "elgamal:1337",
+      "public_file_count": 1,
+      "exact_final_answer_in_old_description": true,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package.",
+        "Initializer absent; public/chall.py is the publisher distribution, not a verified initialized environment."
+      ]
+    },
+    {
+      "problem_id": "cybench_hkcert-ctf_CTF-Challenges_CTF-2022_22-back-to-the-past",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/22-back-to-the-past",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hkcert-ctf/CTF-Challenges/CTF-2022/22-back-to-the-past/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "web:8080",
+      "public_file_count": 0,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2022_crypto_diffecient",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/diffecient",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/diffecient/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "",
+      "public_file_count": 1,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package.",
+        "Blank target_host does not establish a standalone task: the API challenge still depends on a protected flag/service setup."
+      ]
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2022_crypto_ezmaze",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/ezmaze",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/ezmaze/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "ezmaze:9999",
+      "public_file_count": 1,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2022_crypto_failproof",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/failproof",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/failproof/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "failproof:9999",
+      "public_file_count": 1,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2022_crypto_robust-cbc",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/robust-cbc",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/crypto/robust-cbc/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "robust:1337",
+      "public_file_count": 0,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package.",
+        "Initializer copies no files despite metadata promising Dockerfile, xinetd and app/server; promised contestant files remain unresolved."
+      ]
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2022_reverse_matrix-lab-2",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/reverse/matrix-lab-2",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2022/reverse/matrix-lab-2/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "static_artifacts",
+      "target_host": "",
+      "public_file_count": 2,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ]
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_crypto_noisier-crc",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisier-crc",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisier-crc/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "noisiercrc:9999",
+      "public_file_count": 1,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_crypto_noisy-crc",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisy-crc",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/noisy-crc/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "noisy-crc:9999",
+      "public_file_count": 1,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_crypto_randsubware",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/randsubware",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/crypto/randsubware/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "",
+      "public_file_count": 1,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package.",
+        "Initializer creates a Docker container despite blank target_host; protected flag access and target connection remain unresolved."
+      ]
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_forensics_eval-me",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/forensics/eval-me",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/forensics/eval-me/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "evalme:1337",
+      "public_file_count": 2,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_misc_just-another-pickle-jail",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/misc/just-another-pickle-jail",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/misc/just-another-pickle-jail/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "just-another-pickle-jail:1337",
+      "public_file_count": 2,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_pwn_algorithm-multitool",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/algorithm-multitool",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/algorithm-multitool/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "algorithm-multitool:1337",
+      "public_file_count": 4,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_pwn_network-tools",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/network-tools",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/network-tools/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "network-tools:1337",
+      "public_file_count": 2,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_pwn_text-sender",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/text-sender",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/pwn/text-sender/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "text-sender:1337",
+      "public_file_count": 3,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_reverse_guardians-of-the-kernel",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/reverse/guardians-of-the-kernel",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/reverse/guardians-of-the-kernel/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "static_artifacts",
+      "target_host": "",
+      "public_file_count": 2,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original gzip/CPIO archive is delivered intact; the initializer's Linux CPIO extraction is not reproduced here."
+      ]
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_web_chunky",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/web/chunky",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/web/chunky/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "cache:8080",
+      "public_file_count": 20,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [
+        "challenge/docker-compose.yml"
+      ],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package.",
+        "Use the publisher dist tree instead of the initializer's server-side challenge tree; runtime equivalence remains unverified.",
+        "Initializer-distributed files containing the final server flag were withheld: challenge/docker-compose.yml"
+      ]
+    },
+    {
+      "problem_id": "cybench_project-sekai-ctf_sekaictf-2023_web_frog-waf",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/web/frog-waf",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/web/frog-waf/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "frogwaf:1337",
+      "public_file_count": 29,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package.",
+        "Initializer copies no files; the explicitly published dist source is delivered. Server-side real flag stays hidden."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_crypto_Hard_Permuted",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Hard] Permuted",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Hard] Permuted/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "static_artifacts",
+      "target_host": "",
+      "public_file_count": 2,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_crypto_Medium_Partial_Tenacity",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Medium] Partial Tenacity",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Medium] Partial Tenacity/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "static_artifacts",
+      "target_host": "",
+      "public_file_count": 2,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_crypto_Very_Easy_Dynastic",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Dynastic",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Dynastic/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "static_artifacts",
+      "target_host": "",
+      "public_file_count": 2,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_crypto_Very_Easy_Makeshift",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Makeshift",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Makeshift/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "static_artifacts",
+      "target_host": "",
+      "public_file_count": 2,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_crypto_Very_Easy_Primary_Knowledge",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Primary Knowledge",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/crypto/[Very Easy] Primary Knowledge/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "static_artifacts",
+      "target_host": "",
+      "public_file_count": 2,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_forensics_Very_Easy_It_Has_Begun",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/forensics/[Very Easy] It Has Begun",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/forensics/[Very Easy] It Has Begun/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "static_artifacts",
+      "target_host": "",
+      "public_file_count": 1,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_forensics_Very_Easy_Urgent",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/forensics/[Very Easy] Urgent",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/forensics/[Very Easy] Urgent/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "static_artifacts",
+      "target_host": "",
+      "public_file_count": 1,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_hw_Maze_Very_Easy_",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/hw/Maze [Very Easy]",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/hw/Maze [Very Easy]/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "static_artifacts",
+      "target_host": "",
+      "public_file_count": 6,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_misc_Easy_Unbreakable",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Easy] Unbreakable",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Easy] Unbreakable/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "unbreakable:1337",
+      "public_file_count": 1,
+      "exact_final_answer_in_old_description": true,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_misc_Hard_Path_of_Survival",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Hard] Path of Survival",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Hard] Path of Survival/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "path_of_survival:1337",
+      "public_file_count": 0,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package.",
+        "Initializer copies a server build tree containing its flag; that tree is withheld in full pending public-source review."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_misc_Medium_Were_Pickle_Phreaks_Revenge",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Medium] Were Pickle Phreaks Revenge",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Medium] Were Pickle Phreaks Revenge/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "pickle_revenge:1337",
+      "public_file_count": 2,
+      "exact_final_answer_in_old_description": true,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_misc_Very_Easy_Character",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Character",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Character/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "character:1337",
+      "public_file_count": 0,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_misc_Very_Easy_Stop_Drop_and_Roll",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Stop Drop and Roll",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/misc/[Very Easy] Stop Drop and Roll/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": null,
+      "public_file_count": 0,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package.",
+        "Metadata omits target_host and initializer only starts Docker; no connection endpoint or promised Dockerfile input is synthesized."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_pwn_Very_Easy_Delulu",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/pwn/[Very Easy] Delulu",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/pwn/[Very Easy] Delulu/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "delulu:1337",
+      "public_file_count": 4,
+      "exact_final_answer_in_old_description": true,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_reversing_Hard_FlecksOfGold",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Hard] FlecksOfGold",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Hard] FlecksOfGold/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "static_artifacts",
+      "target_host": "",
+      "public_file_count": 1,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "Initializer omits the .zip extension; the actual publisher release/rev_flecksofgold.zip is used."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_reversing_Medium_QuickScan",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Medium] QuickScan",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Medium] QuickScan/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "rev_quickscan:1337",
+      "public_file_count": 0,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_reversing_Very_Easy_LootStash",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Very Easy] LootStash",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Very Easy] LootStash/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "static_artifacts",
+      "target_host": "",
+      "public_file_count": 1,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_reversing_Very_Easy_PackedAway",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Very Easy] PackedAway",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/reversing/[Very Easy] PackedAway/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "static_artifacts",
+      "target_host": "",
+      "public_file_count": 1,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_web_Easy_Labyrinth_Linguist",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/web/[Easy] Labyrinth Linguist",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/web/[Easy] Labyrinth Linguist/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "web_labyrinth_linguist:1337",
+      "public_file_count": 6,
+      "exact_final_answer_in_old_description": false,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    },
+    {
+      "problem_id": "cybench_hackthebox_cyber-apocalypse-2024_web_Medium_LockTalk",
+      "upstream_source_directory": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/web/[Medium] LockTalk",
+      "prompt_basis": "Upstream TaskRunner._setup_prompt: capture-the-flag objective, metadata target_host and initial file listing; no easy_prompt, README, subtask hints or solution text.",
+      "prompt_source": "data/raw/cybench/upstream/run_task.py",
+      "metadata_source": "data/raw/cybench/upstream/benchmark/hackthebox/cyber-apocalypse-2024/web/[Medium] LockTalk/metadata/metadata.json",
+      "input_manifest_path": "data/raw/cybench/contestant_manifest_20260913.json",
+      "environment_kind": "service",
+      "target_host": "locktalk:1337",
+      "public_file_count": 0,
+      "exact_final_answer_in_old_description": true,
+      "withheld_files": [],
+      "remaining_limitations": [
+        "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+        "The original challenge service, target routing and protected server-side state are not running in the task package."
+      ]
+    }
+  ],
+  "challenge_execution_performed": false,
+  "unrelated_canonical_hashes": {
+    "data/benchmarks/ijso_practical/benchmark.json": "25e66c25abf5e0fc007b514c1beb4e87870b2d7e344cac250242cb02ebb186d2",
+    "data/benchmarks/ieo_business_case/benchmark.json": "7fb9dcd297d6ff1c00d034b094bc25f23f77140db0bae5bed0c9a70dd9d3b509",
+    "data/benchmarks/iol_team/benchmark.json": "cbf689e2d5bc0784d35ba35f2bf4c0e2b2d49b58a5d92a5d29bb7cde49fc0cd8",
+    "data/benchmarks/ioaa_group/benchmark.json": "ca715cc998237f33bde15ce0217051ef580502e86cb07f78f72ac3de8d0d2dd2",
+    "data/benchmarks/arml_power/benchmark.json": "7ab387e01c1701de803f1d613b62eaab8b2277ed22b49763d4374e4a9ca9dad6",
+    "data/benchmarks/arml_national_team/benchmark.json": "873d5a0fc5456921822820409adc49e15eb4ccc46d3deda8798eb499c43f4b46",
+    "data/benchmarks/arml_national_power/benchmark.json": "9f1c86219862752485d0eba430dfd60690d6c31c7492ac135a07059322c25193",
+    "data/benchmarks/arml_local/benchmark.json": "dcca7a9c82f71acca2b14e198a68a0df34f2205fae2f2f28b8f73ed8303ff6ee",
+    "data/benchmarks/wsc_writing/benchmark.json": "303e425ecb4961205f82f4b16678851aa2b9dced423e2438b731263ac725639b",
+    "data/benchmarks/jessup/benchmark.json": "34419dc15d5d21b0dc96175e63bd8c301d22b95b3ee08795baa64476545a96cb",
+    "data/benchmarks/iiot/benchmark.json": "f1083b2c794eef82ae5b36903a1f89b41069736c48556e2fb29e9ddc272cefb0",
+    "data/benchmarks/icpc/benchmark.json": "13d624ca394bb948811d16b287a2a5ee535de0673dd1067015ad7f2d358114b2",
+    "data/benchmarks/iypt/benchmark.json": "9f0cccddaa62d52aae8a55b6a5338c95a6357e9b10fd6e8ed0c19799d9899811",
+    "data/benchmarks/hmmt_team/benchmark.json": "a951fbb388a3d93eae04ec2e82c2f851af4a948a3af2ab9b8b5ac797b0c61545",
+    "data/benchmarks/hmmt_guts/benchmark.json": "dbe08508564cafb88aa67939d75c293cabff04081c452d0417dde1c97df0b6d7",
+    "data/benchmarks/mcm/benchmark.json": "76e1ad88a4dccae980cdd111058190d9d0a36d1b318e8e5f91fe344597ed04f1",
+    "data/benchmarks/icm/benchmark.json": "86796b855cedac06a8222c16375917ce222e511e34f96e0a8e3e69c3a725123a",
+    "data/benchmarks/fyziklani/benchmark.json": "a6d8d4bc7d3b94091e3118e80c2e867008380f7ff09fa0782cc5bc4bf6e2af73",
+    "data/benchmarks/purple_comet/benchmark.json": "3d57d577b66990864c6cf9c2645531c75ed701129b90704b56b919ca8f1491ca",
+    "data/benchmarks/itym/benchmark.json": "22380016230b8acb057715103dd40aa6fbd0e1e136a0d1ce65d1f3787493ec5c",
+    "data/benchmarks/ccdc/benchmark.json": "590f41a9bfec82fc310948f2783c3228d6e97f3333fb4e5d97afffbc80f2b5c6",
+    "data/benchmarks/cfa_research_challenge/benchmark.json": "d12a63d0a5d5128c00d0d349c47beb7773ef131a0aaaa95008896480da4803da",
+    "data/benchmarks/codeforces/benchmark.json": "3e5496780a9a5d54c2772efbb2c8ede1a29af2aa157bec0ddcf9e7665ed02a84",
+    "data/benchmarks/debatebench/benchmark.json": "13e73c54e90f3fcb2fb99dc909fc01af2e786a80edd2056957daf192d2337870",
+    "data/benchmarks/eoes/benchmark.json": "b6cbc3085f1f93cfe76815f082315874cb3aed9fdadf36d248c45f6ef737f539",
+    "data/benchmarks/ethics_bowl_appe/benchmark.json": "7dfa070871ae9a55154b0141ff4dd2ca88f939b30716651725dcc122459fa353",
+    "data/benchmarks/ethics_bowl_nhseb/benchmark.json": "3b2c7dd0d4394244221fc57e0a60f5bf700cf21be03455b7d538c3f08b69c70f",
+    "data/benchmarks/gcch_harvard/benchmark.json": "1dfa34b2f55e55375c77b2a76f7bf8734bb16826be2347ac06f350248998cd9c",
+    "data/benchmarks/history_olympiad/benchmark.json": "87bd227e6012808a51db9c455af07290dcefb6ee0a9e2e46325821d23c1622da",
+    "data/benchmarks/ichto/benchmark.json": "97373760beb5b3f7e0dcf483dd53c6ed09d6be65cda9ec4f10d598d763e8758d",
+    "data/benchmarks/ioai_team/benchmark.json": "033d4ff4bb6116e2953f0654561f7d0131dad50847f0cade2bb600fabbe3ed47",
+    "data/benchmarks/mystery_hunt/benchmark.json": "3d5b9342fa98ee0da546c6b1ee4646836c4729ad967af096776a029424fb39bf",
+    "data/benchmarks/nyu_ctf_bench/benchmark.json": "6989a5decbd22f98556f804d5f2c7210fbdd173e7996124578fc998c295b6ee0",
+    "data/benchmarks/odyssey_of_the_mind/benchmark.json": "92caae74b86969997580b76778dea65fdb0f3aa4ec5a4b68335e7734bc6ca10c",
+    "data/benchmarks/pumac_power/benchmark.json": "37bef76493a61bf775ef7bd842d9db1cf2dfac6f612a1ea60242a06210097bc1",
+    "data/benchmarks/qanta/benchmark.json": "23a3f1e23e92855cb83a54aa6fbd250411af2a6d66642b01df0b44975d2fcdca",
+    "data/benchmarks/science_bowl/benchmark.json": "9e16f3e5155bcc023413781af5f12912880e65361d4ae87d17d332ad973eaeea",
+    "data/benchmarks/science_olympiad/benchmark.json": "033c60b1ef3c3bb2ed9f66204128668ef07c9169056eb22a9d17c2cf9c7443c4",
+    "data/benchmarks/vis_moot/benchmark.json": "48d030325e47ea8b3eded7cbd8aad70d5a0b53844fb4a28b614b80dac59f903b",
+    "data/benchmarks/wharton_investment/benchmark.json": "1b23d3ee772675b10bbdfadefcacb05c56b441827f1114cd6d50900deff4a7ca",
+    "data/benchmarks/wmtc/benchmark.json": "d4778e04439c61b5618ee7fed00dcdc02e6e40688716514582621c344c8d84d2",
+    "data/benchmarks/wro/benchmark.json": "0a16de0d191e90ea4227a0b4671875cb93c308a1ee494f31c7e43b0c043ad5d4"
+  },
+  "unrelated_card_hashes": {
+    "base": "e7ff9a0514a209455fbdb8cee767733cfd5ece13c3db37d5fa317102f2e86602",
+    "last_exam": "698433abc0f7d34a327b88d799f9c992f6113983254833027922839f4f8d2a63"
+  },
+  "packages": {
+    "n_tasks": 39,
+    "n_competitions": 1,
+    "staged_assets": 115
+  },
+  "staged_attachment_checks": 230,
+  "validation": {
+    "canonical_records": 39,
+    "global_records": 1741,
+    "original_source_files_unchanged": 1174,
+    "unrelated_canonical_files_unchanged": 42,
+    "copied_attachments_checked": 230,
+    "exact_answer_leaks_in_generated_instructions": 0,
+    "unexpected_contestant_files": 0,
+    "readiness_promotions": 0,
+    "challenge_execution_performed": false,
+    "live_service_validation_performed": false
+  },
+  "recovered_interruption": "[WinError 5] 拒绝访问。: 'E:\\\\agent_olympiad\\\\agent-olympiad\\\\data\\\\.cache\\\\cybench_repair_20260913\\\\packages_20260913T042416Z\\\\base\\\\tasks\\\\cybench' -> 'E:\\\\agent_olympiad\\\\agent-olympiad\\\\data\\\\base\\\\tasks\\\\cybench'"
+}

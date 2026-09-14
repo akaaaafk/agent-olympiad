@@ -1,6 +1,6 @@
 {
   "rubric_id": "arml_national_power_2018_v1",
-  "title": "Power Round \u2014 2018 \u2014 ARML Power sub-problem rubric",
+  "title": "Power Round — 2018 — ARML Power sub-problem rubric",
   "total_points": 36.0,
   "criteria": [
     {
@@ -8,28 +8,28 @@
       "name": "Problem 1a",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 1a (2 pts). Statement: 4. a. Show that the binary partitions of 5 are totally ordered; i.e., if p andp\u2032 are two di\ufb00erent binary partitions of 5, then either p\u227ap\u2032 or p\u2032\u227ap."
+      "description": "Correct, justified solution to Problem 1a (2 pts). Statement: 4. a. Show that the binary partitions of 5 are totally ordered; i.e., if p andp′ are two diﬀerent binary partitions of 5, then either p≺p′ or p′≺p."
     },
     {
       "id": "problem_01b",
       "name": "Problem 1b",
       "max_score": 3.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 1b (3 pts). Statement: b. Show that the binary partitions of 8 are not totally ordered, i.e., \ufb01nd two binary partitions of 8 \u2013 call them q and q\u2032 \u2013 such that q\u2280q\u2032 and q\u2032\u2280q."
+      "description": "Correct, justified solution to Problem 1b (3 pts). Statement: b. Show that the binary partitions of 8 are not totally ordered, i.e., ﬁnd two binary partitions of 8 – call them q and q′ – such that q⊀q′ and q′⊀q."
     },
     {
       "id": "problem_01c",
       "name": "Problem 1c",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 1c (2 pts). Statement: 5. a. Find the smallest binary partition of n, using this partial ordering. That is, \ufb01nd the binary partition p such that for all other binary partitions p\u2032, p\u227ap\u2032."
+      "description": "Correct, justified solution to Problem 1c (2 pts). Statement: 5. a. Find the smallest binary partition of n, using this partial ordering. That is, ﬁnd the binary partition p such that for all other binary partitions p′, p≺p′."
     },
     {
       "id": "problem_01d",
       "name": "Problem 1d",
       "max_score": 3.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 1d (3 pts). Statement: b. Find the largest binary partition of n, using this partial ordering. That is, \ufb01nd the binary partition P such that for all other binary partitions P\u2032, P\u227bP\u2032."
+      "description": "Correct, justified solution to Problem 1d (3 pts). Statement: b. Find the largest binary partition of n, using this partial ordering. That is, ﬁnd the binary partition P such that for all other binary partitions P′, P≻P′."
     },
     {
       "id": "problem_03a",
@@ -50,7 +50,7 @@
       "name": "Problem 4a",
       "max_score": 3.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 4a (3 pts). Statement: 4. Let S be the set of binary partitions of n. Let S1 be the set of binary partitions of n 2 . Let S2 be the set of binary partitions of n\u2212 2. Prove that there is a bijection B (i.e., a one-to-one correspondence) from the set S to the set S1\u222aS2. Prove that this bijection B preserves order; that is, given that p\u227ap\u2032 for binary partitions p,p\u2032\u2208S, then either B(p)\u227aB(p\u2032) or B(p) and B(p\u2032) are incomparable."
+      "description": "Correct, justified solution to Problem 4a (3 pts). Statement: 4. Let S be the set of binary partitions of n. Let S1 be the set of binary partitions of n 2 . Let S2 be the set of binary partitions of n− 2. Prove that there is a bijection B (i.e., a one-to-one correspondence) from the set S to the set S1∪S2. Prove that this bijection B preserves order; that is, given that p≺p′ for binary partitions p,p′∈S, then either B(p)≺B(p′) or B(p) and B(p′) are incomparable."
     },
     {
       "id": "problem_04b",
@@ -64,21 +64,21 @@
       "name": "Problem 7",
       "max_score": 3.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 7 (3 pts). Statement: 7. Prove that the value of fL(n) is the number of binary partitions of n that have n\u2212L nonzero parts."
+      "description": "Correct, justified solution to Problem 7 (3 pts). Statement: 7. Prove that the value of fL(n) is the number of binary partitions of n that have n−L nonzero parts."
     },
     {
       "id": "problem_08a",
       "name": "Problem 8a",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 8a (2 pts). Statement: 8. Not all partitions are binary partitions. Some partitions have parts of the form 2 j\u2212 1 where j is a nonnegative integer. Such partitions will be called s-partitions, and their parts are written in nonincreasing order. Two s-partitions of 5 are (3, 1, 1, 0, 0) and (1, 1, 1, 1, 1). a. List two partitions of 7, one that is an s-partition and one that is neither an s-partition nor a binary partition. Make sure to identify which is which."
+      "description": "Correct, justified solution to Problem 8a (2 pts). Statement: 8. Not all partitions are binary partitions. Some partitions have parts of the form 2 j− 1 where j is a nonnegative integer. Such partitions will be called s-partitions, and their parts are written in nonincreasing order. Two s-partitions of 5 are (3, 1, 1, 0, 0) and (1, 1, 1, 1, 1). a. List two partitions of 7, one that is an s-partition and one that is neither an s-partition nor a binary partition. Make sure to identify which is which."
     },
     {
       "id": "problem_08b",
       "name": "Problem 8b",
       "max_score": 3.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 8b (3 pts). Statement: b. Prove that if n\u2265 2L, the value of fL(n) is equal to the number of s-partitions of L."
+      "description": "Correct, justified solution to Problem 8b (3 pts). Statement: b. Prove that if n≥ 2L, the value of fL(n) is equal to the number of s-partitions of L."
     },
     {
       "id": "problem_09",
@@ -92,7 +92,7 @@
       "name": "Problem 10",
       "max_score": 6.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 10 (6 pts). Statement: 10. State a value of n less than 23 for which the Hasse diagram of the trinary partitions of n does not contain a Hamiltonian path. Prove your claim. (Recall that a Hamiltonian path is de\ufb01ned in Problem 6b.)"
+      "description": "Correct, justified solution to Problem 10 (6 pts). Statement: 10. State a value of n less than 23 for which the Hasse diagram of the trinary partitions of n does not contain a Hamiltonian path. Prove your claim. (Recall that a Hamiltonian path is deﬁned in Problem 6b.)"
     }
   ],
   "not_observable_from_deck": [

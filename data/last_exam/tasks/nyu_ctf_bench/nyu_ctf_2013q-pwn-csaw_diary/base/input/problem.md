@@ -1,3 +1,1 @@
-# CSAW-Quals / pwn / csaw_diary
-
 After ten years, it is time to record some memories...

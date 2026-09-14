@@ -1,5 +1,3 @@
-# wsc_writing_gq_031
-
 Things to do today include exploring the history of the to-do list ( alternate link ). You’ll find that they were famously used by Benjamin Franklin and Leonardo da Vinci, among other high achievers of history. Below are some more modern approaches to to-do lists to explore—or even try Which format seems best to you? 
 
  Eisenhower Method | 1-2-3 Method | Ivy Lee Method 

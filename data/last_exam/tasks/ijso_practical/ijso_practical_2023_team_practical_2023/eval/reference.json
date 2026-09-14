@@ -4,7 +4,44 @@
   "has_gold_answer": true,
   "evaluator_id": "rubric_llm_v1",
   "evaluator_status": "ready_with_limitations",
-  "rubric_path": "data/rubrics/practical_report_40_v1.json",
-  "deliverable": "written_report",
-  "solution_file": null
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": "rubric_llm_v1",
+    "status": "ready_with_limitations",
+    "rubric_path": "data/rubrics/ijso_practical_report_40_v1.json",
+    "deliverable": "written_report",
+    "judge_assets": [
+      "data/raw/ijso/2023/answers.pdf"
+    ],
+    "limitations": "Archived marking material anchors a report-only adaptation; physical observations and instrument work are unavailable.",
+    "scorecard_path": "data/rubrics/task_scorecards/ijso_practical.json",
+    "scorecard_key": "ijso_practical_2023_team_practical_2023",
+    "pre_reuse_evaluation": {
+      "evaluator_id": "rubric_llm_v1",
+      "status": "ready_with_limitations",
+      "rubric_path": "data/rubrics/ijso_practical_report_40_v1.json",
+      "deliverable": "written_report",
+      "judge_assets": [
+        "data/raw/ijso/2023/answers.pdf"
+      ],
+      "limitations": "Archived marking material anchors a report-only adaptation; physical observations and instrument work are unavailable.",
+      "scorecard_path": "data/rubrics/task_scorecards/ijso_practical.json",
+      "scorecard_key": "ijso_practical_2023_team_practical_2023"
+    },
+    "rubric_reuse": {
+      "source_competition": "ijso_practical",
+      "target_competition": "ijso_practical",
+      "target_year": 2023,
+      "source_rubric_paths": [
+        "data/rubrics/ijso_practical_report_40_v1.json"
+      ],
+      "source_editions": [
+        "existing same-competition rubric; edition unspecified"
+      ],
+      "official_year_equivalence": false,
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+    }
+  },
+  "rubric_path": "data/rubrics/ijso_practical_report_40_v1.json",
+  "deliverable": "written_report"
 }

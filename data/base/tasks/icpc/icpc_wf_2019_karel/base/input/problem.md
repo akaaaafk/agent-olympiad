@@ -1,5 +1,3 @@
-# Karel the Robot
-
 Hide 
  Karel the Robot 
 

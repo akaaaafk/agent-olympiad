@@ -1,5 +1,3 @@
-# wsc_writing_gq_040
-
 “All roads lead to Rome,” insisted one medieval European proverb. (In other parts of the world, roads led elsewhere.) While Roman roads may be the most famous for their longevity and scale , they were far from the first road network. Explore the history of roads and the related terms below. Then, consider some of the most famous roads in the world both today and in ancient times . 
 
  macadam | pavement | asphalt | corduroy road | gallery road 

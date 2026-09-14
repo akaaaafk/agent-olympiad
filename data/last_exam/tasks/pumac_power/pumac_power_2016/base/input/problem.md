@@ -1,5 +1,3 @@
-# PUMaC Power Round 2016
-
 PUMaC 2016 Power Round
 “Out of nothing I have created a strange new universe.” —J´ anos Bolyai
 Rules and Reminders

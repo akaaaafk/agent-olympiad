@@ -1,5 +1,3 @@
-# 2019-2020-Asia-Beta-Set_Bowl-Round-1
-
 [Q1] IHBB Asian Beta Set Bowl Round 1 2019-2020 History Bowl Round 1 First Quarter 1.In 1908, Joseph Szombathy discovered a faceless depiction of this ﬁgure in the village of Willendorf. A Velazquez painting of this ﬁgure looking back at herself in a mirror was attacked by suffragette Mary Richardson. In another painting, this ﬁgure is blown by Zephyrus to shore and stands on a giant shell. An armless statue discovered on the island of Milos depicts, for ten points, what Roman goddess of love?
 
 [Q2] (accept Aphrodite; accept Venus of Willendorf, Rokeby Venus, Venus de Milo, and/or Birth of Venus) 2.Henry Pelham created a depiction of this event titled The Fruits of Arbitrary Power. John Adams declared that “facts are stubborn things” while successfully defending the perpetrators of this event. In Paul Revere’s depiction of this event, Thomas Preston is shown deliberately ordering an attack on a gathered crowd. Crispus Attucks was killed in, for ten points, what 1770 event in which British soldiers ﬁred on civilians in Massachusetts?

@@ -1,5 +1,3 @@
-# Treasure Map
-
 Hide 
  Treasure Map 
 

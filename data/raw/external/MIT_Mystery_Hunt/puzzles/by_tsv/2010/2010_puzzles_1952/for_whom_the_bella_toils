@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb"> 
+<head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta http-equiv="Content-Style-Type" content="text/css" /> 
+  <meta http-equiv="Content-Language" content="en-GB" /> 
+  <title>For Whom the Bella Tolls</title> 
+  <link rel="stylesheet" type="text/css" href="../../../styles/puzzles.css" media="screen" /> 
+  <link rel="stylesheet" type="text/css" href="../../../styles/puzzles.css" media="print" /> 
+  <script language="javascript">
+    imageObj = new Image();
+
+    images = new Array();
+    images[0] = "blank.gif";
+    images[1] = "A.gif";
+    images[2] = "B.gif";
+    images[3] = "C.gif";
+    images[4] = "D.gif";
+    images[5] = "E.gif";
+    images[6] = "F.gif";
+    images[7] = "G.gif";
+    images[8] = "H.gif";
+    images[9] = "I.gif";
+    images[10] = "J.gif";
+    images[11] = "K.gif";
+    images[12] = "L.gif";
+    images[13] = "M.gif";
+    images[14] = "N.gif";
+    images[15] = "O.gif";
+    images[16] = "P.gif";
+    images[17] = "Q.gif";
+    images[18] = "R.gif";
+    images[19] = "S.gif";
+    images[20] = "grid.gif";
+
+    for(var i=0; i<=20; i++) {
+      imageObj.src = images[i];
+    }
+
+    function showPills(pillID) {
+      document.getElementById("pills").src = images[pillID];
+    }
+  </script> 
+</head> 
+ 
+<body>
+<div id="container">
+
+  <div id="header">
+    <div id="header-content">
+      <a id="back-to-round" href="../"><img src="../../../images/return-to-1952.gif" /></a>
+      <a id="solution" href="solution.html"><img src="../../../images/solution.gif" /></a>
+    </div><!--end of id="header-content"-->
+  </div><!--end of id="header"-->
+
+  <div id="main">
+    <div id="page">
+      <div id="page-top">
+        <img id="page-stamp" src="../../../images/stamp-1952.gif" />
+        <h1 id="page-heading">For Whom the Bella Toils</h1>
+      </div>
+
+      <div id="page-center">
+        <div id="page-left">&nbsp;</div>
+        <div id="page-right">&nbsp;</div>
+
+        <div id="page-content">
+          <span class="flavortext">
+            <p>Remaining under his cloak, Harry overhears the two Death Eaters he had followed hissing to each other quietly:</p>
+            <p>"Alas, Snape, your talents are SO 15th century!" said Bellatrix LeStrange. "Why, for the past month I have tested this brilliantly modern plan on some filthy muggles, with WONDERFUL resu--"</p>
+            <p>"Oh, don't be such a ... pill, Bella - remember, the Dark Lord charged ME with the task of killing the old wizard! Come, I have something that might help..."</p>
+            <p>As they leave Snape's office, Harry entered and spied the curious assortment boxed neatly on the teacher's desk. Aha, the nullification spell Slughorn taught them last month would surely spoil Bella's plot to kill Dumbledore!  But - oh no! What was the last part of the incantation?  Hurry, Harry, the clock is ticking!</p>
+          </span>
+
+          <img src="pillbox.gif" alt="pillbox" usemap="#pillbox" />
+          <img id="pills" src="blank.gif" alt="Pills"/>
+          <map name="pillbox">
+            <area shape="poly" coords="181,177,212,175,220,202,186,206" href="A.gif" onMouseOver="showPills(1)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="32,225,65,223,70,252,36,257" href="B.gif" onMouseOver="showPills(2)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="72,222,105,219,110,249,76,252" href="C.gif" onMouseOver="showPills(3)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="151,213,185,211,190,240,155,245" href="D.gif" onMouseOver="showPills(4)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="189,210,222,207,229,237,195,241" href="E.gif" onMouseOver="showPills(5)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="262,204,292,201,301,229,268,233" href="F.gif" onMouseOver="showPills(6)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="76,257,112,254,117,287,78,291" href="G.gif" onMouseOver="showPills(7)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="117,253,153,250,159,283,122,286" href="H.gif" onMouseOver="showPills(8)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="235,241,269,238,276,269,243,274" href="I.gif" onMouseOver="showPills(9)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="272,237,302,233,311,265,281,269" href="J.gif" onMouseOver="showPills(10)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="81,295,119,292,123,326,86,330" href="K.gif" onMouseOver="showPills(11)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="123,290,160,286,165,321,128,326" href="L.gif" onMouseOver="showPills(12)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="205,281,240,277,248,311,211,316" href="M.gif" onMouseOver="showPills(13)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="283,272,314,268,324,300,292,305" href="N.gif" onMouseOver="showPills(14)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="43,340,81,336,85,371,46,378" href="O.gif" onMouseOver="showPills(15)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="130,330,167,326,175,360,136,366" href="P.gif" onMouseOver="showPills(16)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="172,325,208,320,217,354,178,360" href="Q.gif" onMouseOver="showPills(17)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="215,320,250,316,259,347,222,353" href="R.gif" onMouseOver="showPills(18)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="256,315,289,310,298,342,264,347" href="S.gif" onMouseOver="showPills(19)" onMouseOut="showPills(0)" />
+            <area shape="poly" coords="11,24,276,11,277,159,23,181" href="grid.gif" onMouseOver="showPills(20)" onMouseOut="showPills(0)" />
+          </map>
+        </div><!--end of id="page-content"-->
+      </div><!--end of id="page-center"-->
+
+      <div id="page-bottom">&nbsp;</div>
+
+    </div><!--end of id="page"-->
+  </div><!--end of id="main"-->
+
+</div><!--end of id="container"-->
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

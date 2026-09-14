@@ -1,0 +1,77 @@
+@media screen {
+  #feynman {
+    background: #eeeeee none repeat;
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+  }
+  #feynman a {
+    color: blue;
+  }
+  #feynman a:visited {
+    color: red;
+  }
+  #feynman a:hover {
+    color: green;
+  }
+  #feynman #pre-container {
+    float: left;
+    min-width: 100%;
+  }
+  #feynman #container {
+    margin: 0 30px 0 30px;
+    padding: 0 20px;
+  }
+  #feynman h1 {
+    font-size: 3em;
+  }
+  #feynman h1 a {
+    text-decoration: none;
+  }
+  #feynman #content {
+    margin-top: 10px;
+    padding: 10px 30px;
+    background: white;
+  }
+  #feynman #content #puzzles {
+    list-style-type: none;
+    padding: 0;
+  }
+  #feynman #content #puzzles li {
+    padding-left: 30px;
+  }
+  #feynman #content #puzzles li.solved {
+    font-weight: bold;
+    padding-left: 0;
+  }
+  #feynman #content #puzzles li.solved .num {
+    width: 30px;
+    display: block;
+    float: left;
+  }
+  #feynman #content .solved a {
+    color: black;
+    text-decoration: none;
+  }
+  #feynman #content .puzzle-content {
+    padding-left: 20px;
+  }
+  #feynman #content .answer {
+    color: red;
+  }
+  #feynman #content .answer span {
+    text-decoration: underline;
+  }
+}
+@media print {
+  #feynman {
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+  }
+  #feynman h1 {
+    font-size: 3em;
+  }
+  #fixie-nav {
+    visibility: hidden;
+  }
+  #header img {
+    visibility: hidden;
+  }
+}

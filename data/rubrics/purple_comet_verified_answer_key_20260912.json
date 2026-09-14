@@ -1,0 +1,4991 @@
+{
+  "rubric_id": "purple_comet_verified_answer_key_20260912",
+  "dataset": "purple_comet",
+  "kind": "official_answer_key",
+  "visibility": "judge_only",
+  "provenance": {
+    "authority": "Purple Comet official year-and-level answer tables",
+    "official_index": "https://www.purplecomet.org/answers",
+    "review_timestamp": "2026-09-12T20:35:59.809204+00:00"
+  },
+  "scoring_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+  "answers": {
+    "purple_comet_hs_2005": {
+      "year": 2005,
+      "level": "HS",
+      "question_count": 25,
+      "total_points": 25,
+      "answer_source": "data/raw/purple_comet/official_answers/2005/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2005/2",
+      "answer_source_sha256": "90ae2a884b91cde6111509fdbdeb3c88b1d49b39ede0e5f6d2358a588e121a51",
+      "parts": {
+        "1": {
+          "expected": "490",
+          "aliases": []
+        },
+        "2": {
+          "expected": "382",
+          "aliases": []
+        },
+        "3": {
+          "expected": "96",
+          "aliases": []
+        },
+        "4": {
+          "expected": "105717501",
+          "aliases": [
+            "105,717,501"
+          ]
+        },
+        "5": {
+          "expected": "11",
+          "aliases": []
+        },
+        "6": {
+          "expected": "72",
+          "aliases": []
+        },
+        "7": {
+          "expected": "3146",
+          "aliases": [
+            "3,146"
+          ]
+        },
+        "8": {
+          "expected": "70",
+          "aliases": []
+        },
+        "9": {
+          "expected": "50",
+          "aliases": []
+        },
+        "10": {
+          "expected": "16",
+          "aliases": []
+        },
+        "11": {
+          "expected": "15",
+          "aliases": []
+        },
+        "12": {
+          "expected": "4",
+          "aliases": []
+        },
+        "13": {
+          "expected": "33",
+          "aliases": []
+        },
+        "14": {
+          "expected": "24",
+          "aliases": []
+        },
+        "15": {
+          "expected": "2052",
+          "aliases": [
+            "2,052"
+          ]
+        },
+        "16": {
+          "expected": "77",
+          "aliases": []
+        },
+        "17": {
+          "expected": "1999",
+          "aliases": [
+            "1,999"
+          ]
+        },
+        "18": {
+          "expected": "13",
+          "aliases": []
+        },
+        "19": {
+          "expected": "18",
+          "aliases": []
+        },
+        "20": {
+          "expected": "37",
+          "aliases": []
+        },
+        "21": {
+          "expected": "5393",
+          "aliases": [
+            "5,393"
+          ]
+        },
+        "22": {
+          "expected": "349526",
+          "aliases": [
+            "349,526"
+          ]
+        },
+        "23": {
+          "expected": "1024",
+          "aliases": [
+            "1,024"
+          ]
+        },
+        "24": {
+          "expected": "122",
+          "aliases": []
+        },
+        "25": {
+          "expected": "48",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_ms_2005": {
+      "year": 2005,
+      "level": "MS",
+      "question_count": 15,
+      "total_points": 15,
+      "answer_source": "data/raw/purple_comet/official_answers/2005/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2005/1",
+      "answer_source_sha256": "b7875b6ee44e6548c040357c294ac5fac1ec9e6641ab80a207d21e0dd4f3fa50",
+      "parts": {
+        "1": {
+          "expected": "14580",
+          "aliases": [
+            "14,580"
+          ]
+        },
+        "2": {
+          "expected": "102",
+          "aliases": []
+        },
+        "3": {
+          "expected": "96",
+          "aliases": []
+        },
+        "4": {
+          "expected": "118",
+          "aliases": []
+        },
+        "5": {
+          "expected": "126632",
+          "aliases": [
+            "126,632"
+          ]
+        },
+        "6": {
+          "expected": "382",
+          "aliases": []
+        },
+        "7": {
+          "expected": "24",
+          "aliases": []
+        },
+        "8": {
+          "expected": "29",
+          "aliases": []
+        },
+        "9": {
+          "expected": "4",
+          "aliases": []
+        },
+        "10": {
+          "expected": "7",
+          "aliases": []
+        },
+        "11": {
+          "expected": "30",
+          "aliases": []
+        },
+        "12": {
+          "expected": "24",
+          "aliases": []
+        },
+        "13": {
+          "expected": "125",
+          "aliases": []
+        },
+        "14": {
+          "expected": "40",
+          "aliases": []
+        },
+        "15": {
+          "expected": "2052",
+          "aliases": [
+            "2,052"
+          ]
+        }
+      }
+    },
+    "purple_comet_hs_2006": {
+      "year": 2006,
+      "level": "HS",
+      "question_count": 25,
+      "total_points": 25,
+      "answer_source": "data/raw/purple_comet/official_answers/2006/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2006/2",
+      "answer_source_sha256": "2d02249a52bf6359e1bc2c734558dc58a2699f763797f4d866413c1137502973",
+      "parts": {
+        "1": {
+          "expected": "630",
+          "aliases": []
+        },
+        "2": {
+          "expected": "1875",
+          "aliases": [
+            "1,875"
+          ]
+        },
+        "3": {
+          "expected": "39",
+          "aliases": []
+        },
+        "4": {
+          "expected": "450",
+          "aliases": []
+        },
+        "5": {
+          "expected": "47094",
+          "aliases": [
+            "47,094"
+          ]
+        },
+        "6": {
+          "expected": "12354",
+          "aliases": [
+            "12,354"
+          ]
+        },
+        "7": {
+          "expected": "41",
+          "aliases": []
+        },
+        "8": {
+          "expected": "185",
+          "aliases": []
+        },
+        "9": {
+          "expected": "163",
+          "aliases": []
+        },
+        "10": {
+          "expected": "114",
+          "aliases": []
+        },
+        "11": {
+          "expected": "168",
+          "aliases": []
+        },
+        "12": {
+          "expected": "120",
+          "aliases": []
+        },
+        "13": {
+          "expected": "138600",
+          "aliases": [
+            "138,600"
+          ]
+        },
+        "14": {
+          "expected": "237",
+          "aliases": []
+        },
+        "15": {
+          "expected": "61",
+          "aliases": []
+        },
+        "16": {
+          "expected": "122",
+          "aliases": []
+        },
+        "17": {
+          "expected": "24300",
+          "aliases": [
+            "24,300"
+          ]
+        },
+        "18": {
+          "expected": "784",
+          "aliases": []
+        },
+        "19": {
+          "expected": "225",
+          "aliases": []
+        },
+        "20": {
+          "expected": "1932",
+          "aliases": [
+            "1,932"
+          ]
+        },
+        "21": {
+          "expected": "6",
+          "aliases": []
+        },
+        "22": {
+          "expected": "34",
+          "aliases": []
+        },
+        "23": {
+          "expected": "120",
+          "aliases": []
+        },
+        "24": {
+          "expected": "361",
+          "aliases": []
+        },
+        "25": {
+          "expected": "9",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_ms_2006": {
+      "year": 2006,
+      "level": "MS",
+      "question_count": 15,
+      "total_points": 15,
+      "answer_source": "data/raw/purple_comet/official_answers/2006/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2006/1",
+      "answer_source_sha256": "4c46c1ccdcecc32dfd97d4712e47debd694574f5f800a528286818b028a3858e",
+      "parts": {
+        "1": {
+          "expected": "783",
+          "aliases": []
+        },
+        "2": {
+          "expected": "10",
+          "aliases": []
+        },
+        "3": {
+          "expected": "527",
+          "aliases": []
+        },
+        "4": {
+          "expected": "279",
+          "aliases": []
+        },
+        "5": {
+          "expected": "630",
+          "aliases": []
+        },
+        "6": {
+          "expected": "7",
+          "aliases": []
+        },
+        "7": {
+          "expected": "1875",
+          "aliases": [
+            "1,875"
+          ]
+        },
+        "8": {
+          "expected": "450",
+          "aliases": []
+        },
+        "9": {
+          "expected": "132",
+          "aliases": []
+        },
+        "10": {
+          "expected": "163",
+          "aliases": []
+        },
+        "11": {
+          "expected": "0",
+          "aliases": []
+        },
+        "12": {
+          "expected": "270",
+          "aliases": []
+        },
+        "13": {
+          "expected": "114",
+          "aliases": []
+        },
+        "14": {
+          "expected": "5491",
+          "aliases": [
+            "5,491"
+          ]
+        },
+        "15": {
+          "expected": "24300",
+          "aliases": [
+            "24,300"
+          ]
+        }
+      }
+    },
+    "purple_comet_hs_2007": {
+      "year": 2007,
+      "level": "HS",
+      "question_count": 25,
+      "total_points": 25,
+      "answer_source": "data/raw/purple_comet/official_answers/2007/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2007/2",
+      "answer_source_sha256": "92c85f5506b63228b8e434698e14ebbf78afd30fe36218c87626307a284dc279",
+      "parts": {
+        "1": {
+          "expected": "231",
+          "aliases": []
+        },
+        "2": {
+          "expected": "7",
+          "aliases": []
+        },
+        "3": {
+          "expected": "45",
+          "aliases": []
+        },
+        "4": {
+          "expected": "120",
+          "aliases": []
+        },
+        "5": {
+          "expected": "383",
+          "aliases": []
+        },
+        "6": {
+          "expected": "770",
+          "aliases": []
+        },
+        "7": {
+          "expected": "65",
+          "aliases": []
+        },
+        "8": {
+          "expected": "67",
+          "aliases": []
+        },
+        "9": {
+          "expected": "1094",
+          "aliases": [
+            "1,094"
+          ]
+        },
+        "10": {
+          "expected": "125",
+          "aliases": []
+        },
+        "11": {
+          "expected": "617",
+          "aliases": []
+        },
+        "12": {
+          "expected": "216",
+          "aliases": []
+        },
+        "13": {
+          "expected": "65",
+          "aliases": []
+        },
+        "14": {
+          "expected": "6117",
+          "aliases": [
+            "6,117"
+          ]
+        },
+        "15": {
+          "expected": "252",
+          "aliases": []
+        },
+        "16": {
+          "expected": "70",
+          "aliases": []
+        },
+        "17": {
+          "expected": "19080",
+          "aliases": [
+            "19,080"
+          ]
+        },
+        "18": {
+          "expected": "16",
+          "aliases": []
+        },
+        "19": {
+          "expected": "1106",
+          "aliases": [
+            "1,106"
+          ]
+        },
+        "20": {
+          "expected": "776",
+          "aliases": []
+        },
+        "21": {
+          "expected": "7",
+          "aliases": []
+        },
+        "22": {
+          "expected": "19683",
+          "aliases": [
+            "19,683"
+          ]
+        },
+        "23": {
+          "expected": "192",
+          "aliases": []
+        },
+        "24": {
+          "expected": "121",
+          "aliases": []
+        },
+        "25": {
+          "expected": "133",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_ms_2007": {
+      "year": 2007,
+      "level": "MS",
+      "question_count": 15,
+      "total_points": 15,
+      "answer_source": "data/raw/purple_comet/official_answers/2007/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2007/1",
+      "answer_source_sha256": "02b2a7883265d605d0f00a13ab1d5e1187d5ca2570ae9c4660342c9be37c8843",
+      "parts": {
+        "1": {
+          "expected": "9",
+          "aliases": []
+        },
+        "2": {
+          "expected": "1500",
+          "aliases": [
+            "1,500"
+          ]
+        },
+        "3": {
+          "expected": "144",
+          "aliases": []
+        },
+        "4": {
+          "expected": "780",
+          "aliases": []
+        },
+        "5": {
+          "expected": "1461",
+          "aliases": [
+            "1,461"
+          ]
+        },
+        "6": {
+          "expected": "360",
+          "aliases": []
+        },
+        "7": {
+          "expected": "12",
+          "aliases": []
+        },
+        "8": {
+          "expected": "97",
+          "aliases": []
+        },
+        "9": {
+          "expected": "1185",
+          "aliases": [
+            "1,185"
+          ]
+        },
+        "10": {
+          "expected": "72",
+          "aliases": []
+        },
+        "11": {
+          "expected": "252",
+          "aliases": []
+        },
+        "12": {
+          "expected": "240",
+          "aliases": []
+        },
+        "13": {
+          "expected": "1001",
+          "aliases": [
+            "1,001"
+          ]
+        },
+        "14": {
+          "expected": "280",
+          "aliases": []
+        },
+        "15": {
+          "expected": "70",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_hs_2008": {
+      "year": 2008,
+      "level": "HS",
+      "question_count": 25,
+      "total_points": 25,
+      "answer_source": "data/raw/purple_comet/official_answers/2008/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2008/2",
+      "answer_source_sha256": "2041ba5d10e727d9418a51d3f2560788833c7a6e1d094bdccccbc3aba3ec818f",
+      "parts": {
+        "1": {
+          "expected": "2578899",
+          "aliases": [
+            "2,578,899"
+          ]
+        },
+        "2": {
+          "expected": "80",
+          "aliases": []
+        },
+        "3": {
+          "expected": "397",
+          "aliases": []
+        },
+        "4": {
+          "expected": "540",
+          "aliases": []
+        },
+        "5": {
+          "expected": "13500",
+          "aliases": [
+            "13,500"
+          ]
+        },
+        "6": {
+          "expected": "320",
+          "aliases": []
+        },
+        "7": {
+          "expected": "29",
+          "aliases": []
+        },
+        "8": {
+          "expected": "60",
+          "aliases": []
+        },
+        "9": {
+          "expected": "2820",
+          "aliases": [
+            "2,820"
+          ]
+        },
+        "10": {
+          "expected": "103950",
+          "aliases": [
+            "103,950"
+          ]
+        },
+        "11": {
+          "expected": "194",
+          "aliases": []
+        },
+        "12": {
+          "expected": "252",
+          "aliases": []
+        },
+        "13": {
+          "expected": "133",
+          "aliases": []
+        },
+        "14": {
+          "expected": "2128",
+          "aliases": [
+            "2,128"
+          ]
+        },
+        "15": {
+          "expected": "19999999999999999999999",
+          "aliases": [
+            "19,999,999,999,999,999,999,999"
+          ]
+        },
+        "16": {
+          "expected": "98",
+          "aliases": []
+        },
+        "17": {
+          "expected": "504",
+          "aliases": []
+        },
+        "18": {
+          "expected": "171",
+          "aliases": []
+        },
+        "19": {
+          "expected": "1875",
+          "aliases": [
+            "1,875"
+          ]
+        },
+        "20": {
+          "expected": "313",
+          "aliases": []
+        },
+        "21": {
+          "expected": "53",
+          "aliases": []
+        },
+        "22": {
+          "expected": "896",
+          "aliases": []
+        },
+        "23": {
+          "expected": "45",
+          "aliases": []
+        },
+        "24": {
+          "expected": "9221",
+          "aliases": [
+            "9,221"
+          ]
+        },
+        "25": {
+          "expected": "160",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_ms_2008": {
+      "year": 2008,
+      "level": "MS",
+      "question_count": 15,
+      "total_points": 15,
+      "answer_source": "data/raw/purple_comet/official_answers/2008/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2008/1",
+      "answer_source_sha256": "b9c9de77aa0914d225d435aa597e25629d2690de784536b88ae69c7abe45a4fb",
+      "parts": {
+        "1": {
+          "expected": "31",
+          "aliases": []
+        },
+        "2": {
+          "expected": "76",
+          "aliases": []
+        },
+        "3": {
+          "expected": "486",
+          "aliases": []
+        },
+        "4": {
+          "expected": "165",
+          "aliases": []
+        },
+        "5": {
+          "expected": "66",
+          "aliases": []
+        },
+        "6": {
+          "expected": "75",
+          "aliases": []
+        },
+        "7": {
+          "expected": "150",
+          "aliases": []
+        },
+        "8": {
+          "expected": "238",
+          "aliases": []
+        },
+        "9": {
+          "expected": "172",
+          "aliases": []
+        },
+        "10": {
+          "expected": "544",
+          "aliases": []
+        },
+        "11": {
+          "expected": "221",
+          "aliases": []
+        },
+        "12": {
+          "expected": "544",
+          "aliases": []
+        },
+        "13": {
+          "expected": "60",
+          "aliases": []
+        },
+        "14": {
+          "expected": "29",
+          "aliases": []
+        },
+        "15": {
+          "expected": "6852",
+          "aliases": [
+            "6,852"
+          ]
+        }
+      }
+    },
+    "purple_comet_hs_2009": {
+      "year": 2009,
+      "level": "HS",
+      "question_count": 25,
+      "total_points": 25,
+      "answer_source": "data/raw/purple_comet/official_answers/2009/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2009/2",
+      "answer_source_sha256": "147b6b31c5f3919786eb4bff1e59dabf99de666d61bcf110e4a1c69aaf1c1184",
+      "parts": {
+        "1": {
+          "expected": "19",
+          "aliases": []
+        },
+        "2": {
+          "expected": "5",
+          "aliases": []
+        },
+        "3": {
+          "expected": "727",
+          "aliases": []
+        },
+        "4": {
+          "expected": "95",
+          "aliases": []
+        },
+        "5": {
+          "expected": "25",
+          "aliases": []
+        },
+        "6": {
+          "expected": "576",
+          "aliases": []
+        },
+        "7": {
+          "expected": "81",
+          "aliases": []
+        },
+        "8": {
+          "expected": "240",
+          "aliases": []
+        },
+        "9": {
+          "expected": "88",
+          "aliases": []
+        },
+        "10": {
+          "expected": "1033",
+          "aliases": [
+            "1,033"
+          ]
+        },
+        "11": {
+          "expected": "23",
+          "aliases": []
+        },
+        "12": {
+          "expected": "3810",
+          "aliases": [
+            "3,810"
+          ]
+        },
+        "13": {
+          "expected": "25",
+          "aliases": []
+        },
+        "14": {
+          "expected": "10",
+          "aliases": []
+        },
+        "15": {
+          "expected": "801",
+          "aliases": []
+        },
+        "16": {
+          "expected": "524",
+          "aliases": []
+        },
+        "17": {
+          "expected": "78",
+          "aliases": []
+        },
+        "18": {
+          "expected": "623",
+          "aliases": []
+        },
+        "19": {
+          "expected": "57",
+          "aliases": []
+        },
+        "20": {
+          "expected": "287",
+          "aliases": []
+        },
+        "21": {
+          "expected": "107",
+          "aliases": []
+        },
+        "22": {
+          "expected": "20",
+          "aliases": []
+        },
+        "23": {
+          "expected": "61",
+          "aliases": []
+        },
+        "24": {
+          "expected": "364",
+          "aliases": []
+        },
+        "25": {
+          "expected": "20090",
+          "aliases": [
+            "20,090"
+          ]
+        }
+      }
+    },
+    "purple_comet_ms_2009": {
+      "year": 2009,
+      "level": "MS",
+      "question_count": 15,
+      "total_points": 15,
+      "answer_source": "data/raw/purple_comet/official_answers/2009/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2009/1",
+      "answer_source_sha256": "8fdf8e0729a9167067261f4a2b4bf7eea95118ad44b73a559dcae0bfca025294",
+      "parts": {
+        "1": {
+          "expected": "76",
+          "aliases": []
+        },
+        "2": {
+          "expected": "8",
+          "aliases": []
+        },
+        "3": {
+          "expected": "142",
+          "aliases": []
+        },
+        "4": {
+          "expected": "18",
+          "aliases": []
+        },
+        "5": {
+          "expected": "4000",
+          "aliases": [
+            "4,000"
+          ]
+        },
+        "6": {
+          "expected": "1991",
+          "aliases": [
+            "1,991"
+          ]
+        },
+        "7": {
+          "expected": "72",
+          "aliases": []
+        },
+        "8": {
+          "expected": "20",
+          "aliases": []
+        },
+        "9": {
+          "expected": "54",
+          "aliases": []
+        },
+        "10": {
+          "expected": "100",
+          "aliases": []
+        },
+        "11": {
+          "expected": "90",
+          "aliases": []
+        },
+        "12": {
+          "expected": "1728",
+          "aliases": [
+            "1,728"
+          ]
+        },
+        "13": {
+          "expected": "1920",
+          "aliases": [
+            "1,920"
+          ]
+        },
+        "14": {
+          "expected": "600",
+          "aliases": []
+        },
+        "15": {
+          "expected": "1377",
+          "aliases": [
+            "1,377"
+          ]
+        }
+      }
+    },
+    "purple_comet_hs_2010": {
+      "year": 2010,
+      "level": "HS",
+      "question_count": 30,
+      "total_points": 30,
+      "answer_source": "data/raw/purple_comet/official_answers/2010/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2010/2",
+      "answer_source_sha256": "a38884b70f3cf263a982f8e79beecd93a2921cd047fd99badb28262945942c70",
+      "parts": {
+        "1": {
+          "expected": "8",
+          "aliases": []
+        },
+        "2": {
+          "expected": "19",
+          "aliases": []
+        },
+        "3": {
+          "expected": "66",
+          "aliases": []
+        },
+        "4": {
+          "expected": "34825",
+          "aliases": [
+            "34,825"
+          ]
+        },
+        "5": {
+          "expected": "98",
+          "aliases": []
+        },
+        "6": {
+          "expected": "7245",
+          "aliases": [
+            "7,245"
+          ]
+        },
+        "7": {
+          "expected": "7",
+          "aliases": []
+        },
+        "8": {
+          "expected": "288",
+          "aliases": []
+        },
+        "9": {
+          "expected": "64",
+          "aliases": []
+        },
+        "10": {
+          "expected": "182",
+          "aliases": []
+        },
+        "11": {
+          "expected": "11",
+          "aliases": []
+        },
+        "12": {
+          "expected": "51",
+          "aliases": []
+        },
+        "13": {
+          "expected": "630",
+          "aliases": []
+        },
+        "14": {
+          "expected": "126",
+          "aliases": []
+        },
+        "15": {
+          "expected": "47",
+          "aliases": []
+        },
+        "16": {
+          "expected": "21",
+          "aliases": []
+        },
+        "17": {
+          "expected": "2521",
+          "aliases": [
+            "2,521"
+          ]
+        },
+        "18": {
+          "expected": "122",
+          "aliases": []
+        },
+        "19": {
+          "expected": "147",
+          "aliases": []
+        },
+        "20": {
+          "expected": "162",
+          "aliases": []
+        },
+        "21": {
+          "expected": "891",
+          "aliases": []
+        },
+        "22": {
+          "expected": "42",
+          "aliases": []
+        },
+        "23": {
+          "expected": "19",
+          "aliases": []
+        },
+        "24": {
+          "expected": "24",
+          "aliases": []
+        },
+        "25": {
+          "expected": "10",
+          "aliases": []
+        },
+        "26": {
+          "expected": "71",
+          "aliases": []
+        },
+        "27": {
+          "expected": "35",
+          "aliases": []
+        },
+        "28": {
+          "expected": "97",
+          "aliases": []
+        },
+        "29": {
+          "expected": "175",
+          "aliases": []
+        },
+        "30": {
+          "expected": "20",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_ms_2010": {
+      "year": 2010,
+      "level": "MS",
+      "question_count": 20,
+      "total_points": 20,
+      "answer_source": "data/raw/purple_comet/official_answers/2010/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2010/1",
+      "answer_source_sha256": "ab2a5dea2397f738730fe3b538a7705955b2e822d71fd2852e0565bc240b5a5a",
+      "parts": {
+        "1": {
+          "expected": "165",
+          "aliases": []
+        },
+        "2": {
+          "expected": "60",
+          "aliases": []
+        },
+        "3": {
+          "expected": "69",
+          "aliases": []
+        },
+        "4": {
+          "expected": "14",
+          "aliases": []
+        },
+        "5": {
+          "expected": "89",
+          "aliases": []
+        },
+        "6": {
+          "expected": "47",
+          "aliases": []
+        },
+        "7": {
+          "expected": "50",
+          "aliases": []
+        },
+        "8": {
+          "expected": "6333",
+          "aliases": [
+            "6,333"
+          ]
+        },
+        "9": {
+          "expected": "35",
+          "aliases": []
+        },
+        "10": {
+          "expected": "55",
+          "aliases": []
+        },
+        "11": {
+          "expected": "176",
+          "aliases": []
+        },
+        "12": {
+          "expected": "337",
+          "aliases": []
+        },
+        "13": {
+          "expected": "129",
+          "aliases": []
+        },
+        "14": {
+          "expected": "81",
+          "aliases": []
+        },
+        "15": {
+          "expected": "2073",
+          "aliases": [
+            "2,073"
+          ]
+        },
+        "16": {
+          "expected": "608",
+          "aliases": []
+        },
+        "17": {
+          "expected": "640",
+          "aliases": []
+        },
+        "18": {
+          "expected": "675",
+          "aliases": []
+        },
+        "19": {
+          "expected": "54",
+          "aliases": []
+        },
+        "20": {
+          "expected": "4021",
+          "aliases": [
+            "4,021"
+          ]
+        }
+      }
+    },
+    "purple_comet_hs_2011": {
+      "year": 2011,
+      "level": "HS",
+      "question_count": 30,
+      "total_points": 30,
+      "answer_source": "data/raw/purple_comet/official_answers/2011/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2011/2",
+      "answer_source_sha256": "cf73df6272cae30aff2375b98aeda946df9a275a19b81a90b6f6a0c7ed4d3796",
+      "parts": {
+        "1": {
+          "expected": "24",
+          "aliases": []
+        },
+        "2": {
+          "expected": "60",
+          "aliases": []
+        },
+        "3": {
+          "expected": "150",
+          "aliases": []
+        },
+        "4": {
+          "expected": "12",
+          "aliases": []
+        },
+        "5": {
+          "expected": "95",
+          "aliases": []
+        },
+        "6": {
+          "expected": "29",
+          "aliases": []
+        },
+        "7": {
+          "expected": "73",
+          "aliases": []
+        },
+        "8": {
+          "expected": "952",
+          "aliases": []
+        },
+        "9": {
+          "expected": "52",
+          "aliases": []
+        },
+        "10": {
+          "expected": "31",
+          "aliases": []
+        },
+        "11": {
+          "expected": "100",
+          "aliases": []
+        },
+        "12": {
+          "expected": "600",
+          "aliases": []
+        },
+        "13": {
+          "expected": "405",
+          "aliases": []
+        },
+        "14": {
+          "expected": "6",
+          "aliases": []
+        },
+        "15": {
+          "expected": "67",
+          "aliases": []
+        },
+        "16": {
+          "expected": "522801",
+          "aliases": [
+            "522,801"
+          ]
+        },
+        "17": {
+          "expected": "336",
+          "aliases": []
+        },
+        "18": {
+          "expected": "259",
+          "aliases": []
+        },
+        "19": {
+          "expected": "64",
+          "aliases": []
+        },
+        "20": {
+          "expected": "47",
+          "aliases": []
+        },
+        "21": {
+          "expected": "60",
+          "aliases": []
+        },
+        "22": {
+          "expected": "1320",
+          "aliases": [
+            "1,320"
+          ]
+        },
+        "23": {
+          "expected": "8",
+          "aliases": []
+        },
+        "24": {
+          "expected": "19",
+          "aliases": []
+        },
+        "25": {
+          "expected": "19",
+          "aliases": []
+        },
+        "26": {
+          "expected": "361",
+          "aliases": []
+        },
+        "27": {
+          "expected": "17",
+          "aliases": []
+        },
+        "28": {
+          "expected": "46",
+          "aliases": []
+        },
+        "29": {
+          "expected": "41",
+          "aliases": []
+        },
+        "30": {
+          "expected": "2449",
+          "aliases": [
+            "2,449"
+          ]
+        }
+      }
+    },
+    "purple_comet_ms_2011": {
+      "year": 2011,
+      "level": "MS",
+      "question_count": 20,
+      "total_points": 20,
+      "answer_source": "data/raw/purple_comet/official_answers/2011/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2011/1",
+      "answer_source_sha256": "04c53d9ff9234acd2362f3b617070761b899375c32612441de58f8b55d2ec014",
+      "parts": {
+        "1": {
+          "expected": "41",
+          "aliases": []
+        },
+        "2": {
+          "expected": "75",
+          "aliases": []
+        },
+        "3": {
+          "expected": "215",
+          "aliases": []
+        },
+        "4": {
+          "expected": "1",
+          "aliases": []
+        },
+        "5": {
+          "expected": "5",
+          "aliases": []
+        },
+        "6": {
+          "expected": "24",
+          "aliases": []
+        },
+        "7": {
+          "expected": "247",
+          "aliases": []
+        },
+        "8": {
+          "expected": "117",
+          "aliases": []
+        },
+        "9": {
+          "expected": "10",
+          "aliases": []
+        },
+        "10": {
+          "expected": "90",
+          "aliases": []
+        },
+        "11": {
+          "expected": "16",
+          "aliases": []
+        },
+        "12": {
+          "expected": "60",
+          "aliases": []
+        },
+        "13": {
+          "expected": "32",
+          "aliases": []
+        },
+        "14": {
+          "expected": "99972",
+          "aliases": [
+            "99,972"
+          ]
+        },
+        "15": {
+          "expected": "55",
+          "aliases": []
+        },
+        "16": {
+          "expected": "1509",
+          "aliases": [
+            "1,509"
+          ]
+        },
+        "17": {
+          "expected": "2017",
+          "aliases": [
+            "2,017"
+          ]
+        },
+        "18": {
+          "expected": "2011",
+          "aliases": [
+            "2,011"
+          ]
+        },
+        "19": {
+          "expected": "720",
+          "aliases": []
+        },
+        "20": {
+          "expected": "650",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_hs_2012": {
+      "year": 2012,
+      "level": "HS",
+      "question_count": 30,
+      "total_points": 30,
+      "answer_source": "data/raw/purple_comet/official_answers/2012/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2012/2",
+      "answer_source_sha256": "2d141dfba12371bb0a859f94b764d3aa14983e2421f5edf8d07df8cba6efc578",
+      "parts": {
+        "1": {
+          "expected": "48",
+          "aliases": []
+        },
+        "2": {
+          "expected": "703",
+          "aliases": []
+        },
+        "3": {
+          "expected": "144",
+          "aliases": []
+        },
+        "4": {
+          "expected": "15",
+          "aliases": []
+        },
+        "5": {
+          "expected": "33",
+          "aliases": []
+        },
+        "6": {
+          "expected": "135",
+          "aliases": []
+        },
+        "7": {
+          "expected": "189",
+          "aliases": []
+        },
+        "8": {
+          "expected": "73",
+          "aliases": []
+        },
+        "9": {
+          "expected": "81",
+          "aliases": []
+        },
+        "10": {
+          "expected": "414",
+          "aliases": []
+        },
+        "11": {
+          "expected": "259",
+          "aliases": []
+        },
+        "12": {
+          "expected": "190",
+          "aliases": []
+        },
+        "13": {
+          "expected": "34",
+          "aliases": []
+        },
+        "14": {
+          "expected": "11",
+          "aliases": []
+        },
+        "15": {
+          "expected": "4374",
+          "aliases": [
+            "4,374"
+          ]
+        },
+        "16": {
+          "expected": "167",
+          "aliases": []
+        },
+        "17": {
+          "expected": "781",
+          "aliases": []
+        },
+        "18": {
+          "expected": "138",
+          "aliases": []
+        },
+        "19": {
+          "expected": "8",
+          "aliases": []
+        },
+        "20": {
+          "expected": "46",
+          "aliases": []
+        },
+        "21": {
+          "expected": "142",
+          "aliases": []
+        },
+        "22": {
+          "expected": "13",
+          "aliases": []
+        },
+        "23": {
+          "expected": "2093124",
+          "aliases": [
+            "2,093,124"
+          ]
+        },
+        "24": {
+          "expected": "55",
+          "aliases": []
+        },
+        "25": {
+          "expected": "47",
+          "aliases": []
+        },
+        "26": {
+          "expected": "93",
+          "aliases": []
+        },
+        "27": {
+          "expected": "286",
+          "aliases": []
+        },
+        "28": {
+          "expected": "6",
+          "aliases": []
+        },
+        "29": {
+          "expected": "253",
+          "aliases": []
+        },
+        "30": {
+          "expected": "67",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_ms_2012": {
+      "year": 2012,
+      "level": "MS",
+      "question_count": 20,
+      "total_points": 20,
+      "answer_source": "data/raw/purple_comet/official_answers/2012/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2012/1",
+      "answer_source_sha256": "8ce42a06527dd7c49c4479514f14ce2feef397fe4501861e295b2d40eca75c33",
+      "parts": {
+        "1": {
+          "expected": "549",
+          "aliases": []
+        },
+        "2": {
+          "expected": "90",
+          "aliases": []
+        },
+        "3": {
+          "expected": "30",
+          "aliases": []
+        },
+        "4": {
+          "expected": "18",
+          "aliases": []
+        },
+        "5": {
+          "expected": "20",
+          "aliases": []
+        },
+        "6": {
+          "expected": "35",
+          "aliases": []
+        },
+        "7": {
+          "expected": "50",
+          "aliases": []
+        },
+        "8": {
+          "expected": "105",
+          "aliases": []
+        },
+        "9": {
+          "expected": "32",
+          "aliases": []
+        },
+        "10": {
+          "expected": "111888",
+          "aliases": [
+            "111,888"
+          ]
+        },
+        "11": {
+          "expected": "10",
+          "aliases": []
+        },
+        "12": {
+          "expected": "20",
+          "aliases": []
+        },
+        "13": {
+          "expected": "779",
+          "aliases": []
+        },
+        "14": {
+          "expected": "520",
+          "aliases": []
+        },
+        "15": {
+          "expected": "19",
+          "aliases": []
+        },
+        "16": {
+          "expected": "61",
+          "aliases": []
+        },
+        "17": {
+          "expected": "29",
+          "aliases": []
+        },
+        "18": {
+          "expected": "208",
+          "aliases": []
+        },
+        "19": {
+          "expected": "1560",
+          "aliases": [
+            "1,560"
+          ]
+        },
+        "20": {
+          "expected": "84269",
+          "aliases": [
+            "84,269"
+          ]
+        }
+      }
+    },
+    "purple_comet_hs_2013": {
+      "year": 2013,
+      "level": "HS",
+      "question_count": 30,
+      "total_points": 30,
+      "answer_source": "data/raw/purple_comet/official_answers/2013/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2013/2",
+      "answer_source_sha256": "46dd9eab848a89f47e92e007748abd43aec3a90eece452380600e138c3f34007",
+      "parts": {
+        "1": {
+          "expected": "45",
+          "aliases": []
+        },
+        "2": {
+          "expected": "80",
+          "aliases": []
+        },
+        "3": {
+          "expected": "254",
+          "aliases": []
+        },
+        "4": {
+          "expected": "48",
+          "aliases": []
+        },
+        "5": {
+          "expected": "720",
+          "aliases": []
+        },
+        "6": {
+          "expected": "48",
+          "aliases": []
+        },
+        "7": {
+          "expected": "504405",
+          "aliases": [
+            "504,405"
+          ]
+        },
+        "8": {
+          "expected": "540",
+          "aliases": []
+        },
+        "9": {
+          "expected": "18",
+          "aliases": []
+        },
+        "10": {
+          "expected": "4022",
+          "aliases": [
+            "4,022"
+          ]
+        },
+        "11": {
+          "expected": "60",
+          "aliases": []
+        },
+        "12": {
+          "expected": "7801",
+          "aliases": [
+            "7,801"
+          ]
+        },
+        "13": {
+          "expected": "19",
+          "aliases": []
+        },
+        "14": {
+          "expected": "19",
+          "aliases": []
+        },
+        "15": {
+          "expected": "497",
+          "aliases": []
+        },
+        "16": {
+          "expected": "3540",
+          "aliases": [
+            "3,540"
+          ]
+        },
+        "17": {
+          "expected": "45",
+          "aliases": []
+        },
+        "18": {
+          "expected": "126",
+          "aliases": []
+        },
+        "19": {
+          "expected": "439",
+          "aliases": []
+        },
+        "20": {
+          "expected": "36",
+          "aliases": []
+        },
+        "21": {
+          "expected": "0",
+          "aliases": []
+        },
+        "22": {
+          "expected": "397",
+          "aliases": []
+        },
+        "23": {
+          "expected": "55",
+          "aliases": []
+        },
+        "24": {
+          "expected": "27",
+          "aliases": []
+        },
+        "25": {
+          "expected": "70",
+          "aliases": []
+        },
+        "26": {
+          "expected": "1088",
+          "aliases": [
+            "1,088"
+          ]
+        },
+        "27": {
+          "expected": "125",
+          "aliases": []
+        },
+        "28": {
+          "expected": "4500",
+          "aliases": [
+            "4,500"
+          ]
+        },
+        "29": {
+          "expected": "798",
+          "aliases": []
+        },
+        "30": {
+          "expected": "245",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_ms_2013": {
+      "year": 2013,
+      "level": "MS",
+      "question_count": 20,
+      "total_points": 20,
+      "answer_source": "data/raw/purple_comet/official_answers/2013/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2013/1",
+      "answer_source_sha256": "d1b6f9399c246b3f438ff27b793ebce4175ef609f35f9ec02752e572d2a8cfdb",
+      "parts": {
+        "1": {
+          "expected": "175",
+          "aliases": []
+        },
+        "2": {
+          "expected": "14",
+          "aliases": []
+        },
+        "3": {
+          "expected": "17",
+          "aliases": []
+        },
+        "4": {
+          "expected": "56",
+          "aliases": []
+        },
+        "5": {
+          "expected": "24",
+          "aliases": []
+        },
+        "6": {
+          "expected": "1500",
+          "aliases": [
+            "1,500"
+          ]
+        },
+        "7": {
+          "expected": "7200000",
+          "aliases": [
+            "7,200,000"
+          ]
+        },
+        "8": {
+          "expected": "72",
+          "aliases": []
+        },
+        "9": {
+          "expected": "66660",
+          "aliases": [
+            "66,660"
+          ]
+        },
+        "10": {
+          "expected": "134",
+          "aliases": []
+        },
+        "11": {
+          "expected": "536",
+          "aliases": []
+        },
+        "12": {
+          "expected": "1850",
+          "aliases": [
+            "1,850"
+          ]
+        },
+        "13": {
+          "expected": "11",
+          "aliases": []
+        },
+        "14": {
+          "expected": "84",
+          "aliases": []
+        },
+        "15": {
+          "expected": "32",
+          "aliases": []
+        },
+        "16": {
+          "expected": "3000",
+          "aliases": [
+            "3,000"
+          ]
+        },
+        "17": {
+          "expected": "203",
+          "aliases": []
+        },
+        "18": {
+          "expected": "13",
+          "aliases": []
+        },
+        "19": {
+          "expected": "6",
+          "aliases": []
+        },
+        "20": {
+          "expected": "77",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_hs_2014": {
+      "year": 2014,
+      "level": "HS",
+      "question_count": 30,
+      "total_points": 30,
+      "answer_source": "data/raw/purple_comet/official_answers/2014/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2014/2",
+      "answer_source_sha256": "b4f5e6cfc7c22fc47be88677ad1a20d11cc5a92c3aab92165d4283d3f4cb1ad0",
+      "parts": {
+        "1": {
+          "expected": "48",
+          "aliases": []
+        },
+        "2": {
+          "expected": "39",
+          "aliases": []
+        },
+        "3": {
+          "expected": "136",
+          "aliases": []
+        },
+        "4": {
+          "expected": "33",
+          "aliases": []
+        },
+        "5": {
+          "expected": "48",
+          "aliases": []
+        },
+        "6": {
+          "expected": "59",
+          "aliases": []
+        },
+        "7": {
+          "expected": "79",
+          "aliases": []
+        },
+        "8": {
+          "expected": "54",
+          "aliases": []
+        },
+        "9": {
+          "expected": "8",
+          "aliases": []
+        },
+        "10": {
+          "expected": "49",
+          "aliases": []
+        },
+        "11": {
+          "expected": "640",
+          "aliases": []
+        },
+        "12": {
+          "expected": "94",
+          "aliases": []
+        },
+        "13": {
+          "expected": "7",
+          "aliases": []
+        },
+        "14": {
+          "expected": "40",
+          "aliases": []
+        },
+        "15": {
+          "expected": "92",
+          "aliases": []
+        },
+        "16": {
+          "expected": "344",
+          "aliases": []
+        },
+        "17": {
+          "expected": "114",
+          "aliases": []
+        },
+        "18": {
+          "expected": "403",
+          "aliases": []
+        },
+        "19": {
+          "expected": "31",
+          "aliases": []
+        },
+        "20": {
+          "expected": "600",
+          "aliases": []
+        },
+        "21": {
+          "expected": "246",
+          "aliases": []
+        },
+        "22": {
+          "expected": "120",
+          "aliases": []
+        },
+        "23": {
+          "expected": "32",
+          "aliases": []
+        },
+        "24": {
+          "expected": "93",
+          "aliases": []
+        },
+        "25": {
+          "expected": "26",
+          "aliases": []
+        },
+        "26": {
+          "expected": "24",
+          "aliases": []
+        },
+        "27": {
+          "expected": "59",
+          "aliases": []
+        },
+        "28": {
+          "expected": "16",
+          "aliases": []
+        },
+        "29": {
+          "expected": "203",
+          "aliases": []
+        },
+        "30": {
+          "expected": "51",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_ms_2014": {
+      "year": 2014,
+      "level": "MS",
+      "question_count": 20,
+      "total_points": 20,
+      "answer_source": "data/raw/purple_comet/official_answers/2014/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2014/1",
+      "answer_source_sha256": "82cbd05112ef8905b34c1e2098a98da0b09b2fe89f79fadb98d8cf1602c9ab09",
+      "parts": {
+        "1": {
+          "expected": "15",
+          "aliases": []
+        },
+        "2": {
+          "expected": "97",
+          "aliases": []
+        },
+        "3": {
+          "expected": "180",
+          "aliases": []
+        },
+        "4": {
+          "expected": "180",
+          "aliases": []
+        },
+        "5": {
+          "expected": "64",
+          "aliases": []
+        },
+        "6": {
+          "expected": "44",
+          "aliases": []
+        },
+        "7": {
+          "expected": "28",
+          "aliases": []
+        },
+        "8": {
+          "expected": "36",
+          "aliases": []
+        },
+        "9": {
+          "expected": "45",
+          "aliases": []
+        },
+        "10": {
+          "expected": "55",
+          "aliases": []
+        },
+        "11": {
+          "expected": "94",
+          "aliases": []
+        },
+        "12": {
+          "expected": "13",
+          "aliases": []
+        },
+        "13": {
+          "expected": "55",
+          "aliases": []
+        },
+        "14": {
+          "expected": "5",
+          "aliases": []
+        },
+        "15": {
+          "expected": "350",
+          "aliases": []
+        },
+        "16": {
+          "expected": "57",
+          "aliases": []
+        },
+        "17": {
+          "expected": "200",
+          "aliases": []
+        },
+        "18": {
+          "expected": "22",
+          "aliases": []
+        },
+        "19": {
+          "expected": "956",
+          "aliases": []
+        },
+        "20": {
+          "expected": "1248",
+          "aliases": [
+            "1,248"
+          ]
+        }
+      }
+    },
+    "purple_comet_hs_2015": {
+      "year": 2015,
+      "level": "HS",
+      "question_count": 30,
+      "total_points": 30,
+      "answer_source": "data/raw/purple_comet/official_answers/2015/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2015/2",
+      "answer_source_sha256": "c3f3ae1845a1c8358653e62ac0ad3263c1cdcc55f44387562a72fbd90dd80bf9",
+      "parts": {
+        "1": {
+          "expected": "52",
+          "aliases": []
+        },
+        "2": {
+          "expected": "6",
+          "aliases": []
+        },
+        "3": {
+          "expected": "50",
+          "aliases": []
+        },
+        "4": {
+          "expected": "86",
+          "aliases": []
+        },
+        "5": {
+          "expected": "54",
+          "aliases": []
+        },
+        "6": {
+          "expected": "53",
+          "aliases": []
+        },
+        "7": {
+          "expected": "397",
+          "aliases": []
+        },
+        "8": {
+          "expected": "107",
+          "aliases": []
+        },
+        "9": {
+          "expected": "4004",
+          "aliases": [
+            "4,004"
+          ]
+        },
+        "10": {
+          "expected": "35",
+          "aliases": []
+        },
+        "11": {
+          "expected": "15",
+          "aliases": []
+        },
+        "12": {
+          "expected": "825",
+          "aliases": []
+        },
+        "13": {
+          "expected": "288",
+          "aliases": []
+        },
+        "14": {
+          "expected": "768",
+          "aliases": []
+        },
+        "15": {
+          "expected": "360",
+          "aliases": []
+        },
+        "16": {
+          "expected": "3073",
+          "aliases": [
+            "3,073"
+          ]
+        },
+        "17": {
+          "expected": "256",
+          "aliases": []
+        },
+        "18": {
+          "expected": "12",
+          "aliases": []
+        },
+        "19": {
+          "expected": "176",
+          "aliases": []
+        },
+        "20": {
+          "expected": "47",
+          "aliases": []
+        },
+        "21": {
+          "expected": "0",
+          "aliases": []
+        },
+        "22": {
+          "expected": "91",
+          "aliases": []
+        },
+        "23": {
+          "expected": "413",
+          "aliases": []
+        },
+        "24": {
+          "expected": "71",
+          "aliases": []
+        },
+        "25": {
+          "expected": "243",
+          "aliases": []
+        },
+        "26": {
+          "expected": "25",
+          "aliases": []
+        },
+        "27": {
+          "expected": "372",
+          "aliases": []
+        },
+        "28": {
+          "expected": "9720",
+          "aliases": [
+            "9,720"
+          ]
+        },
+        "29": {
+          "expected": "304",
+          "aliases": []
+        },
+        "30": {
+          "expected": "1166",
+          "aliases": [
+            "1,166"
+          ]
+        }
+      }
+    },
+    "purple_comet_ms_2015": {
+      "year": 2015,
+      "level": "MS",
+      "question_count": 20,
+      "total_points": 20,
+      "answer_source": "data/raw/purple_comet/official_answers/2015/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2015/1",
+      "answer_source_sha256": "da60d08a10f5553ed8d7cd5b1f81cf97f7db80374ad7489101b34764d0b44294",
+      "parts": {
+        "1": {
+          "expected": "11",
+          "aliases": []
+        },
+        "2": {
+          "expected": "60",
+          "aliases": []
+        },
+        "3": {
+          "expected": "199",
+          "aliases": []
+        },
+        "4": {
+          "expected": "160",
+          "aliases": []
+        },
+        "5": {
+          "expected": "100",
+          "aliases": []
+        },
+        "6": {
+          "expected": "1899",
+          "aliases": [
+            "1,899"
+          ]
+        },
+        "7": {
+          "expected": "41",
+          "aliases": []
+        },
+        "8": {
+          "expected": "37",
+          "aliases": []
+        },
+        "9": {
+          "expected": "252",
+          "aliases": []
+        },
+        "10": {
+          "expected": "129",
+          "aliases": []
+        },
+        "11": {
+          "expected": "1890",
+          "aliases": [
+            "1,890"
+          ]
+        },
+        "12": {
+          "expected": "54",
+          "aliases": []
+        },
+        "13": {
+          "expected": "1250",
+          "aliases": [
+            "1,250"
+          ]
+        },
+        "14": {
+          "expected": "36",
+          "aliases": []
+        },
+        "15": {
+          "expected": "13",
+          "aliases": []
+        },
+        "16": {
+          "expected": "252",
+          "aliases": []
+        },
+        "17": {
+          "expected": "14",
+          "aliases": []
+        },
+        "18": {
+          "expected": "68",
+          "aliases": []
+        },
+        "19": {
+          "expected": "527",
+          "aliases": []
+        },
+        "20": {
+          "expected": "47",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_hs_2016": {
+      "year": 2016,
+      "level": "HS",
+      "question_count": 30,
+      "total_points": 30,
+      "answer_source": "data/raw/purple_comet/official_answers/2016/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2016/2",
+      "answer_source_sha256": "7f2b5d99bda853bb28be4f0301d48dcd4137e2f9ee56cf8fc8f98bc86b1f9478",
+      "parts": {
+        "1": {
+          "expected": "1258",
+          "aliases": [
+            "1,258"
+          ]
+        },
+        "2": {
+          "expected": "50",
+          "aliases": []
+        },
+        "3": {
+          "expected": "15",
+          "aliases": []
+        },
+        "4": {
+          "expected": "234",
+          "aliases": []
+        },
+        "5": {
+          "expected": "269",
+          "aliases": []
+        },
+        "6": {
+          "expected": "180",
+          "aliases": []
+        },
+        "7": {
+          "expected": "156",
+          "aliases": []
+        },
+        "8": {
+          "expected": "65",
+          "aliases": []
+        },
+        "9": {
+          "expected": "210",
+          "aliases": []
+        },
+        "10": {
+          "expected": "87",
+          "aliases": []
+        },
+        "11": {
+          "expected": "328",
+          "aliases": []
+        },
+        "12": {
+          "expected": "17",
+          "aliases": []
+        },
+        "13": {
+          "expected": "20",
+          "aliases": []
+        },
+        "14": {
+          "expected": "1008",
+          "aliases": [
+            "1,008"
+          ]
+        },
+        "15": {
+          "expected": "282282",
+          "aliases": [
+            "282,282"
+          ]
+        },
+        "16": {
+          "expected": "904",
+          "aliases": []
+        },
+        "17": {
+          "expected": "52",
+          "aliases": []
+        },
+        "18": {
+          "expected": "302",
+          "aliases": []
+        },
+        "19": {
+          "expected": "323",
+          "aliases": []
+        },
+        "20": {
+          "expected": "146",
+          "aliases": []
+        },
+        "21": {
+          "expected": "30",
+          "aliases": []
+        },
+        "22": {
+          "expected": "32",
+          "aliases": []
+        },
+        "23": {
+          "expected": "11",
+          "aliases": []
+        },
+        "24": {
+          "expected": "29",
+          "aliases": []
+        },
+        "25": {
+          "expected": "1395",
+          "aliases": [
+            "1,395"
+          ]
+        },
+        "26": {
+          "expected": "209",
+          "aliases": []
+        },
+        "27": {
+          "expected": "231",
+          "aliases": []
+        },
+        "28": {
+          "expected": "66",
+          "aliases": []
+        },
+        "29": {
+          "expected": "7296",
+          "aliases": [
+            "7,296"
+          ]
+        },
+        "30": {
+          "expected": "18",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_ms_2016": {
+      "year": 2016,
+      "level": "MS",
+      "question_count": 20,
+      "total_points": 20,
+      "answer_source": "data/raw/purple_comet/official_answers/2016/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2016/1",
+      "answer_source_sha256": "57ba3eae119694576faefadc386ebf9a03cdd2d347f99a8a5a1b82061ffcf01d",
+      "parts": {
+        "1": {
+          "expected": "36",
+          "aliases": []
+        },
+        "2": {
+          "expected": "120",
+          "aliases": []
+        },
+        "3": {
+          "expected": "2695",
+          "aliases": [
+            "2,695"
+          ]
+        },
+        "4": {
+          "expected": "135",
+          "aliases": []
+        },
+        "5": {
+          "expected": "15",
+          "aliases": []
+        },
+        "6": {
+          "expected": "24",
+          "aliases": []
+        },
+        "7": {
+          "expected": "33",
+          "aliases": []
+        },
+        "8": {
+          "expected": "44",
+          "aliases": []
+        },
+        "9": {
+          "expected": "8",
+          "aliases": []
+        },
+        "10": {
+          "expected": "144",
+          "aliases": []
+        },
+        "11": {
+          "expected": "1210",
+          "aliases": [
+            "1,210"
+          ]
+        },
+        "12": {
+          "expected": "19",
+          "aliases": []
+        },
+        "13": {
+          "expected": "182",
+          "aliases": []
+        },
+        "14": {
+          "expected": "22",
+          "aliases": []
+        },
+        "15": {
+          "expected": "108",
+          "aliases": []
+        },
+        "16": {
+          "expected": "6528",
+          "aliases": [
+            "6,528"
+          ]
+        },
+        "17": {
+          "expected": "19",
+          "aliases": []
+        },
+        "18": {
+          "expected": "1800",
+          "aliases": [
+            "1,800"
+          ]
+        },
+        "19": {
+          "expected": "165",
+          "aliases": []
+        },
+        "20": {
+          "expected": "196",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_hs_2017": {
+      "year": 2017,
+      "level": "HS",
+      "question_count": 30,
+      "total_points": 30,
+      "answer_source": "data/raw/purple_comet/official_answers/2017/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2017/2",
+      "answer_source_sha256": "961ad49b4d1fb76d42fc4c7b595da993db71a1f93d3b12e888d26a6e8454ec8e",
+      "parts": {
+        "1": {
+          "expected": "757",
+          "aliases": []
+        },
+        "2": {
+          "expected": "63",
+          "aliases": []
+        },
+        "3": {
+          "expected": "84",
+          "aliases": []
+        },
+        "4": {
+          "expected": "70",
+          "aliases": []
+        },
+        "5": {
+          "expected": "67",
+          "aliases": []
+        },
+        "6": {
+          "expected": "657",
+          "aliases": []
+        },
+        "7": {
+          "expected": "46",
+          "aliases": []
+        },
+        "8": {
+          "expected": "1250",
+          "aliases": [
+            "1,250"
+          ]
+        },
+        "9": {
+          "expected": "82",
+          "aliases": []
+        },
+        "10": {
+          "expected": "738",
+          "aliases": []
+        },
+        "11": {
+          "expected": "343",
+          "aliases": []
+        },
+        "12": {
+          "expected": "846",
+          "aliases": []
+        },
+        "13": {
+          "expected": "178",
+          "aliases": []
+        },
+        "14": {
+          "expected": "13",
+          "aliases": []
+        },
+        "15": {
+          "expected": "67",
+          "aliases": []
+        },
+        "16": {
+          "expected": "283",
+          "aliases": []
+        },
+        "17": {
+          "expected": "171",
+          "aliases": []
+        },
+        "18": {
+          "expected": "200",
+          "aliases": []
+        },
+        "19": {
+          "expected": "899",
+          "aliases": []
+        },
+        "20": {
+          "expected": "6",
+          "aliases": []
+        },
+        "21": {
+          "expected": "305",
+          "aliases": []
+        },
+        "22": {
+          "expected": "148",
+          "aliases": []
+        },
+        "23": {
+          "expected": "1760",
+          "aliases": [
+            "1,760"
+          ]
+        },
+        "24": {
+          "expected": "843",
+          "aliases": []
+        },
+        "25": {
+          "expected": "64",
+          "aliases": []
+        },
+        "26": {
+          "expected": "119",
+          "aliases": []
+        },
+        "27": {
+          "expected": "96",
+          "aliases": []
+        },
+        "28": {
+          "expected": "451",
+          "aliases": []
+        },
+        "29": {
+          "expected": "63",
+          "aliases": []
+        },
+        "30": {
+          "expected": "704",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_ms_2017": {
+      "year": 2017,
+      "level": "MS",
+      "question_count": 20,
+      "total_points": 20,
+      "answer_source": "data/raw/purple_comet/official_answers/2017/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2017/1",
+      "answer_source_sha256": "2bd64f0e5025cf3b9bfc7a1f0565e62afff20a2471a778245a71ed8d84f072d1",
+      "parts": {
+        "1": {
+          "expected": "5",
+          "aliases": []
+        },
+        "2": {
+          "expected": "36",
+          "aliases": []
+        },
+        "3": {
+          "expected": "2444",
+          "aliases": [
+            "2,444"
+          ]
+        },
+        "4": {
+          "expected": "128",
+          "aliases": []
+        },
+        "5": {
+          "expected": "125",
+          "aliases": []
+        },
+        "6": {
+          "expected": "126",
+          "aliases": []
+        },
+        "7": {
+          "expected": "15",
+          "aliases": []
+        },
+        "8": {
+          "expected": "463",
+          "aliases": []
+        },
+        "9": {
+          "expected": "45",
+          "aliases": []
+        },
+        "10": {
+          "expected": "540",
+          "aliases": []
+        },
+        "11": {
+          "expected": "991",
+          "aliases": []
+        },
+        "12": {
+          "expected": "9",
+          "aliases": []
+        },
+        "13": {
+          "expected": "216",
+          "aliases": []
+        },
+        "14": {
+          "expected": "408",
+          "aliases": []
+        },
+        "15": {
+          "expected": "343",
+          "aliases": []
+        },
+        "16": {
+          "expected": "21",
+          "aliases": []
+        },
+        "17": {
+          "expected": "5041",
+          "aliases": [
+            "5,041"
+          ]
+        },
+        "18": {
+          "expected": "819",
+          "aliases": []
+        },
+        "19": {
+          "expected": "67",
+          "aliases": []
+        },
+        "20": {
+          "expected": "581",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_hs_2018": {
+      "year": 2018,
+      "level": "HS",
+      "question_count": 30,
+      "total_points": 30,
+      "answer_source": "data/raw/purple_comet/official_answers/2018/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2018/2",
+      "answer_source_sha256": "e61e78c0f0a2491dd4aca7797a022bdeb9eae0555a65d825e2cca74bb5b3641c",
+      "parts": {
+        "1": {
+          "expected": "2315",
+          "aliases": [
+            "2,315"
+          ]
+        },
+        "2": {
+          "expected": "90",
+          "aliases": []
+        },
+        "3": {
+          "expected": "1018",
+          "aliases": [
+            "1,018"
+          ]
+        },
+        "4": {
+          "expected": "345",
+          "aliases": []
+        },
+        "5": {
+          "expected": "60",
+          "aliases": []
+        },
+        "6": {
+          "expected": "84",
+          "aliases": []
+        },
+        "7": {
+          "expected": "42",
+          "aliases": []
+        },
+        "8": {
+          "expected": "223",
+          "aliases": []
+        },
+        "9": {
+          "expected": "176",
+          "aliases": []
+        },
+        "10": {
+          "expected": "81",
+          "aliases": []
+        },
+        "11": {
+          "expected": "66",
+          "aliases": []
+        },
+        "12": {
+          "expected": "240",
+          "aliases": []
+        },
+        "13": {
+          "expected": "95",
+          "aliases": []
+        },
+        "14": {
+          "expected": "225",
+          "aliases": []
+        },
+        "15": {
+          "expected": "13",
+          "aliases": []
+        },
+        "16": {
+          "expected": "887",
+          "aliases": []
+        },
+        "17": {
+          "expected": "210",
+          "aliases": []
+        },
+        "18": {
+          "expected": "271",
+          "aliases": []
+        },
+        "19": {
+          "expected": "0",
+          "aliases": []
+        },
+        "20": {
+          "expected": "73",
+          "aliases": []
+        },
+        "21": {
+          "expected": "28",
+          "aliases": []
+        },
+        "22": {
+          "expected": "226",
+          "aliases": []
+        },
+        "23": {
+          "expected": "46",
+          "aliases": []
+        },
+        "24": {
+          "expected": "118",
+          "aliases": []
+        },
+        "25": {
+          "expected": "69",
+          "aliases": []
+        },
+        "26": {
+          "expected": "32",
+          "aliases": []
+        },
+        "27": {
+          "expected": "274",
+          "aliases": []
+        },
+        "28": {
+          "expected": "94",
+          "aliases": []
+        },
+        "29": {
+          "expected": "489",
+          "aliases": []
+        },
+        "30": {
+          "expected": "88",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_ms_2018": {
+      "year": 2018,
+      "level": "MS",
+      "question_count": 20,
+      "total_points": 20,
+      "answer_source": "data/raw/purple_comet/official_answers/2018/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2018/1",
+      "answer_source_sha256": "fede7015ef07515c1468d9c7feec49e1e45aa4452bdb58de2c95ff78f9666490",
+      "parts": {
+        "1": {
+          "expected": "20",
+          "aliases": []
+        },
+        "2": {
+          "expected": "148",
+          "aliases": []
+        },
+        "3": {
+          "expected": "31",
+          "aliases": []
+        },
+        "4": {
+          "expected": "104",
+          "aliases": []
+        },
+        "5": {
+          "expected": "2",
+          "aliases": []
+        },
+        "6": {
+          "expected": "999",
+          "aliases": []
+        },
+        "7": {
+          "expected": "245",
+          "aliases": []
+        },
+        "8": {
+          "expected": "39",
+          "aliases": []
+        },
+        "9": {
+          "expected": "44",
+          "aliases": []
+        },
+        "10": {
+          "expected": "108",
+          "aliases": []
+        },
+        "11": {
+          "expected": "112",
+          "aliases": []
+        },
+        "12": {
+          "expected": "1080",
+          "aliases": [
+            "1,080"
+          ]
+        },
+        "13": {
+          "expected": "1991",
+          "aliases": [
+            "1,991"
+          ]
+        },
+        "14": {
+          "expected": "58",
+          "aliases": []
+        },
+        "15": {
+          "expected": "159",
+          "aliases": []
+        },
+        "16": {
+          "expected": "143",
+          "aliases": []
+        },
+        "17": {
+          "expected": "1215",
+          "aliases": [
+            "1,215"
+          ]
+        },
+        "18": {
+          "expected": "17",
+          "aliases": []
+        },
+        "19": {
+          "expected": "248",
+          "aliases": []
+        },
+        "20": {
+          "expected": "195",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_hs_2019": {
+      "year": 2019,
+      "level": "HS",
+      "question_count": 30,
+      "total_points": 30,
+      "answer_source": "data/raw/purple_comet/official_answers/2019/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2019/2",
+      "answer_source_sha256": "6251a83da1fef3502ea82d21264d8604df191debd90890daf3a503a97360c180",
+      "parts": {
+        "1": {
+          "expected": "30",
+          "aliases": []
+        },
+        "2": {
+          "expected": "40",
+          "aliases": []
+        },
+        "3": {
+          "expected": "859",
+          "aliases": []
+        },
+        "4": {
+          "expected": "30",
+          "aliases": []
+        },
+        "5": {
+          "expected": "108",
+          "aliases": []
+        },
+        "6": {
+          "expected": "100",
+          "aliases": []
+        },
+        "7": {
+          "expected": "4",
+          "aliases": []
+        },
+        "8": {
+          "expected": "150",
+          "aliases": []
+        },
+        "9": {
+          "expected": "15",
+          "aliases": []
+        },
+        "10": {
+          "expected": "321",
+          "aliases": []
+        },
+        "11": {
+          "expected": "46",
+          "aliases": []
+        },
+        "12": {
+          "expected": "49",
+          "aliases": []
+        },
+        "13": {
+          "expected": "19",
+          "aliases": []
+        },
+        "14": {
+          "expected": "140",
+          "aliases": []
+        },
+        "15": {
+          "expected": "21",
+          "aliases": []
+        },
+        "16": {
+          "expected": "625",
+          "aliases": []
+        },
+        "17": {
+          "expected": "768",
+          "aliases": []
+        },
+        "18": {
+          "expected": "149",
+          "aliases": []
+        },
+        "19": {
+          "expected": "0",
+          "aliases": []
+        },
+        "20": {
+          "expected": "308",
+          "aliases": []
+        },
+        "21": {
+          "expected": "77",
+          "aliases": []
+        },
+        "22": {
+          "expected": "2636",
+          "aliases": [
+            "2,636"
+          ]
+        },
+        "23": {
+          "expected": "2",
+          "aliases": []
+        },
+        "24": {
+          "expected": "148",
+          "aliases": []
+        },
+        "25": {
+          "expected": "124",
+          "aliases": []
+        },
+        "26": {
+          "expected": "4350",
+          "aliases": [
+            "4,350"
+          ]
+        },
+        "27": {
+          "expected": "153",
+          "aliases": []
+        },
+        "28": {
+          "expected": "388",
+          "aliases": []
+        },
+        "29": {
+          "expected": "113",
+          "aliases": []
+        },
+        "30": {
+          "expected": "2275",
+          "aliases": [
+            "2,275"
+          ]
+        }
+      }
+    },
+    "purple_comet_ms_2019": {
+      "year": 2019,
+      "level": "MS",
+      "question_count": 20,
+      "total_points": 20,
+      "answer_source": "data/raw/purple_comet/official_answers/2019/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2019/1",
+      "answer_source_sha256": "c39c72642a8cb11202c473f0c6cd94992dce83919ddbecae74c16b486551830b",
+      "parts": {
+        "1": {
+          "expected": "60",
+          "aliases": []
+        },
+        "2": {
+          "expected": "0",
+          "aliases": []
+        },
+        "3": {
+          "expected": "108",
+          "aliases": []
+        },
+        "4": {
+          "expected": "71",
+          "aliases": []
+        },
+        "5": {
+          "expected": "22",
+          "aliases": []
+        },
+        "6": {
+          "expected": "1346",
+          "aliases": [
+            "1,346"
+          ]
+        },
+        "7": {
+          "expected": "56",
+          "aliases": []
+        },
+        "8": {
+          "expected": "103184",
+          "aliases": [
+            "103,184"
+          ]
+        },
+        "9": {
+          "expected": "52",
+          "aliases": []
+        },
+        "10": {
+          "expected": "222",
+          "aliases": []
+        },
+        "11": {
+          "expected": "829",
+          "aliases": []
+        },
+        "12": {
+          "expected": "336",
+          "aliases": []
+        },
+        "13": {
+          "expected": "51",
+          "aliases": []
+        },
+        "14": {
+          "expected": "20",
+          "aliases": []
+        },
+        "15": {
+          "expected": "51",
+          "aliases": []
+        },
+        "16": {
+          "expected": "10",
+          "aliases": []
+        },
+        "17": {
+          "expected": "504",
+          "aliases": []
+        },
+        "18": {
+          "expected": "63",
+          "aliases": []
+        },
+        "19": {
+          "expected": "22",
+          "aliases": []
+        },
+        "20": {
+          "expected": "131",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_hs_2020": {
+      "year": 2020,
+      "level": "HS",
+      "question_count": 30,
+      "total_points": 30,
+      "answer_source": "data/raw/purple_comet/official_answers/2020/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2020/2",
+      "answer_source_sha256": "613a23b054f0fe13ff2e4066334d69f14da09d2efd610e7423c611c7b7acf522",
+      "parts": {
+        "1": {
+          "expected": "47",
+          "aliases": []
+        },
+        "2": {
+          "expected": "26",
+          "aliases": []
+        },
+        "3": {
+          "expected": "231",
+          "aliases": []
+        },
+        "4": {
+          "expected": "90",
+          "aliases": []
+        },
+        "5": {
+          "expected": "27",
+          "aliases": []
+        },
+        "6": {
+          "expected": "34",
+          "aliases": []
+        },
+        "7": {
+          "expected": "24",
+          "aliases": []
+        },
+        "8": {
+          "expected": "35",
+          "aliases": []
+        },
+        "9": {
+          "expected": "24",
+          "aliases": []
+        },
+        "10": {
+          "expected": "364",
+          "aliases": []
+        },
+        "11": {
+          "expected": "7",
+          "aliases": []
+        },
+        "12": {
+          "expected": "120",
+          "aliases": []
+        },
+        "13": {
+          "expected": "25249",
+          "aliases": [
+            "25,249"
+          ]
+        },
+        "14": {
+          "expected": "445",
+          "aliases": []
+        },
+        "15": {
+          "expected": "381",
+          "aliases": []
+        },
+        "16": {
+          "expected": "9",
+          "aliases": []
+        },
+        "17": {
+          "expected": "131",
+          "aliases": []
+        },
+        "18": {
+          "expected": "36",
+          "aliases": []
+        },
+        "19": {
+          "expected": "1013",
+          "aliases": [
+            "1,013"
+          ]
+        },
+        "20": {
+          "expected": "80",
+          "aliases": []
+        },
+        "21": {
+          "expected": "33",
+          "aliases": []
+        },
+        "22": {
+          "expected": "79",
+          "aliases": []
+        },
+        "23": {
+          "expected": "8",
+          "aliases": []
+        },
+        "24": {
+          "expected": "30",
+          "aliases": []
+        },
+        "25": {
+          "expected": "572",
+          "aliases": []
+        },
+        "26": {
+          "expected": "59",
+          "aliases": []
+        },
+        "27": {
+          "expected": "153",
+          "aliases": []
+        },
+        "28": {
+          "expected": "585",
+          "aliases": []
+        },
+        "29": {
+          "expected": "114",
+          "aliases": []
+        },
+        "30": {
+          "expected": "56",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_ms_2020": {
+      "year": 2020,
+      "level": "MS",
+      "question_count": 20,
+      "total_points": 20,
+      "answer_source": "data/raw/purple_comet/official_answers/2020/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2020/1",
+      "answer_source_sha256": "83500c380b02479cd90e230e1098e86d567d928582950888060f4844e8b941a7",
+      "parts": {
+        "1": {
+          "expected": "1250",
+          "aliases": [
+            "1,250"
+          ]
+        },
+        "2": {
+          "expected": "490",
+          "aliases": []
+        },
+        "3": {
+          "expected": "63",
+          "aliases": []
+        },
+        "4": {
+          "expected": "45",
+          "aliases": []
+        },
+        "5": {
+          "expected": "9",
+          "aliases": []
+        },
+        "6": {
+          "expected": "52",
+          "aliases": []
+        },
+        "7": {
+          "expected": "120",
+          "aliases": []
+        },
+        "8": {
+          "expected": "277",
+          "aliases": []
+        },
+        "9": {
+          "expected": "577",
+          "aliases": []
+        },
+        "10": {
+          "expected": "2101",
+          "aliases": [
+            "2,101"
+          ]
+        },
+        "11": {
+          "expected": "29",
+          "aliases": []
+        },
+        "12": {
+          "expected": "53",
+          "aliases": []
+        },
+        "13": {
+          "expected": "30",
+          "aliases": []
+        },
+        "14": {
+          "expected": "1176",
+          "aliases": [
+            "1,176"
+          ]
+        },
+        "15": {
+          "expected": "67",
+          "aliases": []
+        },
+        "16": {
+          "expected": "48",
+          "aliases": []
+        },
+        "17": {
+          "expected": "285",
+          "aliases": []
+        },
+        "18": {
+          "expected": "107",
+          "aliases": []
+        },
+        "19": {
+          "expected": "21",
+          "aliases": []
+        },
+        "20": {
+          "expected": "471",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_hs_2021": {
+      "year": 2021,
+      "level": "HS",
+      "question_count": 30,
+      "total_points": 30,
+      "answer_source": "data/raw/purple_comet/official_answers/2021/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2021/2",
+      "answer_source_sha256": "a2a84dc3e3cfcb76b01b7ba5a175ca50ee16711c58822bfad2913b3d7febf83d",
+      "parts": {
+        "1": {
+          "expected": "63",
+          "aliases": []
+        },
+        "2": {
+          "expected": "91",
+          "aliases": []
+        },
+        "3": {
+          "expected": "25",
+          "aliases": []
+        },
+        "4": {
+          "expected": "31",
+          "aliases": []
+        },
+        "5": {
+          "expected": "48",
+          "aliases": []
+        },
+        "6": {
+          "expected": "112",
+          "aliases": []
+        },
+        "7": {
+          "expected": "192",
+          "aliases": []
+        },
+        "8": {
+          "expected": "53",
+          "aliases": []
+        },
+        "9": {
+          "expected": "18",
+          "aliases": []
+        },
+        "10": {
+          "expected": "60",
+          "aliases": []
+        },
+        "11": {
+          "expected": "34",
+          "aliases": []
+        },
+        "12": {
+          "expected": "210",
+          "aliases": []
+        },
+        "13": {
+          "expected": "25",
+          "aliases": []
+        },
+        "14": {
+          "expected": "29",
+          "aliases": []
+        },
+        "15": {
+          "expected": "36",
+          "aliases": []
+        },
+        "16": {
+          "expected": "109",
+          "aliases": []
+        },
+        "17": {
+          "expected": "15001",
+          "aliases": [
+            "15,001"
+          ]
+        },
+        "18": {
+          "expected": "287",
+          "aliases": []
+        },
+        "19": {
+          "expected": "100",
+          "aliases": []
+        },
+        "20": {
+          "expected": "69",
+          "aliases": []
+        },
+        "21": {
+          "expected": "184",
+          "aliases": []
+        },
+        "22": {
+          "expected": "131",
+          "aliases": []
+        },
+        "23": {
+          "expected": "49",
+          "aliases": []
+        },
+        "24": {
+          "expected": "35",
+          "aliases": []
+        },
+        "25": {
+          "expected": "3553",
+          "aliases": [
+            "3,553"
+          ]
+        },
+        "26": {
+          "expected": "5990",
+          "aliases": [
+            "5,990"
+          ]
+        },
+        "27": {
+          "expected": "446",
+          "aliases": []
+        },
+        "28": {
+          "expected": "1347",
+          "aliases": [
+            "1,347"
+          ]
+        },
+        "29": {
+          "expected": "1152",
+          "aliases": [
+            "1,152"
+          ]
+        },
+        "30": {
+          "expected": "911",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_ms_2021": {
+      "year": 2021,
+      "level": "MS",
+      "question_count": 20,
+      "total_points": 20,
+      "answer_source": "data/raw/purple_comet/official_answers/2021/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2021/1",
+      "answer_source_sha256": "588db83869ae7ead79f5da307dd1a0eb4c6b49a9391fcb1748de6cc0013200a5",
+      "parts": {
+        "1": {
+          "expected": "23",
+          "aliases": []
+        },
+        "2": {
+          "expected": "47",
+          "aliases": []
+        },
+        "3": {
+          "expected": "8456173452",
+          "aliases": [
+            "8,456,173,452"
+          ]
+        },
+        "4": {
+          "expected": "27",
+          "aliases": []
+        },
+        "5": {
+          "expected": "30",
+          "aliases": []
+        },
+        "6": {
+          "expected": "74",
+          "aliases": []
+        },
+        "7": {
+          "expected": "352",
+          "aliases": []
+        },
+        "8": {
+          "expected": "340",
+          "aliases": []
+        },
+        "9": {
+          "expected": "47",
+          "aliases": []
+        },
+        "10": {
+          "expected": "18",
+          "aliases": []
+        },
+        "11": {
+          "expected": "331",
+          "aliases": []
+        },
+        "12": {
+          "expected": "148",
+          "aliases": []
+        },
+        "13": {
+          "expected": "61",
+          "aliases": []
+        },
+        "14": {
+          "expected": "32",
+          "aliases": []
+        },
+        "15": {
+          "expected": "1792",
+          "aliases": [
+            "1,792"
+          ]
+        },
+        "16": {
+          "expected": "31",
+          "aliases": []
+        },
+        "17": {
+          "expected": "66",
+          "aliases": []
+        },
+        "18": {
+          "expected": "6",
+          "aliases": []
+        },
+        "19": {
+          "expected": "53",
+          "aliases": []
+        },
+        "20": {
+          "expected": "133",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_hs_2022": {
+      "year": 2022,
+      "level": "HS",
+      "question_count": 30,
+      "total_points": 30,
+      "answer_source": "data/raw/purple_comet/official_answers/2022/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2022/2",
+      "answer_source_sha256": "350999bc0b4bed4237d252ef7a76ef6118e26d3b490e830cb1e2b1dcb139ffaa",
+      "parts": {
+        "1": {
+          "expected": "77",
+          "aliases": []
+        },
+        "2": {
+          "expected": "29",
+          "aliases": []
+        },
+        "3": {
+          "expected": "81",
+          "aliases": []
+        },
+        "4": {
+          "expected": "50",
+          "aliases": []
+        },
+        "5": {
+          "expected": "48",
+          "aliases": []
+        },
+        "6": {
+          "expected": "45",
+          "aliases": []
+        },
+        "7": {
+          "expected": "50",
+          "aliases": []
+        },
+        "8": {
+          "expected": "1",
+          "aliases": []
+        },
+        "9": {
+          "expected": "140",
+          "aliases": []
+        },
+        "10": {
+          "expected": "1265",
+          "aliases": [
+            "1,265"
+          ]
+        },
+        "11": {
+          "expected": "104",
+          "aliases": []
+        },
+        "12": {
+          "expected": "46",
+          "aliases": []
+        },
+        "13": {
+          "expected": "364",
+          "aliases": []
+        },
+        "14": {
+          "expected": "19",
+          "aliases": []
+        },
+        "15": {
+          "expected": "82",
+          "aliases": []
+        },
+        "16": {
+          "expected": "41",
+          "aliases": []
+        },
+        "17": {
+          "expected": "1501",
+          "aliases": [
+            "1,501"
+          ]
+        },
+        "18": {
+          "expected": "72",
+          "aliases": []
+        },
+        "19": {
+          "expected": "576",
+          "aliases": []
+        },
+        "20": {
+          "expected": "62",
+          "aliases": []
+        },
+        "21": {
+          "expected": "86",
+          "aliases": []
+        },
+        "22": {
+          "expected": "345",
+          "aliases": []
+        },
+        "23": {
+          "expected": "154",
+          "aliases": []
+        },
+        "24": {
+          "expected": "56",
+          "aliases": []
+        },
+        "25": {
+          "expected": "4717",
+          "aliases": [
+            "4,717"
+          ]
+        },
+        "26": {
+          "expected": "17",
+          "aliases": []
+        },
+        "27": {
+          "expected": "71",
+          "aliases": []
+        },
+        "28": {
+          "expected": "833",
+          "aliases": []
+        },
+        "29": {
+          "expected": "66",
+          "aliases": []
+        },
+        "30": {
+          "expected": "100",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_ms_2022": {
+      "year": 2022,
+      "level": "MS",
+      "question_count": 20,
+      "total_points": 20,
+      "answer_source": "data/raw/purple_comet/official_answers/2022/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2022/1",
+      "answer_source_sha256": "e7df8866f42dbf3e718677d732a1d95b8ff5328c88a82b0e5a6058bbce1a87b2",
+      "parts": {
+        "1": {
+          "expected": "24",
+          "aliases": []
+        },
+        "2": {
+          "expected": "1092",
+          "aliases": [
+            "1,092"
+          ]
+        },
+        "3": {
+          "expected": "93",
+          "aliases": []
+        },
+        "4": {
+          "expected": "38",
+          "aliases": []
+        },
+        "5": {
+          "expected": "1",
+          "aliases": []
+        },
+        "6": {
+          "expected": "9",
+          "aliases": []
+        },
+        "7": {
+          "expected": "1",
+          "aliases": []
+        },
+        "8": {
+          "expected": "276",
+          "aliases": []
+        },
+        "9": {
+          "expected": "25",
+          "aliases": []
+        },
+        "10": {
+          "expected": "26",
+          "aliases": []
+        },
+        "11": {
+          "expected": "4107",
+          "aliases": [
+            "4,107"
+          ]
+        },
+        "12": {
+          "expected": "40",
+          "aliases": []
+        },
+        "13": {
+          "expected": "98057",
+          "aliases": [
+            "98,057"
+          ]
+        },
+        "14": {
+          "expected": "317",
+          "aliases": []
+        },
+        "15": {
+          "expected": "1314",
+          "aliases": [
+            "1,314"
+          ]
+        },
+        "16": {
+          "expected": "41",
+          "aliases": []
+        },
+        "17": {
+          "expected": "20",
+          "aliases": []
+        },
+        "18": {
+          "expected": "150",
+          "aliases": []
+        },
+        "19": {
+          "expected": "4900",
+          "aliases": [
+            "4,900"
+          ]
+        },
+        "20": {
+          "expected": "18",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_hs_2023": {
+      "year": 2023,
+      "level": "HS",
+      "question_count": 30,
+      "total_points": 30,
+      "answer_source": "data/raw/purple_comet/official_answers/2023/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2023/2",
+      "answer_source_sha256": "6dff4f0ce8ef427dd6c2d3e6596001a5c4c928bf3096d0caf0c24abca33b4486",
+      "parts": {
+        "1": {
+          "expected": "82192020202120222023",
+          "aliases": [
+            "82,192,020,202,120,222,023"
+          ]
+        },
+        "2": {
+          "expected": "45",
+          "aliases": []
+        },
+        "3": {
+          "expected": "66",
+          "aliases": []
+        },
+        "4": {
+          "expected": "384",
+          "aliases": []
+        },
+        "5": {
+          "expected": "60",
+          "aliases": []
+        },
+        "6": {
+          "expected": "22",
+          "aliases": []
+        },
+        "7": {
+          "expected": "35",
+          "aliases": []
+        },
+        "8": {
+          "expected": "40",
+          "aliases": []
+        },
+        "9": {
+          "expected": "0",
+          "aliases": []
+        },
+        "10": {
+          "expected": "46",
+          "aliases": []
+        },
+        "11": {
+          "expected": "24",
+          "aliases": []
+        },
+        "12": {
+          "expected": "2025",
+          "aliases": [
+            "2,025"
+          ]
+        },
+        "13": {
+          "expected": "193",
+          "aliases": []
+        },
+        "14": {
+          "expected": "60",
+          "aliases": []
+        },
+        "15": {
+          "expected": "239",
+          "aliases": []
+        },
+        "16": {
+          "expected": "136",
+          "aliases": []
+        },
+        "17": {
+          "expected": "41",
+          "aliases": []
+        },
+        "18": {
+          "expected": "14",
+          "aliases": []
+        },
+        "19": {
+          "expected": "168",
+          "aliases": []
+        },
+        "20": {
+          "expected": "49",
+          "aliases": []
+        },
+        "21": {
+          "expected": "95",
+          "aliases": []
+        },
+        "22": {
+          "expected": "43",
+          "aliases": []
+        },
+        "23": {
+          "expected": "55",
+          "aliases": []
+        },
+        "24": {
+          "expected": "293",
+          "aliases": []
+        },
+        "25": {
+          "expected": "360",
+          "aliases": []
+        },
+        "26": {
+          "expected": "53",
+          "aliases": []
+        },
+        "27": {
+          "expected": "65",
+          "aliases": []
+        },
+        "28": {
+          "expected": "42",
+          "aliases": []
+        },
+        "29": {
+          "expected": "87",
+          "aliases": []
+        },
+        "30": {
+          "expected": "194339",
+          "aliases": [
+            "194,339"
+          ]
+        }
+      }
+    },
+    "purple_comet_ms_2023": {
+      "year": 2023,
+      "level": "MS",
+      "question_count": 20,
+      "total_points": 20,
+      "answer_source": "data/raw/purple_comet/official_answers/2023/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2023/1",
+      "answer_source_sha256": "bf78121d0996f8b01621c40b6c006828acbf635a0516e5c013f4979893043cf8",
+      "parts": {
+        "1": {
+          "expected": "210",
+          "aliases": []
+        },
+        "2": {
+          "expected": "200",
+          "aliases": []
+        },
+        "3": {
+          "expected": "15",
+          "aliases": []
+        },
+        "4": {
+          "expected": "8164961",
+          "aliases": [
+            "8,164,961"
+          ]
+        },
+        "5": {
+          "expected": "151",
+          "aliases": []
+        },
+        "6": {
+          "expected": "257889",
+          "aliases": [
+            "257,889"
+          ]
+        },
+        "7": {
+          "expected": "99",
+          "aliases": []
+        },
+        "8": {
+          "expected": "120",
+          "aliases": []
+        },
+        "9": {
+          "expected": "84",
+          "aliases": []
+        },
+        "10": {
+          "expected": "196",
+          "aliases": []
+        },
+        "11": {
+          "expected": "45",
+          "aliases": []
+        },
+        "12": {
+          "expected": "11",
+          "aliases": []
+        },
+        "13": {
+          "expected": "78",
+          "aliases": []
+        },
+        "14": {
+          "expected": "48",
+          "aliases": []
+        },
+        "15": {
+          "expected": "448",
+          "aliases": []
+        },
+        "16": {
+          "expected": "145",
+          "aliases": []
+        },
+        "17": {
+          "expected": "25",
+          "aliases": []
+        },
+        "18": {
+          "expected": "232",
+          "aliases": []
+        },
+        "19": {
+          "expected": "612",
+          "aliases": []
+        },
+        "20": {
+          "expected": "293",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_hs_2024": {
+      "year": 2024,
+      "level": "HS",
+      "question_count": 30,
+      "total_points": 30,
+      "answer_source": "data/raw/purple_comet/official_answers/2024/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2024/2",
+      "answer_source_sha256": "ed5f26cd93d51894091bb1c42cee35fe0dd9d21a7c3e61e4d625147f3998149b",
+      "parts": {
+        "1": {
+          "expected": "60",
+          "aliases": []
+        },
+        "2": {
+          "expected": "176",
+          "aliases": []
+        },
+        "3": {
+          "expected": "26",
+          "aliases": []
+        },
+        "4": {
+          "expected": "6989",
+          "aliases": [
+            "6,989"
+          ]
+        },
+        "5": {
+          "expected": "32",
+          "aliases": []
+        },
+        "6": {
+          "expected": "57",
+          "aliases": []
+        },
+        "7": {
+          "expected": "262",
+          "aliases": []
+        },
+        "8": {
+          "expected": "61",
+          "aliases": []
+        },
+        "9": {
+          "expected": "172",
+          "aliases": []
+        },
+        "10": {
+          "expected": "109",
+          "aliases": []
+        },
+        "11": {
+          "expected": "64",
+          "aliases": []
+        },
+        "12": {
+          "expected": "91",
+          "aliases": []
+        },
+        "13": {
+          "expected": "70",
+          "aliases": []
+        },
+        "14": {
+          "expected": "40",
+          "aliases": []
+        },
+        "15": {
+          "expected": "400000002",
+          "aliases": [
+            "400,000,002"
+          ]
+        },
+        "16": {
+          "expected": "546",
+          "aliases": []
+        },
+        "17": {
+          "expected": "71",
+          "aliases": []
+        },
+        "18": {
+          "expected": "658",
+          "aliases": []
+        },
+        "19": {
+          "expected": "283",
+          "aliases": []
+        },
+        "20": {
+          "expected": "70",
+          "aliases": []
+        },
+        "21": {
+          "expected": "97",
+          "aliases": []
+        },
+        "22": {
+          "expected": "249",
+          "aliases": []
+        },
+        "23": {
+          "expected": "19",
+          "aliases": []
+        },
+        "24": {
+          "expected": "638",
+          "aliases": []
+        },
+        "25": {
+          "expected": "391",
+          "aliases": []
+        },
+        "26": {
+          "expected": "25",
+          "aliases": []
+        },
+        "27": {
+          "expected": "64",
+          "aliases": []
+        },
+        "28": {
+          "expected": "52",
+          "aliases": []
+        },
+        "29": {
+          "expected": "109",
+          "aliases": []
+        },
+        "30": {
+          "expected": "66",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_ms_2024": {
+      "year": 2024,
+      "level": "MS",
+      "question_count": 20,
+      "total_points": 20,
+      "answer_source": "data/raw/purple_comet/official_answers/2024/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2024/1",
+      "answer_source_sha256": "40323f5c9f1a93929c85e7b31c2b23e49ef60653b4fd49024308926830231f51",
+      "parts": {
+        "1": {
+          "expected": "54",
+          "aliases": []
+        },
+        "2": {
+          "expected": "40",
+          "aliases": []
+        },
+        "3": {
+          "expected": "15",
+          "aliases": []
+        },
+        "4": {
+          "expected": "60",
+          "aliases": []
+        },
+        "5": {
+          "expected": "12",
+          "aliases": []
+        },
+        "6": {
+          "expected": "29",
+          "aliases": []
+        },
+        "7": {
+          "expected": "144",
+          "aliases": []
+        },
+        "8": {
+          "expected": "12",
+          "aliases": []
+        },
+        "9": {
+          "expected": "631",
+          "aliases": []
+        },
+        "10": {
+          "expected": "4278",
+          "aliases": [
+            "4,278"
+          ]
+        },
+        "11": {
+          "expected": "1156",
+          "aliases": [
+            "1,156"
+          ]
+        },
+        "12": {
+          "expected": "180",
+          "aliases": []
+        },
+        "13": {
+          "expected": "133",
+          "aliases": []
+        },
+        "14": {
+          "expected": "9884",
+          "aliases": [
+            "9,884"
+          ]
+        },
+        "15": {
+          "expected": "10",
+          "aliases": []
+        },
+        "16": {
+          "expected": "87",
+          "aliases": []
+        },
+        "17": {
+          "expected": "107",
+          "aliases": []
+        },
+        "18": {
+          "expected": "365",
+          "aliases": []
+        },
+        "19": {
+          "expected": "193",
+          "aliases": []
+        },
+        "20": {
+          "expected": "17",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_hs_2025": {
+      "year": 2025,
+      "level": "HS",
+      "question_count": 30,
+      "total_points": 30,
+      "answer_source": "data/raw/purple_comet/official_answers/2025/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2025/2",
+      "answer_source_sha256": "477636b486ccdaf0745d842dc6d651b2f59537fbb856f2ae7c7b6371909e4887",
+      "parts": {
+        "1": {
+          "expected": "19",
+          "aliases": []
+        },
+        "2": {
+          "expected": "180",
+          "aliases": []
+        },
+        "3": {
+          "expected": "84",
+          "aliases": []
+        },
+        "4": {
+          "expected": "96",
+          "aliases": []
+        },
+        "5": {
+          "expected": "8192",
+          "aliases": [
+            "8,192"
+          ]
+        },
+        "6": {
+          "expected": "1012",
+          "aliases": [
+            "1,012"
+          ]
+        },
+        "7": {
+          "expected": "125",
+          "aliases": []
+        },
+        "8": {
+          "expected": "9",
+          "aliases": []
+        },
+        "9": {
+          "expected": "8",
+          "aliases": []
+        },
+        "10": {
+          "expected": "51",
+          "aliases": []
+        },
+        "11": {
+          "expected": "84",
+          "aliases": []
+        },
+        "12": {
+          "expected": "56",
+          "aliases": []
+        },
+        "13": {
+          "expected": "284",
+          "aliases": []
+        },
+        "14": {
+          "expected": "0",
+          "aliases": []
+        },
+        "15": {
+          "expected": "828",
+          "aliases": []
+        },
+        "16": {
+          "expected": "101",
+          "aliases": []
+        },
+        "17": {
+          "expected": "108",
+          "aliases": []
+        },
+        "18": {
+          "expected": "107",
+          "aliases": []
+        },
+        "19": {
+          "expected": "68",
+          "aliases": []
+        },
+        "20": {
+          "expected": "53",
+          "aliases": []
+        },
+        "21": {
+          "expected": "125",
+          "aliases": []
+        },
+        "22": {
+          "expected": "166",
+          "aliases": []
+        },
+        "23": {
+          "expected": "1952",
+          "aliases": [
+            "1,952"
+          ]
+        },
+        "24": {
+          "expected": "59",
+          "aliases": []
+        },
+        "25": {
+          "expected": "37",
+          "aliases": []
+        },
+        "26": {
+          "expected": "27",
+          "aliases": []
+        },
+        "27": {
+          "expected": "10",
+          "aliases": []
+        },
+        "28": {
+          "expected": "17",
+          "aliases": []
+        },
+        "29": {
+          "expected": "128",
+          "aliases": []
+        },
+        "30": {
+          "expected": "67",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_ms_2025": {
+      "year": 2025,
+      "level": "MS",
+      "question_count": 20,
+      "total_points": 20,
+      "answer_source": "data/raw/purple_comet/official_answers/2025/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2025/1",
+      "answer_source_sha256": "30b5a49c04badcfa77dd3900312020c4eb48eeb08e25b0f203d6d759bc2280ca",
+      "parts": {
+        "1": {
+          "expected": "5",
+          "aliases": []
+        },
+        "2": {
+          "expected": "32",
+          "aliases": []
+        },
+        "3": {
+          "expected": "96",
+          "aliases": []
+        },
+        "4": {
+          "expected": "44",
+          "aliases": []
+        },
+        "5": {
+          "expected": "48",
+          "aliases": []
+        },
+        "6": {
+          "expected": "1145578899",
+          "aliases": [
+            "1,145,578,899"
+          ]
+        },
+        "7": {
+          "expected": "726",
+          "aliases": []
+        },
+        "8": {
+          "expected": "228",
+          "aliases": []
+        },
+        "9": {
+          "expected": "1728",
+          "aliases": [
+            "1,728"
+          ]
+        },
+        "10": {
+          "expected": "75685094",
+          "aliases": [
+            "75,685,094"
+          ]
+        },
+        "11": {
+          "expected": "440",
+          "aliases": []
+        },
+        "12": {
+          "expected": "126",
+          "aliases": []
+        },
+        "13": {
+          "expected": "108",
+          "aliases": []
+        },
+        "14": {
+          "expected": "7",
+          "aliases": []
+        },
+        "15": {
+          "expected": "25",
+          "aliases": []
+        },
+        "16": {
+          "expected": "394",
+          "aliases": []
+        },
+        "17": {
+          "expected": "54",
+          "aliases": []
+        },
+        "18": {
+          "expected": "66",
+          "aliases": []
+        },
+        "19": {
+          "expected": "101",
+          "aliases": []
+        },
+        "20": {
+          "expected": "116",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_hs_2026": {
+      "year": 2026,
+      "level": "HS",
+      "question_count": 30,
+      "total_points": 30,
+      "answer_source": "data/raw/purple_comet/official_answers/2026/hs_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2026/2",
+      "answer_source_sha256": "ec36a540a86c26719082f9c976b70c3c242b3d5bdc8ec14bbaffa75682f2c1f7",
+      "parts": {
+        "1": {
+          "expected": "26",
+          "aliases": []
+        },
+        "2": {
+          "expected": "12",
+          "aliases": []
+        },
+        "3": {
+          "expected": "24",
+          "aliases": []
+        },
+        "4": {
+          "expected": "38",
+          "aliases": []
+        },
+        "5": {
+          "expected": "33",
+          "aliases": []
+        },
+        "6": {
+          "expected": "364",
+          "aliases": []
+        },
+        "7": {
+          "expected": "44",
+          "aliases": []
+        },
+        "8": {
+          "expected": "72",
+          "aliases": []
+        },
+        "9": {
+          "expected": "79",
+          "aliases": []
+        },
+        "10": {
+          "expected": "55",
+          "aliases": []
+        },
+        "11": {
+          "expected": "169",
+          "aliases": []
+        },
+        "12": {
+          "expected": "498",
+          "aliases": []
+        },
+        "13": {
+          "expected": "136",
+          "aliases": []
+        },
+        "14": {
+          "expected": "213",
+          "aliases": []
+        },
+        "15": {
+          "expected": "70",
+          "aliases": []
+        },
+        "16": {
+          "expected": "288",
+          "aliases": []
+        },
+        "17": {
+          "expected": "18",
+          "aliases": []
+        },
+        "18": {
+          "expected": "202",
+          "aliases": []
+        },
+        "19": {
+          "expected": "97",
+          "aliases": []
+        },
+        "20": {
+          "expected": "40",
+          "aliases": []
+        },
+        "21": {
+          "expected": "171",
+          "aliases": []
+        },
+        "22": {
+          "expected": "3480",
+          "aliases": [
+            "3,480"
+          ]
+        },
+        "23": {
+          "expected": "112",
+          "aliases": []
+        },
+        "24": {
+          "expected": "869",
+          "aliases": []
+        },
+        "25": {
+          "expected": "38",
+          "aliases": []
+        },
+        "26": {
+          "expected": "42",
+          "aliases": []
+        },
+        "27": {
+          "expected": "119",
+          "aliases": []
+        },
+        "28": {
+          "expected": "84",
+          "aliases": []
+        },
+        "29": {
+          "expected": "406",
+          "aliases": []
+        },
+        "30": {
+          "expected": "190",
+          "aliases": []
+        }
+      }
+    },
+    "purple_comet_ms_2026": {
+      "year": 2026,
+      "level": "MS",
+      "question_count": 20,
+      "total_points": 20,
+      "answer_source": "data/raw/purple_comet/official_answers/2026/ms_answers.html",
+      "answer_source_url": "https://www.purplecomet.org/answerlist/2026/1",
+      "answer_source_sha256": "0a9d1f40c56b64097dce85063667dc05dced2f840fae69589f32f99412d30b02",
+      "parts": {
+        "1": {
+          "expected": "126",
+          "aliases": []
+        },
+        "2": {
+          "expected": "28",
+          "aliases": []
+        },
+        "3": {
+          "expected": "32",
+          "aliases": []
+        },
+        "4": {
+          "expected": "152",
+          "aliases": []
+        },
+        "5": {
+          "expected": "28",
+          "aliases": []
+        },
+        "6": {
+          "expected": "270",
+          "aliases": []
+        },
+        "7": {
+          "expected": "17",
+          "aliases": []
+        },
+        "8": {
+          "expected": "803",
+          "aliases": []
+        },
+        "9": {
+          "expected": "100",
+          "aliases": []
+        },
+        "10": {
+          "expected": "26",
+          "aliases": []
+        },
+        "11": {
+          "expected": "169",
+          "aliases": []
+        },
+        "12": {
+          "expected": "21",
+          "aliases": []
+        },
+        "13": {
+          "expected": "210",
+          "aliases": []
+        },
+        "14": {
+          "expected": "2023",
+          "aliases": [
+            "2,023"
+          ]
+        },
+        "15": {
+          "expected": "27",
+          "aliases": []
+        },
+        "16": {
+          "expected": "47",
+          "aliases": []
+        },
+        "17": {
+          "expected": "56",
+          "aliases": []
+        },
+        "18": {
+          "expected": "242",
+          "aliases": []
+        },
+        "19": {
+          "expected": "161",
+          "aliases": []
+        },
+        "20": {
+          "expected": "887",
+          "aliases": []
+        }
+      }
+    }
+  },
+  "coverage": {
+    "records": 44,
+    "mapped_parts": 1050,
+    "newly_gradeable_records": 30,
+    "newly_added_parts": 700,
+    "unresolved_records": []
+  }
+}

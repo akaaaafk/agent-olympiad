@@ -7,13 +7,41 @@
   "rules_edition": "2026-2027",
   "total_points": 100,
   "criteria": [
-    {"id": "business_description", "name": "Business Description", "max_score": 5},
-    {"id": "industry_competitive_positioning", "name": "Industry Overview & Competitive Positioning", "max_score": 10},
-    {"id": "investment_summary", "name": "Investment Summary", "max_score": 15},
-    {"id": "valuation", "name": "Valuation", "max_score": 20},
-    {"id": "financial_analysis", "name": "Financial Analysis", "max_score": 20},
-    {"id": "investment_risks", "name": "Investment Risks", "max_score": 15},
-    {"id": "esg", "name": "Environmental, Social, Governance", "max_score": 15}
+    {
+      "id": "business_description",
+      "name": "Business Description",
+      "max_score": 5
+    },
+    {
+      "id": "industry_competitive_positioning",
+      "name": "Industry Overview & Competitive Positioning",
+      "max_score": 10
+    },
+    {
+      "id": "investment_summary",
+      "name": "Investment Summary",
+      "max_score": 15
+    },
+    {
+      "id": "valuation",
+      "name": "Valuation",
+      "max_score": 20
+    },
+    {
+      "id": "financial_analysis",
+      "name": "Financial Analysis",
+      "max_score": 20
+    },
+    {
+      "id": "investment_risks",
+      "name": "Investment Risks",
+      "max_score": 15
+    },
+    {
+      "id": "esg",
+      "name": "Environmental, Social, Governance",
+      "max_score": 15
+    }
   ],
   "scoring": {
     "grader_method": "Graders independently evaluate each written report using the Research Report Evaluation Form.",

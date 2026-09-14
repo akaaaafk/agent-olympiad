@@ -1,5 +1,3 @@
-# Delivery Service
-
 Hide 
  Delivery Service 
 

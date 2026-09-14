@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 1996
-
 # Odyssey of the Mind — 1996 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Crunch!Divisions I, II, III & IVThis problem requires teams to design and build a structure of balsa wood and glue. The structure will be tested by balancing and supporting as much weight as possible while undergoing a series of billiard ball impacts. Time limit: 8 min. Cost limit: $90 USD.
 5. The Tall Tales of John JiveryDivisions I & IIIn this problem, the team is to create and present a humorous performance about an original tall tale. The tale will include a team-created hero or heroine that performs an incredible feat, a unique explanation of how something began or came to be, and a surprise for the audience. Time limit: 8 min. Cost limit: $100 USD.
 6. Better Safe Than SorryPrimaryFor this non-competitive problem teams will create and perform a skit that presents three safety tips chosen from a given list, a team-created safety tip, and a team-made sign for each safety tip, a slogan for the team-created tip, a team-created humorous character that chooses to ignore one or more of the tips, and an explanation of why people should follow the tips. Time limit: 8 min. Cost limit: $50 USD.
+

@@ -1,0 +1,8 @@
+/* line 3, ../../sass/coral_reef.scss */
+body {
+  background: url("css-17.png") repeat-y calc(50% - 700px) 500px, -webkit-gradient(linear, to bottom, to top, color-stop(0%, #5ec4d6), color-stop(100%, #36abb5)) repeat-x;
+  background: url("css-17.png") repeat-y calc(50% - 700px) 500px, -webkit-linear-gradient(to bottom, #5ec4d6, #36abb5) repeat-x;
+  background: url("css-17.png") repeat-y calc(50% - 700px) 500px, -moz-linear-gradient(to bottom, #5ec4d6, #36abb5) repeat-x;
+  background: url("css-17.png") repeat-y calc(50% - 700px) 500px, -o-linear-gradient(to bottom, #5ec4d6, #36abb5) repeat-x;
+  background: url("css-17.png") repeat-y calc(50% - 700px) 500px, linear-gradient(to bottom, #5ec4d6, #36abb5) repeat-x;
+}

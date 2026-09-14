@@ -1,0 +1,221 @@
+
+/* --------------------------------------
+   General markup styles
+   -------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+html, body {
+  background: #F2EEF1;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  height: 100%;
+  position: relative;
+}
+
+img {
+  border: 0;
+}
+
+h1 {
+  color: #000000;
+  font-family: "Palatino Linotype", Palatino, serif;
+  font-size: 1.7em;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
+h2 {
+  color: #000000;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
+h3 {
+  color: #000000;
+  font-size: 1.0em;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.0em;
+  line-height: 1.4em;
+  padding-bottom: 0.7em;
+}
+
+ul {
+  list-style: disc;
+}
+
+ul, ol {
+  padding-left: 2em;
+  padding-right: 1em;
+  padding-bottom: 0.7em;
+}
+
+li {
+  padding-bottom: 0.25em;
+}
+
+dt {
+  text-transform: uppercase;
+}
+dd {
+  padding-left: 2em;
+  padding-bottom: 0.7em;
+}
+
+blockquote {
+  padding-left: 2em;
+}
+
+table {
+  padding-bottom: 0.7em;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+img.center {
+  display: block;
+}
+
+.caption {
+  font-family: Arial;
+  font-size: 70%;
+  text-align: center;
+  width: 100%;
+}
+
+/* --------------------------------------
+   General links
+   -------------------------------------- */
+
+a {
+  color: #335599;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+
+/* --------------------------------------
+   Main blocks
+   -------------------------------------- */
+
+#container {
+  min-height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+#header {
+  background-color: #969696;
+  border-bottom: 5px #335599 solid;
+  height: 23px;
+  padding: 2px;
+}
+#header-content {
+  margin: 0 auto;
+  width: 800px;
+}
+#back-to-round { float:left; }
+#check-answer, #solution { float:right; }
+
+#main {
+  background-color: #F2EEF1;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+#page {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: left;
+  width: 800px;
+}
+
+#page-top {
+  background: url('../images/page-top.jpg') top center no-repeat;
+  height: 186px;
+  padding-left: 50px;
+  position: relative;
+}
+
+#page-stamp {
+  float:right;
+}
+
+#page-heading {
+//  height: 111px;
+  overflow: hidden;
+  padding-top: 60px;
+}
+
+#page-center {
+  background: url('../images/page-content.gif') top center repeat-y;
+  height: 100%;
+  min-height: 490px;
+}
+
+#page-left {
+  background: url('../images/page-left.jpg') top center no-repeat;
+  float: left;
+  height: 490px;
+  width: 50px;
+}
+
+#page-content {
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#page-right {
+  background: url('../images/page-right.jpg') top center no-repeat;
+  float: right;
+  height: 490px;
+  width: 50px;
+}
+
+#page-bottom {
+  background: url('../images/page-bottom.jpg') top center no-repeat;
+  clear: both;
+  height: 35px;
+  width: 800px;
+}
+
+#footer {
+  border-top: 1px #800000 solid;
+  bottom: 0;
+  height: 30px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.flavortext {
+  font-style: italic;
+}
+.flavortext i {
+  font-style: normal;
+}
+
+.announcebox {
+  background-color: #FFCCCC;
+  border: 1px solid #990000;
+  font-size: 80%;
+  padding: 0.5em;
+  text-align: center;
+}
+.announcebox p {
+  padding-bottom: 0;
+}

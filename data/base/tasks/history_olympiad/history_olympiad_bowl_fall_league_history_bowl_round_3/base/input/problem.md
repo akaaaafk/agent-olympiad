@@ -1,5 +1,3 @@
-# Fall-League-History-Bowl_Round-3
-
 [Q1] This U.S. immigrant's early ventures included investments in Adams Express and the founding of the Keystone Bridge Company. After selling his largest company to J.P. Morgan, this author of the "Gospel of Wealth" created a namesake foundation to establish libraries and research councils. Making most of his wealth as a steel magnate, for ten points, what Scottish-born American philanthropist built an eponymous concert hall in New York City?
 
 [Q2] Cave paintings in the Acacus [[ah-KAH-kus]] Mountains indicate this desert may only have formed after the last Ice Age. The Tibesti mountains lie in this desert, which in recent decades has advanced south into the Sahel [[sah -HEEL]]. Peoples including the Berbers and the Tuareg [[TWAH-reg]] led gold and salt caravans across this desert. Historically crossed by Bedouin caravans, for ten points, what is this massive desert in northern Africa?

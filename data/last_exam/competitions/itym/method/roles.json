@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Agent_1",
+    "title": "contestant",
+    "may_submit": true,
+    "duties": [
+      "Team members jointly investigate the published problems and prepare final solution papers."
+    ],
+    "information_access": [
+      "contest_rules"
+    ],
+    "rule_expertise": []
+  },
+  {
+    "name": "Agent_2",
+    "title": "contestant",
+    "may_submit": true,
+    "duties": [
+      "Team members jointly investigate the published problems and prepare final solution papers."
+    ],
+    "information_access": [
+      "contest_rules"
+    ],
+    "rule_expertise": []
+  },
+  {
+    "name": "Agent_3",
+    "title": "contestant",
+    "may_submit": true,
+    "duties": [
+      "Team members jointly investigate the published problems and prepare final solution papers."
+    ],
+    "information_access": [
+      "contest_rules"
+    ],
+    "rule_expertise": []
+  },
+  {
+    "name": "Agent_4",
+    "title": "contestant",
+    "may_submit": true,
+    "duties": [
+      "Team members jointly investigate the published problems and prepare final solution papers."
+    ],
+    "information_access": [
+      "contest_rules"
+    ],
+    "rule_expertise": []
+  },
+  {
+    "name": "Agent_5",
+    "title": "contestant",
+    "may_submit": true,
+    "duties": [
+      "Team members jointly investigate the published problems and prepare final solution papers."
+    ],
+    "information_access": [
+      "contest_rules"
+    ],
+    "rule_expertise": []
+  },
+  {
+    "name": "Agent_6",
+    "title": "contestant",
+    "may_submit": true,
+    "duties": [
+      "Team members jointly investigate the published problems and prepare final solution papers."
+    ],
+    "information_access": [
+      "contest_rules"
+    ],
+    "rule_expertise": []
+  }
+]

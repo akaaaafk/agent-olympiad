@@ -1,5 +1,3 @@
-# Fall-League-History-Bowl_Round-6
-
 [Q1] This thinker claimed that human motivation was divided between eros and thanatos, or the life and death drives. This man divided the title constructs into manifest and latent content in his The Interpretation of Dreams. This thinker divided the unconscious into the ego, superego, and the id. Controversially claiming that young men dev elop an Oedipal [[ED -ih- "pull"]] complex, for ten points, which Austrian psychologist is considered the father of psychoanalysis?
 
 [Q2] An island in this nation owned by naval officer William Owen was named by him Campobello in an effort to gain favor with the sitting royal governor, Lord William Campbell. The former mining town of Uranium City and many oil sands drilling sites are on the shore of this country's Lake Athabasca [[AH -thah-BAH-skah]]. In this na tion, the SS Mont Blanc's collision with the SS Imo led to the deadly "Halifax Explosion" during the First World War. For ten points, name this North American country whose major cities include Ottawa and Montreal.

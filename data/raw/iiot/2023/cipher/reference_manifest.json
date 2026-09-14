@@ -1,0 +1,49 @@
+{
+  "schema_version": "iiot-reference-archive/v1",
+  "problem_id": "iiot_2023_03",
+  "task_code": "cipher",
+  "round": "international_final",
+  "archive_url": "https://iio.team/competition/tasks/2023",
+  "source_links": {
+    "Statement": "https://drive.google.com/file/d/1yg7UjkaJ76V6uJyckdNdPWpxIcCMkWqs/view?usp=drive_link",
+    "Solutions": "https://drive.google.com/drive/folders/1TgUQcxD8wRYLOjiPsPH4wLRdVRkq1ptk?usp=drive_link",
+    "Test cases": "https://drive.google.com/drive/folders/1WaYSIHYXFsA3Hza_SpAsiEcC_k41uO2u?usp=drive_link"
+  },
+  "reference": {
+    "path": "data/raw/iiot/2023/cipher/references/solution.cpp",
+    "source_url": "https://drive.google.com/uc?id=1zV6W5fPimuwZwWrMWvZpeEmCh2lNincI&export=download",
+    "sha256": "3c933eaa11337415976843939372e9fed036d643a5a650ae387dd8f03eb5d900",
+    "bytes": 3171,
+    "classification": "publisher_reference_source",
+    "execution_validation": "not_run"
+  },
+  "official_scoring": {
+    "total_points": 100,
+    "subtasks": [
+      {
+        "id": 1,
+        "points": 0
+      },
+      {
+        "id": 2,
+        "points": 20
+      },
+      {
+        "id": 3,
+        "points": 50
+      },
+      {
+        "id": 4,
+        "points": 30
+      }
+    ],
+    "mode": "all_cases_required_per_subtask",
+    "test_to_subtask_mapping": "not_archived"
+  },
+  "public_test_listing": {
+    "status": "pagination_incomplete",
+    "local_tests_archived": false
+  },
+  "readiness": "not_ready",
+  "license_policy": "No redistribution permission inferred."
+}

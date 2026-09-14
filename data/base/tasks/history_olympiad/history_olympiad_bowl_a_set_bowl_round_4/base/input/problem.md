@@ -1,5 +1,3 @@
-# A-Set-Bowl-Round-4
-
 [Q1] ThiscityishometoaDanielJohnstonmuraldepictingafrognamedJeremiahsaying,"Hi, HowAre You?" This cityisalsohometobronzesculpturesof musiciansWillieNelsonand Stevie Ray Vaughan. A university tower in this city was the staginggroundof amassmurder carriedout byCharlesWhitman. Hometotheworld'slargesturbanbatcolony, thiscitywasoriginallyfoundedin1839andnamedWaterloo, thoughit soonchangeditsnameto recognize a state hero. Sitting onthebanksof LadyBirdLake, for tenpoints, namethiscapital of Texas.
 
 [Q2] This structure uses two standards, AandB, for offsets. Coel Hen[[COILHEN]], thelegendaryfather of SaintHelena, usedsomebuildingsonthisstructure. JohnClaytonhelpedpreserve this structure which parallelstheStanegateRoad. Apathfollowingthisstructurepassesafort at Housesteads. ThisstructureincludedanearthworkcalledtheVallum, anditwasguardedbyMilecastles. Locatedontheborder of theRomanEmpireandsimilartotheAntonine, for ten points, what is this fortificationacross Scotland?

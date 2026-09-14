@@ -1,5 +1,3 @@
-# Miniature Golf
-
 Hide 
  Miniature Golf 
 

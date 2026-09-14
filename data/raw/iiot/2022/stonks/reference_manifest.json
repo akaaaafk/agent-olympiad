@@ -1,0 +1,48 @@
+{
+  "schema_version": "iiot-reference-archive/v1",
+  "problem_id": "iiot_2022_07",
+  "task_code": "stonks",
+  "round": "international_final",
+  "archive_url": "https://iio.team/competition/tasks/2022",
+  "source_links": {
+    "Statement": "https://drive.google.com/file/d/1N5OnfMTqN1Q7eOz4aZsZ4yshJX4n-ZsD/view?usp=drive_link",
+    "Solutions": "https://drive.google.com/drive/folders/1J4tFLXCF3sUGCFB5JF7q3LYQl2ac6GKH?usp=drive_link",
+    "Test cases": "https://drive.google.com/drive/folders/1QvgwE2MK4CDsuqIlWYi1lJOXWT3Ghzhs?usp=drive_link"
+  },
+  "reference": {
+    "path": "data/raw/iiot/2022/stonks/references/stonks.cpp",
+    "source_url": "https://drive.google.com/uc?id=1Pf87LO5tqrn2ehDnaJlAZW7566MmEDC8&export=download",
+    "sha256": "93fbe13cecf81e7148984104e77c3e975b1afcdb4ae454aaad6cde3bbe305e62",
+    "bytes": 970,
+    "classification": "publisher_reference_source",
+    "execution_validation": "not_run"
+  },
+  "official_scoring": {
+    "total_points": 100,
+    "subtasks": [
+      {
+        "id": 1,
+        "points": 0
+      },
+      {
+        "id": 2,
+        "points": 25
+      },
+      {
+        "id": 3,
+        "points": 42
+      },
+      {
+        "id": 4,
+        "points": 33
+      }
+    ],
+    "mode": "all_cases_required_per_subtask",
+    "test_to_subtask_mapping": "not_archived"
+  },
+  "public_test_listing": {
+    "status": "no_testcase_link_in_publisher_archive"
+  },
+  "readiness": "not_ready",
+  "license_policy": "No redistribution permission inferred."
+}

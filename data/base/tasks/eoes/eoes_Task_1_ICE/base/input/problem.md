@@ -1,5 +1,3 @@
-# Task_1_ICE
-
 Task 1 
 ICE 
 9th of May 2017 

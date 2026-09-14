@@ -1,3 +1,5 @@
-# 2010/puzzles/1903/trance_state/
+# Trance State
 
-Trance State Trance State Until Edison was ready to reveal it publicly, he kept his prototype for the phonograph in a bank of 108 lockers in the basement of one of the newest buildings on his research campus. He was very particular about some things; when he said something was above something else, he meant immediately above it, and some of his employees were confused by this at first.
+Open `puzzle.html` for the original styled task and its image links. The visual packet, including image-map regions, is not replaced by a text preview.
+
+Archive limitation: The original standalone archive page, diagrams, image-map links and applicable style artwork are preserved. Historical wording, repeated names, ordering and fictional premises are not modernized. No physical enactment, cross-task state or end-to-end grading is supplied.

@@ -1,5 +1,3 @@
-# wsc_writing_gq_010
-
 Small bits of music can quickly conjure up a time and place. Consider the following examples of these musical riffs and motifs, then discuss: when is it okay to use a musical cliché as a storytelling shortcut? 
 
  Oriental riff | Arabian riff | Hijaz scale | Andalusian cadence 

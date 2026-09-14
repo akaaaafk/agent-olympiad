@@ -20,7 +20,8 @@
     "computational_aids": "year_packet_dependent_default_deny"
   },
   "allowed_tools": [
-    "query_rules"
+    "query_rules",
+    "check_pumac_proof_packet"
   ],
   "resources": {
     "internet": "forbidden_unless_year_packet_explicitly_allows",

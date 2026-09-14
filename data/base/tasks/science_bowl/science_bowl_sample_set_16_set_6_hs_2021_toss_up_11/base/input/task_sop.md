@@ -1,30 +1,13 @@
-# Task SOP
+# Task
 
-## Reference Environment
-- Competition: DOE Science Bowl
-- Competition id: `science_bowl`
-- Problem id: `science_bowl_sample_set_16_set_6_hs_2021_toss_up_11`
-- Task type: `science_bowl`
-- Team size: 4
-- Year / edition: 2021
-- Source: https://science.osti.gov/wdts/nsb
+Competition: science_bowl
 
-## Goal
-As a multi-agent team, solve the olympiad-style team task using only the materials under `base/input`. Produce the required deliverable (`team_submission`).
+Task: science_bowl_sample_set_16_set_6_hs_2021_toss_up_11
 
-## Task directory
-- Variant root: `base`
-- Input directory: `base/input`
+Edition: 2021
 
-## Inputs
-- `problem.md`
-- `Set-6-HS-2021.pdf`
+Team size: 4
 
-## Title
-Physics / Multiple Choice / toss_up
+Deliverable: spoken_answer
 
-## Deterministic Evaluation Rule
-Gold answers and official solution booklets are not provided in `input/`. Scoring uses the evaluator declared on the task card (gold match, rubric LLM judge, slide judge, or deferred sandbox).
-
-## Deliverables
-Return the team `team_submission` expected by this competition.
+Use the attached problem materials and the inherited competition and collaboration instructions.

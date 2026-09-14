@@ -19,7 +19,8 @@
     "session_track": "team_round_only"
   },
   "allowed_tools": [
-    "query_rules"
+    "query_rules",
+    "prepare_arml_local_sheet"
   ],
   "resources": {
     "internet": "forbidden",

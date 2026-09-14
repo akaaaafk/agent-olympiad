@@ -22,6 +22,15 @@ from test_contest_work_guards import fixture
 
 
 class RepresentativeSmokeTests(unittest.TestCase):
+    def test_strict_control_smoke_replaces_expired_proposals(self):
+        base, _, _ = fixture()
+        for competition in ('iol_team', 'ioaa_group', 'jessup', 'mcm', 'itym', 'gcch_harvard', 'vis_moot'):
+            with self.subTest(competition=competition):
+                manifest = replace(base, competition_id=competition, tasks=base.tasks[:1])
+                case = run_case(manifest, load_rule_card(competition), 'vallina_otc', 12)
+                self.assertTrue(case['checks']['required_challenges_executed'])
+                self.assertFalse(case['action_errors'])
+
     def test_artifact_functions_have_unique_names_in_every_baseline(self):
         for competition in ("mcm", "ieo_business_case"):
             card = load_rule_card(competition)

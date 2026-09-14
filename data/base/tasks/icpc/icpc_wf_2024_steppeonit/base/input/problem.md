@@ -1,5 +1,3 @@
-# Steppe on It
-
 Hide 
  Steppe on It 
 

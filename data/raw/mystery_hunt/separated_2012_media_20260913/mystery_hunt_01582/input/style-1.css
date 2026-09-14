@@ -1,0 +1,12 @@
+.cc-grid {
+  margin: 2em 0;
+}
+
+#cc-clues td ol {
+  margin: 0;
+}
+
+#cc-clues th {
+  text-align: left;
+  padding-left: 2.5em;
+}

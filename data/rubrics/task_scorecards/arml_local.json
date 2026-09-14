@@ -1,0 +1,567 @@
+{
+  "schema_version": "1.1",
+  "dataset": "arml_local",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "arml_local_2009",
+      "year": 2009,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/numerical_sheet_reference_40_v1.json",
+          "sha256": "ee1fac6916844e03ef4f2e421e1fb51cffd75aef5f2868ec86a049270ec14e16",
+          "format": "numeric_rubric",
+          "rubric_id": "numerical_sheet_reference_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "answers",
+              "name": "Answer correctness",
+              "max_score": 32,
+              "observable": true,
+              "description": "Final answers match official solutions (equivalent forms allowed)."
+            },
+            {
+              "id": "completeness",
+              "name": "Completeness",
+              "max_score": 8,
+              "observable": true,
+              "description": "All required problems have attempted final answers."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/arml_local/2009/arml_local_2009_solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "3b61cc86c607d6cfb358a8617cfda34b5dd4701812c0ac670cc428f8003da086"
+        }
+      ],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 4.0
+        },
+        {
+          "id": "2",
+          "points": 4.0
+        },
+        {
+          "id": "3",
+          "points": 4.0
+        },
+        {
+          "id": "4",
+          "points": 4.0
+        },
+        {
+          "id": "5",
+          "points": 4.0
+        },
+        {
+          "id": "6",
+          "points": 4.0
+        },
+        {
+          "id": "7",
+          "points": 4.0
+        },
+        {
+          "id": "8",
+          "points": 4.0
+        },
+        {
+          "id": "9",
+          "points": 4.0
+        },
+        {
+          "id": "10",
+          "points": 4.0
+        }
+      ],
+      "gold_max_score": 40.0
+    },
+    {
+      "problem_id": "arml_local_2010",
+      "year": 2010,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/numerical_sheet_reference_40_v1.json",
+          "sha256": "ee1fac6916844e03ef4f2e421e1fb51cffd75aef5f2868ec86a049270ec14e16",
+          "format": "numeric_rubric",
+          "rubric_id": "numerical_sheet_reference_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "answers",
+              "name": "Answer correctness",
+              "max_score": 32,
+              "observable": true,
+              "description": "Final answers match official solutions (equivalent forms allowed)."
+            },
+            {
+              "id": "completeness",
+              "name": "Completeness",
+              "max_score": 8,
+              "observable": true,
+              "description": "All required problems have attempted final answers."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/arml_local/2010/arml_local_2010_solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "bd6096b10dbd1cd8ea5cec7898c94af17dfb096887640ee13124c8630db56c11"
+        }
+      ],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 4.0
+        },
+        {
+          "id": "2",
+          "points": 4.0
+        },
+        {
+          "id": "3",
+          "points": 4.0
+        },
+        {
+          "id": "4",
+          "points": 4.0
+        },
+        {
+          "id": "5",
+          "points": 4.0
+        },
+        {
+          "id": "6",
+          "points": 4.0
+        },
+        {
+          "id": "7",
+          "points": 4.0
+        },
+        {
+          "id": "8",
+          "points": 4.0
+        },
+        {
+          "id": "9",
+          "points": 4.0
+        },
+        {
+          "id": "10",
+          "points": 4.0
+        }
+      ],
+      "gold_max_score": 40.0
+    },
+    {
+      "problem_id": "arml_local_2011",
+      "year": 2011,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/numerical_sheet_reference_40_v1.json",
+          "sha256": "ee1fac6916844e03ef4f2e421e1fb51cffd75aef5f2868ec86a049270ec14e16",
+          "format": "numeric_rubric",
+          "rubric_id": "numerical_sheet_reference_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "answers",
+              "name": "Answer correctness",
+              "max_score": 32,
+              "observable": true,
+              "description": "Final answers match official solutions (equivalent forms allowed)."
+            },
+            {
+              "id": "completeness",
+              "name": "Completeness",
+              "max_score": 8,
+              "observable": true,
+              "description": "All required problems have attempted final answers."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/arml_local/2011/arml_local_2011_solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "9fb4770b0d650a4d562e4f9773fc6370f5bf26b1c99bfb0d35d22c76fb613713"
+        }
+      ],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 4.0
+        },
+        {
+          "id": "2",
+          "points": 4.0
+        },
+        {
+          "id": "3",
+          "points": 4.0
+        },
+        {
+          "id": "4",
+          "points": 4.0
+        },
+        {
+          "id": "5",
+          "points": 4.0
+        },
+        {
+          "id": "6",
+          "points": 4.0
+        },
+        {
+          "id": "7",
+          "points": 4.0
+        },
+        {
+          "id": "8",
+          "points": 4.0
+        },
+        {
+          "id": "9",
+          "points": 4.0
+        },
+        {
+          "id": "10",
+          "points": 4.0
+        }
+      ],
+      "gold_max_score": 40.0
+    },
+    {
+      "problem_id": "arml_local_2012",
+      "year": 2012,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/numerical_sheet_reference_40_v1.json",
+          "sha256": "ee1fac6916844e03ef4f2e421e1fb51cffd75aef5f2868ec86a049270ec14e16",
+          "format": "numeric_rubric",
+          "rubric_id": "numerical_sheet_reference_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "answers",
+              "name": "Answer correctness",
+              "max_score": 32,
+              "observable": true,
+              "description": "Final answers match official solutions (equivalent forms allowed)."
+            },
+            {
+              "id": "completeness",
+              "name": "Completeness",
+              "max_score": 8,
+              "observable": true,
+              "description": "All required problems have attempted final answers."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/arml_local/2012/arml_local_2012_solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "4675e31ea64e554edffe7073de478d46f1e2103e33afe0516c79cacabee708d8"
+        }
+      ],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 4.0
+        },
+        {
+          "id": "2",
+          "points": 4.0
+        },
+        {
+          "id": "3",
+          "points": 4.0
+        },
+        {
+          "id": "4",
+          "points": 4.0
+        },
+        {
+          "id": "5",
+          "points": 4.0
+        },
+        {
+          "id": "6",
+          "points": 4.0
+        },
+        {
+          "id": "7",
+          "points": 4.0
+        },
+        {
+          "id": "8",
+          "points": 4.0
+        },
+        {
+          "id": "9",
+          "points": 4.0
+        },
+        {
+          "id": "10",
+          "points": 4.0
+        }
+      ],
+      "gold_max_score": 40.0
+    },
+    {
+      "problem_id": "arml_local_2013",
+      "year": 2013,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/numerical_sheet_reference_40_v1.json",
+          "sha256": "ee1fac6916844e03ef4f2e421e1fb51cffd75aef5f2868ec86a049270ec14e16",
+          "format": "numeric_rubric",
+          "rubric_id": "numerical_sheet_reference_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "answers",
+              "name": "Answer correctness",
+              "max_score": 32,
+              "observable": true,
+              "description": "Final answers match official solutions (equivalent forms allowed)."
+            },
+            {
+              "id": "completeness",
+              "name": "Completeness",
+              "max_score": 8,
+              "observable": true,
+              "description": "All required problems have attempted final answers."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/arml_local/2013/arml_local_2013_solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "64e5ce1deb991196172f7b238a441af09bf613cd2983b4eb9fa3885efe4cd124"
+        }
+      ],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 4.0
+        },
+        {
+          "id": "2",
+          "points": 4.0
+        },
+        {
+          "id": "3",
+          "points": 4.0
+        },
+        {
+          "id": "4",
+          "points": 4.0
+        },
+        {
+          "id": "5",
+          "points": 4.0
+        },
+        {
+          "id": "6",
+          "points": 4.0
+        },
+        {
+          "id": "7",
+          "points": 4.0
+        },
+        {
+          "id": "8",
+          "points": 4.0
+        },
+        {
+          "id": "9",
+          "points": 4.0
+        },
+        {
+          "id": "10",
+          "points": 4.0
+        }
+      ],
+      "gold_max_score": 40.0
+    },
+    {
+      "problem_id": "arml_local_2014",
+      "year": 2014,
+      "evaluation_status": "ready",
+      "evaluator_id": "gold_answer_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/numerical_sheet_reference_40_v1.json",
+          "sha256": "ee1fac6916844e03ef4f2e421e1fb51cffd75aef5f2868ec86a049270ec14e16",
+          "format": "numeric_rubric",
+          "rubric_id": "numerical_sheet_reference_40_v1",
+          "total_points": 40,
+          "criteria": [
+            {
+              "id": "answers",
+              "name": "Answer correctness",
+              "max_score": 32,
+              "observable": true,
+              "description": "Final answers match official solutions (equivalent forms allowed)."
+            },
+            {
+              "id": "completeness",
+              "name": "Completeness",
+              "max_score": 8,
+              "observable": true,
+              "description": "All required problems have attempted final answers."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/arml_local/2014/arml_local_2014_solutions.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "0e6fa02a4d9d3a595776a75ba7517e4ff79d26110be0984a57513f99898d9d46"
+        }
+      ],
+      "limitations": null,
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [
+        {
+          "id": "1",
+          "points": 4.0
+        },
+        {
+          "id": "2",
+          "points": 4.0
+        },
+        {
+          "id": "3",
+          "points": 4.0
+        },
+        {
+          "id": "4",
+          "points": 4.0
+        },
+        {
+          "id": "5",
+          "points": 4.0
+        },
+        {
+          "id": "6",
+          "points": 4.0
+        },
+        {
+          "id": "7",
+          "points": 4.0
+        },
+        {
+          "id": "8",
+          "points": 4.0
+        },
+        {
+          "id": "9",
+          "points": 4.0
+        },
+        {
+          "id": "10",
+          "points": 4.0
+        },
+        {
+          "id": "11",
+          "points": 4.0
+        },
+        {
+          "id": "12",
+          "points": 4.0
+        },
+        {
+          "id": "13",
+          "points": 4.0
+        },
+        {
+          "id": "14",
+          "points": 4.0
+        },
+        {
+          "id": "15",
+          "points": 4.0
+        }
+      ],
+      "gold_max_score": 60.0
+    }
+  ]
+}

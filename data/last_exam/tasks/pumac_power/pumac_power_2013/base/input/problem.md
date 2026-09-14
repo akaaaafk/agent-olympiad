@@ -1,5 +1,3 @@
-# PUMaC Power Round 2013
-
 PUMaC 2013 Power Round
 Rules, Remarks, and Reminders
 These rules supersede any rules appearing elsewhere about the Power Round:

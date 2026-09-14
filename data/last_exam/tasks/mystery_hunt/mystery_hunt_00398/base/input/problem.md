@@ -1,3 +1,5 @@
-# 2003/www.acme-corp.com/teamGuest/6/6_8.html
+# Less Engineering, Dammit!
 
-Less Engineering, Dammit! (Solution) Document 6.8: Less Engineering, Dammit! Your bibliophilic friend frowns. "Ignoring strict rules against leaving personal papers in magazines, your boss was using this to bookmark an article in Popular Mechanics . I don't know how to read these things, of course. I'm sure to someone who does, it's all very uncomplicated. Not to me, though," he adds, knitting his brows in confusion. Datasheet for SN74HC02139-n Schematics page 1 Schematics page 2 Schematics page 3 Schematics page 4 Schematics page 5 Back to the index
+Open `puzzle.html` and its linked PDF files. Their original page geometry, notation and images are preserved; no flattened preview replaces them.
+
+Archive limitation: The original PDFs are the complete static puzzle materials. PostScript alternatives, where present, are archived as inert source files and were not executed. Historical rules and visual/spatial grading remain uncertified.

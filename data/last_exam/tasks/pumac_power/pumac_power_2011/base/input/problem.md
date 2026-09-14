@@ -1,5 +1,3 @@
-# PUMaC Power Round 2011
-
 Power Round: Geometry Revisited
 Stobaeus (one of Euclid’s students): ”But what shall I get by learning these
 things?”

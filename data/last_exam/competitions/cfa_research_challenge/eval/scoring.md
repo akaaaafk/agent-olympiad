@@ -1,149 +1,162 @@
-# Eval — `cfa_research_challenge` (hidden until grade)
+# Hidden scoring configuration
 
-Do not stage this file to the agent at start.
-
-## Evaluator
+## Evaluation
 
 ```json
 {
-  "evaluator_id": null,
-  "evaluator_status": "unassigned",
-  "recommended_evaluator_id": null,
-  "mode": "rubric",
-  "unit": "artifact",
-  "rubric_path": null
-}
-```
-
-## Evaluation guidance
-
-Competition-specific criteria: The contestant-facing judging brief balances the written equity-research report and oral presentation. Recommendations should be supported by disciplined public-source research, defensible valuation reasoning, clear citations, and a coherent investment thesis. Task performance: evaluate the research report and deck per artifact in rubric mode and enforce this answer contract: Submit a structured report or slide outline covering analysis, recommendation, and evidence. Repository status: the evaluator is unassigned. Do not invent a completed benchmark grade or claim evaluator readiness. Rule compliance: report prohibited tools, outside assistance, hidden-answer access, unauthorized submission, and competition-specific violations separately from task performance. Collaboration quality: assess allocation, evidence exchange, verification, handoffs, recovery, replanning, and communication efficiency without rewarding fixed roles, equal airtime, or message volume by themselves. Fidelity: identify official mechanisms that the current runner does not reproduce; never treat a proxy action as proof that a physical, oral, live-opponent, judge, or mutable-environment event occurred.
-
-## Official performance
-
-```json
-{
-  "source_status": "source_enriched_v1",
-  "source_review_status": "primary_rules_partial_or_variant_selector_required",
-  "mechanics_completeness": "not_fully_encoded",
-  "mode": "rubric",
-  "unit": "artifact",
-  "criteria": [
-    "Repository evaluation status: Task performance is specified per artifact in rubric mode, but the repository evaluator is unassigned; do not invent a completed score.",
-    "Local scoring commonly balances the written report and presentation equally.",
-    "Recommendations need evidence and defensible valuation reasoning."
-  ],
-  "mechanics": [],
-  "tie_breakers": [],
-  "source_refs": [],
-  "unresolved": [],
-  "repository_evaluator_id": null,
-  "repository_evaluator_status": "unassigned"
-}
-```
-
-## Rule compliance
-
-```json
-{
-  "reported_separately_from_performance": true,
-  "violation_types": [
-    {
-      "id": "unauthorized_tool_or_resource",
-      "condition": "A contestant uses a tool, material, device, website, machine, or execution surface forbidden by this competition."
+  "evaluation_guidance": "Resolve readiness, evaluator, rubric, and score basis from the selected benchmark record. Resolve readiness, season and scoring stage from the selected benchmark record. This is public-information equity research, not a fixed-question paper. Require the historical host assignment/materials and an explicit reproducible information boundary before grading. Champion recommendations are not unique gold answers. For verified 2024-2025 and 2025-2026 rules, 50/50 report/presentation scoring applies only to the specified local formats; later rounds use presentation scoring and judge-rank aggregation. Do not infer oral delivery, Q&A or team involvement from a slide deck. Report task performance, rule compliance and collaboration diagnostics separately.",
+  "scoring": {
+    "mode": "rubric",
+    "unit": "artifact",
+    "evaluator_id": null,
+    "evaluator_status": "not_ready",
+    "competition_specific_criteria": "The contestant-facing judging brief balances the written equity-research report and oral presentation. Recommendations should be supported by disciplined public-source research, defensible valuation reasoning, clear citations, and a coherent investment thesis.",
+    "official_performance": {
+      "source_status": "source_enriched_v1",
+      "source_review_status": "primary_rules_partial_or_variant_selector_required",
+      "mechanics_completeness": "not_fully_encoded",
+      "mode": "rubric",
+      "unit": "artifact",
+      "criteria": [
+        "Use the selected record's applicable season and stage.",
+        "For verified 2024-2025 and 2025-2026 rules, local classic is 50% written/50% presentation; staggered A depends on whether reports use the same graders; staggered B has combined-score semifinals and presentation-only final.",
+        "Sub-regional is an 80-point recorded presentation without Q&A; regional and global oral presentations use 100-point sheets. These later stages rank teams by average judge ranking, not mean raw scores.",
+        "Supported research and valuation reasoning, not agreement with a champion recommendation, determine research quality."
+      ],
+      "mechanics": [],
+      "tie_breakers": [],
+      "source_refs": [],
+      "unresolved": [],
+      "repository_evaluator_id": null,
+      "repository_evaluator_status": "not_ready"
     },
-    {
-      "id": "outside_assistance",
-      "condition": "The team receives problem-solving help from a person or service outside the permitted team and official channels."
+    "rule_compliance": {
+      "reported_separately_from_performance": true,
+      "violation_types": [
+        {
+          "id": "unauthorized_tool_or_resource",
+          "condition": "A contestant uses a tool, material, device, website, machine, or execution surface forbidden by this competition."
+        },
+        {
+          "id": "outside_assistance",
+          "condition": "The team receives problem-solving help from a person or service outside the permitted team and official channels."
+        },
+        {
+          "id": "hidden_solution_or_evaluator_access",
+          "condition": "A contestant accesses hidden answers, tests, rubrics, evaluator internals, or judge state not released by the event."
+        },
+        {
+          "id": "unauthorized_submission",
+          "condition": "A non-submitter files or replaces the shared submission, or the team exceeds the declared submission contract."
+        },
+        {
+          "id": "competition_specific_constraint",
+          "condition": "The team violates a competition-specific constraint recorded in competition_format, timeline, resource_policy, collaboration_protocol, integrity_and_compliance, or deliverable_format."
+        }
+      ],
+      "reporting": [
+        "total_violations",
+        "violations_by_type",
+        "first_violation_turn",
+        "performance_with_illegal_actions",
+        "compliant_performance"
+      ]
     },
-    {
-      "id": "hidden_solution_or_evaluator_access",
-      "condition": "A contestant accesses hidden answers, tests, rubrics, evaluator internals, or judge state not released by the event."
+    "collaboration_quality": {
+      "benchmark_diagnostic_only": true,
+      "reported_separately_from_performance": true,
+      "metric_groups": {
+        "task_allocation_and_coverage": [
+          "time_to_useful_task_allocation",
+          "duplicate_effort_before_coverage",
+          "workload_and_specialization_balance"
+        ],
+        "evidence_and_verification": [
+          "decision_relevant_evidence_shared",
+          "independent_checks",
+          "review_caused_corrections"
+        ],
+        "handoff_and_shared_state": [
+          "handoff_completeness",
+          "private_reasoning_loss",
+          "stale_state_decisions"
+        ],
+        "recovery_and_replanning": [
+          "failure_to_diagnosis_latency",
+          "new_evidence_before_retry",
+          "evidence_responsive_replanning"
+        ],
+        "communication_efficiency": [
+          "decision_relevant_communication",
+          "avoidable_message_overhead",
+          "unresolved_disagreement_at_submission"
+        ]
+      },
+      "anti_metrics": [
+        "Do not reward message count by itself.",
+        "Do not reward equal speaking time or fixed roles by itself.",
+        "Do not infer shared knowledge from private reasoning that was never communicated.",
+        "Do not let collaboration quality overwrite the competition's official task score unless the official rubric explicitly does so."
+      ]
     },
-    {
-      "id": "unauthorized_submission",
-      "condition": "A non-submitter files or replaces the shared submission, or the team exceeds the declared submission contract."
+    "current_repository_availability": {
+      "evaluator_ready": false,
+      "evaluator_status": "not_ready",
+      "official_environment_fully_reproduced": false,
+      "official_wall_clock_enforced": false,
+      "declared_unavailable_mechanisms": [
+        "complete_historical_research_input_context",
+        "frozen_information_boundary",
+        "live_or_recorded_presentation_evidence",
+        "original_judge_rankings"
+      ],
+      "proxy_limitations": [
+        "Paid terminals (Bloomberg etc.) and company info sessions are not freely replicable.",
+        "Mentor hour caps and oral defense Q&A are hard to simulate honestly."
+      ],
+      "required_selectors": [
+        "competition_stage",
+        "local_format_if_local"
+      ],
+      "submission_adaptation": "Official entries are a written report plus a deck; the runner submits both as text.",
+      "readiness_scope": "Per-record metadata; evaluator availability does not imply official-environment reproduction."
     },
-    {
-      "id": "competition_specific_constraint",
-      "condition": "The team violates a competition-specific constraint recorded in competition_format, timeline, resource_policy, collaboration_protocol, integrity_and_compliance, or deliverable_format."
+    "rubric_reuse_policy": {
+      "same_competition_only": true,
+      "cross_year_rubric_reuse": true,
+      "copy_other_year_answers": false,
+      "invent_official_weights": false,
+      "missing_packet_or_environment_stays_not_ready": true,
+      "excluded_competitions": [
+        "envirothon"
+      ]
+    },
+    "benchmark_readiness_source": "data/benchmarks/cfa_research_challenge/benchmark.json",
+    "evaluation_status_counts": {
+      "not_ready": 19
+    },
+    "evaluator_selection": "Use each benchmark record's evaluation; rule values are defaults only.",
+    "record_evaluator_overrides": {},
+    "record_rubric_overrides": {},
+    "season_scoring_sources": {
+      "2024-2025": {
+        "rules_file": "data/raw/cfa_research_challenge/rules/research_challenge_rules_2024_2025.pdf",
+        "written_report_rubric": "data/rubrics/cfa_research_challenge_written_report_2024_2025_v1.json",
+        "presentation_rubric": "data/rubrics/cfa_research_challenge_presentation_2024_2025_v1.json",
+        "subregional_presentation_rubric": "data/rubrics/cfa_research_challenge_subregional_presentation_2024_2025_v1.json"
+      },
+      "2025-2026": {
+        "rules_file": "data/raw/cfa_research_challenge/rules/research_challenge_rules_2025_2026.pdf",
+        "written_report_rubric": "data/rubrics/cfa_research_challenge_written_report_2025_2026_v1.json",
+        "presentation_rubric": "data/rubrics/cfa_research_challenge_presentation_2025_2026_v1.json",
+        "subregional_presentation_rubric": "data/rubrics/cfa_research_challenge_subregional_presentation_2025_2026_v1.json"
+      }
     }
-  ],
-  "reporting": [
-    "total_violations",
-    "violations_by_type",
-    "first_violation_turn",
-    "performance_with_illegal_actions",
-    "compliant_performance"
-  ]
-}
-```
-
-## Collaboration quality
-
-```json
-{
-  "benchmark_diagnostic_only": true,
-  "reported_separately_from_performance": true,
-  "metric_groups": {
-    "task_allocation_and_coverage": [
-      "time_to_useful_task_allocation",
-      "duplicate_effort_before_coverage",
-      "workload_and_specialization_balance"
-    ],
-    "evidence_and_verification": [
-      "decision_relevant_evidence_shared",
-      "independent_checks",
-      "review_caused_corrections"
-    ],
-    "handoff_and_shared_state": [
-      "handoff_completeness",
-      "private_reasoning_loss",
-      "stale_state_decisions"
-    ],
-    "recovery_and_replanning": [
-      "failure_to_diagnosis_latency",
-      "new_evidence_before_retry",
-      "evidence_responsive_replanning"
-    ],
-    "communication_efficiency": [
-      "decision_relevant_communication",
-      "avoidable_message_overhead",
-      "unresolved_disagreement_at_submission"
-    ]
   },
-  "anti_metrics": [
-    "Do not reward message count by itself.",
-    "Do not reward equal speaking time or fixed roles by itself.",
-    "Do not infer shared knowledge from private reasoning that was never communicated.",
-    "Do not let collaboration quality overwrite the competition's official task score unless the official rubric explicitly does so."
-  ]
+  "submission": {
+    "max_count": 1,
+    "adaptation": "Official entries are a written report plus a deck; the runner submits both as text."
+  }
 }
 ```
 
-## Current repository availability
-
-```json
-{
-  "evaluator_ready": false,
-  "evaluator_status": "unassigned",
-  "official_environment_fully_reproduced": false,
-  "official_wall_clock_enforced": false,
-  "declared_unavailable_mechanisms": [],
-  "proxy_limitations": [
-    "Paid terminals (Bloomberg etc.) and company info sessions are not freely replicable.",
-    "Mentor hour caps and oral defense Q&A are hard to simulate honestly."
-  ],
-  "required_selectors": [],
-  "submission_adaptation": "Official entries are a written report plus a deck; the runner submits both as text."
-}
-```
-
-## Submission adaptation
-
-```json
-{
-  "max_count": 1,
-  "adaptation": "Official entries are a written report plus a deck; the runner submits both as text."
-}
-```

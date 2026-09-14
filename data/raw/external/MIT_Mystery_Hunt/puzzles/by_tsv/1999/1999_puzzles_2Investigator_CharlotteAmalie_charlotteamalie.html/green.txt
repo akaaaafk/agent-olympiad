@@ -1,0 +1,123 @@
+***********Green*********************
+
+(start) G: Anybody want to do the dialog puzzle?
+
+<set to go? | dialog puzzle? >
+G:  Umm, I think so, Brain, but what if the chicken won't wear the nylons?
+
+<...obsession....>
+G: What are your obsessions and darkest fears?
+
+<....imagine your mother....>
+G: Whats that movie called that stars Emma Thompson and her real life mother?
+
+<Would your mother have ...?>
+G: What was your childhood like?
+
+<...in a barn?>
+G: Are you done insulting me yet? 
+
+<....topic of discussion?>
+G: What's the magic word?
+
+<...pay for that...| ... withdraw some...>
+G: What bank has an ATM on the corner of Vassar and mass ave?
+
+<....sludge through drifts...|...bite to eat...>
+G: How much money do you think I have in my pockets?
+
+<knock knock...>
+G: Who's asking?
+
+< ... mean?>
+G: Isn't there a puzzle that uses questions?
+
+< .... solved?>
+G: What was your cue on that last question?
+
+< ... answers...>
+G: Where are all of your hard won answers hidden?
+
+<... where you are?>
+G: Where in Hell are we?
+
+<... geography...>
+G: What is the capitol of spain?
+
+<... Carmen Sandiago....>
+G: Where in hell is Carmen Sandiago?
+
+<... attractive....>
+G: Who is taller, Emma Thompson or Carmen Sandiago?
+
+
+<...late...| waiting around >
+G: Did someone say a round latte? 
+
+<...McDonalds?>
+G: Is that not the poison of true love?
+
+<...water-babies..>
+G: What is like pool without pockets?
+
+
+<... on his lips?>
+G: Wasn't it Romeo that took his last sip of bitterness and cold?
+
+<Did you see...> 
+G: How did they get all those vibrent colors into it?
+
+<...Leonardo DiCaprio?>
+G: How did they get the blue in his eyes and shirts match so well?
+
+<... laundry?>
+G:What are the two things that Mary uses in her laundry?
+
+<...underwear..>
+G: Can't you afford a maid?
+
+<...little maid's outfit?>
+G: What kind of girl do you think I am?
+
+<What was I thinking?>
+G: Are you thinking what I'm thinking?
+
+<... Pete Rose...>
+G: Was baseball an Olympic sport in Barcelona?
+
+<Anybody there?>
+G: Are you here for the dialog game?
+
+<...real question?>
+G: Don't other questions come to mind?
+
+<...pig's..>
+G: How much wood would a wood chuck chuck if a woodchuck could chuck wood?
+
+<..fools fall..>
+G: Are you a fool? 
+
+<RU?>
+G: Do you think this is getting a little patronizing?
+ 
+<..dog?>
+G: Are you done insulting me yet?
+
+<..talking about?>
+G: What's the answer to life?
+
+<the universe?>
+G: and everything?
+
+<...6x9...>
+G: Are number questions out of bounds?
+
+<... factual...>
+G: Do you mean like in Rosencranz and Guildenstern are dead? 
+
+<...relief?>
+G: Have you ever heard the phrase 'bituminous coal'?
+
+<..grab a bite...>
+G: How much money do you think I have in my pockets?
+

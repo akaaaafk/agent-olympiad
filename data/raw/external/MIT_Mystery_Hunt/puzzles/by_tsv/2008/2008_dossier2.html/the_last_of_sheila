@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>MIT Mystery Hunt: The Last of Sheila</title>
+<link href="../css/mydossier.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="../js/rollover.js"></script>
+</head>
+<body onload="MM_preloadImages('http://web.mit.edu/puzzle/www/08/images/dossier_1_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_2_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_3_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_4_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_5_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_6_active.gif','http://web.mit.edu/puzzle/www/08/images/dossier_7_active.gif')">
+<div id="container">
+<div id="header"><div id="headerIcon"><a href="../index.html"><img src="../images/spacer.gif" alt="Home page" width="94" height="94" border="0" /></a></div><div id="headerCheckAnswer"><a href="answer/">View Solution</a></div></div>
+<div id="content">
+  <div id="nav"><img src="http://web.mit.edu/puzzle/www/08/images/header_dossiers.gif" alt="Dossiers:" width="119" height="27" class="paddingRight4" />&nbsp;<a href="http://web.mit.edu/puzzle/www/08/dossier1.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_1_open.gif" alt="Dossier 1" name="dossier1" width="30" height="27" border="0" id="dossier1" onmouseover="MM_swapImage('dossier1','','http://web.mit.edu/puzzle/www/08/images/dossier_1_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier2.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_2_open.gif" alt="Dossier 2" name="dossier2" width="30" height="27" border="0" id="dossier2" onmouseover="MM_swapImage('dossier2','','http://web.mit.edu/puzzle/www/08/images/dossier_2_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier3.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_3_open.gif" alt="Dossier 3" name="dossier3" width="30" height="27" border="0" id="dossier3" onmouseover="MM_swapImage('dossier3','','http://web.mit.edu/puzzle/www/08/images/dossier_3_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier4.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_4_open.gif" alt="Dossier 4" name="dossier4" width="30" height="27" border="0" id="dossier4" onmouseover="MM_swapImage('dossier4','','http://web.mit.edu/puzzle/www/08/images/dossier_4_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier5.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_5_open.gif" alt="Dossier 5" name="dossier5" width="30" height="27" border="0" id="dossier5" onmouseover="MM_swapImage('dossier5','','http://web.mit.edu/puzzle/www/08/images/dossier_5_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier6.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_6_open.gif" alt="Dossier 6" name="dossier6" width="30" height="27" border="0" id="dossier6" onmouseover="MM_swapImage('dossier6','','http://web.mit.edu/puzzle/www/08/images/dossier_6_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a><a href="http://web.mit.edu/puzzle/www/08/dossier7.html"><img src="http://web.mit.edu/puzzle/www/08/images/dossier_7_open.gif" alt="Dossier 7" name="dossier7" width="30" height="27" border="0" id="dossier7" onmouseover="MM_swapImage('dossier7','','http://web.mit.edu/puzzle/www/08/images/dossier_7_active.gif',1)" onmouseout="MM_swapImgRestore()" class="paddingRight15" border="0" /></a></div>
+
+  <h1>The Last of Sheila</h1>
+  <p><i>When the millionaire widower of Sheila Green, famed Hollywood cobbler, invites you all onto his yacht for a week of entertainment, retro fashion, and mind games, you go. Even if you're usually as stubborn as mules.</i></p>
+
+  <p align="center"><img src="images/thelastofsheila1.jpg" alt="" /><br/>8<sub>L</sub> <span style="font-size:175%;vertical-align:top">1</span> 4<sub>R</sub></p>
+  <p align="center"><img src="images/thelastofsheila2.jpg" alt="" /><br/>2<sub>L</sub> <span style="font-size:175%;vertical-align:top">4</span> 9<sub>R</sub></p>
+  <p align="center"><img src="images/thelastofsheila3.jpg" alt="" /><br/>9<sub>L</sub> <span style="font-size:175%;vertical-align:top">6</span> 4<sub>R</sub></p>
+  <p align="center"><img src="images/thelastofsheila4.jpg" alt="" /><br/>1<sub>L</sub> <span style="font-size:175%;vertical-align:top">2</span> 7<sub>R</sub></p>
+  <p align="center"><img src="images/thelastofsheila5.jpg" alt="" /><br/>10<sub>L</sub> <span style="font-size:175%;vertical-align:top">8</span> 7<sub>R</sub></p>
+  <p align="center"><img src="images/thelastofsheila6.jpg" alt="" /><br/>2<sub>L</sub> <span style="font-size:175%;vertical-align:top">3</span> 1<sub>R</sub></p>
+  <p align="center"><img src="images/thelastofsheila7.jpg" alt="" /><br/>2<sub>L</sub> <span style="font-size:175%;vertical-align:top">4</span> 6<sub>R</sub></p>
+  <p align="center"><img src="images/thelastofsheila8.jpg" alt="" /><br/>6<sub>L</sub> <span style="font-size:175%;vertical-align:top">1</span> 8<sub>R</sub></p>
+
+  <p>And alphabetized for your convenience:</p>
+  <div style="border:1px solid #000000; font-family:Courier; margin:20px auto; text-align:center; width:400px"><br/><br/>YOU ARE<br/><br/>A<br/><br/>REDESIGN OF BABS'<br/>BRACKET (11)<br/><br/><br/></div>
+  <div style="border:1px solid #000000; font-family:Courier; margin:20px auto; text-align:center; width:400px"><br/><br/>YOU ARE<br/><br/>A<br/><br/>QUIET KING I SURROUNDED<br/>WITH USELESS VERBIAGE (4-6)<br/><br/><br/></div>
+  <div style="border:1px solid #000000; font-family:Courier; margin:20px auto; text-align:center; width:400px"><br/><br/>YOU ARE<br/><br/>A<br/><br/>NEW CHURCH HAT THAT'S<br/>DONNED WITH MORE EASE (6-5)<br/><br/><br/></div>
+  <div style="border:1px solid #000000; font-family:Courier; margin:20px auto; text-align:center; width:400px"><br/><br/>YOU ARE<br/><br/>A<br/><br/>BEER MIXED INTO RICE WINE<br/>WITHIN SIXTY MINUTES (12)<br/><br/><br/></div>
+  <div style="border:1px solid #000000; font-family:Courier; margin:20px auto; text-align:center; width:400px"><br/><br/>YOU ARE<br/><br/>A<br/><br/>FUNGUS TOUCHING SHORT, SHORT<br/>MS. DEREK, UPSETTINGLY (10)<br/><br/><br/></div>
+  <div style="border:1px solid #000000; font-family:Courier; margin:20px auto; text-align:center; width:400px"><br/><br/>YOU ARE<br/><br/>A<br/><br/>LAZY OL' TURK<br/>DANCING (5,5)<br/><br/><br/></div>
+  <div style="border:1px solid #000000; font-family:Courier; margin:20px auto; text-align:center; width:400px"><br/><br/>YOU ARE<br/><br/>A<br/><br/>GALOOT IN ODIN'S<br/>REALM, TOPLESS (8)<br/><br/><br/></div>
+  <div style="border:1px solid #000000; font-family:Courier; margin:20px auto; text-align:center; width:400px"><br/><br/>YOU ARE<br/><br/>A<br/><br/>MOP WES NEVER<br/>REPAIRED (5-6)<br/><br/><br/></div>
+
+</div>
+</div>
+</body><script type="module" src="/checkanswer.js"></script>
+</html>
+
+
+

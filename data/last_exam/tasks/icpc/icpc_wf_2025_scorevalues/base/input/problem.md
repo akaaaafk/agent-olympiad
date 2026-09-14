@@ -1,5 +1,3 @@
-# Score Values
-
 Hide 
  Score Values 
 

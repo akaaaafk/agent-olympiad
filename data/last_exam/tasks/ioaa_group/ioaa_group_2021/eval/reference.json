@@ -4,7 +4,19 @@
   "has_gold_answer": true,
   "evaluator_id": "rubric_llm_v1",
   "evaluator_status": "ready",
-  "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-  "deliverable": "worked_answers",
-  "solution_file": null
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": "rubric_llm_v1",
+    "status": "ready",
+    "rubric_path": "data/rubrics/ioaa_group_worked_answer_100_v1.json",
+    "deliverable": "group_worked_answer",
+    "judge_assets": [
+      "data/raw/ioaa/2021/group-sol.pdf"
+    ],
+    "limitations": "Uses the archived year-specific official solution; live group-task logistics are not reproduced.",
+    "scorecard_path": "data/rubrics/task_scorecards/ioaa_group.json",
+    "scorecard_key": "ioaa_group_2021"
+  },
+  "rubric_path": "data/rubrics/ioaa_group_worked_answer_100_v1.json",
+  "deliverable": "group_worked_answer"
 }

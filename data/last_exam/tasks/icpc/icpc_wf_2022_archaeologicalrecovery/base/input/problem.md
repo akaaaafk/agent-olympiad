@@ -1,5 +1,3 @@
-# Archaeological Recovery
-
 Hide 
  Archaeological Recovery 
 

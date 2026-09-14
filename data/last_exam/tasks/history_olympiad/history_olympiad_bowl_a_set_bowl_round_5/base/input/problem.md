@@ -1,5 +1,3 @@
-# A-Set-Bowl-Round-5
-
 [Q1] While attending a sermon by this leader, reformer Michael Servetus was arrestedandlater burnedat thestake. TheHuguenotsof FrancewereProtestantswhofollowedthedoctrine of this reformer who served as de facto head of theCouncil of Geneva. ThismanattackedRomanCatholicsandoutlinedhisbeliefin“predestination”intheworkInstitutesofthe Christian Religion. For ten points, name this Protestant reformer who fled France forSwitzerland in 1536.
 
 [Q2] Touristscanvisit thisstructurebytakingHighway11forfortyminutessoutheastofLasVegas. Building this structure caused Boulder Canyon to be flooded by the newly-createdLake Mead. For ten points, what damalongtheColoradoRiver isnamedfor thepresidentwho was in office from 1929 to 1933?

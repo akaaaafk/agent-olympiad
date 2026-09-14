@@ -1,5 +1,3 @@
-# Metal Processing Plant
-
 Hide 
  Metal Processing Plant 
 

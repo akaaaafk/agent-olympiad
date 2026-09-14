@@ -18,7 +18,8 @@
   },
   "allowed_tools": [
     "query_rules",
-    "use_calculator"
+    "use_calculator",
+    "prepare_chemistry_fight_record"
   ],
   "resources": {
     "internet": "forbidden",

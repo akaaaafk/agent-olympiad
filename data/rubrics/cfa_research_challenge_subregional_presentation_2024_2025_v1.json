@@ -1,0 +1,72 @@
+{
+  "rubric_id": "cfa_research_challenge_subregional_presentation_2024_2025_v1",
+  "type": "structured_rubric",
+  "title": "CFA Institute Research Challenge Sub-regional Presentation Scoring Sheet",
+  "competition_id": "cfa_research_challenge",
+  "deliverable": "recorded_presentation_without_questions",
+  "rules_edition": "2024-2025",
+  "total_points": 80,
+  "criteria": [
+    {
+      "id": "financial_analysis",
+      "name": "Financial Analysis",
+      "max_score": 20,
+      "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+    },
+    {
+      "id": "valuation",
+      "name": "Valuation",
+      "max_score": 20,
+      "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+    },
+    {
+      "id": "esg",
+      "name": "Environmental, Social, and Governance",
+      "max_score": 10,
+      "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+    },
+    {
+      "id": "presentation",
+      "name": "Presentation",
+      "max_score": 20,
+      "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+    },
+    {
+      "id": "team_involvement",
+      "name": "Team Involvement",
+      "max_score": 5,
+      "official_prompt": "Team involvement in the presentation"
+    },
+    {
+      "id": "materials",
+      "name": "Materials",
+      "max_score": 5,
+      "official_prompt": "Quality of slides"
+    }
+  ],
+  "provenance": {
+    "official_only": true,
+    "publisher": "CFA Institute",
+    "retrieved_from": "CFA Institute society-hosted archive",
+    "sources": [
+      {
+        "title": "CFA Institute Research Challenge Official Rules 2024-2025",
+        "url": "https://higherlogicdownload.s3.amazonaws.com/CFAI/18ab2d35-5082-4f32-8747-c4d687c9b630/UploadedImages/Official_Rules_GIRC_2024-2025.pdf",
+        "local_file": "data/raw/cfa_research_challenge/rules/research_challenge_rules_2024_2025.pdf",
+        "sha256": "c9a1a5e61a251e4db5550636a3ef2af5ccf77b0160c28ebe86676df41886e35a",
+        "appendix": "E",
+        "pdf_page": 19
+      }
+    ],
+    "applicability_note": "Verified against the archived 2024-2025 rules; not automatically applicable to other seasons or competition stages."
+  },
+  "applicability_note": "Verified against the archived 2024-2025 rules; not automatically applicable to other seasons or competition stages.",
+  "not_observable_from_deck": [
+    "actual_oral_delivery",
+    "team_involvement"
+  ],
+  "scoring": {
+    "ranking_method": "Sub-regional and higher rounds aggregate judge rankings, not mean raw score; see the archived rules.",
+    "missing_evidence_policy": "Do not infer oral delivery, Q&A or team participation from a static slide deck."
+  }
+}

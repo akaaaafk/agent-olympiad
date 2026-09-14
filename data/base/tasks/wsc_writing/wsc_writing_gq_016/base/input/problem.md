@@ -1,5 +1,3 @@
-# wsc_writing_gq_016
-
 Suppose a single drop of blood were enough to test you for a host of diseases; you could learn if you had lupus with less pain than from a papercut. That was the marketing pitch of the company Theranos; now the founder is in jail for fraud . The electric vehicle company Nikola (whose last name was already taken) promised zero-emission trucks but demonstrated prototypes that had zero functionality ; now the founder is on his way to jail —for fraud. Although vaporware and business scams have existed for decades, examples today seem more creative and egregious than ever. Explore those below and discuss with your team: what did they have in common? Was it mainly their charismatic leaders that led so many people to believe in them? 
 
  Quibi | Life at Sea Cruise | LuckIn Coffee 

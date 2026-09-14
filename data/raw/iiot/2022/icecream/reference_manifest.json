@@ -1,0 +1,52 @@
+{
+  "schema_version": "iiot-reference-archive/v1",
+  "problem_id": "iiot_2022_03",
+  "task_code": "icecream",
+  "round": "international_final",
+  "archive_url": "https://iio.team/competition/tasks/2022",
+  "source_links": {
+    "Statement": "https://drive.google.com/file/d/1MHWJrQQR-iruXgKkqnOWwMC50NyVdhy8/view?usp=drive_link",
+    "Solutions": "https://drive.google.com/drive/folders/1Wngraer73syf2j8w4VtXZ3pYQGR7-lcm?usp=drive_link",
+    "Test cases": "https://drive.google.com/drive/folders/1hWP9wnkPnGPhCzW6LWOhhkXVkYCpw00A?usp=drive_link"
+  },
+  "reference": {
+    "path": "data/raw/iiot/2022/icecream/references/icecream.cpp",
+    "source_url": "https://drive.google.com/uc?id=1yHjzchrGUx29_G87kv_2BJBhYkCIc3xI&export=download",
+    "sha256": "eb1ce59a3afa619f46ae2ac40140204e28b0aba3c3e1e770c40897e47d77a3e7",
+    "bytes": 1456,
+    "classification": "publisher_reference_source",
+    "execution_validation": "not_run"
+  },
+  "official_scoring": {
+    "total_points": 100,
+    "subtasks": [
+      {
+        "id": 1,
+        "points": 0
+      },
+      {
+        "id": 2,
+        "points": 22
+      },
+      {
+        "id": 3,
+        "points": 24
+      },
+      {
+        "id": 4,
+        "points": 23
+      },
+      {
+        "id": 5,
+        "points": 31
+      }
+    ],
+    "mode": "all_cases_required_per_subtask",
+    "test_to_subtask_mapping": "not_archived"
+  },
+  "public_test_listing": {
+    "status": "no_testcase_link_in_publisher_archive"
+  },
+  "readiness": "not_ready",
+  "license_policy": "No redistribution permission inferred."
+}

@@ -1,5 +1,3 @@
-# Bowl-Round-4-HS-1
-
 [Q1] In 1858, this object was recast in Whitechapel, after which a team spent 18 hours hauling this object to its belfry. This object was silenced following the death of Margaret Thatcher, and is currently disconnected during renovations of Elizabeth Tower. “Quarter bells” that play the Westminster Chimes every 15 minutes accompany, for ten points, what massive bell that names an iconic London clock tower?
 
 [Q2] This man challenged Polus and Callicles in a debate over the importance of rhetoric. This husband of Xanthippe was put to death by an Athenian tribunal by drinking hemlock on charges of corrupting the youth. For ten points, name this classical Athenian philosopher whose namesake “method” employs rigorous questioning and who mentored Plato.

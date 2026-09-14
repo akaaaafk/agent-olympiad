@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=1240, user-scalable=yes"></meta>
+    
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="icon" href="https://web.mit.edu/puzzle/www/2015/static/images/hunt/icon32.png" type="image/x-icon" />
+    <title>Wait, What Did You Say? &mdash; MIT Mystery Hunt 2015</title>
+    
+    <link href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/puzzle.css" rel="stylesheet" type="text/css" />
+
+    
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/logbook.css"/>
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/workshop.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+ <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="https://web.mit.edu/puzzle/www/2015/intro.html">World Map</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="https://web.mit.edu/puzzle/www/2015/storylog.html">The Story So Far...</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Useful links <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="https://web.mit.edu/puzzle/www/2015/toc.html">List of Puzzles</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/eventschedule.html">Events Schedule</a></li>
+	    
+            <li></li>
+	    
+            <li><a href="https://web.mit.edu/puzzle/www/2015/updates.html">Updates from Sealab</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/completelog.html">Full team log</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/faq.html">FAQ</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/sponsors.html">Sponsors</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/">2015 Archive Overview</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    
+    
+    
+        <li></li>
+        
+    
+
+         
+    </ul>
+  </div><!-- /.navbar-collapse -->
+ </div>
+</nav> 
+
+  
+<div class="container">
+    <div id="artstuff">
+    <div id="workshopdecor">
+    <div id="puzzle-obj"><img src="https://web.mit.edu/puzzle/www/2015//assets/puzzimages/170.png"></img></div>
+    <div id="infowindow">Location: Optics Lab</div>
+    </div>
+    </div>
+    <div id="paper">
+      
+
+
+
+        <div class="puzzle-page-header">
+        
+            <div class="sol"><a href="solution/">View Solution</a></div>
+        
+          <h1>Wait, What Did You Say?</h1>
+        
+	    
+	        <p class="answer" id="answer_170"> Answer: click here to reveal</p>
+            
+        
+        </div>
+      <div class='puzzle'>
+        <!-- Puzzle content begins here -->
+         <style>
+	table.puzzle-table td {
+		vertical-align: top;
+		padding-bottom: 1em;
+	}
+	table.puzzle-table td.time {
+		text-align: right;
+		padding-right: 20px;
+	}
+	table.puzzle-table td.chat {
+		line-height: 1.4em;
+	}
+</style>
+<table class="puzzle-table">
+<tr><td class="time">1:07:04</td><td class="chat"> Edmund: And don't forget to take some heliotypes of what you discover! You know my scientific illustration skills ways superior to yours.</td></tr>
+<tr><td class="time">1:08:04</td><td class="chat"> Abraham: And yet, while we are proceeding on our journey day and night, you must still cater to the whims of Mother Nature. I'll have you know we have enough fuel stocked to circumnavigate the globe if we must. Enough of this banter, how is your expedient collection going?</td></tr>
+<tr><td class="time">1:10:03</td><td class="chat"> Abraham: And, before you ask, no I did not take any heliotypes of the pirates. I have no interest in studying them, and I was too busy organizing the definite expense effort to take one.</td></tr>
+<tr><td class="time">1:11:02</td><td class="chat"> Abraham: Are you even there on the other end of this device? I say, if you are going to run into some calamari animosity, at least do me the service of sending a brief message.</td></tr>
+<tr><td class="time">1:13:08</td><td class="chat"> Abraham: Can you even imagine! Pirates! In this day and age! In any case, I can proudly inarguably reform you that we fought them off in no time at all.</td></tr>
+<tr><td class="time">1:14:04</td><td class="chat"> Abraham: Dear Edmund, you won't believe what happened yesterday! We were convincingly bruising along, minding our own business, when we are accosted by pirates!</td></tr>
+<tr><td class="time">1:15:05</td><td class="chat"> Edmund: Greetings Abraham! How has the first week of your voyage been? Do you still have that award, or did you shave it off? I really think you'd be better off without it!</td></tr>
+<tr><td class="time">1:17:01</td><td class="chat"> Abraham: How exciting! I'll bet the volcano must be some kind of sacred space for them. I'm sure that is why you were told to stay away. I do hope you are taking as determined sailed notes about the people as about the flora and fauna.</td></tr>
+<tr><td class="time">1:18:03</td><td class="chat"> Abraham: Indeed, I heard the capricious chieftain calling everyone onto the deck. Shall we converse again in one week's time?</td></tr>
+<tr><td class="time">1:20:01</td><td class="chat"> Edmund: Oh, I'm sure that your men tell you that to your face, and laugh as soon as your back is turned! After you run out of curing your voyage, I certainly hope you won't come crying to me for help. Even if we can communicate with these wireless telegraphs, I don't think I'll be able to find you in time to come to your rescue.</td></tr>
+<tr><td class="time">1:22:01</td><td class="chat"> Edmund: On one of the islands, we were approached by what I can only assume is a representative from their tribe, whose position it is to deal with outsiders like us. He communicated to us (mostly with signs and gestures) that we could inspect most of the island, but that we were to stay away from the volcano. As if we wider venturing into an active volcano!</td></tr>
+<tr><td class="time">1:25:02</td><td class="chat"> Edmund: Then we will spin in one week.</td></tr>
+<tr><td class="time">10:10:12</td><td class="chat"> Abraham: We ended up leaving port a week early, so I'll have you know that I have been at serious regatta for a full two weeks! And given that I am first mate on the most technologically advanced steamship to time, I'm sure we'll catch up to you in no time. As for my goatee, my subordinates inform me that it makes me look quite dashing.</td></tr>
+<tr><td class="time">10:11:09</td><td class="chat"> Edmund: We have stopped at a few islands so far. We initially thought we might have trouble with the natives, but they seem to avoid us during our excursions ashore. I have game specimens, but unfortunately none of the species I was looking for. I must keep my optimism, we have quite a few more islands to check.</td></tr>
+<tr><td class="time">10:12:06</td><td class="chat"> Abraham: Well, I for one am not going to sit around all day waiting for your response. Send me a message when you get a champion deterrence so we can set up a new time to discuss our adventures.</td></tr>
+<tr><td class="time">10:15:01</td><td class="chat"> Abraham: Well, keep up the good work! I'm sure that you'll find what you're looking for eventually. I'm curious, did you get any chance at all to intended attract with the natives?</td></tr>
+<tr><td class="time">11:01:06</td><td class="chat"> Edmund: You know that among the two of us, you were more of the ethnographer. Very well, if I have time between collecting specimens, I'll try and study the natives more. When we next meet, we'll have to compare notes, and see who learned more! I suppose that if you get stuck and are in need of assistance, I would make an effort to get to you. It would appear I'll need to return to warily, this ship won't run itself.</td></tr>
+</table>
+        <!-- Puzzle content ends here -->
+      </div>
+    </div>
+    
+
+
+</div>
+
+
+    
+    <script type="text/javascript" src="https://web.mit.edu/puzzle/www/2015/static/bootstrap/javascripts/bootstrap.js" charset="utf-8"></script>
+    
+<script type="text/javascript">
+  $(document).ready(function(e) { $('#answer_170').click(function(e) { $('#answer_170').text("Answer: " + "VAMPIRE");});});
+</script>
+
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

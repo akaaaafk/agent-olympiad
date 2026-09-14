@@ -1,0 +1,261 @@
+{
+  "rubric_id": "hmmt_guts_2024_official_weights_v1",
+  "title": "HMMT Guts feb 2024: printed problem weights",
+  "total_points": 400,
+  "source_file": "data/raw/hmmt_guts/feb/2024/problems.pdf",
+  "source_sha256": "a8774d321b756415e6cb831020b9979c80f2fcede95e6e54d171305d7d6c6e41",
+  "criteria": [
+    {
+      "id": "1",
+      "name": "Problem 1",
+      "max_score": 5,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "2",
+      "name": "Problem 2",
+      "max_score": 5,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "3",
+      "name": "Problem 3",
+      "max_score": 5,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "4",
+      "name": "Problem 4",
+      "max_score": 5,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "5",
+      "name": "Problem 5",
+      "max_score": 6,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "6",
+      "name": "Problem 6",
+      "max_score": 6,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "7",
+      "name": "Problem 7",
+      "max_score": 6,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "8",
+      "name": "Problem 8",
+      "max_score": 6,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "9",
+      "name": "Problem 9",
+      "max_score": 7,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "10",
+      "name": "Problem 10",
+      "max_score": 7,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "11",
+      "name": "Problem 11",
+      "max_score": 7,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "12",
+      "name": "Problem 12",
+      "max_score": 7,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "13",
+      "name": "Problem 13",
+      "max_score": 9,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "14",
+      "name": "Problem 14",
+      "max_score": 9,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "15",
+      "name": "Problem 15",
+      "max_score": 9,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "16",
+      "name": "Problem 16",
+      "max_score": 9,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "17",
+      "name": "Problem 17",
+      "max_score": 11,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "18",
+      "name": "Problem 18",
+      "max_score": 11,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "19",
+      "name": "Problem 19",
+      "max_score": 11,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "20",
+      "name": "Problem 20",
+      "max_score": 11,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "21",
+      "name": "Problem 21",
+      "max_score": 12,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "22",
+      "name": "Problem 22",
+      "max_score": 12,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "23",
+      "name": "Problem 23",
+      "max_score": 12,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "24",
+      "name": "Problem 24",
+      "max_score": 12,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "25",
+      "name": "Problem 25",
+      "max_score": 14,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "26",
+      "name": "Problem 26",
+      "max_score": 14,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "27",
+      "name": "Problem 27",
+      "max_score": 14,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "28",
+      "name": "Problem 28",
+      "max_score": 14,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "29",
+      "name": "Problem 29",
+      "max_score": 16,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "30",
+      "name": "Problem 30",
+      "max_score": 16,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "31",
+      "name": "Problem 31",
+      "max_score": 16,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "32",
+      "name": "Problem 32",
+      "max_score": 16,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "33",
+      "name": "Problem 33",
+      "max_score": 20,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "34",
+      "name": "Problem 34",
+      "max_score": 20,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "35",
+      "name": "Problem 35",
+      "max_score": 20,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    },
+    {
+      "id": "36",
+      "name": "Problem 36",
+      "max_score": 20,
+      "min_score": 0,
+      "description": "Correct official short answer earns the printed problem weight."
+    }
+  ]
+}

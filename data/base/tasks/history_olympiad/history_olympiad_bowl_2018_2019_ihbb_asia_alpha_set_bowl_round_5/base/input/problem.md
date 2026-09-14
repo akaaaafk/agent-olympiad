@@ -1,5 +1,3 @@
-# 2018-2019-IHBB-Asia-Alpha-Set-Bowl-Round-5
-
 [Q1] Territories conquered by this man were governed by the Yassa code and included the Khwarazmian Empire. This man launched a campaign against the Western Xia and Jin dynasties, though his conquest of China was completed by his grandson. For ten points, name this founder of the Mongolian Empire and grandfather of Kublai Khan.
 
 [Q2] Following a 2006 war, “The Right of Peace” advocated for residents of this territory to live in one neighboring country while holding citizenship in another. The founder of Fatah, Yasser Arafat, administered his main organization from this territory, which is named for its position relative to the Jordan River. For ten points, name this territory that makes up the State of Palestine along with the Gaza Strip.

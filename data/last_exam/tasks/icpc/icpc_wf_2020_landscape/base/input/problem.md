@@ -1,5 +1,3 @@
-# Landscape Generator
-
 Hide 
  Landscape Generator 
 

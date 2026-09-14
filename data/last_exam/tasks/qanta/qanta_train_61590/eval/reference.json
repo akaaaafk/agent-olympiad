@@ -2,9 +2,20 @@
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/qanta/benchmark.json#qanta_train_61590.gold_label",
   "has_gold_answer": true,
-  "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_id": "gold_answer_v1",
+  "evaluator_status": "ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": "gold_answer_v1",
+    "status": "ready",
+    "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json",
+    "answer_key_path": "data/rubrics/qanta_upstream_answer_key_v1.json",
+    "short_answer_source": "data/rubrics/qanta_short_answers.json",
+    "deliverable": "spoken_answer",
+    "limitations": "Scores the extracted question independently; buzz timing, interrupts, rebounds, and match-state scoring are not reproduced.",
+    "scorecard_path": "data/rubrics/task_scorecards/qanta.json",
+    "scorecard_key": "qanta_train_61590"
+  },
+  "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json",
+  "deliverable": "spoken_answer"
 }

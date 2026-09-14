@@ -1,5 +1,3 @@
-# NCCDC 2025 — Oscorp
-
 2025 NCCDC 
  
  

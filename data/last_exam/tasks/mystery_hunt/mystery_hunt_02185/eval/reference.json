@@ -3,8 +3,18 @@
   "gold_pointer": "data/benchmarks/mystery_hunt/benchmark.json#mystery_hunt_02185.gold_label",
   "has_gold_answer": true,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+    "short_answer_source": "data/rubrics/mystery_hunt_short_answers.json",
+    "deliverable": "puzzle_answer",
+    "limitations": "The explicitly linked original PDF and its original page order are preserved byte-for-byte, without re-export, OCR replacement or solved annotations. Original grids, colored marks, pictures, blank regions and repeated clue wording are task content, not inferred errors. Archive navigation, solution links and sheep/status scripts are removed; artwork attribution text remains, with its hyperlink inert. Original same-year Bootstrap fonts and unused archive-logo file repair the source CSS paths documented in the static batch. Source-named Google fonts are current snapshots with OFL texts, not certified 2016 binary versions. Gold, total points, splits, license and grading/runtime readiness are unchanged and not recertified. Both the text-clue page and the separate blank/shaded answer-cell page remain. The historical December 9 political reference is not updated to a modern event. Prior limitations: The answer key exists, but the contestant puzzle page has not been separated from embedded answers and media dependencies.",
+    "scorecard_path": "data/rubrics/task_scorecards/mystery_hunt.json",
+    "scorecard_key": "mystery_hunt_02185"
+  },
+  "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
+  "deliverable": "puzzle_answer"
 }

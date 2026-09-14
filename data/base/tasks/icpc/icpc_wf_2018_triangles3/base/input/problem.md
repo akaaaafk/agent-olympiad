@@ -1,5 +1,3 @@
-# Triangles
-
 Hide 
  Triangles 
 

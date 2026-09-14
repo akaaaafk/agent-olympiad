@@ -3,79 +3,14 @@
   "_dataset": "mystery_hunt",
   "_kind": "short_answer_mapping",
   "_source_rubric": "data\\rubrics\\mystery_hunt_official_answer_key_v1.json",
-  "mystery_hunt_00002": {
-    "1": {
-      "expected": "BOSTON UNIVERSITY"
-    }
-  },
-  "mystery_hunt_00003": {
-    "1": {
-      "expected": "NET"
-    }
-  },
-  "mystery_hunt_00004": {
-    "1": {
-      "expected": "TANGLE"
-    }
-  },
-  "mystery_hunt_00006": {
-    "1": {
-      "expected": "LAST"
-    }
-  },
-  "mystery_hunt_00007": {
-    "1": {
-      "expected": "HENCE"
-    }
-  },
   "mystery_hunt_00009": {
     "1": {
       "expected": "ARTIFICIAL INTELLIGENCE"
     }
   },
-  "mystery_hunt_00014": {
-    "1": {
-      "expected": "STEREO"
-    }
-  },
   "mystery_hunt_00015": {
     "1": {
       "expected": "BILLIARDS"
-    }
-  },
-  "mystery_hunt_00028": {
-    "1": {
-      "expected": "JAM"
-    }
-  },
-  "mystery_hunt_00032": {
-    "1": {
-      "expected": "DAME"
-    }
-  },
-  "mystery_hunt_00033": {
-    "1": {
-      "expected": "RUNE"
-    }
-  },
-  "mystery_hunt_00035": {
-    "1": {
-      "expected": "GENERIC"
-    }
-  },
-  "mystery_hunt_00036": {
-    "1": {
-      "expected": "VALERIE"
-    }
-  },
-  "mystery_hunt_00038": {
-    "1": {
-      "expected": "PENULTIMATE MYSTERY HUNT COIN OF THIS MILLENIUM"
-    }
-  },
-  "mystery_hunt_00044": {
-    "1": {
-      "expected": "LOW"
     }
   },
   "mystery_hunt_00068": {
@@ -330,12 +265,16 @@
   },
   "mystery_hunt_00408": {
     "1": {
-      "expected": "SECOND PERSON PLURAL"
+      "expected": "SECOND PERSON PLURAL",
+      "answer_variant": "original",
+      "solution_file": "data/raw/mystery_hunt/verified_solutions/2003_set_match.html"
     }
   },
   "mystery_hunt_00409": {
     "1": {
-      "expected": "JAYHAWKS"
+      "expected": "JAYHAWKS",
+      "answer_variant": "trained",
+      "solution_file": "data/raw/mystery_hunt/verified_solutions/2003_set_match.html"
     }
   },
   "mystery_hunt_00412": {
@@ -516,11 +455,6 @@
   "mystery_hunt_00810": {
     "1": {
       "expected": "COVALENTBOND"
-    }
-  },
-  "mystery_hunt_00819": {
-    "1": {
-      "expected": "SNIFF"
     }
   },
   "mystery_hunt_00833": {
@@ -860,12 +794,16 @@
   },
   "mystery_hunt_01431": {
     "1": {
-      "expected": "WRITE HOW HE SOLVED WHO GRABBED PEACH"
+      "expected": "WRITE HOW HE SOLVED WHO GRABBED PEACH",
+      "answer_variant": "intermediate_instruction",
+      "solution_file": "data/raw/mystery_hunt/verified_solutions/2011_the_baddest_man.html"
     }
   },
   "mystery_hunt_01432": {
     "1": {
-      "expected": "CUL DE SAC"
+      "expected": "CUL DE SAC",
+      "answer_variant": "post_interaction_final",
+      "solution_file": "data/raw/mystery_hunt/verified_solutions/2011_the_baddest_man.html"
     }
   },
   "mystery_hunt_01446": {
@@ -915,12 +853,16 @@
   },
   "mystery_hunt_01521": {
     "1": {
-      "expected": "KEGELSTATT TRIO"
+      "expected": "KEGELSTATT TRIO",
+      "answer_variant": "answer_2_of_3",
+      "solution_file": "data/raw/mystery_hunt/verified_solutions/2011_execution_grounds.html"
     }
   },
   "mystery_hunt_01523": {
     "1": {
-      "expected": "FLAG DAY"
+      "expected": "FLAG DAY",
+      "answer_variant": "answer_3_of_3",
+      "solution_file": "data/raw/mystery_hunt/verified_solutions/2011_execution_grounds.html"
     }
   },
   "mystery_hunt_01543": {

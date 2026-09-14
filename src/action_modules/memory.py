@@ -44,8 +44,9 @@ SPECS = (
         (
 "Zero-turn auxiliary: search your own notes and team-shared notes when "
             "needed prior information is missing from context. "
-            "Nonempty query requires a keyword match; "
-            "omit query only to browse. Prefer matching problem tags, then hits and recency."
+            "Nonempty query requires a whole-keyword match; omit query only to browse. "
+            "An explicit problem_id restricts results to that task; omit it for "
+            "cross-task methods. Results rank by keyword hits and recency."
         ),
         (
             ArgumentSpec(
@@ -55,7 +56,7 @@ SPECS = (
             ),
             ArgumentSpec(
                 "problem_id",
-                description="Optional problem tag to prioritise.",
+                description="Optional exact problem id to filter; omit to search across tasks.",
                 required=False,
             ),
         ),
@@ -70,10 +71,7 @@ SPECS = (
         (
             ArgumentSpec(
                 "note_id",
-                description=(
-                    "Id of the note returned by remember or recall "
-                    "(several ids may be comma-separated)."
-                ),
+                description="Id of one of your private notes returned by remember or recall.",
             ),
         ),
         visibility="team",
@@ -93,6 +91,7 @@ def share_note(
     session: ContestSession,
     agent: str,
     note_id: str,
+    max_chars: int | None = None,
 ) -> tuple[bool, int]:
     """Publish one of the agent's private notes as a public ``note_shared`` event."""
     source = next(
@@ -118,6 +117,17 @@ def share_note(
     if already:
         raise ValueError(f"{note_id} has already been shared with the team")
     payload = source.payload if isinstance(source.payload, dict) else {}
+    from rulecard_policy import clip_text
+    original = str(payload.get("content") or "")
+    content, cut = clip_text(original, max_chars)
+    if cut:
+        memory.append(
+            task_id=source.task_id, question_id=None, actor="Contest_Control",
+            visibility="private", recipients=(agent,), kind="card_content_clipped",
+            payload={"action": "share_note", "original_chars": len(original),
+                     "kept_chars": len(content), "limit": max_chars},
+            turn=session.budget.turns_used,
+        )
     memory.append(
         task_id=source.task_id,
         question_id=None,
@@ -125,7 +135,7 @@ def share_note(
         visibility="public",
         kind="note_shared",
         payload={
-            "content": str(payload.get("content") or ""),
+            "content": content,
             "problem_id": source.task_id,
             "author": agent,
             "source_event_id": note_id,
@@ -145,7 +155,7 @@ def recall_notes(
         visibility="private", recipients=(agent,), kind="recall_result",
         payload={
             "query": query, "problem_id": problem_id, "notes": notes,
-            "retrieval_policy": "visible_notes_keyword_match_v2",
+            "retrieval_policy": "visible_notes_scoped_keyword_match_v3",
             "note": "Empty means no visible matching note. Do not repeat the same query "
                     "unless notes changed; revise the query or continue solving.",
         }, turn=turn,
@@ -155,11 +165,22 @@ def recall_notes(
 _MEMORY_ONLY_EVENTS = frozenset({
     "note", "note_shared", "remember", "recall", "recall_result",
     "think", "procedural_lesson", "problem_digest", "memory_auxiliary_call",
+    "automatic_memory",
 })
 
 
 def decision_guidance() -> str:
     return (
+        "AUTOMATIC CONVERSATION MEMORY: The runtime saves visible dialogue, your "
+        "private thinking and candidate claims by task, then supplies relevant "
+        "automatic_memory before every decision. This works without remember or "
+        "recall. Consolidate findings in the memory_update block of your existing "
+        "think; if that block is absent, source-linked excerpts are still saved. "
+        "Current-task findings, team_progress and recent_action_errors are separate. "
+        "Correct prior failed calls; do not use another task's result as this task's answer. "
+        "Old dialogue and agent summaries are unverified context; the live draft "
+        "and review state remain authoritative. The following tools are optional "
+        "supplements for curated notes and explicit sharing.\n"
         "MEMORY DECISION: Before choosing your ordinary action, check whether useful "
         "information should be saved, retrieved, or shared. These are contest-local "
         "scratchpad tools, not external assistance.\n"
@@ -175,7 +196,8 @@ def decision_guidance() -> str:
         "visible notes that may contain it. Revisiting a task or repeating a failure "
         "is a reason to check, not an automatic recall. Do not recall when the needed "
         "information is already shown or the note store is empty. Write focused "
-        "query keywords and use problem_id to prioritise the relevant task. Avoid "
+        "query keywords and use problem_id to restrict results to the relevant task. "
+        "Omit problem_id only when seeking a method across tasks. Avoid "
         "repeating the last query when notes_changed_since_last_recall is false; "
         "an empty result means rephrase for a different fact or continue solving. "
         "recall reads only saved/shared notes, not all event history; inspect_problem "
@@ -197,13 +219,15 @@ def decision_guidance() -> str:
 
 def agent_context(
     memory: ContestMemory, *, viewer: str, enabled: bool,
-    current_task_id: str | None, entries: Any = None,
+    current_task_id: str | None, entries: Any = None, session: ContestSession | None = None,
 ) -> Any:
     """Return optional memory projection or ordinary visible conversation.
 
     A disabled module must not leak stored notes, retrieval results, historical
     private thoughts or digests, including after restoration from a checkpoint.
-    Public drafts, current task state and audit persistence are not disabled.
+    The caller passes contest_observation.observe for the strict OTC control;
+    its drafts and conversation are restricted to the current team round.
+    Other plain baseline views and backend audit persistence are unchanged.
     """
     if enabled and current_task_id is not None:
         limits = {}
@@ -217,12 +241,17 @@ def agent_context(
         else:
             limits = {"max_chars": 6000}
         status = memory.recall_status(viewer, current_task_id=current_task_id)
-        allowance = len(json.dumps({'recall_status': status}, ensure_ascii=False)) + 32
+        from automatic_memory import context as automatic_context
+        automatic = automatic_context(memory, viewer=viewer, current_task_id=current_task_id,
+                                      max_chars=min(3800, limits['max_chars'] // 2), session=session)
+        allowance = len(json.dumps({'recall_status': status, 'automatic_memory': automatic},
+                                   ensure_ascii=False)) + 32
         limits['max_chars'] = max(256, limits['max_chars'] - allowance)
         projection = memory.strategic_projection(
             viewer=viewer, current_task_id=current_task_id, **limits
         )
         projection['recall_status'] = status
+        projection['automatic_memory'] = automatic
         return projection
     visible = memory.view(viewer)
     if not enabled:
@@ -238,14 +267,14 @@ def private_think_context(
     memory: ContestMemory, agent: str, *, enabled: bool,
     current_turn: int, limit: int, include_current: bool = True,
 ) -> list[dict[str, Any]]:
-    """Memory off keeps only this turn's thought for think-then-act transport."""
-    if not enabled and not include_current:
+    """Transport this turn's thought; historical reasoning lives in automatic memory."""
+    if not include_current:
         return []
     rows = [
         {"turn": event.turn, "task_id": event.task_id,
          "content": (event.payload or {}).get("content", "")}
         for event in memory.view(agent)
         if event.kind == "think" and event.actor == agent
-        and (enabled or event.turn == current_turn)
+        and event.turn == current_turn
     ]
     return rows[-limit:] if limit > 0 else []

@@ -3,7 +3,10 @@
   "type": "official_scoring_protocol",
   "title": "Global Case Competition at Harvard judging protocol",
   "competition_id": "gcch_harvard",
-  "applicable_editions": ["2024-2025", "2026"],
+  "applicable_editions": [
+    "2024-2025",
+    "2026"
+  ],
   "criteria": [
     {
       "id": "case_solution_deck",
@@ -20,7 +23,11 @@
       "id": "finale_performance",
       "name": "Team performance during the finale with the Judge panel",
       "stage": "Round 3",
-      "official_focus": ["the case", "the submitted deck", "general M&A knowledge"]
+      "official_focus": [
+        "the case",
+        "the submitted deck",
+        "general M&A knowledge"
+      ]
     }
   ],
   "scoring": {

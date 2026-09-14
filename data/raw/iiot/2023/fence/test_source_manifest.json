@@ -1,0 +1,1085 @@
+{
+  "task_code": "fence",
+  "year": 2023,
+  "official_archive_url": "https://iio.team/competition/tasks/2023",
+  "publisher_test_folder": "https://drive.google.com/drive/folders/1tG2090b7BGzeNP_iz3CgQeiHnWWQ9Znk?usp=drive_link",
+  "reference_manifest": "data/raw/iiot/2023/fence/reference_manifest.json",
+  "files": [
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input0.txt",
+      "name": "input0.txt",
+      "kind": "input",
+      "sha256": "2463bd4621e6ec60a7d5938d708d870a16226c0258236c06684705d841cf524f",
+      "bytes": 11,
+      "publisher_file_id": "1ZWJulk_iJcq1q6ZO8VzjI2CW3iLmDQF8",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ZWJulk_iJcq1q6ZO8VzjI2CW3iLmDQF8",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input1.txt",
+      "name": "input1.txt",
+      "kind": "input",
+      "sha256": "a2670d1cc30c4d9f61c82c55c54aaaa8944fb561e697f442b41ef8126578acbc",
+      "bytes": 29,
+      "publisher_file_id": "1_cnEqlLcA9D8maRsJCOPyKUlncWAz_VP",
+      "source_url": "https://drive.google.com/uc?export=download&id=1_cnEqlLcA9D8maRsJCOPyKUlncWAz_VP",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input10.txt",
+      "name": "input10.txt",
+      "kind": "input",
+      "sha256": "c1326f6c704374050b515c940c01f63945b82f06427d71090ac66e072cc5ffb2",
+      "bytes": 126,
+      "publisher_file_id": "1cYnDJMT0MOwQ9zkc2CWZqw9sJ4PIZ775",
+      "source_url": "https://drive.google.com/uc?export=download&id=1cYnDJMT0MOwQ9zkc2CWZqw9sJ4PIZ775",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input11.txt",
+      "name": "input11.txt",
+      "kind": "input",
+      "sha256": "4f27ae1198f8dd54c91954358a69b8ef85fa36d344362402a5d82476adec6008",
+      "bytes": 136,
+      "publisher_file_id": "1LC81GuaWtc8rf1CDAlvHTxNh5xH6Gwo4",
+      "source_url": "https://drive.google.com/uc?export=download&id=1LC81GuaWtc8rf1CDAlvHTxNh5xH6Gwo4",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input12.txt",
+      "name": "input12.txt",
+      "kind": "input",
+      "sha256": "7b251579510891578e82768ab335cb1fe8b7c5d01f04b6698a7d37d5a3202a33",
+      "bytes": 142,
+      "publisher_file_id": "1fYPJGY_Pg5ttNfE2tqakuTJKXFJNAg_r",
+      "source_url": "https://drive.google.com/uc?export=download&id=1fYPJGY_Pg5ttNfE2tqakuTJKXFJNAg_r",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input13.txt",
+      "name": "input13.txt",
+      "kind": "input",
+      "sha256": "66b3591b48ecb7f125bab8554a6239d90bb203487ce631724ef7cacf565668aa",
+      "bytes": 142,
+      "publisher_file_id": "19hzFypDh436aumWVCBSlLLD0wHTtftwe",
+      "source_url": "https://drive.google.com/uc?export=download&id=19hzFypDh436aumWVCBSlLLD0wHTtftwe",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input14.txt",
+      "name": "input14.txt",
+      "kind": "input",
+      "sha256": "bc5caeb1b4e4d4ddbcba994319f51eac711a04c12b3c38506a59fb34baafdef0",
+      "bytes": 142,
+      "publisher_file_id": "1c7naR38MVf2vDPirMblIOZ5NOREZXU6B",
+      "source_url": "https://drive.google.com/uc?export=download&id=1c7naR38MVf2vDPirMblIOZ5NOREZXU6B",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input15.txt",
+      "name": "input15.txt",
+      "kind": "input",
+      "sha256": "69537d46742f2e7bf0ed0c2cf985fbde7c8ec28762ea5acafd339034b1f75b6b",
+      "bytes": 139,
+      "publisher_file_id": "1KOzLvAs_fC-_ZXhLJNjM62h8F8LTirnm",
+      "source_url": "https://drive.google.com/uc?export=download&id=1KOzLvAs_fC-_ZXhLJNjM62h8F8LTirnm",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input16.txt",
+      "name": "input16.txt",
+      "kind": "input",
+      "sha256": "fdcd265a40c409f4f51ff9e2e5311c96bdbb66b5b29fa0f24ba3a0ab86024062",
+      "bytes": 140,
+      "publisher_file_id": "1Sqf5qClwJYNTnGJ3dKsNvFxL23PhEx-j",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Sqf5qClwJYNTnGJ3dKsNvFxL23PhEx-j",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input17.txt",
+      "name": "input17.txt",
+      "kind": "input",
+      "sha256": "dfeb524aa3b88e5c77b41e591e18b3d6a95cfba6d6b7596b2ce4a64ee3105fcc",
+      "bytes": 49440,
+      "publisher_file_id": "1hT3OQDpLxjjyJzbkOSLwtFCRTnaM_Qv3",
+      "source_url": "https://drive.google.com/uc?export=download&id=1hT3OQDpLxjjyJzbkOSLwtFCRTnaM_Qv3",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input18.txt",
+      "name": "input18.txt",
+      "kind": "input",
+      "sha256": "2f2d2dc7b669a425f57503493b63f9aa6d24af5a10a5e05e4249e4dca3e24a67",
+      "bytes": 49436,
+      "publisher_file_id": "1eV2aWxm93ocOlchdXAHBoAUikXyqjAfz",
+      "source_url": "https://drive.google.com/uc?export=download&id=1eV2aWxm93ocOlchdXAHBoAUikXyqjAfz",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input19.txt",
+      "name": "input19.txt",
+      "kind": "input",
+      "sha256": "53c46efb9b24adae0ce99b3e45ece2c6491288a40d68dcae6a8d47df647532b4",
+      "bytes": 44522,
+      "publisher_file_id": "1fqQdKLdXWvl1XLBcjiRMfOHZIeynfCRn",
+      "source_url": "https://drive.google.com/uc?export=download&id=1fqQdKLdXWvl1XLBcjiRMfOHZIeynfCRn",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input2.txt",
+      "name": "input2.txt",
+      "kind": "input",
+      "sha256": "5d0cdcc8f97a7827579fb1c57bdf94ae6976ed9e4d7967d6b55887d0cf229961",
+      "bytes": 70,
+      "publisher_file_id": "1MRQdCvO63XIoluLOKoC-ATwaX1n5zpPb",
+      "source_url": "https://drive.google.com/uc?export=download&id=1MRQdCvO63XIoluLOKoC-ATwaX1n5zpPb",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input20.txt",
+      "name": "input20.txt",
+      "kind": "input",
+      "sha256": "ff2a9c0f0c0a29ee4624b23097062bdee799a47a4f4364408b8af97e33213b87",
+      "bytes": 49385,
+      "publisher_file_id": "1HN-PvhCqdZJ6nsYN3TYRcma7iXsV9ON4",
+      "source_url": "https://drive.google.com/uc?export=download&id=1HN-PvhCqdZJ6nsYN3TYRcma7iXsV9ON4",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input21.txt",
+      "name": "input21.txt",
+      "kind": "input",
+      "sha256": "6139a2f1a7275d79ed8f8804944b4c0c756dda10faf9c959d079934fed3852c8",
+      "bytes": 49457,
+      "publisher_file_id": "1FC-5b5P6uoDEL50Vtpud7dFa66dIqix-",
+      "source_url": "https://drive.google.com/uc?export=download&id=1FC-5b5P6uoDEL50Vtpud7dFa66dIqix-",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input22.txt",
+      "name": "input22.txt",
+      "kind": "input",
+      "sha256": "4c89484c3d47d0bf7b7d27da8de645668bc6e8bdfc8f304e19e0ce294e70693c",
+      "bytes": 39235,
+      "publisher_file_id": "1-pi9tdQftMazor1HRzIbDKLP4js8UTtl",
+      "source_url": "https://drive.google.com/uc?export=download&id=1-pi9tdQftMazor1HRzIbDKLP4js8UTtl",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input23.txt",
+      "name": "input23.txt",
+      "kind": "input",
+      "sha256": "b1fc0f1b2352a1e863c11171120e206197f75881ab90b55371aaa668460124b2",
+      "bytes": 49399,
+      "publisher_file_id": "1mGMqQaHs2JTPbRuz6Qe-HKllxHUxrOJM",
+      "source_url": "https://drive.google.com/uc?export=download&id=1mGMqQaHs2JTPbRuz6Qe-HKllxHUxrOJM",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input24.txt",
+      "name": "input24.txt",
+      "kind": "input",
+      "sha256": "bfe667b1b62cefb2a9a90e1cc1d8af35a03798dc18aa5042cfca0706b2b82894",
+      "bytes": 48558,
+      "publisher_file_id": "1_NBKb0pOmbTLmb2XMYZqBMP93EbBrSZy",
+      "source_url": "https://drive.google.com/uc?export=download&id=1_NBKb0pOmbTLmb2XMYZqBMP93EbBrSZy",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input25.txt",
+      "name": "input25.txt",
+      "kind": "input",
+      "sha256": "ab89b5033fbf9b0cf3ab16fc5e3fa7e0523b1bdf58ac6d182b767abd5c6d571a",
+      "bytes": 49416,
+      "publisher_file_id": "17W0Up3ZQV84eg1iCpLHHIHnGLxBll2r5",
+      "source_url": "https://drive.google.com/uc?export=download&id=17W0Up3ZQV84eg1iCpLHHIHnGLxBll2r5",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input26.txt",
+      "name": "input26.txt",
+      "kind": "input",
+      "sha256": "a2eccea9029388ac0503b3746aa1dfb2eedfc4bd1db35603fcd9d19764477793",
+      "bytes": 49457,
+      "publisher_file_id": "14Vbe4LSwlAKe4Ud-Ie9JM_KZTUEk5M7M",
+      "source_url": "https://drive.google.com/uc?export=download&id=14Vbe4LSwlAKe4Ud-Ie9JM_KZTUEk5M7M",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input27.txt",
+      "name": "input27.txt",
+      "kind": "input",
+      "sha256": "d0a0f2f56f24d6bcc1514b4f9e1ff33e00b9ffd17ddce9392bf0d814612d76c2",
+      "bytes": 1977575,
+      "publisher_file_id": "1NPB0U5rT_rqXi27ymUZEWqMQnsCMT0pM",
+      "source_url": "https://drive.google.com/uc?export=download&id=1NPB0U5rT_rqXi27ymUZEWqMQnsCMT0pM",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input28.txt",
+      "name": "input28.txt",
+      "kind": "input",
+      "sha256": "7e0c8c93a076505a71a1f41b660f6c645b8f931e4ff1d97b02135d52ac08594d",
+      "bytes": 1849809,
+      "publisher_file_id": "1fTXFwHbBMdZo9zjkCEWfdiXs_nf8YYwu",
+      "source_url": "https://drive.google.com/uc?export=download&id=1fTXFwHbBMdZo9zjkCEWfdiXs_nf8YYwu",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input29.txt",
+      "name": "input29.txt",
+      "kind": "input",
+      "sha256": "68d71d72a7f616aabb29cfd7e11a6aca21d2d174f86d04e9ff0dfc853f0544fe",
+      "bytes": 1977600,
+      "publisher_file_id": "13jobhLNsu-2-9UT0a1WQQ22ccDAHsI-H",
+      "source_url": "https://drive.google.com/uc?export=download&id=13jobhLNsu-2-9UT0a1WQQ22ccDAHsI-H",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input3.txt",
+      "name": "input3.txt",
+      "kind": "input",
+      "sha256": "beaed733f2245b3055a714eaddecf6305357c7b3c36930afde5905130a2aeed7",
+      "bytes": 79,
+      "publisher_file_id": "12bqUIXK-qzxu0VFZjRcyczu3jRQoouLh",
+      "source_url": "https://drive.google.com/uc?export=download&id=12bqUIXK-qzxu0VFZjRcyczu3jRQoouLh",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input30.txt",
+      "name": "input30.txt",
+      "kind": "input",
+      "sha256": "483d541448594f41abfa59c172feafdeb5af11f3a6bfdea6662882c9b3d6c023",
+      "bytes": 1977705,
+      "publisher_file_id": "1exWga1AcRu-r33_pHchTj0G-qF_kzuKT",
+      "source_url": "https://drive.google.com/uc?export=download&id=1exWga1AcRu-r33_pHchTj0G-qF_kzuKT",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input31.txt",
+      "name": "input31.txt",
+      "kind": "input",
+      "sha256": "ab51a60e4193e0be1968ea4ec5ec7142e5f293f4570ea332fd4e197e2c1dd691",
+      "bytes": 1770142,
+      "publisher_file_id": "1qp_H02Z3ouPoRhWMYDERh7Nt9zM5bdRn",
+      "source_url": "https://drive.google.com/uc?export=download&id=1qp_H02Z3ouPoRhWMYDERh7Nt9zM5bdRn",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input32.txt",
+      "name": "input32.txt",
+      "kind": "input",
+      "sha256": "f001b83fb79c833c71cdc0d120c3e6b60d02bdc2ea89d25a30797dfa2cb3e5cc",
+      "bytes": 1977703,
+      "publisher_file_id": "1gbcqXgf6otHOOp5G_PqBTm9iQJC8YYVF",
+      "source_url": "https://drive.google.com/uc?export=download&id=1gbcqXgf6otHOOp5G_PqBTm9iQJC8YYVF",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input33.txt",
+      "name": "input33.txt",
+      "kind": "input",
+      "sha256": "b85665be8d70045deb1f2bf2538591bce6aedacec2f1c76db8452875ab6792ed",
+      "bytes": 1971836,
+      "publisher_file_id": "1T4o3Yya2lxio8PdM-lTp_zdqJgQ8YjOO",
+      "source_url": "https://drive.google.com/uc?export=download&id=1T4o3Yya2lxio8PdM-lTp_zdqJgQ8YjOO",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input34.txt",
+      "name": "input34.txt",
+      "kind": "input",
+      "sha256": "cee55da026a77c20bdf991564ea039d49ea8c0ae0d931c51e270977469a4a2c5",
+      "bytes": 1977981,
+      "publisher_file_id": "1B4EnY44tLcdW-oeaYGsAHlaJgbWLOgLm",
+      "source_url": "https://drive.google.com/uc?export=download&id=1B4EnY44tLcdW-oeaYGsAHlaJgbWLOgLm",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input35.txt",
+      "name": "input35.txt",
+      "kind": "input",
+      "sha256": "c8820c026ce082d1314222fd856e5e3e4e25dace373011903ece734d75218209",
+      "bytes": 1967868,
+      "publisher_file_id": "1q2DtwVTN64wAldEBf8vWBSywAM5_wHQM",
+      "source_url": "https://drive.google.com/uc?export=download&id=1q2DtwVTN64wAldEBf8vWBSywAM5_wHQM",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input36.txt",
+      "name": "input36.txt",
+      "kind": "input",
+      "sha256": "dc9a7eeca1562b683419c2797b16f1cb49059694ca3499f4103b168056349f9f",
+      "bytes": 1977865,
+      "publisher_file_id": "14zwmpNnTANX8y7HrRnd-HwK961GGqcaq",
+      "source_url": "https://drive.google.com/uc?export=download&id=14zwmpNnTANX8y7HrRnd-HwK961GGqcaq",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input37.txt",
+      "name": "input37.txt",
+      "kind": "input",
+      "sha256": "ae542fa85dbed2cfc7a33cb8a4bf8a6d1e373dcb591f2482f33cab49d6a157f3",
+      "bytes": 1977872,
+      "publisher_file_id": "16NgNhpjBZfluJ4wqYWSSVUX5IbWP_XuT",
+      "source_url": "https://drive.google.com/uc?export=download&id=16NgNhpjBZfluJ4wqYWSSVUX5IbWP_XuT",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input4.txt",
+      "name": "input4.txt",
+      "kind": "input",
+      "sha256": "e5bb11b202f7e7473eb664a3a8f6b082f3174e90725549039e7698583afa00e5",
+      "bytes": 84,
+      "publisher_file_id": "1wNQCbyZM5vKwghl2WW8qO0mQ6E81Wxc-",
+      "source_url": "https://drive.google.com/uc?export=download&id=1wNQCbyZM5vKwghl2WW8qO0mQ6E81Wxc-",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input5.txt",
+      "name": "input5.txt",
+      "kind": "input",
+      "sha256": "6bea7a9b60d9eee50a62efa3bb0b44f80e42047bd0c927a403bbcbeb0805c7d2",
+      "bytes": 93,
+      "publisher_file_id": "1U7tsjjg01-Mt-Hu8DdT4bcaDObus29bM",
+      "source_url": "https://drive.google.com/uc?export=download&id=1U7tsjjg01-Mt-Hu8DdT4bcaDObus29bM",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input6.txt",
+      "name": "input6.txt",
+      "kind": "input",
+      "sha256": "ca85a8911f84bf4374cb4d1f73fc0dd9dec484e704c852d3ce636279d4cf7316",
+      "bytes": 96,
+      "publisher_file_id": "1gAd5SefuY9ENVjjkknYTFHMon6mOIUEb",
+      "source_url": "https://drive.google.com/uc?export=download&id=1gAd5SefuY9ENVjjkknYTFHMon6mOIUEb",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input7.txt",
+      "name": "input7.txt",
+      "kind": "input",
+      "sha256": "6f4ebc2e6bd06183fd05b54f7259ac1b29168c84bec91dd12327b57c395d2809",
+      "bytes": 104,
+      "publisher_file_id": "1FmCBDI0RMEetIo5UbJeNtdBXz-ZhUSmk",
+      "source_url": "https://drive.google.com/uc?export=download&id=1FmCBDI0RMEetIo5UbJeNtdBXz-ZhUSmk",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input8.txt",
+      "name": "input8.txt",
+      "kind": "input",
+      "sha256": "35b35a04a0e331c9913c4ef796c154a8c18583e3cca894039a28dc02250cf0df",
+      "bytes": 112,
+      "publisher_file_id": "1ysnb2scc24UFhfYFv30VtXScWaF6ZOhM",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ysnb2scc24UFhfYFv30VtXScWaF6ZOhM",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/input/input9.txt",
+      "name": "input9.txt",
+      "kind": "input",
+      "sha256": "f14590f5221986961148b16e0d8c0e3f59a36afe2a0d001674cd0b4233fe5094",
+      "bytes": 119,
+      "publisher_file_id": "1vpUeei_164Hx-BEoRKnaEa66QdbvE5ot",
+      "source_url": "https://drive.google.com/uc?export=download&id=1vpUeei_164Hx-BEoRKnaEa66QdbvE5ot",
+      "folder_url": "https://drive.google.com/drive/folders/1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1dvioE2kLPOkacOTuWOEzNgnxECB8qUK2"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output0.txt",
+      "name": "output0.txt",
+      "kind": "output",
+      "sha256": "076320a2a08267b4c026d06573bba408ea68841e73cdc20e62cce59de165ece3",
+      "bytes": 3,
+      "publisher_file_id": "1NMBfnDBizsi_3IhjQdk_7swgfgPZJeA_",
+      "source_url": "https://drive.google.com/uc?export=download&id=1NMBfnDBizsi_3IhjQdk_7swgfgPZJeA_",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output1.txt",
+      "name": "output1.txt",
+      "kind": "output",
+      "sha256": "e15cb49f231c64265cbcf05790aa5291ab7ee9f2efc092fbcafea2d58e5f83a8",
+      "bytes": 4,
+      "publisher_file_id": "1axhNRzwTcr4upDBqOWMzTQlg8B9mGn0L",
+      "source_url": "https://drive.google.com/uc?export=download&id=1axhNRzwTcr4upDBqOWMzTQlg8B9mGn0L",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output10.txt",
+      "name": "output10.txt",
+      "kind": "output",
+      "sha256": "11e82ffa2941cdd854c7d67d263f524cf16aae7d7ba5a416f3a57552be240da0",
+      "bytes": 9,
+      "publisher_file_id": "11GaNmb3_I_eIpuSYlyOOM-jWWUC_Tzcd",
+      "source_url": "https://drive.google.com/uc?export=download&id=11GaNmb3_I_eIpuSYlyOOM-jWWUC_Tzcd",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output11.txt",
+      "name": "output11.txt",
+      "kind": "output",
+      "sha256": "faf6bac88e766f836a45343fd581052c9354a14ae11be6cf379d4bec4f1263d7",
+      "bytes": 9,
+      "publisher_file_id": "1ID2F-t3LssWrdSCHJWgcqiW3L8o8_RI2",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ID2F-t3LssWrdSCHJWgcqiW3L8o8_RI2",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output12.txt",
+      "name": "output12.txt",
+      "kind": "output",
+      "sha256": "aa7d1b80b180a1c557c45eaa5f7de192ede5a644191eae56dc7a4ecadaedc2fa",
+      "bytes": 9,
+      "publisher_file_id": "1XjpxfXjI59oJJITjJ1veTR28e7--TKJo",
+      "source_url": "https://drive.google.com/uc?export=download&id=1XjpxfXjI59oJJITjJ1veTR28e7--TKJo",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output13.txt",
+      "name": "output13.txt",
+      "kind": "output",
+      "sha256": "3fa127fd7e2581036cb335cc4b6247913470636cc7b9fa3473b1861cfdeaf942",
+      "bytes": 8,
+      "publisher_file_id": "1h9HEqmeaC1EJVQ7GrT5b8sdi2mMSmXPr",
+      "source_url": "https://drive.google.com/uc?export=download&id=1h9HEqmeaC1EJVQ7GrT5b8sdi2mMSmXPr",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output14.txt",
+      "name": "output14.txt",
+      "kind": "output",
+      "sha256": "eef895a518c52e15c7984bb76ccca659336f76b53032ad5cb52ecf3b21be7afa",
+      "bytes": 9,
+      "publisher_file_id": "1_5dtjTkZLGh_CEWKKZj0XUemEgPXT5qU",
+      "source_url": "https://drive.google.com/uc?export=download&id=1_5dtjTkZLGh_CEWKKZj0XUemEgPXT5qU",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output15.txt",
+      "name": "output15.txt",
+      "kind": "output",
+      "sha256": "196b5226519470be176ffd062822146a4eb86815f1d0322cda1b9ea8ca3b486d",
+      "bytes": 8,
+      "publisher_file_id": "1rJ6EWnPfzCLTmoqnFRiOMxXvIbFkjwZU",
+      "source_url": "https://drive.google.com/uc?export=download&id=1rJ6EWnPfzCLTmoqnFRiOMxXvIbFkjwZU",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output16.txt",
+      "name": "output16.txt",
+      "kind": "output",
+      "sha256": "9cf2248c50913db41d42beeb8a9aa2f7ea162a5ff5acec78040deb88ea0022fe",
+      "bytes": 8,
+      "publisher_file_id": "1URskCbyshLUH18Fui6YmEpZVHMipe5SU",
+      "source_url": "https://drive.google.com/uc?export=download&id=1URskCbyshLUH18Fui6YmEpZVHMipe5SU",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output17.txt",
+      "name": "output17.txt",
+      "kind": "output",
+      "sha256": "301eb4bb760ca188f44fb334a79f3b2aa24307b7fd51454b6932cdc577d3289d",
+      "bytes": 14,
+      "publisher_file_id": "1yKaJiyi1E97orQtkcuB3t4qwLaNsWfTg",
+      "source_url": "https://drive.google.com/uc?export=download&id=1yKaJiyi1E97orQtkcuB3t4qwLaNsWfTg",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output18.txt",
+      "name": "output18.txt",
+      "kind": "output",
+      "sha256": "2f846ad79ed93c8d1acaef14973e13ca51a6c3a556ee660beb534b700c9ff6ee",
+      "bytes": 14,
+      "publisher_file_id": "1hyAKvtAJYWHKG-3p6qFeKygVW7FPEbnW",
+      "source_url": "https://drive.google.com/uc?export=download&id=1hyAKvtAJYWHKG-3p6qFeKygVW7FPEbnW",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output19.txt",
+      "name": "output19.txt",
+      "kind": "output",
+      "sha256": "618072f7a42adeb147e6394a262dcb2c95c355f1f94b4ceacf47b5d4a6ad1272",
+      "bytes": 14,
+      "publisher_file_id": "1XPgt_BEZ_l9MgU-B99oDEJgEkL_-Yzk6",
+      "source_url": "https://drive.google.com/uc?export=download&id=1XPgt_BEZ_l9MgU-B99oDEJgEkL_-Yzk6",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output2.txt",
+      "name": "output2.txt",
+      "kind": "output",
+      "sha256": "d2055c2b5e90335c092c395afacdcc4cafd177ad7a8e0e98cec83451ce7f9c77",
+      "bytes": 8,
+      "publisher_file_id": "1Li64rg7viI1e6hg5LAzMZg-mJL7wcs-h",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Li64rg7viI1e6hg5LAzMZg-mJL7wcs-h",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output20.txt",
+      "name": "output20.txt",
+      "kind": "output",
+      "sha256": "3c32cf22081341f2c6ee620fa71f194fdae202e59716db8272f2e5d34b97d32f",
+      "bytes": 14,
+      "publisher_file_id": "1463sYcMnaoNzKODnOSH6b3bR7X3MRvk5",
+      "source_url": "https://drive.google.com/uc?export=download&id=1463sYcMnaoNzKODnOSH6b3bR7X3MRvk5",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output21.txt",
+      "name": "output21.txt",
+      "kind": "output",
+      "sha256": "c5c1f14f8aa270ac9f987ce673b1bbb7c4f4ecb602d655f260127bcc93650a6a",
+      "bytes": 14,
+      "publisher_file_id": "1GhiWBJmV5ZVMr5M72H8srKv2j_-451bV",
+      "source_url": "https://drive.google.com/uc?export=download&id=1GhiWBJmV5ZVMr5M72H8srKv2j_-451bV",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output22.txt",
+      "name": "output22.txt",
+      "kind": "output",
+      "sha256": "803e0bf540d0af216539a264376945cb24f33314cd8dda2fb11b4cb09383f19f",
+      "bytes": 14,
+      "publisher_file_id": "1WLwzGunEg8lYfxQagifw0wW6cxa3HFqj",
+      "source_url": "https://drive.google.com/uc?export=download&id=1WLwzGunEg8lYfxQagifw0wW6cxa3HFqj",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output23.txt",
+      "name": "output23.txt",
+      "kind": "output",
+      "sha256": "40e7c134f1a55a2c61d7e486c02e3f0905cc4893dbfd3a53875cd23a5ace5f59",
+      "bytes": 14,
+      "publisher_file_id": "1uCOhqb0Fh_fPnXm6KF5ONRx0RQFCAmvh",
+      "source_url": "https://drive.google.com/uc?export=download&id=1uCOhqb0Fh_fPnXm6KF5ONRx0RQFCAmvh",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output24.txt",
+      "name": "output24.txt",
+      "kind": "output",
+      "sha256": "e0037e7f8fa950d8d6c0fddd4c77f5c2d9ade57b426774d665ed4b392bfba610",
+      "bytes": 14,
+      "publisher_file_id": "1UQIxCI0-Uw11HFyVPZ5rPobuaGLtI-bw",
+      "source_url": "https://drive.google.com/uc?export=download&id=1UQIxCI0-Uw11HFyVPZ5rPobuaGLtI-bw",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output25.txt",
+      "name": "output25.txt",
+      "kind": "output",
+      "sha256": "4e68ea416f28b102676b6629864e6a413fe9002528cabb213161a6ca86d724bf",
+      "bytes": 14,
+      "publisher_file_id": "1KYsFKrxcbR2bOXGZRr6Fk9AiT3fpxveO",
+      "source_url": "https://drive.google.com/uc?export=download&id=1KYsFKrxcbR2bOXGZRr6Fk9AiT3fpxveO",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output26.txt",
+      "name": "output26.txt",
+      "kind": "output",
+      "sha256": "ac3d23edc258d6160b25dd2a3c9a75a1282c9f8d57f33d146df861f0555e6afc",
+      "bytes": 14,
+      "publisher_file_id": "1cEFXPboz9bT8dwcpFR0NxKKahLZ4b6oe",
+      "source_url": "https://drive.google.com/uc?export=download&id=1cEFXPboz9bT8dwcpFR0NxKKahLZ4b6oe",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output27.txt",
+      "name": "output27.txt",
+      "kind": "output",
+      "sha256": "86083c9df9f541d542781448a3389971e14d15b71a79b70b5f2d3c6146f886a1",
+      "bytes": 16,
+      "publisher_file_id": "1G2YgqkxcjGRyPaif34FJn77-hnFpbyQR",
+      "source_url": "https://drive.google.com/uc?export=download&id=1G2YgqkxcjGRyPaif34FJn77-hnFpbyQR",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output28.txt",
+      "name": "output28.txt",
+      "kind": "output",
+      "sha256": "7e522935657fcb0a3a3f5d145c13adaf1cf76f281125ac165c8bf3bf9eae6203",
+      "bytes": 16,
+      "publisher_file_id": "1-rs0nnM6iMzBSgdlfP6YbGnUEptu0GRx",
+      "source_url": "https://drive.google.com/uc?export=download&id=1-rs0nnM6iMzBSgdlfP6YbGnUEptu0GRx",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output29.txt",
+      "name": "output29.txt",
+      "kind": "output",
+      "sha256": "3975508dced0992859564103fc68a00a9ae8958627521eff66581c11dcf8dd40",
+      "bytes": 16,
+      "publisher_file_id": "13UbIw0RSMzB-Mw4V4HMmalfJiCZ8y1-M",
+      "source_url": "https://drive.google.com/uc?export=download&id=13UbIw0RSMzB-Mw4V4HMmalfJiCZ8y1-M",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output3.txt",
+      "name": "output3.txt",
+      "kind": "output",
+      "sha256": "bb7494abaa38753d8b1ea05cd50f9d0be3219792312fb4e909c0fa49f9550767",
+      "bytes": 8,
+      "publisher_file_id": "1XwAvZ5wbZS-MtfA02Kfqvyghw_DFhCDD",
+      "source_url": "https://drive.google.com/uc?export=download&id=1XwAvZ5wbZS-MtfA02Kfqvyghw_DFhCDD",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output30.txt",
+      "name": "output30.txt",
+      "kind": "output",
+      "sha256": "4404c00287831c544111e5a1cfddb26ab569baf9d235a0d18f237fb3d2e113ba",
+      "bytes": 15,
+      "publisher_file_id": "16b3px4hk8NMc-tJGl9RuM9daQaZboiue",
+      "source_url": "https://drive.google.com/uc?export=download&id=16b3px4hk8NMc-tJGl9RuM9daQaZboiue",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output31.txt",
+      "name": "output31.txt",
+      "kind": "output",
+      "sha256": "94ff84485556bf82e3d91d7ba9a422a277219662c8a84146672ac56e3e05c8cc",
+      "bytes": 16,
+      "publisher_file_id": "1skyxPH3M41c5srBE1mks06BQinl4k8vE",
+      "source_url": "https://drive.google.com/uc?export=download&id=1skyxPH3M41c5srBE1mks06BQinl4k8vE",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output32.txt",
+      "name": "output32.txt",
+      "kind": "output",
+      "sha256": "4a66b39b364c2f1281617a11f3dc41d8d62f252e37651f3d556f9c2d1a5a155b",
+      "bytes": 16,
+      "publisher_file_id": "1wECt3xRvy9DgdKxmQpnc-HQMMGfZ8Boo",
+      "source_url": "https://drive.google.com/uc?export=download&id=1wECt3xRvy9DgdKxmQpnc-HQMMGfZ8Boo",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output33.txt",
+      "name": "output33.txt",
+      "kind": "output",
+      "sha256": "530c552360fbf804f42342e73f05b46c8b241b88d62e973f3a8e8710f7a654a1",
+      "bytes": 16,
+      "publisher_file_id": "1rc7SZiKzlfEYxiY6m7zEPyeOARE12iY8",
+      "source_url": "https://drive.google.com/uc?export=download&id=1rc7SZiKzlfEYxiY6m7zEPyeOARE12iY8",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output34.txt",
+      "name": "output34.txt",
+      "kind": "output",
+      "sha256": "3be6744cb8a7a6531f8fb63675174ea734afadc07df6f41fbb97c1c537c5bd77",
+      "bytes": 16,
+      "publisher_file_id": "1ox5lTEEU0s8B9CXq5BQuAIRG6x_y6RIp",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ox5lTEEU0s8B9CXq5BQuAIRG6x_y6RIp",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output35.txt",
+      "name": "output35.txt",
+      "kind": "output",
+      "sha256": "8d386ce6f553bd62f232ec1b3ec23111fdc43d211c68b83ce6c9279c7446fbd3",
+      "bytes": 16,
+      "publisher_file_id": "1Ajm0u26d8J5K0Mq10Etmf7R_0YbfmRl1",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Ajm0u26d8J5K0Mq10Etmf7R_0YbfmRl1",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output36.txt",
+      "name": "output36.txt",
+      "kind": "output",
+      "sha256": "67f4fbe960ab740dec722678becc779901fc1aae59201144b3bf331697568d02",
+      "bytes": 15,
+      "publisher_file_id": "1qhedgyvHAgHe5ICq8r5RT3ljB64o1ln2",
+      "source_url": "https://drive.google.com/uc?export=download&id=1qhedgyvHAgHe5ICq8r5RT3ljB64o1ln2",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output37.txt",
+      "name": "output37.txt",
+      "kind": "output",
+      "sha256": "e093d728b5b6d58715b5fe3ca74da396cb2c366eb95f53e8a2d5226a4102287a",
+      "bytes": 16,
+      "publisher_file_id": "1LmV88cGumO6Qs4UsUQAvkgbyeJdPVETP",
+      "source_url": "https://drive.google.com/uc?export=download&id=1LmV88cGumO6Qs4UsUQAvkgbyeJdPVETP",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output4.txt",
+      "name": "output4.txt",
+      "kind": "output",
+      "sha256": "7b7e7a5d2cabf604355cdc61b2dbfaa6704db901642a87bc5892c837872ad380",
+      "bytes": 8,
+      "publisher_file_id": "1JXGE_e22hlwyRpCuBjW35K0tZ5-_O6Wg",
+      "source_url": "https://drive.google.com/uc?export=download&id=1JXGE_e22hlwyRpCuBjW35K0tZ5-_O6Wg",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output5.txt",
+      "name": "output5.txt",
+      "kind": "output",
+      "sha256": "24a6b3e4801e3119d47c8a69ef752b05dbf303b3f3ce6fa2874c0920139d691f",
+      "bytes": 8,
+      "publisher_file_id": "1XOj4T2F4el9KMvzlVKQcgN7kOy29a7jd",
+      "source_url": "https://drive.google.com/uc?export=download&id=1XOj4T2F4el9KMvzlVKQcgN7kOy29a7jd",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output6.txt",
+      "name": "output6.txt",
+      "kind": "output",
+      "sha256": "d3bdfd840e13df5664ef0067ebfa851667ab49233ef5bde67fee604e547e1985",
+      "bytes": 9,
+      "publisher_file_id": "154Et58Z87w64I0cmGPbEpmCbnCFDUj9-",
+      "source_url": "https://drive.google.com/uc?export=download&id=154Et58Z87w64I0cmGPbEpmCbnCFDUj9-",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output7.txt",
+      "name": "output7.txt",
+      "kind": "output",
+      "sha256": "7d7258507ca54b6d05501d9a3232a1d882b350603a7e70751a7191afe204bbf0",
+      "bytes": 9,
+      "publisher_file_id": "1Q6bUoUWf2kTwHzDP4y-KMwIX8HjyO5PH",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Q6bUoUWf2kTwHzDP4y-KMwIX8HjyO5PH",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output8.txt",
+      "name": "output8.txt",
+      "kind": "output",
+      "sha256": "a8e50d7f41bf688f47754c931507074751eb45c9674ac00f2c85b750c3fd1527",
+      "bytes": 8,
+      "publisher_file_id": "1_kJHRJApJnM2lp9TMRD3da1xxuJFVEXA",
+      "source_url": "https://drive.google.com/uc?export=download&id=1_kJHRJApJnM2lp9TMRD3da1xxuJFVEXA",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    },
+    {
+      "path": "data/raw/iiot/2023/fence/tests/output/output9.txt",
+      "name": "output9.txt",
+      "kind": "output",
+      "sha256": "c83797a7c387a3a2516da638b2b17577afe62f26063dd7d89ee795497ea7c519",
+      "bytes": 9,
+      "publisher_file_id": "1MtQA13sByO0W5C_uP--TzGenJFWF1gaQ",
+      "source_url": "https://drive.google.com/uc?export=download&id=1MtQA13sByO0W5C_uP--TzGenJFWF1gaQ",
+      "folder_url": "https://drive.google.com/drive/folders/19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=19TdJOfg6CGZiEnbjUmXDfs094Nyohkiv"
+    }
+  ],
+  "test_pairs": [
+    {
+      "id": "0",
+      "input": "data/raw/iiot/2023/fence/tests/input/input0.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output0.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "1",
+      "input": "data/raw/iiot/2023/fence/tests/input/input1.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output1.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "2",
+      "input": "data/raw/iiot/2023/fence/tests/input/input2.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output2.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "3",
+      "input": "data/raw/iiot/2023/fence/tests/input/input3.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output3.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "4",
+      "input": "data/raw/iiot/2023/fence/tests/input/input4.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output4.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "5",
+      "input": "data/raw/iiot/2023/fence/tests/input/input5.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output5.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "6",
+      "input": "data/raw/iiot/2023/fence/tests/input/input6.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output6.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "7",
+      "input": "data/raw/iiot/2023/fence/tests/input/input7.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output7.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "8",
+      "input": "data/raw/iiot/2023/fence/tests/input/input8.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output8.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "9",
+      "input": "data/raw/iiot/2023/fence/tests/input/input9.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output9.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "10",
+      "input": "data/raw/iiot/2023/fence/tests/input/input10.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output10.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "11",
+      "input": "data/raw/iiot/2023/fence/tests/input/input11.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output11.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "12",
+      "input": "data/raw/iiot/2023/fence/tests/input/input12.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output12.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "13",
+      "input": "data/raw/iiot/2023/fence/tests/input/input13.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output13.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "14",
+      "input": "data/raw/iiot/2023/fence/tests/input/input14.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output14.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "15",
+      "input": "data/raw/iiot/2023/fence/tests/input/input15.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output15.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "16",
+      "input": "data/raw/iiot/2023/fence/tests/input/input16.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output16.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "17",
+      "input": "data/raw/iiot/2023/fence/tests/input/input17.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output17.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "18",
+      "input": "data/raw/iiot/2023/fence/tests/input/input18.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output18.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "19",
+      "input": "data/raw/iiot/2023/fence/tests/input/input19.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output19.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "20",
+      "input": "data/raw/iiot/2023/fence/tests/input/input20.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output20.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "21",
+      "input": "data/raw/iiot/2023/fence/tests/input/input21.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output21.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "22",
+      "input": "data/raw/iiot/2023/fence/tests/input/input22.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output22.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "23",
+      "input": "data/raw/iiot/2023/fence/tests/input/input23.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output23.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "24",
+      "input": "data/raw/iiot/2023/fence/tests/input/input24.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output24.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "25",
+      "input": "data/raw/iiot/2023/fence/tests/input/input25.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output25.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "26",
+      "input": "data/raw/iiot/2023/fence/tests/input/input26.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output26.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "27",
+      "input": "data/raw/iiot/2023/fence/tests/input/input27.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output27.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "28",
+      "input": "data/raw/iiot/2023/fence/tests/input/input28.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output28.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "29",
+      "input": "data/raw/iiot/2023/fence/tests/input/input29.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output29.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "30",
+      "input": "data/raw/iiot/2023/fence/tests/input/input30.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output30.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "31",
+      "input": "data/raw/iiot/2023/fence/tests/input/input31.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output31.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "32",
+      "input": "data/raw/iiot/2023/fence/tests/input/input32.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output32.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "33",
+      "input": "data/raw/iiot/2023/fence/tests/input/input33.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output33.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "34",
+      "input": "data/raw/iiot/2023/fence/tests/input/input34.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output34.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "35",
+      "input": "data/raw/iiot/2023/fence/tests/input/input35.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output35.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "36",
+      "input": "data/raw/iiot/2023/fence/tests/input/input36.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output36.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "37",
+      "input": "data/raw/iiot/2023/fence/tests/input/input37.txt",
+      "output": "data/raw/iiot/2023/fence/tests/output/output37.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    }
+  ],
+  "input_aliases": [],
+  "unresolved_alias_files": [],
+  "official_test_pair_count": 38,
+  "listing_scope": "All files visible in the publisher-linked public embedded folder views at discovery time; no claim about unpublished/private files.",
+  "discovered_at_utc": "2026-09-13T19:21:25.479459+00:00",
+  "ordinary_view_truncation_avoided": true,
+  "test_subtask_mapping": null,
+  "checker_configuration": null,
+  "execution_limits": null,
+  "programs_executed": false
+}

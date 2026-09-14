@@ -1,5 +1,3 @@
-# IHBB-Asia-Bowl-Round-2
-
 [Q1] In 1990, this country’s no -party Panchayat system was reformed by King Birendra. Gyanendra rose to power in this country after a 2001 massacre of the royal family. The April 2015 Gorkha earthquake killed over 9,000 people in this country, including 21 in an avalanche on Mount Everest. For ten points, name this Himalayan country with capital Kathmandu.
 
 [Q2] Sopwith Camels were equipped with two of these devices, often produced by Lewis. The capture of Roland Garros’ equipment helped German engineers develop synchronization gear, permitting these closed-bolt weapons to operate through the gaps of a spinning propeller. The Browning M1919 replaced many Vickers -produced examples of, for ten points, what weapons that were mounted on World War I-era aircraft and could fire hundreds of bullets per minute?

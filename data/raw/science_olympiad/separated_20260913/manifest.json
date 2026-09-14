@@ -1,0 +1,669 @@
+{
+  "visibility": "maintainer_only",
+  "source_pdf": "data/raw/science_olympiad/samples/082317_SS1718_AnnotatedExampleExam.pdf",
+  "source_sha256": "f99c10143552aa71d98333852a86faed7ac2cf82821c5803503de6e28c212b55",
+  "source_url": "https://www.soinc.org/sites/default/files/uploaded_files/082317_SS1718_AnnotatedExampleExam.pdf",
+  "files": [
+    {
+      "source": "data/.cache/science_olympiad_repair_20260913/prepared/input/cover.png",
+      "destination": "data/raw/science_olympiad/separated_20260913/input/cover.png",
+      "sha256": "b3dd0e042e23520deaeccdf67214e2b9f0684a6c527094477a39bbab739485ba"
+    },
+    {
+      "source": "data/.cache/science_olympiad_repair_20260913/prepared/input/image_sheet_A.png",
+      "destination": "data/raw/science_olympiad/separated_20260913/input/image_sheet_A.png",
+      "sha256": "a4bcb2c8b011f4c6da2df4f29228639dfdfa49ea27f7c1eda32ef2a1c1f0298b"
+    },
+    {
+      "source": "data/.cache/science_olympiad_repair_20260913/prepared/input/image_sheet_B.png",
+      "destination": "data/raw/science_olympiad/separated_20260913/input/image_sheet_B.png",
+      "sha256": "bd5c262ee9c5031ab22e3722d921faaef63ebdc0a6a736d9c59f53696ca664c7"
+    },
+    {
+      "source": "data/.cache/science_olympiad_repair_20260913/prepared/input/image_sheet_C.png",
+      "destination": "data/raw/science_olympiad/separated_20260913/input/image_sheet_C.png",
+      "sha256": "71b72664e558d06037a3f6a8542774002321c4efb214bb91b29323fa41ab07c1"
+    },
+    {
+      "source": "data/.cache/science_olympiad_repair_20260913/prepared/input/solar_system_2017_2018_contestant.pdf",
+      "destination": "data/raw/science_olympiad/separated_20260913/input/solar_system_2017_2018_contestant.pdf",
+      "sha256": "3a7ffe9076906638d59afdccb016fc95f4d033a1aee5aaf918a32e855e288657"
+    },
+    {
+      "source": "data/.cache/science_olympiad_repair_20260913/prepared/judge/answer_reference.json",
+      "destination": "data/raw/science_olympiad/separated_20260913/judge/answer_reference.json",
+      "sha256": "38decdffe97aa2888891737ffc82d37fbb9f0343202fa8cd61805030728df08c"
+    },
+    {
+      "source": "data/.cache/science_olympiad_repair_20260913/prepared/judge/solar_system_2017_2018_answer_key.pdf",
+      "destination": "data/raw/science_olympiad/separated_20260913/judge/solar_system_2017_2018_answer_key.pdf",
+      "sha256": "b181fe20698f7fa9e8491b8e8e5b1802c79eec5c6f5dfae9c3788a46d86be80d"
+    }
+  ],
+  "source_page_map": {
+    "contestant": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      16,
+      17
+    ],
+    "judge_answers": [
+      14,
+      15
+    ],
+    "instructors": [
+      2,
+      3,
+      4
+    ],
+    "blank": [
+      18
+    ]
+  },
+  "removed_guidance": {
+    "0": [
+      {
+        "rect": [
+          23.8,
+          700.7959716796875,
+          585.834765625,
+          714.80400390625
+        ],
+        "text": "The cover sheet of the exam should tell the students how many of each sheet in the test they should have (how "
+      },
+      {
+        "rect": [
+          23.8,
+          714.7959716796875,
+          590.0311767578125,
+          728.80400390625
+        ],
+        "text": "many answer sheets, image sheets, etc.). Students should be encouraged to check that they have all test pages "
+      },
+      {
+        "rect": [
+          23.8,
+          728.7959716796875,
+          573.7206909179688,
+          742.80400390625
+        ],
+        "text": "before beginning the test. Students should also be made aware of any differences in point value for different "
+      },
+      {
+        "rect": [
+          23.8,
+          742.7959716796875,
+          590.189501953125,
+          756.80400390625
+        ],
+        "text": "questions or sections of the test in case they wish to allocate their time proportionately. If students must submit "
+      },
+      {
+        "rect": [
+          23.8,
+          756.7959716796875,
+          486.33803100585936,
+          770.80400390625
+        ],
+        "text": "an answer sheet to be graded, they should be made aware of this before beginning the test."
+      }
+    ],
+    "4": [
+      {
+        "rect": [
+          29.8,
+          606.7959716796875,
+          558.211962890625,
+          620.80400390625
+        ],
+        "text": "It is best to label image sheets if there are more than one, so that students save time looking for images "
+      },
+      {
+        "rect": [
+          29.8,
+          620.7959716796875,
+          544.7347900390625,
+          634.80400390625
+        ],
+        "text": "referenced in the questions. This can aid in sorting the images by question type i.e. images of surface "
+      },
+      {
+        "rect": [
+          29.8,
+          634.7959716796875,
+          569.0228759765625,
+          648.80400390625
+        ],
+        "text": "features on one page and images of missions and spectral features on another page. Tests should be long "
+      },
+      {
+        "rect": [
+          29.8,
+          648.7959716796875,
+          582.6176025390625,
+          662.80400390625
+        ],
+        "text": "because they have many or more difficult questions, not because test formatting makes answering questions "
+      },
+      {
+        "rect": [
+          29.8,
+          662.7959716796875,
+          76.448046875,
+          676.80400390625
+        ],
+        "text": "tedious.  "
+      },
+      {
+        "rect": [
+          29.8,
+          676.7959716796875,
+          33.2,
+          690.80400390625
+        ],
+        "text": " "
+      },
+      {
+        "rect": [
+          65.8,
+          676.7959716796875,
+          567.053515625,
+          690.80400390625
+        ],
+        "text": "When creating image sheets for a test, it is usually easier to prepare sets of images, along with any "
+      },
+      {
+        "rect": [
+          29.8,
+          690.7959716796875,
+          569.2136108398438,
+          704.80400390625
+        ],
+        "text": "labels or lettering/numbering, in a separate document and then screenshot or export the set of images for "
+      },
+      {
+        "rect": [
+          29.8,
+          704.7959716796875,
+          568.5958129882813,
+          718.80400390625
+        ],
+        "text": "use in your test, to avoid formatting problems. Keep in mind when preparing image sheets that the images "
+      },
+      {
+        "rect": [
+          29.8,
+          718.7959716796875,
+          583.5429565429688,
+          732.80400390625
+        ],
+        "text": "most easily accessible to you (usually from the internet) are also those most accessible to students preparing "
+      },
+      {
+        "rect": [
+          29.8,
+          732.7959716796875,
+          571.9423706054688,
+          746.80400390625
+        ],
+        "text": "for the event. The object of image identification is to test both understanding and preparation; Test authors "
+      },
+      {
+        "rect": [
+          29.8,
+          746.7959716796875,
+          560.9852783203125,
+          760.80400390625
+        ],
+        "text": "are discouraged from including too many obscure images that only reward rote memorization rather than "
+      },
+      {
+        "rect": [
+          29.8,
+          760.7959716796875,
+          130.88119812011718,
+          774.80400390625
+        ],
+        "text": "holistic preparation."
+      }
+    ],
+    "5": [],
+    "6": [],
+    "7": [],
+    "8": [
+      {
+        "rect": [
+          47.8,
+          189.79600219726564,
+          536.9144165039063,
+          203.80400390625
+        ],
+        "text": "Section A of this test is an example of common style of B Division astronomy event exams. Some "
+      },
+      {
+        "rect": [
+          47.8,
+          203.79600219726564,
+          559.847705078125,
+          217.80400390625
+        ],
+        "text": "questions are very easy, and some are very difficult - either because they require critical thinking and "
+      },
+      {
+        "rect": [
+          47.8,
+          217.79600219726564,
+          550.7491943359375,
+          231.80400390625
+        ],
+        "text": "understanding about the concepts in the rules, or because they require more complete preparation "
+      },
+      {
+        "rect": [
+          47.8,
+          231.79600219726564,
+          527.2723876953125,
+          245.80400390625
+        ],
+        "text": "and knowledge of the objects. Many of the questions require image recognition and secondary "
+      },
+      {
+        "rect": [
+          47.8,
+          245.79600219726564,
+          374.9708740234375,
+          259.80400390625
+        ],
+        "text": "questions build off correct identification of an image, but not all. "
+      },
+      {
+        "rect": [
+          47.8,
+          273.79600219726564,
+          553.8560668945313,
+          287.80400390625
+        ],
+        "text": "Relevant information about past, current, and future missions is often the most challenging for both "
+      },
+      {
+        "rect": [
+          47.8,
+          287.79600219726564,
+          560.747607421875,
+          301.80400390625
+        ],
+        "text": "students and proctors to distinguish from irrelevant information, as there is no clear line that dictates "
+      },
+      {
+        "rect": [
+          47.8,
+          301.79600219726564,
+          542.81474609375,
+          315.80400390625
+        ],
+        "text": "which missions or which instruments comprising those missions are directly relevant to studies of "
+      },
+      {
+        "rect": [
+          47.8,
+          315.79600219726564,
+          538.1324951171875,
+          329.80400390625
+        ],
+        "text": "geology in the solar system as outlined in the rules. Be careful with questions about timelines for "
+      },
+      {
+        "rect": [
+          47.8,
+          329.79600219726564,
+          554.60966796875,
+          343.80400390625
+        ],
+        "text": "progress of future missions because timescales for these missions tend to change frequently. When "
+      },
+      {
+        "rect": [
+          47.8,
+          343.79600219726564,
+          560.19560546875,
+          357.80400390625
+        ],
+        "text": "used on a test, answers should reflect the most recent official statement made on the date of launch."
+      }
+    ],
+    "9": [
+      {
+        "rect": [
+          38.8,
+          603.7959716796875,
+          552.3129760742188,
+          617.80400390625
+        ],
+        "text": "Section B of this exam differs from Section A primarily in that it tests concepts related more closely to "
+      },
+      {
+        "rect": [
+          38.8,
+          617.7959716796875,
+          557.9564697265625,
+          631.80400390625
+        ],
+        "text": "Part II of the event rules than Part I. It is not necessary to separate the concepts in these two sections, "
+      },
+      {
+        "rect": [
+          38.8,
+          631.7959716796875,
+          538.9063598632813,
+          645.80400390625
+        ],
+        "text": "as some concepts lend themselves more readily to applications to the objects outlined in Part I (as "
+      },
+      {
+        "rect": [
+          38.8,
+          645.7959716796875,
+          309.99315185546874,
+          659.80400390625
+        ],
+        "text": "seen in Section A and in the next section, Section C.   "
+      },
+      {
+        "rect": [
+          38.8,
+          673.7959716796875,
+          549.7194091796875,
+          687.80400390625
+        ],
+        "text": "It is not necessary to split the test into “Sections” but it is a good idea to employ some organizational "
+      },
+      {
+        "rect": [
+          38.8,
+          687.7959716796875,
+          469.7396728515625,
+          701.80400390625
+        ],
+        "text": "structure spanning the pages of the test in case students elect to split the test apart. "
+      }
+    ],
+    "10": [],
+    "11": [
+      {
+        "rect": [
+          75.8,
+          610.7959716796875,
+          516.5184814453125,
+          624.80400390625
+        ],
+        "text": "Some questions in Section D, as well as Section C, are math questions that require the "
+      },
+      {
+        "rect": [
+          75.8,
+          624.7959716796875,
+          510.6397277832031,
+          638.80400390625
+        ],
+        "text": "use of the calculator. The mathematical components of the concepts being tested are "
+      },
+      {
+        "rect": [
+          75.8,
+          638.7959716796875,
+          514.06572265625,
+          652.80400390625
+        ],
+        "text": "reasonable for middle schoolers, and questions using these concepts that use “clean” "
+      },
+      {
+        "rect": [
+          75.8,
+          652.7959716796875,
+          423.79323120117186,
+          666.80400390625
+        ],
+        "text": "numbers that do not require the use of a calculator could be written. "
+      }
+    ],
+    "12": [
+      {
+        "rect": [
+          74.8,
+          522.7959716796875,
+          411.85753173828124,
+          536.80400390625
+        ],
+        "text": "With regards to Answer Sheets and Answer Keys (following pages): "
+      },
+      {
+        "rect": [
+          74.8,
+          536.7959716796875,
+          538.9003784179688,
+          550.80400390625
+        ],
+        "text": "It is typically a good idea to include space for team number and name on all answer sheets, "
+      },
+      {
+        "rect": [
+          74.8,
+          550.7959716796875,
+          493.8463623046875,
+          564.80400390625
+        ],
+        "text": "in case tests become disorganized, and in case there is some confusion with team "
+      },
+      {
+        "rect": [
+          74.8,
+          564.7959716796875,
+          510.8913146972656,
+          578.80400390625
+        ],
+        "text": "numbers. A key should usually be printed and recorded in the same format as the test "
+      },
+      {
+        "rect": [
+          74.8,
+          578.7959716796875,
+          530.87724609375,
+          592.80400390625
+        ],
+        "text": "answer sheets to speed the grading process and assist any volunteer graders who may be "
+      },
+      {
+        "rect": [
+          74.8,
+          592.7959716796875,
+          524.3226806640625,
+          606.80400390625
+        ],
+        "text": "working with you grading tests. Efficiency is especially important when a large number of "
+      },
+      {
+        "rect": [
+          74.8,
+          606.7959716796875,
+          518.807666015625,
+          620.80400390625
+        ],
+        "text": "tests must be graded and ranked in time for the awards ceremony. Note that a different "
+      },
+      {
+        "rect": [
+          74.8,
+          620.7959716796875,
+          519.342822265625,
+          634.80400390625
+        ],
+        "text": "amount of space is allotted for different questions to assist students in keeping track of "
+      },
+      {
+        "rect": [
+          74.8,
+          634.7959716796875,
+          531.9164306640625,
+          648.80400390625
+        ],
+        "text": "answers. It is important to provide answer spaces large enough for larger handwriting. It is "
+      },
+      {
+        "rect": [
+          74.8,
+          649.0999877929687,
+          112.51999969482422,
+          663.80400390625
+        ],
+        "text": "highly "
+      },
+      {
+        "rect": [
+          112.11999969482422,
+          649.7959716796875,
+          535.1468994140625,
+          663.80400390625
+        ],
+        "text": "recommended that a test author take his or her own tests several times throughout "
+      },
+      {
+        "rect": [
+          74.8,
+          663.7959716796875,
+          526.7023193359375,
+          677.80400390625
+        ],
+        "text": "its development to check for inconsistencies in numbering, oddly phrased questions, and "
+      },
+      {
+        "rect": [
+          74.8,
+          677.7959716796875,
+          527.1619140625,
+          691.80400390625
+        ],
+        "text": "inconveniences like answer spaces that are not large enough for adequate answers to be "
+      },
+      {
+        "rect": [
+          74.8,
+          691.7959716796875,
+          187.4300109863281,
+          705.80400390625
+        ],
+        "text": "comfortably provided. "
+      }
+    ],
+    "15": [],
+    "16": []
+  },
+  "pixel_checks": [
+    {
+      "source_page": 1,
+      "contestant_page": 1,
+      "pixels_changed_outside_guidance": 0,
+      "retained_text_unchanged": true
+    },
+    {
+      "source_page": 5,
+      "contestant_page": 2,
+      "pixels_changed_outside_guidance": 0,
+      "retained_text_unchanged": true
+    },
+    {
+      "source_page": 6,
+      "contestant_page": 3,
+      "pixels_changed_outside_guidance": 0,
+      "retained_text_unchanged": true
+    },
+    {
+      "source_page": 7,
+      "contestant_page": 4,
+      "pixels_changed_outside_guidance": 0,
+      "retained_text_unchanged": true
+    },
+    {
+      "source_page": 8,
+      "contestant_page": 5,
+      "pixels_changed_outside_guidance": 0,
+      "retained_text_unchanged": true
+    },
+    {
+      "source_page": 9,
+      "contestant_page": 6,
+      "pixels_changed_outside_guidance": 0,
+      "retained_text_unchanged": true
+    },
+    {
+      "source_page": 10,
+      "contestant_page": 7,
+      "pixels_changed_outside_guidance": 0,
+      "retained_text_unchanged": true
+    },
+    {
+      "source_page": 11,
+      "contestant_page": 8,
+      "pixels_changed_outside_guidance": 0,
+      "retained_text_unchanged": true
+    },
+    {
+      "source_page": 12,
+      "contestant_page": 9,
+      "pixels_changed_outside_guidance": 0,
+      "retained_text_unchanged": true
+    },
+    {
+      "source_page": 13,
+      "contestant_page": 10,
+      "pixels_changed_outside_guidance": 0,
+      "retained_text_unchanged": true
+    },
+    {
+      "source_page": 16,
+      "contestant_page": 11,
+      "pixels_changed_outside_guidance": 0,
+      "retained_text_unchanged": true
+    },
+    {
+      "source_page": 17,
+      "contestant_page": 12,
+      "pixels_changed_outside_guidance": 0,
+      "retained_text_unchanged": true
+    }
+  ],
+  "visual_review": {
+    "reviewed_by": "main_agent",
+    "review_date": "2026-09-13",
+    "renderer": "Poppler 26.07.0 pdftoppm at 110 dpi",
+    "contestant_pdf_sha256": "3a7ffe9076906638d59afdccb016fc95f4d033a1aee5aaf918a32e855e288657",
+    "answer_key_pdf_sha256": "b181fe20698f7fa9e8491b8e8e5b1802c79eec5c6f5dfae9c3788a46d86be80d",
+    "contestant_pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "answer_pages_inspected": [
+      1,
+      2
+    ],
+    "printed_answer_cells_compared": 100,
+    "result": "Retained cover, image labels, questions, tables and blank answer sheets are legible and unchanged; author guidance and answer pages are absent from contestant content. Both judge-only pages match the original answer tables."
+  }
+}

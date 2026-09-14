@@ -1,9 +1,6 @@
-# HMMT November 2019 — Guts Round
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
-
-[Page 1]
-HMMT November 2019, November 9, 2019 — GUTS ROUND
+          HMMT November 2019, November 9, 2019 — GUTS ROUND
 
 Organization                      Team                      Team ID#
 
@@ -25,6 +22,11 @@ Organization                      Team                      Team ID#
    have an integer root?
 
 
+
+
+
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
           HMMT November 2019, November 9, 2019 — GUTS ROUND
 
 Organization                      Team                      Team ID#
@@ -43,8 +45,9 @@ Organization                      Team                      Team ID#
 6. [6] Compute the sum of all positive integers n < 2048 such that n has an even number of 1’s in its binary
    representation.
 
-[Page 2]
-HMMT November 2019, November 9, 2019 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2019, November 9, 2019 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -64,6 +67,11 @@ HMMT November 2019, November 9, 2019 — GUTS ROUND
     replaces it with x/2. Given that there are constants a, b such that the expected value of the value written
    on the blackboard after t minutes can be written as at + b for all positive integers t, compute p.
 
+
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
           HMMT November 2019, November 9, 2019 — GUTS ROUND
 
@@ -87,8 +95,9 @@ HMMT November 2019, November 9, 2019 — GUTS ROUND
     square), they collide and fall over. How many diﬀerent ways are there for the players to choose vertices
     to go to so that none of them fall over?
 
-[Page 3]
-HMMT November 2019, November 9, 2019 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2019, November 9, 2019 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -111,6 +120,11 @@ HMMT November 2019, November 9, 2019 — GUTS ROUND
    What is the smallest possible value of a + b + c?
 
 
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
           HMMT November 2019, November 9, 2019 — GUTS ROUND
 
  Organization                      Team                      Team ID#
@@ -128,8 +142,9 @@ HMMT November 2019, November 9, 2019 — GUTS ROUND
                                           3√           3√           3√
                                         3r1 −2 +  3r2 −2 +  3r3 −2.
 
-[Page 4]
-HMMT November 2019, November 9, 2019 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2019, November 9, 2019 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -148,6 +163,11 @@ HMMT November 2019, November 9, 2019 — GUTS ROUND
  extensions of sides AB and AC.
 
 
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
           HMMT November 2019, November 9, 2019 — GUTS ROUND
 
  Organization                      Team                      Team ID#
@@ -161,8 +181,9 @@ HMMT November 2019, November 9, 2019 — GUTS ROUND
 24. [12] Let P be a point inside regular pentagon ABCDE such that ∠PAB = 48◦and ∠PDC = 42◦. Find
    ∠BPC, in degrees.
 
-[Page 5]
-HMMT November 2019, November 9, 2019 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2019, November 9, 2019 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -185,6 +206,11 @@ HMMT November 2019, November 9, 2019 — GUTS ROUND
                                          ϕ(2019n) = ϕ(n2).
 
 
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
           HMMT November 2019, November 9, 2019 — GUTS ROUND
 
  Organization                      Team                      Team ID#
@@ -203,8 +229,9 @@ HMMT November 2019, November 9, 2019 — GUTS ROUND
 
     for all integers k ≥0 and n. What is the maximum possible value of f(2019)?
 
-[Page 6]
-HMMT November 2019, November 9, 2019 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2019, November 9, 2019 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -232,6 +259,11 @@ HMMT November 2019, November 9, 2019 — GUTS ROUND
    Γ again at X̸ = C. The pair (A, B) is called techy if line OX is tangent to Ω. Find the area of the region
     of points A so that there exists a B for which (A, B) is techy.
 
+
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
           HMMT November 2019, November 9, 2019 — GUTS ROUND
 

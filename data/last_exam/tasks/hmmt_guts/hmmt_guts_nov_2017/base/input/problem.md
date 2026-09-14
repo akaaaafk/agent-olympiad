@@ -1,9 +1,7 @@
-# HMMT November 2017 — Guts Round
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
 
-[Page 1]
-HMMT November 2017, November 11, 2017 — GUTS ROUND
+               HMMT November 2017, November 11, 2017 — GUTS ROUND
 
 Organization                         Team                         Team ID#
                               √
@@ -13,6 +11,10 @@ Organization                         Team                         Team ID#
 
          3. [2] The length of a rectangle is three times its width. Given that its perimeter and area are both
           numerically equal to k > 0, ﬁnd k.
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2017, November 11, 2017 — GUTS ROUND
@@ -35,6 +37,10 @@ Organization                         Team                         Team ID#
           hat back?
 
 
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
                HMMT November 2017, November 11, 2017 — GUTS ROUND
 
 Organization                         Team                         Team ID#
@@ -51,8 +57,10 @@ Organization                         Team                         Team ID#
           which decreases the time by 20 minutes. What is the minimum number of button presses necessary to
            correctly set the clock to the correct time?
 
-[Page 2]
-HMMT November 2017, November 11, 2017 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2017, November 11, 2017 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -71,6 +79,10 @@ Organization                         Team                         Team ID#
        12. [4] Trapezoid ABCD, with bases AB and CD, has side lengths AB = 28, BC = 13, CD = 14, and
       DA = 15. Let diagonals AC and BD intersect at P, and let E and F be the midpoints of AP and
         BP, respectively. Find the area of quadrilateral CDEF.
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2017, November 11, 2017 — GUTS ROUND
@@ -93,6 +105,10 @@ Organization                         Team                         Team ID#
               is two squares away from it in a particular direction and one square away in a perpendicular direction.)
 
 
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
                HMMT November 2017, November 11, 2017 — GUTS ROUND
 
 Organization                         Team                         Team ID#
@@ -109,13 +125,18 @@ Organization                         Team                         Team ID#
           a time, and travels 15 times as fast as traveling on foot. If they plan their trip optimally, what is the
            shortest amount of time it takes for them to all reach the destination, in minutes?
 
-[Page 3]
-HMMT November 2017, November 11, 2017 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2017, November 11, 2017 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
        19. [9] The skeletal structure of coronene, a hydrocarbon with the chemical formula C24H12, is shown
           below.
+
+
+
 
 
          Each line segment between two atoms is at least a single bond. However, since each carbon (C) requires
@@ -145,8 +166,10 @@ Organization                         Team                         Team ID#
 
         What is the probability that condition (1) is met before condition (2)?
 
-[Page 4]
-HMMT November 2017, November 11, 2017 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2017, November 11, 2017 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -165,6 +188,10 @@ Organization                         Team                         Team ID#
        24. [12] Triangle ABC has side lengths AB = 15, BC = 18, CA = 20. Extend CA and CB to points D
          and E respectively such that DA = AB = BE. Line AB intersects the circumcircle of CDE at P and
          Q. Find the length of PQ.
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2017, November 11, 2017 — GUTS ROUND
@@ -190,8 +217,10 @@ Organization                         Team                         Team ID#
          away in a perpendicular direction, under the condition that there is no other piece immediately adjacent
            to it in the ﬁrst direction.)
 
-[Page 5]
-HMMT November 2017, November 11, 2017 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2017, November 11, 2017 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -205,6 +234,10 @@ Organization                         Team                         Team ID#
                                                       106
        30. [19] Given complex number z, deﬁne sequence z0, z1, z2, . . . as z0 = z and zn+1 = 2z2n + 2zn for n ≥0.
          Given that z10 = 2017, ﬁnd the minimum possible value of |z|.
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2017, November 11, 2017 — GUTS ROUND
@@ -222,8 +255,10 @@ Organization                         Team                         Team ID#
        33. [24] Tetrahedron ABCD with volume 1 is inscribed in circumsphere ω such that AB = AC = AD = 2
          and BC · CD · DB = 16. Find the radius of ω.
 
-[Page 6]
-HMMT November 2017, November 11, 2017 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2017, November 11, 2017 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -231,6 +266,9 @@ Organization                         Team                         Team ID#
 
        34. [30] The skeletal structure of circumcircumcircumcoronene, a hydrocarbon with the chemical formula
           C150H30, is shown below.
+
+
+
 
 
          Each line segment between two atoms is at least a single bond. However, since each carbon (C) requires

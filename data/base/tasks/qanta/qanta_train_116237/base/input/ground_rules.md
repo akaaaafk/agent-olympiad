@@ -1,0 +1,3 @@
+# Competition rules
+
+QANTA Quiz Bowl. The task represents a quiz-bowl question without a complete live buzzer match. Benchmark adaptation: the runner uses 4 active agents. Quiz bowl teams confer on bonuses; tossups are normally individual after a buzz. Banned during the contest: internet access, calculators and personal electronics. Work only from the materials provided with the problem. Submit one shared spoken answer; A short quiz-bowl style answer line. Prefer the canonical name; avoid sentences unless needed for disambiguation. Question-level quiz-bowl proxy. Treat unexposed physical, oral, live-opponent, judge, timing, or environment mechanisms as unavailable rather than simulated facts.

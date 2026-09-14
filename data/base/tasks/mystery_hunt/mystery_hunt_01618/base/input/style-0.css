@@ -1,0 +1,157 @@
+@import "style-1.css";
+
+body {
+  background-color: #aeee1c;
+}
+#background {
+  background-image: url("css-0.jpg");
+  background-position-x: center;
+  background-position-y: bottom;
+
+  position:absolute;
+  top: 0; bottom:0; left: 0; right: 0;
+}
+#background .screen {
+  position: absolute;
+  left: 120px; right: 120px;
+  top: 0; bottom: 0;
+  background: rgba(255,255,255,0.40);
+}
+#side-border div {
+  position: absolute;
+}
+#side-border .left, #side-border .right {
+  position: absolute;
+  width: 120px;
+  bottom: 0px;
+  top: 25px;
+}
+#side-border .left,
+#side-border .left .top,
+#side-border .left .middle,
+#side-border .left .bottom,
+#side-border .right .side {
+  left: 0;
+}
+#side-border .right,
+#side-border .right .top,
+#side-border .right .middle,
+#side-border .right .bottom,
+#side-border .left .side {
+  right: 0;
+}
+#side-border .top, #side-border .middle, #side-border .bottom {
+  position: absolute;
+  width: 100px;
+}
+#side-border .side {
+  position: absolute;
+  top: -25px; bottom: 0px;
+  width: 20px;
+  background-repeat: repeat-y;
+}
+#side-border .left .side {
+  background: url("css-1.png") repeat-y bottom right;
+}
+#side-border .right .side {
+  background: url("css-2.png") repeat-y bottom left;
+}
+#side-border .top {
+  top: 0px; height: 163px;
+  background: url("css-3.png") no-repeat;
+}
+#side-border .middle {
+  top: 163px;
+  bottom: 116px; /* 136px - 20px overlap */
+  background: url("css-4.png") repeat-y;
+}
+#side-border .bottom {
+  bottom: 0px; height: 136px;
+  background: url("css-5.png") no-repeat;
+}
+#main {
+  margin-left: 120px;
+  margin-right: 120px;
+}
+#bottom-border {
+  position: absolute; left: 108px; right: 108px; bottom: 0;
+  height: 40px;
+  background: url("css-6.png") bottom center repeat-x;
+}
+
+body.index #index-image {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  margin-left: -385px;
+}
+body.index #index-image,
+body.index #index-image > img {
+  display: block;
+  width: 800px; height: 511px;
+  border: none;
+}
+body.index #index-image > * {
+  position: absolute; top: 0; left: 0;
+}
+body.index #puzzle-list a {
+  display: block;
+  padding: 19px 15px 0 60px;
+  margin: 0 0 0 0;
+  background: url("css-7.png") no-repeat;
+  height: 42px;
+}
+body.index #puzzle-list a.unsolved {
+  background-image: url("css-8.png");
+}
+
+#main {
+  padding: 10px 0 60px 0;
+  position: relative;
+}
+
+body.index {
+  min-width: 900px;
+}
+body.index #main {
+  padding-top: 540px;
+}
+
+/* puzzle page */
+body.puzzle {
+  min-width: 883px;
+}
+#show-title { top: 43px; }
+#show-title .title {
+  width: 775px; left: -377px;
+  height:118px;
+  background: url("css-9.png") no-repeat;
+}
+body.puzzle #main {
+  padding-top: 200px;
+}
+#content {
+  padding: 0 1em;
+}
+#link {
+  left: 310px; top: 75px;
+}
+.ptitle {
+  position: relative; /* put in front of banner */
+  z-index: 99;        /* put in front of banner */
+  background: url("css-10.png") repeat-x left bottom;
+  padding: 0px 0 6px 65px;
+  margin: 0px 0 0px 0px;
+}
+.ptitle .icon {
+  position: absolute;
+  display: block;
+  background: url("css-11.png") no-repeat;
+  width: 66px; height: 100px;
+  left: -10px; bottom: 0px;
+}
+@media print {
+  .ptitle .icon {
+    display: none;
+  }
+}

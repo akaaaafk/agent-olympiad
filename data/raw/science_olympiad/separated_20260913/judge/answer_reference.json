@@ -1,0 +1,1512 @@
+{
+  "visibility": "judge_only",
+  "source": "data/raw/science_olympiad/samples/082317_SS1718_AnnotatedExampleExam.pdf",
+  "source_sha256": "f99c10143552aa71d98333852a86faed7ac2cf82821c5803503de6e28c212b55",
+  "source_url": "https://www.soinc.org/sites/default/files/uploaded_files/082317_SS1718_AnnotatedExampleExam.pdf",
+  "total_points": 100,
+  "question_count": 100,
+  "score_basis": "Cover says all questions have equal value; answer pages 14 and 15 each contain 50 distinct numbered answers and a 50/50 header. Together they support 100 one-point items for this sample.",
+  "reference_policy": "Preserve printed historical answers, including parenthetical alternatives, ranges and set/order requirements. No aliases or scientific corrections are invented.",
+  "answers": [
+    {
+      "question_id": "1",
+      "printed_answer": "A",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 1,
+      "cell_bbox": [
+        72.0,
+        85,
+        306.0,
+        110
+      ]
+    },
+    {
+      "question_id": "2",
+      "printed_answer": "P",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 2,
+      "cell_bbox": [
+        72.0,
+        110,
+        306.0,
+        135
+      ]
+    },
+    {
+      "question_id": "3",
+      "printed_answer": "Caloris (Planitia/Basin)",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 3,
+      "cell_bbox": [
+        72.0,
+        135,
+        306.0,
+        160
+      ]
+    },
+    {
+      "question_id": "4",
+      "printed_answer": "M",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 4,
+      "cell_bbox": [
+        72.0,
+        160,
+        306.0,
+        185
+      ]
+    },
+    {
+      "question_id": "5",
+      "printed_answer": "Stickney",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 5,
+      "cell_bbox": [
+        72.0,
+        185,
+        306.0,
+        210
+      ]
+    },
+    {
+      "question_id": "6",
+      "printed_answer": "Deimos",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 6,
+      "cell_bbox": [
+        72.0,
+        210,
+        306.0,
+        235
+      ]
+    },
+    {
+      "question_id": "7",
+      "printed_answer": "closer",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 7,
+      "cell_bbox": [
+        72.0,
+        235,
+        306.0,
+        260
+      ]
+    },
+    {
+      "question_id": "8",
+      "printed_answer": "comets",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 8,
+      "cell_bbox": [
+        72.0,
+        260,
+        306.0,
+        285
+      ]
+    },
+    {
+      "question_id": "9",
+      "printed_answer": "D F K L N (any order)",
+      "points": 1,
+      "response_semantics": "unordered_set",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 9,
+      "cell_bbox": [
+        72.0,
+        285,
+        306.0,
+        310
+      ]
+    },
+    {
+      "question_id": "10",
+      "printed_answer": "O",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 10,
+      "cell_bbox": [
+        72.0,
+        310,
+        306.0,
+        335
+      ]
+    },
+    {
+      "question_id": "11",
+      "printed_answer": "Galileo",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 11,
+      "cell_bbox": [
+        72.0,
+        335,
+        306.0,
+        360
+      ]
+    },
+    {
+      "question_id": "12",
+      "printed_answer": "J",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 12,
+      "cell_bbox": [
+        72.0,
+        360,
+        306.0,
+        385
+      ]
+    },
+    {
+      "question_id": "13",
+      "printed_answer": "radar",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 13,
+      "cell_bbox": [
+        72.0,
+        385,
+        306.0,
+        410
+      ]
+    },
+    {
+      "question_id": "14",
+      "printed_answer": "Magellan",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 14,
+      "cell_bbox": [
+        72.0,
+        410,
+        306.0,
+        435
+      ]
+    },
+    {
+      "question_id": "15",
+      "printed_answer": "tessera",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 15,
+      "cell_bbox": [
+        72.0,
+        435,
+        306.0,
+        460
+      ]
+    },
+    {
+      "question_id": "16",
+      "printed_answer": "K",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 16,
+      "cell_bbox": [
+        72.0,
+        460,
+        306.0,
+        485
+      ]
+    },
+    {
+      "question_id": "17",
+      "printed_answer": "young",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 17,
+      "cell_bbox": [
+        72.0,
+        485,
+        306.0,
+        510
+      ]
+    },
+    {
+      "question_id": "18",
+      "printed_answer": "wrinkle ridges",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 18,
+      "cell_bbox": [
+        72.0,
+        510,
+        306.0,
+        535
+      ]
+    },
+    {
+      "question_id": "19",
+      "printed_answer": "maria",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 19,
+      "cell_bbox": [
+        72.0,
+        535,
+        306.0,
+        560
+      ]
+    },
+    {
+      "question_id": "20",
+      "printed_answer": "basalt",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 20,
+      "cell_bbox": [
+        72.0,
+        560,
+        306.0,
+        585
+      ]
+    },
+    {
+      "question_id": "21",
+      "printed_answer": "Apollo 11",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 21,
+      "cell_bbox": [
+        72.0,
+        585,
+        306.0,
+        610
+      ]
+    },
+    {
+      "question_id": "22",
+      "printed_answer": "Late Heavy Bombardment",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 22,
+      "cell_bbox": [
+        72.0,
+        610,
+        306.0,
+        635
+      ]
+    },
+    {
+      "question_id": "23",
+      "printed_answer": "3.8-4.1 billion years ago",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 23,
+      "cell_bbox": [
+        72.0,
+        635,
+        306.0,
+        660
+      ]
+    },
+    {
+      "question_id": "24",
+      "printed_answer": "Mars",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 24,
+      "cell_bbox": [
+        72.0,
+        660,
+        306.0,
+        685
+      ]
+    },
+    {
+      "question_id": "25",
+      "printed_answer": "Iron",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 1,
+      "source_row": 25,
+      "cell_bbox": [
+        72.0,
+        685,
+        306.0,
+        710
+      ]
+    },
+    {
+      "question_id": "26",
+      "printed_answer": "G",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 1,
+      "cell_bbox": [
+        306.0,
+        85,
+        548.0,
+        110
+      ]
+    },
+    {
+      "question_id": "27",
+      "printed_answer": "Hellas (Impact Basin)",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 2,
+      "cell_bbox": [
+        306.0,
+        110,
+        548.0,
+        135
+      ]
+    },
+    {
+      "question_id": "28",
+      "printed_answer": "Mercury",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 3,
+      "cell_bbox": [
+        306.0,
+        135,
+        548.0,
+        160
+      ]
+    },
+    {
+      "question_id": "29",
+      "printed_answer": "artists/authors/composers",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 4,
+      "cell_bbox": [
+        306.0,
+        160,
+        548.0,
+        185
+      ]
+    },
+    {
+      "question_id": "30",
+      "printed_answer": "MESSENGER",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 5,
+      "cell_bbox": [
+        306.0,
+        185,
+        548.0,
+        210
+      ]
+    },
+    {
+      "question_id": "31",
+      "printed_answer": "Tycho",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 6,
+      "cell_bbox": [
+        306.0,
+        210,
+        548.0,
+        235
+      ]
+    },
+    {
+      "question_id": "32",
+      "printed_answer": "20-100 million years",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 7,
+      "cell_bbox": [
+        306.0,
+        235,
+        548.0,
+        260
+      ]
+    },
+    {
+      "question_id": "33",
+      "printed_answer": "Giant Impact Hypothesis (Big Splash)",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 8,
+      "cell_bbox": [
+        306.0,
+        260,
+        548.0,
+        285
+      ]
+    },
+    {
+      "question_id": "34",
+      "printed_answer": "Theia",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 9,
+      "cell_bbox": [
+        306.0,
+        285,
+        548.0,
+        310
+      ]
+    },
+    {
+      "question_id": "35",
+      "printed_answer": "Solar Eclipse",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 10,
+      "cell_bbox": [
+        306.0,
+        310,
+        548.0,
+        335
+      ]
+    },
+    {
+      "question_id": "36",
+      "printed_answer": "penumbra",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 11,
+      "cell_bbox": [
+        306.0,
+        335,
+        548.0,
+        360
+      ]
+    },
+    {
+      "question_id": "37",
+      "printed_answer": "umbra",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 12,
+      "cell_bbox": [
+        306.0,
+        360,
+        548.0,
+        385
+      ]
+    },
+    {
+      "question_id": "38",
+      "printed_answer": "August 21st, 2017",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 13,
+      "cell_bbox": [
+        306.0,
+        385,
+        548.0,
+        410
+      ]
+    },
+    {
+      "question_id": "39",
+      "printed_answer": "Bailey’s Beads",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 14,
+      "cell_bbox": [
+        306.0,
+        410,
+        548.0,
+        435
+      ]
+    },
+    {
+      "question_id": "40",
+      "printed_answer": "Lunar Craters",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 15,
+      "cell_bbox": [
+        306.0,
+        435,
+        548.0,
+        460
+      ]
+    },
+    {
+      "question_id": "41",
+      "printed_answer": "Lunar Eclipse",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 16,
+      "cell_bbox": [
+        306.0,
+        460,
+        548.0,
+        485
+      ]
+    },
+    {
+      "question_id": "42",
+      "printed_answer": "Spring Tides",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 17,
+      "cell_bbox": [
+        306.0,
+        485,
+        548.0,
+        510
+      ]
+    },
+    {
+      "question_id": "43",
+      "printed_answer": "tidal locking",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 18,
+      "cell_bbox": [
+        306.0,
+        510,
+        548.0,
+        535
+      ]
+    },
+    {
+      "question_id": "44",
+      "printed_answer": "59%",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 19,
+      "cell_bbox": [
+        306.0,
+        535,
+        548.0,
+        560
+      ]
+    },
+    {
+      "question_id": "45",
+      "printed_answer": "latitudinal libration",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 20,
+      "cell_bbox": [
+        306.0,
+        560,
+        548.0,
+        585
+      ]
+    },
+    {
+      "question_id": "46",
+      "printed_answer": "third quarter",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 21,
+      "cell_bbox": [
+        306.0,
+        585,
+        548.0,
+        610
+      ]
+    },
+    {
+      "question_id": "47",
+      "printed_answer": "6 hours after midnight (6 AM)",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 22,
+      "cell_bbox": [
+        306.0,
+        610,
+        548.0,
+        635
+      ]
+    },
+    {
+      "question_id": "48",
+      "printed_answer": "January 20-22nd",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 23,
+      "cell_bbox": [
+        306.0,
+        635,
+        548.0,
+        660
+      ]
+    },
+    {
+      "question_id": "49",
+      "printed_answer": "C D A E B (correct order)",
+      "points": 1,
+      "response_semantics": "ordered_sequence",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 24,
+      "cell_bbox": [
+        306.0,
+        660,
+        548.0,
+        685
+      ]
+    },
+    {
+      "question_id": "50",
+      "printed_answer": "B E (any order)",
+      "points": 1,
+      "response_semantics": "unordered_set",
+      "source_page": 14,
+      "source_column": 2,
+      "source_row": 25,
+      "cell_bbox": [
+        306.0,
+        685,
+        548.0,
+        710
+      ]
+    },
+    {
+      "question_id": "51",
+      "printed_answer": "A E (any order)",
+      "points": 1,
+      "response_semantics": "unordered_set",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 1,
+      "cell_bbox": [
+        72.0,
+        85,
+        306.0,
+        110
+      ]
+    },
+    {
+      "question_id": "52",
+      "printed_answer": "C D E (any order)",
+      "points": 1,
+      "response_semantics": "unordered_set",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 2,
+      "cell_bbox": [
+        72.0,
+        110,
+        306.0,
+        135
+      ]
+    },
+    {
+      "question_id": "53",
+      "printed_answer": "Curiosity (Rover)",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 3,
+      "cell_bbox": [
+        72.0,
+        135,
+        306.0,
+        160
+      ]
+    },
+    {
+      "question_id": "54",
+      "printed_answer": "ChemCam",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 4,
+      "cell_bbox": [
+        72.0,
+        160,
+        306.0,
+        185
+      ]
+    },
+    {
+      "question_id": "55",
+      "printed_answer": "MRO (Mars Reconnaissance Orbiter)",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 5,
+      "cell_bbox": [
+        72.0,
+        185,
+        306.0,
+        210
+      ]
+    },
+    {
+      "question_id": "56",
+      "printed_answer": "Opportunity",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 6,
+      "cell_bbox": [
+        72.0,
+        210,
+        306.0,
+        235
+      ]
+    },
+    {
+      "question_id": "57",
+      "printed_answer": "X",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 7,
+      "cell_bbox": [
+        72.0,
+        235,
+        306.0,
+        260
+      ]
+    },
+    {
+      "question_id": "58",
+      "printed_answer": "V",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 8,
+      "cell_bbox": [
+        72.0,
+        260,
+        306.0,
+        285
+      ]
+    },
+    {
+      "question_id": "59",
+      "printed_answer": "U",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 9,
+      "cell_bbox": [
+        72.0,
+        285,
+        306.0,
+        310
+      ]
+    },
+    {
+      "question_id": "60",
+      "printed_answer": "4 billion years",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 10,
+      "cell_bbox": [
+        72.0,
+        310,
+        306.0,
+        335
+      ]
+    },
+    {
+      "question_id": "61",
+      "printed_answer": "B",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 11,
+      "cell_bbox": [
+        72.0,
+        335,
+        306.0,
+        360
+      ]
+    },
+    {
+      "question_id": "62",
+      "printed_answer": "A",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 12,
+      "cell_bbox": [
+        72.0,
+        360,
+        306.0,
+        385
+      ]
+    },
+    {
+      "question_id": "63",
+      "printed_answer": "5.0-5.3 years",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 13,
+      "cell_bbox": [
+        72.0,
+        385,
+        306.0,
+        410
+      ]
+    },
+    {
+      "question_id": "64",
+      "printed_answer": "5-6 AU",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 14,
+      "cell_bbox": [
+        72.0,
+        410,
+        306.0,
+        435
+      ]
+    },
+    {
+      "question_id": "65",
+      "printed_answer": "Sun and Earth",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 15,
+      "cell_bbox": [
+        72.0,
+        435,
+        306.0,
+        460
+      ]
+    },
+    {
+      "question_id": "66",
+      "printed_answer": "Mars and Jupiter",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 16,
+      "cell_bbox": [
+        72.0,
+        460,
+        306.0,
+        485
+      ]
+    },
+    {
+      "question_id": "67",
+      "printed_answer": "Kirkwood Gaps",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 17,
+      "cell_bbox": [
+        72.0,
+        485,
+        306.0,
+        510
+      ]
+    },
+    {
+      "question_id": "68",
+      "printed_answer": "S (Stony)",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 18,
+      "cell_bbox": [
+        72.0,
+        510,
+        306.0,
+        535
+      ]
+    },
+    {
+      "question_id": "69",
+      "printed_answer": "M (Metallic) or X (X-Group)",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 19,
+      "cell_bbox": [
+        72.0,
+        535,
+        306.0,
+        560
+      ]
+    },
+    {
+      "question_id": "70",
+      "printed_answer": "C (Carbonaceous)",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 20,
+      "cell_bbox": [
+        72.0,
+        560,
+        306.0,
+        585
+      ]
+    },
+    {
+      "question_id": "71",
+      "printed_answer": "1",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 21,
+      "cell_bbox": [
+        72.0,
+        585,
+        306.0,
+        610
+      ]
+    },
+    {
+      "question_id": "72",
+      "printed_answer": "3",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 22,
+      "cell_bbox": [
+        72.0,
+        610,
+        306.0,
+        635
+      ]
+    },
+    {
+      "question_id": "73",
+      "printed_answer": "Koronis Family",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 23,
+      "cell_bbox": [
+        72.0,
+        635,
+        306.0,
+        660
+      ]
+    },
+    {
+      "question_id": "74",
+      "printed_answer": "Amors",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 24,
+      "cell_bbox": [
+        72.0,
+        660,
+        306.0,
+        685
+      ]
+    },
+    {
+      "question_id": "75",
+      "printed_answer": "Apollos",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 1,
+      "source_row": 25,
+      "cell_bbox": [
+        72.0,
+        685,
+        306.0,
+        710
+      ]
+    },
+    {
+      "question_id": "76",
+      "printed_answer": "Atens",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 1,
+      "cell_bbox": [
+        306.0,
+        85,
+        548.0,
+        110
+      ]
+    },
+    {
+      "question_id": "77",
+      "printed_answer": "red",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 2,
+      "cell_bbox": [
+        306.0,
+        110,
+        548.0,
+        135
+      ]
+    },
+    {
+      "question_id": "78",
+      "printed_answer": "Spaceguard",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 3,
+      "cell_bbox": [
+        306.0,
+        135,
+        548.0,
+        160
+      ]
+    },
+    {
+      "question_id": "79",
+      "printed_answer": "PHO (Potentially Hazardous Objects)",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 4,
+      "cell_bbox": [
+        306.0,
+        160,
+        548.0,
+        185
+      ]
+    },
+    {
+      "question_id": "80",
+      "printed_answer": "BB",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 5,
+      "cell_bbox": [
+        306.0,
+        185,
+        548.0,
+        210
+      ]
+    },
+    {
+      "question_id": "81",
+      "printed_answer": "Kinetic Impactor",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 6,
+      "cell_bbox": [
+        306.0,
+        210,
+        548.0,
+        235
+      ]
+    },
+    {
+      "question_id": "82",
+      "printed_answer": "F",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 7,
+      "cell_bbox": [
+        306.0,
+        235,
+        548.0,
+        260
+      ]
+    },
+    {
+      "question_id": "83",
+      "printed_answer": "E",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 8,
+      "cell_bbox": [
+        306.0,
+        260,
+        548.0,
+        285
+      ]
+    },
+    {
+      "question_id": "84",
+      "printed_answer": "B",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 9,
+      "cell_bbox": [
+        306.0,
+        285,
+        548.0,
+        310
+      ]
+    },
+    {
+      "question_id": "85",
+      "printed_answer": "D",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 10,
+      "cell_bbox": [
+        306.0,
+        310,
+        548.0,
+        335
+      ]
+    },
+    {
+      "question_id": "86",
+      "printed_answer": "A",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 11,
+      "cell_bbox": [
+        306.0,
+        335,
+        548.0,
+        360
+      ]
+    },
+    {
+      "question_id": "87",
+      "printed_answer": "C",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 12,
+      "cell_bbox": [
+        306.0,
+        360,
+        548.0,
+        385
+      ]
+    },
+    {
+      "question_id": "88",
+      "printed_answer": "Y",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 13,
+      "cell_bbox": [
+        306.0,
+        385,
+        548.0,
+        410
+      ]
+    },
+    {
+      "question_id": "89",
+      "printed_answer": "W",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 14,
+      "cell_bbox": [
+        306.0,
+        410,
+        548.0,
+        435
+      ]
+    },
+    {
+      "question_id": "90",
+      "printed_answer": "X",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 15,
+      "cell_bbox": [
+        306.0,
+        435,
+        548.0,
+        460
+      ]
+    },
+    {
+      "question_id": "91",
+      "printed_answer": "Z",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 16,
+      "cell_bbox": [
+        306.0,
+        460,
+        548.0,
+        485
+      ]
+    },
+    {
+      "question_id": "92",
+      "printed_answer": "V",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 17,
+      "cell_bbox": [
+        306.0,
+        485,
+        548.0,
+        510
+      ]
+    },
+    {
+      "question_id": "93",
+      "printed_answer": "U",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 18,
+      "cell_bbox": [
+        306.0,
+        510,
+        548.0,
+        535
+      ]
+    },
+    {
+      "question_id": "94",
+      "printed_answer": "JJ",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 19,
+      "cell_bbox": [
+        306.0,
+        535,
+        548.0,
+        560
+      ]
+    },
+    {
+      "question_id": "95",
+      "printed_answer": "EE, HH, GG (any order)",
+      "points": 1,
+      "response_semantics": "unordered_set",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 20,
+      "cell_bbox": [
+        306.0,
+        560,
+        548.0,
+        585
+      ]
+    },
+    {
+      "question_id": "96",
+      "printed_answer": "II, FF (any order)",
+      "points": 1,
+      "response_semantics": "unordered_set",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 21,
+      "cell_bbox": [
+        306.0,
+        585,
+        548.0,
+        610
+      ]
+    },
+    {
+      "question_id": "97",
+      "printed_answer": "craters",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 22,
+      "cell_bbox": [
+        306.0,
+        610,
+        548.0,
+        635
+      ]
+    },
+    {
+      "question_id": "98",
+      "printed_answer": "400",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 23,
+      "cell_bbox": [
+        306.0,
+        635,
+        548.0,
+        660
+      ]
+    },
+    {
+      "question_id": "99",
+      "printed_answer": "plasma torus",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 24,
+      "cell_bbox": [
+        306.0,
+        660,
+        548.0,
+        685
+      ]
+    },
+    {
+      "question_id": "100",
+      "printed_answer": "sulfur",
+      "points": 1,
+      "response_semantics": "printed_reference",
+      "source_page": 15,
+      "source_column": 2,
+      "source_row": 25,
+      "cell_bbox": [
+        306.0,
+        685,
+        548.0,
+        710
+      ]
+    }
+  ]
+}

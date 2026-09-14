@@ -1,0 +1,108 @@
+@import "style-2.css";
+body.index #main .desc { /* tweak notecard */
+  padding: 0.5em 1em;
+  width: 230px;
+}
+body.index #main .desc .paperclip {
+  right: -6px /* adjust paperclip over */
+}
+
+#label { /* tweak position of label */
+  padding: 0 10px;
+  left: 787px;
+}
+#folder {
+  background-image: url("css-0.jpg");
+}
+#footer {
+  background-image: url("css-1.png");
+}
+body.index .materials {
+  margin-bottom: 2em;
+}
+body.index .materials .n .num {
+  width: 85px;
+  text-align: right;
+  padding-right: 10px;
+  font-family: Coustard, Courier, serif;
+  font-size: 80%;
+}
+body.index .materials .n td { padding: 0; vertical-align: bottom; width: auto; }
+body.index .materials .n a {
+  display: block;
+  /* a little bit of space on right */
+  padding-right: 5px;
+  /* overlap on top of .num field and put icon there. */
+  margin-left: -95px; padding-left: 95px;
+  padding-top: 34px;
+  min-height: 28px; /* subtract padding-top from 62px height */
+  position: relative;
+  margin-bottom: -4px;
+  border: none;
+}
+body.index .materials .n a > span {
+  display: block;
+  position: absolute;
+  height: 64px; bottom: 4px; top: auto; left: 0; right: 0;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid black;
+}
+body.index .materials .a_circus_line {
+  background: url("css-2.png") no-repeat;
+}
+body.index .materials .a_circus_line.unsolved {
+  background-image: url("css-3.png");
+}
+body.index .materials .okla_holmes_a {
+  background: url("css-4.png") no-repeat 0 6px;
+}
+body.index .materials .okla_holmes_a.unsolved {
+  background-image: url("css-5.png");
+}
+body.index .materials .into_the_woodstock {
+  background: url("css-6.png") no-repeat 0px 7px;
+}
+body.index .materials .into_the_woodstock.unsolved {
+  background-image: url("css-7.png");
+}
+body.index .materials .mayan_fair_lady {
+  background: url("css-8.png") no-repeat 0px 26px;
+}
+body.index .materials .mayan_fair_lady.unsolved {
+  background-image: url("css-9.png");
+}
+body.index .materials .phantom_of_the_operator {
+  background: url("css-10.png") no-repeat 5px 14px;
+}
+body.index .materials .phantom_of_the_operator.unsolved {
+  background-image: url("css-11.png");
+}
+body.index .materials .ogre_of_la_mancha {
+  background: url("css-12.png") no-repeat 0 14px;
+}
+body.index .materials .ogre_of_la_mancha.unsolved {
+  background-image: url("css-13.png");
+}
+body.index .materials .watson_2_0 {
+  background: url("css-14.png") no-repeat bottom left;
+  vertical-align: bottom;
+}
+body.index .materials .watson_2_0.unsolved {
+  background-image: url("css-15.png");
+}
+body.puzzle #main h1 {
+  background: url("css-16.png") no-repeat;
+  padding-left: 90px;
+  min-height: 78px;
+  padding-top: 25px;
+  margin-bottom: -10px;
+  margin-left: -10px;
+}
+@media print {
+  body.puzzle #main h1 {
+    background: transparent;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    min-height: 0;
+  }
+}

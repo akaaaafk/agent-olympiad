@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 1997
-
 # Odyssey of the Mind — 1997 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Double TroubleDivisions I, II, III & IVThe team’s problem is to design and build one structure that is made up of two individual balsa wood and glue structures. One of the structures will be a beam structure designed to bridge a gap; the other will be a load-bearing structure designed to rest on the beam structure and balance weights. The combined structure will be tested by supporting as much weight as possible. The team members will also create and present a theme for their solution, and will be judged on how well they work together during the presentation of their solution. Time limit: 8 min. Cost limit: $90 USD.
 5. Heroic ProportionsDivisions I & IIThe team is to create and present a humorous performance that includes a character that has one or more out-of-proportion characteristics, or is extremely large or extremely small. This characteristic will enable the character to do something better or something it otherwise could not do. The character will use this ability at one time to help a member of its species and at another time to help a member of a different species. Time limit: 8 min. Cost limit: $90 USD.
 6. The Good NewsPrimaryThe team’s problem is to create and present a television news broadcast that includes three stories. At some time during the performance, the team must show the good in something that is usually bad. The presentation must include at least one humorous news anchor and a simulation of a live news clip. Time limit: 8 min. Cost limit: $50 USD.
+

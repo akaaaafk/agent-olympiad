@@ -1,0 +1,328 @@
+{
+  "operation": "curated_missing_year_cleanup",
+  "timestamp_utc": "20260913T025258Z",
+  "status": "completed",
+  "preservation_policy": "Retain all previously usable rows, all nonempty tracks, all valid raw sources and all original splits/licenses. Excluded records are recoverable. Existing not_ready items blocked by environment/asset isolation are not mass-deleted.",
+  "backup": "data/excluded/integrity_repair_20260913T025258Z",
+  "previous_exclusions_path": "data/benchmarks/readiness_triage_exclusions_20260912.json",
+  "exclusions_path": "data/benchmarks/unavailable_year_exclusions_20260913.json",
+  "validation_scope": "Local source, role, scorecard and package integrity; no live LLM or contest-runtime validation.",
+  "before_records": 1760,
+  "before_status_counts": {
+    "ready_with_limitations": 193,
+    "not_ready": 738,
+    "ready": 669,
+    "remote_judge_ready": 158,
+    "sample_tests_ready": 2
+  },
+  "removed_records": [
+    {
+      "competition_id": "ijso_practical",
+      "problem_id": "ijso_practical_2012_team_practical_2012",
+      "year": 2012,
+      "reason": "Empty local placeholder. Official IJSO archive has no 2012 packet; Hungarian delegation practical links return 404, and other checked primary archives did not supply a usable copy.",
+      "evidence_urls": [
+        "https://ijsoweb.org/downloads",
+        "https://kemia.apaczai.elte.hu/versenyek/feladatok/ijso/ijsofeladatok.html",
+        "http://ijso.kemavill.hu/downloads/2012/Practical_final_hungarian.pdf"
+      ]
+    },
+    {
+      "competition_id": "iol_team",
+      "problem_id": "iol_team_2013",
+      "year": 2013,
+      "reason": "Local solution-named PDF is HTML, not a PDF; official 2013 archive lists team problems but no team solution.",
+      "evidence_urls": [
+        "https://ioling.org/problems/2013/"
+      ]
+    },
+    {
+      "competition_id": "ioaa_group",
+      "problem_id": "ioaa_group_2023",
+      "year": 2023,
+      "reason": "Official archive has the group problems but no edition-specific group solution/marking packet. No scoring reference was invented.",
+      "evidence_urls": [
+        "https://ioaastrophysics.org/resources/problems-from-past-ioaa"
+      ]
+    },
+    {
+      "competition_id": "ioaa_group",
+      "problem_id": "ioaa_group_2016",
+      "year": 2016,
+      "reason": "Official archive has the group problems but no edition-specific group solution/marking packet. No scoring reference was invented.",
+      "evidence_urls": [
+        "https://ioaastrophysics.org/resources/problems-from-past-ioaa"
+      ]
+    },
+    {
+      "competition_id": "ioaa_group",
+      "problem_id": "ioaa_group_2013",
+      "year": 2013,
+      "reason": "Archived horizontal/vertical PDFs contain inline answer annotations; a clean contestant packet and full scoring protocol were not found.",
+      "evidence_urls": [
+        "https://ioaastrophysics.org/resources/problems-from-past-ioaa"
+      ]
+    },
+    {
+      "competition_id": "ioaa_group",
+      "problem_id": "ioaa_group_2012",
+      "year": 2012,
+      "reason": "Official archive has the group problems but no edition-specific group solution/marking packet. No scoring reference was invented.",
+      "evidence_urls": [
+        "https://ioaastrophysics.org/resources/problems-from-past-ioaa"
+      ]
+    },
+    {
+      "competition_id": "ioaa_group",
+      "problem_id": "ioaa_group_2011",
+      "year": 2011,
+      "reason": "Official archive has the group problems but no edition-specific group solution/marking packet. No scoring reference was invented.",
+      "evidence_urls": [
+        "https://ioaastrophysics.org/resources/problems-from-past-ioaa"
+      ]
+    },
+    {
+      "competition_id": "pumac_power",
+      "problem_id": "pumac_power_2007",
+      "year": 2007,
+      "reason": "Official archive provides the problem but no usable Power solution link for this edition. Removed from the active scored corpus; raw problem retained.",
+      "evidence_urls": [
+        "https://jason-shi-f9dm.squarespace.com/archives"
+      ]
+    },
+    {
+      "competition_id": "pumac_power",
+      "problem_id": "pumac_power_2008",
+      "year": 2008,
+      "reason": "Official archive provides the problem but no usable Power solution link for this edition. Removed from the active scored corpus; raw problem retained.",
+      "evidence_urls": [
+        "https://jason-shi-f9dm.squarespace.com/archives"
+      ]
+    },
+    {
+      "competition_id": "pumac_power",
+      "problem_id": "pumac_power_2014",
+      "year": 2014,
+      "reason": "Official archive provides the problem but no usable Power solution link for this edition. Removed from the active scored corpus; raw problem retained.",
+      "evidence_urls": [
+        "https://jason-shi-f9dm.squarespace.com/archives"
+      ]
+    },
+    {
+      "competition_id": "pumac_power",
+      "problem_id": "pumac_power_2024",
+      "year": 2024,
+      "reason": "Official archive provides the problem but no usable Power solution link for this edition. Removed from the active scored corpus; raw problem retained.",
+      "evidence_urls": [
+        "https://jason-shi-f9dm.squarespace.com/archives"
+      ]
+    },
+    {
+      "competition_id": "pumac_power",
+      "problem_id": "pumac_power_2025",
+      "year": 2025,
+      "reason": "Official archive provides the problem but no usable Power solution link for this edition. Removed from the active scored corpus; raw problem retained.",
+      "evidence_urls": [
+        "https://jason-shi-f9dm.squarespace.com/archives"
+      ]
+    }
+  ],
+  "repaired_records": [
+    {
+      "competition_id": "arml_power",
+      "problem_id": "arml_power_spring_2022",
+      "evaluation_status": "not_ready"
+    },
+    {
+      "competition_id": "arml_power",
+      "problem_id": "arml_power_spring_2023",
+      "evaluation_status": "ready_with_limitations"
+    },
+    {
+      "competition_id": "arml_power",
+      "problem_id": "arml_power_spring_2024",
+      "evaluation_status": "ready_with_limitations"
+    },
+    {
+      "competition_id": "arml_power",
+      "problem_id": "arml_power_spring_2025",
+      "evaluation_status": "ready_with_limitations"
+    },
+    {
+      "competition_id": "ijso_practical",
+      "problem_id": "ijso_practical_2004_team_practical_2004",
+      "evaluation_status": "not_ready"
+    },
+    {
+      "competition_id": "ijso_practical",
+      "problem_id": "ijso_practical_2005_team_practical_2005",
+      "evaluation_status": "not_ready"
+    },
+    {
+      "competition_id": "ijso_practical",
+      "problem_id": "ijso_practical_2006_team_practical_2006",
+      "evaluation_status": "not_ready"
+    },
+    {
+      "competition_id": "ijso_practical",
+      "problem_id": "ijso_practical_2015_team_practical_2015",
+      "evaluation_status": "not_ready"
+    },
+    {
+      "competition_id": "ijso_practical",
+      "problem_id": "ijso_practical_2024_team_practical_2024",
+      "evaluation_status": "not_ready"
+    },
+    {
+      "competition_id": "ijso_practical",
+      "problem_id": "ijso_practical_2025_team_practical_2025",
+      "evaluation_status": "not_ready"
+    },
+    {
+      "competition_id": "ijso_practical",
+      "problem_id": "ijso_practical_2011_team_practical_2011",
+      "evaluation_status": "not_ready"
+    },
+    {
+      "competition_id": "iol_team",
+      "problem_id": "iol_team_2003",
+      "evaluation_status": "not_ready"
+    }
+  ],
+  "unchanged_records_verified": 1736,
+  "previously_usable_records_preserved": 1022,
+  "packages": {
+    "n_tasks": 1748,
+    "n_competitions": 43,
+    "staged_assets": 766
+  },
+  "validation": {
+    "records": 1748,
+    "tracks": 43,
+    "scorecards": "matched",
+    "package_ids": "matched",
+    "input_assets": "hash_verified",
+    "iypt_years": "matched",
+    "hmmt_2024_perfect_score": 400.0
+  },
+  "after_records": 1748,
+  "tracks": 43,
+  "evaluation_status_counts": {
+    "ready_with_limitations": 196,
+    "not_ready": 723,
+    "ready": 669,
+    "remote_judge_ready": 158,
+    "sample_tests_ready": 2
+  },
+  "imported_source_files": 17,
+  "imported_evidence_pages": 5,
+  "references_relinked": [
+    "iol_team_2003"
+  ],
+  "quarantined": [
+    {
+      "path": "data/raw/iol/iol-2013-team-sol.en.pdf",
+      "sha256": "5c5996fef304b965c8447cc9af07421ac864ea7d5abcc660d873ab55cd05b2d9",
+      "reason": "HTML error page misnamed as PDF; unreferenced after exclusion."
+    }
+  ],
+  "evidence_path": "data/raw/source_verification/20260913/missing_editions_research.json",
+  "retained_not_ready_by_track": {
+    "ijso_practical": 7,
+    "iol_team": 2,
+    "arml_power": 1,
+    "iiot": 38,
+    "ccdc": 16,
+    "cfa_research_challenge": 19,
+    "cybench": 39,
+    "debatebench": 32,
+    "eoes": 30,
+    "gcch_harvard": 7,
+    "ioai_team": 2,
+    "mystery_hunt": 261,
+    "nyu_ctf_bench": 194,
+    "odyssey_of_the_mind": 50,
+    "science_olympiad": 1,
+    "wharton_investment": 4,
+    "wro": 20
+  },
+  "retained_focus_limitations": [
+    {
+      "competition_id": "ijso_practical",
+      "problem_id": "ijso_practical_2004_team_practical_2004",
+      "limitations": [
+        "Original experimental problem and marking PDFs recovered. Image-based answer diagrams, observed experiment data, and validation of the historical team adaptation remain unavailable.",
+        "Original files preserved; no other-year answers, fabricated measurements or guessed scores were used."
+      ]
+    },
+    {
+      "competition_id": "ijso_practical",
+      "problem_id": "ijso_practical_2005_team_practical_2005",
+      "limitations": [
+        "Official archived 2005 booklet contains the experimental examination as well as other rounds. Only the experimental section is the task. No verified experimental marking packet or observed data was found; historical team adaptation is unvalidated.",
+        "Original files preserved; no other-year answers, fabricated measurements or guessed scores were used."
+      ]
+    },
+    {
+      "competition_id": "ijso_practical",
+      "problem_id": "ijso_practical_2006_team_practical_2006",
+      "limitations": [
+        "Original 10-page experiment and 2-page official answer/marking sheet recovered. OCR is lossy and measurements are not supplied; image-aware task-specific scoring has not been validated.",
+        "Original files preserved; no other-year answers, fabricated measurements or guessed scores were used."
+      ]
+    },
+    {
+      "competition_id": "ijso_practical",
+      "problem_id": "ijso_practical_2011_team_practical_2011",
+      "limitations": [
+        "All three subject problem packets are now archived. Biology and chemistry marking files exist, but a verified physics marking file and observed experiment data remain missing."
+      ]
+    },
+    {
+      "competition_id": "ijso_practical",
+      "problem_id": "ijso_practical_2015_team_practical_2015",
+      "limitations": [
+        "Official problem and three marking DOCX files recovered. Tables/drawings require document rendering; observed measurements and complete aligned text-only scoring remain unavailable. Marking files contain differing question/point variants, so no automatic year-specific scoring is asserted.",
+        "Original files preserved; no other-year answers, fabricated measurements or guessed scores were used."
+      ]
+    },
+    {
+      "competition_id": "ijso_practical",
+      "problem_id": "ijso_practical_2024_team_practical_2024",
+      "limitations": [
+        "Full official English experimental packet recovered from the Taiwan delegation archive. Edition-specific judge reference, observed lab data and image-aware delivery remain unvalidated.",
+        "Original files preserved; no other-year answers, fabricated measurements or guessed scores were used."
+      ]
+    },
+    {
+      "competition_id": "ijso_practical",
+      "problem_id": "ijso_practical_2025_team_practical_2025",
+      "limitations": [
+        "Full 57-page English experimental packet recovered from the Slovenian delegation archive. The task also requires spectrometer/laptop files, laboratory observations and official marking material; these are not fully archived.",
+        "Original files preserved; no other-year answers, fabricated measurements or guessed scores were used."
+      ]
+    },
+    {
+      "competition_id": "iol_team",
+      "problem_id": "iol_team_2003",
+      "limitations": [
+        "Both official problem and solution PDFs exist. The solution matches the publisher download byte-for-byte; both solution pages visually checked.",
+        "Both task and reference require image-aware delivery, which is not validated end-to-end. No text-only readiness is asserted."
+      ]
+    },
+    {
+      "competition_id": "iol_team",
+      "problem_id": "iol_team_2012",
+      "limitations": "Official problem PDF visually verified. Remains not_ready until full image input delivery and year-specific judge references are validated end-to-end."
+    },
+    {
+      "competition_id": "arml_power",
+      "problem_id": "arml_power_spring_2022",
+      "limitations": [
+        "Original packet states 40 points but explicit weights sum to 39; problem 16 has no printed weight (page 7 visually confirmed).",
+        "Official solutions recovered. Diagram-aware end-to-end scoring has not been validated."
+      ]
+    }
+  ],
+  "source_lookup_scope": "Rechecked the 25 packet/reference-gap records. The other 713 previously triaged not_ready records were preserved unchanged, not re-audited as runtime-ready."
+}

@@ -1,19 +1,64 @@
-# Input Environment and Settings
+# Environment
 
-## System
-- Competition id: `ijso_practical`
-- Problem id: `ijso_practical_2019_team_practical_2019`
-- Task type: `team_practical`
-- Eval unit: `session`
-- Status: `collected`
+## Roster
 
-## Runtime
-- Status: `unavailable`
+```json
+{
+  "active_min": 3,
+  "active_default": 3,
+  "active_max": 3,
+  "collaboration": "Collaborate only within the team under contest rules.",
+  "range_basis": "source_record"
+}
+```
 
-The collected IJSO practicals provide PDFs and marking schemes, not executable apparatus models. A faithful runtime must be built per practical with explicit apparatus state, permitted interventions, measurement noise, and hidden ground truth; a generic Docker shell would not reproduce the human experiment.
+## Allowed tools
 
-## Evaluation Hints (for harness, not a gold key)
-- Evaluator: `rubric_llm_v1`
-- Evaluator status: `ready_with_limitations`
-- Rubric path: `data/rubrics/practical_report_40_v1.json`
-- Deliverable: `written_report`
+```json
+[
+  "query_rules",
+  "use_calculator",
+  "inspect_environment"
+]
+```
+
+## Resources
+
+```json
+{
+  "internet": "forbidden",
+  "calculator": "allowed",
+  "code_execution": "forbidden",
+  "paper_pencil": "allowed",
+  "provided_materials_only": true,
+  "physical_lab": "proxy_unavailable"
+}
+```
+
+## Official execution facts
+
+```json
+{
+  "official_minutes": null
+}
+```
+
+## Deliverable
+
+```json
+{
+  "answer_format": "Submit a lab-style report: data, calculations, tables/graphs description, and conclusions.",
+  "shared": true,
+  "mime_types": [
+    "text/plain"
+  ],
+  "task_types": [
+    "team_practical"
+  ],
+  "official_deliverable": "lab_report",
+  "official_mime_types": [
+    "text/plain"
+  ]
+}
+```
+

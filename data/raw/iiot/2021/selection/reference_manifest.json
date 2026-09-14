@@ -1,0 +1,52 @@
+{
+  "schema_version": "iiot-reference-archive/v1",
+  "problem_id": "iiot_2021_04",
+  "task_code": "selection",
+  "round": "international_final",
+  "archive_url": "https://iio.team/competition/tasks/2021",
+  "source_links": {
+    "Statement": "https://drive.google.com/file/d/1cubK_k94ZQNuSgZzvKK5eRuYBE-5tlu1/view?usp=drive_link",
+    "Solutions": "https://drive.google.com/file/d/14wZA1_z2b9s8qRM7ijMsDjTmAuTg8zhU/view?usp=drive_link",
+    "Test cases": "https://drive.google.com/drive/folders/168FmVK4zo6osyD7LVOX1Lvh1L3F7lWXH?usp=drive_link"
+  },
+  "reference": {
+    "path": "data/raw/iiot/2021/selection/references/selection.cpp",
+    "source_url": "https://drive.google.com/uc?id=14wZA1_z2b9s8qRM7ijMsDjTmAuTg8zhU&export=download",
+    "sha256": "c5a594adfd356cd605a15acaa247e62f8f9e4b7a28652c713f7353ae338ab4a2",
+    "bytes": 907,
+    "classification": "publisher_reference_source",
+    "execution_validation": "not_run"
+  },
+  "official_scoring": {
+    "total_points": 100,
+    "subtasks": [
+      {
+        "id": 1,
+        "points": 0
+      },
+      {
+        "id": 2,
+        "points": 19
+      },
+      {
+        "id": 3,
+        "points": 25
+      },
+      {
+        "id": 4,
+        "points": 40
+      },
+      {
+        "id": 5,
+        "points": 16
+      }
+    ],
+    "mode": "all_cases_required_per_subtask",
+    "test_to_subtask_mapping": "not_archived"
+  },
+  "public_test_listing": {
+    "status": "no_testcase_link_in_publisher_archive"
+  },
+  "readiness": "not_ready",
+  "license_policy": "No redistribution permission inferred."
+}

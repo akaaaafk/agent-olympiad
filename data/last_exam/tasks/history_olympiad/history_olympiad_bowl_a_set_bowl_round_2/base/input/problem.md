@@ -1,5 +1,3 @@
-# A-Set-Bowl-Round-2
-
 [Q1] TheaccusedspyDavidReddingwashangedinwhat isnowthisstate. Leadersfromwhat isnowthisstatenegotiatedwithrepresentativesofGeorgeGermainbutfailedtoreachterms with Quebec governor Frederick Haldimand. This state celebrates Jonathan Stark'sdefeat of BritishforcesbeforeSaratogaonBenningtonBattleDay. In1791, thisstatebecamethe 14th state to enter the Union, ending its Republic. For ten points, name this stateforwhich Bernie Sanders has served as Senator.
 
 [Q2] This city was home to an early ecumenical [[ECK-yoo-MEN-ih-kull]] council whichruled that Gentiles were not required to keep Jewish laws. A religious leader in this citydroveout moneylendersandkickedovertablesinatemplehecallsa"houseofprayer."Thiscity is home totheChurchof theHolySepulcher [[SEH-pull-kuhr]], whichclaimstobethelocationof Jesus'stomb. Thelocationof theLastSupper, fortenpoints, whatisthisIsraelitecity where Jesus was crucified?

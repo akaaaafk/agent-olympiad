@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 1992
-
 # Odyssey of the Mind — 1992 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. AtlasDivisions I, II & IIIThe team’s problem is to design and build a balsa wood structure to balance and support as much weight as possible. The amount of balsa wood permitted to build the structure will increase for various levels of competition. This will be 10 grams at local and regional competitions, 14 grams at state, province and country finals, and 18 grams at Odyssey of the Mind World Finals. Time limit: 8 min.
 5. OmumentThe team’s problem is to create and perform a skit that includes an original monument. The monument may be dedicated to any person, place or thing the team wishes. During the performance the team must explain what the monument is and why it was developed. Time limit: 8 min. Cost limit: $75 USD.
 6. Scientific ClownsPrimaryThe team’s problem is to create clowns and perform a skit. In the skit the clowns will teach something about natural science (animals, plants, insects, etc.) and/or our physical world (gravity, water, heat, etc.). The clowns must present scientific facts during the performance. Time limit: 7 min. Cost limit: $35 USD.
+

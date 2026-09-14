@@ -32,7 +32,8 @@
   },
   "allowed_tools": [
     "query_rules",
-    "read_official_materials"
+    "read_official_materials",
+    "prepare_event_answer_sheet"
   ],
   "resources": {
     "internet": "forbidden",

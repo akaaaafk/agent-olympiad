@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 1990
-
 # Odyssey of the Mind — 1990 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Structures in HarmonyDivisions I, II & IIIThe team’s problem is to design and construct prefabricated structure parts made of balsa wood and glue. These must be combined to make a single structure that will balance and support weight. Teams must assemble their prefabricated structure parts into one complete structure at the competition site. Teams may use straight pins for assembly. An important part of this problem is not only to design and construct a good structure, but to assemble it within a 15-minute period. Time limit: 8 min.
 5. RecycleDivisions I & IIThe team’s problem is to develop a nonverbal communication system to guide blindfolded team members (collectors) through a course laden with trash and obstacles. One team member will be the dispatcher. Three blindfolded members will each pick up trash and take it to one of three transfer stations. The other blindfolded member, called the hauler, will collect the trash from the transfer stations and take it to the recycling center. Here, the hauler will attempt to empty the trash into the appropriate bins while blindfolded. The team must also place one container of “hazardous waste” in the hazardous waste site. Time limit: 8 min. Cost limit: $75 USD.
 6. Friends of Nature
+

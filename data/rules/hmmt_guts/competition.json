@@ -14,6 +14,9 @@
     "collaboration": "All members of the selected-season Guts roster work together on the current released set; only teammates may discuss the problems."
   },
   "execution": {
+    "optional_runtime_profiles": {
+      "guts_sets_v1": "ContestSession manifest opt-in: consecutive split questions, season-sized set release, irreversible explicit hand-in, deterministic scoring and pickup. The default static packet retains the limitations below."
+    },
     "official_minutes": 80,
     "required_selectors": [
       "season"
@@ -37,7 +40,10 @@
     "sweepstakes_scope": "guts_component_only"
   },
   "allowed_tools": [
-    "query_rules"
+    "query_rules",
+    "prepare_guts_set",
+    "submit_set",
+    "collect_next_set"
   ],
   "resources": {
     "internet": "forbidden",

@@ -152,6 +152,8 @@ class ContestRunConfig:
     rule_card: RuleCard | None = None
     # Explicit opt-in; workstation lease and rule-card defaults remain separate.
     computer_capacity: int | None = None
+    # Optional shared, problem-blind opening for controlled OTC comparisons.
+    precontest_brief: str | None = None
     # Derived from ``rule_card`` for ``coach == "card"``; never set by callers.
     otc_policy: OpenTablePolicy | None = field(
         default=None, init=False, repr=False, compare=False
@@ -167,6 +169,11 @@ class ContestRunConfig:
             object.__setattr__(self, "features", BASELINES[canonical])
         if self.features.coach not in {"none", "leader", "card"}:
             raise ValueError("unsupported coach mode; use the rule-card OTC implementation")
+        if self.precontest_brief is not None:
+            if self.features.coach != "card":
+                raise ValueError("A supplied Coach brief requires the OTC Coach module")
+            if not isinstance(self.precontest_brief, str) or not self.precontest_brief.strip():
+                raise ValueError("A supplied Coach brief must be nonempty text")
         if canonical == "otc" and self.features.coach != "card":
             raise ValueError("otc requires the rule-card Coach; use another baseline for ablations")
         if self.require_review is not None:
@@ -199,6 +206,14 @@ class ContestRunConfig:
                     self.rule_card, team_size=self.team_size, programming=True
                 ),
             )
+            if (self.precontest_brief is not None
+                    and len(self.precontest_brief) > (self.otc_policy.char_limit("work") or 2400)):
+                raise ValueError("The supplied Coach brief exceeds the opening-brief character limit")
+
+    @property
+    def current_turn_only(self) -> bool:
+        """The OTC control has no cross-round private, group or public state."""
+        return self.features.coach == "card" and not self.modules.memory
 
     @property
     def modules(self) -> ContestModules:

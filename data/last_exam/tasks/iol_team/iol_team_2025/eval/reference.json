@@ -4,7 +4,19 @@
   "has_gold_answer": true,
   "evaluator_id": "rubric_llm_v1",
   "evaluator_status": "ready",
-  "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-  "deliverable": "worked_answers",
-  "solution_file": "data/raw/iol/iol-2025-team-sol.en.pdf"
+  "solution_file": "data/raw/iol/iol-2025-team-sol.en.pdf",
+  "evaluation": {
+    "evaluator_id": "rubric_llm_v1",
+    "status": "ready",
+    "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+    "deliverable": "team_worked_answer",
+    "judge_assets": [
+      "data/raw/iol/iol-2025-team-sol.en.pdf"
+    ],
+    "limitations": "Uses the archived official solution as a judge-only reference.",
+    "scorecard_path": "data/rubrics/task_scorecards/iol_team.json",
+    "scorecard_key": "iol_team_2025"
+  },
+  "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+  "deliverable": "team_worked_answer"
 }

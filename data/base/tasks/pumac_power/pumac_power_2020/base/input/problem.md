@@ -1,5 +1,3 @@
-# PUMaC Power Round 2020
-
 PUMaC 2020* Power Round
 Spring 2021
 Rules and Reminders

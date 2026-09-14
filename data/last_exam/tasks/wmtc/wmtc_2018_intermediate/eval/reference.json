@@ -2,9 +2,23 @@
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/wmtc/benchmark.json#wmtc_2018_intermediate.gold_label",
   "has_gold_answer": true,
-  "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": "data/raw/wmtc/2018/2018_WMTC_Intermediate_Solutions.pdf"
+  "evaluator_id": "gold_answer_v1",
+  "evaluator_status": "ready",
+  "solution_file": "data/raw/wmtc/2018/2018_WMTC_Intermediate_Solutions.pdf",
+  "evaluation": {
+    "evaluator_id": "gold_answer_v1",
+    "status": "ready",
+    "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json",
+    "short_answer_source": "data/rubrics/wmtc_short_answers.json",
+    "judge_assets": [
+      "data/raw/wmtc/2018/2018_WMTC_Intermediate_Solutions.pdf"
+    ],
+    "deliverable": "numbered_answer_sheet",
+    "score_basis": "14 official Team Round answers x 5 points = 70",
+    "limitations": "Scores the archived 2018 Team Round only; live paper collection and proctoring are not reproduced.",
+    "scorecard_path": "data/rubrics/task_scorecards/wmtc.json",
+    "scorecard_key": "wmtc_2018_intermediate"
+  },
+  "rubric_path": "data/rubrics/numerical_sheet_reference_40_v1.json",
+  "deliverable": "numbered_answer_sheet"
 }

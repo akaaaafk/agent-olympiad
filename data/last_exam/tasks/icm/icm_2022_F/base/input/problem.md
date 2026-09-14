@@ -1,0 +1,82 @@
+| ©2022 by COMAP, Inc. | www.comap.com | www.mathmodels.org | info@comap.com | 
+2022 ICM 
+Problem F: All for One and One (Space) for All! 
+ 
+ 
+ 
+Background 
+Most of the world’s nations signed onto the United Nations’ Outer Space Treaty of 1967, 
+agreeing that “exploration and use of outer space, including the moon and other celestial bodies, 
+shall be carried out for the benefit and in the interests of all countries, irrespective of their degree 
+of economic or scientific development, and shall be the province of all mankind”
+[1]. The United 
+Nations (UN) aims to promote global peace and reduce inequities. As the foundation of 
+international space law, the Outer Space Treaty has provided the legal underpinnings for projects 
+that have promoted multinational access to space, such as the International Space Station and the 
+use of satellites to browse the Internet in even the most remote locations. But will this 
+international promise of equity hold as humankind looks to harvesting space-based resources? 
+ 
+Consider the possibility of asteroid mining. There are many open questions about asteroid 
+mining, such as whether it is technically feasible, whether the high initial cost is worth the 
+benefit of what we might find and bring back to Earth, and whether it should be private 
+companies, national governments, or international collaborations that fund these operations, do 
+the mining, and/or receive the financial gains. These questions have yet to be answered, but for 
+the purposes of this problem, let’s assume that asteroid mining is feasible at some point in the 
+future and could allow humans to bring valuable minerals back to Earth relatively safely and at a 
+cost that is financially worth the investment. 
+ 
+This problem asks your team to address the following overarching questions: What is global 
+equity, and how will asteroid mining impact it? What are the factors that influence that impact, 
+and how? And what policies could the United Nations propose to increase global equity in a 
+future with asteroid mining? 
+ 
+Requirements 
+Specifically, to address the above questions, your team should consider the following guiding 
+questions: 
+ 
+● What is global equity, and how might we measure it? In other words, develop a definition 
+of global equity. Use your definition to develop a model (e.g., tool, metric) that allows 
+you to measure global equity. Validate your model; this might involve historical and/or 
+regional analyses.
+
+| ©2022 by COMAP, Inc. | www.comap.com | www.mathmodels.org | info@comap.com | 
+● What might asteroid mining look like in the future, and how might asteroid mining impact 
+global equity? One of the challenges in answering this question is that we don’t know 
+what the asteroid mining sector will look like in the future; in other words, there are 
+unknown conditions including, but not limited to, who is doing the mining, how it is 
+funded, or who will get the benefits in terms of the minerals themselves or the profits 
+from the sales of those minerals. Present, describe, and justify one likely vision for the 
+future of asteroid mining, and determine the impact of mining on global equity with an 
+analysis that includes the use of your team’s global equity model. 
+ 
+● How do changes in the conditions that you selected in defining a vision for the future of 
+asteroid mining impact global equity? To do this, you may need to develop and 
+implement an analytical approach to explore how changes in the asteroid mining sector 
+could impact global equity differently. 
+ 
+● What policies could be implemented to encourage the asteroid mining sector to advance 
+in a way that promotes more global equity? Suppose the UN is considering updating its 
+Outer Space Treaty to specifically address asteroid mining and ensure its benefit to all 
+humankind. Use the results of your analyses to make justified policy recommendations so 
+that the asteroid mining might truly benefit all humankind. 
+ 
+Your PDF solution of no more than 25 total pages should include: 
+• One-page Summary Sheet. 
+• Table of Contents. 
+• Your complete solution. 
+• Reference List. 
+ 
+Note: The ICM Contest has a 25-page limit. All aspects of your submission count toward the 25-
+page limit (Summary Sheet, Table of Contents, Reference List, and any Appendices). You must 
+cite the sources for your ideas, images, and any other materials used in your report.
+ 
+References 
+[1] The Treaty on Principles Governing the Activities of States in the Exploration and Use of 
+Outer Space, including the Moon and other Celestial Bodies, of 27 January 1967, United Nations 
+RES 2222 (XXI). 
+Glossary 
+Asteroid mining: the process of extracting minerals from asteroids for human use. 
+ 
+Equity: the quality of being fair. Unlike equality which promotes providing identical inputs 
+(e.g., resources and opportunities), equity focuses on allocating those resources and opportunities 
+in a way that supports a goal of similar outcomes.

@@ -1,5 +1,3 @@
-# Kindergarten
-
 Hide 
  Kindergarten 
 

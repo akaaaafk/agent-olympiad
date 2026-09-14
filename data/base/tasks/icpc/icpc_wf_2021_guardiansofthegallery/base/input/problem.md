@@ -1,5 +1,3 @@
-# Guardians of the Gallery
-
 Hide 
  Guardians of the Gallery 
 

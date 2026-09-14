@@ -1,5 +1,3 @@
-# Mosaic Browsing
-
 Hide 
  Mosaic Browsing 
 

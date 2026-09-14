@@ -1,0 +1,13 @@
+/* Override some things for printing. */
+body { 
+  background: transparent; 
+  width: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+#nav, #story-text { display: none !important; }
+
+#content { border: none !important; }
+
+.page-break { page-break-before: always; }

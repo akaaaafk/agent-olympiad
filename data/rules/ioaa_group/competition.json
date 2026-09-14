@@ -23,7 +23,8 @@
   "allowed_tools": [
     "query_rules",
     "use_calculator",
-    "read_star_chart"
+    "read_star_chart",
+    "check_ioaa_observations"
   ],
   "resources": {
     "internet": "forbidden",

@@ -1,9 +1,7 @@
-# HMMT November 2008 — Guts Round
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
 
-[Page 1]
-1st HARVARD-MIT NOVEMBER TOURNAMENT, 8 NOVEMBER 2008 — GUTS ROUND
+           1st HARVARD-MIT NOVEMBER TOURNAMENT, 8 NOVEMBER 2008 — GUTS ROUND
 
 
  1. [5] Find the sum of all solutions for x:
@@ -17,6 +15,8 @@
 
  3. [5] What is the largest x such that x2 divides 24 · 35 · 46 · 57?
 
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
 
                1st HARVARD-MIT NOVEMBER TOURNAMENT, 8 NOVEMBER 2008 — GUTS ROUND
 
@@ -27,6 +27,8 @@
  6. [6] Sarah is deciding whether to visit Russia or Washington, DC for the holidays.  She makes her
     decision by rolling a regular 6-sided die.  If she gets a 1 or 2, she goes to DC. If she rolls a 3, 4, or 5,
     she goes to Russia. If she rolls a 6, she rolls again. What is the probability that she goes to DC?
+
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                1st HARVARD-MIT NOVEMBER TOURNAMENT, 8 NOVEMBER 2008 — GUTS ROUND
@@ -41,6 +43,7 @@
                                            2an −1   if an ≥12.
 
    Find a2008.
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                1st HARVARD-MIT NOVEMBER TOURNAMENT, 8 NOVEMBER 2008 — GUTS ROUND
@@ -60,8 +63,12 @@
 
                            w + x + y + 2z =   1.
 
-[Page 2]
-1st HARVARD-MIT NOVEMBER TOURNAMENT, 8 NOVEMBER 2008 — GUTS ROUND
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               1st HARVARD-MIT NOVEMBER TOURNAMENT, 8 NOVEMBER 2008 — GUTS ROUND
 
 13. [9] Find the number of distinct primes dividing 1 · 2 · 3 · · · 9 · 10.
 
@@ -78,6 +85,8 @@
     time, the cat jumps, going either two or three stairs up at each step (though if necessary, it will just
     walk the last step). How many diﬀerent ways can the cat go from the bottom to the top?
 
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
 
                1st HARVARD-MIT NOVEMBER TOURNAMENT, 8 NOVEMBER 2008 — GUTS ROUND
 
@@ -92,6 +101,8 @@
                                            (x + 1)6 · X xi
 
                                                           i=0
+
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                1st HARVARD-MIT NOVEMBER TOURNAMENT, 8 NOVEMBER 2008 — GUTS ROUND
@@ -108,8 +119,12 @@
     number), and call a number obese if it has at least four positive integer divisors (including 1 and the
     number). How many positive integers between 1 and 200 are overweight, but not obese?
 
-[Page 3]
-1st HARVARD-MIT NOVEMBER TOURNAMENT, 8 NOVEMBER 2008 — GUTS ROUND
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               1st HARVARD-MIT NOVEMBER TOURNAMENT, 8 NOVEMBER 2008 — GUTS ROUND
 
 22. [12] Sandra the Maverick has 5 pairs of shoes in a drawer, each pair a diﬀerent color. Every day for
     5 days, Sandra takes two shoes out and throws them out the window. If they are the same color, she
@@ -119,6 +134,7 @@
                                                    (x−4)2    y2                                           x2    y2
 23. [12] If x and y are real numbers such that    4  + 9 = 1, ﬁnd the largest possible value of  4 + 9 .
 24. [12] Let f(x) = 1−x.1   Let f k+1(x) = f(f k(x)), with f 1(x) = f(x). What is f 2008(2008)?
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                1st HARVARD-MIT NOVEMBER TOURNAMENT, 8 NOVEMBER 2008 — GUTS ROUND
@@ -135,6 +151,8 @@
 27. [13] ABCDE is a regular pentagon inscribed in a circle of radius 1. What is the area of the set of
     points inside the circle that are farther from A than they are from any other vertex?
 
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
 
                1st HARVARD-MIT NOVEMBER TOURNAMENT, 8 NOVEMBER 2008 — GUTS ROUND
 
@@ -148,8 +166,12 @@
   BD = DC, CE = 2EA, and 2AF = FB. Note that AD, BE, and CF pass through a single point M.
    What is the area of triangle EMC?
 
-[Page 4]
-1st HARVARD-MIT NOVEMBER TOURNAMENT, 8 NOVEMBER 2008 — GUTS ROUND
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               1st HARVARD-MIT NOVEMBER TOURNAMENT, 8 NOVEMBER 2008 — GUTS ROUND
 
 31. [15] Find the sum of all primes p for which there exists a prime q such that p2 + pq + q2 is a square.
 
@@ -165,6 +187,8 @@
 33. [15] The polynomial ax2 −bx + c has two distinct roots p and q, with a, b, and c positive integers and
     with 0 < p, q < 1. Find the minimum possible value of a.
 
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
 
                1st HARVARD-MIT NOVEMBER TOURNAMENT, 8 NOVEMBER 2008 — GUTS ROUND
 
@@ -177,3 +201,4 @@
 
 36. [25] How many numbers less than 1,000,000 are the product of exactly 2 distinct primes? You will
     receive ⌊25 −50 · | NA −1|⌋points, if you submit N and the correct answer is A.
+       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .

@@ -1,11 +1,9 @@
-# HMMT November 2012 — Guts Round
-
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
-
-[Page 1]
 HMMT November 2012
                             Saturday 10 November 2012
                            Guts Round
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
 
 
               HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
@@ -18,6 +16,9 @@ HMMT November 2012
       of sides, and 12 diﬀerent types of drinks, ﬁnd the number of meals Albert could get.
 
    3. [5]  Find the area of the region between two concentric circles that have radii 100 and 99.
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
 
 
               HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
@@ -41,6 +42,9 @@ HMMT November 2012
     ﬁnd
                      (13 + 3 · 12 + 3 · 1) + (23 + 3 · 22 + 3 · 2) + · · · + (993 + 3 · 992 + 3 · 99).
 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
 
               HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
 
@@ -52,8 +56,12 @@ HMMT November 2012
 
    9. [7]  How many sets consist of distinct composite numbers that add up to 23?
 
-[Page 2]
-HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+              HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
 
  10. [8]  Consider the sequence deﬁned by a0 = 0, a1 = 1, and an = 2013an−1 + 2012an−2 + n for n ≥2.
     Find the remainder when a2012 is divided by 2012.
@@ -63,6 +71,8 @@ HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
 
  12. [8]  Three circles of radius 1 are drawn, whose centers form the vertices of an equilateral triangle of
      side length 1. Find the area of the region common to at least two of the circles.
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
               HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
@@ -77,6 +87,8 @@ HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
  15. [9]  Find the area of the region in the xy-plane consisting of all points (a, b) such that the quadratic
      ax2 + 2(a + b −7)x + 2b = 0 has fewer than two real solutions for x.
 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
 
               HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
 
@@ -89,6 +101,8 @@ HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
 
  18. [10]  Let △ABC be a triangle with AC = 1 and ∠ABC obtuse. Let D and E be points on AC such
      that ∠DBC = ∠ABE = 90◦. If AD = DE = EC, ﬁnd AB + AC.
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
               HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
@@ -106,8 +120,13 @@ HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
    DC = 2BD. Point E lies on segment AD such that AE = 4ED. Point F lies on segment AC such
      that FC = 5AF. Find the area of △EFC.
 
-[Page 3]
-HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+              HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
 
 
  22. [12]   Alice generates an inﬁnite decimal by rolling a fair 6-sided die with the numbers 1, 2, 3, 5, 7,
@@ -121,6 +140,9 @@ HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
     among them such that each child gets at most one piece of candy and no two adjacent children both
      get a piece of candy.
 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
 
               HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
 
@@ -131,6 +153,9 @@ HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
       for n ≥2. Find x2012.
 
  27. [13]  Find the number of ordered triples of positive integers (a, b, c) satisfying a2−b2+ac−bc = 2012.
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
 
 
               HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
@@ -144,6 +169,9 @@ HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
 
  30. [15] A monkey forms a string of letters by repeatedly choosing one of the letters a, b, or c to type at
     random. Find the probability that he ﬁrst types the string aaa before he ﬁrst types the string abc.
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
 
 
               HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
@@ -159,8 +187,13 @@ HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
     Find the smallest angle larger than 45◦at which you could shoot the ball such that the ball bounces
      against walls exactly 2012 times before arriving at a vertex of the square.
 
-[Page 4]
-HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+
+              HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
 
  34. [20]  For a positive integer n, let τ(n) be the number of divisors of n. Determine   n=1 τ(n). Your                                                                          P2012     score will be max                            0,                         20                                                                          , where k is your answer and S is the actual answer.                            1 −|S−k|S             ½                    ¹                       ³                              ´3º¾
 
@@ -174,3 +207,5 @@ HMMT NOVEMBER 2012, 10 NOVEMBER 2012 — GUTS ROUND
       this problem, and let n be the number of submitted answers your answer is superior to. Your score
                n
       will be ⌈20 N ⌉.
+
+         . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .

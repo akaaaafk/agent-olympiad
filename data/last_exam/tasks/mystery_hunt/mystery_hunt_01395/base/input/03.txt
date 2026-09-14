@@ -1,0 +1,43 @@
+> new game
+> kick will
+> punch will
+> headbutt will
+> right
+> disarm linda
+> equip whip
+> whip linda
+> whip linda
+> right
+> punch roper
+> equip barrel
+> barrel roper
+> equip barrel
+> barrel roper
+> equip barrel
+> barrel roper
+> equip barrel
+> barrel roper
+> right
+> disarm linda
+> equip whip
+> whip linda
+> whip linda
+> whip linda
+> whip linda
+> whip linda
+> enter door
+> uppercut roper
+> roundhouse roper
+> kick boss
+> dodge roper
+> equip box
+> box roper
+> equip box
+> box roper
+> equip box
+> box roper
+> equip box
+> box roper
+> right
+> dodge will
+> equip ???????? (7)

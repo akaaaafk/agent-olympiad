@@ -1,0 +1,261 @@
+{
+  "operation": "source_verified_data_repair",
+  "timestamp_utc": "20260912T194901Z",
+  "plan": "data/rubrics/source_verified_repairs_20260912.json",
+  "status": "completed",
+  "before_records": 1762,
+  "packages": {
+    "n_tasks": 1761,
+    "n_competitions": 43,
+    "staged_assets": 770
+  },
+  "validation": {
+    "records": 1761,
+    "tracks": 43,
+    "scorecards": "matched",
+    "package_ids": "matched",
+    "input_assets": "hash_verified",
+    "iypt_years": "matched",
+    "hmmt_2024_perfect_score": 400.0
+  },
+  "after_records": 1761,
+  "changed_record_ids": [
+    "arml_national_team_2009",
+    "arml_national_team_2010",
+    "arml_national_team_2011",
+    "arml_national_team_2012",
+    "arml_national_team_2013",
+    "arml_national_team_2014",
+    "arml_national_team_2016",
+    "arml_national_team_2017",
+    "arml_national_team_2018",
+    "arml_national_team_2019",
+    "arml_national_team_2023",
+    "arml_power_fall_2018",
+    "eoes_EUSO_I_2004_TaskB",
+    "eoes_T2",
+    "eoes_TASK1",
+    "eoes_TEST1",
+    "eoes_tasksheet2",
+    "history_olympiad_bowl_history_bowl_round_7",
+    "history_olympiad_bowl_ihbb_winter_bowl_r1",
+    "history_olympiad_bowl_ihbb_winter_bowl_r2",
+    "history_olympiad_bowl_ihbb_winter_bowl_r3",
+    "history_olympiad_bowl_ihbb_winter_bowl_r4",
+    "history_olympiad_bowl_ihbb_winter_bowl_r5",
+    "history_olympiad_bowl_ihbb_winter_bowl_r6",
+    "history_olympiad_bowl_ihbb_winter_bowl_r7",
+    "history_olympiad_bowl_playoff_rd_1_history_bowl_2021_ihbb_asian_championships",
+    "history_olympiad_bowl_playoff_rd_2_history_bowl_2021_ihbb_asian_championships",
+    "history_olympiad_bowl_rd_1_history_bowl_2021_ihbb_asian_championships",
+    "history_olympiad_bowl_rd_2_history_bowl_2021_ihbb_asian_championships",
+    "history_olympiad_bowl_rd_3_history_bowl_2021_ihbb_asian_championships",
+    "history_olympiad_bowl_rd_4_history_bowl_2021_ihbb_asian_championships",
+    "history_olympiad_bowl_rd_5_history_bowl_2021_ihbb_asian_championships",
+    "hmmt_team_2013",
+    "hmmt_team_2014",
+    "mystery_hunt_00408",
+    "mystery_hunt_00409",
+    "mystery_hunt_01431",
+    "mystery_hunt_01432",
+    "mystery_hunt_01521",
+    "mystery_hunt_01523",
+    "pumac_power_2024",
+    "purple_comet_hs_2022",
+    "purple_comet_hs_2023",
+    "purple_comet_hs_2024",
+    "purple_comet_hs_2025"
+  ],
+  "source_inventory": {
+    "inspected_sources": 74,
+    "pdfs": 66,
+    "additional_official_solution_pages": 3,
+    "missing_requested_sources": []
+  },
+  "arml": {
+    "corrected_answers": 8,
+    "restored_grids": 2,
+    "full_answer_sheets": 11,
+    "per_sheet_parts": 10,
+    "per_sheet_max_score": 50,
+    "checks": [
+      {
+        "problem_id": "arml_national_team_2010",
+        "part": "2",
+        "correct_score": 5.0,
+        "previous_wrong_answer_rejected": true
+      },
+      {
+        "problem_id": "arml_national_team_2010",
+        "part": "10",
+        "correct_score": 5.0,
+        "previous_wrong_answer_rejected": true
+      },
+      {
+        "problem_id": "arml_national_team_2011",
+        "part": "10",
+        "correct_score": 5.0,
+        "previous_wrong_answer_rejected": true
+      },
+      {
+        "problem_id": "arml_national_team_2012",
+        "part": "10",
+        "correct_score": 5.0,
+        "previous_wrong_answer_rejected": true
+      },
+      {
+        "problem_id": "arml_national_team_2013",
+        "part": "10",
+        "correct_score": 5.0,
+        "previous_wrong_answer_rejected": true
+      },
+      {
+        "problem_id": "arml_national_team_2014",
+        "part": "10",
+        "correct_score": 5.0,
+        "previous_wrong_answer_rejected": true
+      },
+      {
+        "problem_id": "arml_national_team_2017",
+        "part": "3",
+        "correct_score": 5.0,
+        "previous_wrong_answer_rejected": true
+      },
+      {
+        "problem_id": "arml_national_team_2023",
+        "part": "10",
+        "correct_score": 5.0,
+        "previous_wrong_answer_rejected": true
+      },
+      {
+        "problem_id": "arml_national_team_2016",
+        "part": "6",
+        "correct_score": 5.0,
+        "previous_wrong_answer_rejected": false
+      },
+      {
+        "problem_id": "arml_national_team_2018",
+        "part": "10",
+        "correct_score": 5.0,
+        "previous_wrong_answer_rejected": false
+      }
+    ]
+  },
+  "history": {
+    "corrected_parts": 60,
+    "corrected_records": 15,
+    "source_page_anchors_verified": true
+  },
+  "pdf_texts": {
+    "reextracted_records": 13,
+    "remaining_corrupt_source_records": [
+      "mystery_hunt_00166",
+      "mystery_hunt_00179",
+      "mystery_hunt_00617",
+      "mystery_hunt_00652",
+      "odyssey_of_the_mind_2012_synopses"
+    ],
+    "limitation": "PDFs remain authoritative for diagrams and mathematical layout."
+  },
+  "mystery_hunt": [
+    {
+      "group": "set_match_2003",
+      "records": [
+        "mystery_hunt_00408",
+        "mystery_hunt_00409"
+      ],
+      "variants": [
+        "original",
+        "trained"
+      ],
+      "official_url": "https://puzzles.mit.edu/2003/www.acme-corp.com/solutions/set-match.html",
+      "local_solution": "data/raw/mystery_hunt/verified_solutions/2003_set_match.html",
+      "sha256": "f1f8164b6be6f7112d1d7c1d9f8fcb85ac1fe9c1d0bdea870bcfa53d446ac611",
+      "action": "retained_with_disambiguated_answer_targets"
+    },
+    {
+      "group": "the_baddest_man_2011",
+      "records": [
+        "mystery_hunt_01431",
+        "mystery_hunt_01432"
+      ],
+      "variants": [
+        "intermediate_instruction",
+        "post_interaction_final"
+      ],
+      "official_url": "https://puzzles.mit.edu/2011/puzzles/katamari_damacy/the_baddest_man/answer/",
+      "local_solution": "data/raw/mystery_hunt/verified_solutions/2011_the_baddest_man.html",
+      "sha256": "7b8888f08377fdac95e155bd562b505108237725bfa25be0e3d182b62c6a6d64",
+      "action": "retained_with_disambiguated_answer_targets"
+    },
+    {
+      "group": "execution_grounds_2011",
+      "records": [
+        "mystery_hunt_01521",
+        "mystery_hunt_01523"
+      ],
+      "variants": [
+        "answer_2_of_3",
+        "answer_3_of_3"
+      ],
+      "official_url": "https://puzzles.mit.edu/2011/puzzles/zelda/execution_grounds/answer/",
+      "local_solution": "data/raw/mystery_hunt/verified_solutions/2011_execution_grounds.html",
+      "sha256": "8d891eae8067fbb5e789765d1ede996f7694f1b67dc6382caa3f8cdaa6ee5aaf",
+      "action": "retained_with_disambiguated_answer_targets"
+    }
+  ],
+  "deduplication": {
+    "competition_id": "eoes",
+    "alias": "eoes_EUSO_I_2004_TaskB-1",
+    "canonical": "eoes_EUSO_I_2004_TaskB",
+    "sha256": "939faec2296e85126b096a7812a9ff6b6198ca437069f42a26aba54870b982fe"
+  },
+  "evaluation_status_counts": {
+    "ready_with_limitations": 179,
+    "not_ready": 782,
+    "ready": 640,
+    "remote_judge_ready": 158,
+    "sample_tests_ready": 2
+  },
+  "unresolved": {
+    "damaged_archived_sources": [
+      {
+        "problem_id": "mystery_hunt_00166",
+        "source_file": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/2001/2001_phase3_12_index.html/index.html",
+        "sha256": "e2a04bf97c5cd127a929458b9f93afa98de44bd594ea07354fff46fc7009212c",
+        "reason": "Replacement characters already occur in the archived source bytes. No lossless correction is supported by this local source."
+      },
+      {
+        "problem_id": "mystery_hunt_00179",
+        "source_file": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/2001/2001_phase4_03_index.html/index.html",
+        "sha256": "83d8a7c4462c250ef81ccf43e5af0b6e6a066ba25029ad47a058ec05bc438785",
+        "reason": "Replacement characters already occur in the archived source bytes. No lossless correction is supported by this local source."
+      },
+      {
+        "problem_id": "mystery_hunt_00617",
+        "source_file": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/2005/2005_setec_dined_with_a_droid/index.html",
+        "sha256": "d772606163ff09d281fdc14d923d652aa20fd492d26881fb181106d3c89bcebf",
+        "reason": "Replacement characters already occur in the archived source bytes. No lossless correction is supported by this local source."
+      },
+      {
+        "problem_id": "mystery_hunt_00652",
+        "source_file": "data/raw/external/MIT_Mystery_Hunt/puzzles/by_tsv/2005/2005_setec_king_philip/index.html",
+        "sha256": "5ae3074847a4d9ff3f1977ffae46f9df1c3295eb1e03acee87d233cd097933a6",
+        "reason": "Replacement characters already occur in the archived source bytes. No lossless correction is supported by this local source."
+      },
+      {
+        "problem_id": "odyssey_of_the_mind_2012_synopses",
+        "source_file": "data/raw/odyssey_of_the_mind/2012/long_term_synopses.md",
+        "sha256": "c33f95b77c562c579dd0611906e60b694c0e6f1d6dba9862adee07866f29a021",
+        "reason": "Replacement characters already occur in the archived source bytes. No lossless correction is supported by this local source."
+      }
+    ],
+    "missing_local_answer_keys": {
+      "purple_comet": 30,
+      "hmmt_team": 13
+    },
+    "split_and_license": "Unchanged: source PDFs cannot establish an experiment split or a verified redistribution grant."
+  },
+  "backup": "data/excluded/integrity_repair_20260912T194901Z",
+  "original_raw_files_modified": 0
+}

@@ -1,0 +1,25 @@
+{
+  "visibility": "hidden_until_grade",
+  "gold_pointer": "data/benchmarks/purple_comet/benchmark.json#purple_comet_hs_2022.gold_label",
+  "has_gold_answer": true,
+  "evaluator_id": "gold_answer_v1",
+  "evaluator_status": "ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": "gold_answer_v1",
+    "status": "ready",
+    "rubric_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+    "short_answer_source": "data/rubrics/purple_comet_short_answers.json",
+    "deliverable": "answer_sheet",
+    "limitations": "Official answer-key grading covers all questions in this archived paper. Original PDFs are required for mathematical layout; live contest timing and leaderboard tie-breaks are not reproduced.",
+    "scorecard_path": "data/rubrics/task_scorecards/purple_comet.json",
+    "scorecard_key": "purple_comet_hs_2022",
+    "answer_key_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+    "answer_key_record": "purple_comet_hs_2022",
+    "score_basis": "One point per correct answer in the complete archived paper; no timing or leaderboard tie-break simulation.",
+    "test_scope": "complete_archived_answer_sheet",
+    "question_count": 30
+  },
+  "rubric_path": "data/rubrics/purple_comet_verified_answer_key_20260912.json",
+  "deliverable": "answer_sheet"
+}

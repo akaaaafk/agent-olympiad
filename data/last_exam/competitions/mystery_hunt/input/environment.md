@@ -1,4 +1,4 @@
-# Environment — `mystery_hunt`
+# Environment
 
 ## Roster
 
@@ -15,9 +15,13 @@
 
 ## Allowed tools
 
-- query_rules
-- execute_code
-- web_search
+```json
+[
+  "query_rules",
+  "execute_code",
+  "web_search"
+]
+```
 
 ## Resources
 
@@ -59,3 +63,4 @@
   ]
 }
 ```
+

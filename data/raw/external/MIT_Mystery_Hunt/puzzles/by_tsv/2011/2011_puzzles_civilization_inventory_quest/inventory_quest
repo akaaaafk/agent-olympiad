@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>InventoryQuest</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=1000">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssreset/reset-min.css">
+<link rel="stylesheet" type="text/css" href="../../styles/global.css">
+<link rel="stylesheet" type="text/css" href="../styles/world.css">
+</head>
+
+<body class="tileback">
+<div id="centralcolumn">
+<div id="puzzletopbar">
+<div style="float:left;">
+<ul id="navbar">
+	<li><a href="../" title="Back to Civ">Back to Civ</a></li>
+	<li><a href="#" style="text-decoration:none;">Info ></a><ul>
+               <li><a href="../introduction.html" title="Introduction">Introduction</a></li>
+               <li><a href="../../contact/" title="Contact HQ">Contact HQ</a></li>
+	       <li><a href="../../events/" title="Events">Events</a></li>
+               <li><a href="../../answerboard/" title="Answer Board">Answer Board</a></li>
+	       <li><a href="../../achievements/" title="Achievements">Achievements</a></li>
+	       <li><a href="../../updates/" title="Updates">Updates</a></li>
+	   </ul>
+	</li>
+	<li><a href="answer/" title="View solution">View solution</a></li>
+</ul>
+</div>
+<div id="pointsinfo" style="float:right;">
+</div>
+<script type="text/javascript" src="../../assets/points.js"></script>
+</div>
+
+   <div id="puzzletitle"><em>Private Property</em><h1>InventoryQuest</h1></div>
+
+   <div id="puzzlecontent">
+      <div id="puzzle">
+
+
+<div><a href="assets/01.txt">1</a></div>
+<div><a href="assets/02.txt">2</a></div>
+<div><a href="assets/03.txt">3</a></div>
+<div><a href="assets/04.txt">4</a></div>
+<div><a href="assets/05.txt">5</a></div>
+<div><a href="assets/06.txt">6</a></div>
+<div><a href="assets/07.txt">7</a></div>
+<div><a href="assets/08.txt">8</a></div>
+<div><a href="assets/09.txt">9</a></div>
+<div><a href="assets/10.txt">10</a></div>
+<div><a href="assets/11.txt">11</a></div>
+<div><a href="assets/12.txt">12</a></div>
+<div><a href="assets/13.txt">13</a></div>
+<div><a href="assets/14.txt">14</a></div>
+<div><a href="assets/15.txt">15</a></div>
+<div><a href="assets/16.txt">16</a></div>
+<div><a href="assets/17.txt">17</a></div>
+<div><a href="assets/18.txt">18</a></div>
+<div>&gt; inv</div>
+
+
+</div>
+</div>
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

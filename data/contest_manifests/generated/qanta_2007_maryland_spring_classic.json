@@ -1,0 +1,13 @@
+{
+  "session_id": "qanta_2007_maryland_spring_classic",
+  "competition_id": "qanta",
+  "problem_ids": [
+    "qanta_train_55018",
+    "qanta_train_55218",
+    "qanta_train_55222"
+  ],
+  "description": "OTC contest-session manifest for qanta_2007_maryland_spring_classic (3 tasks)",
+  "split_parts": false,
+  "task_family": "short_answer",
+  "competition_description": "Academic quiz-bowl questions: identify the requested person, place, work, event, or concept from progressively specific clues."
+}

@@ -3,7 +3,11 @@
   "type": "official_scoring_protocol",
   "title": "Wharton Global High School Investment Competition evaluation protocol",
   "competition_id": "wharton_investment",
-  "deliverables": ["Investment Policy Statement", "Comprehensive Final Report", "Semifinal and Global Finale presentation if selected"],
+  "deliverables": [
+    "Investment Policy Statement",
+    "Comprehensive Final Report",
+    "Semifinal and Global Finale presentation if selected"
+  ],
   "criteria": [
     {
       "id": "investment_strategy_quality",

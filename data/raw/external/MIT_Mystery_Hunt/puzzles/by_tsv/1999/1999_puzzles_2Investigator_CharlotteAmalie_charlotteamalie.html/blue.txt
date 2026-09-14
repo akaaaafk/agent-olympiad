@@ -1,0 +1,107 @@
+***********Blue*********************
+
+
+(start) B: Are you ready to play the questions game?
+
+<...dialog puzzle?>
+B: Are you all set to go?]
+
+<...late?| ...for nothing?>
+B: Are you confused yet? 
+
+<.. soup yet?>
+B:Do you know how to make spicy chicken soup?
+
+<...cross the road?>
+B: You can talk the talk, but can you walk the walk?
+
+<... sniggering..>
+B: You okay?
+
+<...driveway...parkway..>
+B: Why all these questions?
+
+<.. better than me?>
+B: Why are you asking me this?
+
+<...game end?>
+B: Was there something you wanted to tell me?
+
+<...time is..>
+B: Why don't you hit the road?
+
+<...I'm solving..>
+B: Can you give me a specific example?
+
+<...gone far...>
+B: Do you think I have gone far enough to be on sprokets?
+
+<... but what if the [animal]....>
+B: What is your obsession with [animal]s?
+
+<... darkest fear?>
+B: Can you imagine your mother bringing a clean pair of underwear to you in the middle of 7ths grade?
+
+<... real life mother?>
+B: Would your mother have allowed that?
+
+<...childhood...>
+B: What were you raised in a barn?
+
+<Are you done...>
+B: Shall we change the topic of discussion?
+
+<what's the ... word? | ...solve this hunt?>
+B: And how do you want to pay for that sensitive information?
+
+<...corner of Vassar and Mass ave?>
+B: Do you really want sludge through drifts of sleet and snow?
+
+<...had your pockets...|...in my pockets?| ...in your pocket...>
+B: What is like pool without pockets?
+
+<knock, knock...|Anybody there?>
+B: Can we help you?
+
+
+
+<... ducking...>
+B: Whats the difference between a duck?
+
+<What is the difference between...?>
+B: Don't you get it?
+
+<Get what?>
+B: Could you get the door please?
+
+<What does... look like?>
+B: Doesn't she look just like her mother?
+
+<..naked..>
+B: Have you ever been to a nude beach?
+
+
+
+
+
+< .. I think so , Brain...>
+B: Can't you ask something not from a tv show?
+
+<...maiden name?>
+B: What is the maiden name of Richie, Dolores, and June's mother?
+
+<...family tree..>
+B: Do you friends usually answer your questions?
+
+<... jump off a bridge..>
+B: Do I get a bungy cord?
+
+<...bounce...>
+B: What is the name of Kim's pet dingo?
+
+<...cester?>
+B: What breakfast item does Steve always put Worcestershire sauce on?
+
+<What item?>
+B: Orange you glad I didn't say banana?
+

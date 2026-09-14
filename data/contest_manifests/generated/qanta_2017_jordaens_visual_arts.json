@@ -1,0 +1,11 @@
+{
+  "session_id": "qanta_2017_jordaens_visual_arts",
+  "competition_id": "qanta",
+  "problem_ids": [
+    "qanta_train_135767"
+  ],
+  "description": "OTC contest-session manifest for qanta_2017_jordaens_visual_arts (1 tasks)",
+  "split_parts": false,
+  "task_family": "short_answer",
+  "competition_description": "Academic quiz-bowl questions: identify the requested person, place, work, event, or concept from progressively specific clues."
+}

@@ -1,5 +1,3 @@
-# 2017-2018-IHBB-Alpha-Set-High-School-Bowl-Round-8
-
 [Q1] Early theories on this quantity were developed by Lazare Carnot [la--zarr car--noh], whose namesake cycle conserves this quantity. Ludwig Boltzmann’s tombstone has an equation for this quantity engraved on it. According to the second law of thermodynamics, this quantity always increases within isolated systems. For ten points, name this measure of disorder within a system.
 
 [Q2] This ruler sent Agricola to govern Britain and extend Roman rule into Caledonia. This ruler was campaigning in Jerusalem when he learned of Vitellius’ ambitions to become emperor, prompting this man to return to Rome and end the Year of the Four Emperors. For ten points, name this man who founded the Flavian dynasty after the death of Nero.

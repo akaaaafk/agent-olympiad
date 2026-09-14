@@ -142,12 +142,12 @@ class SingleActionTransportRecoveryTests(unittest.TestCase):
                     LLMToolCall("work", {"content": "discard-one", "problem_id": "q1"}, "bad-1"),
                     LLMToolCall("work", {"content": "discard-two", "problem_id": "q1"}, "bad-2")))
             return LLMResponse("", "mock", "mock", usage={"output_tokens": 7}, tool_calls=(
-                LLMToolCall("work", {"content": "chosen", "problem_id": "q1"}, "corrected"),))
+                LLMToolCall("work", {"content": "Problem q1: chosen", "problem_id": "q1"}, "corrected"),))
         result = run_contest(arml_manifest(), lambda *_: "",
                              ContestRunConfig("decentralized", 1, 1, max_api_calls=2),
                              action_request_fn=model)
         works = [e["payload"]["content"] for e in result["memory"]["events"] if e["kind"] == "work"]
-        self.assertEqual(works, ["chosen"])
+        self.assertEqual(works, ["Problem q1: chosen"])
         self.assertEqual(result["budget"]["api_calls_used"], 2)
         self.assertEqual(result["budget"]["tokens_used"], 12)
         self.assertIn("No action from that response executed", requests[1].user_prompt)

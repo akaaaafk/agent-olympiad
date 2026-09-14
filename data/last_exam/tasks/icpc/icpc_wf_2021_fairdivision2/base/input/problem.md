@@ -1,5 +1,3 @@
-# Fair Division
-
 Hide 
  Fair Division 
 

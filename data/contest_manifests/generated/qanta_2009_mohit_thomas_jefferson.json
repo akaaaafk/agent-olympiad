@@ -1,0 +1,12 @@
+{
+  "session_id": "qanta_2009_mohit_thomas_jefferson",
+  "competition_id": "qanta",
+  "problem_ids": [
+    "qanta_train_58420",
+    "qanta_train_58437"
+  ],
+  "description": "OTC contest-session manifest for qanta_2009_mohit_thomas_jefferson (2 tasks)",
+  "split_parts": false,
+  "task_family": "short_answer",
+  "competition_description": "Academic quiz-bowl questions: identify the requested person, place, work, event, or concept from progressively specific clues."
+}

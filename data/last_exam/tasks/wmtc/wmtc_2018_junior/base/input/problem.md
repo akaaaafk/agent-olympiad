@@ -1,5 +1,3 @@
-# WMTC 2018 Junior — Team Round
-
 Junior Level Team Round  
 English Version 
 Instruction:  This round has 14 questions (40 minutes). 

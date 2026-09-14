@@ -1,5 +1,3 @@
-# Tile Cutting
-
 Hide 
  Tile Cutting 
 

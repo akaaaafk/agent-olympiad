@@ -1,0 +1,56 @@
+{
+  "schema_version": "iiot-reference-archive/v1",
+  "problem_id": "iiot_2021_02",
+  "task_code": "morse",
+  "round": "international_final",
+  "archive_url": "https://iio.team/competition/tasks/2021",
+  "source_links": {
+    "Statement": "https://drive.google.com/file/d/1hjUGsw8eNpNGRPQhgcHtTHtuxHyRf16X/view?usp=drive_link",
+    "Solutions": "https://drive.google.com/file/d/1no86k5B63uW5HeftZYHraOYD-96QShPg/view?usp=drive_link",
+    "Test cases": "https://drive.google.com/drive/folders/1EYB4bltO-GaefaGs2qKDPrZDKDkUFpUo?usp=drive_link"
+  },
+  "reference": {
+    "path": "data/raw/iiot/2021/morse/references/morse.cpp",
+    "source_url": "https://drive.google.com/uc?id=1no86k5B63uW5HeftZYHraOYD-96QShPg&export=download",
+    "sha256": "1a94078b2757d16ad013a72843df231023de6c8041c13004ad248ae4a4bd458d",
+    "bytes": 1752,
+    "classification": "publisher_reference_source",
+    "execution_validation": "not_run"
+  },
+  "official_scoring": {
+    "total_points": 100,
+    "subtasks": [
+      {
+        "id": 1,
+        "points": 0
+      },
+      {
+        "id": 2,
+        "points": 15
+      },
+      {
+        "id": 3,
+        "points": 12
+      },
+      {
+        "id": 4,
+        "points": 18
+      },
+      {
+        "id": 5,
+        "points": 24
+      },
+      {
+        "id": 6,
+        "points": 31
+      }
+    ],
+    "mode": "all_cases_required_per_subtask",
+    "test_to_subtask_mapping": "not_archived"
+  },
+  "public_test_listing": {
+    "status": "no_testcase_link_in_publisher_archive"
+  },
+  "readiness": "not_ready",
+  "license_policy": "No redistribution permission inferred."
+}

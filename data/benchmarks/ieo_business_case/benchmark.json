@@ -20,20 +20,48 @@
     "evaluation": {
       "evaluator_id": "slide_deck_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/business_case_slides_50.json",
+      "rubric_path": "data/rubrics/ieo_business_case_slides_50_v1.json",
       "media": [
         "images",
         "pdf"
       ],
-      "deliverable": "slide_deck"
+      "deliverable": "slide_deck",
+      "limitations": "The PDF deck is scored; live delivery, jury questions, and team-speaking balance are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/ieo_business_case.json",
+      "scorecard_key": "ieo_business_case_2021"
     },
     "assets": [
       {
         "path": "data/raw/business_case/2021_case.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "dfb933d07774a3f329170f6d88b0561c2ae72a360098f573fe93a138ada9ea4d"
       }
-    ]
+    ],
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://ieo-official.org/prepare",
+      "source_file": "data/raw/business_case/2021_case.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/business_case/2021_case.pdf",
+          "role": "agent_visible",
+          "sha256": "dfb933d07774a3f329170f6d88b0561c2ae72a360098f573fe93a138ada9ea4d"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "ieo_business_case_2022",
@@ -56,20 +84,48 @@
     "evaluation": {
       "evaluator_id": "slide_deck_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/business_case_slides_50.json",
+      "rubric_path": "data/rubrics/ieo_business_case_slides_50_v1.json",
       "media": [
         "images",
         "pdf"
       ],
-      "deliverable": "slide_deck"
+      "deliverable": "slide_deck",
+      "limitations": "The PDF deck is scored; live delivery, jury questions, and team-speaking balance are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/ieo_business_case.json",
+      "scorecard_key": "ieo_business_case_2022"
     },
     "assets": [
       {
         "path": "data/raw/business_case/2022_case.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "35d3b903a08a29d7ca4f20bd7c4fd7f8775d9aa3d762d70af52b263d07863534"
       }
-    ]
+    ],
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://ieo-official.org/prepare",
+      "source_file": "data/raw/business_case/2022_case.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/business_case/2022_case.pdf",
+          "role": "agent_visible",
+          "sha256": "35d3b903a08a29d7ca4f20bd7c4fd7f8775d9aa3d762d70af52b263d07863534"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "ieo_business_case_2023",
@@ -92,20 +148,48 @@
     "evaluation": {
       "evaluator_id": "slide_deck_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/business_case_slides_50.json",
+      "rubric_path": "data/rubrics/ieo_business_case_slides_50_v1.json",
       "media": [
         "images",
         "pdf"
       ],
-      "deliverable": "slide_deck"
+      "deliverable": "slide_deck",
+      "limitations": "The PDF deck is scored; live delivery, jury questions, and team-speaking balance are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/ieo_business_case.json",
+      "scorecard_key": "ieo_business_case_2023"
     },
     "assets": [
       {
         "path": "data/raw/business_case/2023_case.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "baf2adbee97ca8aa99cc79436d006735e854a13415cc84d5794051324a524053"
       }
-    ]
+    ],
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://ieo-official.org/prepare",
+      "source_file": "data/raw/business_case/2023_case.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/business_case/2023_case.pdf",
+          "role": "agent_visible",
+          "sha256": "baf2adbee97ca8aa99cc79436d006735e854a13415cc84d5794051324a524053"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "ieo_business_case_2024",
@@ -128,20 +212,48 @@
     "evaluation": {
       "evaluator_id": "slide_deck_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/business_case_slides_50.json",
+      "rubric_path": "data/rubrics/ieo_business_case_slides_50_v1.json",
       "media": [
         "images",
         "pdf"
       ],
-      "deliverable": "slide_deck"
+      "deliverable": "slide_deck",
+      "limitations": "The PDF deck is scored; live delivery, jury questions, and team-speaking balance are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/ieo_business_case.json",
+      "scorecard_key": "ieo_business_case_2024"
     },
     "assets": [
       {
         "path": "data/raw/business_case/2024.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "7818247d166e4eedc2c2281fe1b2a39738ad69e87997f29e220284c586df070b"
       }
-    ]
+    ],
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://ieo-official.org/prepare",
+      "source_file": "data/raw/business_case/2024.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/business_case/2024.pdf",
+          "role": "agent_visible",
+          "sha256": "7818247d166e4eedc2c2281fe1b2a39738ad69e87997f29e220284c586df070b"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   },
   {
     "problem_id": "ieo_business_case_2025",
@@ -164,19 +276,47 @@
     "evaluation": {
       "evaluator_id": "slide_deck_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/business_case_slides_50.json",
+      "rubric_path": "data/rubrics/ieo_business_case_slides_50_v1.json",
       "media": [
         "images",
         "pdf"
       ],
-      "deliverable": "slide_deck"
+      "deliverable": "slide_deck",
+      "limitations": "The PDF deck is scored; live delivery, jury questions, and team-speaking balance are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/ieo_business_case.json",
+      "scorecard_key": "ieo_business_case_2025"
     },
     "assets": [
       {
         "path": "data/raw/business_case/2025.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "204135a448dfabfee63cfd4bab7200881461041172966ba6636d113332b82689"
       }
-    ]
+    ],
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://ieo-official.org/prepare",
+      "source_file": "data/raw/business_case/2025.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/business_case/2025.pdf",
+          "role": "agent_visible",
+          "sha256": "204135a448dfabfee63cfd4bab7200881461041172966ba6636d113332b82689"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    }
   }
 ]

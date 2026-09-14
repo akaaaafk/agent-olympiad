@@ -1,0 +1,110 @@
+{
+  "problem_id": "debatebench_Doxbridge 3 Round 4",
+  "visibility": "judge_only",
+  "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/Doxbridge 3 Round 4.txt",
+  "transcript_sha256": "779f5c99525924257d17a53c17c542f538dcd277bd736e693bf40b10e0de39f3",
+  "score_workbook": "data/raw/debatebench/scores.xlsx",
+  "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+  "score_column_order": [
+    "PM",
+    "DPM",
+    "LO",
+    "DLO",
+    "MG",
+    "GW",
+    "MO",
+    "OW"
+  ],
+  "score_matching_title": "Doxbridge 3 Round 4",
+  "filename_alias_applied": false,
+  "identity_status": "matched",
+  "selected_scores": {
+    "sheet": "Sheet1",
+    "excel_row": 34,
+    "cell_range": "A34:M34",
+    "tournament_title": "Doxbridge 3 Round 4",
+    "speaker_scores": {
+      "PM": 83.0,
+      "LO": 83.0,
+      "DPM": 84.0,
+      "DLO": 82.0,
+      "MG": 79.0,
+      "MO": 80.0,
+      "GW": 78.0,
+      "OW": 82.0
+    },
+    "house_order": [
+      "OG",
+      "OO",
+      "CO",
+      "CG"
+    ]
+  },
+  "candidates": [
+    {
+      "sheet": "Sheet1",
+      "excel_row": 34,
+      "cell_range": "A34:M34",
+      "tournament_title": "Doxbridge 3 Round 4",
+      "speaker_scores": {
+        "PM": 83.0,
+        "LO": 83.0,
+        "DPM": 84.0,
+        "DLO": 82.0,
+        "MG": 79.0,
+        "MO": 80.0,
+        "GW": 78.0,
+        "OW": 82.0
+      },
+      "house_order": [
+        "OG",
+        "OO",
+        "CO",
+        "CG"
+      ]
+    }
+  ],
+  "role_alignment": {
+    "valid_role_boundaries": true,
+    "opening_role_order": [
+      "PM",
+      "LO",
+      "DPM",
+      "DLO",
+      "MG",
+      "MO",
+      "GW",
+      "OW"
+    ],
+    "expected_speaking_order": [
+      "PM",
+      "LO",
+      "DPM",
+      "DLO",
+      "MG",
+      "MO",
+      "GW",
+      "OW"
+    ],
+    "observed_role_tags": [
+      "PM",
+      "/PM",
+      "LO",
+      "/LO",
+      "DPM",
+      "/DPM",
+      "DLO",
+      "/DLO",
+      "MG",
+      "/MG",
+      "MO",
+      "/MO",
+      "GW",
+      "/GW",
+      "OW",
+      "/OW"
+    ],
+    "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+  },
+  "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+}

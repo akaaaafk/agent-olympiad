@@ -1,0 +1,244 @@
+@font-face {
+  font-family: 'im_fell_double_pica_scregular';
+  src: url("css-4.eot");
+  src: url("css-4.eot?#iefix") format("embedded-opentype"), url("css-5.woff2") format("woff2"), url("css-6.woff") format("woff"), url("css-7.ttf") format("truetype"), url("css-8.svg#im_fell_double_pica_scregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 14, ../../sass/logbook.scss */
+body {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
+/* line 19, ../../sass/logbook.scss */
+.headerbutton {
+  padding: 0 12px 0 12px;
+  float: right;
+}
+
+/* line 24, ../../sass/logbook.scss */
+.sol {
+  height: 0px;
+  text-align: right;
+  margin-top: 35px;
+  margin-bottom: -35px;
+}
+
+/* line 31, ../../sass/logbook.scss */
+#paper {
+  z-index: 9;
+  width: 1000px;
+  padding: 37px 55px 72px;
+  position: relative;
+  border: 1px solid #333333;
+  background: #dbc397;
+  -webkit-background-size: 100% 30px;
+  -moz-background-size: 100% 30px;
+  -ms-background-size: 100% 30px;
+  background-size: 100% 30px;
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 4px 4px 4px 4px;
+  color: #282625;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  font: 16px "Crimson Text", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";
+}
+
+/* line 57, ../../sass/logbook.scss */
+#infowindow {
+  font: 16px "Crimson Text", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+}
+
+/* line 61, ../../sass/logbook.scss */
+.form-container {
+  top: 50px;
+}
+
+/* line 64, ../../sass/logbook.scss */
+h1, h2, h3 {
+  font-family: 'im_fell_double_pica_scregular', serif;
+}
+
+/* line 67, ../../sass/logbook.scss */
+.logheader {
+  font-size: larger;
+  font-weight: bold;
+}
+
+/* line 71, ../../sass/logbook.scss */
+.logentry {
+  padding-left: 25px;
+  padding-right: 25px;
+  border-bottom: 1px solid #282625;
+}
+
+/* line 76, ../../sass/logbook.scss */
+.logentry2 {
+  padding-left: 100px;
+  padding-right: 100px;
+  border-bottom: 1px solid #282625;
+}
+
+/* line 81, ../../sass/logbook.scss */
+ul {
+  list-style: square inside url("css-9.png");
+}
+
+/* line 84, ../../sass/logbook.scss */
+table.fancy {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border-collapse: collapse;
+  border-style: double;
+  border-color: #282625;
+  border-left: 0;
+  border-right: 0;
+}
+
+/* line 94, ../../sass/logbook.scss */
+table.fancy th, tr {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 98, ../../sass/logbook.scss */
+table.fancy td {
+  padding-left: 10px;
+  margin: 0;
+  border: 1px solid #282625;
+  border-right: 0;
+}
+
+/* line 104, ../../sass/logbook.scss */
+.tdleft {
+  padding: 0;
+  width: 10%;
+  border-left: 0;
+}
+
+/* line 109, ../../sass/logbook.scss */
+.caption {
+  font-style: italic;
+  border-top: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+/* line 116, ../../sass/logbook.scss */
+.puzzle-sans {
+  font-family: sans-serif;
+}
+
+/* line 120, ../../sass/logbook.scss */
+.puzzle {
+  display: table;
+  width: 100%;
+}
+
+/* line 125, ../../sass/logbook.scss */
+.puzzle-page-header {
+  margin-bottom: 20px;
+}
+
+/* line 129, ../../sass/logbook.scss */
+.answer {
+  margin-bottom: 30px;
+}
+
+/* line 133, ../../sass/logbook.scss */
+.puzzle li {
+  list-style-position: inside;
+  text-indent: -1.1em;
+}
+
+/* line 138, ../../sass/logbook.scss */
+.sol {
+  height: 0px;
+  text-align: right;
+  margin-top: 35px;
+  margin-bottom: -35px;
+}
+
+/* line 145, ../../sass/logbook.scss */
+.clickbaitbannerbox {
+  width: 320px;
+  margin-right: 20px;
+  margin-left: auto;
+  margin-bottom: 20px;
+  margin-top: -30px;
+}
+
+@media print {
+  /* line 154, ../../sass/logbook.scss */
+  .clickbaitbannerbox {
+    margin-top: 50px;
+  }
+}
+/* line 159, ../../sass/logbook.scss */
+.clickbaitbanner {
+  background-color: white;
+  padding: 10px;
+}
+
+/* line 163, ../../sass/logbook.scss */
+.attop {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+/* line 169, ../../sass/logbook.scss */
+.byline {
+  font-family: 'Times New Roman', serif;
+  font-style: italic;
+}
+
+/* line 173, ../../sass/logbook.scss */
+.clickbaitlink {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+
+/* line 177, ../../sass/logbook.scss */
+.clickbaitlink a {
+  text-decoration: none;
+}
+
+/* line 181, ../../sass/logbook.scss */
+.puzzle p, .puzzle li {
+  line-height: 1.4em;
+}
+
+/* line 185, ../../sass/logbook.scss */
+.solution-table td, .solution-table th {
+  padding-right: 15px;
+}
+
+@media print {
+  /* line 190, ../../sass/logbook.scss */
+  #puzzle-obj img {
+    display: none;
+  }
+
+  /* line 194, ../../sass/logbook.scss */
+  .no-page-break {
+    page-break-inside: avoid;
+  }
+
+  /* line 197, ../../sass/logbook.scss */
+  #paper {
+    width: 100%;
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+    border: 0px !important;
+  }
+}

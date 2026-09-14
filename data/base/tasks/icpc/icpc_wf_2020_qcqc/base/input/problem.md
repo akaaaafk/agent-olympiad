@@ -1,5 +1,3 @@
-# QC QC
-
 Hide 
  QC QC 
 

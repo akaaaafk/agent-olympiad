@@ -1,5 +1,3 @@
-# Group Competition 2025
-
 G: Solution and Marking Scheme
 Page 1 of 2
 (G01) Uncovering Galactic dark matter using a radio telescope [150 marks]

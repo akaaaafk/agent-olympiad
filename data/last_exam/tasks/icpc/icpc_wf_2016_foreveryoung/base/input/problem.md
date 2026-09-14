@@ -1,5 +1,3 @@
-# Forever Young
-
 Hide 
  Forever Young 
 

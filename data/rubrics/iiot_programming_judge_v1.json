@@ -7,19 +7,16 @@
   "evaluator_id": "programming_judge",
   "official_scoring_components": [
     {
-      "id": "accepted_submissions",
-      "name": "Accepted problems / tests",
-      "basis": "Official or local judge accept on required tests."
-    },
-    {
-      "id": "penalty",
-      "name": "Time / wrong-submission penalty",
-      "basis": "Contest penalty rules when the judge and packet support them."
+      "id": "official_subtasks",
+      "name": "Publisher-defined subtask scores",
+      "basis": "Use the selected problem statement and original test grouping. Most archived tasks require every case in a subtask; IIOT 2017 laser and neighborly use fractional per-case scoring aggregated by the subtask minimum."
     }
   ],
   "other_official_rules": [
     "Score from the programming judge, not from free-form text similarity.",
-    "Unauthorized tool use or judge bypass is a compliance failure."
+    "Unauthorized tool use or judge bypass is a compliance failure.",
+    "No ICPC-style time or wrong-submission penalty is inferred.",
+    "Missing outputs, checker, subtask assignments or an isolated execution configuration keep the record not_ready."
   ],
   "applicability": {
     "scope": "iiot programming tasks promoted in data/benchmarks/iiot/benchmark.json",

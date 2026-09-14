@@ -10,16 +10,381 @@
     "source_file": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/IOAI_ Practical round assignment.pdf",
     "solution_file": "data/raw/ioai/Team-Challenge/2024/Practical-round-best-solutions.zip",
     "total_points": 80,
-    "problem_description": "Practical Round\nThepracticalroundconsistsoftwotasks:thegenerationofanimageforasongcoverbytherenownedBulgariansingerMariaIlieva,andthegenerationofavideoreelforthesamesong.Youhavefourhourstocompletebothtasks.Theweightoftheimageandvideogenerationtasksinthefinalrankingwillbe40to60.\nForbothtasks,youareprovidedwithaBasicTierMidjourneyaccountviaDiscordcredentials.DiscordcanbeopenonlyonthescreensmonitoredbyPruefster.\nTask1:AI-Generatedcoverforasong:LovebyMariaIlieva\nOverview\nYourchallengeistocreateacoverimageforthesong\"Love\"byMariaIlieva.\nResourcesProvided:\n● Songaudio● SonglyricstranslatedtoEnglish● SomeiconicreferenceimagesfromthecityofBurgas● Sixcolorpalettestochoosefrom● Atransparentimageframecontainingtheartist’snameandthetitleofthesong\nDesignRequirements:\n1. Theme: Theprimarythemeshouldbelove,asreflectedinthesong.2. Background:IncorporateoneoftheprovidedimagesfromthecityofBurgas.Youmayinterpretthisartisticallyratherthanphotorealistically.3. ColorPalette: Chooseoneofthesixprovidedcolorpalettesandadheretoitinyourdesign.4. Objects:Useatleast7ofthefollowingobjectsinyourdesign:○ sea,violin,dice,parasol,ladybug,orchid,seashell,dove,rose,loveletter,sandcastle,chocolates,candle,puzzlepiece,playingcard,chesspiece,moon,locket,pearl,feather, anchor, clock,book,butterfly, mask,piano,painting,mirror,pearl,musicalnote/sheet,pomegranate,Pomeraniandog,cupofcoffee,camera,\n\noldTV, hourglass,boat,stamp,rainbow, medallion,musicfestival,statue,guitar,vinyl,dandelion5. Finalproduct:Theproducedimageshouldbeatleast1024x1024pixels(butlikelymore)anditshouldbeplacedinsidethetransparentframe.\nTechnicalSpecifications:\n● YoucanuseanyfreeAI-basedtoolsoranyfreeimageeditingtools.● Weallowanyfreenon-AItoolsforimageediting.● Weallowentirelynon-AI-basedsolutions.\nDeliverables:\n1. Thefinalproduct:coverimagewithframe.2. AlistofAItoolsusedandhowtheywereused.3. Alistofnon-AItoolsandhowtheywereused.4. Adescriptionofyourpromptingstrategies.\nEvaluationCriteria(Totalpossiblescore:40points):Yoursubmissionwillbejudgedbasedonthefollowingcriteria,eachscoredonascaleof1-5:\n1. VisualImpactandClarity(1-5points)a. Lacksvisualappeal,unclearfocalpoint,blurryimage,noreadabilityatsmallsizes:1pointb. Moderatelystriking,identifiablefocalpoint:3pointsc. Highlyimpactful,clearandcompellingfocalpoint, clearreadabilityatvarioussizes:5points2. ThematicRelevance(1-5points)a. MinimalconnectiontolovethemeorBurgas:1pointb. Clearrepresentationoflove,someBurgaselements:3pointsc. Strong,creativerepresentationoflove,seamlesslyincorporatingBurgaselementsEvaluationwillfocusonhowwelltheimagerepresentsthesong'sthemeofloveandincorporateselementsfromBurgas:5points3. CompositionandBalance(1-5points)a. Clutteredorunbalancedcomposition:1pointb. Adequatearrangementofelements:3pointsc. Harmonious,well-balancedcompositionwitheffectiveuseofspaceJudgeswillassessthearrangementofvisualelementsanduseofspacewithintheimage.4. PredefinedObjectInclusion(Upto7points)\n\na. 1pointforeachofthefirstfiveobjectsincludedb. 0.25pointsforeachadditionalobjectbeyondthefirstfive5. ColorPaletteAdherence(1-5points)a. Minimaluseofthechosenpalette:1pointb. Consistentuseofthepalette:3pointsc. CreativeandeffectiveuseofthepalettethatenhancestheoveralldesignThiscriterionevaluateshowwellandcreativelythechosencolorpaletteisutilized:5points6. OriginalityandCreativity(1-5points)a. Clichédorderivativedesign:1pointb. Someuniqueelementsorinterpretations:3pointsc. HighlyinnovativeanddistinctiveapproachJudgeswilllookforuniqueinterpretationsandavoidanceofgenreclichés:: 5points7. EffectiveUseofAITools(1-5points)a. BasicuseofAItoolswithlittlerefinement:1pointb. CompetentuseofAItoolswithsomecreativeanddescriptiveprompting:3pointsc. SophisticateduseofmultipleAItoolswithdifferentstrengthsandweaknesses,demonstratingmasteryinpromptingandimagegeneration.:5points8. Delivery(3points)a. Producedimageisatleast1024x1024pixels,appropriatelysizedandplacedintheprovidedframe.\nTask2:AI-GeneratedMusicVideoChallenge:LovebyMariaIlieva\nOverview\nYourteam'schallengeistocreatea47-secondAI-generatedmusicvideoforasegmentofthesong“Love”byMariaIlievausingNeuralFrames.\nProvidedResources:\n● A47-second-longsongsegment● AvideoofthesongsegmentwithlyricsinEnglish(forcontext)● 5imagesofMariaIlieva● ThefullsonglyricsinBulgarianandEnglish(forcontext)\nVideoRequirements:\n\n● IncludeastylizedportrayalofMariaIlievainthevideo.● Maintainaconsistentvisualstylethroughoutthevideo.● Incorporateatleast5ofthefollowingobjects:○ sea,violin,dice,parasol,ladybug,orchid,seashell,dove,rose,loveletter,sandcastle,chocolates,candle,puzzlepiece,playingcard,chesspiece,moon,locket,pearl,feather, anchor, clock,book,butterfly, mask,piano,painting,mirror,pearl,musicalnote/sheet,pomegranate,Pomeraniandog,cupofcoffee,camera,oldTV, hourglass,boat,stamp,rainbow, medallion,musicfestival,statue,guitar,vinyl,dandelion● Synchronizevisualswiththemusic\nTechnicalSpecifications:\n● Youhavecreditstotrainupto3custommodelsonNeuralframes.comduringthecompetitionandcanuseanyimagesofMariaIlievafromthetheweb● UnlimitedrenderingtimeonNeuralFramesinonetabatatime● WestronglysuggestavoidingXL-sizemodelsduetolongerrenderingtimes● ThefinalvideomustbeproducedandrenderedentirelywithinNeuralFramesnofurthervideoeditingisallowed● OtherfreeAItoolsandLLMs, aswellastheprovidedMidjourneyaccount,maybeusedforseedingconceptsandassets,promptengineering,orworkflowenhancement\nDeliverables:\n1. Thecompleted47-secondvideodownloadedfromNeuralFrameswithoutupscaling.2. Adescriptionofyourchosenvisualstyleandwhyyouchosethisspecificstyle.3. Alistoftheobjectsfromthelistwhichyouincluded.4. Alistofalladditionaltoolsandhowtheywereused.5. Screenshot(s)ofyourfinalNeuralFramestimeline\nEvaluationCriteria(Totalpossiblescore:40points):Yoursubmissionwillbejudgedbasedonthefollowingcriteria,eachscoredonascaleof1-5unlessotherwisenoted:\n1. ArtistLikeness(1-5points)a. Artistisunrecognizableorpoorlyrepresented:1pointb. Artistissomewhatrecognizablebutlacksartisticflair:3pointsc. Artistishighlyrecognizableandartisticallyrepresented:5points2. PredefinedObjectInclusion(Upto7points)a. 1pointforeachofthefirstfiveobjectsincluded\n\nb. 0.25pointsforeachadditionalobjectbeyondthefirstfive3. HomogeneousArtStyle(1-5points)a. Inconsistentartstylethroughoutthevideo:1pointb. Mostlyconsistentartstylewithsomevariations:3pointsc. Fullyconsistentartstylematchingthefirstimageoftheartist:5points4. MusicSynchronization(1-5points)a. Poortimingoftransitionsandmotion:1pointb. Adequatesynchronizationofsomeelements:3pointsc. Excellenttimingandsynchronizationthroughout:5points5. GenerationAccuracy(1-5points)a. Frequentartifacts(e.g.,multiplebodyparts,blurryimage):1pointb. Somenoticeableartifactsbutgenerallyaccurate:3pointsc. AbsenceofcommonAIgenerationartifacts,sharpandclearpicture:5points6. PromptingStrategies(1-5points)(basedonthedescribedstrategy)a. Basicpromptswithlittlecreativity:1pointb. Effectiveuseofprompts,Promptsaredetailedandwell-structured:3pointsc. Highlyeffective,detailedandcreativeuseofpromptsthroughout:5points7. VideoDuration(1-3points)a. Videoshorterthan37seconds:1pointb. Videoshorterthan47seconds:2pointsc. Full47-secondvideoachieved:3points8. EffectiveUseofNeuralFrames(1-5points)a. Minimaluseofdifferentmotions,transitions,andeffects:1pointb. Adequatevarietyofmotions,transitions,andeffects:3pointsc. Diverseandcreativeuseofmotions,transitions,andeffects:5points\nImportantNotes:\n● TrainingaNeuralFramesmodeltakes15to20minutesandrequiresstartingafreshproject.Pleaseconsiderthislimitationinyourstrategy.● Effectivetimemanagementiscrucialtocompleteallaspectsofthechallenge.\nEthicalconsiderations:\nTheuseofthesongandimagesofMariaIlievainthistaskarefullyendorsedbythesinger. ThisshouldalwaysbethecasewhenusingcopyrightedmaterialsandwhentraininggenerativeAImodelsonthelikenessofarealperson.Mariaisexcitedtoseetheproductofyourwork.\nGoodluck!\n\n--- Lyrics / brief ---\nEnglish\n\nMaria Ilieva - Love \n\nlyrics:\n\n\nVERSE\n…\nI will be yours till the end\n\nCHORUS\n\nIn this world - we both share\nAll that we have \nis just a moment - perfect and rare\nI am within you, you are within me\nI believe now - believe as I do\nLove is our vow\nFate has brought us somehow\n\n\nБългарски\n\nтекст:\n\nКУПЛЕТ\n\n…\nтвоя че съм, докрай.\n\nПРИПЕВ\n\nВъв този свят - споделен\nвсичко, което имаме,\nе само миг - съвършен, \nаз съм във теб и ти си във мен. \nВярвам сега, вярвай и ти:\nна любовта, \nс теб е съдба\n…\n",
+    "problem_description": "--- Source PDF page 1 ---\n\nPractical Round\n\nThe practical round consists of two tasks: the generation of an image for a song cover by the\nrenowned Bulgarian singer Maria Ilieva, and the generation of a video reel for the same song.\nYou have four hours to complete both tasks. The weight of the image and video generation tasks\nin the final ranking will be 40 to 60.\n\nFor both tasks, you are provided with a Basic Tier Midjourney account via Discord credentials.\nDiscord can be open only on the screens monitored by Pruefster.\n\n\nTask 1: AI-Generated cover for a song: Love by Maria Ilieva\n\nOverview\n\nYour challenge is to create a cover image for the song \"Love\" by Maria Ilieva.\n\nResources Provided:\n\n  ●  Song audio\n  ●  Song lyrics translated to English\n  ●  Some iconic reference images from the city of Burgas\n  ●  Six color palettes to choose from\n  ● A transparent image frame containing the artist’s name and the title of the song\n\nDesign Requirements:\n\n    1. Theme: The primary theme should be love, as reflected in the song.\n    2. Background: Incorporate one of the provided images from the city of Burgas. You may\n        interpret this artistically rather than photorealistically.\n    3.  Color Palette: Choose one of the six provided color palettes and adhere to it in your\n       design.\n    4.  Objects: Use at least 7 of the following objects in your design:\n       ○  sea, violin, dice, parasol, ladybug, orchid, seashell, dove, rose, love letter,\n               sandcastle, chocolates, candle, puzzle piece, playing card, chess piece, moon,\n                locket, pearl, feather, anchor, clock, book, butterfly, mask, piano, painting, mirror,\n                pearl, musical note/sheet, pomegranate, Pomeranian dog, cup of coffee, camera,\n\n--- Source PDF page 2 ---\n\nold TV, hourglass, boat, stamp, rainbow, medallion, music festival, statue, guitar,\n                vinyl, dandelion\n    5.  Final product: The produced image should be at least 1024x1024 pixels (but likely\n      more) and it should be placed inside the transparent frame.\n\nTechnical Specifications:\n\n  ●  You can use any free AI-based tools or any free image editing tools.\n  ● We allow any free non-AI tools for image editing.\n  ● We allow entirely non-AI-based solutions.\n\nDeliverables:\n\n    1. The final product: cover image with frame.\n    2. A list of AI tools used and how they were used.\n    3. A list of non-AI tools and how they were used.\n    4. A description of your prompting strategies.\n\nEvaluation Criteria (Total possible score: 40 points):\nYour submission will be judged based on the following criteria, each scored on a scale of 1-5:\n\n    1.  Visual Impact and Clarity (1-5 points)\n             a.  Lacks visual appeal, unclear focal point, blurry image, no readability at small\n                sizes: 1 point\n            b.  Moderately striking, identifiable focal point: 3 points\n             c.  Highly impactful, clear and compelling focal point , clear readability at various\n                sizes: 5 points\n    2. Thematic Relevance (1-5 points)\n             a.  Minimal connection to love theme or Burgas: 1 point\n            b.  Clear representation of love, some Burgas elements: 3 points\n             c.  Strong, creative representation of love, seamlessly incorporating Burgas elements\n              Evaluation will focus on how well the image represents the song's theme of love\n            and incorporates elements from Burgas: 5 points\n    3.  Composition and Balance (1-5 points)\n             a.  Cluttered or unbalanced composition: 1 point\n            b.  Adequate arrangement of elements: 3 points\n             c.  Harmonious, well-balanced composition with effective use of space Judges will\n               assess the arrangement of visual elements and use of space within the image.\n    4.  Predefined Object Inclusion (Up to 7 points)\n\n--- Source PDF page 3 ---\n\na.  1 point for each of the first five objects included\n            b.  0.25 points for each additional object beyond the first five\n    5.  Color Palette Adherence (1-5 points)\n             a.  Minimal use of the chosen palette: 1 point\n            b.  Consistent use of the palette: 3 points\n             c.  Creative and effective use of the palette that enhances the overall design This\n                criterion evaluates how well and creatively the chosen color palette is utilized: 5\n               points\n    6.  Originality and Creativity (1-5 points)\n             a.  Clichéd or derivative design: 1 point\n            b. Some unique elements or interpretations: 3 points\n             c.  Highly innovative and distinctive approach Judges will look for unique\n                interpretations and avoidance of genre clichés: : 5 points\n    7.  Effective Use of AI Tools (1-5 points)\n             a.  Basic use of AI tools with little refinement: 1 point\n            b.  Competent use of AI tools with some creative and descriptive prompting: 3 points\n             c.  Sophisticated use of multiple AI tools with different strengths and weaknesses,\n              demonstrating mastery in prompting and image generation.: 5 points\n    8.  Delivery (3 points)\n             a.  Produced image is at least 1024x1024 pixels, appropriately sized and placed in\n               the provided frame.\n\n\n\nTask 2: AI-Generated Music Video Challenge: Love by Maria Ilieva\n\nOverview\n\nYour team's challenge is to create a 47-second AI-generated music video for a segment of the\nsong “Love” by Maria Ilieva using Neural Frames.\n\nProvided Resources:\n\n  ● A 47-second-long song segment\n  ● A video of the song segment with lyrics in English (for context)\n  ●  5 images of Maria Ilieva\n  ●  The full song lyrics in Bulgarian and English (for context)\n\nVideo Requirements:\n\n--- Source PDF page 4 ---\n\n●  Include a stylized portrayal of Maria Ilieva in the video.\n  ●  Maintain a consistent visual style throughout the video.\n  ●  Incorporate at least 5 of the following objects:\n       ○  sea, violin, dice, parasol, ladybug, orchid, seashell, dove, rose, love letter,\n               sandcastle, chocolates, candle, puzzle piece, playing card, chess piece, moon,\n                locket, pearl, feather, anchor, clock, book, butterfly, mask, piano, painting, mirror,\n                pearl, musical note/sheet, pomegranate, Pomeranian dog, cup of coffee, camera,\n              old TV, hourglass, boat, stamp, rainbow, medallion, music festival, statue, guitar,\n                vinyl, dandelion\n  ●  Synchronize visuals with the music\n\nTechnical Specifications:\n\n  ●  You have credits to train up to 3 custom models on Neuralframes.com during the\n       competition and can use any images of Maria Ilieva from the the web\n  ●  Unlimited rendering time on Neural Frames in one tab at a time\n  ● We strongly suggest avoiding XL-size models due to longer rendering times\n  ●  The final video must be produced and rendered entirely within Neural Frames no further\n       video editing is allowed\n  ●  Other free AI tools and LLMs , as well as the provided Midjourney account, may be\n       used for seeding concepts and assets, prompt engineering, or workflow enhancement\n\nDeliverables:\n\n    1. The completed 47-second video downloaded from Neural Frames without upscaling.\n    2. A description of your chosen visual style and why you chose this specific style.\n    3. A list of the objects from the list which you included.\n    4. A list of all additional tools and how they were used.\n    5.  Screenshot(s) of your final Neural Frames timeline\n\nEvaluation Criteria (Total possible score: 40 points): Your submission will be judged based\non the following criteria, each scored on a scale of 1-5 unless otherwise noted:\n\n    1.  Artist Likeness (1-5 points)\n             a.  Artist is unrecognizable or poorly represented: 1 point\n            b.  Artist is somewhat recognizable but lacks artistic flair: 3 points\n             c.  Artist is highly recognizable and artistically represented: 5 points\n    2.  Predefined Object Inclusion (Up to 7 points)\n             a.  1 point for each of the first five objects included\n\n--- Source PDF page 5 ---\n\nb.  0.25 points for each additional object beyond the first five\n    3. Homogeneous Art Style (1-5 points)\n             a.  Inconsistent art style throughout the video: 1 point\n            b.  Mostly consistent art style with some variations: 3 points\n             c.  Fully consistent art style matching the first image of the artist: 5 points\n    4. Music Synchronization (1-5 points)\n             a.  Poor timing of transitions and motion: 1 point\n            b.  Adequate synchronization of some elements: 3 points\n             c.  Excellent timing and synchronization throughout: 5 points\n    5.  Generation Accuracy (1-5 points)\n             a.  Frequent artifacts (e.g., multiple body parts, blurry image): 1 point\n            b. Some noticeable artifacts but generally accurate: 3 points\n             c.  Absence of common AI generation artifacts, sharp and clear picture: 5 points\n    6. Prompting Strategies (1-5 points) (based on the described strategy)\n             a.  Basic prompts with little creativity: 1 point\n            b.  Effective use of prompts, Prompts are detailed and well-structured: 3 points\n             c.  Highly effective, detailed and creative use of prompts throughout: 5 points\n    7.  Video Duration (1-3 points)\n             a.  Video shorter than 37 seconds: 1 point\n            b.  Video shorter than 47 seconds: 2 points\n             c.  Full 47-second video achieved: 3 points\n    8.  Effective Use of Neural Frames (1-5 points)\n             a.  Minimal use of different motions, transitions, and effects: 1 point\n            b.  Adequate variety of motions, transitions, and effects: 3 points\n             c.  Diverse and creative use of motions, transitions, and effects: 5 points\n\nImportant Notes:\n\n  ●  Training a Neural Frames model takes 15 to 20 minutes and requires starting a fresh\n        project. Please consider this limitation in your strategy.\n  ●  Effective time management is crucial to complete all aspects of the challenge.\n\nEthical considerations:\n\nThe use of the song and images of Maria Ilieva in this task are fully endorsed by the singer. This\nshould always be the case when using copyrighted materials and when training generative AI\nmodels on the likeness of a real person. Maria is excited to see the product of your work.\n\n                        Good luck!\n\n--- Lyrics / brief ---\nEnglish\n\nMaria Ilieva - Love \n\nlyrics:\n\n\nVERSE\n…\nI will be yours till the end\n\nCHORUS\n\nIn this world - we both share\nAll that we have \nis just a moment - perfect and rare\nI am within you, you are within me\nI believe now - believe as I do\nLove is our vow\nFate has brought us somehow\n\n\nБългарски\n\nтекст:\n\nКУПЛЕТ\n\n…\nтвоя че съм, докрай.\n\nПРИПЕВ\n\nВъв този свят - споделен\nвсичко, което имаме,\nе само миг - съвършен, \nаз съм във теб и ти си във мен. \nВярвам сега, вярвай и ти:\nна любовта, \nс теб е съдба\n…\n",
     "gold_label": {
       "expected_answer": null,
       "grading_rubric": "Jury / rubric for generative deliverables (image cover + video). Official Practical Round scoring; best solutions published as ZIP.",
       "human_baseline": null
     },
-    "status": "collected",
+    "status": "partial",
     "title": "Practical Round — Album cover & music video for Maria Ilieva 'Love'",
     "eval_unit": "session",
-    "is_multi_agent": true
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "competition_id": "ioai_team",
+    "assets": [
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/1255-705-planetarium-burgas.jpg",
+        "mime_type": "image/jpeg",
+        "role": "agent_visible",
+        "sha256": "6ab9f68ed6b2dd4ce918c04b5f391a09d8c2affea36d39aa79efcf9d25bae5a1"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/36956fa95dea393ddcac08685515bc21.jpg",
+        "mime_type": "image/jpeg",
+        "role": "agent_visible",
+        "sha256": "35aa50e37601c1d5667a2197267c47e0c589698464030dde62989c09b5258828"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/5e55bdda85ff92c49bd1809cb6ad1854.jpg",
+        "mime_type": "image/jpeg",
+        "role": "agent_visible",
+        "sha256": "c65866c269c49c3c402bc4b0be458d3b651e5a677469908c66e0bc4eae8f1bcd"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/IMG_20220813_064219.jpg",
+        "mime_type": "image/jpeg",
+        "role": "agent_visible",
+        "sha256": "4177a53869dc494f7418196c2a0287c1f1ac7824e9db2281a8adc95f1b0aaa4f"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/IMG_4997.JPG",
+        "mime_type": "image/jpeg",
+        "role": "agent_visible",
+        "sha256": "9175ac1ae57354cc59a893c8b6a0ecff757473b7fc7a014bf421a4cd35f1ab23"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/IMG_5031.JPG",
+        "mime_type": "image/jpeg",
+        "role": "agent_visible",
+        "sha256": "759e4e56ae50a18f33ac701d5d380cc1b80988fdb00cb5e5955cfbf185b6f97e"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/burgas-image-website.jpg",
+        "mime_type": "image/jpeg",
+        "role": "agent_visible",
+        "sha256": "9755452a566b00d99221a4df22fb39b8516e5917402c43e6f3f4065b0cd0dfbf"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/c3a74ae86535188b917e615d751cbfb9.png",
+        "mime_type": "image/png",
+        "role": "agent_visible",
+        "sha256": "ac3665237d0a159e8e36cb505a69215db498b6fc71c2019d0beeaff5111b9f3b"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/dad90206878c34c57db041f7e73b6314.jpg",
+        "mime_type": "image/jpeg",
+        "role": "agent_visible",
+        "sha256": "7624e46a1220b907e052ac01c69808980a96777c027e88c0152d2cfc1e688aaf"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Color Palettes/IOAI_palette_beach.png",
+        "mime_type": "image/png",
+        "role": "agent_visible",
+        "sha256": "8333311aecd0d2b081b118d966478fc67143517623228524223567588184bed5"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Color Palettes/IOAI_palette_festival.png",
+        "mime_type": "image/png",
+        "role": "agent_visible",
+        "sha256": "d15eefbff1de115771245aac5b6b8739b3b55e645e844e6ea89d90b3b825ade7"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Color Palettes/IOAI_palette_history.png",
+        "mime_type": "image/png",
+        "role": "agent_visible",
+        "sha256": "603729f12e3d2b010b2b270ea23a6170bb9c827ee45bda67a3b0b83383c5bca8"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Color Palettes/IOAI_palette_port.png",
+        "mime_type": "image/png",
+        "role": "agent_visible",
+        "sha256": "0a63d50f647f9545a81054cb70099277ae959f5d3add28ec389dacb074ec76d9"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Color Palettes/IOAI_palette_romance.png",
+        "mime_type": "image/png",
+        "role": "agent_visible",
+        "sha256": "74017c3a6e67a1a4769d30c0f979ca6a2ef604071ba61a20170f9992db0573cb"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Color Palettes/IOAI_palette_sunset.png",
+        "mime_type": "image/png",
+        "role": "agent_visible",
+        "sha256": "825becec863d42a4507c6265583ac37b5d331ac88a95e0600097f53d282106b5"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Cover Text Overlay.png",
+        "mime_type": "image/png",
+        "role": "agent_visible",
+        "sha256": "fa3d32011ffa0c1c5f7ec2cca84d2890ca8779869b8487d1f0441b8a7cec4a72"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/IOAI_ Practical round assignment.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "e635e5b72a07aade991544819e35a07b5affeea3d8f8ea7f76fc010a369dd8cf"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Maria Ilieva - LOVE (IOAI Cut 47 sec) .wav",
+        "mime_type": "audio/wav",
+        "role": "agent_visible",
+        "sha256": "b5491c7055a2729138da523e9cb1cf43df5a43fe24e5e5385a5f6cfe075eb9d1"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Maria Ilieva - Love Lyrics .txt",
+        "mime_type": "text/plain",
+        "role": "agent_visible",
+        "sha256": "b74db67952472d57926de89f7025a745072311b88f6d35bb6176e65ab2075b98"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Maria Ilieva Love - full text.txt",
+        "mime_type": "text/plain",
+        "role": "agent_visible",
+        "sha256": "a982547eeea8a3af1bbf3401aae0dacfb21aac87443406295da91efe3a87c195"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Video Task/IOAI - Maria Ilieva - LOVE - Lyrics video.mp4",
+        "mime_type": "video/mp4",
+        "role": "agent_visible",
+        "sha256": "893269423aadeeebeae32a477e25e7d10b25206090b94fab5990bcc50fca083e"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Video Task/Photos/IMG_0624.jpg",
+        "mime_type": "image/jpeg",
+        "role": "agent_visible",
+        "sha256": "c05c3f2c1953a5604a9156982367ba1db5b621902639f6930a280fd42e76bf69"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Video Task/Photos/IMG_0739.jpg",
+        "mime_type": "image/jpeg",
+        "role": "agent_visible",
+        "sha256": "1a6651ce67abe00f384736b817d70a089ca3b70676d4dc12ffab0165ca0dfcff"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Video Task/Photos/IMG_0768.jpg",
+        "mime_type": "image/jpeg",
+        "role": "agent_visible",
+        "sha256": "ceb119c68d1aab6d08a89f4951e4cd99f1dc80b2ee0430c44a13a58211403cf4"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Video Task/Photos/IMG_4055.jpg",
+        "mime_type": "image/jpeg",
+        "role": "agent_visible",
+        "sha256": "155cbf02f7b6a761428b7247c8bffe273d44ec049f30b76756be7e55b4ae019f"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Video Task/Photos/IMG_4615.jpg",
+        "mime_type": "image/jpeg",
+        "role": "agent_visible",
+        "sha256": "621d84a49130e75b2e0bd26dbb6f8618d65e89fe40f93f055eba992724ff7999"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/2024/Practical-round-best-solutions.zip",
+        "mime_type": "application/zip",
+        "role": "judge_only",
+        "sha256": "c09210914c0d1544983dc27aa79c8a9c9645a843ca615ce3ad1a99b5503b58a4"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/recovered_20260913/2024/task_statement.txt",
+        "role": "agent_visible",
+        "mime_type": "text/plain",
+        "sha256": "c8fab64662f597683c9f7641ea162fb0f699cc35be2849f086a284917be79784"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/recovered_20260913/2024/task_contract.json",
+        "role": "agent_visible",
+        "mime_type": "application/json",
+        "sha256": "2c2852efa684eaeaff79b94f8097fc3558d440b32e34c0fe17f9f1a4c7f66f2e"
+      }
+    ],
+    "source_visibility": "asset_roles",
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/ioai_team_2024_official_scoring_v1.json",
+      "deliverable": "cover_image_and_music_video_with_process_documentation",
+      "reason": "Historical source contract restored; required execution and final scoring remain unvalidated.",
+      "scorecard_path": "data/rubrics/task_scorecards/ioai_team.json",
+      "scorecard_key": "ioai_team_2024_practical",
+      "task_contract_path": "data/raw/ioai/Team-Challenge/recovered_20260913/2024/task_contract.json",
+      "limitations": [
+        "Creative-tool accounts and multimodal judging have not been reproduced.",
+        "The raw 40+40 criterion sum is not the final ranking: image/video weights are 40:60 and full jury/peer aggregation is unresolved."
+      ],
+      "score_basis": "raw_criterion_sum_not_official_final_ranking"
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://ioai-official.org/2024-tasks/",
+      "source_file": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/IOAI_ Practical round assignment.pdf",
+      "solution_file": "data/raw/ioai/Team-Challenge/2024/Practical-round-best-solutions.zip",
+      "files": [
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/1255-705-planetarium-burgas.jpg",
+          "role": "agent_visible",
+          "sha256": "6ab9f68ed6b2dd4ce918c04b5f391a09d8c2affea36d39aa79efcf9d25bae5a1"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/36956fa95dea393ddcac08685515bc21.jpg",
+          "role": "agent_visible",
+          "sha256": "35aa50e37601c1d5667a2197267c47e0c589698464030dde62989c09b5258828"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/5e55bdda85ff92c49bd1809cb6ad1854.jpg",
+          "role": "agent_visible",
+          "sha256": "c65866c269c49c3c402bc4b0be458d3b651e5a677469908c66e0bc4eae8f1bcd"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/IMG_20220813_064219.jpg",
+          "role": "agent_visible",
+          "sha256": "4177a53869dc494f7418196c2a0287c1f1ac7824e9db2281a8adc95f1b0aaa4f"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/IMG_4997.JPG",
+          "role": "agent_visible",
+          "sha256": "9175ac1ae57354cc59a893c8b6a0ecff757473b7fc7a014bf421a4cd35f1ab23"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/IMG_5031.JPG",
+          "role": "agent_visible",
+          "sha256": "759e4e56ae50a18f33ac701d5d380cc1b80988fdb00cb5e5955cfbf185b6f97e"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/burgas-image-website.jpg",
+          "role": "agent_visible",
+          "sha256": "9755452a566b00d99221a4df22fb39b8516e5917402c43e6f3f4065b0cd0dfbf"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/c3a74ae86535188b917e615d751cbfb9.png",
+          "role": "agent_visible",
+          "sha256": "ac3665237d0a159e8e36cb505a69215db498b6fc71c2019d0beeaff5111b9f3b"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Burgas/dad90206878c34c57db041f7e73b6314.jpg",
+          "role": "agent_visible",
+          "sha256": "7624e46a1220b907e052ac01c69808980a96777c027e88c0152d2cfc1e688aaf"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Color Palettes/IOAI_palette_beach.png",
+          "role": "agent_visible",
+          "sha256": "8333311aecd0d2b081b118d966478fc67143517623228524223567588184bed5"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Color Palettes/IOAI_palette_festival.png",
+          "role": "agent_visible",
+          "sha256": "d15eefbff1de115771245aac5b6b8739b3b55e645e844e6ea89d90b3b825ade7"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Color Palettes/IOAI_palette_history.png",
+          "role": "agent_visible",
+          "sha256": "603729f12e3d2b010b2b270ea23a6170bb9c827ee45bda67a3b0b83383c5bca8"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Color Palettes/IOAI_palette_port.png",
+          "role": "agent_visible",
+          "sha256": "0a63d50f647f9545a81054cb70099277ae959f5d3add28ec389dacb074ec76d9"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Color Palettes/IOAI_palette_romance.png",
+          "role": "agent_visible",
+          "sha256": "74017c3a6e67a1a4769d30c0f979ca6a2ef604071ba61a20170f9992db0573cb"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Color Palettes/IOAI_palette_sunset.png",
+          "role": "agent_visible",
+          "sha256": "825becec863d42a4507c6265583ac37b5d331ac88a95e0600097f53d282106b5"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Cover Image Task/Cover Text Overlay.png",
+          "role": "agent_visible",
+          "sha256": "fa3d32011ffa0c1c5f7ec2cca84d2890ca8779869b8487d1f0441b8a7cec4a72"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/IOAI_ Practical round assignment.pdf",
+          "role": "agent_visible",
+          "sha256": "e635e5b72a07aade991544819e35a07b5affeea3d8f8ea7f76fc010a369dd8cf"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Maria Ilieva - LOVE (IOAI Cut 47 sec) .wav",
+          "role": "agent_visible",
+          "sha256": "b5491c7055a2729138da523e9cb1cf43df5a43fe24e5e5385a5f6cfe075eb9d1"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Maria Ilieva - Love Lyrics .txt",
+          "role": "agent_visible",
+          "sha256": "b74db67952472d57926de89f7025a745072311b88f6d35bb6176e65ab2075b98"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Maria Ilieva Love - full text.txt",
+          "role": "agent_visible",
+          "sha256": "a982547eeea8a3af1bbf3401aae0dacfb21aac87443406295da91efe3a87c195"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Video Task/IOAI - Maria Ilieva - LOVE - Lyrics video.mp4",
+          "role": "agent_visible",
+          "sha256": "893269423aadeeebeae32a477e25e7d10b25206090b94fab5990bcc50fca083e"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Video Task/Photos/IMG_0624.jpg",
+          "role": "agent_visible",
+          "sha256": "c05c3f2c1953a5604a9156982367ba1db5b621902639f6930a280fd42e76bf69"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Video Task/Photos/IMG_0739.jpg",
+          "role": "agent_visible",
+          "sha256": "1a6651ce67abe00f384736b817d70a089ca3b70676d4dc12ffab0165ca0dfcff"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Video Task/Photos/IMG_0768.jpg",
+          "role": "agent_visible",
+          "sha256": "ceb119c68d1aab6d08a89f4951e4cd99f1dc80b2ee0430c44a13a58211403cf4"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Video Task/Photos/IMG_4055.jpg",
+          "role": "agent_visible",
+          "sha256": "155cbf02f7b6a761428b7247c8bffe273d44ec049f30b76756be7e55b4ae019f"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/Video Task/Photos/IMG_4615.jpg",
+          "role": "agent_visible",
+          "sha256": "621d84a49130e75b2e0bd26dbb6f8618d65e89fe40f93f055eba992724ff7999"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/2024/Practical-round-best-solutions.zip",
+          "role": "judge_only",
+          "sha256": "c09210914c0d1544983dc27aa79c8a9c9645a843ca615ce3ad1a99b5503b58a4"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/recovered_20260913/2024/task_statement.txt",
+          "role": "agent_visible",
+          "sha256": "c8fab64662f597683c9f7641ea162fb0f699cc35be2849f086a284917be79784"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/recovered_20260913/2024/task_contract.json",
+          "role": "agent_visible",
+          "sha256": "2c2852efa684eaeaff79b94f8097fc3558d440b32e34c0fe17f9f1a4c7f66f2e"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "source_review": {
+      "report": "data/benchmarks/ioai_source_repair_20260913.json",
+      "task_contract_path": "data/raw/ioai/Team-Challenge/recovered_20260913/2024/task_contract.json",
+      "text_path": "data/raw/ioai/Team-Challenge/recovered_20260913/2024/task_statement.txt",
+      "source_pdf_pages": 5,
+      "non_whitespace_content_preserved": true,
+      "original_pdf_sha256": "e635e5b72a07aade991544819e35a07b5affeea3d8f8ea7f76fc010a369dd8cf",
+      "publisher_bundle_assets_verified": 26,
+      "upstream_environment": null
+    }
   },
   {
     "problem_id": "ioai_team_2025_factory",
@@ -32,15 +397,151 @@
     "source_file": "data/raw/ioai/Team-Challenge/2025/2025_IOAI_Team_Challenge_Factory_of_the_Future.pdf",
     "solution_file": null,
     "total_points": null,
-    "problem_description": "Team  Challenge      See  you  in  2025.08.04  \n UPDATES  \nDate   C hanges  Ma de   Date   Changes  Made  \n0602  Original  release    \n     \n     \n     \n     \n  \n\n Team  Challenge\n \"Factory  of  the  Future\"  Grand  Challenge \nHave  you  ever  visited  a  modern  factory?  Rows  of  robotic  arms  precisely  sort  and  assemble  parts,  and  large  equipment,  cars,  electronics,  and  everyday  products  are  standardized  and  produced  on  assembly  lines  in  a  matter  of  minutes.  However,  there  are  still  certain  tasks  that  are  difficult  to  standardize  or  require  flexible  adjustments,  which  currently  rely  on  human  cooperation.  But  in  the  near  future,  these  tasks  will  be  handled  by  general-purpose  humanoid  robots.  They  will  help  free  humans  from  repetitive  manual  labor,  giving  people  more  time  to  engage  in  creative  and  passionate  work.   \n1.  Introduction  \nYou  and  your  team  are  general-purpose  humanoid  robot  engineers  at  the  Factory  of  the  Future.  You  have  designed  and  built  an  impressive  humanoid  robot— Galbot .  Please  write  a  program  to  help  Galbot  complete  its  challenges  in  the  Factory  of  the  Future.  Galbot  has  been  assigned  to  organize  the  warehouse.  There  are  scattered,  unsorted  items  on  the  tables  in  the  warehouse.  Please  help  Galbot  move  around,  locate  these  items,  and  organize  them  onto  the  shelves.    Be  careful—there  are  obstacles  on  the  warehouse  floor.  Don’t  let  Galbot  bump  into  them!  You  and  your  team  should  help  Galbot  complete  these  tasks  as  quickly  as  possible!    \n2.  About  Galbot  \n2.1.  Galbot  performance  parameters  introduction.  \n  Galbot  G1  \nSpecification \nMax.  Height 1730mm  \nArm  Length  (Shoulder  to  Wrist  Center) \n710mm  \nLeg  Lift  Height  Difference 650mm  \nWorkspace  (Wrist  Center) \nVertical:  0-2100mm,  Horizontal:  1900mm  \nPayload  Capacity  (Wrist  Center) Single  Arm:  5kg,  Combined:  10kg \nBody  Weight 80Kg  \nOperating  Environment \n0-40°C，Humidity  90%  (non-condensing) \nSystem  \nComputing  Power 275TOPS  \nNetwork WIFI  2.4/5  GHz ， BT  \nDisplay \n5.5\"  Touchscreen,  1920*1080  resolution \nMicrophone Linear  4-Mic  Array  ×2 \nSpeaker 5W  X  2  \nPerception \nHead Depth  Camera  (Realsense  D436)×1 \nWrists  (Left+Right) \nDepth  Camera  (Realsense  D415)×2 6-Axis  Force  Sensor×2 \nChassis  \n3D  LiDAR  (Mid360)×1 Ultrasonic  Sensor×8 IMU  x  1  \nDegrees  of  Freedom  (excluding  chassis  and  end  effector) \nNeck  DOF 2  \nArm  DOF  (per  arm) 7  x  2  \nWaist  DOF 3  \nLeg  DOF 2  \nChassis \nChassis  Type \n4-Wheel  Omnidirectional  Mobile  Base Chassis  Dimensions  (Length/Projection  Diameter) \n600mm/600mm/625mm  \nMax  Speed 1.5m/s  \n  \n2.2.  Joint  Motor  Limit  \nJoint  Name  \n \nLimit\n \n(radians) \nleg_joint1  0.0  -  0.9374  \nleg_joint2  0.0  -  2.5847  \nleg_joint3  0.0  -  2.3262  \nleg_joint4  -1.5906  -  1.5906  \nleg_joint5  -0.1645  -  0.1645  \nhead_joint1  -1.5208  -  1.5208  \nhead_joint2  -0.321147949  -  0.321147949  \nright_arm_joint1  -3.00432619  -  3.00432619  \nright_arm_joint2  -1.608062789  -  1.608062789  \nright_arm_joint3  -2.916972222  -  2.916972222  \nright_arm_joint4  -1.869862177  -  2.5679938779914944  \nright_arm_joint5  -2.916972222  -  2.916972222  \nright_arm_joint6  -0.7353981633974483  -  0.8226646259971648  \n\nright_arm_joint7  -1.538202778  -  1.538202778  \nleft_arm_joint1  -3.00432619  -  3.00432619  \nleft_arm_joint2  -1.608062789  -  1.608062789  \nleft_arm_joint3  -2.916972222  -  2.916972222  \nleft_arm_joint4  -2.5679938779914944  -  1.869862177  \nleft_arm_joint5  -2.916972222  -  2.916972222  \nleft_arm_joint6  -0.8226646259971648  -  0.7353981633974483  \nleft_arm_joint7  -1.538202778  -  1.538202778  \n \n2.3.  Coordinate  Frames  \nThe  joint  coordinate  frames  are  defined  as  follows  (see  figure): \n●  X-axis :  Red \n●  Y-axis :  Green \n●  Z-axis :  Blue \n  \n3.  Installation  Guide  \n \n\nIssac  Sim   Please  view  the  docs  at  SynthNova  Physics  Simulator  Edu  |  SynthNova  Physics  Simulator  Edu   documentationfor  the  latest  update!  Physics  Simulator  Edu  is  a  MuJoCo-based  simulation  platform  for  robotics  applications  with  high-level  robot  control  interfaces  designed  for  Galbot  G1.    To  install  the  physics_sim_edu  pachage,  please  follow  the  bash  commands  below: \ngit  clone https://github.com/galbot-ioai/physics_sim_edu.git  cd physics_sim_edu  pip  install  -e  ./src/synthnova_config  pip  install  -e  .   To  verify  the  installion,  you  can  run  the  following  command:  \nfrom physics_simulator  import PhysicsSimulator  from synthnova_config  import PhysicsSimulatorConfig   #  Test  basic  import config  =  PhysicsSimulatorConfig()  sim  =  PhysicsSimulator(config)  print(\"Installation  successful!\") \n  \n4.  Basic  Examples  \n4.1.  Basic  Simulation  \nfrom physics_simulator  import PhysicsSimulator  from synthnova_config  import PhysicsSimulatorConfig,  RobotConfig  from pathlib  import Path   #  Create  sim  config my_config  =  PhysicsSimulatorConfig()  physics_simulator  =  PhysicsSimulator(my_config)   #  Add  default  scene physics_simulator.add_default_scene()   #  Initialize  the  simulator physics_simulator.initialize()   \n#  Run  the  display  loop physics_simulator.loop()   #  Close  the  simulator physics_simulator.close() \n \n4.2.  Add  Entities  \n4.2.1.  Add  Robot \nfrom physics_simulator  import PhysicsSimulator  from synthnova_config  import PhysicsSimulatorConfig,  RobotConfig  from pathlib  import Path   def main():     #  Create  sim  config    my_config  =  PhysicsSimulatorConfig()     physics_simulator  =  PhysicsSimulator(my_config)     physics_simulator.add_default_scene()      #  Add  robot    robot_config  =  RobotConfig(         prim_path=\"/World/Galbot\",         name=\"galbot_one_charlie\",         mjcf_path=Path()             .joinpath(physics_simulator.synthnova_assets_directory)             .joinpath(\"synthnova_assets\")             .joinpath(\"robot\")             .joinpath(\"galbot_one_charlie_description\")             .joinpath(\"galbot_one_charlie.xml\"),         position=[0,  0,  0],         orientation=[0,  0,  0,  1]     )     physics_simulator.add_robot(robot_config)     physics_simulator.initialize()      #  Get  robot  state    robot_state  =  physics_simulator.get_robot_state(robot_config.prim_path)     print(robot_state)      physics_simulator.loop()     physics_simulator.close()   \n \n4.2.2.  Add  Basic  Geometry  \n from synthnova_config  import PhysicsSimulatorConfig,  CuboidConfig  from physics_simulator  import PhysicsSimulator  from pathlib  import Path   def main():     #  Initialize  simulator    my_config  =  PhysicsSimulatorConfig()     physics_simulator  =  PhysicsSimulator(my_config)     physics_simulator.add_default_scene()      #  Add  cube  1    cube_1_config  =  CuboidConfig(         prim_path=Path(physics_simulator.root_prim_path).joinpath(\"cube_1\"),         position=[2,  2,  2],         orientation=[0,  0,  0,  1],         scale=[1,  1,  1],         color=[1.0,  0.0,  0.0],     )     cube_1_path  =  physics_simulator.add_object(cube_1_config)      #  Add  cube  2    cube_2_config  =  CuboidConfig(         prim_path=Path(physics_simulator.root_prim_path).joinpath(\"cube_2\"),         position=[0,  0,  2],         orientation=[0,  0,  0,  1],         scale=[1,  1,  1],         color=[0.0,  1.0,  0.0],     )     cube_2_path  =  physics_simulator.add_object(cube_2_config)      #  Add  cube  3    cube_3_config  =  CuboidConfig(         prim_path=Path(physics_simulator.root_prim_path).joinpath(\"cube_3\"),         position=[-2,  -2,  2],         orientation=[0,  0,  0,  1],         scale=[1,  1,  1],         color=[0.0,  0.0,  1.0],     )     cube_3_path  =  physics_simulator.add_object(cube_3_config)      #  Initialize  and  run \n   physics_simulator.initialize()     physics_simulator.get_object_state(cube_1_path)     physics_simulator.loop()     physics_simulator.close()     4.2.3.  Add  Mesh  Object \nfrom synthnova_config  import PhysicsSimulatorConfig,  MeshConfig,  RobotConfig  from physics_simulator  import PhysicsSimulator  from pathlib  import Path   def main():     #  Initialize  simulator    my_config  =  PhysicsSimulatorConfig()     physics_simulator  =  PhysicsSimulator(my_config)     physics_simulator.add_default_scene()      #  Add  robot    robot_config  =  RobotConfig(         prim_path=\"/World/Galbot\",         name=\"galbot_one_charlie\",         mjcf_path=Path()             .joinpath(physics_simulator.synthnova_assets_directory)             .joinpath(\"synthnova_assets\")             .joinpath(\"robot\")             .joinpath(\"galbot_one_charlie_description\")             .joinpath(\"galbot_one_charlie.xml\"),         position=[0,  0,  0],         orientation=[0,  0,  0,  1]     )     physics_simulator.add_robot(robot_config)      #  Add  shelf  mesh    shelf_config  =  MeshConfig(         prim_path=\"/World/Shelf\",         name=\"shelf\",         mjcf_path=Path()             .joinpath(physics_simulator.synthnova_assets_directory)             .joinpath(\"synthnova_assets\")             .joinpath(\"default\")             .joinpath(\"shelves\")             .joinpath(\"1\")             .joinpath(\"model\")  \n           .joinpath(\"mjcf\")             .joinpath(\"convex_decomposition.xml\"),         position=[0.55,  0,  0],         orientation=[0,  0,  0,  1]     )     physics_simulator.add_object(shelf_config)      #  Add  bottle    bottle_config  =  MeshConfig(         prim_path=\"/World/Bottle\",         name=\"bottle\",         mjcf_path=Path()             .joinpath(physics_simulator.synthnova_assets_directory)             .joinpath(\"synthnova_assets\")             .joinpath(\"default\")             .joinpath(\"skus\")             .joinpath(\"1\")             .joinpath(\"model\")             .joinpath(\"mjcf\")             .joinpath(\"convex_decomposition.xml\"),         position=[0.55,  0,  0.1],         orientation=[0,  0,  0,  1],         scale=[0.122,  0.122,  0.122]     )     physics_simulator.add_object(bottle_config)      #  Initialize  and  run    physics_simulator.initialize()     physics_simulator.loop()     physics_simulator.close()     \n4.3.  Control  parts  of  Galbot  using  galbot_interface  \n4.3.1.  Chassis  Control  \n from physics_simulator  import PhysicsSimulator  from physics_simulator.galbot_interface  import GalbotInterface,  GalbotInterfaceConfig  from physics_simulator.utils.data_types  import JointTrajectory  from synthnova_config  import PhysicsSimulatorConfig,  RobotConfig  import numpy  as np  from pathlib  import Path   \ndef interpolate_joint_positions(start_positions,  end_positions,  steps):     return np.linspace(start_positions,  end_positions,  steps)   def main():     #  Create  sim  config    my_config  =  PhysicsSimulatorConfig()     physics_simulator  =  PhysicsSimulator(my_config)     physics_simulator.add_default_scene()      #  Add  robot    robot_config  =  RobotConfig(         prim_path=\"/World/Galbot\",         name=\"galbot_one_charlie\",         mjcf_path=Path()             .joinpath(physics_simulator.synthnova_assets_directory)             .joinpath(\"synthnova_assets\")             .joinpath(\"robot\")             .joinpath(\"galbot_one_charlie_description\")             .joinpath(\"galbot_one_charlie_olympic.xml\"),         position=[0,  0,  0],         orientation=[0,  0,  0,  1]     )     robot_path  =  physics_simulator.add_robot(robot_config)     physics_simulator.initialize()      #  Initialize  the  galbot  interface    galbot_interface_config  =  GalbotInterfaceConfig()     galbot_interface_config.modules_manager.enabled_modules.append(\"chassis\")     galbot_interface_config.chassis.joint_names  =  [         f\"{robot_config.name}/mobile_forward_joint\",         f\"{robot_config.name}/mobile_side_joint\",         f\"{robot_config.name}/mobile_yaw_joint\",     ]     galbot_interface_config.robot.prim_path  =  robot_path      galbot_interface  =  GalbotInterface(         galbot_interface_config=galbot_interface_config,         simulator=physics_simulator     )     galbot_interface.initialize()      #  Start  the  simulation    physics_simulator.step()      #  Get  current  joint  positions \n   current_joint_positions  =  galbot_interface.chassis.get_joint_positions()     target_joint_positions  =  [1,  6,  1.5]      #  Interpolate  joint  positions    positions  =  interpolate_joint_positions(         current_joint_positions,  target_joint_positions,  5000    )     #  Create  a  joint  trajectory    joint_trajectory  =  JointTrajectory(positions=positions)      #  Follow  the  trajectory    galbot_interface.chassis.follow_trajectory(joint_trajectory)      #  Run  the  display  loop    physics_simulator.loop()     physics_simulator.close()     4.3.2.  Left  Arm  Control  \n from physics_simulator  import PhysicsSimulator  from physics_simulator.galbot_interface  import GalbotInterface,  GalbotInterfaceConfig  from physics_simulator.utils.data_types  import JointTrajectory  from synthnova_config  import PhysicsSimulatorConfig,  RobotConfig  import numpy  as np  from pathlib  import Path   def main():     #  Create  sim  config  and  add  robot    my_config  =  PhysicsSimulatorConfig()     physics_simulator  =  PhysicsSimulator(my_config)     physics_simulator.add_default_scene()      robot_config  =  RobotConfig(         prim_path=\"/World/Galbot\",         name=\"galbot_one_charlie\",         mjcf_path=Path()             .joinpath(physics_simulator.synthnova_assets_directory)             .joinpath(\"synthnova_assets\")             .joinpath(\"robot\")             .joinpath(\"galbot_one_charlie_description\")             .joinpath(\"galbot_one_charlie.xml\"),  \n       position=[0,  0,  0],         orientation=[0,  0,  0,  1]     )     robot_path  =  physics_simulator.add_robot(robot_config)     physics_simulator.initialize()      #  Initialize  the  galbot  interface    galbot_interface_config  =  GalbotInterfaceConfig()     galbot_interface_config.modules_manager.enabled_modules.append(\"left_arm\")     galbot_interface_config.left_arm.joint_names  =  [         f\"{robot_config.name}/left_arm_joint1\",         f\"{robot_config.name}/left_arm_joint2\",         f\"{robot_config.name}/left_arm_joint3\",         f\"{robot_config.name}/left_arm_joint4\",         f\"{robot_config.name}/left_arm_joint5\",         f\"{robot_config.name}/left_arm_joint6\",         f\"{robot_config.name}/left_arm_joint7\",     ]     galbot_interface_config.robot.prim_path  =  robot_path      galbot_interface  =  GalbotInterface(         galbot_interface_config=galbot_interface_config,         simulator=physics_simulator     )     galbot_interface.initialize()      #  Control  arm    physics_simulator.step()     current_joint_positions  =  galbot_interface.left_arm.get_joint_positions()     target_joint_positions  =  [0.1,  0.2,  0.3,  0.4,  0.5,  0.6,  0.7]      #  Create  and  follow  trajectory    positions  =  np.linspace(current_joint_positions,  target_joint_positions,  500)     joint_trajectory  =  JointTrajectory(positions=positions)     galbot_interface.left_arm.follow_trajectory(joint_trajectory)      physics_simulator.loop()     physics_simulator.close()     \n4.3.3.  Left  Gripper  Control  \n from physics_simulator  import PhysicsSimulator  from physics_simulator.galbot_interface  import GalbotInterface,  GalbotInterfaceConfig  from physics_simulator.utils.data_types  import JointTrajectory  from synthnova_config  import PhysicsSimulatorConfig,  RobotConfig  import numpy  as np   from pathlib  import Path   def interpolate_joint_positions(start_positions,  end_positions,  steps):     return np.linspace(start_positions,  end_positions,  steps)    def main():     #  Create  sim  config    my_config  =  PhysicsSimulatorConfig()      #  Instantiate  the  simulator    synthnova_physics_simulator  =  PhysicsSimulator(my_config)      #  Add  default  ground  plane  if  you  need    synthnova_physics_simulator.add_default_scene()      #  Add  robot    robot_config  =  RobotConfig(         prim_path=\"/World/Galbot\",         name=\"galbot_one_charlie\",         mjcf_path=Path()         .joinpath(synthnova_physics_simulator.synthnova_assets_directory)         .joinpath(\"synthnova_assets\")         .joinpath(\"robot\")         .joinpath(\"galbot_one_charlie_description\")         .joinpath(\"galbot_one_charlie.xml\"),         position=[0,  0,  0],         orientation=[0,  0,  0,  1]     )     robot_path  =  synthnova_physics_simulator.add_robot(robot_config)      #  Initialize  the  simulator    synthnova_physics_simulator.initialize()      #  Initialize  the  galbot  interface    galbot_interface_config  =  GalbotInterfaceConfig()     #  Enable  the  modules \n   galbot_interface_config.modules_manager.enabled_modules.append(\"left_gripper\")     galbot_interface_config.left_gripper.joint_names  =  [         f\"{robot_config.name}/left_gripper_robotiq_85_right_knuckle_joint\"    ]     #  Bind  the  simulation  entity  prim  path  to  the  interface  config    galbot_interface_config.robot.prim_path  =  robot_path     galbot_interface  =  GalbotInterface(         galbot_interface_config=galbot_interface_config,         simulator=synthnova_physics_simulator,     )     galbot_interface.initialize()      #  Set  the  gripper  to  close    galbot_interface.left_gripper.set_gripper_close()      #  Run  the  display  loop    synthnova_physics_simulator.loop()      #  Close  the  simulator    synthnova_physics_simulator.close()    if __name__  ==  \"__main__\":     main()   \n \n4.4.  Get  Sensor  infos  \n4.4.1.  Front  Head  Camera  \n from physics_simulator  import PhysicsSimulator  from synthnova_config  import (     PhysicsSimulatorConfig,     RobotConfig,     RgbCameraConfig,     RealsenseD435RgbSensorConfig,     DepthCameraConfig,     RealsenseD435DepthSensorConfig,  )  from physics_simulator.galbot_interface  import GalbotInterface,  GalbotInterfaceConfig  from physics_simulator.utils  import preprocess_depth  import os  \nimport numpy  as np  import cv2  from pathlib  import Path   def main():     \"\"\"Main  function  to  set  up  and  run  the  front  head  camera  example.\"\"\"    #  Instantiate  the  simulator    my_config  =  PhysicsSimulatorConfig()     physics_simulator  =  PhysicsSimulator(my_config)      #  Add  default  scene    physics_simulator.add_default_scene()      #  Add  robot    robot_config  =  RobotConfig(         prim_path=\"/World/Galbot\",         name=\"galbot_one_charlie\",         mjcf_path=Path()         .joinpath(physics_simulator.synthnova_assets_directory)         .joinpath(\"synthnova_assets\")         .joinpath(\"robot\")         .joinpath(\"galbot_one_charlie_description\")         .joinpath(\"galbot_one_charlie.xml\"),         position=[0,  0,  0],         orientation=[0,  0,  0,  1]     )     robot_path  =  physics_simulator.add_robot(robot_config)      #  Add  front  head  RGB  camera  (RealSense  D435)    front_head_rgb_camera_config  =  RgbCameraConfig(         name=\"front_head_rgb_camera\",         prim_path=os.path.join(             robot_path,             \"head_link2\",             \"head_end_effector_mount_link\",             \"front_head_rgb_camera\",         ),         translation=[0.09321,  -0.06166,  0.033],         rotation=[             0.683012701855461,             0.1830127020294028,             0.18301270202940284,             0.6830127018554611,         ],         sensor_config=RealsenseD435RgbSensorConfig(),         \nparent_entity_name=\"galbot_one_charlie/head_end_effector_mount_link\"    )     front_head_rgb_camera_path  =  physics_simulator.add_sensor(front_head_rgb_camera_config)      #  Add  front  head  depth  camera  (RealSense  D435)    front_head_depth_camera_config  =  DepthCameraConfig(         name=\"front_head_depth_camera\",         prim_path=os.path.join(             robot_path,             \"head_link2\",             \"head_end_effector_mount_link\",             \"front_head_depth_camera\",         ),         translation=[0.09321,  -0.06166,  0.033],         rotation=[             0.683012701855461,             0.1830127020294028,             0.18301270202940284,             0.6830127018554611,         ],         sensor_config=RealsenseD435DepthSensorConfig(),         parent_entity_name=\"galbot_one_charlie/head_end_effector_mount_link\"    )     front_head_depth_camera_path  =  physics_simulator.add_sensor(         front_head_depth_camera_config     )      #  Initialize  the  galbot  interface    galbot_interface_config  =  GalbotInterfaceConfig()     #  Enable  the  modules    galbot_interface_config.modules_manager.enabled_modules.append(\"front_head_camera\")     #  Bind  the  simulation  entity  prim  path  to  the  interface  config    galbot_interface_config.robot.prim_path  =  robot_path     galbot_interface_config.front_head_camera.prim_path_rgb  =  front_head_rgb_camera_path     galbot_interface_config.front_head_camera.prim_path_depth  =  (         front_head_depth_camera_path     )     galbot_interface  =  GalbotInterface(         galbot_interface_config=galbot_interface_config,  simulator=physics_simulator     )  \n   galbot_interface.initialize()      #  Start  the  simulation    physics_simulator.play()      #  Initial  steps  to  stabilize  the  simulation    physics_simulator.step(10)      while True:         physics_simulator.step(7)          #  Get  rgb  data        rgb_data  =  galbot_interface.front_head_camera.get_rgb()          #  Get  depth  data        depth_data  =  galbot_interface.front_head_camera.get_depth()          #  Preprocess  depth  data  for  visualization        #  You  can  also  use  this  function  to  preprocess  the  depth  data  for  other  purposes        depth_data  =  preprocess_depth(             depth_data,             scale=1000,   #  m  to  mm            min_value=0.0,             max_value=3 *  1000,   #  3m  to  mm            data_type=np.uint16,         )          #  Display  images  in  non-blocking  way        cv2.imshow(\"RGB  Camera\",  cv2.cvtColor(rgb_data,  cv2.COLOR_RGB2BGR))         cv2.imshow(\"Depth  Camera\",  depth_data)          #  Wait  for  1ms  and  check  for  'q'  key  to  quit        if cv2.waitKey(1)  &  0xFF ==  ord(\"q\"):             cv2.destroyAllWindows()             break     #  Get  camera  parameters    params  =  galbot_interface.front_head_camera.get_parameters()     intrinsic_matrix  =  params[\"rgb\"][\"intrinsic_matrix\"]     print(params)     print(\"intrinsic_matrix:  \",  intrinsic_matrix)      #  Close  the  simulator    physics_simulator.close()  \n  if __name__  ==  \"__main__\":     main()     4.4.2.  Left  Wrist  Camera  \n from physics_simulator  import PhysicsSimulator  from synthnova_config  import (  PhysicsSimulatorConfig,  RobotConfig,  RgbCameraConfig,  RealsenseD415RgbSensorConfig,  DepthCameraConfig,  RealsenseD415DepthSensorConfig,  )  from physics_simulator.galbot_interface  import GalbotInterface,  GalbotInterfaceConfig  from physics_simulator.utils  import preprocess_depth  import os  import numpy  as np  import cv2  from pathlib  import Path  def main():     \"\"\"Main  function  to  set  up  and  run  the  left  wrist  camera  example.\"\"\"    #  Instantiate  the  simulator my_config  =  PhysicsSimulatorConfig()  physics_simulator  =  PhysicsSimulator(my_config)     #  Add  default  scene physics_simulator.add_default_scene()     #  Add  robot robot_config  =  RobotConfig(  prim_path=\"/World/Galbot\",  name=\"galbot_one_charlie\",  mjcf_path=Path()         .joinpath(physics_simulator.synthnova_assets_directory)         .joinpath(\"synthnova_assets\")         .joinpath(\"robot\")         .joinpath(\"galbot_one_charlie_description\")         .joinpath(\"galbot_one_charlie.xml\"),  position=[0,  0,  0],  orientation=[0,  0,  0,  1]     )  \nrobot_path  =  physics_simulator.add_robot(robot_config)     #  Add  left  wrist  RGB  camera  (RealSense  D415) left_wrist_rgb_camera_config  =  RgbCameraConfig(  name=\"left_wrist_rgb_camera\",  prim_path=os.path.join(  robot_path,             \"left_arm_link7\",             \"left_arm_end_effector_mount_link\",             \"left_wrist_rgb_camera\",         ),  translation  =  [0.005124659527755139,  0.06720377942456242,  -0.005653333810578162],  rotation  =  [-0.0353557,  0.7194,  -0.020291,  -0.6934],  camera_axes=\"usd\",  sensor_config=RealsenseD415RgbSensorConfig(),  parent_entity_name=\"galbot_one_charlie/left_arm_end_effector_mount_link\"    )  left_wrist_rgb_camera_path  =  physics_simulator.add_sensor(left_wrist_rgb_camera_config)     #  Add  left  wrist  depth  camera  (RealSense  D415) left_wrist_depth_camera_config  =  DepthCameraConfig(  name=\"left_wrist_depth_camera\",  prim_path=os.path.join(  robot_path,             \"left_arm_link7\",             \"left_arm_end_effector_mount_link\",             \"left_wrist_depth_camera\",         ),  translation  =  [0.005124659527755139,  0.06720377942456242,  -0.005653333810578162],  rotation  =  [-0.0353557,  0.7194,  -0.020291,  -0.6934],  camera_axes=\"usd\",  sensor_config=RealsenseD415DepthSensorConfig(),  parent_entity_name=\"galbot_one_charlie/left_arm_end_effector_mount_link\"    )  left_wrist_depth_camera_path  =  physics_simulator.add_sensor(  left_wrist_depth_camera_config     )     #  Initialize  the  galbot  interface galbot_interface_config  =  GalbotInterfaceConfig()     #  Enable  the  modules galbot_interface_config.modules_manager.enabled_modules.append(\"left_wrist_camera\")     #  Bind  the  simulation  entity  prim  path  to  the  interface  config galbot_interface_config.robot.prim_path  =  robot_path  galbot_interface_config.left_wrist_camera.prim_path_rgb  =  \nleft_wrist_rgb_camera_path  galbot_interface_config.left_wrist_camera.prim_path_depth  =  (  left_wrist_depth_camera_path     )  galbot_interface  =  GalbotInterface(  galbot_interface_config=galbot_interface_config,  simulator=physics_simulator     )  galbot_interface.initialize()     #  Start  the  simulation physics_simulator.play()     #  Initial  steps  to  stabilize  the  simulation physics_simulator.step(10)     while True:  physics_simulator.step(7)         #  Get  rgb  data rgb_data  =  galbot_interface.left_wrist_camera.get_rgb()         #  Get  depth  data depth_data  =  galbot_interface.left_wrist_camera.get_depth()         #  Preprocess  depth  data  for  visualization        #  You  can  also  use  this  function  to  preprocess  the  depth  data  for  other  purposes depth_data  =  preprocess_depth(  depth_data,  scale=1000,   #  m  to  mm min_value=0.0,  max_value=5 *  1000,   #  5m  to  mm data_type=np.uint16,         )         #  Display  images  in  non-blocking  way cv2.imshow(\"RGB  Camera\",  cv2.cvtColor(rgb_data,  cv2.COLOR_RGB2BGR))  cv2.imshow(\"Depth  Camera\",  depth_data)         #  Wait  for  1ms  and  check  for  'q'  key  to  quit        if cv2.waitKey(1)  &  0xFF ==  ord(\"q\"):  cv2.destroyAllWindows()             break    #  Get  camera  parameters params  =  galbot_interface.left_wrist_camera.get_parameters()  intrinsic_matrix  =  params[\"rgb\"][\"intrinsic_matrix\"]     print(params)     print(\"intrinsic_matrix:  \",  intrinsic_matrix)     #  Close  the  simulator physics_simulator.close()  if __name__  ==  \"__main__\":  main()    \n  \n5.  Advanced  Examples  \n5.1.  Pick  a  cube  and  place  it  into  a  box  \nphysics_sim_edu/examples/ioai/ioai_grasp_env.py  at  ioai/master  ·  galbot-ioai/physics_sim_edu  ·  GitHub This  example  demonstrates  a  basic  pick  and  place  task  using  a  simple  state  machine.  The  robot  performs  the  following  sequence:  1.  Move  to  a  pre-grasp  position  2.  Open  the  gripper  3.  Move  to  the  object  4.  Close  the  gripper  to  grasp  the  object  5.  Lift  the  object  6.  Move  to  the  target  position  7.  Open  the  gripper  to  release  the  object   \n5.2.  Navigate  in  a  grid  map  using  A*  \nphysics_sim_edu/examples/ioai/ioai_nav_env.py  at  ioai/master  ·  galbot-ioai/physics_sim_edu  ·  GitHub This  example  showcases  autonomous  navigation  using  the  A*  pathfinding  algorithm.  The  robot:  1.  Receives  a  target  position  2.  Plans  a  path  using  A*  algorithm  3.  Follows  the  planned  path  while  avoiding  obstacles  4.  Reaches  the  target  position    \nAppendix  A:  API  Documentation  \nRefer  to  https://github.com/galbot-ioai/physics_sim_edu.gitfor  the  detailed  api  documents  \nAppendix  B:  Learning  Resources  \n●  MuJoCo  Documentation:   Overview  -  MuJoCo  Documentation ●  PythonRobotics:  Python  sample  codes  and  textbook  for  robotics  algorithms.GitHub  -  \nAtsushiSakai/PythonRobotics:  Python  sample  codes  and  textbook  for  robotics  algorithms.(a  great  reference  of  python  sample  codes  for  different  use  cases)  ●  Solve  Inverse  Kinematics  in  MuJoCo:  Mink  \n⚪\n Table  of  Contents  &mdash;  mink   documentation \n●  Object  Detection:  \n⚪\n \nYOLO\n \nModel\n \n(YOLOv5,\n \nYOLOv7,\n \netc.)\n \n■  GitHub  -  ultralytics/yolov5:  YOLOv5  🚀  in  PyTorch  >  ONNX  >  CoreML  >  TFLite ■  GitHub  -  WongKinYiu/yolov7:  Implementation  of  paper  -  YOLOv7:  Trainable  bag-of-freebies  sets  new  state-of-the-art  for  real-time  object  detectors \n⚪\n \nObject\n \nGrasping\n \nof\n \nHumanoid\n \nRobot\n \nBased\n \non\n \nYOLO\n \n■  https://scispace.com/pdf/object-grasping-of-humanoid-robot-based-on-yolo-29id6r7axh.pdf",
+    "problem_description": "--- Source PDF page 1 ---\n\nTeam Challenge \n \n \n \n \nSee you in 2025.08.04 \n \nUPDATES \nDate  \nChanges Made \n \nDate  \nChanges Made \n0602 \nOriginal release\n\n--- Source PDF page 2 ---\n\nTeam Challenge \n\"Factory of the Future\" Grand Challenge \nHave you ever visited a modern factory? Rows of robotic arms precisely sort and assemble \nparts, and large equipment, cars, electronics, and everyday products are standardized and \nproduced on assembly lines in a matter of minutes. \n \nHowever, there are still certain tasks that are difficult to standardize or require flexible \nadjustments, which currently rely on human cooperation. But in the near future, these tasks \nwill be handled by general-purpose humanoid robots. They will help free humans from \nrepetitive manual labor, giving people more time to engage in creative and passionate work. \n \n1.Introduction \nYou and your team are general-purpose humanoid robot engineers at the Factory of the \nFuture. You have designed and built an impressive humanoid robot—Galbot. Please write a \nprogram to help Galbot complete its challenges in the Factory of the Future. \n \nGalbot has been assigned to organize the warehouse. There are scattered, unsorted items \non the tables in the warehouse. Please help Galbot move around, locate these items, and \norganize them onto the shelves.  \n \nBe careful—there are obstacles on the warehouse floor. Don’t let Galbot bump into them! \nYou and your team should help Galbot complete these tasks as quickly as possible!  \n \n2.About Galbot \n2.1.Galbot performance parameters introduction. \n \n \nGalbot G1 \nSpecification \nMax. Height \n1730mm \nArm Length (Shoulder to Wrist Center) \n710mm \nLeg Lift Height Difference \n650mm \nWorkspace (Wrist Center) \nVertical: 0-2100mm, Horizontal: \n1900mm \n \nPayload Capacity (Wrist Center) \nSingle Arm: 5kg, Combined: 10kg \nBody Weight \n80Kg \nOperating Environment \n0-40°C，Humidity 90% \n(non-condensing)\n\n--- Source PDF page 3 ---\n\nSystem \nComputing Power \n275TOPS \nNetwork \nWIFI 2.4/5 GHz，BT \nDisplay \n5.5\" Touchscreen, 1920*1080 \nresolution \nMicrophone \nLinear 4-Mic Array ×2 \nSpeaker \n5W X 2 \nPerception \nHead \nDepth Camera (Realsense D436)×1 \nWrists (Left+Right) \nDepth Camera (Realsense D415)×2 \n6-Axis Force Sensor×2 \nChassis \n3D LiDAR (Mid360)×1 \nUltrasonic Sensor×8 \nIMU x 1 \nDegrees of \nFreedom \n(excluding chassis \nand end effector) \nNeck DOF \n2 \nArm DOF (per arm) \n7 x 2 \nWaist DOF \n3 \nLeg DOF \n2 \nChassis \nChassis Type \n4-Wheel Omnidirectional Mobile \nBase \nChassis Dimensions (Length/Projection \nDiameter) \n600mm/600mm/625mm \nMax Speed \n1.5m/s\n\n--- Source PDF page 4 ---\n\n2.2.Joint Motor Limit \nJoint Name \n Limit (radians) \nleg_joint1 \n0.0 - 0.9374 \nleg_joint2 \n0.0 - 2.5847 \nleg_joint3 \n0.0 - 2.3262 \nleg_joint4 \n-1.5906 - 1.5906 \nleg_joint5 \n-0.1645 - 0.1645 \nhead_joint1 \n-1.5208 - 1.5208 \nhead_joint2 \n-0.321147949 - 0.321147949 \nright_arm_joint1 \n-3.00432619 - 3.00432619 \nright_arm_joint2 \n-1.608062789 - 1.608062789 \nright_arm_joint3 \n-2.916972222 - 2.916972222 \nright_arm_joint4 \n-1.869862177 - 2.5679938779914944 \nright_arm_joint5 \n-2.916972222 - 2.916972222 \nright_arm_joint6 \n-0.7353981633974483 - 0.8226646259971648\n\n--- Source PDF page 5 ---\n\nright_arm_joint7 \n-1.538202778 - 1.538202778 \nleft_arm_joint1 \n-3.00432619 - 3.00432619 \nleft_arm_joint2 \n-1.608062789 - 1.608062789 \nleft_arm_joint3 \n-2.916972222 - 2.916972222 \nleft_arm_joint4 \n-2.5679938779914944 - 1.869862177 \nleft_arm_joint5 \n-2.916972222 - 2.916972222 \nleft_arm_joint6 \n-0.8226646259971648 - 0.7353981633974483 \nleft_arm_joint7 \n-1.538202778 - 1.538202778 \n \n2.3.Coordinate Frames \nThe joint coordinate frames are defined as follows (see figure): \n●\nX-axis: Red \n●\nY-axis: Green \n●\nZ-axis: Blue \n \n \n3.Installation Guide\n\n--- Source PDF page 6 ---\n\nIssac Sim \n \nPlease view the docs at SynthNova Physics Simulator Edu | SynthNova Physics Simulator \nEdu  documentationfor the latest update! Physics Simulator Edu is a MuJoCo-based \nsimulation platform for robotics applications with high-level robot control interfaces designed \nfor Galbot G1.  \n \nTo install the physics_sim_edu pachage, please follow the bash commands below: \ngit clone https://github.com/galbot-ioai/physics_sim_edu.git\ncd physics_sim_edu\npip install -e ./src/synthnova_config\npip install -e . \n \n \nTo verify the installion, you can run the following command: \nfrom physics_simulator import PhysicsSimulator\nfrom synthnova_config import PhysicsSimulatorConfig\n\n# Test basic import\nconfig = PhysicsSimulatorConfig()\nsim = PhysicsSimulator(config)\nprint(\"Installation successful!\") \n \n \n4.Basic Examples \n4.1.Basic Simulation \nfrom physics_simulator import PhysicsSimulator\nfrom synthnova_config import PhysicsSimulatorConfig, RobotConfig\nfrom pathlib import Path\n\n# Create sim config\nmy_config = PhysicsSimulatorConfig()\nphysics_simulator = PhysicsSimulator(my_config)\n\n# Add default scene\nphysics_simulator.add_default_scene()\n\n# Initialize the simulator\nphysics_simulator.initialize()\n\n--- Source PDF page 7 ---\n\n# Run the display loop\nphysics_simulator.loop()\n\n# Close the simulator\nphysics_simulator.close() \n \n4.2.Add Entities \n4.2.1.Add Robot \nfrom physics_simulator import PhysicsSimulator\nfrom synthnova_config import PhysicsSimulatorConfig, RobotConfig\nfrom pathlib import Path\n\ndef main():\n   # Create sim config\n   my_config = PhysicsSimulatorConfig()\n   physics_simulator = PhysicsSimulator(my_config)\n   physics_simulator.add_default_scene()\n\n   # Add robot\n   robot_config = RobotConfig(\n       prim_path=\"/World/Galbot\",\n       name=\"galbot_one_charlie\",\n       mjcf_path=Path()\n           .joinpath(physics_simulator.synthnova_assets_directory)\n           .joinpath(\"synthnova_assets\")\n           .joinpath(\"robot\")\n           .joinpath(\"galbot_one_charlie_description\")\n           .joinpath(\"galbot_one_charlie.xml\"),\n       position=[0, 0, 0],\n       orientation=[0, 0, 0, 1]\n   )\n   physics_simulator.add_robot(robot_config)\n   physics_simulator.initialize()\n\n   # Get robot state\n   robot_state = \nphysics_simulator.get_robot_state(robot_config.prim_path)\n   print(robot_state)\n\n   physics_simulator.loop()\n   physics_simulator.close()\n\n--- Source PDF page 8 ---\n\n4.2.2.Add Basic Geometry \n \nfrom synthnova_config import PhysicsSimulatorConfig, CuboidConfig\nfrom physics_simulator import PhysicsSimulator\nfrom pathlib import Path\n\ndef main():\n   # Initialize simulator\n   my_config = PhysicsSimulatorConfig()\n   physics_simulator = PhysicsSimulator(my_config)\n   physics_simulator.add_default_scene()\n\n   # Add cube 1\n   cube_1_config = CuboidConfig(\n       \nprim_path=Path(physics_simulator.root_prim_path).joinpath(\"cube_1\"),\n       position=[2, 2, 2],\n       orientation=[0, 0, 0, 1],\n       scale=[1, 1, 1],\n       color=[1.0, 0.0, 0.0],\n   )\n   cube_1_path = physics_simulator.add_object(cube_1_config)\n\n   # Add cube 2\n   cube_2_config = CuboidConfig(\n       \nprim_path=Path(physics_simulator.root_prim_path).joinpath(\"cube_2\"),\n       position=[0, 0, 2],\n       orientation=[0, 0, 0, 1],\n       scale=[1, 1, 1],\n       color=[0.0, 1.0, 0.0],\n   )\n   cube_2_path = physics_simulator.add_object(cube_2_config)\n\n   # Add cube 3\n   cube_3_config = CuboidConfig(\n       \nprim_path=Path(physics_simulator.root_prim_path).joinpath(\"cube_3\"),\n       position=[-2, -2, 2],\n       orientation=[0, 0, 0, 1],\n       scale=[1, 1, 1],\n       color=[0.0, 0.0, 1.0],\n   )\n   cube_3_path = physics_simulator.add_object(cube_3_config)\n\n   # Initialize and run\n\n--- Source PDF page 9 ---\n\nphysics_simulator.initialize()\n   physics_simulator.get_object_state(cube_1_path)\n   physics_simulator.loop()\n   physics_simulator.close()\n \n \n \n4.2.3.Add Mesh Object \nfrom synthnova_config import PhysicsSimulatorConfig, MeshConfig, \nRobotConfig\nfrom physics_simulator import PhysicsSimulator\nfrom pathlib import Path\n\ndef main():\n   # Initialize simulator\n   my_config = PhysicsSimulatorConfig()\n   physics_simulator = PhysicsSimulator(my_config)\n   physics_simulator.add_default_scene()\n\n   # Add robot\n   robot_config = RobotConfig(\n       prim_path=\"/World/Galbot\",\n       name=\"galbot_one_charlie\",\n       mjcf_path=Path()\n           .joinpath(physics_simulator.synthnova_assets_directory)\n           .joinpath(\"synthnova_assets\")\n           .joinpath(\"robot\")\n           .joinpath(\"galbot_one_charlie_description\")\n           .joinpath(\"galbot_one_charlie.xml\"),\n       position=[0, 0, 0],\n       orientation=[0, 0, 0, 1]\n   )\n   physics_simulator.add_robot(robot_config)\n\n   # Add shelf mesh\n   shelf_config = MeshConfig(\n       prim_path=\"/World/Shelf\",\n       name=\"shelf\",\n       mjcf_path=Path()\n           .joinpath(physics_simulator.synthnova_assets_directory)\n           .joinpath(\"synthnova_assets\")\n           .joinpath(\"default\")\n           .joinpath(\"shelves\")\n           .joinpath(\"1\")\n           .joinpath(\"model\")\n\n--- Source PDF page 10 ---\n\n.joinpath(\"mjcf\")\n           .joinpath(\"convex_decomposition.xml\"),\n       position=[0.55, 0, 0],\n       orientation=[0, 0, 0, 1]\n   )\n   physics_simulator.add_object(shelf_config)\n\n   # Add bottle\n   bottle_config = MeshConfig(\n       prim_path=\"/World/Bottle\",\n       name=\"bottle\",\n       mjcf_path=Path()\n           .joinpath(physics_simulator.synthnova_assets_directory)\n           .joinpath(\"synthnova_assets\")\n           .joinpath(\"default\")\n           .joinpath(\"skus\")\n           .joinpath(\"1\")\n           .joinpath(\"model\")\n           .joinpath(\"mjcf\")\n           .joinpath(\"convex_decomposition.xml\"),\n       position=[0.55, 0, 0.1],\n       orientation=[0, 0, 0, 1],\n       scale=[0.122, 0.122, 0.122]\n   )\n   physics_simulator.add_object(bottle_config)\n\n   # Initialize and run\n   physics_simulator.initialize()\n   physics_simulator.loop()\n   physics_simulator.close()\n \n \n \n4.3.Control parts of Galbot using galbot_interface \n4.3.1.Chassis Control \n \nfrom physics_simulator import PhysicsSimulator\nfrom physics_simulator.galbot_interface import GalbotInterface, \nGalbotInterfaceConfig\nfrom physics_simulator.utils.data_types import JointTrajectory\nfrom synthnova_config import PhysicsSimulatorConfig, RobotConfig\nimport numpy as np\nfrom pathlib import Path\n\n--- Source PDF page 11 ---\n\ndef interpolate_joint_positions(start_positions, end_positions, steps):\n   return np.linspace(start_positions, end_positions, steps)\n\ndef main():\n   # Create sim config\n   my_config = PhysicsSimulatorConfig()\n   physics_simulator = PhysicsSimulator(my_config)\n   physics_simulator.add_default_scene()\n\n   # Add robot\n   robot_config = RobotConfig(\n       prim_path=\"/World/Galbot\",\n       name=\"galbot_one_charlie\",\n       mjcf_path=Path()\n           .joinpath(physics_simulator.synthnova_assets_directory)\n           .joinpath(\"synthnova_assets\")\n           .joinpath(\"robot\")\n           .joinpath(\"galbot_one_charlie_description\")\n           .joinpath(\"galbot_one_charlie_olympic.xml\"),\n       position=[0, 0, 0],\n       orientation=[0, 0, 0, 1]\n   )\n   robot_path = physics_simulator.add_robot(robot_config)\n   physics_simulator.initialize()\n\n   # Initialize the galbot interface\n   galbot_interface_config = GalbotInterfaceConfig()\n   \ngalbot_interface_config.modules_manager.enabled_modules.append(\"chassis\")\n   galbot_interface_config.chassis.joint_names = [\n       f\"{robot_config.name}/mobile_forward_joint\",\n       f\"{robot_config.name}/mobile_side_joint\",\n       f\"{robot_config.name}/mobile_yaw_joint\",\n   ]\n   galbot_interface_config.robot.prim_path = robot_path\n\n   galbot_interface = GalbotInterface(\n       galbot_interface_config=galbot_interface_config,\n       simulator=physics_simulator\n   )\n   galbot_interface.initialize()\n\n   # Start the simulation\n   physics_simulator.step()\n\n   # Get current joint positions\n\n--- Source PDF page 12 ---\n\ncurrent_joint_positions = \ngalbot_interface.chassis.get_joint_positions()\n   target_joint_positions = [1, 6, 1.5]\n\n   # Interpolate joint positions\n   positions = interpolate_joint_positions(\n       current_joint_positions, target_joint_positions, 5000\n   )\n   # Create a joint trajectory\n   joint_trajectory = JointTrajectory(positions=positions)\n\n   # Follow the trajectory\n   galbot_interface.chassis.follow_trajectory(joint_trajectory)\n\n   # Run the display loop\n   physics_simulator.loop()\n   physics_simulator.close()\n \n \n \n4.3.2.Left Arm Control \n \nfrom physics_simulator import PhysicsSimulator\nfrom physics_simulator.galbot_interface import GalbotInterface, \nGalbotInterfaceConfig\nfrom physics_simulator.utils.data_types import JointTrajectory\nfrom synthnova_config import PhysicsSimulatorConfig, RobotConfig\nimport numpy as np\nfrom pathlib import Path\n\ndef main():\n   # Create sim config and add robot\n   my_config = PhysicsSimulatorConfig()\n   physics_simulator = PhysicsSimulator(my_config)\n   physics_simulator.add_default_scene()\n\n   robot_config = RobotConfig(\n       prim_path=\"/World/Galbot\",\n       name=\"galbot_one_charlie\",\n       mjcf_path=Path()\n           .joinpath(physics_simulator.synthnova_assets_directory)\n           .joinpath(\"synthnova_assets\")\n           .joinpath(\"robot\")\n           .joinpath(\"galbot_one_charlie_description\")\n           .joinpath(\"galbot_one_charlie.xml\"),\n\n--- Source PDF page 13 ---\n\nposition=[0, 0, 0],\n       orientation=[0, 0, 0, 1]\n   )\n   robot_path = physics_simulator.add_robot(robot_config)\n   physics_simulator.initialize()\n\n   # Initialize the galbot interface\n   galbot_interface_config = GalbotInterfaceConfig()\n   \ngalbot_interface_config.modules_manager.enabled_modules.append(\"left_arm\"\n)\n   galbot_interface_config.left_arm.joint_names = [\n       f\"{robot_config.name}/left_arm_joint1\",\n       f\"{robot_config.name}/left_arm_joint2\",\n       f\"{robot_config.name}/left_arm_joint3\",\n       f\"{robot_config.name}/left_arm_joint4\",\n       f\"{robot_config.name}/left_arm_joint5\",\n       f\"{robot_config.name}/left_arm_joint6\",\n       f\"{robot_config.name}/left_arm_joint7\",\n   ]\n   galbot_interface_config.robot.prim_path = robot_path\n\n   galbot_interface = GalbotInterface(\n       galbot_interface_config=galbot_interface_config,\n       simulator=physics_simulator\n   )\n   galbot_interface.initialize()\n\n   # Control arm\n   physics_simulator.step()\n   current_joint_positions = \ngalbot_interface.left_arm.get_joint_positions()\n   target_joint_positions = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7]\n\n   # Create and follow trajectory\n   positions = np.linspace(current_joint_positions, \ntarget_joint_positions, 500)\n   joint_trajectory = JointTrajectory(positions=positions)\n   galbot_interface.left_arm.follow_trajectory(joint_trajectory)\n\n   physics_simulator.loop()\n   physics_simulator.close()\n\n--- Source PDF page 14 ---\n\n4.3.3.Left Gripper Control \n \nfrom physics_simulator import PhysicsSimulator\nfrom physics_simulator.galbot_interface import GalbotInterface, \nGalbotInterfaceConfig\nfrom physics_simulator.utils.data_types import JointTrajectory\nfrom synthnova_config import PhysicsSimulatorConfig, RobotConfig\nimport numpy as np\n\nfrom pathlib import Path\n\ndef interpolate_joint_positions(start_positions, end_positions, steps):\n   return np.linspace(start_positions, end_positions, steps)\n\n\ndef main():\n   # Create sim config\n   my_config = PhysicsSimulatorConfig()\n\n   # Instantiate the simulator\n   synthnova_physics_simulator = PhysicsSimulator(my_config)\n\n   # Add default ground plane if you need\n   synthnova_physics_simulator.add_default_scene()\n\n   # Add robot\n   robot_config = RobotConfig(\n       prim_path=\"/World/Galbot\",\n       name=\"galbot_one_charlie\",\n       mjcf_path=Path()\n       .joinpath(synthnova_physics_simulator.synthnova_assets_directory)\n       .joinpath(\"synthnova_assets\")\n       .joinpath(\"robot\")\n       .joinpath(\"galbot_one_charlie_description\")\n       .joinpath(\"galbot_one_charlie.xml\"),\n       position=[0, 0, 0],\n       orientation=[0, 0, 0, 1]\n   )\n   robot_path = synthnova_physics_simulator.add_robot(robot_config)\n\n   # Initialize the simulator\n   synthnova_physics_simulator.initialize()\n\n   # Initialize the galbot interface\n   galbot_interface_config = GalbotInterfaceConfig()\n   # Enable the modules\n\n--- Source PDF page 15 ---\n\ngalbot_interface_config.modules_manager.enabled_modules.append(\"left_grip\nper\")\n   galbot_interface_config.left_gripper.joint_names = [\n       f\"{robot_config.name}/left_gripper_robotiq_85_right_knuckle_joint\"\n   ]\n   # Bind the simulation entity prim path to the interface config\n   galbot_interface_config.robot.prim_path = robot_path\n   galbot_interface = GalbotInterface(\n       galbot_interface_config=galbot_interface_config,\n       simulator=synthnova_physics_simulator,\n   )\n   galbot_interface.initialize()\n\n   # Set the gripper to close\n   galbot_interface.left_gripper.set_gripper_close()\n\n   # Run the display loop\n   synthnova_physics_simulator.loop()\n\n   # Close the simulator\n   synthnova_physics_simulator.close()\n\n\nif __name__ == \"__main__\":\n   main()\n \n \n4.4.Get Sensor infos \n4.4.1.Front Head Camera \n \nfrom physics_simulator import PhysicsSimulator\nfrom synthnova_config import (\n   PhysicsSimulatorConfig,\n   RobotConfig,\n   RgbCameraConfig,\n   RealsenseD435RgbSensorConfig,\n   DepthCameraConfig,\n   RealsenseD435DepthSensorConfig,\n)\nfrom physics_simulator.galbot_interface import GalbotInterface, \nGalbotInterfaceConfig\nfrom physics_simulator.utils import preprocess_depth\nimport os\n\n--- Source PDF page 16 ---\n\nimport numpy as np\nimport cv2\nfrom pathlib import Path\n\ndef main():\n   \"\"\"Main function to set up and run the front head camera example.\"\"\"\n   # Instantiate the simulator\n   my_config = PhysicsSimulatorConfig()\n   physics_simulator = PhysicsSimulator(my_config)\n\n   # Add default scene\n   physics_simulator.add_default_scene()\n\n   # Add robot\n   robot_config = RobotConfig(\n       prim_path=\"/World/Galbot\",\n       name=\"galbot_one_charlie\",\n       mjcf_path=Path()\n       .joinpath(physics_simulator.synthnova_assets_directory)\n       .joinpath(\"synthnova_assets\")\n       .joinpath(\"robot\")\n       .joinpath(\"galbot_one_charlie_description\")\n       .joinpath(\"galbot_one_charlie.xml\"),\n       position=[0, 0, 0],\n       orientation=[0, 0, 0, 1]\n   )\n   robot_path = physics_simulator.add_robot(robot_config)\n\n   # Add front head RGB camera (RealSense D435)\n   front_head_rgb_camera_config = RgbCameraConfig(\n       name=\"front_head_rgb_camera\",\n       prim_path=os.path.join(\n           robot_path,\n           \"head_link2\",\n           \"head_end_effector_mount_link\",\n           \"front_head_rgb_camera\",\n       ),\n       translation=[0.09321, -0.06166, 0.033],\n       rotation=[\n           0.683012701855461,\n           0.1830127020294028,\n           0.18301270202940284,\n           0.6830127018554611,\n       ],\n       sensor_config=RealsenseD435RgbSensorConfig(),\n\n--- Source PDF page 17 ---\n\nparent_entity_name=\"galbot_one_charlie/head_end_effector_mount_link\"\n   )\n   front_head_rgb_camera_path = \nphysics_simulator.add_sensor(front_head_rgb_camera_config)\n\n   # Add front head depth camera (RealSense D435)\n   front_head_depth_camera_config = DepthCameraConfig(\n       name=\"front_head_depth_camera\",\n       prim_path=os.path.join(\n           robot_path,\n           \"head_link2\",\n           \"head_end_effector_mount_link\",\n           \"front_head_depth_camera\",\n       ),\n       translation=[0.09321, -0.06166, 0.033],\n       rotation=[\n           0.683012701855461,\n           0.1830127020294028,\n           0.18301270202940284,\n           0.6830127018554611,\n       ],\n       sensor_config=RealsenseD435DepthSensorConfig(),\n       \nparent_entity_name=\"galbot_one_charlie/head_end_effector_mount_link\"\n   )\n   front_head_depth_camera_path = physics_simulator.add_sensor(\n       front_head_depth_camera_config\n   )\n\n   # Initialize the galbot interface\n   galbot_interface_config = GalbotInterfaceConfig()\n   # Enable the modules\n   \ngalbot_interface_config.modules_manager.enabled_modules.append(\"front_hea\nd_camera\")\n   # Bind the simulation entity prim path to the interface config\n   galbot_interface_config.robot.prim_path = robot_path\n   galbot_interface_config.front_head_camera.prim_path_rgb = \nfront_head_rgb_camera_path\n   galbot_interface_config.front_head_camera.prim_path_depth = (\n       front_head_depth_camera_path\n   )\n   galbot_interface = GalbotInterface(\n       galbot_interface_config=galbot_interface_config, \nsimulator=physics_simulator\n   )\n\n--- Source PDF page 18 ---\n\ngalbot_interface.initialize()\n\n   # Start the simulation\n   physics_simulator.play()\n\n   # Initial steps to stabilize the simulation\n   physics_simulator.step(10)\n\n   while True:\n       physics_simulator.step(7)\n\n       # Get rgb data\n       rgb_data = galbot_interface.front_head_camera.get_rgb()\n\n       # Get depth data\n       depth_data = galbot_interface.front_head_camera.get_depth()\n\n       # Preprocess depth data for visualization\n       # You can also use this function to preprocess the depth data for \nother purposes\n       depth_data = preprocess_depth(\n           depth_data,\n           scale=1000,  # m to mm\n           min_value=0.0,\n           max_value=3 * 1000,  # 3m to mm\n           data_type=np.uint16,\n       )\n\n       # Display images in non-blocking way\n       cv2.imshow(\"RGB Camera\", cv2.cvtColor(rgb_data, \ncv2.COLOR_RGB2BGR))\n       cv2.imshow(\"Depth Camera\", depth_data)\n\n       # Wait for 1ms and check for 'q' key to quit\n       if cv2.waitKey(1) & 0xFF == ord(\"q\"):\n           cv2.destroyAllWindows()\n           break\n\n   # Get camera parameters\n   params = galbot_interface.front_head_camera.get_parameters()\n   intrinsic_matrix = params[\"rgb\"][\"intrinsic_matrix\"]\n   print(params)\n   print(\"intrinsic_matrix: \", intrinsic_matrix)\n\n   # Close the simulator\n   physics_simulator.close()\n\n--- Source PDF page 19 ---\n\nif __name__ == \"__main__\":\n   main()\n \n \n \n4.4.2.Left Wrist Camera \n \nfrom physics_simulator import PhysicsSimulator\nfrom synthnova_config import (\nPhysicsSimulatorConfig,\nRobotConfig,\nRgbCameraConfig,\nRealsenseD415RgbSensorConfig,\nDepthCameraConfig,\nRealsenseD415DepthSensorConfig,\n)\nfrom physics_simulator.galbot_interface import GalbotInterface, \nGalbotInterfaceConfig\nfrom physics_simulator.utils import preprocess_depth\nimport os\nimport numpy as np\nimport cv2\nfrom pathlib import Path\ndef main():\n   \"\"\"Main function to set up and run the left wrist camera example.\"\"\"\n   # Instantiate the simulator\nmy_config = PhysicsSimulatorConfig()\nphysics_simulator = PhysicsSimulator(my_config)\n   # Add default scene\nphysics_simulator.add_default_scene()\n   # Add robot\nrobot_config = RobotConfig(\nprim_path=\"/World/Galbot\",\nname=\"galbot_one_charlie\",\nmjcf_path=Path()\n       .joinpath(physics_simulator.synthnova_assets_directory)\n       .joinpath(\"synthnova_assets\")\n       .joinpath(\"robot\")\n       .joinpath(\"galbot_one_charlie_description\")\n       .joinpath(\"galbot_one_charlie.xml\"),\nposition=[0, 0, 0],\norientation=[0, 0, 0, 1]\n   )\n\n--- Source PDF page 20 ---\n\nrobot_path = physics_simulator.add_robot(robot_config)\n   # Add left wrist RGB camera (RealSense D415)\nleft_wrist_rgb_camera_config = RgbCameraConfig(\nname=\"left_wrist_rgb_camera\",\nprim_path=os.path.join(\nrobot_path,\n           \"left_arm_link7\",\n           \"left_arm_end_effector_mount_link\",\n           \"left_wrist_rgb_camera\",\n       ),\ntranslation = [0.005124659527755139, 0.06720377942456242, \n-0.005653333810578162],\nrotation = [-0.0353557, 0.7194, -0.020291, -0.6934],\ncamera_axes=\"usd\",\nsensor_config=RealsenseD415RgbSensorConfig(),\nparent_entity_name=\"galbot_one_charlie/left_arm_end_effector_mount_link\"\n   )\nleft_wrist_rgb_camera_path = \nphysics_simulator.add_sensor(left_wrist_rgb_camera_config)\n   # Add left wrist depth camera (RealSense D415)\nleft_wrist_depth_camera_config = DepthCameraConfig(\nname=\"left_wrist_depth_camera\",\nprim_path=os.path.join(\nrobot_path,\n           \"left_arm_link7\",\n           \"left_arm_end_effector_mount_link\",\n           \"left_wrist_depth_camera\",\n       ),\ntranslation = [0.005124659527755139, 0.06720377942456242, \n-0.005653333810578162],\nrotation = [-0.0353557, 0.7194, -0.020291, -0.6934],\ncamera_axes=\"usd\",\nsensor_config=RealsenseD415DepthSensorConfig(),\nparent_entity_name=\"galbot_one_charlie/left_arm_end_effector_mount_link\"\n   )\nleft_wrist_depth_camera_path = physics_simulator.add_sensor(\nleft_wrist_depth_camera_config\n   )\n   # Initialize the galbot interface\ngalbot_interface_config = GalbotInterfaceConfig()\n   # Enable the modules\ngalbot_interface_config.modules_manager.enabled_modules.append(\"left_wris\nt_camera\")\n   # Bind the simulation entity prim path to the interface config\ngalbot_interface_config.robot.prim_path = robot_path\ngalbot_interface_config.left_wrist_camera.prim_path_rgb =\n\n--- Source PDF page 21 ---\n\nleft_wrist_rgb_camera_path\ngalbot_interface_config.left_wrist_camera.prim_path_depth = (\nleft_wrist_depth_camera_path\n   )\ngalbot_interface = GalbotInterface(\ngalbot_interface_config=galbot_interface_config, \nsimulator=physics_simulator\n   )\ngalbot_interface.initialize()\n   # Start the simulation\nphysics_simulator.play()\n   # Initial steps to stabilize the simulation\nphysics_simulator.step(10)\n   while True:\nphysics_simulator.step(7)\n       # Get rgb data\nrgb_data = galbot_interface.left_wrist_camera.get_rgb()\n       # Get depth data\ndepth_data = galbot_interface.left_wrist_camera.get_depth()\n       # Preprocess depth data for visualization\n       # You can also use this function to preprocess the depth data for \nother purposes\ndepth_data = preprocess_depth(\ndepth_data,\nscale=1000,  # m to mm\nmin_value=0.0,\nmax_value=5 * 1000,  # 5m to mm\ndata_type=np.uint16,\n       )\n       # Display images in non-blocking way\ncv2.imshow(\"RGB Camera\", cv2.cvtColor(rgb_data, cv2.COLOR_RGB2BGR))\ncv2.imshow(\"Depth Camera\", depth_data)\n       # Wait for 1ms and check for 'q' key to quit\n       if cv2.waitKey(1) & 0xFF == ord(\"q\"):\ncv2.destroyAllWindows()\n           break\n   # Get camera parameters\nparams = galbot_interface.left_wrist_camera.get_parameters()\nintrinsic_matrix = params[\"rgb\"][\"intrinsic_matrix\"]\n   print(params)\n   print(\"intrinsic_matrix: \", intrinsic_matrix)\n   # Close the simulator\nphysics_simulator.close()\nif __name__ == \"__main__\":\nmain()\n\n--- Source PDF page 22 ---\n\n5.Advanced Examples \n5.1.Pick a cube and place it into a box \nphysics_sim_edu/examples/ioai/ioai_grasp_env.py at ioai/master · \ngalbot-ioai/physics_sim_edu · GitHub \nThis example demonstrates a basic pick and place task using a simple state machine. The \nrobot performs the following sequence: \n1. Move to a pre-grasp position \n2. Open the gripper \n3. Move to the object \n4. Close the gripper to grasp the object \n5. Lift the object \n6. Move to the target position \n7. Open the gripper to release the object \n \n5.2.Navigate in a grid map using A* \nphysics_sim_edu/examples/ioai/ioai_nav_env.py at ioai/master · galbot-ioai/physics_sim_edu \n· GitHub \nThis example showcases autonomous navigation using the A* pathfinding algorithm. The \nrobot: \n1. Receives a target position \n2. Plans a path using A* algorithm \n3. Follows the planned path while avoiding obstacles \n4. Reaches the target position \n \n \nAppendix A: API Documentation \nRefer to https://github.com/galbot-ioai/physics_sim_edu.gitfor the detailed api documents \nAppendix B: Learning Resources \n● MuJoCo Documentation:  Overview - MuJoCo Documentation \n● PythonRobotics: Python sample codes and textbook for robotics algorithms.GitHub -\n\n--- Source PDF page 23 ---\n\nAtsushiSakai/PythonRobotics: Python sample codes and textbook for robotics \nalgorithms.(a great reference of python sample codes for different use cases) \n● Solve Inverse Kinematics in MuJoCo: Mink \n⚪ Table of Contents &mdash; mink  documentation \n● Object Detection: \n⚪ YOLO Model (YOLOv5, YOLOv7, etc.) \n■ GitHub - ultralytics/yolov5: YOLOv5 🚀 in PyTorch > ONNX > CoreML > TFLite \n■ GitHub - WongKinYiu/yolov7: Implementation of paper - YOLOv7: Trainable \nbag-of-freebies sets new state-of-the-art for real-time object detectors \n⚪ Object Grasping of Humanoid Robot Based on YOLO \n■ https://scispace.com/pdf/object-grasping-of-humanoid-robot-based-on-yolo-29id\n6r7axh.pdf",
     "gold_label": {
       "expected_answer": null,
       "grading_rubric": "Task-specific Team Challenge scoring (simulation + optional real-robot validation). Separate from Individual Contest medals.",
       "human_baseline": null
     },
-    "status": "collected",
+    "status": "partial",
     "title": "Team Challenge — Factory of the Future (Galbot)",
     "eval_unit": "session",
-    "is_multi_agent": true
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "competition_id": "ioai_team",
+    "assets": [
+      {
+        "path": "data/raw/ioai/Team-Challenge/2025/2025_IOAI_Team_Challenge_Factory_of_the_Future.pdf",
+        "mime_type": "application/pdf",
+        "role": "agent_visible",
+        "sha256": "9ea4339136c0ae03296ff7bccc1e038bbf73d2138a249911518c1b06567621d5"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/recovered_20260913/2025/task_statement.txt",
+        "role": "agent_visible",
+        "mime_type": "text/plain",
+        "sha256": "83883dff5f2c0742531d68cebb58f9bc26adca2a6aedec28f5737d9d7bd3992d"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/recovered_20260913/2025/task_contract.json",
+        "role": "agent_visible",
+        "mime_type": "application/json",
+        "sha256": "cc45f8ffbf1734958e49184e79302277b7aa3554ac073027ec14f35e4cd12961"
+      },
+      {
+        "path": "data/raw/ioai/Team-Challenge/recovered_20260913/rules_2025_v2_4.pdf",
+        "role": "agent_visible",
+        "mime_type": "application/pdf",
+        "sha256": "4d383bdb4b2756d99896aace1000bbfd9cc3042fc3d307bf3485ec44bbdf2370"
+      }
+    ],
+    "source_visibility": "asset_roles",
+    "evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/ioai_team_2025_official_scoring_protocol_v1.json",
+      "deliverable": "robot_control_program_for_factory_navigation_and_manipulation",
+      "reason": "Historical source contract restored; required execution and final scoring remain unvalidated.",
+      "scorecard_path": "data/rubrics/task_scorecards/ioai_team.json",
+      "scorecard_key": "ioai_team_2025_factory",
+      "task_contract_path": "data/raw/ioai/Team-Challenge/recovered_20260913/2025/task_contract.json",
+      "limitations": [
+        "The official guide and current simulator/referee repository are identified, but the original contest revision, scene assets and execution/scoring equivalence remain unverified.",
+        "The guide's ioai/master branch is not in the current branch list; the observed master commit postdates the event.",
+        "The upstream license restricts reuse; public repository access is not a redistribution grant.",
+        "PDF code snippets retain source line wrapping and are not validated executable scripts."
+      ]
+    },
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://ioai-official.org/team-challenge/",
+      "source_file": "data/raw/ioai/Team-Challenge/2025/2025_IOAI_Team_Challenge_Factory_of_the_Future.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/ioai/Team-Challenge/2025/2025_IOAI_Team_Challenge_Factory_of_the_Future.pdf",
+          "role": "agent_visible",
+          "sha256": "9ea4339136c0ae03296ff7bccc1e038bbf73d2138a249911518c1b06567621d5"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/recovered_20260913/2025/task_statement.txt",
+          "role": "agent_visible",
+          "sha256": "83883dff5f2c0742531d68cebb58f9bc26adca2a6aedec28f5737d9d7bd3992d"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/recovered_20260913/2025/task_contract.json",
+          "role": "agent_visible",
+          "sha256": "cc45f8ffbf1734958e49184e79302277b7aa3554ac073027ec14f35e4cd12961"
+        },
+        {
+          "path": "data/raw/ioai/Team-Challenge/recovered_20260913/rules_2025_v2_4.pdf",
+          "role": "agent_visible",
+          "sha256": "4d383bdb4b2756d99896aace1000bbfd9cc3042fc3d307bf3485ec44bbdf2370"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
+    },
+    "source_review": {
+      "report": "data/benchmarks/ioai_source_repair_20260913.json",
+      "task_contract_path": "data/raw/ioai/Team-Challenge/recovered_20260913/2025/task_contract.json",
+      "text_path": "data/raw/ioai/Team-Challenge/recovered_20260913/2025/task_statement.txt",
+      "source_pdf_pages": 23,
+      "non_whitespace_content_preserved": true,
+      "original_pdf_sha256": "9ea4339136c0ae03296ff7bccc1e038bbf73d2138a249911518c1b06567621d5",
+      "publisher_bundle_assets_verified": null,
+      "upstream_environment": {
+        "repository": "https://github.com/galbot-ioai/physics_sim_edu",
+        "revision": "f6ff7758a2094a8334d541a407135d42eadac7b8",
+        "observed_branch": "master",
+        "guide_branch": "ioai/master",
+        "guide_branch_currently_present": false,
+        "commit_date": "2025-09-11T09:24:21Z",
+        "original_contest_revision_verified": false,
+        "implementation_archived": false,
+        "runtime_executed": false,
+        "current_entry_paths": [
+          {
+            "path": "LICENSE",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "e9dd007dc511a11f532667824e6eb644d3bc7889",
+            "size": 567,
+            "url": "https://api.github.com/repos/galbot-ioai/physics_sim_edu/git/blobs/e9dd007dc511a11f532667824e6eb644d3bc7889"
+          },
+          {
+            "path": "ioai/main.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "4369c4d51e905ba89ac1b1a7ddda0392f55052ca",
+            "size": 5342,
+            "url": "https://api.github.com/repos/galbot-ioai/physics_sim_edu/git/blobs/4369c4d51e905ba89ac1b1a7ddda0392f55052ca"
+          },
+          {
+            "path": "ioai/main_referee.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "57cdcbb94537edb8b4558abb2d249445dabcd601",
+            "size": 6349,
+            "url": "https://api.github.com/repos/galbot-ioai/physics_sim_edu/git/blobs/57cdcbb94537edb8b4558abb2d249445dabcd601"
+          },
+          {
+            "path": "ioai/referee/referee.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "2fcead5c287bf16ef4a5e1ab8ced0b3adb46c9f2",
+            "size": 10415,
+            "url": "https://api.github.com/repos/galbot-ioai/physics_sim_edu/git/blobs/2fcead5c287bf16ef4a5e1ab8ced0b3adb46c9f2"
+          }
+        ],
+        "license_note": "The observed public repository license restricts use and redistribution; public visibility is not a redistribution grant."
+      }
+    }
   }
 ]

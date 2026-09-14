@@ -1,5 +1,3 @@
-# wsc_writing_gq_028
-
 Some creative works—including film, theatrical productions, and even novels—fail at the first go, but are then reworked in new ways months, years, or even decades later, in hopes that they can find that missing spark. Consider the musical Ragtime as an example of this kind of rebuilding project, then explore the selections below. In which cases did the new version of a project succeed where the first hadn’t? Should the early incarnations of a piece be studied alongside those that succeeded later, or left in the dustbin of history? 
 
  Ragtime | “ Wheels of a Dream ” (1998) vs. “ Wheels of a Dream ” (2009) 

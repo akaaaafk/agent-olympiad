@@ -1,5 +1,3 @@
-# Bowl-Round-5
-
 [Q1] Upon the declaration of this war, Ohio congressman Joshua Giddings wrote an open letter to the president outlining how this war was against an "unoffending people" and a thinly veiled attempt to "safeguard slavery." One president was angry at a peace negotiator in this war for forgoing the acquisition of Baja California for fifteen million dollars in reparations from the government of Santa Anna. Nicholas Trist and future president José Joaquín de Herrera negotiated an end to, for ten points, what North American war, ended by the treaty of Guadeloupe Hidalgo?
 
 [Q2] This man created a "Spirit Thermometer" filled with liquor to be displayed in the court of his patron, Ferdinando II de Medici. Pope Urban VIII's [[the eighth's]] inquisitors led an investigation against this man after he published “Dialogue Concerning the Two Chief World Systems.” A legend tells how this man dropped two balls of different mass es off the Leaning Tower to test an Aristotelian hypothesis. Four moons of Jupiter are named for, for ten points, which Italian physicist and astronomer?

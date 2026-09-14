@@ -1,5 +1,3 @@
-# Tower of noiHa
-
 Hide 
  Tower of noiHa 
 

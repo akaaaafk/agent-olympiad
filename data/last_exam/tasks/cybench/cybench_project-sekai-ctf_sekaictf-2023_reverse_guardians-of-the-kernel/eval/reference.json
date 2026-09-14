@@ -1,10 +1,24 @@
 {
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/cybench/benchmark.json#cybench_project-sekai-ctf_sekaictf-2023_reverse_guardians-of-the-kernel.gold_label",
-  "has_gold_answer": false,
+  "has_gold_answer": true,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/cybench/upstream/benchmark/project-sekai-ctf/sekaictf-2023/reverse/guardians-of-the-kernel/metadata/metadata.json",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+    "deliverable": "ctf_flag",
+    "limitations": [
+      "Contestant assets and the final-answer reference are separated; isolated artifact delivery and a compatible exact-match evaluator have not been validated end to end.",
+      "The original gzip/CPIO archive is delivered intact; the initializer's Linux CPIO extraction is not reproduced here."
+    ],
+    "scorecard_path": "data/rubrics/task_scorecards/cybench.json",
+    "scorecard_key": "cybench_project-sekai-ctf_sekaictf-2023_reverse_guardians-of-the-kernel",
+    "answer_key_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+    "score_basis": "Upstream metadata final-subtask answer; not a reconstruction from writeups or a live-service validation."
+  },
+  "rubric_path": "data/rubrics/cybench_upstream_answer_coverage_v1.json",
+  "deliverable": "ctf_flag"
 }

@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2000
-
 # Odyssey of the Mind — 2000 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Shrinking StructureDivisions I, II, III & IVThis Odyssey of the Mind structure problem requires the team to design and build a structure of balsa wood that will hold as much weight as possible. However, here is the catch: After the structure has supported some weight it must “shrink” from a height of between 9″ 10 inches to a height of 8-8″ inches. The team will then continue to place weights until the structure is broken. The team will present and test its structure in a performance that has a theme related to the “shrinking” structure. Time limit: 8 min. Cost limit: $75 USD.
 5. The GenieDivisions I & IIImagine if magical Genies really did exist. Then, imagine that one day you met one and it granted you three wishes. It is hard to imagine what might happen if those wishes backfired. Remember the saying, “Be careful of what you wish for, because you just might get it?” Sometimes, what you expect to be good turns out to be not at all good. Teams solving The Genie will present a humorous performance about a person who finds a Genie that grants three wishes. However, nothing is as easy as it sounds: the Genie places restrictions on the wishes, one wish backfires, and another unintentionally affects an animal. Time limit: 8 min. Cost limit: $100 USD.
 6. Make Believe ZooPrimaryZoos are fun to visit but they’re also places where we can learn a great deal about animals from faraway places. They serve as sanctuaries for endangered animals, too. Teams solving Make Believe Zoo will create five new animals and a habitat that allows them to thrive, then teach the audience about their animals. Time limit: 8 min. Cost limit: $50 USD.
+

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Technological Crisis at Shikakuro Farms</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=1000">
+<link rel="stylesheet" type="text/css" href="reset-min.css">
+<link rel="stylesheet" type="text/css" href="global.css">
+<link rel="stylesheet" type="text/css" href="world.css">
+</head>
+
+<body class="tileback">
+<div id="centralcolumn">
+
+
+   <div id="puzzletitle"><em>Agriculture</em><h1>Technological Crisis at Shikakuro Farms</h1></div>
+
+   <div id="puzzlecontent">
+      <div id="puzzle">
+
+
+
+
+
+Nikoli the Farmer has decided to remodel his two 9&times;9 livestock pens, but something 
+unfortunate has happened. His high-tech Troughmaster automated feeding systems have been 
+accidentally pre-installed at various locations from which he cannot move them. Therefore he 
+must instead find a way to put animals in the stalls leaving the Troughmasters where they are. 
+The systems work as follows:
+<ol>
+<li>The location of each Troughmaster is shown by a number in the grid, indicating the number of 
+animals that machine can feed.</li>
+<li>Each of the two pens must be partitioned into a number of rectangular enclosures, in such a 
+way that each enclosure contains exactly one Troughmaster, and exactly the number of animals the 
+Troughmaster requires.</li>
+<li>Each of the 81 stalls in the grid (including the ones where the Troughmasters are located) must contain 
+some integer number of animals between 1 and 9.</li>
+<li>Each row and column of each grid must include stalls with all nine different numbers of 
+animals. (Shikakuro Farm was formerly known as Sudoku Farm before Farmer Nikoli diversified his 
+production.)</li>
+<li>Within each rectangular enclosure, no two stalls may contain the same number of animals.</li>
+<li>Indeed, within a given enclosure, no two <b>adjacent</b> stalls may even contain <b>consecutive</b>
+numbers of animals (or else the two groups of animals may quarrel with each other). For instance, 
+if one stall has 5 animals in it, no horizontally or vertically adjacent 
+stall <b>within the same enclosure</b> may contain exactly 4 or exactly 6 animals.</li>
+</ol>
+In fact, this quarreling problem has become so great that even if two adjacent stalls in <i>different</i>
+enclosures (i.e., with an enclosure wall between them) contain consecutive numbers of animals,
+the enclosure wall between those two stalls needs to be reinforced.
+<p>See below for a sample grid and its solution.</p>
+<p><img src="grids.jpg"></p>
+
+
+<hr>
+<table>
+<tr><td style="padding-right:1em;">Sample puzzle grid:<br>
+<img src="ShikakuroSample.jpg"></td>
+<td>Solution to sample puzzle:<br>
+<img src="ShikakuroSampleSoln.png"></td></tr>
+</table>
+Note the following properties of the solution:
+<ol><li>The Latin-square constraint is satisfied: each digit appears exactly once in each row and column.</li>
+<li>Each enclosure in the solution grid contains (the location of) exactly one of the clue numbers in the puzzle grid.</li>
+<li>No digit appears more than once in any enclosure.</li>
+<li>The sum of the digits in any enclosure in the solution is equal to the corresponding clue number.</li>
+<li>Two <i>consecutive</i> digits <i>within the same enclosure</i> are never horizontally or vertically <i>adjacent</i> to each other (but consecutive digits may be adjacent on opposite sides of an enclosure wall).</li>
+</ol>
+
+
+ </div>
+   </div>
+</body>
+</html>
+

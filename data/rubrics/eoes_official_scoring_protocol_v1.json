@@ -43,30 +43,49 @@
       "source_type": "official_organizer",
       "title": "EOES home",
       "url": "https://www.eoes.science/",
-      "supports": ["two integrated assignments", "team of three", "four-hour task duration", "experimental emphasis"]
+      "supports": [
+        "two integrated assignments",
+        "team of three",
+        "four-hour task duration",
+        "experimental emphasis"
+      ]
     },
     {
       "source_type": "official_organizer",
       "title": "EOES documents",
       "url": "https://www.eoes.science/page/documentsEOES.html",
-      "supports": ["official rules, regulations, guidelines, and syllabus provenance"]
+      "supports": [
+        "official rules, regulations, guidelines, and syllabus provenance"
+      ]
     },
     {
       "source_type": "official_organizer",
       "title": "EOES 2022 results and task resources",
       "url": "https://www.eoes.science/EOES%202022/EOES_2022.html",
-      "supports": ["official marking schemes", "150 + 150 task maxima", "300 total"]
+      "supports": [
+        "official marking schemes",
+        "150 + 150 task maxima",
+        "300 total"
+      ]
     },
     {
       "source_type": "official_organizer",
       "title": "EOES 2023 results and task resources",
       "url": "https://www.eoes.science/EOES%202023/EOES_2023.html",
-      "supports": ["official marking schemes", "126.5 + 184 task maxima", "310.5 total"]
+      "supports": [
+        "official marking schemes",
+        "126.5 + 184 task maxima",
+        "310.5 total"
+      ]
     },
     {
       "source_type": "local_benchmark_evidence",
       "path": "data/benchmarks/eoes/benchmark.json",
-      "supports": ["task and answer-sheet extracts", "question-level point labels for some editions", "edition-specific source-file mapping"]
+      "supports": [
+        "task and answer-sheet extracts",
+        "question-level point labels for some editions",
+        "edition-specific source-file mapping"
+      ]
     }
   ],
   "limitations": [

@@ -1,4 +1,4 @@
-# Environment — `ioaa_group`
+# Environment
 
 ## Roster
 
@@ -15,9 +15,13 @@
 
 ## Allowed tools
 
-- query_rules
-- use_calculator
-- read_star_chart
+```json
+[
+  "query_rules",
+  "use_calculator",
+  "read_star_chart"
+]
+```
 
 ## Resources
 
@@ -63,3 +67,4 @@
   ]
 }
 ```
+

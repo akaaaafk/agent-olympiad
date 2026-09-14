@@ -1,0 +1,32 @@
+{
+  "protocol_version": "contest_session_v11",
+  "action_set_version": 9,
+  "module_version": 3,
+  "capture_note": "43 competition preparation tools added. Compared all 20 full replays against a source-and-rule-card snapshot from before the change; all pre-change hashes matched the previous fixture. Tasks, submissions, budgets, diagnostics, baseline features and complete memory event histories are unchanged. Diffs are limited to the offered action/tool surfaces, corresponding prompt/card serialization, action-set version and rule-card hashes. Historical fixtures remain untouched.",
+  "cases": {
+    "single_agent/math/fresh": "398ab02a9f786399d6fb3f608ce705c8531b8b7cee31ae01f62d9187de9e092f",
+    "single_agent/math/resume": "d7a944551b5649a7649c55278cbed8a09a86abec9eb1484731311a8459604131",
+    "single_agent/code/fresh": "981c0c1ec9357365625a38ecc157bc31f51710b993bf2d15e12a085301ff94d4",
+    "single_agent/code/resume": "0686fdb990010b8293fd0df2411d1edec1971889632a68cbdf5cb3f5460a79d6",
+    "decentralized/math/fresh": "c53e21edfbdd2c18ba29d065ccaa79b708ea53018fae0628f8bb41bee9f6a4d1",
+    "decentralized/math/resume": "47613ce5fda3960e21fcba29507b3448e151e3ab5f02b3dbc7c9f492b8edb783",
+    "decentralized/code/fresh": "5f1f20ce4c871c1fce5f19459c682d197de9d92e14464f10d2d3f7bae4385ed0",
+    "decentralized/code/resume": "d56516cb9337bddd4cf05222f513909c8ca18c2d6ed748ec26c89913dcca61e6",
+    "centralized/math/fresh": "4542e536d1831d3c983c63637c33f47094ede8f8d601395336386c5d8aa7d368",
+    "centralized/math/resume": "ba5d4df59069d3ee5ace8a426ebf99437d3a2ced005ea4eb45612a2773d445fb",
+    "centralized/code/fresh": "2104480ce6b743d3f339c04862a997dae91786acdb74ec4f9aa77792492f644f",
+    "centralized/code/resume": "bfecde0c9ca6fb9dab5923a5d2492a83c88b11885dd712853f5c455efa4eba6d",
+    "vallina_otc/math/fresh": "737c37564f989b31de867bb48b198738123ae52744f476bb2eded490c9d41469",
+    "vallina_otc/math/resume": "75a4f2cccca547336035a568bdcb57b0baef53669f7f9ef01e26f30e5ee8819a",
+    "vallina_otc/code/fresh": "b4443a77a04043745e5441bfa958a4e98757c8bba0a06145cadc9778fb2e1d4c",
+    "vallina_otc/code/resume": "01809e9f3d8ba9bc1b2e1e93335bb3e5884492b49ab511caf403ffb19e3505b6",
+    "otc/math/fresh": "c0c9e184d722ee5410346c1b1fe3c5d77c5c8451bcfa81c0cfceca8002ecc80b",
+    "otc/math/resume": "c909629f350f30de75494b878cfdfcb6bd35d89a2d39403e1b71a007f8f67944",
+    "otc/code/fresh": "90e7d4d24241690e85a14b03c6ed99bf7885c5cb5ef0b6897d7858eae7f90a82",
+    "otc/code/resume": "c88c7240bd6825073a01f38e095ca5556b40779aaf01f93b741985f88fa01018"
+  },
+  "behavior_comparison": {
+    "pre_change_snapshots_matched": 20,
+    "cases_with_unchanged_tasks_submissions_budget_diagnostics_memory": 20
+  }
+}

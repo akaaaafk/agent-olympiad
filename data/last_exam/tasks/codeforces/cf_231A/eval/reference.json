@@ -1,0 +1,27 @@
+{
+  "visibility": "hidden_until_grade",
+  "gold_pointer": "data/benchmarks/codeforces/benchmark.json#cf_231A.gold_label",
+  "has_gold_answer": false,
+  "evaluator_id": "programming_judge",
+  "evaluator_status": "sample_tests_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": "programming_judge",
+    "status": "sample_tests_ready",
+    "reason": "Public Codeforces samples materialized locally.",
+    "official_bundle_path": "data/benchmarks/codeforces/packages/231A",
+    "sample_tests_path": "data/benchmarks/codeforces/packages/231A/tests/sample",
+    "vjudge_oj": "CodeForces",
+    "vjudge_prob_num": "231A",
+    "vjudge_submit_mode": "problem",
+    "test_scope": "sample_only_local",
+    "official_verdict_requires": "remote Codeforces-compatible judge or archived secret tests",
+    "limitations": "Local execution covers public samples only and cannot establish an accepted official verdict. Remote gateway availability is an independent runtime dependency.",
+    "scorecard_path": "data/rubrics/task_scorecards/codeforces.json",
+    "scorecard_key": "cf_231A",
+    "rubric_path": "data/rubrics/codeforces_programming_judge_v1.json",
+    "deliverable": "source_code"
+  },
+  "rubric_path": "data/rubrics/codeforces_programming_judge_v1.json",
+  "deliverable": "source_code"
+}

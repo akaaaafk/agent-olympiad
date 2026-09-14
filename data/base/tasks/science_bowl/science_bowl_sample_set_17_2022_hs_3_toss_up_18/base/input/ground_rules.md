@@ -1,0 +1,3 @@
+# Competition rules
+
+DOE Science Bowl. The task represents a quiz-bowl question without a complete live buzzer match. The source-recorded active team has 4 members. Only bonus questions permit team consultation in the official event. Banned during the contest: internet access, calculators and electronic references. Work only from the materials provided with the problem. Submit one shared spoken answer; For multiple choice: the letter and option text. For short answer: the concise official-style answer only. Official toss-up/bonus timing windows; this benchmark is question-level. Treat unexposed physical, oral, live-opponent, judge, timing, or environment mechanisms as unavailable rather than simulated facts.

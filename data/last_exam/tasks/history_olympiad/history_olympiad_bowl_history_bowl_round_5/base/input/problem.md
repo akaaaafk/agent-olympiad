@@ -1,5 +1,3 @@
-# History-Bowl-Round-5
-
 [Q1] For ten points, name this second-largest city in Syria, which Libertarian Gary Johnson was curiously unaware of during the 2016 presidential election.
 
 [Q2] Leo von Klenze [[KLEN-zuh]] built a temple named for this place under the auspices of Ludwig of Bavaria, and included several busts of historical Germans. The legendary king Vanlandi visited this site in a work that describes a "historical" figure's law about the dead being burned and their ashes buried. The Heimskringla discusses that ritual for reaching this place, which is accomplished by Eric Bloodaxe, king of Norway, in an epic poem. For ten points, name this mythical hall of slain warriors that Norse pagans believed awaited them in the afterlife.

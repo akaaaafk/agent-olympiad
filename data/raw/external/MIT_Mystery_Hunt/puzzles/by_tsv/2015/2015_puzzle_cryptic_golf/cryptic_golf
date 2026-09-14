@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=1240, user-scalable=yes"></meta>
+    
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="icon" href="https://web.mit.edu/puzzle/www/2015/static/images/hunt/icon32.png" type="image/x-icon" />
+    <title>Cryptic Golf &mdash; MIT Mystery Hunt 2015</title>
+    
+    <link href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/puzzle.css" rel="stylesheet" type="text/css" />
+
+    
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/logbook.css" />
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/atlantis.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+ <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="https://web.mit.edu/puzzle/www/2015/intro.html">World Map</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="https://web.mit.edu/puzzle/www/2015/storylog.html">The Story So Far...</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Useful links <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="https://web.mit.edu/puzzle/www/2015/toc.html">List of Puzzles</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/eventschedule.html">Events Schedule</a></li>
+	    
+            <li></li>
+	    
+            <li><a href="https://web.mit.edu/puzzle/www/2015/updates.html">Updates from Sealab</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/completelog.html">Full team log</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/faq.html">FAQ</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/sponsors.html">Sponsors</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/">2015 Archive Overview</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    
+    
+    
+        <li></li>
+        
+    
+
+         
+    </ul>
+  </div><!-- /.navbar-collapse -->
+ </div>
+</nav> 
+
+  
+    <div id="artstuff">
+        <div id="atlantiscontainer">
+        <div id="leftdecor"></div>
+        <div id="rightdecor"></div>
+        </div>
+        <div id="atlantisdecor">
+            <div id="puzzle-obj"><img src="https://web.mit.edu/puzzle/www/2015//assets/puzzimages/324.png"></img></div>
+            <div id="infowindow">Location: Atlantis, Golden Tower <br />Depth: 470</div>
+        </div>
+    </div>
+
+    <div id="paper">
+       <div class="puzzle-page-header">
+        
+            <div class="sol"><a href="solution/">View Solution</a></div>
+        
+        <h1>Cryptic Golf</h1>
+        
+	    
+	        <p class="answer" id="answer_324"> Answer: click here to reveal</p>
+            
+        
+        </div>
+      <div class='puzzle'>
+        <!-- Puzzle content begins here -->
+         <p><strong>The Course</strong></p>
+
+<p>Hole 1: Absolved<br>
+Hole 2: Pilcrow<br>
+Hole 3: Story<br>
+Hole 4: Transfixed<br>
+Hole 5: Cheese<br>
+Hole 6: Suspicious<br>
+Hole 7: Spouse<br>
+Hole 8: Dolly<br>
+Hole 9: Mosaic<br>
+Hole 10: Frenchman<br>
+Hole 11: Reword<br>
+Hole 12: Viewpoint<br>
+Hole 13: Incompletely<br>
+Hole 14: Game<br>
+Hole 15: Budgerigar<br>
+Hole 16: Package<br>
+Hole 17: Eden<br>
+Hole 18: Garnish</p>
+
+<p><strong>Scorecard</strong></p>
+
+<p>Stop Bartok? Yes (bogey)<br>
+Game of wits that is a bay-dwelling sea serpent (bogey)<br>
+Ivy League university? Back down first, don't rush (birdie)<br>
+Mr. Gray's mode (bogey)<br>
+Source of courier, perhaps (bogey)<br>
+Chart depicting Raphael's innards (birdie)<br>
+Middleman evenly spelling out concept (birdie)<br>
+Fabric from site with no western border (bogey)<br>
+Sages captured by imagination (birdie)<br>
+Neruda's first words of praise for vertex (birdie)<br>
+Growin' dried fruit (bogey)<br>
+Sailors notice outspoken soldiers (bogey)<br>
+Angel playing harps around end of Rapture (birdie)<br>
+In the end, obviously clever (birdie)<br>
+Score penned by sentimental lyricist (birdie)<br>
+Take splintered wood (birdie)<br>
+Male singer's meaning (bogey)<br>
+Force to remove right hat (bogey)<p>
+
+<p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ (4)</p>
+
+        <!-- Puzzle content ends here -->
+      </div>
+    </div>
+
+
+    
+    <script type="text/javascript" src="https://web.mit.edu/puzzle/www/2015/static/bootstrap/javascripts/bootstrap.js" charset="utf-8"></script>
+    
+<script type="text/javascript">
+  $(document).ready(function(e) { $('#answer_324').click(function(e) { $('#answer_324').text("Answer: " + "MONO");});});
+</script>
+
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

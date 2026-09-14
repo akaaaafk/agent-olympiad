@@ -1,3 +1,5 @@
-# 2007/puzzles/the_joy_of_accountancy
+# VII-2: The Joy of Accountancy
 
-VII-2: The Joy of Accountancy Lesson VII-2: Accounting As Sherlock said, once you've eliminated the accountants, whatever remains must be the truth. The Joy of Accountancy While you probably know the basic rules we accountants use when we jot numbers down in the books, I bet you know very little about how creative the process of addition can be in our profession - particularly when you need to show a profit. When standard arithmetic fails, it helps to think outside the lines of the ledger and remove some barriers that used to keep your figures separate. Just remember that you must always account for any changes you make to the books to get the math to work out.
+Open `puzzle.html` for the original styled puzzle, figures and marked positions. No text-only preview replaces the visual layout.
+
+Archive limitation: The original 2007 clues, visual marks and wording are preserved. Historical facts are not modernized; image/layout-aware interpretation and end-to-end evaluation remain uncertified.

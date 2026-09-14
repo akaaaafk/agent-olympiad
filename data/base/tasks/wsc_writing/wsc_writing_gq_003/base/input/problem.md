@@ -1,5 +1,3 @@
-# wsc_writing_gq_003
-
 “Write what you know,” is the first piece of advice given to most students in writing workshops. Artists, too, tend to paint that which they’ve experienced and observed; Monet spent a lot of time at his lily pond . But there have always been some artists who blend the real with the imaginary. Consider the following works, then discuss with your team: should we respond differently to art that tries to imagine what could be, art that imagines what could never be, and art that shows us what we didn’t realize already was? 
 
  A Reversible Anthropomorphic Portrait of a Man Composed of Fruit | Giuseppe Arcimboldo 

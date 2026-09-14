@@ -1,5 +1,3 @@
-# RoboMission Senior 2022
-
 MY ROBOT MY FRIEND 
 THE CARE ROBOT
 RoboMission

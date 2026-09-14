@@ -135,11 +135,20 @@
     "rubric_path": "data/rubrics/mystery_hunt_official_answer_key_v1.json",
     "benchmark_readiness_source": "data/benchmarks/mystery_hunt/benchmark.json",
     "evaluation_status_counts": {
-      "not_ready": 261
+      "not_ready": 247
     },
     "evaluator_selection": "Use each benchmark record's evaluation; rule values are defaults only.",
     "record_evaluator_overrides": {},
-    "record_rubric_overrides": {}
+    "record_rubric_overrides": {},
+    "benchmark_score_basis": {
+      "scope": "active_isolated_puzzle_record_weights_not_official_full_hunt_scoring",
+      "active_records": 247,
+      "active_record_weight_sum": 247.0,
+      "points_per_record": 1.0,
+      "score_summary_path": "data/rubrics/mystery_hunt_active_score_summary.json",
+      "official_hunt_total": false,
+      "scoring_readiness_unchanged": true
+    }
   },
   "submission": {
     "max_count": 1

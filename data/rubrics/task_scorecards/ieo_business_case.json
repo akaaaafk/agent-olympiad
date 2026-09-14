@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.1",
+  "dataset": "ieo_business_case",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "ieo_business_case_2021",
+      "year": 2021,
+      "evaluation_status": "ready",
+      "evaluator_id": "slide_deck_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ieo_business_case_slides_50_v1.json",
+          "sha256": "6884524bd06910e0336454adfc221cac29634948a4e5aa712a1af8e4603f7773",
+          "format": "numeric_rubric",
+          "rubric_id": "ieo_business_case_slides_50_v1",
+          "total_points": 50,
+          "criteria": [
+            {
+              "id": "analytical",
+              "name": "Analytical thinking",
+              "max_score": 15,
+              "observable": true,
+              "description": "Identify the client problem and goals, synthesize relevant information, and analyze the case with sufficient scope, depth, and stakeholder awareness."
+            },
+            {
+              "id": "conceptual",
+              "name": "Conceptual thinking",
+              "max_score": 15,
+              "observable": true,
+              "description": "Use a relevant and clearly structured model, justify realistic assumptions, produce a complete and feasible strategy, and demonstrate useful creativity."
+            },
+            {
+              "id": "quantitative",
+              "name": "Quantitative thinking",
+              "max_score": 10,
+              "observable": true,
+              "description": "Use correct, transparent, and decision-relevant calculations, projections, sensitivities, and financial or operational analysis."
+            },
+            {
+              "id": "communication",
+              "name": "Written and visual communication",
+              "max_score": 10,
+              "observable": true,
+              "description": "Present a clear, persuasive, professional, and visually legible slide narrative that supports the recommendation. Score only what is visible in the submitted deck."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral delivery",
+            "presentation timing",
+            "question-and-answer performance",
+            "on-stage participation",
+            "visible teamwork during presentation"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The PDF deck is scored; live delivery, jury questions, and team-speaking balance are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ieo_business_case_2022",
+      "year": 2022,
+      "evaluation_status": "ready",
+      "evaluator_id": "slide_deck_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ieo_business_case_slides_50_v1.json",
+          "sha256": "6884524bd06910e0336454adfc221cac29634948a4e5aa712a1af8e4603f7773",
+          "format": "numeric_rubric",
+          "rubric_id": "ieo_business_case_slides_50_v1",
+          "total_points": 50,
+          "criteria": [
+            {
+              "id": "analytical",
+              "name": "Analytical thinking",
+              "max_score": 15,
+              "observable": true,
+              "description": "Identify the client problem and goals, synthesize relevant information, and analyze the case with sufficient scope, depth, and stakeholder awareness."
+            },
+            {
+              "id": "conceptual",
+              "name": "Conceptual thinking",
+              "max_score": 15,
+              "observable": true,
+              "description": "Use a relevant and clearly structured model, justify realistic assumptions, produce a complete and feasible strategy, and demonstrate useful creativity."
+            },
+            {
+              "id": "quantitative",
+              "name": "Quantitative thinking",
+              "max_score": 10,
+              "observable": true,
+              "description": "Use correct, transparent, and decision-relevant calculations, projections, sensitivities, and financial or operational analysis."
+            },
+            {
+              "id": "communication",
+              "name": "Written and visual communication",
+              "max_score": 10,
+              "observable": true,
+              "description": "Present a clear, persuasive, professional, and visually legible slide narrative that supports the recommendation. Score only what is visible in the submitted deck."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral delivery",
+            "presentation timing",
+            "question-and-answer performance",
+            "on-stage participation",
+            "visible teamwork during presentation"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The PDF deck is scored; live delivery, jury questions, and team-speaking balance are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ieo_business_case_2023",
+      "year": 2023,
+      "evaluation_status": "ready",
+      "evaluator_id": "slide_deck_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ieo_business_case_slides_50_v1.json",
+          "sha256": "6884524bd06910e0336454adfc221cac29634948a4e5aa712a1af8e4603f7773",
+          "format": "numeric_rubric",
+          "rubric_id": "ieo_business_case_slides_50_v1",
+          "total_points": 50,
+          "criteria": [
+            {
+              "id": "analytical",
+              "name": "Analytical thinking",
+              "max_score": 15,
+              "observable": true,
+              "description": "Identify the client problem and goals, synthesize relevant information, and analyze the case with sufficient scope, depth, and stakeholder awareness."
+            },
+            {
+              "id": "conceptual",
+              "name": "Conceptual thinking",
+              "max_score": 15,
+              "observable": true,
+              "description": "Use a relevant and clearly structured model, justify realistic assumptions, produce a complete and feasible strategy, and demonstrate useful creativity."
+            },
+            {
+              "id": "quantitative",
+              "name": "Quantitative thinking",
+              "max_score": 10,
+              "observable": true,
+              "description": "Use correct, transparent, and decision-relevant calculations, projections, sensitivities, and financial or operational analysis."
+            },
+            {
+              "id": "communication",
+              "name": "Written and visual communication",
+              "max_score": 10,
+              "observable": true,
+              "description": "Present a clear, persuasive, professional, and visually legible slide narrative that supports the recommendation. Score only what is visible in the submitted deck."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral delivery",
+            "presentation timing",
+            "question-and-answer performance",
+            "on-stage participation",
+            "visible teamwork during presentation"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The PDF deck is scored; live delivery, jury questions, and team-speaking balance are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ieo_business_case_2024",
+      "year": 2024,
+      "evaluation_status": "ready",
+      "evaluator_id": "slide_deck_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ieo_business_case_slides_50_v1.json",
+          "sha256": "6884524bd06910e0336454adfc221cac29634948a4e5aa712a1af8e4603f7773",
+          "format": "numeric_rubric",
+          "rubric_id": "ieo_business_case_slides_50_v1",
+          "total_points": 50,
+          "criteria": [
+            {
+              "id": "analytical",
+              "name": "Analytical thinking",
+              "max_score": 15,
+              "observable": true,
+              "description": "Identify the client problem and goals, synthesize relevant information, and analyze the case with sufficient scope, depth, and stakeholder awareness."
+            },
+            {
+              "id": "conceptual",
+              "name": "Conceptual thinking",
+              "max_score": 15,
+              "observable": true,
+              "description": "Use a relevant and clearly structured model, justify realistic assumptions, produce a complete and feasible strategy, and demonstrate useful creativity."
+            },
+            {
+              "id": "quantitative",
+              "name": "Quantitative thinking",
+              "max_score": 10,
+              "observable": true,
+              "description": "Use correct, transparent, and decision-relevant calculations, projections, sensitivities, and financial or operational analysis."
+            },
+            {
+              "id": "communication",
+              "name": "Written and visual communication",
+              "max_score": 10,
+              "observable": true,
+              "description": "Present a clear, persuasive, professional, and visually legible slide narrative that supports the recommendation. Score only what is visible in the submitted deck."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral delivery",
+            "presentation timing",
+            "question-and-answer performance",
+            "on-stage participation",
+            "visible teamwork during presentation"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The PDF deck is scored; live delivery, jury questions, and team-speaking balance are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "ieo_business_case_2025",
+      "year": 2025,
+      "evaluation_status": "ready",
+      "evaluator_id": "slide_deck_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/ieo_business_case_slides_50_v1.json",
+          "sha256": "6884524bd06910e0336454adfc221cac29634948a4e5aa712a1af8e4603f7773",
+          "format": "numeric_rubric",
+          "rubric_id": "ieo_business_case_slides_50_v1",
+          "total_points": 50,
+          "criteria": [
+            {
+              "id": "analytical",
+              "name": "Analytical thinking",
+              "max_score": 15,
+              "observable": true,
+              "description": "Identify the client problem and goals, synthesize relevant information, and analyze the case with sufficient scope, depth, and stakeholder awareness."
+            },
+            {
+              "id": "conceptual",
+              "name": "Conceptual thinking",
+              "max_score": 15,
+              "observable": true,
+              "description": "Use a relevant and clearly structured model, justify realistic assumptions, produce a complete and feasible strategy, and demonstrate useful creativity."
+            },
+            {
+              "id": "quantitative",
+              "name": "Quantitative thinking",
+              "max_score": 10,
+              "observable": true,
+              "description": "Use correct, transparent, and decision-relevant calculations, projections, sensitivities, and financial or operational analysis."
+            },
+            {
+              "id": "communication",
+              "name": "Written and visual communication",
+              "max_score": 10,
+              "observable": true,
+              "description": "Present a clear, persuasive, professional, and visually legible slide narrative that supports the recommendation. Score only what is visible in the submitted deck."
+            }
+          ],
+          "not_observable_from_deck": [
+            "oral delivery",
+            "presentation timing",
+            "question-and-answer performance",
+            "on-stage participation",
+            "visible teamwork during presentation"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "The PDF deck is scored; live delivery, jury questions, and team-speaking balance are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

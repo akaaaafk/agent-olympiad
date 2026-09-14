@@ -1,5 +1,3 @@
-# 2019-2020-Asia-Beta-Set_Bowl-Round-6
-
 [Q1] IHBB Asian Beta Set Bowl Round 6 2019-2020 Bowl Round 6 First Quarter 1.A funerary work from this civilization shows two lovers with braided hair, embracing and smiling. The Sarcophagus of the Spouses was created by people in this civilization, as was the Chimera of Arezzo, which was later owned by the Medici family. This civilization, which was wrongly credited with creating the Capitoline Wolf, produced a statue of Apollo found in its city of Veii. For ten points, name this civilization in ancient Italy whose art inﬂuenced that of ancient Rome.
 
 [Q2] 2.After this man discovered a plan by King Artag to betray him, he invaded Iberia and captured fortresses like Harmozica and Seusamora. This man was selected to replace Lucius Lucullus in a war against Mithridates VI of Pontus. Ptolemy XIII ordered the execution of this man after Julius Caesar defeated him at the Battle of Pharsalus. For ten points, name this Roman general that led the Optimates faction of the Roman Senate against Julius Caesar’s Populares.

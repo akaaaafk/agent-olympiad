@@ -9,7 +9,8 @@
       "https://www.historyolympiad.com/resources/"
     ],
     "benchmark_source": "data/benchmarks/history_olympiad/benchmark.json",
-    "method": "Transcribed from the official answer text paired with each packet in gold_label.expected_answer. Only extraction furniture is removed; printed acceptance, prompt, and rejection language is retained."
+    "method": "Transcribed from the official answer text paired with each packet in gold_label.expected_answer. Only extraction furniture is removed; printed acceptance, prompt, and rejection language is retained.",
+    "source_verified_repair_plan": "data/rubrics/source_verified_repairs_20260912.json"
   },
   "coverage": {
     "benchmark_records": 95,
@@ -17,7 +18,7 @@
     "mapped_parts": 5642,
     "records_without_usable_official_key": [],
     "limitations": [
-      "The source_file PDF paths recorded by the benchmark are not present under data/raw in this checkout, so this file cannot independently re-OCR or resolve source-extraction defects.",
+      "The archived moderator PDFs are present and contain inline answer material, so they are judge-only; contestant prompts use the answer-stripped benchmark problem_description.",
       "Only numbered Q parts recoverable from the embedded official answer section are mapped; packet scoring, buzz timing, and moderator adjudication are outside this key.",
       "No inferred aliases are added. official_guidance contains only guidance printed in the embedded source answer line."
     ]
@@ -12095,7 +12096,7 @@
         "expected": "Æthelred the Unready"
       },
       "Q10": {
-        "expected": "Province of Maryland 2020-21"
+        "expected": "Province of Maryland"
       },
       "Q11": {
         "expected": "France",
@@ -12116,7 +12117,7 @@
         "expected": "The Quran"
       },
       "Q16": {
-        "expected": "Suras. 2020-21"
+        "expected": "Suras."
       },
       "Q17": {
         "expected": "One-Child Policy"
@@ -12235,7 +12236,7 @@
         "expected": "Argentina"
       },
       "Q50": {
-        "expected": "Guyana 2020-21"
+        "expected": "Guyana"
       },
       "Q51": {
         "expected": "Marco Polo"
@@ -12263,7 +12264,7 @@
         "official_guidance": "(or Naabeehó; accept Diné before mentioned)"
       },
       "Q58": {
-        "expected": "Vidkun Quisling 2020-21"
+        "expected": "Vidkun Quisling"
       },
       "Q59": {
         "expected": "The Epic of Gilgamesh"
@@ -12284,7 +12285,7 @@
         "official_guidance": "(accept descriptive answers of the death or killing of Jesus Christ)"
       },
       "Q4": {
-        "expected": "Shanghai 2020-21"
+        "expected": "Shanghai"
       },
       "Q5": {
         "expected": "Saudi Aramco",
@@ -12299,14 +12300,14 @@
         "official_guidance": "(accept Meteo tsunamis; accept Tidal Wave s before mentioned; prompt on \"earthquake(s)\")"
       },
       "Q8": {
-        "expected": "Sochi 2020-21"
+        "expected": "Sochi"
       },
       "Q9": {
         "expected": "First Crusade",
         "official_guidance": "(accept Princes’ Crusade; prompt on \"Crusade\" or \"People's Crusade\")"
       },
       "Q10": {
-        "expected": "Jefferson Davis 2020-21"
+        "expected": "Jefferson Davis"
       },
       "Q11": {
         "expected": "Martinique"
@@ -12346,7 +12347,7 @@
         "expected": "Rohingya people"
       },
       "Q22": {
-        "expected": "Bishop Desmond Tutu 2020-21"
+        "expected": "Bishop Desmond Tutu"
       },
       "Q23": {
         "expected": "Royal Air Force",
@@ -12384,7 +12385,7 @@
         "expected": "Lucy Webb Hayes"
       },
       "Q34": {
-        "expected": "Emily Donelson 2020-21"
+        "expected": "Emily Donelson"
       },
       "Q35": {
         "expected": "[a]Britain[/a]",
@@ -12410,7 +12411,7 @@
         "expected": "Tiberius Claudius Epaphroditus"
       },
       "Q42": {
-        "expected": "“Smite my Womb” 2020-21"
+        "expected": "“Smite my Womb”"
       },
       "Q43": {
         "expected": "Arnold Schwarzenegger"
@@ -12437,7 +12438,7 @@
         "expected": "1964 or 1976"
       },
       "Q51": {
-        "expected": "Tonga 2020-21"
+        "expected": "Tonga"
       },
       "Q52": {
         "expected": "Minsk"
@@ -12539,7 +12540,7 @@
         "expected": "Louisiana"
       },
       "Q20": {
-        "expected": "Baton Rouge 2020-21"
+        "expected": "Baton Rouge"
       },
       "Q21": {
         "expected": "Jeopardy!"
@@ -12641,7 +12642,7 @@
         "expected": "Corinth"
       },
       "Q50": {
-        "expected": "Main [[MINE]] River 2020-21"
+        "expected": "Main [[MINE]] River"
       },
       "Q51": {
         "expected": "Prague Spring",
@@ -12651,7 +12652,7 @@
         "expected": "Eleanor Roosevelt"
       },
       "Q53": {
-        "expected": "Empress Dowager Cixi [[SEE-SHEE]] 2020-21"
+        "expected": "Empress Dowager Cixi [[SEE-SHEE]]"
       },
       "Q54": {
         "expected": "Falkland Islands",
@@ -12665,7 +12666,7 @@
         "official_guidance": "(accept Bataille de Verdun; accept Schlacht um Verdun)"
       },
       "Q57": {
-        "expected": "Hispaniola 2020-21"
+        "expected": "Hispaniola"
       },
       "Q58": {
         "expected": "Federal Democratic Republic of Nepal"
@@ -12691,7 +12692,7 @@
         "expected": "Justin Trudeau"
       },
       "Q4": {
-        "expected": "Abraham Lincoln 2020-21"
+        "expected": "Abraham Lincoln"
       },
       "Q5": {
         "expected": "Commonwealth of Australia"
@@ -12745,7 +12746,7 @@
         "official_guidance": "(or Firenze)"
       },
       "Q20": {
-        "expected": "Siena 2020-21"
+        "expected": "Siena"
       },
       "Q21": {
         "expected": "Silver",
@@ -12767,7 +12768,7 @@
         "official_guidance": "(or the Lao People's Democratic Republic)"
       },
       "Q26": {
-        "expected": "Battle of Dien Bien Phu 2020-21"
+        "expected": "Battle of Dien Bien Phu"
       },
       "Q27": {
         "expected": "Michigan"
@@ -12820,7 +12821,7 @@
         "expected": "Mission Accomplished"
       },
       "Q42": {
-        "expected": "Nouri al-Maliki 2020-21"
+        "expected": "Nouri al-Maliki"
       },
       "Q43": {
         "expected": "Cardiff",
@@ -12861,7 +12862,7 @@
         "official_guidance": "(or Corse)"
       },
       "Q54": {
-        "expected": "William Penn 2020-21"
+        "expected": "William Penn"
       },
       "Q55": {
         "expected": "People's Republic of China",
@@ -12875,7 +12876,7 @@
         "official_guidance": "(accept The Tube; prompt on “subway”)"
       },
       "Q58": {
-        "expected": "The Bastille Saint-Antoine 2020-21"
+        "expected": "The Bastille Saint-Antoine"
       },
       "Q59": {
         "expected": "DNA",
@@ -12903,7 +12904,7 @@
         "expected": "Epic of Gilgamesh"
       },
       "Q5": {
-        "expected": "San Francisco 2020-21"
+        "expected": "San Francisco"
       },
       "Q6": {
         "expected": "Lord Byron",
@@ -12937,7 +12938,7 @@
         "official_guidance": "(prompt on descriptive answers such as \"attacks on Jews\")"
       },
       "Q14": {
-        "expected": "Odessa 2020-21"
+        "expected": "Odessa"
       },
       "Q15": {
         "expected": "Excommunication",
@@ -12983,7 +12984,7 @@
         "official_guidance": "(or Kongeriget Danmark)"
       },
       "Q26": {
-        "expected": "Faroe Islands 2020-21"
+        "expected": "Faroe Islands"
       },
       "Q27": {
         "expected": "Juno"
@@ -13008,7 +13009,7 @@
         "expected": "William Lyons MacKenzie King"
       },
       "Q34": {
-        "expected": "Dieppe Raid 2020-21"
+        "expected": "Dieppe Raid"
       },
       "Q35": {
         "expected": "Olives"
@@ -13036,7 +13037,7 @@
         "official_guidance": "(accept Hepius)"
       },
       "Q42": {
-        "expected": "Hippodrome 2020-21"
+        "expected": "Hippodrome"
       },
       "Q43": {
         "expected": "Simon Peter",
@@ -13065,7 +13066,7 @@
         "expected": "Judas Iscariot"
       },
       "Q50": {
-        "expected": "Acts of the Apostles 2020-21"
+        "expected": "Acts of the Apostles"
       },
       "Q51": {
         "expected": "Kim Jong-Un"
@@ -13091,7 +13092,7 @@
         "expected": "Treaty of Paris"
       },
       "Q58": {
-        "expected": "William Ewart Gladstone 2020-21"
+        "expected": "William Ewart Gladstone"
       },
       "Q59": {
         "expected": "Switzerland",
@@ -13158,7 +13159,7 @@
         "official_guidance": "(accept the Hansa)"
       },
       "Q16": {
-        "expected": "Hamburg 2020-21"
+        "expected": "Hamburg"
       },
       "Q17": {
         "expected": "Jesuit(s) Order",
@@ -13178,7 +13179,7 @@
         "expected": "Girolamo Savonarola"
       },
       "Q22": {
-        "expected": "Sandro Botticelli 2020-21"
+        "expected": "Sandro Botticelli"
       },
       "Q23": {
         "expected": "Coliseum",
@@ -13219,7 +13220,7 @@
         "expected": "Edward Snowden"
       },
       "Q34": {
-        "expected": "Benghazi 2020-21"
+        "expected": "Benghazi"
       },
       "Q35": {
         "expected": "Celtic",
@@ -13247,7 +13248,7 @@
         "expected": "Germany"
       },
       "Q42": {
-        "expected": "Sardinian 2020-21"
+        "expected": "Sardinian"
       },
       "Q43": {
         "expected": "Monotheism",
@@ -13409,7 +13410,7 @@
         "expected": "Claude Monet [[moh-NEH]]"
       },
       "Q26": {
-        "expected": "Pierre-Auguste Renoir [[rehn-WAH]] 2020-21"
+        "expected": "Pierre-Auguste Renoir [[rehn-WAH]]"
       },
       "Q27": {
         "expected": "Major League Baseball"
@@ -13434,7 +13435,7 @@
         "expected": "1996"
       },
       "Q34": {
-        "expected": "Alexander Stephens 2020-21"
+        "expected": "Alexander Stephens"
       },
       "Q35": {
         "expected": "Bald Eagle"
@@ -13459,7 +13460,7 @@
         "expected": "Crane"
       },
       "Q42": {
-        "expected": "Cher Ami 2020-21"
+        "expected": "Cher Ami"
       },
       "Q43": {
         "expected": "Republic of Nicaragua",
@@ -13500,7 +13501,7 @@
         "expected": "Thomas Hobbes"
       },
       "Q54": {
-        "expected": "Battle of Gettysburg 2020-21"
+        "expected": "Battle of Gettysburg"
       },
       "Q55": {
         "expected": "The Communist Manifesto",
@@ -17538,7 +17539,7 @@
         "official_guidance": "(prompt on \"United Kingdom\" or \"U.K.\"; do not accept or prompt on \"Great Britain\" or \"England\")"
       },
       "Q16": {
-        "expected": "Giant's Causeway 2021-22 A Set History Bowl - 2021-09-23 Round 7"
+        "expected": "Giant's Causeway"
       },
       "Q17": {
         "expected": "King Zog I",
@@ -17560,7 +17561,7 @@
         "expected": "Samuel Pepys [[PEEPS]]"
       },
       "Q22": {
-        "expected": "(Second) Anglo-Dutch War 2021-22 A Set History Bowl - 2021-09-23 Round 7"
+        "expected": "(Second) Anglo-Dutch War"
       },
       "Q23": {
         "expected": "Hesiod",
@@ -17603,7 +17604,7 @@
         "official_guidance": "(or Georgy Maximilianovich Malenkov)"
       },
       "Q34": {
-        "expected": "Gheorghe Gheorghiu-Dej [[GOR-geh GOR-gyoo-DEJ]] 2021-22 A Set History Bowl - 2021-09-23 Round 7 Iroquois Confederacy Concerning the Native American Confederacy, name the......"
+        "expected": "Gheorghe Gheorghiu-Dej [[GOR-geh GOR-gyoo-DEJ]]"
       },
       "Q35": {
         "expected": "New York"
@@ -17630,7 +17631,7 @@
         "expected": "Three Sisters"
       },
       "Q42": {
-        "expected": "Mourning Wars 2021-22 A Set History Bowl - 2021-09-23 Round 7 The Berber People Concerning the history of the Berbers, name the..."
+        "expected": "Mourning Wars"
       },
       "Q43": {
         "expected": "St. Augustine of Hippo"
@@ -17857,7 +17858,7 @@
         "official_guidance": "(or Basileía tōn Seleukidōn; accept Seleucids)"
       },
       "Q42": {
-        "expected": "Battle of the Metaurus River 2021-22 Winter History Bowl Round 1 Rivers Given the clue, name the river which..."
+        "expected": "Battle of the Metaurus River"
       },
       "Q43": {
         "expected": "Amazon River",
@@ -17886,7 +17887,7 @@
         "expected": "Han River"
       },
       "Q50": {
-        "expected": "Paraná River 2021-22 Winter History Bowl Round 1"
+        "expected": "Paraná River"
       },
       "Q51": {
         "expected": "Chess",
@@ -17983,7 +17984,7 @@
         "expected": "John Locke"
       },
       "Q16": {
-        "expected": "Thomas Hobbes 2021-22 Winter History Bowl Round 2"
+        "expected": "Thomas Hobbes"
       },
       "Q17": {
         "expected": "Danube River",
@@ -18187,10 +18188,10 @@
         "official_guidance": "(prompt on \"Rhine\" alone; prompt on \"Germany\")"
       },
       "Q9": {
-        "expected": "Mayflower 2021-22 Winter History Bowl Round 3"
+        "expected": "Mayflower"
       },
       "Q10": {
-        "expected": "London 2021-22 Winter History Bowl Round 3"
+        "expected": "London"
       },
       "Q11": {
         "expected": "Pompeii",
@@ -18235,7 +18236,7 @@
         "official_guidance": "(accept Douyin before mentioned)"
       },
       "Q22": {
-        "expected": "Vine 2021-22 Winter History Bowl Round 3"
+        "expected": "Vine"
       },
       "Q23": {
         "expected": "John F. Kennedy (both underlined portions required; accept JFK; prompt on \"Kennedy\")"
@@ -18338,7 +18339,7 @@
         "expected": "Republic of Namibia"
       },
       "Q50": {
-        "expected": "Republic of Biafra 2021-22 Winter History Bowl Round 3"
+        "expected": "Republic of Biafra"
       },
       "Q51": {
         "expected": "Margaret Thatcher",
@@ -18417,7 +18418,7 @@
         "official_guidance": "(accept al-Khilāfah al-ʾUmawīyah)"
       },
       "Q10": {
-        "expected": "Republic of Uganda 2021-22 Winter History Bowl Round 4"
+        "expected": "Republic of Uganda"
       },
       "Q11": {
         "expected": "Farmers",
@@ -18509,7 +18510,7 @@
         "official_guidance": "(or Empress Dowager Cixi; or Cíxī Tàihòu)"
       },
       "Q34": {
-        "expected": "Xinhai Revolution 2021-22 Winter History Bowl Round 4 The Treaty of Versailles During the signing of the Treaty of Versailles, name the..."
+        "expected": "Xinhai Revolution"
       },
       "Q35": {
         "expected": "World War One",
@@ -18539,7 +18540,7 @@
         "official_guidance": "(or Nippon)"
       },
       "Q42": {
-        "expected": "Saarland 2021-22 Winter History Bowl Round 4 The Aztec Empire Concerning the Aztec Empire, name the..."
+        "expected": "Saarland"
       },
       "Q43": {
         "expected": "Kingdom of Spain",
@@ -18567,7 +18568,7 @@
         "expected": "Chinampas"
       },
       "Q50": {
-        "expected": "Altepetl [[ahl-teh-PEH-tul]] 2021-22 Winter History Bowl Round 4"
+        "expected": "Altepetl [[ahl-teh-PEH-tul]]"
       },
       "Q51": {
         "expected": "Liberal Party of Canada",
@@ -18597,7 +18598,7 @@
         "official_guidance": "(accept Hercules)"
       },
       "Q58": {
-        "expected": "The Jungle 2021-22 Winter History Bowl Round 4"
+        "expected": "The Jungle"
       },
       "Q59": {
         "expected": "shield",
@@ -18622,7 +18623,7 @@
         "official_guidance": "(accept Russian Empire; accept Soviet Union; accept USSR; or Union of Soviet Socialist Republics; accept CCCP; prompt on \"Armenia\"; prompt on \"Georgia\"; NOTE: Khachaturian was born to an Armenian family in modern-day Georgia, but he was a Russian, then Soviet citizen)"
       },
       "Q4": {
-        "expected": "Bow and Arrows 2021-22 Winter History Bowl Round 5"
+        "expected": "Bow and Arrows"
       },
       "Q5": {
         "expected": "Egyptian Hieroglyphs",
@@ -18685,7 +18686,7 @@
         "official_guidance": "(or Henri Philippe Benoni Omer Pétain; prompt on \"The Old Marshal\", \"le vieux Maréchal\", \"The Lion of Verdun\", or \"le lion de Verdun\")"
       },
       "Q21": {
-        "expected": "Ferdinand Foch 2021-22 Winter History Bowl Round 5"
+        "expected": "Ferdinand Foch"
       },
       "Q22": {
         "expected": "Italy",
@@ -18864,7 +18865,7 @@
         "official_guidance": "(or Oases; accept specifics like Siwa Oasis)"
       },
       "Q9": {
-        "expected": "Henry Clay Sr. 2021-22 Winter History Bowl Round 6"
+        "expected": "Henry Clay Sr."
       },
       "Q10": {
         "expected": "Toronto",
@@ -18984,7 +18985,7 @@
         "official_guidance": "(accept Puducherry)"
       },
       "Q42": {
-        "expected": "Battle of Quiberon [[kee-beh-ROHN]] Bay 2021-22 Winter History Bowl Round 6 Reign of Suleiman the Magnificent Concerning the reign of Suleiman the Magnificent, name the..."
+        "expected": "Battle of Quiberon [[kee-beh-ROHN]] Bay"
       },
       "Q43": {
         "expected": "Ottoman Empire",
@@ -19044,7 +19045,7 @@
         "official_guidance": "(accept República del Ecuador; or Republic of the Equator, accept Ikwadur Ripuwlika; or Chawpipacha Ripuwlika; accept Ekuatur Nunka)"
       },
       "Q58": {
-        "expected": "Rhode Island 2021-22 Winter History Bowl Round 6 Extra Questions"
+        "expected": "Rhode Island"
       },
       "Q59": {
         "expected": "Alfred Nobel",
@@ -19091,7 +19092,7 @@
         "official_guidance": "(accept Moneyers; prompt on \"banks\"; prompt on descriptive answers involving making money)"
       },
       "Q10": {
-        "expected": "Lake Chad 2021-22 Winter History Bowl Round 7"
+        "expected": "Lake Chad"
       },
       "Q11": {
         "expected": "Republic of Zimbabwe",
@@ -19136,7 +19137,7 @@
         "official_guidance": "(or Shark bite; accept descriptive answers involving humans being attacked and/or injured by sharks)"
       },
       "Q22": {
-        "expected": "Cape Cod 2021-22 Winter History Bowl Round 7"
+        "expected": "Cape Cod"
       },
       "Q23": {
         "expected": "Arthur Miller",
@@ -19178,7 +19179,7 @@
         "official_guidance": "(or Scorpion II; accept The Scorpion King)"
       },
       "Q34": {
-        "expected": "Manetho [[MAN-ih-thoo]] (be lenient on pronunciation) 2021-22 Winter History Bowl Round 7 Nero Concerning Roman Emperor Nero, name the..."
+        "expected": "Manetho [[MAN-ih-thoo]] (be lenient on pronunciation)"
       },
       "Q35": {
         "expected": "Great Britain",

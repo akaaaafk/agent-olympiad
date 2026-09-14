@@ -17,6 +17,7 @@ canonical names and argument dictionaries.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+import json
 import re
 from typing import Any, Iterable, Mapping
 
@@ -105,6 +106,8 @@ def render_text_signature(spec: ActionSpec) -> str:
     """How the text protocol spells this action's PAYLOAD, e.g. ``[<problem_id> |] <content>``."""
     if spec.name in _SIGNATURE_OVERRIDES:
         return _SIGNATURE_OVERRIDES[spec.name]
+    if spec.pack == "contest_preparation":
+        return "JSON object with fields: " + ", ".join(spec.argument_fields)
     fields = spec.text_payload_fields
     if fields is None:
         fields = (spec.primary_argument,) if spec.primary_argument else ()
@@ -198,6 +201,15 @@ def normalize_invocation(
 
     if isinstance(payload, Mapping):
         arguments = dict(payload)
+    elif spec.pack == "contest_preparation":
+        try:
+            arguments = json.loads(text_payload)
+        except (json.JSONDecodeError, TypeError):
+            arguments = None
+        if not isinstance(arguments, dict):
+            return Invocation(action=action, spec=spec,
+                              errors=("preparation PAYLOAD must be a JSON object matching the tool arguments",),
+                              text_payload=text_payload)
     else:
         arguments = split_text_payload(spec, spec.text_payload_fields, text_payload)
     if coerce:

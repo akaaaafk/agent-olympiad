@@ -1,0 +1,11 @@
+{
+  "session_id": "science_bowl_session_sample-set-16_set-6-hs-2021",
+  "competition_id": "science_bowl",
+  "problem_ids": [
+    "science_bowl_sample_set_16_set_6_hs_2021_toss_up_11"
+  ],
+  "description": "OTC contest-session manifest for science_bowl_session_sample-set-16_set-6-hs-2021 (1 tasks)",
+  "split_parts": false,
+  "task_family": "short_answer",
+  "competition_description": "Science Bowl toss-up and bonus questions across scientific subjects, answered directly with a short choice, term, or value."
+}

@@ -1,5 +1,3 @@
-# Team Competition 2021
-
 Team Competition
 Q1-1
 English (Official)

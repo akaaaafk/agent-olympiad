@@ -2,9 +2,29 @@
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/iol_team/benchmark.json#iol_team_2024.gold_label",
   "has_gold_answer": false,
-  "evaluator_id": "rubric_llm_v1",
-  "evaluator_status": "ready",
-  "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-  "deliverable": "worked_answers",
-  "solution_file": "data/raw/iol/iol-2024-team-sol.en.pdf"
+  "evaluator_id": null,
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/iol/recovered_20260913/2024/iol-2024-t-1-slide.pdf",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/iol_team_2024_printed_points_v1.json",
+    "deliverable": "team_worked_answer",
+    "judge_assets": [
+      "data/raw/iol/recovered_20260913/2024/iol-2024-t-1-slide.pdf"
+    ],
+    "limitations": [
+      "Official 12-page presentation supplies partial worked solutions, including graphical trees; not a complete marking scheme.",
+      "No explicit Assignment E answer list or tie-breaker M answer was found in the presentation.",
+      "A-L total 90 regular points. Assignment M is a separate 10-point tie-breaker, not part of the regular denominator.",
+      "Image-aware tree interpretation and per-item grading have not been validated end to end."
+    ],
+    "scorecard_path": "data/rubrics/task_scorecards/iol_team.json",
+    "scorecard_key": "iol_team_2024",
+    "source_repair_report": "data/benchmarks/iol_source_repair_20260913.json",
+    "score_basis": "Printed official allocations: 90 regular points; partial reference only. M has 10 separate tie-break points.",
+    "scoring_validation_status": "partial_reference_not_end_to_end_validated"
+  },
+  "rubric_path": "data/rubrics/iol_team_2024_printed_points_v1.json",
+  "deliverable": "team_worked_answer"
 }

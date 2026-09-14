@@ -1,0 +1,8 @@
+/* line 3, ../../sass/treasure_chest.scss */
+body {
+  background: url("css-17.png") no-repeat calc(50% - 100px) 100px, -webkit-gradient(linear, to bottom, to top, color-stop(0%, #3a7d9c), color-stop(100%, #3f3374)) repeat-x;
+  background: url("css-17.png") no-repeat calc(50% - 100px) 100px, -webkit-linear-gradient(to bottom, #3a7d9c, #3f3374) repeat-x;
+  background: url("css-17.png") no-repeat calc(50% - 100px) 100px, -moz-linear-gradient(to bottom, #3a7d9c, #3f3374) repeat-x;
+  background: url("css-17.png") no-repeat calc(50% - 100px) 100px, -o-linear-gradient(to bottom, #3a7d9c, #3f3374) repeat-x;
+  background: url("css-17.png") no-repeat calc(50% - 100px) 100px, linear-gradient(to bottom, #3a7d9c, #3f3374) repeat-x;
+}

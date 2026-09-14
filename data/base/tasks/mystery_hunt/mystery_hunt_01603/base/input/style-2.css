@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  src: url("css-1.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Alice';
+  font-style: normal;
+  font-weight: 400;
+  src: url("css-2.ttf") format('truetype');
+}

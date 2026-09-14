@@ -1,0 +1,3 @@
+# Competition rules
+
+Philip C. Jessup International Law Moot Court Competition. The team prepares a case, presents it, and responds to judges or opponents. The source-recorded active team may have 2 to 5 members; the runner default is 5. Collaborate only within the team under contest rules. Banned during the contest: calculators and running code. Permitted: internet access. Paper and pencil are always available. Submit one shared written memorial; Submit the written memorial/case analysis and a concise oral outline. Multi-month memorial preparation plus oral rounds. Treat unexposed physical, oral, live-opponent, judge, timing, or environment mechanisms as unavailable rather than simulated facts.

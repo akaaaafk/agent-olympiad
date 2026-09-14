@@ -1,0 +1,2466 @@
+{
+  "task_code": "cipher",
+  "year": 2023,
+  "official_archive_url": "https://iio.team/competition/tasks/2023",
+  "publisher_test_folder": "https://drive.google.com/drive/folders/1WaYSIHYXFsA3Hza_SpAsiEcC_k41uO2u?usp=drive_link",
+  "reference_manifest": "data/raw/iiot/2023/cipher/reference_manifest.json",
+  "files": [
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher0.in",
+      "name": "Cipher0.in",
+      "kind": "input",
+      "sha256": "14c47665eadd5d2a969e3e167479da7fa5228939db6de304d8ba9a574760f152",
+      "bytes": 62,
+      "publisher_file_id": "1e2WuB8vKJ-JNr9Ga9IAgbftSfkER1m5j",
+      "source_url": "https://drive.google.com/uc?export=download&id=1e2WuB8vKJ-JNr9Ga9IAgbftSfkER1m5j",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher1_1.in",
+      "name": "Cipher1_1.in",
+      "kind": "input",
+      "sha256": "0bbb974557cd4cbb1c0499810f9ae5011ced5d9e6a7a36f00260a20a30e7f70d",
+      "bytes": 55515,
+      "publisher_file_id": "1xV8itXchX187CBJuTSCFTwOc0UtP2iUi",
+      "source_url": "https://drive.google.com/uc?export=download&id=1xV8itXchX187CBJuTSCFTwOc0UtP2iUi",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher1_2.in",
+      "name": "Cipher1_2.in",
+      "kind": "input",
+      "sha256": "b1386b92908fcb1351166bc2edb15849333526cd8c4fe24ccd7209671d1904ea",
+      "bytes": 54891,
+      "publisher_file_id": "1aqZ7cEAB6GtjyMgkaDrqHa6h_ikonYz8",
+      "source_url": "https://drive.google.com/uc?export=download&id=1aqZ7cEAB6GtjyMgkaDrqHa6h_ikonYz8",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher1_3.in",
+      "name": "Cipher1_3.in",
+      "kind": "input",
+      "sha256": "249e6fe524d09f798e6445a7d5e5bc917704f1933a40ce49263b08967fbdd87a",
+      "bytes": 56609,
+      "publisher_file_id": "1z44wtczaFRDzWkYs11sRxC2lSgpnRb9a",
+      "source_url": "https://drive.google.com/uc?export=download&id=1z44wtczaFRDzWkYs11sRxC2lSgpnRb9a",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher1_4.in",
+      "name": "Cipher1_4.in",
+      "kind": "input",
+      "sha256": "fc319c74ab6346c1ee5c2e8660de564824c5666d7309070ab7ef0f860126a606",
+      "bytes": 49628,
+      "publisher_file_id": "1ORy5EHSk4XIeiuyn06hLaTMWB6v-TWQY",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ORy5EHSk4XIeiuyn06hLaTMWB6v-TWQY",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher1_5.in",
+      "name": "Cipher1_5.in",
+      "kind": "input",
+      "sha256": "4bf5d70b2f462912860e7c365a63cb8af7f7b79ecfd0a551c789fa381a3a0eb0",
+      "bytes": 58392,
+      "publisher_file_id": "1hvQTv1q1OcV4-6wMUDg2p2OFa9TTnO6B",
+      "source_url": "https://drive.google.com/uc?export=download&id=1hvQTv1q1OcV4-6wMUDg2p2OFa9TTnO6B",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher1_6.in",
+      "name": "Cipher1_6.in",
+      "kind": "input",
+      "sha256": "e3094460a6eaa55d823fd38c414a92ea05b18717431274c21354e3f6a6b30f8f",
+      "bytes": 56327,
+      "publisher_file_id": "1Nt6VBrIguoVkBY2CvTbemsgob-pBmI2q",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Nt6VBrIguoVkBY2CvTbemsgob-pBmI2q",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher1_7.in",
+      "name": "Cipher1_7.in",
+      "kind": "input",
+      "sha256": "f5c2df26334855ad10a7bc0322ffa3a9828ee765a4563ba57e4acdb8d4242703",
+      "bytes": 52286,
+      "publisher_file_id": "10VRqk0QoJFZlWurS6H6o5CWukBvYNMmP",
+      "source_url": "https://drive.google.com/uc?export=download&id=10VRqk0QoJFZlWurS6H6o5CWukBvYNMmP",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher1_8.in",
+      "name": "Cipher1_8.in",
+      "kind": "input",
+      "sha256": "992e8c87e8f2cee2661c6bb6a869550e35c4d81e0c016cfa4f636e9c7ad5d15e",
+      "bytes": 100009,
+      "publisher_file_id": "1vZ426KzBPPMGR3QnV1emFpOKMN1iu2sg",
+      "source_url": "https://drive.google.com/uc?export=download&id=1vZ426KzBPPMGR3QnV1emFpOKMN1iu2sg",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher1_9.in",
+      "name": "Cipher1_9.in",
+      "kind": "input",
+      "sha256": "7f35d796c1875147abad9cbc3261f54cbd8039e4d37de45ff918c558abecd9cf",
+      "bytes": 100010,
+      "publisher_file_id": "163YxhYkuiQQETpnG5ecgAoq6-aHdbMEm",
+      "source_url": "https://drive.google.com/uc?export=download&id=163YxhYkuiQQETpnG5ecgAoq6-aHdbMEm",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_1.in",
+      "name": "Cipher2_1.in",
+      "kind": "input",
+      "sha256": "a1c256cd732f8be470babe88bbad371b9ec78534b813a8d901ef211290979498",
+      "bytes": 480012,
+      "publisher_file_id": "1S_Ct-kH53Ip1budgNvBBCYkxKX4OR07v",
+      "source_url": "https://drive.google.com/uc?export=download&id=1S_Ct-kH53Ip1budgNvBBCYkxKX4OR07v",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_10.in",
+      "name": "Cipher2_10.in",
+      "kind": "input",
+      "sha256": "736ab33d154ae9abdd964ae522f231955563888c5d28550692d235e0ca136882",
+      "bytes": 450012,
+      "publisher_file_id": "19p_wZlmJI0VxR0sTBHx1bipgtbk1Vfxr",
+      "source_url": "https://drive.google.com/uc?export=download&id=19p_wZlmJI0VxR0sTBHx1bipgtbk1Vfxr",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_11.in",
+      "name": "Cipher2_11.in",
+      "kind": "input",
+      "sha256": "7bb7523b909ee3fdc5cdf5a71c16597e7a114ffaf87d025f7743231e5680fb6b",
+      "bytes": 450012,
+      "publisher_file_id": "1r_lUHDfcBju6aHm1ZcMkzit_id2gUyHn",
+      "source_url": "https://drive.google.com/uc?export=download&id=1r_lUHDfcBju6aHm1ZcMkzit_id2gUyHn",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_12.in",
+      "name": "Cipher2_12.in",
+      "kind": "input",
+      "sha256": "6f8f6cd0f2169d5e3fe4e38faac29ff48cc951211e14bd48c328e5b9729ae0d3",
+      "bytes": 450012,
+      "publisher_file_id": "1WJWv5PsVdgPpfT91AP9KT0n27r8T3-m8",
+      "source_url": "https://drive.google.com/uc?export=download&id=1WJWv5PsVdgPpfT91AP9KT0n27r8T3-m8",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_13.in",
+      "name": "Cipher2_13.in",
+      "kind": "input",
+      "sha256": "92732ac6606b2928063e400a5259d277fe152d446627b682fa96dee98ffa1f08",
+      "bytes": 401568,
+      "publisher_file_id": "1ytNnRKsZ-AHo_pp2-JwcfM1AglFj3eo6",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ytNnRKsZ-AHo_pp2-JwcfM1AglFj3eo6",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_14.in",
+      "name": "Cipher2_14.in",
+      "kind": "input",
+      "sha256": "9cb2da357d311fe654e2a4ff015497db1bcf0657f92cf660b87260a7a3f68070",
+      "bytes": 401576,
+      "publisher_file_id": "13CTeAEaaSsw0XVnODdUFbZ7cHv1OYv1F",
+      "source_url": "https://drive.google.com/uc?export=download&id=13CTeAEaaSsw0XVnODdUFbZ7cHv1OYv1F",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_15.in",
+      "name": "Cipher2_15.in",
+      "kind": "input",
+      "sha256": "47ff3d9ce2e4effca53971de8232c4b76dfbfc3b8d5e55e529b833c4b775ef2c",
+      "bytes": 401580,
+      "publisher_file_id": "19MZU9-oQMp9yjSyocT0TPAF4zSCZSvV4",
+      "source_url": "https://drive.google.com/uc?export=download&id=19MZU9-oQMp9yjSyocT0TPAF4zSCZSvV4",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_16.in",
+      "name": "Cipher2_16.in",
+      "kind": "input",
+      "sha256": "7d24b9f0f26d8bc9990ad6c1ea55afddcb938a1f9797f67d4c9cee9e3beb09ab",
+      "bytes": 401571,
+      "publisher_file_id": "1DAHxIT25SENOxHQ3uFQ9RWIN4NUBFPDB",
+      "source_url": "https://drive.google.com/uc?export=download&id=1DAHxIT25SENOxHQ3uFQ9RWIN4NUBFPDB",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_17.in",
+      "name": "Cipher2_17.in",
+      "kind": "input",
+      "sha256": "041168a628c19c411a6221fe12de728be90d242e4f3ca369e5372e7bf9876cd7",
+      "bytes": 401553,
+      "publisher_file_id": "1mWCkWkOFcxCkpYMMqF1P3xbKCRxAKmYA",
+      "source_url": "https://drive.google.com/uc?export=download&id=1mWCkWkOFcxCkpYMMqF1P3xbKCRxAKmYA",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_18.in",
+      "name": "Cipher2_18.in",
+      "kind": "input",
+      "sha256": "0df6fe455ed968fa514ecfddd3e28200e318e097dce52cd77c38a320098bb63c",
+      "bytes": 401578,
+      "publisher_file_id": "1c_DztC3B7jHKqukyNVd7vyM8A7gk6f54",
+      "source_url": "https://drive.google.com/uc?export=download&id=1c_DztC3B7jHKqukyNVd7vyM8A7gk6f54",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_19.in",
+      "name": "Cipher2_19.in",
+      "kind": "input",
+      "sha256": "6719dacb709f726a33547e3e3c30c0e88f50d99e0e4258caf8741703d269826d",
+      "bytes": 401577,
+      "publisher_file_id": "1I0ciepaIRiv49mvYHerMBxAhX9Tr-BSr",
+      "source_url": "https://drive.google.com/uc?export=download&id=1I0ciepaIRiv49mvYHerMBxAhX9Tr-BSr",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_2.in",
+      "name": "Cipher2_2.in",
+      "kind": "input",
+      "sha256": "b0285ed2ad7f3e1c9e093111b3b9818869fd43592e048f8da38b7d89e7a0a6c6",
+      "bytes": 480012,
+      "publisher_file_id": "1qoRu5wvF-QJC0pZTll8P2lkCkAVsO0U2",
+      "source_url": "https://drive.google.com/uc?export=download&id=1qoRu5wvF-QJC0pZTll8P2lkCkAVsO0U2",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_3.in",
+      "name": "Cipher2_3.in",
+      "kind": "input",
+      "sha256": "62124c0e913e3a8d58dca141659f138ac1eb5c27739fba6ffdf78410e941fa97",
+      "bytes": 480012,
+      "publisher_file_id": "1Jao2MZJaNy0m-pzxRKzEVtbr9Dpgsxn6",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Jao2MZJaNy0m-pzxRKzEVtbr9Dpgsxn6",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_4.in",
+      "name": "Cipher2_4.in",
+      "kind": "input",
+      "sha256": "378cf5a9937f1721a5dcfc06b972bdaa6ea72c6d324bcf772c0cae276456476c",
+      "bytes": 440012,
+      "publisher_file_id": "18_BAVFLalyKFydI2hZlXIDBtQgzUnubP",
+      "source_url": "https://drive.google.com/uc?export=download&id=18_BAVFLalyKFydI2hZlXIDBtQgzUnubP",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_5.in",
+      "name": "Cipher2_5.in",
+      "kind": "input",
+      "sha256": "51bc18627caf70ce009f5b1ba1af043c902aac507889c5b6f636f7038cbd36ff",
+      "bytes": 440012,
+      "publisher_file_id": "1gCZtmbI8CK9n8LPXaxE5S80aoKdEaWE8",
+      "source_url": "https://drive.google.com/uc?export=download&id=1gCZtmbI8CK9n8LPXaxE5S80aoKdEaWE8",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_6.in",
+      "name": "Cipher2_6.in",
+      "kind": "input",
+      "sha256": "68b958531e1572ea6a2015124c5fb570c55e5a46fe364da2c7f00df9e82a3761",
+      "bytes": 440012,
+      "publisher_file_id": "1kX6Jeda6MMQgY6rgrjx7iZmeokrK0RrA",
+      "source_url": "https://drive.google.com/uc?export=download&id=1kX6Jeda6MMQgY6rgrjx7iZmeokrK0RrA",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_7.in",
+      "name": "Cipher2_7.in",
+      "kind": "input",
+      "sha256": "4f18d30ef051edfd212a518e1c5bac87760b5f55180aa09b5de31c1ff180fcb0",
+      "bytes": 440012,
+      "publisher_file_id": "1VzEVJF7_ujg9ON3UxTamwJMYCcWpjLji",
+      "source_url": "https://drive.google.com/uc?export=download&id=1VzEVJF7_ujg9ON3UxTamwJMYCcWpjLji",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_8.in",
+      "name": "Cipher2_8.in",
+      "kind": "input",
+      "sha256": "a890bf81c775fdaee0e8c577cf08fdfb0086a4c4d50360833a120059b9e85660",
+      "bytes": 440012,
+      "publisher_file_id": "1JzVIXZntCl8hYgBSkXzta0fBUkZ4mO6c",
+      "source_url": "https://drive.google.com/uc?export=download&id=1JzVIXZntCl8hYgBSkXzta0fBUkZ4mO6c",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher2_9.in",
+      "name": "Cipher2_9.in",
+      "kind": "input",
+      "sha256": "f3c3ab0f41b69ec8881fda8a6ec930b2ae6456e85632b0f10393102a114d3d2b",
+      "bytes": 440012,
+      "publisher_file_id": "1hOpfzh72JLW7g-3l4KOtVl-Ts3MtCdie",
+      "source_url": "https://drive.google.com/uc?export=download&id=1hOpfzh72JLW7g-3l4KOtVl-Ts3MtCdie",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher3_1.in",
+      "name": "Cipher3_1.in",
+      "kind": "input",
+      "sha256": "ce547676a5472e1529531d455c29332052dd3ad5fbeb3e082ec8484b90c88e11",
+      "bytes": 227085,
+      "publisher_file_id": "1pObLGsWALjrtjwrnoEU-nprbVhVjhiZ9",
+      "source_url": "https://drive.google.com/uc?export=download&id=1pObLGsWALjrtjwrnoEU-nprbVhVjhiZ9",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher3_10.in",
+      "name": "Cipher3_10.in",
+      "kind": "input",
+      "sha256": "9ba70d4c1cd53aeac6d0c6a11622e0ba270dfcc57da57ce9e5e57f1acf3f3525",
+      "bytes": 332057,
+      "publisher_file_id": "1HknptpMkddCQDOhL2REBncmPIpRXXbk4",
+      "source_url": "https://drive.google.com/uc?export=download&id=1HknptpMkddCQDOhL2REBncmPIpRXXbk4",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher3_11.in",
+      "name": "Cipher3_11.in",
+      "kind": "input",
+      "sha256": "f59f7c02aaf502089682de848b60ae80443e473c4931b76ee018968e11cc11f5",
+      "bytes": 332305,
+      "publisher_file_id": "11SxH1NrDNH9XHq-BwjZaREd9n0U8V20Y",
+      "source_url": "https://drive.google.com/uc?export=download&id=11SxH1NrDNH9XHq-BwjZaREd9n0U8V20Y",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher3_12.in",
+      "name": "Cipher3_12.in",
+      "kind": "input",
+      "sha256": "a6b90d0205169eb3fef05883bce897675f82cae81c343de6ffcf9f432c4313b0",
+      "bytes": 332445,
+      "publisher_file_id": "1P0G_bBiZOrgwuMRwO93xk0tc8ALAmFTe",
+      "source_url": "https://drive.google.com/uc?export=download&id=1P0G_bBiZOrgwuMRwO93xk0tc8ALAmFTe",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher3_13.in",
+      "name": "Cipher3_13.in",
+      "kind": "input",
+      "sha256": "8c322e36a06d0264a9586ce99d5f5e7820e403f2cb195b839b10581a5a9c50b3",
+      "bytes": 331787,
+      "publisher_file_id": "1e4YH8ZT7N04e6E8C8WxmBd4IhyRdVNZv",
+      "source_url": "https://drive.google.com/uc?export=download&id=1e4YH8ZT7N04e6E8C8WxmBd4IhyRdVNZv",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher3_2.in",
+      "name": "Cipher3_2.in",
+      "kind": "input",
+      "sha256": "238a457ab5dd38be95a018e2476af20f552aa12c5eb5827b9d5e06668d88b81d",
+      "bytes": 219371,
+      "publisher_file_id": "15fXiYABh42sp1f40XFt69cgx0akqLgym",
+      "source_url": "https://drive.google.com/uc?export=download&id=15fXiYABh42sp1f40XFt69cgx0akqLgym",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher3_3.in",
+      "name": "Cipher3_3.in",
+      "kind": "input",
+      "sha256": "4c9b55fd2c39985ca35d70c23da77157743d8aa55e744e58c2af1a8097360833",
+      "bytes": 230967,
+      "publisher_file_id": "1ui4TvAVN4Xizrtl91HBYinr_h9Ou_N8a",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ui4TvAVN4Xizrtl91HBYinr_h9Ou_N8a",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher3_4.in",
+      "name": "Cipher3_4.in",
+      "kind": "input",
+      "sha256": "23e1f47ef2026451a84ef3d517d882cb293f5cca94bf1c7181c1b9d1d65319aa",
+      "bytes": 225840,
+      "publisher_file_id": "11N49QeeFJWmRbNDgs5FqjeASOR3LT0rZ",
+      "source_url": "https://drive.google.com/uc?export=download&id=11N49QeeFJWmRbNDgs5FqjeASOR3LT0rZ",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher3_5.in",
+      "name": "Cipher3_5.in",
+      "kind": "input",
+      "sha256": "0019c44fa8f84d3646d679fe6eb9131c5a12020e0f8f8293c245a41367fc7c84",
+      "bytes": 239167,
+      "publisher_file_id": "1k37bfWs_hUkhCL-23_UUiB0u7-MDlmo2",
+      "source_url": "https://drive.google.com/uc?export=download&id=1k37bfWs_hUkhCL-23_UUiB0u7-MDlmo2",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher3_6.in",
+      "name": "Cipher3_6.in",
+      "kind": "input",
+      "sha256": "e20eaf1fd12dab314b90880de60e183bb7f7bfdef011a5fbf88e82fc0049bc46",
+      "bytes": 219448,
+      "publisher_file_id": "1W5HFs3jcFyGBmJKg3oLuEFG58ZUNrc-F",
+      "source_url": "https://drive.google.com/uc?export=download&id=1W5HFs3jcFyGBmJKg3oLuEFG58ZUNrc-F",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher3_7.in",
+      "name": "Cipher3_7.in",
+      "kind": "input",
+      "sha256": "76e2557fa0e4173f9a50ac4641ab5abcdc16ac90f67b78ab117b9abb840cc97e",
+      "bytes": 332321,
+      "publisher_file_id": "1NDCPKHvia7Wr3XsQHTLELiV_0VKqxcYo",
+      "source_url": "https://drive.google.com/uc?export=download&id=1NDCPKHvia7Wr3XsQHTLELiV_0VKqxcYo",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher3_8.in",
+      "name": "Cipher3_8.in",
+      "kind": "input",
+      "sha256": "d88d199f972e3d5f45c817cee1e0d5c98f01e6e94728c2aa385f888657bb2f76",
+      "bytes": 332788,
+      "publisher_file_id": "1Newy-dUP_aeN6VzfsTcDHAqDwkzTx8my",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Newy-dUP_aeN6VzfsTcDHAqDwkzTx8my",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/Cipher3_9.in",
+      "name": "Cipher3_9.in",
+      "kind": "input",
+      "sha256": "5308681fb836bbfe89e34f8aca2ba8a4d3c6084ec16dc6ed870279895ec26924",
+      "bytes": 331859,
+      "publisher_file_id": "1Ya0h2ijNwDuMV1_QoXhAKb3ScoHfp6Y8",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Ya0h2ijNwDuMV1_QoXhAKb3ScoHfp6Y8",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/gen7-01.txt",
+      "name": "gen7-01.txt",
+      "kind": "input",
+      "sha256": "853db2e7c42fbd66a86b7e9f3895e29c1af74010ff2472c8e20042726756dab0",
+      "bytes": 365307,
+      "publisher_file_id": "1oDehky5SfdlKCwniJ08uzVlEZ4IMB4k5",
+      "source_url": "https://drive.google.com/uc?export=download&id=1oDehky5SfdlKCwniJ08uzVlEZ4IMB4k5",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/gen7-02.txt",
+      "name": "gen7-02.txt",
+      "kind": "input",
+      "sha256": "12c27fe5ec9d86f6cd781b62a0d91f13e660c292192dd94557087b4bb191b85f",
+      "bytes": 364738,
+      "publisher_file_id": "1NN9Tibrz0Gm05INZ6LRfvye2uvezd1rF",
+      "source_url": "https://drive.google.com/uc?export=download&id=1NN9Tibrz0Gm05INZ6LRfvye2uvezd1rF",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/gen7-03.txt",
+      "name": "gen7-03.txt",
+      "kind": "input",
+      "sha256": "c7c3272057634f9a23890aa9c3eed2daa9508ca09bd383b158d54908433a9e8f",
+      "bytes": 365270,
+      "publisher_file_id": "1L50M47I3Fo_lHHiCrZXLg2sOrLnIn_LG",
+      "source_url": "https://drive.google.com/uc?export=download&id=1L50M47I3Fo_lHHiCrZXLg2sOrLnIn_LG",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/gen7-04.txt",
+      "name": "gen7-04.txt",
+      "kind": "input",
+      "sha256": "ec6390bace8f29f9527b4c2d7855cfc80f8038ce1a6d94fb9a9e7b349d2b5e6b",
+      "bytes": 364955,
+      "publisher_file_id": "1ukb0q48NJFaNuEng_GdUzenqUvMXiRMc",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ukb0q48NJFaNuEng_GdUzenqUvMXiRMc",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/gen7-05.txt",
+      "name": "gen7-05.txt",
+      "kind": "input",
+      "sha256": "8298f4becab3bfff09a880399a3ed5c297bbc140bae30181717575270c03801c",
+      "bytes": 365293,
+      "publisher_file_id": "1PSfLDGSoqtgMpBn1jlQou1cJxY84ykgH",
+      "source_url": "https://drive.google.com/uc?export=download&id=1PSfLDGSoqtgMpBn1jlQou1cJxY84ykgH",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/gen8-01.txt",
+      "name": "gen8-01.txt",
+      "kind": "input",
+      "sha256": "ff92ea17f620a628d328633f263bdc90a7329e372cd36892c5ed5a05e11287f6",
+      "bytes": 380230,
+      "publisher_file_id": "13FbkBZPDi5y7ddI54H64MIpldaBb4XOf",
+      "source_url": "https://drive.google.com/uc?export=download&id=13FbkBZPDi5y7ddI54H64MIpldaBb4XOf",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/gen8-02.txt",
+      "name": "gen8-02.txt",
+      "kind": "input",
+      "sha256": "bdc95e3fe7c89be8c74d62eac364f34dcb139ba624214dd61c1f53156767a732",
+      "bytes": 380041,
+      "publisher_file_id": "1IH2PrR8Lv51ghgMks4625lPvUI1__wM-",
+      "source_url": "https://drive.google.com/uc?export=download&id=1IH2PrR8Lv51ghgMks4625lPvUI1__wM-",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/gen8-03.txt",
+      "name": "gen8-03.txt",
+      "kind": "input",
+      "sha256": "652ded38deb27939fd187f503b5a1a0567d057fb6716c97a45331fb50599891e",
+      "bytes": 380156,
+      "publisher_file_id": "19c3DWBc8knOOp5g1ynngL2xKqQnYOCw8",
+      "source_url": "https://drive.google.com/uc?export=download&id=19c3DWBc8knOOp5g1ynngL2xKqQnYOCw8",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/gen8-04.txt",
+      "name": "gen8-04.txt",
+      "kind": "input",
+      "sha256": "00c5afcbb1423a0cf39077790b4d6a96cca00f6c4f76bbeaf278cafe5c3adac8",
+      "bytes": 379824,
+      "publisher_file_id": "1VtjOlCfTH3kzUw615qDI4lKX48WydywK",
+      "source_url": "https://drive.google.com/uc?export=download&id=1VtjOlCfTH3kzUw615qDI4lKX48WydywK",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/gen8-05.txt",
+      "name": "gen8-05.txt",
+      "kind": "input",
+      "sha256": "f4db9dd8d3a6db487f3ff1da9532565ab11be071ecbd10cb579f8d349406cb91",
+      "bytes": 380047,
+      "publisher_file_id": "1G4-QYxtKZgyyl2d124jRK3b-P1HGPQL2",
+      "source_url": "https://drive.google.com/uc?export=download&id=1G4-QYxtKZgyyl2d124jRK3b-P1HGPQL2",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input0.txt",
+      "name": "input0.txt",
+      "kind": "input",
+      "sha256": "80c11e5fb556547ebc476f6010bfc728d98e8b34533bb4ed171ea53e11488c25",
+      "bytes": 60,
+      "publisher_file_id": "1thTZDHn7iVbu_Jmqi50-u6YP5ZFznbl0",
+      "source_url": "https://drive.google.com/uc?export=download&id=1thTZDHn7iVbu_Jmqi50-u6YP5ZFznbl0",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input1.txt",
+      "name": "input1.txt",
+      "kind": "input",
+      "sha256": "0bbb974557cd4cbb1c0499810f9ae5011ced5d9e6a7a36f00260a20a30e7f70d",
+      "bytes": 55515,
+      "publisher_file_id": "1MJNOxWcFXImrlsNgtfE-L_Dc0nosQgLz",
+      "source_url": "https://drive.google.com/uc?export=download&id=1MJNOxWcFXImrlsNgtfE-L_Dc0nosQgLz",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input10.txt",
+      "name": "input10.txt",
+      "kind": "input",
+      "sha256": "a1c256cd732f8be470babe88bbad371b9ec78534b813a8d901ef211290979498",
+      "bytes": 480012,
+      "publisher_file_id": "1t4-JxSiZcP8C1wfyUNvVhz2GPJ3OBUUH",
+      "source_url": "https://drive.google.com/uc?export=download&id=1t4-JxSiZcP8C1wfyUNvVhz2GPJ3OBUUH",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input11.txt",
+      "name": "input11.txt",
+      "kind": "input",
+      "sha256": "b0285ed2ad7f3e1c9e093111b3b9818869fd43592e048f8da38b7d89e7a0a6c6",
+      "bytes": 480012,
+      "publisher_file_id": "1ivLagr1lim8WwN7Oti5p_Yiy0t6l4c6k",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ivLagr1lim8WwN7Oti5p_Yiy0t6l4c6k",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input12.txt",
+      "name": "input12.txt",
+      "kind": "input",
+      "sha256": "62124c0e913e3a8d58dca141659f138ac1eb5c27739fba6ffdf78410e941fa97",
+      "bytes": 480012,
+      "publisher_file_id": "1pfaVOQ_uvmrjdOAGsYzqWnl0UZ8DqFiH",
+      "source_url": "https://drive.google.com/uc?export=download&id=1pfaVOQ_uvmrjdOAGsYzqWnl0UZ8DqFiH",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input13.txt",
+      "name": "input13.txt",
+      "kind": "input",
+      "sha256": "378cf5a9937f1721a5dcfc06b972bdaa6ea72c6d324bcf772c0cae276456476c",
+      "bytes": 440012,
+      "publisher_file_id": "1nisB3y0Oo2uaCgnkWgFQxPXtuFcLNMZ-",
+      "source_url": "https://drive.google.com/uc?export=download&id=1nisB3y0Oo2uaCgnkWgFQxPXtuFcLNMZ-",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input14.txt",
+      "name": "input14.txt",
+      "kind": "input",
+      "sha256": "51bc18627caf70ce009f5b1ba1af043c902aac507889c5b6f636f7038cbd36ff",
+      "bytes": 440012,
+      "publisher_file_id": "14N07j9A7tpTE9BAUelBiIV1G-kaZ0yJB",
+      "source_url": "https://drive.google.com/uc?export=download&id=14N07j9A7tpTE9BAUelBiIV1G-kaZ0yJB",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input15.txt",
+      "name": "input15.txt",
+      "kind": "input",
+      "sha256": "68b958531e1572ea6a2015124c5fb570c55e5a46fe364da2c7f00df9e82a3761",
+      "bytes": 440012,
+      "publisher_file_id": "1pNzeVHv8QF9opXCWb9i5pg_ra4ZcWQRj",
+      "source_url": "https://drive.google.com/uc?export=download&id=1pNzeVHv8QF9opXCWb9i5pg_ra4ZcWQRj",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input16.txt",
+      "name": "input16.txt",
+      "kind": "input",
+      "sha256": "4f18d30ef051edfd212a518e1c5bac87760b5f55180aa09b5de31c1ff180fcb0",
+      "bytes": 440012,
+      "publisher_file_id": "1VDuWyVKvd5QP8a-7dG9oP52rQjizdq4n",
+      "source_url": "https://drive.google.com/uc?export=download&id=1VDuWyVKvd5QP8a-7dG9oP52rQjizdq4n",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input17.txt",
+      "name": "input17.txt",
+      "kind": "input",
+      "sha256": "a890bf81c775fdaee0e8c577cf08fdfb0086a4c4d50360833a120059b9e85660",
+      "bytes": 440012,
+      "publisher_file_id": "1d4ojqS-2nhr7p0TSUVmdEKpnRWfvdZgT",
+      "source_url": "https://drive.google.com/uc?export=download&id=1d4ojqS-2nhr7p0TSUVmdEKpnRWfvdZgT",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input18.txt",
+      "name": "input18.txt",
+      "kind": "input",
+      "sha256": "f3c3ab0f41b69ec8881fda8a6ec930b2ae6456e85632b0f10393102a114d3d2b",
+      "bytes": 440012,
+      "publisher_file_id": "1_qDJzO0Y5TzzSh3LRv5M1BQKnQ5whUM8",
+      "source_url": "https://drive.google.com/uc?export=download&id=1_qDJzO0Y5TzzSh3LRv5M1BQKnQ5whUM8",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input19.txt",
+      "name": "input19.txt",
+      "kind": "input",
+      "sha256": "736ab33d154ae9abdd964ae522f231955563888c5d28550692d235e0ca136882",
+      "bytes": 450012,
+      "publisher_file_id": "1cButbVQ9QYQok7IbZav3HpbVk6RIKBEe",
+      "source_url": "https://drive.google.com/uc?export=download&id=1cButbVQ9QYQok7IbZav3HpbVk6RIKBEe",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input2.txt",
+      "name": "input2.txt",
+      "kind": "input",
+      "sha256": "b1386b92908fcb1351166bc2edb15849333526cd8c4fe24ccd7209671d1904ea",
+      "bytes": 54891,
+      "publisher_file_id": "1sQQ_uPi1ZuAEmeATdh049F9PPz7_Q12U",
+      "source_url": "https://drive.google.com/uc?export=download&id=1sQQ_uPi1ZuAEmeATdh049F9PPz7_Q12U",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input20.txt",
+      "name": "input20.txt",
+      "kind": "input",
+      "sha256": "7bb7523b909ee3fdc5cdf5a71c16597e7a114ffaf87d025f7743231e5680fb6b",
+      "bytes": 450012,
+      "publisher_file_id": "1pjrQ1aNDsbmzRRSw_3ru-rLuYmVqDxOX",
+      "source_url": "https://drive.google.com/uc?export=download&id=1pjrQ1aNDsbmzRRSw_3ru-rLuYmVqDxOX",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input21.txt",
+      "name": "input21.txt",
+      "kind": "input",
+      "sha256": "6f8f6cd0f2169d5e3fe4e38faac29ff48cc951211e14bd48c328e5b9729ae0d3",
+      "bytes": 450012,
+      "publisher_file_id": "1ghLeZ238cMg4oqiCdCK1hAIBTD0ZiuiB",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ghLeZ238cMg4oqiCdCK1hAIBTD0ZiuiB",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input22.txt",
+      "name": "input22.txt",
+      "kind": "input",
+      "sha256": "92732ac6606b2928063e400a5259d277fe152d446627b682fa96dee98ffa1f08",
+      "bytes": 401568,
+      "publisher_file_id": "18KeRx_Q9RM74-rVhJj7VpVm5g8B1x5TR",
+      "source_url": "https://drive.google.com/uc?export=download&id=18KeRx_Q9RM74-rVhJj7VpVm5g8B1x5TR",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input23.txt",
+      "name": "input23.txt",
+      "kind": "input",
+      "sha256": "9cb2da357d311fe654e2a4ff015497db1bcf0657f92cf660b87260a7a3f68070",
+      "bytes": 401576,
+      "publisher_file_id": "1yNKH_Y1dLykeQqORrz9GFpfj4CxrhAIF",
+      "source_url": "https://drive.google.com/uc?export=download&id=1yNKH_Y1dLykeQqORrz9GFpfj4CxrhAIF",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input24.txt",
+      "name": "input24.txt",
+      "kind": "input",
+      "sha256": "47ff3d9ce2e4effca53971de8232c4b76dfbfc3b8d5e55e529b833c4b775ef2c",
+      "bytes": 401580,
+      "publisher_file_id": "1xaOzTR6SoZ4hhSpE3TSzUBmilek6P_9Q",
+      "source_url": "https://drive.google.com/uc?export=download&id=1xaOzTR6SoZ4hhSpE3TSzUBmilek6P_9Q",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input25.txt",
+      "name": "input25.txt",
+      "kind": "input",
+      "sha256": "7d24b9f0f26d8bc9990ad6c1ea55afddcb938a1f9797f67d4c9cee9e3beb09ab",
+      "bytes": 401571,
+      "publisher_file_id": "1_UwefOCis-qeIa02UO16Y7TlAdxch03I",
+      "source_url": "https://drive.google.com/uc?export=download&id=1_UwefOCis-qeIa02UO16Y7TlAdxch03I",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input26.txt",
+      "name": "input26.txt",
+      "kind": "input",
+      "sha256": "041168a628c19c411a6221fe12de728be90d242e4f3ca369e5372e7bf9876cd7",
+      "bytes": 401553,
+      "publisher_file_id": "1LBfbQ5gAd8HEgacL20lEPERTsaCkJQI_",
+      "source_url": "https://drive.google.com/uc?export=download&id=1LBfbQ5gAd8HEgacL20lEPERTsaCkJQI_",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input27.txt",
+      "name": "input27.txt",
+      "kind": "input",
+      "sha256": "0df6fe455ed968fa514ecfddd3e28200e318e097dce52cd77c38a320098bb63c",
+      "bytes": 401578,
+      "publisher_file_id": "1z_KKI-qjzrDfQOz6D_Q4U71bq-snIXEO",
+      "source_url": "https://drive.google.com/uc?export=download&id=1z_KKI-qjzrDfQOz6D_Q4U71bq-snIXEO",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input28.txt",
+      "name": "input28.txt",
+      "kind": "input",
+      "sha256": "6719dacb709f726a33547e3e3c30c0e88f50d99e0e4258caf8741703d269826d",
+      "bytes": 401577,
+      "publisher_file_id": "1kLwzrA3PBmeDx4KLXscGKm3zCzk0mRS-",
+      "source_url": "https://drive.google.com/uc?export=download&id=1kLwzrA3PBmeDx4KLXscGKm3zCzk0mRS-",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input29.txt",
+      "name": "input29.txt",
+      "kind": "input",
+      "sha256": "ce547676a5472e1529531d455c29332052dd3ad5fbeb3e082ec8484b90c88e11",
+      "bytes": 227085,
+      "publisher_file_id": "18nGP8_3IWgTxoOhauamqxIao_KMXJ6fo",
+      "source_url": "https://drive.google.com/uc?export=download&id=18nGP8_3IWgTxoOhauamqxIao_KMXJ6fo",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input3.txt",
+      "name": "input3.txt",
+      "kind": "input",
+      "sha256": "249e6fe524d09f798e6445a7d5e5bc917704f1933a40ce49263b08967fbdd87a",
+      "bytes": 56609,
+      "publisher_file_id": "1N-dbSYano4NW1sD4BAGsXGGKE_ozDyRI",
+      "source_url": "https://drive.google.com/uc?export=download&id=1N-dbSYano4NW1sD4BAGsXGGKE_ozDyRI",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input30.txt",
+      "name": "input30.txt",
+      "kind": "input",
+      "sha256": "238a457ab5dd38be95a018e2476af20f552aa12c5eb5827b9d5e06668d88b81d",
+      "bytes": 219371,
+      "publisher_file_id": "1A-5vpYP9QeHFWPi5iVTuF6lCNJwsfL09",
+      "source_url": "https://drive.google.com/uc?export=download&id=1A-5vpYP9QeHFWPi5iVTuF6lCNJwsfL09",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input31.txt",
+      "name": "input31.txt",
+      "kind": "input",
+      "sha256": "4c9b55fd2c39985ca35d70c23da77157743d8aa55e744e58c2af1a8097360833",
+      "bytes": 230967,
+      "publisher_file_id": "1ca42TchBRWB97slcK18KKHcu-arh66QC",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ca42TchBRWB97slcK18KKHcu-arh66QC",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input32.txt",
+      "name": "input32.txt",
+      "kind": "input",
+      "sha256": "23e1f47ef2026451a84ef3d517d882cb293f5cca94bf1c7181c1b9d1d65319aa",
+      "bytes": 225840,
+      "publisher_file_id": "1RIKthzyxTuwKPV12tQ42wvE4E8kWhdIj",
+      "source_url": "https://drive.google.com/uc?export=download&id=1RIKthzyxTuwKPV12tQ42wvE4E8kWhdIj",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input33.txt",
+      "name": "input33.txt",
+      "kind": "input",
+      "sha256": "0019c44fa8f84d3646d679fe6eb9131c5a12020e0f8f8293c245a41367fc7c84",
+      "bytes": 239167,
+      "publisher_file_id": "1lQQbLuwpHIAC0IguEqPVwtcYc3VIH-lZ",
+      "source_url": "https://drive.google.com/uc?export=download&id=1lQQbLuwpHIAC0IguEqPVwtcYc3VIH-lZ",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input34.txt",
+      "name": "input34.txt",
+      "kind": "input",
+      "sha256": "e20eaf1fd12dab314b90880de60e183bb7f7bfdef011a5fbf88e82fc0049bc46",
+      "bytes": 219448,
+      "publisher_file_id": "1b2gkSOKiChn_JCWu00_8LwxtePhX3ohP",
+      "source_url": "https://drive.google.com/uc?export=download&id=1b2gkSOKiChn_JCWu00_8LwxtePhX3ohP",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input35.txt",
+      "name": "input35.txt",
+      "kind": "input",
+      "sha256": "76e2557fa0e4173f9a50ac4641ab5abcdc16ac90f67b78ab117b9abb840cc97e",
+      "bytes": 332321,
+      "publisher_file_id": "15Q6KTsmHnPRAG574hYlGxIv9Y58WWTDh",
+      "source_url": "https://drive.google.com/uc?export=download&id=15Q6KTsmHnPRAG574hYlGxIv9Y58WWTDh",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input36.txt",
+      "name": "input36.txt",
+      "kind": "input",
+      "sha256": "d88d199f972e3d5f45c817cee1e0d5c98f01e6e94728c2aa385f888657bb2f76",
+      "bytes": 332788,
+      "publisher_file_id": "1AsfXJxrdzFYgg6RsooNyArDY1YYIrO-N",
+      "source_url": "https://drive.google.com/uc?export=download&id=1AsfXJxrdzFYgg6RsooNyArDY1YYIrO-N",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input37.txt",
+      "name": "input37.txt",
+      "kind": "input",
+      "sha256": "5308681fb836bbfe89e34f8aca2ba8a4d3c6084ec16dc6ed870279895ec26924",
+      "bytes": 331859,
+      "publisher_file_id": "1GWc6FLqBOPTLC5ah-Czwanj_Hy6nEed3",
+      "source_url": "https://drive.google.com/uc?export=download&id=1GWc6FLqBOPTLC5ah-Czwanj_Hy6nEed3",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input38.txt",
+      "name": "input38.txt",
+      "kind": "input",
+      "sha256": "9ba70d4c1cd53aeac6d0c6a11622e0ba270dfcc57da57ce9e5e57f1acf3f3525",
+      "bytes": 332057,
+      "publisher_file_id": "1LriKSE2Fg6vsX-yGKFi4dfgbudwL1dix",
+      "source_url": "https://drive.google.com/uc?export=download&id=1LriKSE2Fg6vsX-yGKFi4dfgbudwL1dix",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input39.txt",
+      "name": "input39.txt",
+      "kind": "input",
+      "sha256": "f59f7c02aaf502089682de848b60ae80443e473c4931b76ee018968e11cc11f5",
+      "bytes": 332305,
+      "publisher_file_id": "1u_e9A4g01vkdovJpzG_WQKRqohJp6DZs",
+      "source_url": "https://drive.google.com/uc?export=download&id=1u_e9A4g01vkdovJpzG_WQKRqohJp6DZs",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input4.txt",
+      "name": "input4.txt",
+      "kind": "input",
+      "sha256": "fc319c74ab6346c1ee5c2e8660de564824c5666d7309070ab7ef0f860126a606",
+      "bytes": 49628,
+      "publisher_file_id": "1R6d4wAKcuvJGMXNBNsHj9qwjMkDUS9-X",
+      "source_url": "https://drive.google.com/uc?export=download&id=1R6d4wAKcuvJGMXNBNsHj9qwjMkDUS9-X",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input40.txt",
+      "name": "input40.txt",
+      "kind": "input",
+      "sha256": "a6b90d0205169eb3fef05883bce897675f82cae81c343de6ffcf9f432c4313b0",
+      "bytes": 332445,
+      "publisher_file_id": "19bmuWkGK5TyqdSs3CYZQ2WHMkqG608SH",
+      "source_url": "https://drive.google.com/uc?export=download&id=19bmuWkGK5TyqdSs3CYZQ2WHMkqG608SH",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input41.txt",
+      "name": "input41.txt",
+      "kind": "input",
+      "sha256": "8c322e36a06d0264a9586ce99d5f5e7820e403f2cb195b839b10581a5a9c50b3",
+      "bytes": 331787,
+      "publisher_file_id": "1fhIDNqEYTt5fepr5Xz1lb3kc7gFr6bmy",
+      "source_url": "https://drive.google.com/uc?export=download&id=1fhIDNqEYTt5fepr5Xz1lb3kc7gFr6bmy",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input42.txt",
+      "name": "input42.txt",
+      "kind": "input",
+      "sha256": "853db2e7c42fbd66a86b7e9f3895e29c1af74010ff2472c8e20042726756dab0",
+      "bytes": 365307,
+      "publisher_file_id": "1tHCrsZi8ZR31ngrDSczJHnw0pxk8sDJE",
+      "source_url": "https://drive.google.com/uc?export=download&id=1tHCrsZi8ZR31ngrDSczJHnw0pxk8sDJE",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input43.txt",
+      "name": "input43.txt",
+      "kind": "input",
+      "sha256": "12c27fe5ec9d86f6cd781b62a0d91f13e660c292192dd94557087b4bb191b85f",
+      "bytes": 364738,
+      "publisher_file_id": "1x0G7sQV2-bL5PvBCPZKvpLAOTAYXvy9v",
+      "source_url": "https://drive.google.com/uc?export=download&id=1x0G7sQV2-bL5PvBCPZKvpLAOTAYXvy9v",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input44.txt",
+      "name": "input44.txt",
+      "kind": "input",
+      "sha256": "c7c3272057634f9a23890aa9c3eed2daa9508ca09bd383b158d54908433a9e8f",
+      "bytes": 365270,
+      "publisher_file_id": "14KC9mB1gA8SPZoexaoO05pcmRZa1ysnu",
+      "source_url": "https://drive.google.com/uc?export=download&id=14KC9mB1gA8SPZoexaoO05pcmRZa1ysnu",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input45.txt",
+      "name": "input45.txt",
+      "kind": "input",
+      "sha256": "ec6390bace8f29f9527b4c2d7855cfc80f8038ce1a6d94fb9a9e7b349d2b5e6b",
+      "bytes": 364955,
+      "publisher_file_id": "1I_FjFqerUma8Xi7tnC4IHotwAfIkwgFT",
+      "source_url": "https://drive.google.com/uc?export=download&id=1I_FjFqerUma8Xi7tnC4IHotwAfIkwgFT",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input46.txt",
+      "name": "input46.txt",
+      "kind": "input",
+      "sha256": "8298f4becab3bfff09a880399a3ed5c297bbc140bae30181717575270c03801c",
+      "bytes": 365293,
+      "publisher_file_id": "1EP9XYDyAKWXqZ-YAf4ESSm8rk0Qi09uU",
+      "source_url": "https://drive.google.com/uc?export=download&id=1EP9XYDyAKWXqZ-YAf4ESSm8rk0Qi09uU",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input47.txt",
+      "name": "input47.txt",
+      "kind": "input",
+      "sha256": "ff92ea17f620a628d328633f263bdc90a7329e372cd36892c5ed5a05e11287f6",
+      "bytes": 380230,
+      "publisher_file_id": "1gf09iE4i2v-SdINN98iFUUOgNRfZ5ZS1",
+      "source_url": "https://drive.google.com/uc?export=download&id=1gf09iE4i2v-SdINN98iFUUOgNRfZ5ZS1",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input48.txt",
+      "name": "input48.txt",
+      "kind": "input",
+      "sha256": "bdc95e3fe7c89be8c74d62eac364f34dcb139ba624214dd61c1f53156767a732",
+      "bytes": 380041,
+      "publisher_file_id": "18YwT2XHnzSMd68Et7NVPq8T1OdTN6eHE",
+      "source_url": "https://drive.google.com/uc?export=download&id=18YwT2XHnzSMd68Et7NVPq8T1OdTN6eHE",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input49.txt",
+      "name": "input49.txt",
+      "kind": "input",
+      "sha256": "652ded38deb27939fd187f503b5a1a0567d057fb6716c97a45331fb50599891e",
+      "bytes": 380156,
+      "publisher_file_id": "1ESzHSpxzzpOJsiXfEYNo-tgLmqCShHD1",
+      "source_url": "https://drive.google.com/uc?export=download&id=1ESzHSpxzzpOJsiXfEYNo-tgLmqCShHD1",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input5.txt",
+      "name": "input5.txt",
+      "kind": "input",
+      "sha256": "4bf5d70b2f462912860e7c365a63cb8af7f7b79ecfd0a551c789fa381a3a0eb0",
+      "bytes": 58392,
+      "publisher_file_id": "1Y3R87YAwZb7Jh5igQjQfgvTIhsBXnl6t",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Y3R87YAwZb7Jh5igQjQfgvTIhsBXnl6t",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input50.txt",
+      "name": "input50.txt",
+      "kind": "input",
+      "sha256": "00c5afcbb1423a0cf39077790b4d6a96cca00f6c4f76bbeaf278cafe5c3adac8",
+      "bytes": 379824,
+      "publisher_file_id": "1kg830aR2RBYWNk7GzagJb5ArGRTneRn8",
+      "source_url": "https://drive.google.com/uc?export=download&id=1kg830aR2RBYWNk7GzagJb5ArGRTneRn8",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input51.txt",
+      "name": "input51.txt",
+      "kind": "input",
+      "sha256": "f4db9dd8d3a6db487f3ff1da9532565ab11be071ecbd10cb579f8d349406cb91",
+      "bytes": 380047,
+      "publisher_file_id": "1PXWOTvKb2l-7ddvGDB7nQ7jn7OirpRvg",
+      "source_url": "https://drive.google.com/uc?export=download&id=1PXWOTvKb2l-7ddvGDB7nQ7jn7OirpRvg",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input6.txt",
+      "name": "input6.txt",
+      "kind": "input",
+      "sha256": "e3094460a6eaa55d823fd38c414a92ea05b18717431274c21354e3f6a6b30f8f",
+      "bytes": 56327,
+      "publisher_file_id": "1NTwOxaeuQSqDp7pQmqkTrZgIIQ52FAC3",
+      "source_url": "https://drive.google.com/uc?export=download&id=1NTwOxaeuQSqDp7pQmqkTrZgIIQ52FAC3",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input7.txt",
+      "name": "input7.txt",
+      "kind": "input",
+      "sha256": "f5c2df26334855ad10a7bc0322ffa3a9828ee765a4563ba57e4acdb8d4242703",
+      "bytes": 52286,
+      "publisher_file_id": "1Sm_02Ic8iz5a1t1rgGFbLfJMSBKkh7UR",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Sm_02Ic8iz5a1t1rgGFbLfJMSBKkh7UR",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input8.txt",
+      "name": "input8.txt",
+      "kind": "input",
+      "sha256": "992e8c87e8f2cee2661c6bb6a869550e35c4d81e0c016cfa4f636e9c7ad5d15e",
+      "bytes": 100009,
+      "publisher_file_id": "1D4alsDZn8-LnK8gs7pj4KLNUs-pZvOQ7",
+      "source_url": "https://drive.google.com/uc?export=download&id=1D4alsDZn8-LnK8gs7pj4KLNUs-pZvOQ7",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/input/input9.txt",
+      "name": "input9.txt",
+      "kind": "input",
+      "sha256": "7f35d796c1875147abad9cbc3261f54cbd8039e4d37de45ff918c558abecd9cf",
+      "bytes": 100010,
+      "publisher_file_id": "1-s5eMOjUF_KOlktD6C_pLEj2g1yox1md",
+      "source_url": "https://drive.google.com/uc?export=download&id=1-s5eMOjUF_KOlktD6C_pLEj2g1yox1md",
+      "folder_url": "https://drive.google.com/drive/folders/1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1ERkk7i8PfT2fY2iD-D0W-GqVeOCz6TuM"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output0.txt",
+      "name": "output0.txt",
+      "kind": "output",
+      "sha256": "7040653f655c18688c9db28895afb30e70be3abbd724fff2e7d7df8f802b24f4",
+      "bytes": 7,
+      "publisher_file_id": "11m0F_wNQFnZVuYE1U-_sOmZscuCHLZFp",
+      "source_url": "https://drive.google.com/uc?export=download&id=11m0F_wNQFnZVuYE1U-_sOmZscuCHLZFp",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output1.txt",
+      "name": "output1.txt",
+      "kind": "output",
+      "sha256": "9f1c5ef11f9243111e1bea0bcd2829d0ea37284557fc7dcb3b9d6f0e8296b71a",
+      "bytes": 8,
+      "publisher_file_id": "1vWOnuvBUE0tAxAGdNqML6DQoIToW1rM0",
+      "source_url": "https://drive.google.com/uc?export=download&id=1vWOnuvBUE0tAxAGdNqML6DQoIToW1rM0",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output10.txt",
+      "name": "output10.txt",
+      "kind": "output",
+      "sha256": "a5cc2a71637b5beab247b911a2ecc2fed6499630fead6eefaa20ef86170dfbd7",
+      "bytes": 217914,
+      "publisher_file_id": "1m7aVPmjCpwS87uIEXa7Qtlh-d2E6EQxS",
+      "source_url": "https://drive.google.com/uc?export=download&id=1m7aVPmjCpwS87uIEXa7Qtlh-d2E6EQxS",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output11.txt",
+      "name": "output11.txt",
+      "kind": "output",
+      "sha256": "917aa33fad7f658c8845c20b8e7c546b4804462bf4a118fe4c317cb616d4fbde",
+      "bytes": 217949,
+      "publisher_file_id": "1aBjZGaOMp_0WEp8FfFCqhF4H-0Wmmcsn",
+      "source_url": "https://drive.google.com/uc?export=download&id=1aBjZGaOMp_0WEp8FfFCqhF4H-0Wmmcsn",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output12.txt",
+      "name": "output12.txt",
+      "kind": "output",
+      "sha256": "03540f6c00ba27f5f1158ba43d1d18bbd93fc0d02e97e37fa737155c1533b5c1",
+      "bytes": 217888,
+      "publisher_file_id": "13U7He1WXMJVZHL-0iVaStZN_5rTl3DKZ",
+      "source_url": "https://drive.google.com/uc?export=download&id=13U7He1WXMJVZHL-0iVaStZN_5rTl3DKZ",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output13.txt",
+      "name": "output13.txt",
+      "kind": "output",
+      "sha256": "e0f1cba690923dbe4a3a4de61c51af7deb9a47ddb93029bce51a42cdcc25ccf1",
+      "bytes": 108928,
+      "publisher_file_id": "1fckLWUb2jC3JAF6bR-q3iwMnOSGs0Y1E",
+      "source_url": "https://drive.google.com/uc?export=download&id=1fckLWUb2jC3JAF6bR-q3iwMnOSGs0Y1E",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output14.txt",
+      "name": "output14.txt",
+      "kind": "output",
+      "sha256": "51e52f3e3c16d528088655c666ff9c70462728acd50c4962de77b6349986a2e5",
+      "bytes": 109052,
+      "publisher_file_id": "1oLxJyzP5ETkoyshBUwO6asYWOhqBaxyW",
+      "source_url": "https://drive.google.com/uc?export=download&id=1oLxJyzP5ETkoyshBUwO6asYWOhqBaxyW",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output15.txt",
+      "name": "output15.txt",
+      "kind": "output",
+      "sha256": "9402c72d19d6861bc3a52dc5fc2a6502bf4951959d9362ec103904c494ecc129",
+      "bytes": 109045,
+      "publisher_file_id": "1-Srye-HlKarXjibZrbj4yVahIpOot9fg",
+      "source_url": "https://drive.google.com/uc?export=download&id=1-Srye-HlKarXjibZrbj4yVahIpOot9fg",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output16.txt",
+      "name": "output16.txt",
+      "kind": "output",
+      "sha256": "22693663a2e32032dd99aa69df282328f22de0bedad45ee98f4f8d2f7c4fe368",
+      "bytes": 108778,
+      "publisher_file_id": "1CoGA9Z6wn0t0sxllf5jCRtPH9oiypRlD",
+      "source_url": "https://drive.google.com/uc?export=download&id=1CoGA9Z6wn0t0sxllf5jCRtPH9oiypRlD",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output17.txt",
+      "name": "output17.txt",
+      "kind": "output",
+      "sha256": "17042e9c86ab17d356a83c974d01df1e08eb6d839ec559317fb21062e101877f",
+      "bytes": 109073,
+      "publisher_file_id": "1XwFtwAllBxdDf8t1W7SxDEKnVhmbG1XZ",
+      "source_url": "https://drive.google.com/uc?export=download&id=1XwFtwAllBxdDf8t1W7SxDEKnVhmbG1XZ",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output18.txt",
+      "name": "output18.txt",
+      "kind": "output",
+      "sha256": "bfe02599ec83085081703e0f022ee9df4a9784a6a4fc71038d43684d1bda17e0",
+      "bytes": 109084,
+      "publisher_file_id": "1WpCLVC2KDEkZIGvKujBl1a2UMO_x-3dc",
+      "source_url": "https://drive.google.com/uc?export=download&id=1WpCLVC2KDEkZIGvKujBl1a2UMO_x-3dc",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output19.txt",
+      "name": "output19.txt",
+      "kind": "output",
+      "sha256": "18cf73a29771c3db0debba420ed118173f66af0ecaf9ad54a854ce690cda6362",
+      "bytes": 138761,
+      "publisher_file_id": "1FCfZAVYD333CPrahNPcYrx4tIxNM5P7P",
+      "source_url": "https://drive.google.com/uc?export=download&id=1FCfZAVYD333CPrahNPcYrx4tIxNM5P7P",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output2.txt",
+      "name": "output2.txt",
+      "kind": "output",
+      "sha256": "ad5e25642c444bd6c7ef16372f78afe90baada48d1adf243d608546f6057ea73",
+      "bytes": 8,
+      "publisher_file_id": "1oGxUI-Lv18P6SjSyRG7cdTSgcp8e0DSU",
+      "source_url": "https://drive.google.com/uc?export=download&id=1oGxUI-Lv18P6SjSyRG7cdTSgcp8e0DSU",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output20.txt",
+      "name": "output20.txt",
+      "kind": "output",
+      "sha256": "64933572d7bb05086e4466240f306bb5dcee4a26fffb2230a8f1fa0514277f05",
+      "bytes": 138587,
+      "publisher_file_id": "1gWopc3HB9FM2FRXjjeYVr-neqygI5xoZ",
+      "source_url": "https://drive.google.com/uc?export=download&id=1gWopc3HB9FM2FRXjjeYVr-neqygI5xoZ",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output21.txt",
+      "name": "output21.txt",
+      "kind": "output",
+      "sha256": "33cf6519ffc3e74beca31af3a4716305c676a2895246380df9d5787d9505a9f7",
+      "bytes": 139060,
+      "publisher_file_id": "1MzKFT8lsZ_0KlZF_um8TsOnru8-taAVo",
+      "source_url": "https://drive.google.com/uc?export=download&id=1MzKFT8lsZ_0KlZF_um8TsOnru8-taAVo",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output22.txt",
+      "name": "output22.txt",
+      "kind": "output",
+      "sha256": "448d0092651cffa8d2eafae9b2cbee7d604370552e30c70dd2c90d4fa705f95d",
+      "bytes": 52,
+      "publisher_file_id": "1oXDok14rp07iH67ARrSs3TzbxqQosFs6",
+      "source_url": "https://drive.google.com/uc?export=download&id=1oXDok14rp07iH67ARrSs3TzbxqQosFs6",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output23.txt",
+      "name": "output23.txt",
+      "kind": "output",
+      "sha256": "f187fc88959eb431941078fe09615d74807ae3897a6b8a24a2e9cbaefea6d812",
+      "bytes": 52,
+      "publisher_file_id": "1LBZ9BWBO8RmT4Qvg4XBkzdsdDOoSmiYk",
+      "source_url": "https://drive.google.com/uc?export=download&id=1LBZ9BWBO8RmT4Qvg4XBkzdsdDOoSmiYk",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output24.txt",
+      "name": "output24.txt",
+      "kind": "output",
+      "sha256": "5283acb1a675bc246c4968dae4bd7c689952715ce86557a2f45a533a8b66ebf1",
+      "bytes": 52,
+      "publisher_file_id": "13kmTm28LVzBxTWvxES07wolw5mfdwnXL",
+      "source_url": "https://drive.google.com/uc?export=download&id=13kmTm28LVzBxTWvxES07wolw5mfdwnXL",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output25.txt",
+      "name": "output25.txt",
+      "kind": "output",
+      "sha256": "01a6c77995ddcae41cc74f0e0907bcd29c7cd4354fdfb4aced61c0c387fe28a8",
+      "bytes": 52,
+      "publisher_file_id": "1-6s7h9AMGIRhcbZ2rYa0xQjDuxisl7ts",
+      "source_url": "https://drive.google.com/uc?export=download&id=1-6s7h9AMGIRhcbZ2rYa0xQjDuxisl7ts",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output26.txt",
+      "name": "output26.txt",
+      "kind": "output",
+      "sha256": "cc00ddb1ee48b4502f228c577b120150ee5dbf6f721813d280ccd6251ad63c4d",
+      "bytes": 52,
+      "publisher_file_id": "1p56YkjwJi_fWGFnFyxc7_T4Eg4cSnbU5",
+      "source_url": "https://drive.google.com/uc?export=download&id=1p56YkjwJi_fWGFnFyxc7_T4Eg4cSnbU5",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output27.txt",
+      "name": "output27.txt",
+      "kind": "output",
+      "sha256": "1d33ffc8d353d61c34917510234e259d7100633aede1215e749a8c34aacb94f5",
+      "bytes": 52,
+      "publisher_file_id": "1XDcYxpNTn_hQaUvos_8-c1lGo_H7AMjK",
+      "source_url": "https://drive.google.com/uc?export=download&id=1XDcYxpNTn_hQaUvos_8-c1lGo_H7AMjK",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output28.txt",
+      "name": "output28.txt",
+      "kind": "output",
+      "sha256": "d069dd4d94569fb6227405df32adb0b82a42a522dc9253705c60897aa68a9120",
+      "bytes": 52,
+      "publisher_file_id": "16O0zAPrqrSWraadFnx5maki68bDUavqq",
+      "source_url": "https://drive.google.com/uc?export=download&id=16O0zAPrqrSWraadFnx5maki68bDUavqq",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output29.txt",
+      "name": "output29.txt",
+      "kind": "output",
+      "sha256": "7895a8499d78e0a62808645046f94f14319d23c64804805582322aef24ee04b0",
+      "bytes": 205,
+      "publisher_file_id": "1otueeRJsRmwvXzIiSNBPqYZJ6YmMAoWY",
+      "source_url": "https://drive.google.com/uc?export=download&id=1otueeRJsRmwvXzIiSNBPqYZJ6YmMAoWY",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output3.txt",
+      "name": "output3.txt",
+      "kind": "output",
+      "sha256": "4be2b64d84a8a035bc590eb873579d7bfeba4c4652acb74beb16a07c5db5b653",
+      "bytes": 6,
+      "publisher_file_id": "1MQwemsHrFNH19IDp_Hc-kYqfl_DWQnxL",
+      "source_url": "https://drive.google.com/uc?export=download&id=1MQwemsHrFNH19IDp_Hc-kYqfl_DWQnxL",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output30.txt",
+      "name": "output30.txt",
+      "kind": "output",
+      "sha256": "0fc470e0b17ec262dc569094ffc6fd9ca991c3fa81220bdd513c337a35f6b581",
+      "bytes": 190,
+      "publisher_file_id": "1Y2ckYLF4CkWZ5pdBHBcDY23B1P3PP1XN",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Y2ckYLF4CkWZ5pdBHBcDY23B1P3PP1XN",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output31.txt",
+      "name": "output31.txt",
+      "kind": "output",
+      "sha256": "821a9bde9ca786cb182d2672fc88d0e66fff40370a4f0800127fbe352be6fe43",
+      "bytes": 191,
+      "publisher_file_id": "18gyKVgND-l7Jkmyakb_wAKT7cqgyyUv-",
+      "source_url": "https://drive.google.com/uc?export=download&id=18gyKVgND-l7Jkmyakb_wAKT7cqgyyUv-",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output32.txt",
+      "name": "output32.txt",
+      "kind": "output",
+      "sha256": "cb771913fc54fac64470d215c1dc84843b2d5d404e9f2959e4e3675429129cd1",
+      "bytes": 199,
+      "publisher_file_id": "1T8HLfAjEBmK1xRqxHqasMizW-PPZlxd4",
+      "source_url": "https://drive.google.com/uc?export=download&id=1T8HLfAjEBmK1xRqxHqasMizW-PPZlxd4",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output33.txt",
+      "name": "output33.txt",
+      "kind": "output",
+      "sha256": "6f8ecd8b2d11cf7a07ffbc70e858bc9901f9e2ff46edfe3f7f38c49ce7e6bebd",
+      "bytes": 194,
+      "publisher_file_id": "1N7srCuPzAFtO0UO7pHXTDY5D2LQoXs4M",
+      "source_url": "https://drive.google.com/uc?export=download&id=1N7srCuPzAFtO0UO7pHXTDY5D2LQoXs4M",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output34.txt",
+      "name": "output34.txt",
+      "kind": "output",
+      "sha256": "8e3f4169acdb840668cad23e88582f2a7f868ba51652979b4e9645ec3c3e76f9",
+      "bytes": 202,
+      "publisher_file_id": "1aSXw1tGKDq9WdFKdVk33El1iyLh6AomI",
+      "source_url": "https://drive.google.com/uc?export=download&id=1aSXw1tGKDq9WdFKdVk33El1iyLh6AomI",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output35.txt",
+      "name": "output35.txt",
+      "kind": "output",
+      "sha256": "e659178655cdde0e1992312a40df120aefe5aad90cae0c38d5d187af24465056",
+      "bytes": 237,
+      "publisher_file_id": "1U5hqlwpsDafoONqhr4zQuzbXJPG2gwov",
+      "source_url": "https://drive.google.com/uc?export=download&id=1U5hqlwpsDafoONqhr4zQuzbXJPG2gwov",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output36.txt",
+      "name": "output36.txt",
+      "kind": "output",
+      "sha256": "7efb3106e8154b528774916fdcdc84f179df3aa5ea79fad4c25c7200a61d963d",
+      "bytes": 242,
+      "publisher_file_id": "1HVMLxVcDGJSV7c-c4a7D1wc0tAXoEsSK",
+      "source_url": "https://drive.google.com/uc?export=download&id=1HVMLxVcDGJSV7c-c4a7D1wc0tAXoEsSK",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output37.txt",
+      "name": "output37.txt",
+      "kind": "output",
+      "sha256": "664a83b675ec22c8e376891c56abd6d942640496898d21693918e4686be4f02b",
+      "bytes": 235,
+      "publisher_file_id": "1Z11sMW0wVdtPOFkHYkwEOcbUquAEhEdS",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Z11sMW0wVdtPOFkHYkwEOcbUquAEhEdS",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output38.txt",
+      "name": "output38.txt",
+      "kind": "output",
+      "sha256": "960d20818ef97d875f4decad07c94f6570270d3a913ceb9c4db7e76ae8d56bfd",
+      "bytes": 241,
+      "publisher_file_id": "19Pf_kaEN1pVG0wVZmUpxLa4o8jeg97KI",
+      "source_url": "https://drive.google.com/uc?export=download&id=19Pf_kaEN1pVG0wVZmUpxLa4o8jeg97KI",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output39.txt",
+      "name": "output39.txt",
+      "kind": "output",
+      "sha256": "c536c072f0b74a7b5f937b3ddb4ad955ea645ec83077d52fc380167363bf2197",
+      "bytes": 246,
+      "publisher_file_id": "1m69CVUK1IF7dpMRhcdde9eRqw5O4mazq",
+      "source_url": "https://drive.google.com/uc?export=download&id=1m69CVUK1IF7dpMRhcdde9eRqw5O4mazq",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output4.txt",
+      "name": "output4.txt",
+      "kind": "output",
+      "sha256": "019133b4706787dd4285fecb4f02b1d83c4a858ac476de501bdeeb8783158209",
+      "bytes": 7,
+      "publisher_file_id": "1Eb92lXuKEFu0Pr2Egq_Kz9BhNsKHFd04",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Eb92lXuKEFu0Pr2Egq_Kz9BhNsKHFd04",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output40.txt",
+      "name": "output40.txt",
+      "kind": "output",
+      "sha256": "fdad239373fc933b578dbe0b2dca8c651e953ca7547e910707d324f045f85eda",
+      "bytes": 244,
+      "publisher_file_id": "1-1DoBDE4AKK9Gh9jKtm05SRnQVGtbOKZ",
+      "source_url": "https://drive.google.com/uc?export=download&id=1-1DoBDE4AKK9Gh9jKtm05SRnQVGtbOKZ",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output41.txt",
+      "name": "output41.txt",
+      "kind": "output",
+      "sha256": "e5441a2c42ec2622099cf5fc1cfa98d3f88696ac3588a9e6a99318e39d4eb795",
+      "bytes": 243,
+      "publisher_file_id": "1MflOGRGUBa-SvwB1l9vVOtWY-jVc5smd",
+      "source_url": "https://drive.google.com/uc?export=download&id=1MflOGRGUBa-SvwB1l9vVOtWY-jVc5smd",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output42.txt",
+      "name": "output42.txt",
+      "kind": "output",
+      "sha256": "66ab1882658e69abd11c8fe67a7f062a806a6e5af0b54a7223a6f6d748a0f5b7",
+      "bytes": 242,
+      "publisher_file_id": "1_22LIuiTUSoUh4QAAc8Foda4mb23AVR9",
+      "source_url": "https://drive.google.com/uc?export=download&id=1_22LIuiTUSoUh4QAAc8Foda4mb23AVR9",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output43.txt",
+      "name": "output43.txt",
+      "kind": "output",
+      "sha256": "0ebe657fbb54ef1bdaf76f6376343de451899014b0c591f69fbe2776b03d0c57",
+      "bytes": 246,
+      "publisher_file_id": "1A3m9rBmAZmvdrSQdDfGjHEqeuoddm0te",
+      "source_url": "https://drive.google.com/uc?export=download&id=1A3m9rBmAZmvdrSQdDfGjHEqeuoddm0te",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output44.txt",
+      "name": "output44.txt",
+      "kind": "output",
+      "sha256": "182b9425dd814e708334102fb11e8ae9b0e08d7abb699b00fc9ffd4bbdf2457c",
+      "bytes": 243,
+      "publisher_file_id": "1pXmYiyCmvJUEMJOnQdCODCRIVuOmuY_O",
+      "source_url": "https://drive.google.com/uc?export=download&id=1pXmYiyCmvJUEMJOnQdCODCRIVuOmuY_O",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output45.txt",
+      "name": "output45.txt",
+      "kind": "output",
+      "sha256": "19317c43ec07aa79efa29420b8558a9ed47c5bf4258a0ba90993b6eaf89d1bbf",
+      "bytes": 244,
+      "publisher_file_id": "1X05MQZpelAHxJKsXSTFdNy2ptKdW33Ik",
+      "source_url": "https://drive.google.com/uc?export=download&id=1X05MQZpelAHxJKsXSTFdNy2ptKdW33Ik",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output46.txt",
+      "name": "output46.txt",
+      "kind": "output",
+      "sha256": "b68d0d6665f00bc439fc577cc0464f68514ea659ab6eaaeded8253a8fa5e1086",
+      "bytes": 244,
+      "publisher_file_id": "1bFlxfhcMAdodPHB8tl2F7quImIjONCxn",
+      "source_url": "https://drive.google.com/uc?export=download&id=1bFlxfhcMAdodPHB8tl2F7quImIjONCxn",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output47.txt",
+      "name": "output47.txt",
+      "kind": "output",
+      "sha256": "3c917c1aa0f221e6b902918ec48e51367df29c9dbf950f7c172d809b815b4a04",
+      "bytes": 272,
+      "publisher_file_id": "1hMwpAqKgNtCA2HrG5uLD1H3VB9hUHSv9",
+      "source_url": "https://drive.google.com/uc?export=download&id=1hMwpAqKgNtCA2HrG5uLD1H3VB9hUHSv9",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output48.txt",
+      "name": "output48.txt",
+      "kind": "output",
+      "sha256": "6becae82a1bd319b76d3241a519130b371bfdb101af387638e610e0161a530ea",
+      "bytes": 269,
+      "publisher_file_id": "1_KbMBsjlCIu4hRHp68RSwZlXcZnrLfkh",
+      "source_url": "https://drive.google.com/uc?export=download&id=1_KbMBsjlCIu4hRHp68RSwZlXcZnrLfkh",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output49.txt",
+      "name": "output49.txt",
+      "kind": "output",
+      "sha256": "04515d5b653eccf5aa692e72bdaf7bfdb2379a4a98bb390fb108904669c8a1fa",
+      "bytes": 274,
+      "publisher_file_id": "1Zl2kSw4a9idGHHc1HRWk8Pmmp3f9X0wX",
+      "source_url": "https://drive.google.com/uc?export=download&id=1Zl2kSw4a9idGHHc1HRWk8Pmmp3f9X0wX",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output5.txt",
+      "name": "output5.txt",
+      "kind": "output",
+      "sha256": "bbe23b3da905fa0103c595af3c770e76c1f180bd249b89588f8ecf15c49107ba",
+      "bytes": 9,
+      "publisher_file_id": "1uXXh7Qnet9ULkZ5IaBqp5rjsxNVn-U-k",
+      "source_url": "https://drive.google.com/uc?export=download&id=1uXXh7Qnet9ULkZ5IaBqp5rjsxNVn-U-k",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output50.txt",
+      "name": "output50.txt",
+      "kind": "output",
+      "sha256": "6ac750fe6ce0687bc3046b8f1d2c4fd10ff6089811fbf6e5ff9d444142cc0e58",
+      "bytes": 272,
+      "publisher_file_id": "1lzQrQciB-xn44QF9bAIYizvX-PefA68j",
+      "source_url": "https://drive.google.com/uc?export=download&id=1lzQrQciB-xn44QF9bAIYizvX-PefA68j",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output51.txt",
+      "name": "output51.txt",
+      "kind": "output",
+      "sha256": "a21fa7fda70c60d1897590cfe045a8bdb58bb8d7003d9f8f80a3986e58444306",
+      "bytes": 274,
+      "publisher_file_id": "1k0U-3sYJtmDNORxlXGmgwM19PJJm6PfJ",
+      "source_url": "https://drive.google.com/uc?export=download&id=1k0U-3sYJtmDNORxlXGmgwM19PJJm6PfJ",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output6.txt",
+      "name": "output6.txt",
+      "kind": "output",
+      "sha256": "3de88a42c7c0e1c64600cd267f8c93527861af454d725d7064beb10529452577",
+      "bytes": 8,
+      "publisher_file_id": "13O9DlkP6bCb0B-w0Qamywyg5HAHhzo0L",
+      "source_url": "https://drive.google.com/uc?export=download&id=13O9DlkP6bCb0B-w0Qamywyg5HAHhzo0L",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output7.txt",
+      "name": "output7.txt",
+      "kind": "output",
+      "sha256": "8768a108941c43da7d04776b0ed6d57c0086e5464c99e48a4025bca98b7a0ea8",
+      "bytes": 6,
+      "publisher_file_id": "1B3-AXox2VuS6kg075hnoXy191WIqmzuN",
+      "source_url": "https://drive.google.com/uc?export=download&id=1B3-AXox2VuS6kg075hnoXy191WIqmzuN",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output8.txt",
+      "name": "output8.txt",
+      "kind": "output",
+      "sha256": "030b7ae8a3c46b69997bcc0c6ae1cbf25a31486544601b5d93e8ec4018b7f7a3",
+      "bytes": 9,
+      "publisher_file_id": "1k1vfomrSHQUxTJgSMBPec0-lss8pq6Bd",
+      "source_url": "https://drive.google.com/uc?export=download&id=1k1vfomrSHQUxTJgSMBPec0-lss8pq6Bd",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    },
+    {
+      "path": "data/raw/iiot/2023/cipher/tests/output/output9.txt",
+      "name": "output9.txt",
+      "kind": "output",
+      "sha256": "030b7ae8a3c46b69997bcc0c6ae1cbf25a31486544601b5d93e8ec4018b7f7a3",
+      "bytes": 9,
+      "publisher_file_id": "1nt2PIRM5Z6lFGSQu0KtscnMZVaz5zoGu",
+      "source_url": "https://drive.google.com/uc?export=download&id=1nt2PIRM5Z6lFGSQu0KtscnMZVaz5zoGu",
+      "folder_url": "https://drive.google.com/drive/folders/1eyYasywmH_iJwZslU2OSdimV6Qo5qezx",
+      "listing_url": "https://drive.google.com/embeddedfolderview?id=1eyYasywmH_iJwZslU2OSdimV6Qo5qezx"
+    }
+  ],
+  "test_pairs": [
+    {
+      "id": "0",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input0.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output0.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "1",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input1.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output1.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "2",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input2.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output2.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "3",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input3.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output3.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "4",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input4.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output4.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "5",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input5.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output5.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "6",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input6.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output6.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "7",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input7.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output7.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "8",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input8.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output8.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "9",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input9.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output9.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "10",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input10.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output10.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "11",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input11.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output11.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "12",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input12.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output12.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "13",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input13.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output13.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "14",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input14.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output14.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "15",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input15.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output15.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "16",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input16.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output16.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "17",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input17.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output17.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "18",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input18.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output18.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "19",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input19.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output19.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "20",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input20.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output20.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "21",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input21.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output21.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "22",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input22.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output22.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "23",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input23.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output23.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "24",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input24.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output24.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "25",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input25.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output25.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "26",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input26.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output26.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "27",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input27.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output27.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "28",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input28.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output28.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "29",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input29.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output29.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "30",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input30.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output30.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "31",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input31.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output31.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "32",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input32.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output32.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "33",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input33.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output33.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "34",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input34.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output34.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "35",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input35.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output35.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "36",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input36.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output36.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "37",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input37.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output37.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "38",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input38.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output38.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "39",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input39.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output39.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "40",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input40.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output40.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "41",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input41.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output41.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "42",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input42.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output42.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "43",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input43.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output43.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "44",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input44.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output44.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "45",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input45.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output45.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "46",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input46.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output46.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "47",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input47.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output47.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "48",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input48.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output48.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "49",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input49.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output49.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "50",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input50.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output50.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    },
+    {
+      "id": "51",
+      "input": "data/raw/iiot/2023/cipher/tests/input/input51.txt",
+      "output": "data/raw/iiot/2023/cipher/tests/output/output51.txt",
+      "pairing_basis": "same numeric ID in publisher inputN.txt and outputN.txt filenames"
+    }
+  ],
+  "input_aliases": [
+    {
+      "alias": "Cipher0.in",
+      "standard_input": "input0.txt",
+      "evidence": "byte_equality_after_removing_only_trailing_CR_LF",
+      "alias_sha256": "14c47665eadd5d2a969e3e167479da7fa5228939db6de304d8ba9a574760f152",
+      "standard_sha256": "80c11e5fb556547ebc476f6010bfc728d98e8b34533bb4ed171ea53e11488c25",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher1_1.in",
+      "standard_input": "input1.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "0bbb974557cd4cbb1c0499810f9ae5011ced5d9e6a7a36f00260a20a30e7f70d",
+      "standard_sha256": "0bbb974557cd4cbb1c0499810f9ae5011ced5d9e6a7a36f00260a20a30e7f70d",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher1_2.in",
+      "standard_input": "input2.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "b1386b92908fcb1351166bc2edb15849333526cd8c4fe24ccd7209671d1904ea",
+      "standard_sha256": "b1386b92908fcb1351166bc2edb15849333526cd8c4fe24ccd7209671d1904ea",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher1_3.in",
+      "standard_input": "input3.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "249e6fe524d09f798e6445a7d5e5bc917704f1933a40ce49263b08967fbdd87a",
+      "standard_sha256": "249e6fe524d09f798e6445a7d5e5bc917704f1933a40ce49263b08967fbdd87a",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher1_4.in",
+      "standard_input": "input4.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "fc319c74ab6346c1ee5c2e8660de564824c5666d7309070ab7ef0f860126a606",
+      "standard_sha256": "fc319c74ab6346c1ee5c2e8660de564824c5666d7309070ab7ef0f860126a606",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher1_5.in",
+      "standard_input": "input5.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "4bf5d70b2f462912860e7c365a63cb8af7f7b79ecfd0a551c789fa381a3a0eb0",
+      "standard_sha256": "4bf5d70b2f462912860e7c365a63cb8af7f7b79ecfd0a551c789fa381a3a0eb0",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher1_6.in",
+      "standard_input": "input6.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "e3094460a6eaa55d823fd38c414a92ea05b18717431274c21354e3f6a6b30f8f",
+      "standard_sha256": "e3094460a6eaa55d823fd38c414a92ea05b18717431274c21354e3f6a6b30f8f",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher1_7.in",
+      "standard_input": "input7.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "f5c2df26334855ad10a7bc0322ffa3a9828ee765a4563ba57e4acdb8d4242703",
+      "standard_sha256": "f5c2df26334855ad10a7bc0322ffa3a9828ee765a4563ba57e4acdb8d4242703",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher1_8.in",
+      "standard_input": "input8.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "992e8c87e8f2cee2661c6bb6a869550e35c4d81e0c016cfa4f636e9c7ad5d15e",
+      "standard_sha256": "992e8c87e8f2cee2661c6bb6a869550e35c4d81e0c016cfa4f636e9c7ad5d15e",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher1_9.in",
+      "standard_input": "input9.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "7f35d796c1875147abad9cbc3261f54cbd8039e4d37de45ff918c558abecd9cf",
+      "standard_sha256": "7f35d796c1875147abad9cbc3261f54cbd8039e4d37de45ff918c558abecd9cf",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_1.in",
+      "standard_input": "input10.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "a1c256cd732f8be470babe88bbad371b9ec78534b813a8d901ef211290979498",
+      "standard_sha256": "a1c256cd732f8be470babe88bbad371b9ec78534b813a8d901ef211290979498",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_10.in",
+      "standard_input": "input19.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "736ab33d154ae9abdd964ae522f231955563888c5d28550692d235e0ca136882",
+      "standard_sha256": "736ab33d154ae9abdd964ae522f231955563888c5d28550692d235e0ca136882",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_11.in",
+      "standard_input": "input20.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "7bb7523b909ee3fdc5cdf5a71c16597e7a114ffaf87d025f7743231e5680fb6b",
+      "standard_sha256": "7bb7523b909ee3fdc5cdf5a71c16597e7a114ffaf87d025f7743231e5680fb6b",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_12.in",
+      "standard_input": "input21.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "6f8f6cd0f2169d5e3fe4e38faac29ff48cc951211e14bd48c328e5b9729ae0d3",
+      "standard_sha256": "6f8f6cd0f2169d5e3fe4e38faac29ff48cc951211e14bd48c328e5b9729ae0d3",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_13.in",
+      "standard_input": "input22.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "92732ac6606b2928063e400a5259d277fe152d446627b682fa96dee98ffa1f08",
+      "standard_sha256": "92732ac6606b2928063e400a5259d277fe152d446627b682fa96dee98ffa1f08",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_14.in",
+      "standard_input": "input23.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "9cb2da357d311fe654e2a4ff015497db1bcf0657f92cf660b87260a7a3f68070",
+      "standard_sha256": "9cb2da357d311fe654e2a4ff015497db1bcf0657f92cf660b87260a7a3f68070",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_15.in",
+      "standard_input": "input24.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "47ff3d9ce2e4effca53971de8232c4b76dfbfc3b8d5e55e529b833c4b775ef2c",
+      "standard_sha256": "47ff3d9ce2e4effca53971de8232c4b76dfbfc3b8d5e55e529b833c4b775ef2c",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_16.in",
+      "standard_input": "input25.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "7d24b9f0f26d8bc9990ad6c1ea55afddcb938a1f9797f67d4c9cee9e3beb09ab",
+      "standard_sha256": "7d24b9f0f26d8bc9990ad6c1ea55afddcb938a1f9797f67d4c9cee9e3beb09ab",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_17.in",
+      "standard_input": "input26.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "041168a628c19c411a6221fe12de728be90d242e4f3ca369e5372e7bf9876cd7",
+      "standard_sha256": "041168a628c19c411a6221fe12de728be90d242e4f3ca369e5372e7bf9876cd7",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_18.in",
+      "standard_input": "input27.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "0df6fe455ed968fa514ecfddd3e28200e318e097dce52cd77c38a320098bb63c",
+      "standard_sha256": "0df6fe455ed968fa514ecfddd3e28200e318e097dce52cd77c38a320098bb63c",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_19.in",
+      "standard_input": "input28.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "6719dacb709f726a33547e3e3c30c0e88f50d99e0e4258caf8741703d269826d",
+      "standard_sha256": "6719dacb709f726a33547e3e3c30c0e88f50d99e0e4258caf8741703d269826d",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_2.in",
+      "standard_input": "input11.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "b0285ed2ad7f3e1c9e093111b3b9818869fd43592e048f8da38b7d89e7a0a6c6",
+      "standard_sha256": "b0285ed2ad7f3e1c9e093111b3b9818869fd43592e048f8da38b7d89e7a0a6c6",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_3.in",
+      "standard_input": "input12.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "62124c0e913e3a8d58dca141659f138ac1eb5c27739fba6ffdf78410e941fa97",
+      "standard_sha256": "62124c0e913e3a8d58dca141659f138ac1eb5c27739fba6ffdf78410e941fa97",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_4.in",
+      "standard_input": "input13.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "378cf5a9937f1721a5dcfc06b972bdaa6ea72c6d324bcf772c0cae276456476c",
+      "standard_sha256": "378cf5a9937f1721a5dcfc06b972bdaa6ea72c6d324bcf772c0cae276456476c",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_5.in",
+      "standard_input": "input14.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "51bc18627caf70ce009f5b1ba1af043c902aac507889c5b6f636f7038cbd36ff",
+      "standard_sha256": "51bc18627caf70ce009f5b1ba1af043c902aac507889c5b6f636f7038cbd36ff",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_6.in",
+      "standard_input": "input15.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "68b958531e1572ea6a2015124c5fb570c55e5a46fe364da2c7f00df9e82a3761",
+      "standard_sha256": "68b958531e1572ea6a2015124c5fb570c55e5a46fe364da2c7f00df9e82a3761",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_7.in",
+      "standard_input": "input16.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "4f18d30ef051edfd212a518e1c5bac87760b5f55180aa09b5de31c1ff180fcb0",
+      "standard_sha256": "4f18d30ef051edfd212a518e1c5bac87760b5f55180aa09b5de31c1ff180fcb0",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_8.in",
+      "standard_input": "input17.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "a890bf81c775fdaee0e8c577cf08fdfb0086a4c4d50360833a120059b9e85660",
+      "standard_sha256": "a890bf81c775fdaee0e8c577cf08fdfb0086a4c4d50360833a120059b9e85660",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher2_9.in",
+      "standard_input": "input18.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "f3c3ab0f41b69ec8881fda8a6ec930b2ae6456e85632b0f10393102a114d3d2b",
+      "standard_sha256": "f3c3ab0f41b69ec8881fda8a6ec930b2ae6456e85632b0f10393102a114d3d2b",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher3_1.in",
+      "standard_input": "input29.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "ce547676a5472e1529531d455c29332052dd3ad5fbeb3e082ec8484b90c88e11",
+      "standard_sha256": "ce547676a5472e1529531d455c29332052dd3ad5fbeb3e082ec8484b90c88e11",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher3_10.in",
+      "standard_input": "input38.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "9ba70d4c1cd53aeac6d0c6a11622e0ba270dfcc57da57ce9e5e57f1acf3f3525",
+      "standard_sha256": "9ba70d4c1cd53aeac6d0c6a11622e0ba270dfcc57da57ce9e5e57f1acf3f3525",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher3_11.in",
+      "standard_input": "input39.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "f59f7c02aaf502089682de848b60ae80443e473c4931b76ee018968e11cc11f5",
+      "standard_sha256": "f59f7c02aaf502089682de848b60ae80443e473c4931b76ee018968e11cc11f5",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher3_12.in",
+      "standard_input": "input40.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "a6b90d0205169eb3fef05883bce897675f82cae81c343de6ffcf9f432c4313b0",
+      "standard_sha256": "a6b90d0205169eb3fef05883bce897675f82cae81c343de6ffcf9f432c4313b0",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher3_13.in",
+      "standard_input": "input41.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "8c322e36a06d0264a9586ce99d5f5e7820e403f2cb195b839b10581a5a9c50b3",
+      "standard_sha256": "8c322e36a06d0264a9586ce99d5f5e7820e403f2cb195b839b10581a5a9c50b3",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher3_2.in",
+      "standard_input": "input30.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "238a457ab5dd38be95a018e2476af20f552aa12c5eb5827b9d5e06668d88b81d",
+      "standard_sha256": "238a457ab5dd38be95a018e2476af20f552aa12c5eb5827b9d5e06668d88b81d",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher3_3.in",
+      "standard_input": "input31.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "4c9b55fd2c39985ca35d70c23da77157743d8aa55e744e58c2af1a8097360833",
+      "standard_sha256": "4c9b55fd2c39985ca35d70c23da77157743d8aa55e744e58c2af1a8097360833",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher3_4.in",
+      "standard_input": "input32.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "23e1f47ef2026451a84ef3d517d882cb293f5cca94bf1c7181c1b9d1d65319aa",
+      "standard_sha256": "23e1f47ef2026451a84ef3d517d882cb293f5cca94bf1c7181c1b9d1d65319aa",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher3_5.in",
+      "standard_input": "input33.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "0019c44fa8f84d3646d679fe6eb9131c5a12020e0f8f8293c245a41367fc7c84",
+      "standard_sha256": "0019c44fa8f84d3646d679fe6eb9131c5a12020e0f8f8293c245a41367fc7c84",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher3_6.in",
+      "standard_input": "input34.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "e20eaf1fd12dab314b90880de60e183bb7f7bfdef011a5fbf88e82fc0049bc46",
+      "standard_sha256": "e20eaf1fd12dab314b90880de60e183bb7f7bfdef011a5fbf88e82fc0049bc46",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher3_7.in",
+      "standard_input": "input35.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "76e2557fa0e4173f9a50ac4641ab5abcdc16ac90f67b78ab117b9abb840cc97e",
+      "standard_sha256": "76e2557fa0e4173f9a50ac4641ab5abcdc16ac90f67b78ab117b9abb840cc97e",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher3_8.in",
+      "standard_input": "input36.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "d88d199f972e3d5f45c817cee1e0d5c98f01e6e94728c2aa385f888657bb2f76",
+      "standard_sha256": "d88d199f972e3d5f45c817cee1e0d5c98f01e6e94728c2aa385f888657bb2f76",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "Cipher3_9.in",
+      "standard_input": "input37.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "5308681fb836bbfe89e34f8aca2ba8a4d3c6084ec16dc6ed870279895ec26924",
+      "standard_sha256": "5308681fb836bbfe89e34f8aca2ba8a4d3c6084ec16dc6ed870279895ec26924",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "gen7-01.txt",
+      "standard_input": "input42.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "853db2e7c42fbd66a86b7e9f3895e29c1af74010ff2472c8e20042726756dab0",
+      "standard_sha256": "853db2e7c42fbd66a86b7e9f3895e29c1af74010ff2472c8e20042726756dab0",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "gen7-02.txt",
+      "standard_input": "input43.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "12c27fe5ec9d86f6cd781b62a0d91f13e660c292192dd94557087b4bb191b85f",
+      "standard_sha256": "12c27fe5ec9d86f6cd781b62a0d91f13e660c292192dd94557087b4bb191b85f",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "gen7-03.txt",
+      "standard_input": "input44.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "c7c3272057634f9a23890aa9c3eed2daa9508ca09bd383b158d54908433a9e8f",
+      "standard_sha256": "c7c3272057634f9a23890aa9c3eed2daa9508ca09bd383b158d54908433a9e8f",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "gen7-04.txt",
+      "standard_input": "input45.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "ec6390bace8f29f9527b4c2d7855cfc80f8038ce1a6d94fb9a9e7b349d2b5e6b",
+      "standard_sha256": "ec6390bace8f29f9527b4c2d7855cfc80f8038ce1a6d94fb9a9e7b349d2b5e6b",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "gen7-05.txt",
+      "standard_input": "input46.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "8298f4becab3bfff09a880399a3ed5c297bbc140bae30181717575270c03801c",
+      "standard_sha256": "8298f4becab3bfff09a880399a3ed5c297bbc140bae30181717575270c03801c",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "gen8-01.txt",
+      "standard_input": "input47.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "ff92ea17f620a628d328633f263bdc90a7329e372cd36892c5ed5a05e11287f6",
+      "standard_sha256": "ff92ea17f620a628d328633f263bdc90a7329e372cd36892c5ed5a05e11287f6",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "gen8-02.txt",
+      "standard_input": "input48.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "bdc95e3fe7c89be8c74d62eac364f34dcb139ba624214dd61c1f53156767a732",
+      "standard_sha256": "bdc95e3fe7c89be8c74d62eac364f34dcb139ba624214dd61c1f53156767a732",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "gen8-03.txt",
+      "standard_input": "input49.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "652ded38deb27939fd187f503b5a1a0567d057fb6716c97a45331fb50599891e",
+      "standard_sha256": "652ded38deb27939fd187f503b5a1a0567d057fb6716c97a45331fb50599891e",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "gen8-04.txt",
+      "standard_input": "input50.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "00c5afcbb1423a0cf39077790b4d6a96cca00f6c4f76bbeaf278cafe5c3adac8",
+      "standard_sha256": "00c5afcbb1423a0cf39077790b4d6a96cca00f6c4f76bbeaf278cafe5c3adac8",
+      "not_an_additional_case": true
+    },
+    {
+      "alias": "gen8-05.txt",
+      "standard_input": "input51.txt",
+      "evidence": "identical_file_sha256",
+      "alias_sha256": "f4db9dd8d3a6db487f3ff1da9532565ab11be071ecbd10cb579f8d349406cb91",
+      "standard_sha256": "f4db9dd8d3a6db487f3ff1da9532565ab11be071ecbd10cb579f8d349406cb91",
+      "not_an_additional_case": true
+    }
+  ],
+  "unresolved_alias_files": [],
+  "official_test_pair_count": 52,
+  "listing_scope": "All files visible in the publisher-linked public embedded folder views at discovery time; no claim about unpublished/private files.",
+  "discovered_at_utc": "2026-09-13T19:21:25.479459+00:00",
+  "ordinary_view_truncation_avoided": true,
+  "test_subtask_mapping": null,
+  "checker_configuration": null,
+  "execution_limits": null,
+  "programs_executed": false
+}

@@ -1,3 +1,5 @@
-# 2010/puzzles/1804/the_arena/
+# The Arena
 
-The Arena The Arena Excerpt from the Journal of Alexander von Humboldt: These diagrams depict the levels of an ancient arena, in which mounted warriors would vault from tier to tier doing fierce battle. Of the thousands who competed, only a few survived.
+Open `puzzle.html` for the original styled task and its image links. The visual packet, including image-map regions, is not replaced by a text preview.
+
+Archive limitation: The original standalone archive page, diagrams, image-map links and applicable style artwork are preserved. Historical wording, repeated names, ordering and fictional premises are not modernized. No physical enactment, cross-task state or end-to-end grading is supplied.

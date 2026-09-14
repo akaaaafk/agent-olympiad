@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 1994
-
 # Odyssey of the Mind — 1994 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Set It FreeDivisions I, II, III & IVThe team’s problem is to design and build a structure of balsa wood and glue. The structure’s design must allow a ping-pong ball to be placed inside the structure after it has been weighed in at the competition. The structure will be tested by balancing and supporting as much weight as possible while protecting the ping-pong ball and releasing it when the structure breaks. When the structure breaks, the ping-pong ball will be released. If it comes to rest on the tester, or beyond the tester, the team will receive bonus points. This is a nonlinguistic problem for Division I and a linguistic problem for all other divisions. Time limit: 8 min. Cost limit: $75 USD.
 5. Furs, Fins and FeathersDivisions I & IIThe team’s problem is to create and present a humorous performance depicting the life of an animal from the animal’s perspective. The performance will include the animal and an interaction between it and one or more human beings. During the performance the animal will display four feelings or emotions from a given list. Time limit: 8 min. Cost limit: $75 USD.
 6. Masquerade PartyPrimaryThis non-competitive problem offers teams the opportunity to create a performance about a masquerade party. During the performance the team members will each dress in a costume. They will represent real people, fictional people, animals, objects, etc., and must tell or show the audience and judges why each character/object was selected and the good the character/object did for society. At least some portion of the performance must be humorous. Time limit: 8 min. Cost limit: $50 USD.
+

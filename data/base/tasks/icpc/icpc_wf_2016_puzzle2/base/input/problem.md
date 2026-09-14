@@ -1,5 +1,3 @@
-# Polygonal Puzzle
-
 Hide 
  Polygonal Puzzle 
 

@@ -1,5 +1,3 @@
-# Domes
-
 Hide 
  Domes 
 

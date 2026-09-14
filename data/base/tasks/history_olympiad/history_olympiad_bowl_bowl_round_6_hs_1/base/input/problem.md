@@ -1,5 +1,3 @@
-# Bowl-Round-6-HS-1
-
 [Q1] In 2003, the Rose Revolution forced this country’s President Eduard Shevardnadze to resign. This country was invaded in 2008 by Russia, who backed its breakaway republics of South Ossetia and Abkhazia, ruining Mikhail Saakashvili’s aspirations to join NATO. For ten points, name this westernmost country of the Caucasus, whose capital is Tbilisi and which is not to be confused with a US state.
 
 [Q2] This composer celebrated Romanov imperialism with the polonaise that ends his Symphony no. 3, “Polish.” This composer of the Marche Slave used “La Marseillaise” to represent Napoleon’s invading army and also wrote the music to the ballet Swan Lake. For ten points, name this Russian composer who included cannons in his 1812 Overture.

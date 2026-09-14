@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2017
-
 # Odyssey of the Mind — 2017 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Ready, Set, Balsa, Build!Divisions I, II, III & IVCreativity can be defined by using only what you have to get a job done. In this problem, teams will design, build, and test a structure made of only balsa wood and glue that will balance and support as much weight as possible. The structure must include sets of balsa pieces of predetermined sizes and quantities as listed in the problem. Some sets must be parts of the structure while others, if incorporated, will receive additional score – the more sets of pieces used, the higher the score! Teams will present a performance with a theme about using what’s available and that incorporates weight-placement and assembling original team creations.Cost limit: $145 USD.
 5. To Be Continued: A Superhero CliffhangerDivisions I, II, III & IVCreativity is being taken away from the world, and it is up to Odyssey teams to rescue it! Teams will create and present a humorous performance about an unexpected superhero that encounters three different situations where it must save creativity in some way. The superhero will change appearance when it displays its superpowers and go back to blending in with society when not. The performance will also include a clumsy sidekick, a nemesis character, a choreographed battle, and a cliffhanger ending.Cost limit: $125 USD.
 6. Movin’ Out!Grades K-2Teams will create and present a performance about a group that is moving out of one place and into another. In one scene, team-created props and scenery will make up the first setting. To transform into a new setting, team-made devices will move the scenery and props to a new location. Everything in the setting for the next scene must be made from the transported items. The performance will also include a humorous Moving Character, a reason for the move, and a lost item that is rediscovered in an unusual place.Cost limit: $125 USD.
+

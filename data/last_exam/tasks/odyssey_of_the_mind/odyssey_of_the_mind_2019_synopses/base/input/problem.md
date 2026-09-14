@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2019
-
 # Odyssey of the Mind — 2019 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Structure TossDivisions I, II, III & IVStep right up and put your structure to the test! Teams must strategize risk for points and “toss” their structures in this year’s problem-turned-carnival. They will use a device to propel the structure in a carnival game. If it travels in the air it gets higher score! Once the structure has been successfully tossed, it can be tested for strength. A carnival barker character will entice other characters to join the fun during a performance that incorporates testing the structure’s strength with creative games of skill and chance.
 5. Opposites DistractDivisions I, II, III & IVDisagreements can distract groups from seeing the bigger picture. Teams will create and present a humorous performance about a sneaky character that distracts others while trying to take control of anything the team wishes. In the performance it will lure others into silly arguments and be successful two times. The arguments will be presented using different dramatic styles and will include attention-getting effects. In the end, the groups will learn that they have been intentionally distracted and will catch the sneaky character before it takes control.
 6. Museum MakersGrades K-2Kids can see the extraordinary in the ordinary. Now they will use that ability to create their own museum! The team will create and present an original museum and its exhibits. During the performance, the team will reveal three creative displays that explain the theme of the museum and show off team-made items. A tour guide will take audiences on a journey through the museum to meet a humorous artist and a curator.
+

@@ -1,5 +1,3 @@
-# wsc_writing_gq_005
-
 A ball drops; some scholars open red envelopes while others dip apple bits in honey. Different cultures around the world celebrate the new year differently and at different times, but all of them are marking the forward march of the calendar. Yet the fact that there are so many ways to split one year from the next suggests these divisions are ultimately arbitrary. Are they? Explore the reasons behind each of them, then discuss with your team: should we stop celebrating New Year’s as a holiday? When would be the best time of year for people to take stock of the past and think about the future? 
  “ Captain’s log ,” says whoever is captaining the Enterprise. “Stardate…” Star Trek’s stardates are based on a calendar meant to be used around the galaxy. Consider the different calendars and related listed below, then discuss with your team: does it make sense to restart the calendar periodically, perhaps when a new leader takes over ? Or would such changes risk angering people—as when the English allegedly rioted over the loss of eleven days as part of a calendar transition in 1752 ? 
 

@@ -1,3 +1,5 @@
-# 2009/puzzles/calling_you_from_my_cell/PUZZLE
+# Calling You from My Cell
 
-Calling You from My Cell Calling You from My Cell The Iota Dwarf Lion is a hunter of birds. When it hears its prey whistle a merry tune, it responds in kind... but not in kindness. (MP3)
+Open `puzzle.html` and its explicit local attachments for the original task. No text-only preview replaces images, audio/video or PDF sheets.
+
+Archive limitation: The original explicitly linked standalone archive materials are preserved byte-for-byte. Audio/video structure checks are not listening, watching, transcription or semantic grading. Historical full-hunt progression and host interaction are not reproduced.

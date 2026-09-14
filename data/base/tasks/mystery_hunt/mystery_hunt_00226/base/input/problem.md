@@ -1,3 +1,5 @@
-# 2002/red/X/Puzzle.html
+# Mystery Hunt 2002, Red, Hotel Puzzle
 
-Mystery Hunt 2002, Red, Hotel Puzzle Red 2002 MIT Mystery Hunt MGM GRAND It's all a mirage... If you've put the seven answers in the right order, getting through this maze should be a snap-- the first answer on your list is described by the first node you visit, the second answer is described by the second node, and so on. Naturally, if you have the wrong order, you'll never make it through the maze.
+Open `puzzle.html` for the complete source page and its images. Layout, color, music notation, cipher spelling and letter case remain as published; a flattened text preview is not a substitute.
+
+Archive limitation: The maze requires seven other puzzle answers in a separately determined order. Those answers and ordering are not inserted into the initial packet.

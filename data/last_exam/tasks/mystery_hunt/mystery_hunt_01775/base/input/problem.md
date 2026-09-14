@@ -1,3 +1,5 @@
-# 2013/coinheist.com/oceans_11/vertexillonomy/index.html
+# Vertexillonomy
 
-Vertexillonomy -- COINHEIST Vertexillonomy: Solved &larr; BACK Status: Name: Manic Sages Options: 0 (100 options = 1 free answer) (Options increase up to 200 with time) To next unlock: None hour(s) or fewer Home Notes Event Schedule Solution Contact HQ
+Open `puzzle.html` for the original styled packet and image links. Text previews do not replace blank cells, diagrams, symbols or feed ordering.
+
+Archive limitation: Only the original static standalone body, layout and explicitly linked images are restored. Archive Q.E.D./Solved header markers, status counters, solution navigation and scripts are removed; other navigation is inert. Original LESS is compiled offline using version 1.3.0, with imports and JavaScript expressions disabled. CSS image links and font dependencies are local; the archive League Gothic bytes are preserved, while source-named Google font binaries are current snapshots, not certified historical versions. Historical travel times, fictional advice, cipher text and repeated visual cells are not corrected or modernized. Calling Bingo retains only its listed other-puzzle titles and enumeration; no other answers or unlock states are injected. Federal Reserve retains only its archived fictional server notice; no real bank, puzzle server or terminal commands are contacted or executed. Gold, scores and grading/runtime readiness are unchanged and not recertified.

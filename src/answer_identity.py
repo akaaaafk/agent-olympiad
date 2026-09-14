@@ -4,6 +4,8 @@ from __future__ import annotations
 import json
 import re
 
+WORK_TASK_BINDING_VERSION = 1
+
 
 def normalize_task_reference(value: object) -> str:
     value = str(value).strip().rsplit(":", 1)[-1]
@@ -29,12 +31,8 @@ _ANSWER_FOR = re.compile(
 )
 
 
-def conflicting_answer_task(text: str, expected: str) -> str | None:
-    """Return an explicitly conflicting label; ordinary references/steps are not labels.
-
-    This never guesses a task from the subject matter or correct answer and
-    never redirects a write to another task.
-    """
+def declared_answer_tasks(text: str) -> list[object]:
+    """Read answer labels only; ordinary cross-references/steps are not labels."""
     text = str(text).strip()
     if text.startswith("```") and text.endswith("```"):
         text = "\n".join(text.splitlines()[1:-1]).strip()
@@ -51,4 +49,10 @@ def conflicting_answer_task(text: str, expected: str) -> str | None:
     if header:
         references.append(header.group(1))
     references.extend(match.group(1) for match in _ANSWER_FOR.finditer(text))
-    return next((str(ref) for ref in references if not task_reference_matches(ref, expected)), None)
+    return references
+
+
+def conflicting_answer_task(text: str, expected: str) -> str | None:
+    """Never guess a task from subject matter or gold, or redirect a write."""
+    return next((str(ref) for ref in declared_answer_tasks(text)
+                 if not task_reference_matches(ref, expected)), None)

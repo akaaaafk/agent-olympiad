@@ -1,5 +1,3 @@
-# 2025-regional-case-set
-
 2 0 2 5  R e g i o n a l  C a s e  S e t
 I n t e r c o l l e g i a t e  E t h i c s  B o w l
 F A L L  2 0 2 5

@@ -1,0 +1,12 @@
+{
+  "session_id": "qanta_2002_illinois_novice",
+  "competition_id": "qanta",
+  "problem_ids": [
+    "qanta_train_87017",
+    "qanta_train_87124"
+  ],
+  "description": "OTC contest-session manifest for qanta_2002_illinois_novice (2 tasks)",
+  "split_parts": false,
+  "task_family": "short_answer",
+  "competition_description": "Academic quiz-bowl questions: identify the requested person, place, work, event, or concept from progressively specific clues."
+}

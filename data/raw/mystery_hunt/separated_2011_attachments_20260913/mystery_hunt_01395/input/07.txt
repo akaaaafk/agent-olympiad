@@ -1,0 +1,45 @@
+> load game
+> walk corridor
+> open gate
+> climb stairs
+> climb vines
+> double back jump
+> double back jump
+> double back jump
+> open chest
+> get green orbs
+> open chest
+> get blue orbs
+> kill scythe legionnaires
+> kill legionnaires
+> kill archers
+> climb stairs
+> kill cyclops
+> kill scythe legionnaires
+> kill legionnaires
+> descend stairs
+> open chest
+> get green orbs
+> smash pots
+> get red orbs
+> jump pillar
+> jump pillar
+> open chest
+> get red orbs
+> cross bridge
+> kick ballista
+> open door
+> kill legionnaires
+> move ballista on gear
+> pull lever
+> move ballista off gear
+> pull lever
+> move ballista on gear
+> pull lever
+> move ballista
+> use ballista
+> enter door
+> open chest
+> get blue orbs
+> touch thunderbolt
+> get ???????? (5)

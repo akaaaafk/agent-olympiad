@@ -1,3 +1,5 @@
-# 2016/puzzle/lost_skull
+# Lost Skull
 
-Lost Skull &mdash; Ysera &mdash; MIT Mystery Hunt 2016 Toggle navigation Home Navigation All Puzzles FAQ Call in Answer --> Solution Lost Skull It turns out this arrowhead collection has a series of very convincing fakes. PDF of pieces
+Open `puzzle.html` and its linked original PDF. All PDF pages are required; text extraction does not replace visual clues.
+
+Archive limitation: The explicitly linked original PDF and its original page order are preserved byte-for-byte, without re-export, OCR replacement or solved annotations. Original grids, colored marks, pictures, blank regions and repeated clue wording are task content, not inferred errors. Archive navigation, solution links and sheep/status scripts are removed; artwork attribution text remains, with its hyperlink inert. Original same-year Bootstrap fonts and unused archive-logo file repair the source CSS paths documented in the static batch. Source-named Google fonts are current snapshots with OFL texts, not certified 2016 binary versions. Gold, total points, splits, license and grading/runtime readiness are unchanged and not recertified. All three pages of arrowhead pieces, labels and deliberately repeated or conflicting properties remain; purported fakes are not removed.

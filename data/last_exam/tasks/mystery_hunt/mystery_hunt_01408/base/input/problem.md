@@ -1,3 +1,5 @@
-# 2011/puzzles/civilization/st_andrews_links/
+# St Andrews Links
 
-St Andrews Links Back to Civ Info > Introduction Contact HQ Events Answer Board Achievements Updates View solution Wonder of the World St Andrews Links The game of golf was invented on the Old Course at St Andrews. par 7 par 5 par 5 par 5 par 6 par 6 par 3 par 6 The eight holes on this part of the course are each named after a technology, in reverse alphabetical order.
+Open `puzzle.html` for the original styled visual packet and linked images. A text preview does not replace the diagrams or blank cells.
+
+Archive limitation: Original standalone text, layout, diagrams, repeated entries and published worked examples are preserved. The exact YUI 3.2.0 reset is recovered from its publisher and checked against the same official release. Archive navigation, answer checking and points scripts are removed. Historical claims are not modernized; shared-page answer variants are not merged and host or cross-task protocols are not reconstructed.

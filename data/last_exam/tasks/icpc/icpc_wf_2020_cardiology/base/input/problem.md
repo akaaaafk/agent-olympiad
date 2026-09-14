@@ -1,5 +1,3 @@
-# Cardiology
-
 Hide 
  Cardiology 
 

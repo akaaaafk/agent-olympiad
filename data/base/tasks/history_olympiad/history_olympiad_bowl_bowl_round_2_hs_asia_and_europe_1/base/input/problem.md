@@ -1,5 +1,3 @@
-# Bowl-Round-2-HS-Asia-and-Europe-1
-
 [Q1] This country’s parliament recently held an underwater session to call attention to global warming, which threatens its population living on low--lying islands. This country’s population primarily speaks a language related to Sinhalese, spoken on Sri Lanka to its northeast. For ten points, name this Indian Ocean island nation that has become popular among honeymooning couples for its resorts featuring romantic bungalows that have been built over the water.
 
 [Q2] Parson Brownlow was a vocal opponent of joining this group, using his Knoxville Whig newspaper to oppose it. Cotton imports from India and Egypt allowed the United Kingdom to refuse to recognize this group, which employed A. P. Hill and George Pickett in its armed forces. Alexander Hamilton Stephens served as vice--president of, for ten points, what unrecognized nation whose only president, Jefferson Davis, lived in Richmond, Virginia?

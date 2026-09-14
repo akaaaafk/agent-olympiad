@@ -1,5 +1,3 @@
-# NCCDC 2026 Wildcard
-
 © NCCDC 2026. All Rights Reserved. 
 2026 CCDC Wild Card Readme 
 Welcome to the 2026 CCDC Wild Card event!  The goal for the Wild Card event is to score as many 

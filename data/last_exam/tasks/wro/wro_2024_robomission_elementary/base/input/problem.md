@@ -1,5 +1,3 @@
-# RoboMission Elementary 2024
-
 RoboMission Elementary Game Rules Season 2024    
    Earth Allies Sustainable Farming       Oﬃcial Game Rules for WRO RoboMission Elementary.  Version: January 15th 2024  (Note: Rules for local WRO events may vary!)      WRO International Premium Partner 
  

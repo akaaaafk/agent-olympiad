@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=1240, user-scalable=yes"></meta>
+    
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="icon" href="https://web.mit.edu/puzzle/www/2015/static/images/hunt/icon32.png" type="image/x-icon" />
+    <title>The Misspelled Insects &mdash; MIT Mystery Hunt 2015</title>
+    
+    <link href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/puzzle.css" rel="stylesheet" type="text/css" />
+
+    
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/logbook.css"/>
+<link rel="stylesheet" href="https://web.mit.edu/puzzle/www/2015/static/stylesheets/workshop.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+ <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="https://web.mit.edu/puzzle/www/2015/intro.html">World Map</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="https://web.mit.edu/puzzle/www/2015/storylog.html">The Story So Far...</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Useful links <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="https://web.mit.edu/puzzle/www/2015/toc.html">List of Puzzles</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/eventschedule.html">Events Schedule</a></li>
+	    
+            <li></li>
+	    
+            <li><a href="https://web.mit.edu/puzzle/www/2015/updates.html">Updates from Sealab</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/completelog.html">Full team log</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/faq.html">FAQ</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/sponsors.html">Sponsors</a></li>
+            <li><a href="https://web.mit.edu/puzzle/www/2015/">2015 Archive Overview</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    
+    
+    
+        <li></li>
+        
+    
+
+         
+    </ul>
+  </div><!-- /.navbar-collapse -->
+ </div>
+</nav> 
+
+  
+<div class="container">
+    <div id="artstuff">
+    <div id="workshopdecor">
+    <div id="puzzle-obj"><img src="https://web.mit.edu/puzzle/www/2015//assets/puzzimages/200.png"></img></div>
+    <div id="infowindow">Location: Chemistry Lab</div>
+    </div>
+    </div>
+    <div id="paper">
+      
+
+
+
+        <div class="puzzle-page-header">
+        
+            <div class="sol"><a href="solution/">View Solution</a></div>
+        
+          <h1>The Misspelled Insects</h1>
+        
+	    
+	        <p class="answer" id="answer_200"> Answer: click here to reveal</p>
+            
+        
+        </div>
+      <div class='puzzle'>
+        <!-- Puzzle content begins here -->
+         <div class="no-page-break">
+<p>Syllables <b><u>s</u></b>pray like springtime showers into a disposable chalice</p>
+<p>I <b><u>b</u></b>eseech you to return your finger ornament in exchange for your liberty to leave with another man</p>
+<p>Y<b><u>o</u></b>u stash your cash in a bag in a location with stags and crustaceans</p>
+<p>I pass out <b><u>w</u></b>hen seeing the women in a country of recent political turmoil</p>
+<p>F<b><u>l</u></b>utter with your damaged limbs</p>
+<p>He wen<b><u>t</u></b> out hunting Shere Khan with Dumbo and a firearm</p>
+<p>Will you join in a p<b><u>l</u></b>easurable activity my darling common sense</p>
+<p>You make me very bef<b><u>u</u></b>ddled McGuire with all that stones and whirling</p>
+<p>But it begins when I have a c<b><u>h</u></b>auffeur</p>
+<p>She f<b><u>e</u></b>tched a countenance from the container at the entrance</p>
+<p>Oth<b><u>e</u></b>r than Curious George and myself, the rest of the world doesn&rsquo;t always share</p>
+<p>To keep myself from da<b><u>y</u></b>dreaming, I&rsquo;m patching a leak </p>
+<p>The tuske<b><u>d</u></b> marine mammal was an apostle</p>
+<p>Lack <b><u>o</u></b>f grief is a not cool 9 millimeter</p>
+<p><b><u>S</u></b>odium x11</p>
+<p>Singer known <b><u>f</u></b>or &ldquo;Music&rdquo;, but with little kids</p>
+<p>And wh<b><u>e</u></b>n the downtrodden citizens of our planet come to terms</p>
+<p>Ava<b><u>i</u></b>lable to grab some English breakfast with me?</p>
+<p>With gree<b><u>n</u></b>s that are citrusy and air that is jelly-like </p>
+<p>Th<b><u>e</u></b> Scottish mathematical physicist and American inventor is in the department to prevent illness</p>
+<p>Cruel cond<b><u>i</u></b>ment-colored Col. character from Clue is caught catnapping in the Commons</p>
+<p>The vo<b><u>c</u></b>abulary that I use you can comprehend</p>
+<p>Are<b><u>n</u></b>&rsquo;t Scandinavian energy sources great?</p>
+<p>Wes<b><u>t</u></b> Siberian River Los Angeles Two, West Siberian River Los Angeles something Vinci</p>
+<p>She&rsquo;s so <b><u>h</u></b>ot even though she kind of looks like a dude</p>
+<p>You say you want a s<b><u>p</u></b>in around the sun</p>
+<p>You better escape while <b><u>y</u></b>ou can, my little pretty, and mimic an ostrich too</p>
+<p>Will you <b><u>r</u></b>equire and accommodate me when I&rsquo;m an old Nintendo console?</p>
+<p>M<b><u>e</u></b>thod of uncreasing your affections</p>
+<p>Would <b><u>y</u></b>ou like to hide the salami on the pavement?</p>
+<p><b><u>I</u></b> become euphoric with a hand from my buddies</p>
+<p>Romance was a simple dive<b><u>r</u></b>sion</p>
+</div>
+
+        <!-- Puzzle content ends here -->
+      </div>
+    </div>
+    
+
+
+</div>
+
+
+    
+    <script type="text/javascript" src="https://web.mit.edu/puzzle/www/2015/static/bootstrap/javascripts/bootstrap.js" charset="utf-8"></script>
+    
+<script type="text/javascript">
+  $(document).ready(function(e) { $('#answer_200').click(function(e) { $('#answer_200').text("Answer: " + "BLUE FINCH");});});
+</script>
+
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

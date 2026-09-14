@@ -1,0 +1,34 @@
+{
+  "problem_id": "ioai_team_2025_factory",
+  "year": 2025,
+  "authority": "Selected edition only; the original task PDF controls exact requirements.",
+  "task_source": "data/raw/ioai/Team-Challenge/2025/2025_IOAI_Team_Challenge_Factory_of_the_Future.pdf",
+  "source_sha256": "9ea4339136c0ae03296ff7bccc1e038bbf73d2138a249911518c1b06567621d5",
+  "official_minutes": null,
+  "deliverable": "robot_control_program_for_factory_navigation_and_manipulation",
+  "required_artifacts": [
+    "Program Galbot to locate and organize warehouse objects while avoiding obstacles"
+  ],
+  "exact_submission_schema": null,
+  "numeric_scoring": null,
+  "tools": {
+    "environment": "The guide identifies the Galbot MuJoCo-based simulator.",
+    "contest_access": "Machine count, permitted sites and tools require the task-specific announcements."
+  },
+  "collaboration": "Team members may cooperate; external hall communication is prohibited.",
+  "translation": "The organizer translation service is available; this is not an exclusive website allowlist.",
+  "items": "Apply the Team Challenge item policy referencing Individual/GAITE supplies, not their entire technical environment.",
+  "appeals": "The team leader may appeal from round start until one hour after round end.",
+  "rules_source": "data/raw/ioai/Team-Challenge/recovered_20260913/rules_2025_v2_4.pdf",
+  "rules_sections": [
+    "3",
+    "2.13"
+  ],
+  "rules_cover_version": "2.4 (August 3, 2025)",
+  "guide_example_urls": [
+    "https://github.com/galbot-ioai/physics_sim_edu/blob/ioai/master/examples/ioai/ioai_grasp_env.py",
+    "https://github.com/galbot-ioai/physics_sim_edu/blob/ioai/master/examples/ioai/ioai_nav_env.py"
+  ],
+  "pdf_rendering_note": "On guide page 6 the old Issac Sim heading is struck through; the replacement paragraph specifies MuJoCo. Plain extraction does not preserve strike-through or executable code layout.",
+  "historical_environment_verified": false
+}

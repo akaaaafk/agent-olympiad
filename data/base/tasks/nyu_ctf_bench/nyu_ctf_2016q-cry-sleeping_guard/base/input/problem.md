@@ -1,3 +1,1 @@
-# CSAW-Quals / crypto / Sleeping_Guard
-
 Only true hackers can see the image in this magic PNG....

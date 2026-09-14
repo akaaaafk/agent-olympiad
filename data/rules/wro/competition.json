@@ -27,7 +27,8 @@
   },
   "allowed_tools": [
     "query_rules",
-    "inspect_environment"
+    "inspect_environment",
+    "check_robot_mission_sequence"
   ],
   "resources": {
     "internet": "forbidden",

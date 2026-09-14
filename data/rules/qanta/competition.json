@@ -13,7 +13,8 @@
   },
   "execution": {},
   "allowed_tools": [
-    "query_rules"
+    "query_rules",
+    "prepare_quizbowl_answer"
   ],
   "resources": {
     "internet": "forbidden",

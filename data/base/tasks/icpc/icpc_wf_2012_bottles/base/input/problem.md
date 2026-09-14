@@ -1,5 +1,3 @@
-# Curvy Little Bottles
-
 Hide 
  Curvy Little Bottles 
 

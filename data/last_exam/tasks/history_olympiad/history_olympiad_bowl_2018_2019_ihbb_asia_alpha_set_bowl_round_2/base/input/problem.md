@@ -1,5 +1,3 @@
-# 2018-2019-IHBB-Asia-Alpha-Set-Bowl-Round-2
-
 [Q1] During Ottoman rule, this modern--day country was the site of a battle near its Al Wajbah fort. This country has been historically led by members of the House of Al Thani. After the closure of BBC’s Arabic language television services, an emir in this country made a loan to found the moderate news channel Al--Jazeera. Set to host the 2022 World Cup, for ten points, name this small Arab country with capital at Doha.
 
 [Q2] One of these conflicts effectively ended with the capture of the Taku Forts. A letter that said, “Let us ask, where is your conscience?” was sent to the victorious monarch of these wars. One of these wars began when officials boarded and searched the Arrow. In the first of the Unequal Treaties, Hong Kong was ceded to the winner of these wars as part of the Treaty of Nanking. For ten points, name these 19th century wars in China over a British poppy export.

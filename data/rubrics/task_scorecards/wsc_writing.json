@@ -1,0 +1,3241 @@
+{
+  "schema_version": "1.1",
+  "dataset": "wsc_writing",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "wsc_writing_gq_001",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_002",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_003",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_004",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_005",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_006",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_007",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_008",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_009",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_010",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_011",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_012",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_013",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_014",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_015",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_016",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_017",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_018",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_019",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_020",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_021",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_022",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_023",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_024",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_025",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_026",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_027",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_028",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_029",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_030",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_031",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_032",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_033",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_034",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_035",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_036",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_037",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_038",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_039",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_040",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_041",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "wsc_writing_gq_042",
+      "year": null,
+      "evaluation_status": "ready_with_limitations",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/wsc_writing_100_v1.json",
+          "sha256": "83fbfa145c68f4acdd2304ec96a71d82811a59bfa0556abf017a3d5af1805e9b",
+          "format": "numeric_rubric",
+          "rubric_id": "wsc_writing_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "clarity",
+              "name": "Clarity",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: readability and navigation; minimal grammar, syntax, and spelling errors; understanding of the prompt."
+            },
+            {
+              "id": "content",
+              "name": "Content",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: relevant and thought-provoking ideas and facts; sensible conclusions; effective use of World Scholar's Cup subject knowledge."
+            },
+            {
+              "id": "style",
+              "name": "Style",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: engaging language, appropriate style, varied vocabulary, and an enjoyable reading experience."
+            },
+            {
+              "id": "originality",
+              "name": "Originality",
+              "min_score": 15,
+              "max_score": 25,
+              "observable": true,
+              "description": "Assign 15-25 using the official questions: unique perspective, appropriate creative or memorable voice, and an answer worth discussing afterward."
+            }
+          ],
+          "not_observable_from_deck": [
+            "human-judge calibration",
+            "official three-paper team session",
+            "staged cross-paper editing"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/wsc_writing/all_guiding_questions.json",
+          "mime_type": "application/json",
+          "role": "judge_only",
+          "sha256": "96715fa07cd196ab2015c06a024e231c2b2ce02f839ca2ec69bd92c54ef9aab5"
+        },
+        {
+          "path": "data/raw/wsc_writing/rubric/wsc_writing_rubric.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1084f231ad3a7cfea338e828c0ace1eaceb73621e551011fa664d7a88c3b6cba"
+        }
+      ],
+      "limitations": "Scores one benchmark essay. The official three-teammate session produces three different responses and uses human judges; stage timing and cross-paper editing are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

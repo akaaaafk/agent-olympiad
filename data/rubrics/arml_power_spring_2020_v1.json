@@ -1,6 +1,6 @@
 {
   "rubric_id": "arml_power_spring_2020_v1",
-  "title": "Power Round \u2014 Spring 2020 \u2014 ARML Power sub-problem rubric",
+  "title": "Power Round — Spring 2020 — ARML Power sub-problem rubric",
   "total_points": 40.0,
   "criteria": [
     {
@@ -8,7 +8,7 @@
       "name": "Problem 1",
       "max_score": 4.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 1 (4 pts). Statement: Problem 1. Make a table like the one above for four people, with only the \ufb01rst person being"
+      "description": "Correct, justified solution to Problem 1 (4 pts). Statement: Problem 1. Make a table like the one above for four people, with only the ﬁrst person being"
     },
     {
       "id": "problem_02",
@@ -22,28 +22,28 @@
       "name": "Problem 3",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 3 (2 pts). Statement: Problem 3. For any n \u2265 2 and k with 2 \u2264 k \u2264 n, explain why person k can only end up"
+      "description": "Correct, justified solution to Problem 3 (2 pts). Statement: Problem 3. For any n ≥ 2 and k with 2 ≤ k ≤ n, explain why person k can only end up"
     },
     {
       "id": "problem_04",
       "name": "Problem 4",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 4 (2 pts). Statement: Problem 4. For any n \u2265 2 and any k, 2 \u2264 k \u2264 n, choose any subset consisting of k of the n"
+      "description": "Correct, justified solution to Problem 4 (2 pts). Statement: Problem 4. For any n ≥ 2 and any k, 2 ≤ k ≤ n, choose any subset consisting of k of the n"
     },
     {
       "id": "problem_05",
       "name": "Problem 5",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 5 (2 pts). Statement: Problem 5. Prove that there are exactly 2 n\u22121 possible seating arrangements."
+      "description": "Correct, justified solution to Problem 5 (2 pts). Statement: Problem 5. Prove that there are exactly 2 n−1 possible seating arrangements."
     },
     {
       "id": "problem_06",
       "name": "Problem 6",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 6 (2 pts). Statement: Problem 6. Prove that, for any n \u2265 2, the probability that person n sits in her own seat n"
+      "description": "Correct, justified solution to Problem 6 (2 pts). Statement: Problem 6. Prove that, for any n ≥ 2, the probability that person n sits in her own seat n"
     },
     {
       "id": "problem_07a",
@@ -176,14 +176,14 @@
       "name": "Problem 16b",
       "max_score": 2.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 16b (2 pts). Statement: (b) Prove that person k (with k > a ) will sit in her own seat with probability n \u2212 k + 1 n \u2212 k + a + 1."
+      "description": "Correct, justified solution to Problem 16b (2 pts). Statement: (b) Prove that person k (with k > a ) will sit in her own seat with probability n − k + 1 n − k + a + 1."
     },
     {
       "id": "problem_17",
       "name": "Problem 17",
       "max_score": 3.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 17 (3 pts). Statement: Problem 17. Prove that with n people, the \ufb01rst a of whom are absent-minded, there are"
+      "description": "Correct, justified solution to Problem 17 (3 pts). Statement: Problem 17. Prove that with n people, the ﬁrst a of whom are absent-minded, there are"
     }
   ],
   "not_observable_from_deck": [

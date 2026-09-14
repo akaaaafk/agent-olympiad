@@ -1,5 +1,3 @@
-# wsc_writing_gq_025
-
 The third book of the Lord of the Rings trilogy is titled The Return of the King; in it (spoilers ahead) the character Aragorn returns to unite humanity against a dire threat. The idea of a prophesied king reappearing and bringing his people together again against a formidable foe is common in literary history, from the overtold legend of King Arthur to the incomplete story of Jon Snow. Explore some of the following legends, then discuss with your team: why do such stories have such appeal? What political developments in today’s world might have similar causes? 
 
  Horus | Yudhishthira | Jesus | Richard the Lionheart 

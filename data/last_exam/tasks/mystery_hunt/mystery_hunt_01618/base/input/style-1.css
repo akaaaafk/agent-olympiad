@@ -1,0 +1,71 @@
+@import "style-4.css";
+@import "style-3.css";
+@import "style-2.css";
+
+/* General formatting */
+html, body { padding: 0; margin: 0; position: relative; }
+html { height: 100%; /* of viewport */ }
+body { min-height: 100%; /* of viewport */ }
+body { font-size: 16px; line-height: 1.4; }
+
+h1, body.index #puzzle-list {
+  font-family: 'Abril Fatface'; font-weight: 400;
+}
+h1 { font-size: 36px; }
+
+#link img, body.index #index-image img { border: none; }
+
+body.index #puzzle-list { font-size: 24px; }
+body.index #puzzle-list a { text-decoration: none; }
+body.index #puzzle-list td { vertical-align: baseline; }
+
+#top-link { position: absolute; top: 2px; left: 50%; display: block; }
+#top-link {
+  width: 373px; margin-left: -187px; /* center it! */
+  height: 53px; background: url("css-12.png");
+}
+
+#show-title { position: absolute; left: 50%; }
+#show-title a { position: absolute; display: block; }
+
+#link, #link a, #link img { width: 85px; height: 100px; display: block; }
+#link { position: absolute; z-index: 99; }
+
+#main {
+	height:auto !important; /* real browsers */
+	height:100%; /* IE6: treaded as min-height*/
+
+	min-height:100%; /* real browsers */
+}
+
+#credits {
+  font-size: 18px;
+  margin: 0;
+}
+
+@media print {
+  body { background: white; }
+  #background, #side-border, #top-border, #bottom-border,
+  #show-title, #top-link {
+    display: none;
+  }
+  img {
+    page-break-inside: avoid;
+  }
+  .puzzle #main, #content {
+    padding: 0 0 0 0 !important;
+    margin: 0 0 0 0 !important;
+  }
+  body.puzzle #main {
+    padding-top: 0px;
+  }
+  .ptitle {
+    background: transparent;
+    padding: 0 0 0 0 !important;
+    margin: 0 0 0 0 !important;
+    height: auto !important;
+  }
+  body, body.puzzle, body.index {
+    min-width: 0 !important;
+  }
+}

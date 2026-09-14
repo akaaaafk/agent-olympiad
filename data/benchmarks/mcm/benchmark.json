@@ -19,7 +19,8 @@
       {
         "path": "data/raw/mcm_icm/2016/mcm_icm_A_2016.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "bdaedcfc46ee0225e48205faaaa0402d135599c1fee95448d61ed244f62dc575"
       }
     ],
     "competition_id": "mcm",
@@ -27,8 +28,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2016_A"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2016/mcm_icm_A_2016.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2016/mcm_icm_A_2016.pdf",
+          "role": "agent_visible",
+          "sha256": "bdaedcfc46ee0225e48205faaaa0402d135599c1fee95448d61ed244f62dc575"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   },
   {
@@ -51,7 +79,8 @@
       {
         "path": "data/raw/mcm_icm/2016/mcm_icm_B_2016.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "cf3726cc959775a0d09fb3e1e3cb8e45a37a87e7e51c6add3292fc0852d585ad"
       }
     ],
     "competition_id": "mcm",
@@ -59,8 +88,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2016_B"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2016/mcm_icm_B_2016.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2016/mcm_icm_B_2016.pdf",
+          "role": "agent_visible",
+          "sha256": "cf3726cc959775a0d09fb3e1e3cb8e45a37a87e7e51c6add3292fc0852d585ad"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   },
   {
@@ -83,7 +139,8 @@
       {
         "path": "data/raw/mcm_icm/2016/mcm_icm_C_2016.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "b8132cd7ecc681aae414fe0f860c436239542536b60414e91dea2c90a563c82b"
       }
     ],
     "competition_id": "mcm",
@@ -91,8 +148,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2016_C"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2016/mcm_icm_C_2016.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2016/mcm_icm_C_2016.pdf",
+          "role": "agent_visible",
+          "sha256": "b8132cd7ecc681aae414fe0f860c436239542536b60414e91dea2c90a563c82b"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   },
   {
@@ -115,7 +199,8 @@
       {
         "path": "data/raw/mcm_icm/2017/mcm_icm_A_2017.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "94f755e9edd6afbfa75ce9f07d7bc73aecfe2b3c042bb8efb59d8f68ef438086"
       }
     ],
     "competition_id": "mcm",
@@ -123,8 +208,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2017_A"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2017/mcm_icm_A_2017.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2017/mcm_icm_A_2017.pdf",
+          "role": "agent_visible",
+          "sha256": "94f755e9edd6afbfa75ce9f07d7bc73aecfe2b3c042bb8efb59d8f68ef438086"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   },
   {
@@ -147,7 +259,8 @@
       {
         "path": "data/raw/mcm_icm/2017/mcm_icm_B_2017.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "894958230ec9da6df87015ae5462d8107d9ae4b217d57c24949854b2b3e2b003"
       }
     ],
     "competition_id": "mcm",
@@ -155,8 +268,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2017_B"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2017/mcm_icm_B_2017.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2017/mcm_icm_B_2017.pdf",
+          "role": "agent_visible",
+          "sha256": "894958230ec9da6df87015ae5462d8107d9ae4b217d57c24949854b2b3e2b003"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   },
   {
@@ -179,7 +319,8 @@
       {
         "path": "data/raw/mcm_icm/2017/mcm_icm_C_2017.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "a2bc4b8e94f74fb68da81908a39bbcc8d34705476ad6f65a18342a90ecbe1f7f"
       }
     ],
     "competition_id": "mcm",
@@ -187,8 +328,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2017_C"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2017/mcm_icm_C_2017.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2017/mcm_icm_C_2017.pdf",
+          "role": "agent_visible",
+          "sha256": "a2bc4b8e94f74fb68da81908a39bbcc8d34705476ad6f65a18342a90ecbe1f7f"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   },
   {
@@ -211,7 +379,8 @@
       {
         "path": "data/raw/mcm_icm/2021/mcm_icm_A_2021.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "618c85ee6565d7355c2aadc3239e18d256928f404ba05d10826ce857c27c1b91"
       }
     ],
     "competition_id": "mcm",
@@ -219,8 +388,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2021_A"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2021/mcm_icm_A_2021.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2021/mcm_icm_A_2021.pdf",
+          "role": "agent_visible",
+          "sha256": "618c85ee6565d7355c2aadc3239e18d256928f404ba05d10826ce857c27c1b91"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   },
   {
@@ -243,7 +439,8 @@
       {
         "path": "data/raw/mcm_icm/2021/mcm_icm_B_2021.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "4b5a910643fe1ae68fc15f32c7fe73a8a5f25d4d19e7e5c59ba9e0e85404dd14"
       }
     ],
     "competition_id": "mcm",
@@ -251,8 +448,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2021_B"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2021/mcm_icm_B_2021.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2021/mcm_icm_B_2021.pdf",
+          "role": "agent_visible",
+          "sha256": "4b5a910643fe1ae68fc15f32c7fe73a8a5f25d4d19e7e5c59ba9e0e85404dd14"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   },
   {
@@ -275,7 +499,8 @@
       {
         "path": "data/raw/mcm_icm/2021/mcm_icm_C_2021.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "d8bfff114085f0200f564b8acde977646e947466c7be1ec442320d17aff90905"
       }
     ],
     "competition_id": "mcm",
@@ -283,8 +508,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2021_C"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2021/mcm_icm_C_2021.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2021/mcm_icm_C_2021.pdf",
+          "role": "agent_visible",
+          "sha256": "d8bfff114085f0200f564b8acde977646e947466c7be1ec442320d17aff90905"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   },
   {
@@ -307,7 +559,8 @@
       {
         "path": "data/raw/mcm_icm/2022/mcm_icm_A_2022.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "69d6561460eb7a2e20abd11a01239fd72484ec16a1acebb16543bb355bbd5914"
       }
     ],
     "competition_id": "mcm",
@@ -315,8 +568,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2022_A"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2022/mcm_icm_A_2022.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2022/mcm_icm_A_2022.pdf",
+          "role": "agent_visible",
+          "sha256": "69d6561460eb7a2e20abd11a01239fd72484ec16a1acebb16543bb355bbd5914"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   },
   {
@@ -339,7 +619,8 @@
       {
         "path": "data/raw/mcm_icm/2022/mcm_icm_B_2022.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "cb78c2ef7b095d1a727cca67cd97be1a61bdb9fa338fdc81e5e7121e0d6afbac"
       }
     ],
     "competition_id": "mcm",
@@ -347,8 +628,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2022_B"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2022/mcm_icm_B_2022.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2022/mcm_icm_B_2022.pdf",
+          "role": "agent_visible",
+          "sha256": "cb78c2ef7b095d1a727cca67cd97be1a61bdb9fa338fdc81e5e7121e0d6afbac"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   },
   {
@@ -371,7 +679,8 @@
       {
         "path": "data/raw/mcm_icm/2022/mcm_icm_C_2022.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "27f48360b7d4e0c1eb76d2bf5182edf4d9cee05431aa4e406115c7d13f74f789"
       }
     ],
     "competition_id": "mcm",
@@ -379,8 +688,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2022_C"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2022/mcm_icm_C_2022.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2022/mcm_icm_C_2022.pdf",
+          "role": "agent_visible",
+          "sha256": "27f48360b7d4e0c1eb76d2bf5182edf4d9cee05431aa4e406115c7d13f74f789"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   },
   {
@@ -403,7 +739,8 @@
       {
         "path": "data/raw/mcm_icm/2024/mcm_icm_A_2024.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "3c69f8f3b56c9aeebc6ff45ab70b4e97f68ca7bd779923edab16ac61e36ce75a"
       }
     ],
     "competition_id": "mcm",
@@ -411,8 +748,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2024_A"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2024/mcm_icm_A_2024.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2024/mcm_icm_A_2024.pdf",
+          "role": "agent_visible",
+          "sha256": "3c69f8f3b56c9aeebc6ff45ab70b4e97f68ca7bd779923edab16ac61e36ce75a"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   },
   {
@@ -435,7 +799,8 @@
       {
         "path": "data/raw/mcm_icm/2024/mcm_icm_B_2024.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "359969af2b55c9d6d1c27f93165305329c12944b5db7b6529386fb50630dc685"
       }
     ],
     "competition_id": "mcm",
@@ -443,8 +808,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2024_B"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2024/mcm_icm_B_2024.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2024/mcm_icm_B_2024.pdf",
+          "role": "agent_visible",
+          "sha256": "359969af2b55c9d6d1c27f93165305329c12944b5db7b6529386fb50630dc685"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   },
   {
@@ -467,7 +859,8 @@
       {
         "path": "data/raw/mcm_icm/2024/mcm_icm_C_2024.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "08245640e218391d199f1a240a05f1872b1dcd9e47d8740801966e22bca8e3bf"
       }
     ],
     "competition_id": "mcm",
@@ -475,8 +868,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2024_C"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2024/mcm_icm_C_2024.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2024/mcm_icm_C_2024.pdf",
+          "role": "agent_visible",
+          "sha256": "08245640e218391d199f1a240a05f1872b1dcd9e47d8740801966e22bca8e3bf"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   },
   {
@@ -499,7 +919,8 @@
       {
         "path": "data/raw/mcm_icm/2025/mcm_icm_A_2025.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "96c00a912be48be43ec5992669a707538e837eec79acc70931b36f50da2aec38"
       }
     ],
     "competition_id": "mcm",
@@ -507,8 +928,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2025_A"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2025/mcm_icm_A_2025.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2025/mcm_icm_A_2025.pdf",
+          "role": "agent_visible",
+          "sha256": "96c00a912be48be43ec5992669a707538e837eec79acc70931b36f50da2aec38"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   },
   {
@@ -531,7 +979,8 @@
       {
         "path": "data/raw/mcm_icm/2025/mcm_icm_B_2025.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "a5675bea0d77f09ab684a6180776b0859b4f03bec71df29e2050c8000bc02e57"
       }
     ],
     "competition_id": "mcm",
@@ -539,8 +988,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2025_B"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2025/mcm_icm_B_2025.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2025/mcm_icm_B_2025.pdf",
+          "role": "agent_visible",
+          "sha256": "a5675bea0d77f09ab684a6180776b0859b4f03bec71df29e2050c8000bc02e57"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   },
   {
@@ -563,7 +1039,8 @@
       {
         "path": "data/raw/mcm_icm/2025/mcm_icm_C_2025.pdf",
         "mime_type": "application/pdf",
-        "role": "agent_visible"
+        "role": "agent_visible",
+        "sha256": "e3d1dcd7c06ba457b288ae8426707adb209fedf6f0823dcda2ba16f994708bf7"
       }
     ],
     "competition_id": "mcm",
@@ -571,8 +1048,35 @@
     "evaluation": {
       "evaluator_id": "rubric_llm_v1",
       "status": "ready",
-      "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-      "deliverable": "modeling_report"
+      "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+      "deliverable": "modeling_report",
+      "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+      "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+      "scorecard_key": "mcm_2025_C"
+    },
+    "eval_unit": "session",
+    "is_multi_agent": true,
+    "asset_policy": "Only agent_visible assets may enter contestant context; judge_only assets are evaluator-only.",
+    "split": "unspecified",
+    "license": {
+      "status": "not_verified",
+      "spdx_id": null,
+      "redistribution_allowed": null,
+      "note": "No redistribution license has been verified for this archived source; consult the upstream publisher before redistribution."
+    },
+    "provenance": {
+      "status": "source_linked",
+      "source_url": "https://www.contest.comap.org/",
+      "source_file": "data/raw/mcm_icm/2025/mcm_icm_C_2025.pdf",
+      "solution_file": null,
+      "files": [
+        {
+          "path": "data/raw/mcm_icm/2025/mcm_icm_C_2025.pdf",
+          "role": "agent_visible",
+          "sha256": "e3d1dcd7c06ba457b288ae8426707adb209fedf6f0823dcda2ba16f994708bf7"
+        }
+      ],
+      "verification_scope": "Source locations, content edition and asset hashes; licensing remains separate."
     }
   }
 ]

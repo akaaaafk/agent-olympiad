@@ -1,5 +1,3 @@
-# IHBB-Asia-Bowl-Round-9-Backup-Packet
-
 [Q1] The Hawksbill Creek Agreement guarantees that a planned city in this country enjoys no taxation; that city of Freeport on this country’s “Grand” island is now a prominent tourist hub. During the Civil War, blockade runners left from Charleston to this country’s port of Nassau. For ten points, name this member of the British Commonwealth, an island chain just east of Florida and northeast of Cuba.
 
 [Q2] An event that took place at this location filled the North Fork of the Toutle River with sediment and destroyed the tourist camps at Spirit Lake. At this location, known to the Klickitat tribe as Louwala- Clough, photographer Reid Blackburn was killed near Coldwater Camp; in the aftermath of that event, Jimmy Carter described this location’s surroundings as more desolate than a moonscape. For ten points, name this mountain in the Cascades that killed 57 people in a May 18, 1980 volcanic eruption.

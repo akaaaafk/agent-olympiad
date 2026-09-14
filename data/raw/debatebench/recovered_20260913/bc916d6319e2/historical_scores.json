@@ -1,0 +1,110 @@
+{
+  "problem_id": "debatebench_The Natolin European Round Robin Debating Championships Round 5",
+  "visibility": "judge_only",
+  "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/The Natolin European Round Robin Debating Championships Round 5.txt",
+  "transcript_sha256": "c033aa3cc793ab200353459123132830172e43ae4069cbfb5bb429e72ceb9216",
+  "score_workbook": "data/raw/debatebench/scores.xlsx",
+  "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+  "score_column_order": [
+    "PM",
+    "DPM",
+    "LO",
+    "DLO",
+    "MG",
+    "GW",
+    "MO",
+    "OW"
+  ],
+  "score_matching_title": "The Natolin European Round Robin Debating Championships Round 5",
+  "filename_alias_applied": false,
+  "identity_status": "matched",
+  "selected_scores": {
+    "sheet": "Sheet1",
+    "excel_row": 18,
+    "cell_range": "A18:M18",
+    "tournament_title": "The Natolin European Round Robin Debating Championships Round 5",
+    "speaker_scores": {
+      "PM": 82.0,
+      "LO": 80.0,
+      "DPM": 82.0,
+      "DLO": 80.0,
+      "MG": 81.0,
+      "MO": 83.0,
+      "GW": 80.0,
+      "OW": 84.0
+    },
+    "house_order": [
+      "CO",
+      "OG",
+      "CG",
+      "OO"
+    ]
+  },
+  "candidates": [
+    {
+      "sheet": "Sheet1",
+      "excel_row": 18,
+      "cell_range": "A18:M18",
+      "tournament_title": "The Natolin European Round Robin Debating Championships Round 5",
+      "speaker_scores": {
+        "PM": 82.0,
+        "LO": 80.0,
+        "DPM": 82.0,
+        "DLO": 80.0,
+        "MG": 81.0,
+        "MO": 83.0,
+        "GW": 80.0,
+        "OW": 84.0
+      },
+      "house_order": [
+        "CO",
+        "OG",
+        "CG",
+        "OO"
+      ]
+    }
+  ],
+  "role_alignment": {
+    "valid_role_boundaries": true,
+    "opening_role_order": [
+      "PM",
+      "LO",
+      "DPM",
+      "DLO",
+      "MG",
+      "MO",
+      "GW",
+      "OW"
+    ],
+    "expected_speaking_order": [
+      "PM",
+      "LO",
+      "DPM",
+      "DLO",
+      "MG",
+      "MO",
+      "GW",
+      "OW"
+    ],
+    "observed_role_tags": [
+      "PM",
+      "/PM",
+      "LO",
+      "/LO",
+      "DPM",
+      "/DPM",
+      "DLO",
+      "/DLO",
+      "MG",
+      "/MG",
+      "MO",
+      "/MO",
+      "GW",
+      "/GW",
+      "OW",
+      "/OW"
+    ],
+    "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+  },
+  "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+}

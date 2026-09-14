@@ -1,0 +1,110 @@
+{
+  "problem_id": "debatebench_LSE Open 2023 Round 3 Room 1",
+  "visibility": "judge_only",
+  "transcript_file": "data/raw/debatebench/cleaned_speeches/Cleaned Speeches/LSE Open 2023 Round 3 Room 1.txt",
+  "transcript_sha256": "b4d7b8e3db4a1ae70273f77561c0b2c83d93d6e61edf2855761dbc57d465394f",
+  "score_workbook": "data/raw/debatebench/scores.xlsx",
+  "score_workbook_sha256": "f4a9976af874eb2fcc8b95bf293e2ab81bb86de613982fed2b19e5590550a42a",
+  "score_column_order": [
+    "PM",
+    "DPM",
+    "LO",
+    "DLO",
+    "MG",
+    "GW",
+    "MO",
+    "OW"
+  ],
+  "score_matching_title": "LSE Open 2023 Round 3 Room 1",
+  "filename_alias_applied": false,
+  "identity_status": "matched",
+  "selected_scores": {
+    "sheet": "Sheet1",
+    "excel_row": 20,
+    "cell_range": "A20:M20",
+    "tournament_title": "LSE Open 2023 Round 3 Room 1",
+    "speaker_scores": {
+      "PM": 85.0,
+      "LO": 79.0,
+      "DPM": 84.0,
+      "DLO": 80.0,
+      "MG": 83.0,
+      "MO": 81.0,
+      "GW": 84.0,
+      "OW": 80.0
+    },
+    "house_order": [
+      "OG",
+      "CG",
+      "CO",
+      "OO"
+    ]
+  },
+  "candidates": [
+    {
+      "sheet": "Sheet1",
+      "excel_row": 20,
+      "cell_range": "A20:M20",
+      "tournament_title": "LSE Open 2023 Round 3 Room 1",
+      "speaker_scores": {
+        "PM": 85.0,
+        "LO": 79.0,
+        "DPM": 84.0,
+        "DLO": 80.0,
+        "MG": 83.0,
+        "MO": 81.0,
+        "GW": 84.0,
+        "OW": 80.0
+      },
+      "house_order": [
+        "OG",
+        "CG",
+        "CO",
+        "OO"
+      ]
+    }
+  ],
+  "role_alignment": {
+    "valid_role_boundaries": true,
+    "opening_role_order": [
+      "PM",
+      "LO",
+      "DPM",
+      "DLO",
+      "MG",
+      "MO",
+      "GW",
+      "OW"
+    ],
+    "expected_speaking_order": [
+      "PM",
+      "LO",
+      "DPM",
+      "DLO",
+      "MG",
+      "MO",
+      "GW",
+      "OW"
+    ],
+    "observed_role_tags": [
+      "PM",
+      "/PM",
+      "LO",
+      "/LO",
+      "DPM",
+      "/DPM",
+      "DLO",
+      "/DLO",
+      "MG",
+      "/MG",
+      "MO",
+      "/MO",
+      "GW",
+      "/GW",
+      "OW",
+      "/OW"
+    ],
+    "note": "Role tags are audited without changing transcript words or guessing mislabeled speakers."
+  },
+  "semantics": "These labels describe the archived human debate. They are not gold scores for newly generated speeches."
+}

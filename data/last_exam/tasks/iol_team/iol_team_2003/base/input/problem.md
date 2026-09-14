@@ -1,0 +1,1 @@
+IOL 2003 Team Contest. The complete official problem is in the attached PDF. Read every page as an image, including language data, tables, subscripts, and diacritics. A text-only rendering is incomplete. Submit the requested answers and explanations.

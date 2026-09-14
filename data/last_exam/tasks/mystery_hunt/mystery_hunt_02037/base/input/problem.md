@@ -1,3 +1,5 @@
-# 2015/puzzle/image
+# Image
 
-Image &mdash; MIT Mystery Hunt 2015 Toggle navigation World Map The Story So Far... Useful links List of Puzzles Events Schedule Updates from Sealab Full team log FAQ Sponsors 2015 Archive Overview Location: Atlantis, Colorful Tower Depth: 395 View Solution Image Answer: click here to reveal image (3.5MB, md5= f5ac27a1a43331d1e47662928028dc4a )
+Open `puzzle.html` with its explicitly linked original input files.
+
+Archive limitation: Only explicitly linked original inputs and their static publisher dependencies are restored. Archive solution navigation, answer-reveal header and gold-bearing scripts are removed; no puzzle code is run. Fonts and CSS dependencies are original publisher files or mechanical local URL rewrites. Gold, total points, splits, licensing and grading/runtime readiness are unchanged, not recertified. The original extensionless attachment image is retained without renaming, transformation or new file-type hints. Its bytes match the MD5 printed on the original page. A private decoding check is not a reconstructed solution.

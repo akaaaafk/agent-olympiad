@@ -1,5 +1,3 @@
-# Get a Clue!
-
 Hide 
  Get a Clue! 
 

@@ -1,23 +1,255 @@
-# Method — `science_olympiad`
+# Team method
 
-How this benchmark's agents are asked to work. Projected from `data/rules/science_olympiad/collaboration.json`.
-
-## Agent constraints
-
-- Apply this competition's own roster, timing, tool, collaboration, submission, and scoring rules; do not import rules from another contest.
-- Only the participants authorized by the selected season, division, and event rules may collaborate on that event.
-- Banned during the contest: internet access and running code. Conditional: calculator permission is event-dependent and not exposed by default. Paper and pencil are always available. Work only from the materials provided with the problem.
-- Treat private reasoning and notes as unknown to teammates until you communicate the decision-relevant content.
-- Do not access hidden solutions, answer keys, evaluator internals, or unauthorized outside problem-solving help.
-- Apply only the rules for the selected season, division, and event; a tournament roster rule does not authorize every roster member to collaborate on one event.
-- Do not treat the 15-person tournament roster as the active team for one event; require the event's season, division, event rules, corrections, and score sheet before claiming official equivalence.
-- Only designated submitters may make the shared submission: Agent_1.
-- Use only the official mechanisms that the current task actually exposes; do not claim physical, oral, live-opponent, judge, or environment actions that were not observed.
-
-## Information / deliberation / communication
+## Collaboration configuration
 
 ```json
 {
+  "agent_roles": [
+    {
+      "name": "Agent_1",
+      "title": "captain",
+      "may_submit": true,
+      "duties": [
+        "Direct who answers and stop teammates from talking over each other.",
+        "Give the team's official answer once the group has settled.",
+        "Submit only after the format and rule checks pass."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_2",
+      "title": "primary solver",
+      "may_submit": false,
+      "duties": [
+        "Produce the first full attempt at the problem.",
+        "Show the reasoning so a teammate can check it."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_3",
+      "title": "secondary solver",
+      "may_submit": false,
+      "duties": [
+        "Attack the problem from a different angle than the primary solver.",
+        "Compare results and surface the disagreement early."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_4",
+      "title": "verifier",
+      "may_submit": false,
+      "duties": [
+        "Challenge weak arguments and demand an independent check.",
+        "Reject an answer rather than let an unverified one be submitted."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_5",
+      "title": "specialist",
+      "may_submit": false,
+      "duties": [
+        "Take the part of the task that matches your stated specialty.",
+        "Check a teammate's work once your own part is done."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_6",
+      "title": "scribe",
+      "may_submit": false,
+      "duties": [
+        "Keep the shared workspace readable and current.",
+        "Write answers in the required format as they are settled."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_7",
+      "title": "researcher",
+      "may_submit": false,
+      "duties": [
+        "Find and cite the authorities the argument depends on.",
+        "Bring counter-authority to the team before a judge does."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_8",
+      "title": "specialist and completeness checker",
+      "may_submit": false,
+      "duties": [
+        "Scan for unanswered problems before the team submits.",
+        "Confirm every required part of the deliverable is present."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_9",
+      "title": "specialist and completeness checker",
+      "may_submit": false,
+      "duties": [
+        "Scan for unanswered problems before the team submits.",
+        "Confirm every required part of the deliverable is present."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_10",
+      "title": "specialist and completeness checker",
+      "may_submit": false,
+      "duties": [
+        "Scan for unanswered problems before the team submits.",
+        "Confirm every required part of the deliverable is present."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_11",
+      "title": "specialist and completeness checker",
+      "may_submit": false,
+      "duties": [
+        "Scan for unanswered problems before the team submits.",
+        "Confirm every required part of the deliverable is present."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_12",
+      "title": "specialist and completeness checker",
+      "may_submit": false,
+      "duties": [
+        "Scan for unanswered problems before the team submits.",
+        "Confirm every required part of the deliverable is present."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_13",
+      "title": "specialist and completeness checker",
+      "may_submit": false,
+      "duties": [
+        "Scan for unanswered problems before the team submits.",
+        "Confirm every required part of the deliverable is present."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_14",
+      "title": "specialist and completeness checker",
+      "may_submit": false,
+      "duties": [
+        "Scan for unanswered problems before the team submits.",
+        "Confirm every required part of the deliverable is present."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    },
+    {
+      "name": "Agent_15",
+      "title": "specialist and completeness checker",
+      "may_submit": false,
+      "duties": [
+        "Scan for unanswered problems before the team submits.",
+        "Confirm every required part of the deliverable is present."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": []
+    }
+  ],
+  "agent_constraints": [
+    "Apply this competition's own roster, timing, tool, collaboration, submission, and scoring rules; do not import rules from another contest.",
+    "Only the participants authorized by the selected season, division, and event rules may collaborate on that event.",
+    "Banned during the contest: internet access and running code. Conditional: calculator permission is event-dependent and not exposed by default. Paper and pencil are always available. Work only from the materials provided with the problem.",
+    "Treat private reasoning and notes as unknown to teammates until you communicate the decision-relevant content.",
+    "Do not access hidden solutions, answer keys, evaluator internals, or unauthorized outside problem-solving help.",
+    "Apply only the rules for the selected season, division, and event; a tournament roster rule does not authorize every roster member to collaborate on one event.",
+    "Do not treat the 15-person tournament roster as the active team for one event; require the event's season, division, event rules, corrections, and score sheet before claiming official equivalence.",
+    "Only designated submitters may make the shared submission: Agent_1.",
+    "Use only the official mechanisms that the current task actually exposes; do not claim physical, oral, live-opponent, judge, or environment actions that were not observed."
+  ],
+  "rule_sections": {
+    "competition_format": [
+      "Competition model: The task represents one event packet from a broader multi-event competition.",
+      "Benchmark adaptation: the runner permits 1 to 15 active agents and defaults to 15; official roster note: Fifteen is a tournament roster cap, not the active participant count for one event.",
+      "Source-recorded competition rule: The Division B or C tournament roster may contain up to fifteen students, but this does not make all fifteen active participants in one event.",
+      "Source-recorded competition rule: Official event corrections and clarifications modify the corresponding event rules and must be applied with the selected season packet.",
+      "Source-recorded competition rule: No unrestricted web search is allowed unless the selected event rules explicitly authorize it."
+    ],
+    "timeline": [
+      "Benchmark adaptation: no official numeric duration is encoded in the available primary-source record; simulation.max_turns is only a runner safety budget.",
+      "Source-recorded competition rule: Season, division, and event must be selected before active participants, time, tools, references, deliverable, and scoring can be treated as official."
+    ],
+    "resource_policy": [
+      "Source-recorded resource policy: Banned during the contest: internet access and running code. Conditional: calculator permission is event-dependent and not exposed by default. Paper and pencil are always available. Work only from the materials provided with the problem.",
+      "Source-recorded competition rule: Only the references, calculators, devices, build materials, and safety equipment authorized by the selected event rules may be used."
+    ],
+    "collaboration_protocol": [
+      "Source-recorded collaboration rule: Only the participants authorized by the selected season, division, and event rules may collaborate on that event."
+    ],
+    "integrity_and_compliance": [
+      "Benchmark safety rule: do not use hidden solutions, evaluator internals, unauthorized outside assistance, or resources forbidden by this competition."
+    ],
+    "deliverable_format": [
+      "Runner answer contract: Submit the team's final answers in numbered order, using exact values when required.",
+      "Official deliverable: event answer sheet."
+    ],
+    "evaluation_criteria": [
+      "Repository evaluation status: Task performance is specified per problem_or_question in gold_or_judge mode, but the repository evaluator is deferred_event_rules_not_selected; do not invent a completed score.",
+      "Source-recorded competition rule: The event score sheet or rubric, not a generic Science Olympiad formula, determines official performance."
+    ],
+    "runtime_limitations": [
+      "Runtime limitation: Without the locked Rules Manual, event-level tool lists cannot be asserted.",
+      "Runtime limitation: 15-person multi-event tournament ≠ one exam packet.",
+      "Runtime limitation: The current row lacks season, division, and event selectors and therefore cannot select a binding event rulebook.",
+      "Runtime limitation: The runner cannot reproduce event-dependent laboratory apparatus, constructed devices, impound, safety inspection, or physical performance."
+    ]
+  },
   "information_policy": {
     "mode": "shared",
     "shared": [
@@ -38,59 +270,95 @@ How this benchmark's agents are asked to work. Projected from `data/rules/scienc
   },
   "communication": {
     "mode": "unlimited"
+  },
+  "simulation": {
+    "max_turns": 30,
+    "scheduler": "src_collaboration_draft",
+    "turn_budget_basis": "standardized experiment budget: 30 global turns; official contest timing is recorded separately",
+    "selector_enforcement": "missing_from_current_rows",
+    "open_table_coach": {
+      "enabled": true,
+      "status": "counterfactual_otc_collaboration_overlay_not_official_competition_rule",
+      "may_submit": false,
+      "allowed_tools": [],
+      "counts_toward_shared_api_and_token_budget": true,
+      "contestant_turn_policy": {
+        "mode": "private_deliberation_then_single_action",
+        "allowed_actions": [
+          "work",
+          "speak",
+          "rest"
+        ],
+        "exactly_one_action": true,
+        "unstructured_response": "rest",
+        "final_submission": "reviewed_answer_sheet",
+        "visibility": {
+          "think": "private",
+          "work": "shared",
+          "speak": "team",
+          "rest": "private"
+        },
+        "max_chars_by_action": {
+          "think": 2400,
+          "work": 8000,
+          "speak": 1000,
+          "rest": 80
+        },
+        "memory_entries": {
+          "private_think_per_agent": 3,
+          "shared_work": 18,
+          "group_messages": 12,
+          "public_messages": 24
+        },
+        "private_think_calls_per_turn": 1,
+        "discussion_policy": {
+          "report_after_work": true,
+          "silent_work_turn_requires_discussion": true,
+          "conflicts_require_targeted_speak": true
+        }
+      },
+      "precontest_brief": {
+        "turn": 0,
+        "problem_access": false,
+        "allowed_actions": [
+          "speak",
+          "rest"
+        ],
+        "advice_scope": [
+          "time allocation within the rule card",
+          "team coordination and handoffs",
+          "independent verification",
+          "reconciling the required final deliverable"
+        ]
+      },
+      "opening_discussion": {
+        "enabled": false,
+        "problem_access": false,
+        "allowed_actions": [],
+        "purpose": "Coach exits permanently after the single turn-0 blind brief."
+      },
+      "after_opening_access": false,
+      "min_turns": 3,
+      "protocol_version": "otc_turn0_review_v1",
+      "review_required": true,
+      "action_surface": "registry_bundles_v1",
+      "action_bundles": [
+        "common",
+        "desk",
+        "memory",
+        "independent_review",
+        "competition_tools",
+        "deliberation_if_structured"
+      ]
+    },
+    "deliverable_pipeline": {
+      "version": "otc_artifact_v1",
+      "kind": "external_environment",
+      "fidelity": "benchmark_adaptation_not_official_equivalence",
+      "status": "requires_specialized_adapter",
+      "reason": "Live, physical or interactive performance requires its own environment and scoring adapter."
+    }
   }
 }
 ```
 
-## Simulation
-
-```json
-{
-  "max_turns": 35,
-  "scheduler": "src_collaboration_draft",
-  "turn_budget_basis": "official clock n/a turns vs floor 35 (15 teammates x 2 turns + 1 answer parts + 4 for synthesis)",
-  "selector_enforcement": "missing_from_current_rows"
-}
-```
-
-## Rule sections
-
-```json
-{
-  "competition_format": [
-    "Competition model: The task represents one event packet from a broader multi-event competition.",
-    "Benchmark adaptation: the runner permits 1 to 15 active agents and defaults to 15; official roster note: Fifteen is a tournament roster cap, not the active participant count for one event.",
-    "Source-recorded competition rule: The Division B or C tournament roster may contain up to fifteen students, but this does not make all fifteen active participants in one event.",
-    "Source-recorded competition rule: Official event corrections and clarifications modify the corresponding event rules and must be applied with the selected season packet.",
-    "Source-recorded competition rule: No unrestricted web search is allowed unless the selected event rules explicitly authorize it."
-  ],
-  "timeline": [
-    "Benchmark adaptation: no official numeric duration is encoded in the available primary-source record; simulation.max_turns is only a runner safety budget.",
-    "Source-recorded competition rule: Season, division, and event must be selected before active participants, time, tools, references, deliverable, and scoring can be treated as official."
-  ],
-  "resource_policy": [
-    "Source-recorded resource policy: Banned during the contest: internet access and running code. Conditional: calculator permission is event-dependent and not exposed by default. Paper and pencil are always available. Work only from the materials provided with the problem.",
-    "Source-recorded competition rule: Only the references, calculators, devices, build materials, and safety equipment authorized by the selected event rules may be used."
-  ],
-  "collaboration_protocol": [
-    "Source-recorded collaboration rule: Only the participants authorized by the selected season, division, and event rules may collaborate on that event."
-  ],
-  "integrity_and_compliance": [
-    "Benchmark safety rule: do not use hidden solutions, evaluator internals, unauthorized outside assistance, or resources forbidden by this competition."
-  ],
-  "deliverable_format": [
-    "Runner answer contract: Submit the team's final answers in numbered order, using exact values when required.",
-    "Official deliverable: event answer sheet."
-  ],
-  "evaluation_criteria": [
-    "Repository evaluation status: Task performance is specified per problem_or_question in gold_or_judge mode, but the repository evaluator is deferred_event_rules_not_selected; do not invent a completed score.",
-    "Source-recorded competition rule: The event score sheet or rubric, not a generic Science Olympiad formula, determines official performance."
-  ],
-  "runtime_limitations": [
-    "Runtime limitation: Without the locked Rules Manual, event-level tool lists cannot be asserted.",
-    "Runtime limitation: 15-person multi-event tournament ≠ one exam packet.",
-    "Runtime limitation: The current row lacks season, division, and event selectors and therefore cannot select a binding event rulebook.",
-    "Runtime limitation: The runner cannot reproduce event-dependent laboratory apparatus, constructed devices, impound, safety inspection, or physical performance."
-  ]
-}
-```

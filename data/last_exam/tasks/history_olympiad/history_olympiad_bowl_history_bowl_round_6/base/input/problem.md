@@ -1,5 +1,3 @@
-# History-Bowl-Round-6
-
 [Q1] Imperial Japan placed this monarch on the throne of their puppet state, Manchukuo [[mahn -CHOO-kwoh]]. The last monarch of China was, for ten points, which child-ruler known as the Xuantong Emperor?
 
 [Q2] The geographer Strabo uses this ruler's name to refer to a region in the Armenian highlands and Caucasian Albania. According to Herodotus, this ruler's 50,000-strong army disappeared in a desert sandstorm en route to destroy the Siwa Oasis. Shortly after his death by a self-inflicted stab wound, a civil war between the usurper Bardiya and the future Darius the Great broke out. The conquest of Egy pt was completed by, for ten points, which Persian ruler and son of Cyrus the Great?

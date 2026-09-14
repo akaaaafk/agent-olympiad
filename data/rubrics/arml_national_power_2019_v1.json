@@ -1,6 +1,6 @@
 {
   "rubric_id": "arml_national_power_2019_v1",
-  "title": "Power Round \u2014 2019 \u2014 ARML Power sub-problem rubric",
+  "title": "Power Round — 2019 — ARML Power sub-problem rubric",
   "total_points": 15.0,
   "criteria": [
     {
@@ -8,7 +8,7 @@
       "name": "Problem 1a",
       "max_score": 1.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 1a (1 pt). Statement: One might guess that in most cases, E(n,k )\u2248 n k . In light of this guess, de\ufb01ne the ine\ufb03ciency of the ordered pair (n,k ), denoted I(n,k ), as I(n,k ) =E(n,k )\u2212 n k if E(n,k )\u0338=\u221e. If E(n,k ) =\u221e, then by convention, I(n,k ) is unde\ufb01ned. 8. a. Compute I(6, 3)."
+      "description": "Correct, justified solution to Problem 1a (1 pt). Statement: One might guess that in most cases, E(n,k )≈ n k . In light of this guess, deﬁne the ineﬃciency of the ordered pair (n,k ), denoted I(n,k ), as I(n,k ) =E(n,k )− n k if E(n,k )̸=∞. If E(n,k ) =∞, then by convention, I(n,k ) is undeﬁned. 8. a. Compute I(6, 3)."
     },
     {
       "id": "problem_01b",
@@ -36,14 +36,14 @@
       "name": "Problem 1e",
       "max_score": 4.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 1e (4 pts). Statement: 9. Let S be the set of values of I(n,k ) for all n,k for which k < n 2 and I(n,k ) is de\ufb01ned. Find the least upper bound of S. Prove that your answer is correct."
+      "description": "Correct, justified solution to Problem 1e (4 pts). Statement: 9. Let S be the set of values of I(n,k ) for all n,k for which k < n 2 and I(n,k ) is deﬁned. Find the least upper bound of S. Prove that your answer is correct."
     },
     {
       "id": "problem_01f",
       "name": "Problem 1f",
       "max_score": 4.0,
       "observable": true,
-      "description": "Correct, justified solution to Problem 1f (4 pts). Statement: 10. Find two distinct non-integral positive rational numbers that are not the ine\ufb03ciency of any ordered pair. That is, \ufb01nd positive rational numbers q1 andq2 withq1\u0338=q2 such that neither q1 norq2 is an integer and such that neither q1 nor q2 is I(n,k ) for any integers n and k. Prove that your answers are correct."
+      "description": "Correct, justified solution to Problem 1f (4 pts). Statement: 10. Find two distinct non-integral positive rational numbers that are not the ineﬃciency of any ordered pair. That is, ﬁnd positive rational numbers q1 andq2 withq1̸=q2 such that neither q1 norq2 is an integer and such that neither q1 nor q2 is I(n,k ) for any integers n and k. Prove that your answers are correct."
     }
   ],
   "not_observable_from_deck": [

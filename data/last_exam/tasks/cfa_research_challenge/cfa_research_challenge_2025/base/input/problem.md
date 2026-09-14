@@ -1,3 +1,10 @@
-# Dom Development S.A. (DOM.WA)
+# CFA Institute Research Challenge 2025
 
-Write an approximately 10-page equity research report on Dom Development S.A. (WSE: DOM) using only public information. Issue a BUY, SELL, or HOLD recommendation with supporting valuation and risk analysis, and prepare an oral defense.
+Reference subject company: Dom Development S.A. (DOM.WA).
+
+This is an incomplete historical equity-research record, not a fixed-question examination. The original host assignment/materials and a reproducible contemporaneous public-information context have not been archived. Champion reports and slides remain judge-only references, not contestant inputs or unique correct recommendations.
+
+The season-specific official rules and scoring forms have now been archived. 
+
+Do not run this record as a complete historical competition until the missing research inputs and evaluation stage are resolved.
+

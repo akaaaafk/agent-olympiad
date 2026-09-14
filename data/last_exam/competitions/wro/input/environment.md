@@ -1,4 +1,4 @@
-# Environment — `wro`
+# Environment
 
 ## Roster
 
@@ -15,8 +15,12 @@
 
 ## Allowed tools
 
-- query_rules
-- inspect_environment
+```json
+[
+  "query_rules",
+  "inspect_environment"
+]
+```
 
 ## Resources
 
@@ -67,3 +71,4 @@
   ]
 }
 ```
+

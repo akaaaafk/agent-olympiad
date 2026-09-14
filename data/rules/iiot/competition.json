@@ -38,7 +38,8 @@
   },
   "allowed_tools": [
     "query_rules",
-    "execute_code"
+    "execute_code",
+    "check_iiot_io_cases"
   ],
   "resources": {
     "internet": "judge_only_or_forbidden",

@@ -1,5 +1,3 @@
-# Rd.-4-History-Bowl-2021-IHBB-Asian-Championships
-
 [Q1] Thomas Masaryk helped create this country whose soldiers fought in a Legion along the Trans -Siberian Railway. Edvard Beneš [[BEH -nesh]] led this country when the Sudetenland [[soo -DEH-ten-lahnd]] was annexed after the Munich Agreement. For ten points, name this former Central European country whose western portion was turned into a protectorate by Nazi Germany during World War Two.
 
 [Q2] The first prepared map of this river's namesake region was made by Charles Marie de la Condamine [[kohn -dah-MEEN]]. The bandeirantes explored this river, of which the first European to travel the length was the Portuguese Pedr o Teixeira [[teh -SHEH-dah]]. Manaus is the capital of the state named after this river which is home to the endangered pink river dolphin. Sharing its name with a noted rain forest, for ten points, what is this longest river in South America?

@@ -1,3 +1,5 @@
-# 2005/setec/peach_winslow
+# Peach Winslow
 
-Peach Winslow Peach Winslow solution Purple Hoax Nebraskan city Mideastern capital Brother of Jake West coast footballer Name of three Holy Roman Emperors Actress Anne Effective public speaker Sorrow Buddy Military unit WWII Pacific battleground Averred 70's slugger Jimmy Buffet song Part of a radio code New Hampshire City Musical symbol Headwater stream of the Licking River One of the Merry Men Aussie biscuit Breathtaking A Great Lake Secret message medium Abacus descendent Incarnation Flintstone family member The soul of wit Soviet administrative department Shuttle name Florida campsite Alabama State Representative Allen
+Open `puzzle.html` for the complete original page, tables, typography and images. No flattened preview replaces the puzzle layout.
+
+Archive limitation: Historical rules, layout-aware interpretation and end-to-end evaluation remain uncertified.

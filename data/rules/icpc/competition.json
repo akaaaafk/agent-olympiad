@@ -37,7 +37,8 @@
   },
   "allowed_tools": [
     "query_rules",
-    "execute_code"
+    "execute_code",
+    "check_icpc_io_cases"
   ],
   "resources": {
     "internet": "forbidden",

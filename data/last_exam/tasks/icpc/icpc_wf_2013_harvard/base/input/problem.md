@@ -1,5 +1,3 @@
-# Harvard
-
 Hide 
  Harvard 
 

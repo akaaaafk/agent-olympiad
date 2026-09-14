@@ -1,5 +1,3 @@
-# PUMaC Power Round 2010
-
 PUMaC 2010 Power Round:
 Graph Minors
 These rules supersede any rules appearing elsewhere about the Power Test.
@@ -101,10 +99,10 @@ K1 as a subgraph, then it has at most −n edges.
 2 Edge contraction
 Deﬁnition 2.1. If G is a graph and e ={u,v}∈ V (G) (with u and v not
 necessarily distinct), then G/e (”G contract e”) is the subgraph of G induced
-on all its vertices but u and v, plus an extra vertex , and some new edges
-containing : each edge of G of the form {u,a} or{v,a}, for a∕∈ {u,v} is
-replaced with an edge {,a}. Each edge of G of the form {u,v},{u,u}, or
-{v,v}, is replaced with a loop at , except for e itself.
+on all its vertices but u and v, plus an extra vertex ϵ, and some new edges
+containing ϵ: each edge of G of the form {u,a} or{v,a}, for a∕∈ {u,v} is
+replaced with an edge {ϵ,a}. Each edge of G of the form {u,v},{u,u}, or
+{v,v}, is replaced with a loop at ϵ, except for e itself.
 To picture this, you can imagine that the vertices are big blobs of clay and
 each edge is a thin cable connecting two blobs. When you contract an edge,
 you mold the cable and the two blobs it connected into one new blob, without

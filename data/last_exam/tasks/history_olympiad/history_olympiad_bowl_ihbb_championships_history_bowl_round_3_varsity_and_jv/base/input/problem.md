@@ -1,5 +1,3 @@
-# IHBB-Championships-History-Bowl-Round-3-Varsity-and-JV
-
 [Q1] This owner of the Naples Estate was specifically targeted for capture or elimination by the first Search Bloc. This man agreed to a period of nominal captivity at La Catedral prison in exchange for a deal preventing his extradition to the U.S. For ten points, name this leader of the Medellin Cartel who was the leading smuggler of cocaine prior to his 1993 death in Colombia.
 
 [Q2] As a teenager, this thinker built a calculator to aid his father’s work as a tax supervisor. This man developed a law stating that a change in pressure at a point in a fluid is transmitted equally throughout the entire fluid. This man, who argued in support of Jansenism in Provincial Letters, names a diagram that conveniently displays the binomial coefficients; each value equals the sum of the two numbers above it in that “triangle.” For ten points, name this 17th century French polymath.

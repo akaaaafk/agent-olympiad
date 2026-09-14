@@ -317,7 +317,11 @@ class CompetitionProviderTests(unittest.TestCase):
             max_output_tokens=batch.TINKER_DEFAULT_MAX_TOKENS,
             temperature=batch.TINKER_DEFAULT_TEMPERATURE,
         )
-        perplexity.assert_called_once_with(model="pplx-model")
+        perplexity.assert_called_once_with(
+            model="pplx-model",
+            max_output_tokens=batch.TINKER_DEFAULT_MAX_TOKENS,
+            temperature=batch.TINKER_DEFAULT_TEMPERATURE,
+        )
 
     def test_exact_problem_requires_one_competition(self):
         self.assertEqual(

@@ -1,5 +1,3 @@
-# IHBB-Championships-History-Bowl-Round-4-Varsity-and-JV
-
 [Q1] This political party was created by the Tamworth Manifesto, which aimed to distinguish it from the Duke of Wellington’s government. A leader of this party gave the Winds of Change speech in South Africa, signaling decolonization that included this party’s suppression of the Mau Mau Rebellion. A leader of this party nicknamed “Milk Snatcher” won a war over the Falklands Islands, and it allied with the DUP in 2016 under Theresa May. For ten points, name this British political party opposed by the Labour Party.
 
 [Q2] For ten points, name this war technology whose early uses included completing reconnaissance missions and dropping grenades onto enemy soldiers.

@@ -1,0 +1,2780 @@
+{
+  "schema_version": "1.1",
+  "dataset": "cfa_research_challenge",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "cfa_research_challenge_2008",
+      "year": 2008,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "sha256": "c222a44a3d1723b1827654c5b8efc6e12e57fd56de1ef808a48914a58dd1b39d",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_current_v1.json",
+          "sha256": "18dce6a6664c2e95b5b2cf3a1b9afc6d1e8ebd4743c8c366309cc06e47d598a4",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2008-winning-rpt-hk-baptist-univ.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "6f5be3f48b7659b506c93a493df95c0eaaa8c5dba0ded539537c242ac823ccc7"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2008-winning-presentation-hk-baptist-univ.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "7468ed2ed528da9a8a8357cdf66adefce40ba3503b8665d13030362a60f8c350"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2008,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2009",
+      "year": 2009,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "sha256": "c222a44a3d1723b1827654c5b8efc6e12e57fd56de1ef808a48914a58dd1b39d",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_current_v1.json",
+          "sha256": "18dce6a6664c2e95b5b2cf3a1b9afc6d1e8ebd4743c8c366309cc06e47d598a4",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2009-winning-rpt-nanyang-tech.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "2a16e90448c4f5bf2296a557403b2798db42ee96f6bedd24df6a8fc781a8c2a6"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2009-winning-presentation-nanyang-tech.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "e3793cf128b3a11136e841bfececf5bcf9091c3c6daf7822f3c6df426f79bf30"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2009,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2010",
+      "year": 2010,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "sha256": "c222a44a3d1723b1827654c5b8efc6e12e57fd56de1ef808a48914a58dd1b39d",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_current_v1.json",
+          "sha256": "18dce6a6664c2e95b5b2cf3a1b9afc6d1e8ebd4743c8c366309cc06e47d598a4",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2010-winning-rpt-univ-philippines.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "f0f67ba6f20a19e70a7eb9a874530a2c02c52c4b5570b750732499251799d2ed"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2010-winning-presentation-univ-philippines.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "753bb08771f2728f4a6398c6ac23aaf9b5aae3dba627df0a3843393227c0450b"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2010,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2011",
+      "year": 2011,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "sha256": "c222a44a3d1723b1827654c5b8efc6e12e57fd56de1ef808a48914a58dd1b39d",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_current_v1.json",
+          "sha256": "18dce6a6664c2e95b5b2cf3a1b9afc6d1e8ebd4743c8c366309cc06e47d598a4",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2011-winning-rpt-politecnico-di-milano.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "3f797f243c1c65835d3667b0925ed1a2cf5cd20f0f6cf7e7c39f78b8f181b5e7"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2011-winning-presentation-politecnico-di-milano.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "ab31f60606524ee4b836e60bc685a430a59dd6ec767e2e6f96ed619f20120cce"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2011,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2012",
+      "year": 2012,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "sha256": "c222a44a3d1723b1827654c5b8efc6e12e57fd56de1ef808a48914a58dd1b39d",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_current_v1.json",
+          "sha256": "18dce6a6664c2e95b5b2cf3a1b9afc6d1e8ebd4743c8c366309cc06e47d598a4",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2012-winning-rpt-thammasat-univ.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "820c881531faa3526832cd6bf6e375c86fe6da033ec97e73e103f28dc9ad66f5"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2012-winning-presentation-thammasat-university.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "eb6815d1f780b05819097f2ee9a33a970fcb14d0e919675067c948270e837086"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2012,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2013",
+      "year": 2013,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "sha256": "c222a44a3d1723b1827654c5b8efc6e12e57fd56de1ef808a48914a58dd1b39d",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_current_v1.json",
+          "sha256": "18dce6a6664c2e95b5b2cf3a1b9afc6d1e8ebd4743c8c366309cc06e47d598a4",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2013-rpt-wroclaw-univ.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "55f2e68bfefc8d3c07cf4e38a12035009c3e62075dce79d639ad1981dc1461a9"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2013-winning-presentation-wroclaw-univ.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "7acd0e1ccb2b26550a6d7a2e8a1fa7cb383671584af16d0388ca829a38c7ac0b"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2013,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2014",
+      "year": 2014,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "sha256": "c222a44a3d1723b1827654c5b8efc6e12e57fd56de1ef808a48914a58dd1b39d",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_current_v1.json",
+          "sha256": "18dce6a6664c2e95b5b2cf3a1b9afc6d1e8ebd4743c8c366309cc06e47d598a4",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2014-winning-written-report-univ-of-philippines-diliman.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "63f5da50e330e6d27a1076c864334dcc85475dcd60e6b711c5adeb1ee2f99257"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2014-winning-presentation-university-philippines-diliman.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "c9003466005ccdc4c5d4e9fb2fe997aaff6531666ae572e1ebc9cd28b5401fba"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2014,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2015",
+      "year": 2015,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "sha256": "c222a44a3d1723b1827654c5b8efc6e12e57fd56de1ef808a48914a58dd1b39d",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_current_v1.json",
+          "sha256": "18dce6a6664c2e95b5b2cf3a1b9afc6d1e8ebd4743c8c366309cc06e47d598a4",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2015-winning-written-report-canisius-college.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "3a5eb701741d54f549c6d16f5f873119ca52473907073df435b88cdfa1c0a426"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2015-winning-presentation-canisius-college.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "e8bd0c52f946b2b9d87bb19568fcc6687e5a8a20bf660e3e586eeed2948b9278"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2015,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2016",
+      "year": 2016,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "sha256": "c222a44a3d1723b1827654c5b8efc6e12e57fd56de1ef808a48914a58dd1b39d",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_current_v1.json",
+          "sha256": "18dce6a6664c2e95b5b2cf3a1b9afc6d1e8ebd4743c8c366309cc06e47d598a4",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2016-winning-rpt-univ-of-waterloo.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "d632b9e4c39a3ae6f460a8986e21b86774fdf3d99d64b8450003ad2db853132a"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2016-winning-presentation-university-of-waterloo.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "b4ad1bd7d20906e5f43d14e9ae6641f42c44b00c71de5fa0715e4a56bdab78b3"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2016,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2017",
+      "year": 2017,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "sha256": "c222a44a3d1723b1827654c5b8efc6e12e57fd56de1ef808a48914a58dd1b39d",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_current_v1.json",
+          "sha256": "18dce6a6664c2e95b5b2cf3a1b9afc6d1e8ebd4743c8c366309cc06e47d598a4",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2017-winning-written-report-barna-business-school.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "c0d4f25ccee95be66808e64e8e4c583de5092ee99e26ad0e3f81f6f473726685"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2017-winning-presentation-barna-business-school.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "1f2138a6aeb7c0e6748de7ff8591be90dd95ad8bc021e09d011217d8bc567b5b"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2017,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2018",
+      "year": 2018,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "sha256": "c222a44a3d1723b1827654c5b8efc6e12e57fd56de1ef808a48914a58dd1b39d",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_current_v1.json",
+          "sha256": "18dce6a6664c2e95b5b2cf3a1b9afc6d1e8ebd4743c8c366309cc06e47d598a4",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2018-winning-written-report--university-of-laussane.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "b28f9249a743d6b58bf148867b4a708084efb2aad2aceda187558d1089f0a919"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2018-winning-presentation-university-of-lausanne.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "d0795f4df8ed7ed222e63b4ed42e4fa79e8f879ab2d94baa0a70c85f8ac7f2ed"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2018,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2019",
+      "year": 2019,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "sha256": "c222a44a3d1723b1827654c5b8efc6e12e57fd56de1ef808a48914a58dd1b39d",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_current_v1.json",
+          "sha256": "18dce6a6664c2e95b5b2cf3a1b9afc6d1e8ebd4743c8c366309cc06e47d598a4",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2019-winning-report-ateneo-de-manila-university.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "d7b2d836672c76ce183a7c24b9c3a3a8c491ab2f9e3900d9297031c5111ebb07"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2019-winning-presentation-ateneo-de-manila-university.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "408d5d6ca1f4916c0d5778ab94634cd7806b3873e7d7db2fd149cc6fdcef787a"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2019,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2020",
+      "year": 2020,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "sha256": "c222a44a3d1723b1827654c5b8efc6e12e57fd56de1ef808a48914a58dd1b39d",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_current_v1.json",
+          "sha256": "18dce6a6664c2e95b5b2cf3a1b9afc6d1e8ebd4743c8c366309cc06e47d598a4",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2020-winning-report-university-of-sydney.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "8cf40f5e888dd9aad0e9b3aa57e5f5489cae94ffff6eb032117a18bd324b2a67"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2020-winning-presentation-university-of-sydney.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "c15cf761a63069d532fe0b1cbac91846f5878d9d09f0acf221a7ce62dfac82c5"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2020,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2021",
+      "year": 2021,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "sha256": "c222a44a3d1723b1827654c5b8efc6e12e57fd56de1ef808a48914a58dd1b39d",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_current_v1.json",
+          "sha256": "18dce6a6664c2e95b5b2cf3a1b9afc6d1e8ebd4743c8c366309cc06e47d598a4",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2021-winning-report-bi-norwegian-business-school.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "7a4cbb70ca50d2b429d44ea9a9b8df4a067d5ce4fba38bfa2b821f04946e6ea3"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2021-winning-presentation-bi-norwegian-business-school.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "b86b6b45ba9513526bf33ef5f3020d6f5fa78299af350894e9fff2323f2423ef"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2021,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2022",
+      "year": 2022,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "sha256": "c222a44a3d1723b1827654c5b8efc6e12e57fd56de1ef808a48914a58dd1b39d",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_current_v1.json",
+          "sha256": "18dce6a6664c2e95b5b2cf3a1b9afc6d1e8ebd4743c8c366309cc06e47d598a4",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2022-winning-written-report-northern-illinois-univ.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "ee8f6ff72a4f9200e12901990715041367b5de3513f4f20f3575a3956d3b13cd"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2022-winning-presentation-northern-illinois-univ.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "942081b76af81bddbd4fdb221caed27bc338323339136a5b12957d64fabd3a57"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2022,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2023",
+      "year": 2023,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "sha256": "c222a44a3d1723b1827654c5b8efc6e12e57fd56de1ef808a48914a58dd1b39d",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_current_v1.json",
+          "sha256": "18dce6a6664c2e95b5b2cf3a1b9afc6d1e8ebd4743c8c366309cc06e47d598a4",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2023-winning-written-report-university-of-sydney.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "f19e04a9735687871fb4263b84c6ad6625bd0ad7009f165f67c9ea5f31d576dd"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2023-winning-presentation-university-of-sydney.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "cd2aea6b0169f5589433b99cf46ee0a11978f40b341111352dbede662752d995"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2023,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2024",
+      "year": 2024,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "sha256": "c222a44a3d1723b1827654c5b8efc6e12e57fd56de1ef808a48914a58dd1b39d",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_current_v1.json",
+          "sha256": "18dce6a6664c2e95b5b2cf3a1b9afc6d1e8ebd4743c8c366309cc06e47d598a4",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_current_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2024-winning-written-report-university-of-waterloo.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "5a3f57948a42a1ce90bde2d327cc569df1b17831394fb3017dfa3f508f03b182"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2024-winning-presentation-university-of-waterloo.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "fd287c76773df6f4ccca66763b8d1e544bce39aecd2786ad80a169c9775a971a"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement.",
+        "The currently referenced 2026-2027 rubric is not verified as this historical season's official scoring."
+      ],
+      "rubric_reuse": {
+        "source_competition": "cfa_research_challenge",
+        "target_competition": "cfa_research_challenge",
+        "target_year": 2024,
+        "source_rubric_paths": [
+          "data/rubrics/cfa_research_challenge_written_report_current_v1.json",
+          "data/rubrics/cfa_research_challenge_presentation_current_v1.json"
+        ],
+        "source_editions": [
+          "existing same-competition rubric; edition unspecified"
+        ],
+        "official_year_equivalence": false,
+        "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+      },
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2025",
+      "year": 2025,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_2024_2025_v1.json",
+          "sha256": "58c720ceb4255c136baeb9a49b59c3938380ebcb42832f5f4ef9afee00928e13",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_2024_2025_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_2024_2025_v1.json",
+          "sha256": "67455a8dcbbd8093a26d4a749b17b97dd0c04797e293d9a143a67c0ea44cf7af",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_2024_2025_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": [
+            "actual_oral_delivery",
+            "question_answer",
+            "team_involvement"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2025-winning-written-report-kozminski-university.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "140198578dea7d0f0f7b6270082655b54f52763bd3d4d8db3e2d4f48e85bfebb"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2025-winning-presentation-kozminski-university.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "cb6acf7abdba4f3e036873291d2194946be21db0c0c3be3562f23382a3607d77"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Use the archived season and selected stage: report 100, oral presentation with Q&A 100, sub-regional recording without Q&A 80. These are separate artifact maxima, not an automatic 200-point contest total. No unique-gold recommendation or unobserved oral score is inferred.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "cfa_research_challenge_2026",
+      "year": 2026,
+      "evaluation_status": "not_ready",
+      "evaluator_id": null,
+      "rubrics": [
+        {
+          "path": "data/rubrics/cfa_research_challenge_written_report_2025_2026_v1.json",
+          "sha256": "c7c56728df4b6f16aa99e56595963406ac177571efdbb20c7d14ab98d59331b7",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_written_report_2025_2026_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "business_description",
+              "name": "Business Description",
+              "max_score": 5
+            },
+            {
+              "id": "industry_competitive_positioning",
+              "name": "Industry Overview & Competitive Positioning",
+              "max_score": 10
+            },
+            {
+              "id": "investment_summary",
+              "name": "Investment Summary",
+              "max_score": 15
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20
+            },
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20
+            },
+            {
+              "id": "investment_risks",
+              "name": "Investment Risks",
+              "max_score": 15
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, Governance",
+              "max_score": 15
+            }
+          ],
+          "not_observable_from_deck": []
+        },
+        {
+          "path": "data/rubrics/cfa_research_challenge_presentation_2025_2026_v1.json",
+          "sha256": "3fbf2023c6b744449320d04fe80d6f8e997329769569c2352fda49ab86ff44dc",
+          "format": "numeric_rubric",
+          "rubric_id": "cfa_research_challenge_presentation_2025_2026_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "financial_analysis",
+              "name": "Financial Analysis",
+              "max_score": 20,
+              "official_prompt": "How thorough was their analysis of the industry, company, and competitors?"
+            },
+            {
+              "id": "valuation",
+              "name": "Valuation",
+              "max_score": 20,
+              "official_prompt": "Were the valuation methodologies appropriate and detailed?"
+            },
+            {
+              "id": "esg",
+              "name": "Environmental, Social, and Governance",
+              "max_score": 10,
+              "official_prompt": "Did the analysis thoroughly incorporate conservation of the natural world, consideration of people and relationships, and standards for running a company?"
+            },
+            {
+              "id": "presentation",
+              "name": "Presentation",
+              "max_score": 20,
+              "official_prompt": "How effective/convincing was their presentation? Was it logical and did the facts support the recommendation?"
+            },
+            {
+              "id": "question_answer",
+              "name": "Question & Answer",
+              "max_score": 20,
+              "official_prompt": "Were they able to answer the questions effectively and with confidence?"
+            },
+            {
+              "id": "team_involvement",
+              "name": "Team Involvement",
+              "max_score": 5,
+              "official_prompt": "Team involvement in the presentation/questions and answers"
+            },
+            {
+              "id": "materials",
+              "name": "Materials",
+              "max_score": 5,
+              "official_prompt": "Quality of slides"
+            }
+          ],
+          "not_observable_from_deck": [
+            "actual_oral_delivery",
+            "question_answer",
+            "team_involvement"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2026-winning-written-report-university-of-waterloo.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "a1d3e6d770d3eaac9699cc8307219b73848db2da34ae03255fc85678b7cdab2d"
+        },
+        {
+          "path": "data/raw/cfa_research_challenge/rc-2026-winning-presentation-university-of-waterloo_0.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "ba2cac49a17bb2cfa60008a085e89f291df72dbb1455123ea0decfaa6da62cd1"
+        }
+      ],
+      "limitations": [
+        "Champion recommendations are examples, not unique gold answers.",
+        "The original host assignment/materials and contemporaneous public-source research context are not fully archived.",
+        "An explicit historical information boundary and evaluation stage must be selected; a report deadline alone is not a universal valuation cutoff.",
+        "A slide deck cannot establish oral delivery, live Q&A performance or observed team involvement."
+      ],
+      "rubric_reuse": null,
+      "scoring_basis": "Use the archived season and selected stage: report 100, oral presentation with Q&A 100, sub-regional recording without Q&A 80. These are separate artifact maxima, not an automatic 200-point contest total. No unique-gold recommendation or unobserved oral score is inferred.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

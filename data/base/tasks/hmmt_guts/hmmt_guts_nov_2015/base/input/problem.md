@@ -1,9 +1,7 @@
-# HMMT November 2015 — Guts Round
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
 
-[Page 1]
-HMMT November 2015, November 14, 2015 — GUTS ROUND
+               HMMT November 2015, November 14, 2015 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -16,6 +14,10 @@ Organization                         Team                         Team ID#
 
          3. [5] A parallelogram has 2 sides of length 20 and 15. Given that its area is a positive integer, ﬁnd the
         minimum possible area of the parallelogram.
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2015, November 14, 2015 — GUTS ROUND
@@ -37,6 +39,10 @@ Organization                         Team                         Team ID#
              circle with diameter AB. Determine the value of r.
 
 
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
                HMMT November 2015, November 14, 2015 — GUTS ROUND
 
 Organization                         Team                         Team ID#
@@ -51,8 +57,10 @@ Organization                         Team                         Team ID#
          9. [7] Find the smallest positive integer n such that there exists a complex number z, with positive real
          and imaginary part, satisfying zn = (z)n.
 
-[Page 2]
-HMMT November 2015, November 14, 2015 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2015, November 14, 2015 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -66,6 +74,9 @@ Organization                         Team                         Team ID#
        12. [8] Let a and b be positive real numbers. Determine the minimum possible value of
 
             p a2 + b2 + p (a −1)2 + b2 + p a2 + (b −1)2 + p(a −1)2 + (b −1)2
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2015, November 14, 2015 — GUTS ROUND
@@ -82,6 +93,9 @@ Organization                         Team                         Team ID#
 
        15. [9] Find the smallest positive integer b such that 1111b (1111 in base b) is a perfect square. If no such
            b exists, write ”No solution”.
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2015, November 14, 2015 — GUTS ROUND
@@ -109,8 +123,10 @@ Organization                         Team                         Team ID#
 
          Find the maximum value of f over 0 ≤x, y ≤100.
 
-[Page 3]
-HMMT November 2015, November 14, 2015 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2015, November 14, 2015 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -125,6 +141,10 @@ Organization                         Team                         Team ID#
        21. [11] Consider a 2 × 2 grid of squares. Each of the squares will be colored with one of 10 colors, and
          two colorings are considered equivalent if one can be rotated to form the other. How many distinct
            colorings are there?
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2015, November 14, 2015 — GUTS ROUND
@@ -143,6 +163,10 @@ Organization                         Team                         Team ID#
            probability that all three ants are at the same vertex when they stop?
 
 
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
                HMMT November 2015, November 14, 2015 — GUTS ROUND
 
 Organization                         Team                         Team ID#
@@ -159,8 +183,10 @@ Organization                         Team                         Team ID#
          be a point in the plane (not necessarily inside the quadrilateral). Find the minimum possible value of
        AP + BP + CP + DP.
 
-[Page 4]
-HMMT November 2015, November 14, 2015 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2015, November 14, 2015 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -172,6 +198,10 @@ Organization                         Team                         Team ID#
 
        30. [15] Find the largest integer n such that the following holds: there exists a set of n points in the plane
           such that, for any choice of three of them, some two are unit distance apart.
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2015, November 14, 2015 — GUTS ROUND
@@ -188,6 +218,10 @@ Organization                         Team                         Team ID#
        33. [17] How many ways are there to place four points in the plane such that the set of pairwise distances
           between the points consists of exactly 2 elements? (Two conﬁgurations are the same if one can be
           obtained from the other via rotation and scaling.)
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2015, November 14, 2015 — GUTS ROUND
@@ -216,8 +250,7 @@ Organization                         Team                         Team ID#
             • C. (Cyclotomic) The polynomial with minimal degree whose roots are the primitive nth roots
                  of unity has all coeﬃcients equal to -1, 0, or 1.
 
-[Page 5]
-• R. (Prime race) For any integer n, there are more primes below n equal to 2 (mod 3) than there
+  • R. (Prime race) For any integer n, there are more primes below n equal to 2 (mod 3) than there
      are equal to 1 (mod 3).
   • S. (Seventeen conjecture) For any integer n, n17 + 9 and (n + 1)17 + 9 are relatively prime.
 

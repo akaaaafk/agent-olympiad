@@ -1,0 +1,19 @@
+{
+  "visibility": "hidden_until_grade",
+  "gold_pointer": "data/benchmarks/itym/benchmark.json#itym_2017.gold_label",
+  "has_gold_answer": false,
+  "evaluator_id": "rubric_llm_v1",
+  "evaluator_status": "ready_with_limitations",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": "rubric_llm_v1",
+    "status": "ready_with_limitations",
+    "rubric_path": "data/rubrics/itym_research_report_100_v1.json",
+    "deliverable": "research_solution_paper",
+    "limitations": "Scores a submitted research solution paper; the live mathematical fight, opponent/reviewer interaction, and jury scoring are not reproduced.",
+    "scorecard_path": "data/rubrics/task_scorecards/itym.json",
+    "scorecard_key": "itym_2017"
+  },
+  "rubric_path": "data/rubrics/itym_research_report_100_v1.json",
+  "deliverable": "research_solution_paper"
+}

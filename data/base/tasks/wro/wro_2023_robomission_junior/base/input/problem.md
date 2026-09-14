@@ -1,5 +1,3 @@
-# RoboMission Junior 2023
-
 RoboMission
 Junior Game Rules 
 Season 2023

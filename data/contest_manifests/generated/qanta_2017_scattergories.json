@@ -1,0 +1,12 @@
+{
+  "session_id": "qanta_2017_scattergories",
+  "competition_id": "qanta",
+  "problem_ids": [
+    "qanta_train_132989",
+    "qanta_train_133108"
+  ],
+  "description": "OTC contest-session manifest for qanta_2017_scattergories (2 tasks)",
+  "split_parts": false,
+  "task_family": "short_answer",
+  "competition_description": "Academic quiz-bowl questions: identify the requested person, place, work, event, or concept from progressively specific clues."
+}

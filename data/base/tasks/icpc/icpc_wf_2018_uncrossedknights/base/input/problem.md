@@ -1,5 +1,3 @@
-# Uncrossed Knight's Tour
-
 Hide 
  Uncrossed Knight's Tour 
 

@@ -1,0 +1,3 @@
+# Competition rules
+
+World Scholar's Cup - Collaborative Writing. The team plans together, writes under the event's individual-work stage, and completes the permitted review stage. The source-recorded active team has 3 members. Collaborate only within the team under contest rules. Banned during the contest: internet access, calculators, running code and personal electronics. Paper and pencil are always available. Work only from the materials provided with the problem. Submit one shared written essay; Submit three written responses, one per teammate, with each response answering a different prompt. Treat unexposed physical, oral, live-opponent, judge, timing, or environment mechanisms as unavailable rather than simulated facts.

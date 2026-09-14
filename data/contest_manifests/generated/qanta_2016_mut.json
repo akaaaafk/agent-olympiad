@@ -1,0 +1,12 @@
+{
+  "session_id": "qanta_2016_mut",
+  "competition_id": "qanta",
+  "problem_ids": [
+    "qanta_train_126396",
+    "qanta_train_126475"
+  ],
+  "description": "OTC contest-session manifest for qanta_2016_mut (2 tasks)",
+  "split_parts": false,
+  "task_family": "short_answer",
+  "competition_description": "Academic quiz-bowl questions: identify the requested person, place, work, event, or concept from progressively specific clues."
+}

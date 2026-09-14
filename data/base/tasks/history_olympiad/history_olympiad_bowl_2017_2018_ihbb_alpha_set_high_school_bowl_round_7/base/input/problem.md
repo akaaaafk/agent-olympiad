@@ -1,5 +1,3 @@
-# 2017-2018-IHBB-Alpha-Set-High-School-Bowl-Round-7
-
 [Q1] This event was fueled by a speech noting that demonstrations “should not be prepared or organized” but “are not to be hampered” and was triggered after Herschel Grynszpan assassinated diplomat Ernst vom Rath. SA Brownshirts carried out, for ten points, what massive attack on the night of November 9, 1938 against Jewish stores and synagogues in Germany?
 
 [Q2] This complex is the site of a bas--relief showing Vasuki being pulled by 92 asuras and 88 devas in the “Churning of the Sea of Milk.” This complex was built to resemble Mount Meru and dedicated to Vishnu as a Hindu temple by Suryavarman II, but was later transformed into a Buddhist temple. For ten points, name this Khmer temple complex in Cambodia.

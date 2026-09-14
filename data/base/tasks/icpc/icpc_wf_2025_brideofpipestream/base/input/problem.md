@@ -1,5 +1,3 @@
-# Bride of Pipe Stream
-
 Hide 
  Bride of Pipe Stream 
 

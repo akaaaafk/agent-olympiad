@@ -1,0 +1,48 @@
+{
+  "visibility": "hidden_until_grade",
+  "gold_pointer": "data/benchmarks/eoes/benchmark.json#eoes_T2.gold_label",
+  "has_gold_answer": false,
+  "evaluator_id": null,
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/eoes/eoes/2024/T2_MS.pdf",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+    "judge_assets": [
+      "data/raw/eoes/eoes/2024/T2_MS.pdf"
+    ],
+    "deliverable": "lab_answer_sheet_and_report",
+    "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+    "scorecard_path": "data/rubrics/task_scorecards/eoes.json",
+    "scorecard_key": "eoes_T2",
+    "pre_reuse_evaluation": {
+      "evaluator_id": "rubric_llm_v1",
+      "status": "ready",
+      "rubric_path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+      "judge_assets": [
+        "data/raw/eoes/eoes/2024/T2_MS.pdf"
+      ],
+      "deliverable": "lab_answer_sheet_and_report",
+      "limitations": "Uses the archived task-specific official marking scheme; physical laboratory execution remains a document-based adaptation.",
+      "scorecard_path": "data/rubrics/task_scorecards/eoes.json",
+      "scorecard_key": "eoes_T2"
+    },
+    "rubric_reuse": {
+      "source_competition": "eoes",
+      "target_competition": "eoes",
+      "target_year": 2024,
+      "source_rubric_paths": [
+        "data/rubrics/eoes_official_scoring_protocol_v1.json"
+      ],
+      "source_editions": [
+        2022,
+        2023
+      ],
+      "official_year_equivalence": false,
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+    }
+  },
+  "rubric_path": "data/rubrics/eoes_official_scoring_protocol_v1.json",
+  "deliverable": "lab_answer_sheet_and_report"
+}

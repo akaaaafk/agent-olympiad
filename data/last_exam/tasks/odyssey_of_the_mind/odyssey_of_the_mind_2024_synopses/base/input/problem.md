@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2024
-
 # Odyssey of the Mind — 2024 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -17,3 +15,4 @@ Are you ready to rock? Here is your opportunity! In this problem, OM teams will 
 3. Classics… Opening Night AnticsThere is a saying in the theatre that no matter what happens during a performance, the show must go on. The same is true in OM! For this problem, teams will portray the Opening Night of a play based on a classic story. The Opening Night performance will not go as planned and will include a set malfunction, unexpected sound effects, and a theater critic. Despite the Opening Night Antics, the show is a success!
 4. Deep Space StructureThe universe is full of mysteries we hope to discover and some we may not want to discover! In this problem, teams unravel an original mystery by portraying a balsa wood structure discovered in deep space. The structure will be examined, tested, interviewed, and observed. The performance will include an actual balsa wood and glue structure that is tested to balance and support weight, a character portraying the discovered deep space structure, and the scientists studying it.
 5. The Night LifeWhen most people are sleeping, there is a whole new world that comes to life in the night. In this problem teams will create and present a performance about an explorer character that searches for things in nature that “wake up” at nighttime. It will also include a team-created original discovery, something that lights up, and a team member in costume that represents a nocturnal animal.
+

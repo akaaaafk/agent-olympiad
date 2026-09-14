@@ -22,7 +22,8 @@
     "use_calculator",
     "execute_code",
     "work",
-    "render_pdf"
+    "render_pdf",
+    "check_math_research_dependencies"
   ],
   "resources": {
     "internet": "allowed_with_citation_during_preparation",

@@ -1,5 +1,3 @@
-# 2019-IHBB-Asian-Championships-International-History-Bowl-Round-2
-
 [Q1] A thinker from this country founded a “religion of humanity” and formulated a “law of three stages,” espousing philosophical positivism. The Elementary Structures of Religious Life was written by a sociologist from this country who pioneered the field with a work examining suicide. For ten points, name this home country of the thinkers Auguste Comte, Claude Levi--Strauss, and Emile [ay--MEEL] Durkheim.
 
 [Q2] Vala attempted to flee this battle during fighting at Kalkriese hill. A campaign waged in vengeance for this battle culminated in the Battle of Idistaviso, which was won by Germanicus. This battle’s winning commander led an alliance of tribes including the Cherusci. This battle’s result caused Augustus to rage, “Quintilius Varus, give me back my legions!” Arminius and his German allies inflicted, for ten points, what decisive 9 AD Roman defeat in a namesake forest?

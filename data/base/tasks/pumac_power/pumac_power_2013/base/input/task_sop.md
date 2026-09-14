@@ -1,30 +1,13 @@
-# Task SOP
+# Task
 
-## Reference Environment
-- Competition: PUMaC Power Round
-- Competition id: `pumac_power`
-- Problem id: `pumac_power_2013`
-- Task type: `proof_packet`
-- Team size: 8
-- Year / edition: 2013
-- Source: https://jason-shi-f9dm.squarespace.com/archives
+Competition: pumac_power
 
-## Goal
-As a multi-agent team, solve the olympiad-style team task using only the materials under `base/input`. Produce the required deliverable (`team_submission`).
+Task: pumac_power_2013
 
-## Task directory
-- Variant root: `base`
-- Input directory: `base/input`
+Edition: 2013
 
-## Inputs
-- `problem.md`
-- `PUMaC2013_Power.pdf`
+Team size: 8
 
-## Title
-PUMaC Power Round 2013
+Deliverable: numbered_proof_packet
 
-## Deterministic Evaluation Rule
-Gold answers and official solution booklets are not provided in `input/`. Scoring uses the evaluator declared on the task card (gold match, rubric LLM judge, slide judge, or deferred sandbox).
-
-## Deliverables
-Return the team `team_submission` expected by this competition.
+Use the attached problem materials and the inherited competition and collaboration instructions.

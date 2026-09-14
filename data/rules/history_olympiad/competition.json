@@ -48,7 +48,8 @@
     ]
   },
   "allowed_tools": [
-    "query_rules"
+    "query_rules",
+    "prepare_history_bowl_answer"
   ],
   "resources": {
     "internet": "forbidden",

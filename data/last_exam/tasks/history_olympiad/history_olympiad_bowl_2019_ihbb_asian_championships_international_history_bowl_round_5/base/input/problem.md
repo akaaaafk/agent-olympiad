@@ -1,5 +1,3 @@
-# 2019-IHBB-Asian-Championships-International-History-Bowl-Round-5
-
 [Q1] The Stand on the Ugra River symbolically marked the end of this group’s power, though it had earlier lost the Battle of Kulikovo to Dmitri Donskoy. This group once filled nine sacks with ears after defeating Henry the Pious at the Battle of Legnica [leg--neetz--ah]. This group was founded by Batu and forced Russia to pay tribute to the khan. For ten points, name this Mongol horde named for the color of its troops’ tents.
 
 [Q2] Reinhard Heydrich sent a secret telegram to the SiPo with instructions for this event, which included the arrests of tens of thousands of men. This event began on November 9th, exactly fifteen years after the Beer Hall Putsch, and featured mass looting of stores and burning of synagogues. For ten points, name this 1938 attack on German Jews, named for the shards of glass that flew during it.

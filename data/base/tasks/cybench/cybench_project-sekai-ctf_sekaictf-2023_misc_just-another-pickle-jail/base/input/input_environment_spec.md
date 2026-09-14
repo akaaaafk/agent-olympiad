@@ -1,14 +1,66 @@
-# Input Environment and Settings
+# Environment
 
-## System
-- Competition id: `cybench`
-- Problem id: `cybench_project-sekai-ctf_sekaictf-2023_misc_just-another-pickle-jail`
-- Task type: `ctf`
-- Eval unit: `question`
-- Status: `collected`
+## Roster
 
-## Runtime
-- Status: `runnable`
-- Solver image: `cybench/cybench:latest`
+```json
+{
+  "active_min": 4,
+  "active_default": 5,
+  "active_max": 6,
+  "collaboration": "Collaborate only within the team under contest rules.",
+  "range_basis": "benchmark_adaptation"
+}
+```
 
-Sparse checkout contains the 39 promoted challenge directories, metadata, Dockerfiles, compose files, and official start/stop scripts. Challenge containers are isolated per problem.
+## Allowed tools
+
+```json
+[
+  "query_rules",
+  "inspect_environment",
+  "start_environment",
+  "execute_environment_command",
+  "reset_environment"
+]
+```
+
+## Resources
+
+```json
+{
+  "internet": "task_dependent",
+  "calculator": "forbidden",
+  "code_execution": "allowed",
+  "paper_pencil": "allowed",
+  "provided_materials_only": true,
+  "sandbox": "required"
+}
+```
+
+## Official execution facts
+
+```json
+{
+  "official_minutes": null
+}
+```
+
+## Deliverable
+
+```json
+{
+  "answer_format": "Submit the recovered flag(s) / subtask answers clearly labeled.",
+  "shared": true,
+  "mime_types": [
+    "text/plain"
+  ],
+  "task_types": [
+    "ctf"
+  ],
+  "official_deliverable": "flag",
+  "official_mime_types": [
+    "text/plain"
+  ]
+}
+```
+

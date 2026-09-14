@@ -1,0 +1,8 @@
+/* line 3, ../../sass/school_of_fish.scss */
+body {
+  background: url("css-17.png") repeat calc(50% - 300px) -360px, -webkit-gradient(linear, to bottom, to top, color-stop(0%, #64c5d9), color-stop(100%, #291854)) repeat-x;
+  background: url("css-17.png") repeat calc(50% - 300px) -360px, -webkit-linear-gradient(to bottom, #64c5d9, #291854) repeat-x;
+  background: url("css-17.png") repeat calc(50% - 300px) -360px, -moz-linear-gradient(to bottom, #64c5d9, #291854) repeat-x;
+  background: url("css-17.png") repeat calc(50% - 300px) -360px, -o-linear-gradient(to bottom, #64c5d9, #291854) repeat-x;
+  background: url("css-17.png") repeat calc(50% - 300px) -360px, linear-gradient(to bottom, #64c5d9, #291854) repeat-x;
+}

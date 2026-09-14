@@ -1,5 +1,3 @@
-# 2022-national-case-set
-
 Cases for the 26th
 APPE Intercollegiate
 Ethics Bowl® National

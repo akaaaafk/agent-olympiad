@@ -1,0 +1,783 @@
+%!PS-Adobe-2.0
+
+%%BeginProlog
+
+% Basic Vertical Line
+/vertline
+{ 0 610 rlineto } def
+
+% Basic Horizontal Line
+/horizline
+{ 531 0 rlineto } def
+
+% Print Vertical Line
+/printVlines
+{newpath 0 0 moveto vertline stroke} def
+
+%Print Horizontal Line
+/printHlines
+{newpath 0 0 moveto horizline stroke} def
+
+% Outline around grid
+/printBox
+{newpath
+    0 0 moveto
+    0 540 lineto
+    462 540 lineto
+    462 0 lineto
+    closepath
+    stroke
+} def
+
+%Offset for lower left corner of grid
+108 72 translate
+
+% draw vertical lines
+.1 setlinewidth
+0 7 462 {printVlines 7 0 translate} for
+-42 0 translate
+
+% draw heavier division lines
+.6 setlinewidth
+427 -35 0 {printVlines -35 0 translate} for
+-42 0 translate
+
+% draw horizontal lines
+.1 setlinewidth
+0 7 541 {printHlines 0 7 translate} for
+0 -511 translate
+
+% draw heavier division lines
+.6 setlinewidth
+35 35 541 {printHlines 0 35 translate} for
+
+% draw box
+70 -561 translate
+2 setlinewidth
+printBox
+
+-108 -72 translate
+
+
+% Write in numbers
+
+/Helvetica-Condensed findfont
+[6 0 0 8 0 0] makefont
+%6 scalefont
+setfont
+
+% Horizontal
+
+100 606 moveto (0) show
+
+100 599 moveto (0) show
+
+100 592 moveto (0) show
+
+100 585 moveto (0) show
+
+100 578 moveto (0) show
+
+100 571 moveto (0) show
+
+100 564 moveto (1) show
+
+100 557 moveto (2) show
+
+100 550 moveto (3) show
+
+100 543 moveto (4) show
+
+100 536 moveto (8) show
+
+92 529 moveto (11) show
+100 529 moveto (2) show
+
+92 522 moveto (12) show
+100 522 moveto (2) show
+
+92 515 moveto (13) show
+100 515 moveto (2) show
+
+84 508 moveto (1) show
+92 508 moveto (16) show
+100 508 moveto (2) show
+
+76 501 moveto (2) show
+84 501 moveto (10) show
+92 501 moveto (6) show
+100 501 moveto (3) show
+
+84 494 moveto (15) show
+92 494 moveto (6) show
+100 494 moveto (3) show
+
+68 487 moveto (15) show
+76 487 moveto (6) show
+84 487 moveto (3) show
+92 487 moveto (1) show
+100 487 moveto (1) show
+
+68 480 moveto (13) show
+76 480 moveto (6) show
+84 480 moveto (3) show
+92 480 moveto (2) show
+100 480 moveto (1) show
+
+68 473 moveto (11) show
+76 473 moveto (7) show
+84 473 moveto (2) show
+92 473 moveto (3) show
+100 473 moveto (2) show
+
+76 466 moveto (8) show
+84 466 moveto (7) show
+92 466 moveto (2) show
+100 466 moveto (8) show
+
+76 459 moveto (7) show
+84 459 moveto (7) show
+92 459 moveto (2) show
+100 459 moveto (9) show
+
+84 452 moveto (29) show
+92 452 moveto (8) show
+100 452 moveto (2) show
+
+92 445 moveto (39) show
+100 445 moveto (2) show
+
+76 438 moveto (41) show
+84 438 moveto (2) show
+92 438 moveto (3) show
+100 438 moveto (1) show
+
+76 431 moveto (41) show
+84 431 moveto (2) show
+92 431 moveto (6) show
+100 431 moveto (5) show
+
+76 424 moveto (41) show
+84 424 moveto (1) show
+92 424 moveto (8) show
+100 424 moveto (7) show
+
+84 417 moveto (42) show
+92 417 moveto (11) show
+100 417 moveto (10) show
+
+84 410 moveto (42) show
+92 410 moveto (12) show
+100 410 moveto (8) show
+
+76 403 moveto (42) show
+84 403 moveto (6) show
+92 403 moveto (5) show
+100 403 moveto (2) show
+
+76 396 moveto (11) show
+84 396 moveto (20) show
+92 396 moveto (6) show
+100 396 moveto (4) show
+
+84 389 moveto (33) show
+92 389 moveto (15) show
+100 389 moveto (5) show
+
+92 382 moveto (33) show
+100 382 moveto (15) show
+
+84 375 moveto (8) show
+92 375 moveto (5) show
+100 375 moveto (14) show
+
+84 368 moveto (8) show
+92 368 moveto (5) show
+100 368 moveto (15) show
+
+84 361 moveto (7) show
+92 361 moveto (5) show
+100 361 moveto (18) show
+
+84 354 moveto (7) show
+92 354 moveto (5) show
+100 354 moveto (20) show
+
+76 347 moveto (7) show
+84 347 moveto (5) show
+92 347 moveto (13) show
+100 347 moveto (7) show
+
+76 340 moveto (7) show
+84 340 moveto (5) show
+92 340 moveto (14) show
+100 340 moveto (6) show
+
+76 333 moveto (6) show
+84 333 moveto (6) show
+92 333 moveto (15) show
+100 333 moveto (6) show
+
+68 326 moveto (6) show
+76 326 moveto (6) show
+84 326 moveto (6) show
+92 326 moveto (8) show
+100 326 moveto (6) show
+
+76 319 moveto (5) show
+84 319 moveto (6) show
+92 319 moveto (6) show
+100 319 moveto (12) show
+
+68 312 moveto (5) show
+76 312 moveto (6) show
+84 312 moveto (5) show
+92 312 moveto (1) show
+100 312 moveto (6) show
+
+76 305 moveto (4) show
+84 305 moveto (7) show
+92 305 moveto (5) show
+100 305 moveto (5) show
+
+84 298 moveto (18) show
+92 298 moveto (22) show
+100 298 moveto (7) show
+
+84 291 moveto (19) show
+92 291 moveto (22) show
+100 291 moveto (6) show
+
+76 284 moveto (20) show
+84 284 moveto (22) show
+92 284 moveto (7) show
+100 284 moveto (8) show
+
+76 277 moveto (20) show
+84 277 moveto (22) show
+92 277 moveto (7) show
+100 277 moveto (11) show
+
+68 270 moveto (9) show
+76 270 moveto (10) show
+84 270 moveto (22) show
+92 270 moveto (7) show
+100 270 moveto (11) show
+
+84 263 moveto (5) show
+92 263 moveto (39) show
+100 263 moveto (11) show
+
+76 256 moveto (2) show
+84 256 moveto (10) show
+92 256 moveto (26) show
+100 256 moveto (11) show
+
+68 249 moveto (11) show
+76 249 moveto (10) show
+84 249 moveto (7) show
+92 249 moveto (6) show
+100 249 moveto (2) show
+
+76 242 moveto (11) show
+84 242 moveto (4) show
+92 242 moveto (7) show
+100 242 moveto (4) show
+
+84 235 moveto (11) show
+92 235 moveto (23) show
+100 235 moveto (2) show
+
+84 228 moveto (11) show
+92 228 moveto (24) show
+100 228 moveto (2) show
+
+76 221 moveto (6) show
+84 221 moveto (29) show
+92 221 moveto (6) show
+100 221 moveto (5) show
+
+68 214 moveto (6) show
+76 214 moveto (28) show
+84 214 moveto (7) show
+92 214 moveto (1) show
+100 214 moveto (4) show
+
+68 207 moveto (7) show
+76 207 moveto (28) show
+84 207 moveto (7) show
+92 207 moveto (1) show
+100 207 moveto (3) show
+
+68 200 moveto (7) show
+76 200 moveto (19) show
+84 200 moveto (2) show
+92 200 moveto (10) show
+100 200 moveto (2) show
+
+76 193 moveto (6) show
+84 193 moveto (8) show
+92 193 moveto (11) show
+100 193 moveto (2) show
+
+76 186 moveto (6) show
+84 186 moveto (5) show
+92 186 moveto (12) show
+100 186 moveto (1) show
+
+68 179 moveto (7) show
+76 179 moveto (1) show
+84 179 moveto (2) show
+92 179 moveto (15) show
+100 179 moveto (1) show
+
+76 172 moveto (7) show
+84 172 moveto (3) show
+92 172 moveto (10) show
+100 172 moveto (5) show
+
+76 165 moveto (7) show
+84 165 moveto (5) show
+92 165 moveto (10) show
+100 165 moveto (6) show
+
+76 158 moveto (6) show
+84 158 moveto (5) show
+92 158 moveto (9) show
+100 158 moveto (7) show
+
+76 151 moveto (5) show
+84 151 moveto (6) show
+92 151 moveto (7) show
+100 151 moveto (8) show
+
+76 144 moveto (11) show
+84 144 moveto (7) show
+92 144 moveto (17) show
+100 144 moveto (4) show
+
+68 137 moveto (11) show
+76 137 moveto (2) show
+84 137 moveto (4) show
+92 137 moveto (17) show
+100 137 moveto (4) show
+
+60 130 moveto (10) show
+68 130 moveto (3) show
+76 130 moveto (2) show
+84 130 moveto (11) show
+92 130 moveto (4) show
+100 130 moveto (4) show
+
+68 123 moveto (8) show
+76 123 moveto (4) show
+84 123 moveto (13) show
+92 123 moveto (2) show
+100 123 moveto (5) show
+
+68 116 moveto (6) show
+76 116 moveto (8) show
+84 116 moveto (20) show
+92 116 moveto (1) show
+100 116 moveto (5) show
+
+60 109 moveto (17) show
+68 109 moveto (7) show
+76 109 moveto (1) show
+84 109 moveto (8) show
+92 109 moveto (1) show
+100 109 moveto (5) show
+
+76 102 moveto (18) show
+84 102 moveto (3) show
+92 102 moveto (8) show
+100 102 moveto (5) show
+
+84 95 moveto (18) show
+92 95 moveto (7) show
+100 95 moveto (7) show
+
+84 88 moveto (8) show
+92 88 moveto (7) show
+100 88 moveto (7) show
+
+76 81 moveto (18) show
+84 81 moveto (8) show
+92 81 moveto (4) show
+100 81 moveto (7) show
+
+84 74 moveto (19) show
+92 74 moveto (15) show
+100 74 moveto (7) show
+
+
+
+% Vertical
+
+109 629 moveto (27) show
+109 622 moveto (3) show
+109 615 moveto (1) show
+
+116 636 moveto (27) show
+116 629 moveto (4) show
+116 622 moveto (2) show
+116 615 moveto (2) show
+
+123 636 moveto (28) show
+123 629 moveto (5) show
+123 622 moveto (3) show
+123 615 moveto (2) show
+
+130 636 moveto (28) show
+130 629 moveto (7) show
+130 622 moveto (4) show
+130 615 moveto (2) show
+
+137 643 moveto (23) show
+137 636 moveto (6) show
+137 629 moveto (9) show
+137 622 moveto (4) show
+137 615 moveto (2) show
+
+144 643 moveto (22) show
+144 636 moveto (5) show
+144 629 moveto (10) show
+144 622 moveto (4) show
+144 615 moveto (2) show
+
+151 643 moveto (21) show
+151 636 moveto (5) show
+151 629 moveto (9) show
+151 622 moveto (4) show
+151 615 moveto (2) show
+
+158 643 moveto (19) show
+158 636 moveto (5) show
+158 629 moveto (10) show
+158 622 moveto (4) show
+158 615 moveto (2) show
+
+165 643 moveto (17) show
+165 636 moveto (5) show
+165 629 moveto (8) show
+165 622 moveto (4) show
+165 615 moveto (2) show
+
+172 643 moveto (18) show
+172 636 moveto (4) show
+172 629 moveto (8) show
+172 622 moveto (3) show
+172 615 moveto (2) show
+179 643 moveto (19) show
+179 636 moveto (4) show
+179 629 moveto (7) show
+179 622 moveto (3) show
+179 615 moveto (2) show
+
+186 643 moveto (5) show
+186 636 moveto (8) show
+186 629 moveto (18) show
+186 622 moveto (4) show
+186 615 moveto (11) show
+
+193 636 moveto (5) show
+193 629 moveto (8) show
+193 622 moveto (24) show
+193 615 moveto (11) show
+
+200 636 moveto (6) show
+200 629 moveto (8) show
+200 622 moveto (24) show
+200 615 moveto (14) show
+
+207 636 moveto (6) show
+207 629 moveto (8) show
+207 622 moveto (24) show
+207 615 moveto (15) show
+
+214 636 moveto (7) show
+214 629 moveto (8) show
+214 622 moveto (25) show
+214 615 moveto (16) show
+
+221 643 moveto (7) show
+221 636 moveto (8) show
+221 629 moveto (2) show
+221 622 moveto (19) show
+221 615 moveto (15) show
+
+228 643 moveto (8) show
+228 636 moveto (8) show
+228 629 moveto (2) show
+228 622 moveto (16) show
+228 615 moveto (14) show
+
+235 650 moveto (8) show
+235 643 moveto (8) show
+235 636 moveto (2) show
+235 629 moveto (14) show
+235 622 moveto (1) show
+235 615 moveto (9) show
+
+242 636 moveto (7) show
+242 629 moveto (8) show
+242 622 moveto (2) show
+242 615 moveto (13) show
+
+249 636 moveto (8) show
+249 629 moveto (8) show
+249 622 moveto (2) show
+249 615 moveto (11) show
+
+256 636 moveto (8) show
+256 629 moveto (8) show
+256 622 moveto (2) show
+256 615 moveto (10) show
+
+263 643 moveto (5) show
+263 636 moveto (14) show
+263 629 moveto (6) show
+263 622 moveto (4) show
+263 615 moveto (4) show
+
+270 636 moveto (24) show
+270 629 moveto (6) show
+270 622 moveto (4) show
+270 615 moveto (7) show
+
+277 643 moveto (25) show
+277 636 moveto (6) show
+277 629 moveto (4) show
+277 622 moveto (1) show
+277 615 moveto (5) show
+
+284 643 moveto (27) show
+284 636 moveto (7) show
+284 629 moveto (5) show
+284 622 moveto (2) show
+284 615 moveto (4) show
+
+291 650 moveto (26) show
+291 643 moveto (5) show
+291 636 moveto (7) show
+291 629 moveto (5) show
+291 622 moveto (3) show
+291 615 moveto (2) show
+
+298 643 moveto (32) show
+298 636 moveto (7) show
+298 629 moveto (6) show
+298 622 moveto (3) show
+298 615 moveto (2) show
+
+305 636 moveto (37) show
+305 629 moveto (8) show
+305 622 moveto (2) show
+305 615 moveto (3) show
+
+312 636 moveto (29) show
+312 629 moveto (9) show
+312 622 moveto (1) show
+312 615 moveto (4) show
+
+319 636 moveto (4) show
+319 629 moveto (29) show
+319 622 moveto (9) show
+319 615 moveto (4) show
+
+326 636 moveto (11) show
+326 629 moveto (28) show
+326 622 moveto (10) show
+326 615 moveto (5) show
+
+333 636 moveto (11) show
+333 629 moveto (28) show
+333 622 moveto (10) show
+333 615 moveto (6) show
+
+340 643 moveto (9) show
+340 636 moveto (7) show
+340 629 moveto (8) show
+340 622 moveto (6) show
+340 615 moveto (5) show
+
+347 636 moveto (18) show
+347 629 moveto (8) show
+347 622 moveto (6) show
+347 615 moveto (6) show
+
+354 643 moveto (19) show
+354 636 moveto (8) show
+354 629 moveto (6) show
+354 622 moveto (7) show
+354 615 moveto (2) show
+
+361 636 moveto (19) show
+361 629 moveto (8) show
+361 622 moveto (5) show
+361 615 moveto (11) show
+
+368 636 moveto (19) show
+368 629 moveto (8) show
+368 622 moveto (5) show
+368 615 moveto (11) show
+
+375 636 moveto (19) show
+375 629 moveto (8) show
+375 622 moveto (5) show
+375 615 moveto (11) show
+
+382 643 moveto (15) show
+382 636 moveto (4) show
+382 629 moveto (8) show
+382 622 moveto (5) show
+382 615 moveto (11) show
+
+389 650 moveto (21) show
+389 643 moveto (3) show
+389 636 moveto (8) show
+389 629 moveto (5) show
+389 622 moveto (2) show
+389 615 moveto (8) show
+
+396 664 moveto (4) show
+396 657 moveto (6) show
+396 650 moveto (4) show
+396 643 moveto (2) show
+396 636 moveto (8) show
+396 629 moveto (5) show
+396 622 moveto (2) show
+396 615 moveto (7) show
+
+403 664 moveto (7) show
+403 657 moveto (2) show
+403 650 moveto (3) show
+403 643 moveto (2) show
+403 636 moveto (8) show
+403 629 moveto (6) show
+403 622 moveto (2) show
+403 615 moveto (5) show
+
+410 657 moveto (13) show
+410 650 moveto (4) show
+410 643 moveto (2) show
+410 636 moveto (7) show
+410 629 moveto (6) show
+410 622 moveto (3) show
+410 615 moveto (1) show
+
+417 650 moveto (5) show
+417 643 moveto (6) show
+417 636 moveto (6) show
+417 629 moveto (6) show
+417 622 moveto (11) show
+417 615 moveto (2) show
+
+424 650 moveto (3) show
+424 643 moveto (7) show
+424 636 moveto (6) show
+424 629 moveto (8) show
+424 622 moveto (9) show
+424 615 moveto (2) show
+
+431 650 moveto (2) show
+431 643 moveto (8) show
+431 636 moveto (6) show
+431 629 moveto (9) show
+431 622 moveto (9) show
+431 615 moveto (2) show
+
+438 636 moveto (2) show
+438 629 moveto (9) show
+438 622 moveto (29) show
+438 615 moveto (2) show
+
+445 636 moveto (1) show
+445 629 moveto (9) show
+445 622 moveto (28) show
+445 615 moveto (1) show
+
+452 629 moveto (5) show
+452 622 moveto (27) show
+452 615 moveto (1) show
+
+459 622 moveto (5) show
+459 615 moveto (25) show
+
+466 629 moveto (6) show
+466 622 moveto (7) show
+466 615 moveto (10) show
+
+473 629 moveto (6) show
+473 622 moveto (3) show
+473 615 moveto (10) show
+
+480 636 moveto (5) show
+480 629 moveto (1) show
+480 622 moveto (1) show
+480 615 moveto (8) show
+
+487 629 moveto (4) show
+487 622 moveto (4) show
+487 615 moveto (4) show
+
+494 636 moveto (4) show
+494 629 moveto (1) show
+494 622 moveto (7) show
+494 615 moveto (10) show
+
+501 636 moveto (3) show
+501 629 moveto (1) show
+501 622 moveto (6) show
+501 615 moveto (8) show
+
+508 629 moveto (3) show
+508 622 moveto (7) show
+508 615 moveto (7) show
+
+515 629 moveto (4) show
+515 622 moveto (6) show
+515 615 moveto (5) show
+
+522 636 moveto (4) show
+522 629 moveto (6) show
+522 622 moveto (4) show
+522 615 moveto (4) show
+
+529 636 moveto (3) show
+529 629 moveto (5) show
+529 622 moveto (3) show
+529 615 moveto (6) show
+
+536 643 moveto (3) show
+536 636 moveto (5) show
+536 629 moveto (1) show
+536 622 moveto (2) show
+536 615 moveto (8) show
+
+543 636 moveto (2) show
+543 629 moveto (5) show
+543 622 moveto (2) show
+543 615 moveto (12) show
+
+550 636 moveto (2) show
+550 629 moveto (5) show
+550 622 moveto (3) show
+550 615 moveto (11) show
+
+557 636 moveto (3) show
+557 629 moveto (6) show
+557 622 moveto (5) show
+557 615 moveto (11) show
+
+564 643 moveto (2) show
+564 636 moveto (5) show
+564 629 moveto (7) show
+564 622 moveto (5) show
+564 615 moveto (4) show
+
+
+% Ta-da!
+showpage
+
+%%EndProlog

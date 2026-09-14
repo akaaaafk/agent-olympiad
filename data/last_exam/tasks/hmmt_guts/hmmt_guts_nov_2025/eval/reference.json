@@ -2,9 +2,22 @@
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/hmmt_guts/benchmark.json#hmmt_guts_nov_2025.gold_label",
   "has_gold_answer": true,
-  "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": "data/raw/hmmt_guts/nov/2025/solutions.pdf"
+  "evaluator_id": "rubric_llm_v1",
+  "evaluator_status": "ready_with_limitations",
+  "solution_file": "data/raw/hmmt_guts/nov/2025/solutions.pdf",
+  "evaluation": {
+    "evaluator_id": "rubric_llm_v1",
+    "status": "ready_with_limitations",
+    "rubric_path": "data/rubrics/worked_answer_100_v1.json",
+    "score_basis": "Normalized 100-point written-answer rubric anchored to same-edition official solutions; not official Guts points.",
+    "limitations": "Official solutions are archived, but complete curated short-answer keys and edition-specific live scoring are not reconstructed. Rubric assessment only; do not compare this directly with official weighted contest scores.",
+    "judge_assets": [
+      "data/raw/hmmt_guts/nov/2025/solutions.pdf"
+    ],
+    "deliverable": "numbered_worked_answers",
+    "scorecard_path": "data/rubrics/task_scorecards/hmmt_guts.json",
+    "scorecard_key": "hmmt_guts_nov_2025"
+  },
+  "rubric_path": "data/rubrics/worked_answer_100_v1.json",
+  "deliverable": "numbered_worked_answers"
 }

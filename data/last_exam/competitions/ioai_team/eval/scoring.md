@@ -1,160 +1,152 @@
-# Eval — `ioai_team` (hidden until grade)
+# Hidden scoring configuration
 
-Do not stage this file to the agent at start.
-
-## Evaluator
+## Evaluation
 
 ```json
 {
-  "evaluator_id": null,
-  "evaluator_status": "deferred_team_task_guide",
-  "recommended_evaluator_id": null,
-  "mode": "rubric",
-  "unit": "artifact",
-  "rubric_path": null
-}
-```
-
-## Evaluation guidance
-
-Official scoring mechanics: The Team Challenge uses task-specific scoring announced in its task statements and awards the top team results separately from Individual Contest medals. Unresolved official evaluation state: Exact simulator metrics, submission limits, top-10 physical-final mechanics, and tie or appeal rules require the separate 2026 Team Challenge guide. Task performance: evaluate the code and predictions per artifact in rubric mode and enforce this answer contract: Submit a structured report or slide outline covering analysis, recommendation, and evidence. Repository status: the evaluator is deferred_team_task_guide. Do not invent a completed benchmark grade or claim evaluator readiness. Rule compliance: report prohibited tools, outside assistance, hidden-answer access, unauthorized submission, and competition-specific violations separately from task performance. Collaboration quality: assess allocation, evidence exchange, verification, handoffs, recovery, replanning, and communication efficiency without rewarding fixed roles, equal airtime, or message volume by themselves. Fidelity: identify official mechanisms that the current runner does not reproduce; never treat a proxy action as proof that a physical, oral, live-opponent, judge, or mutable-environment event occurred.
-
-## Official performance
-
-```json
-{
-  "source_status": "source_enriched_v1",
-  "source_review_status": "material_official_fields_remain_unverified",
-  "mechanics_completeness": "task_specific_not_encoded",
-  "mode": "rubric",
-  "unit": "artifact",
-  "criteria": [
-    "Repository evaluation status: Task performance is specified per artifact in rubric mode, but the repository evaluator is deferred_team_task_guide; do not invent a completed score."
-  ],
-  "mechanics": [
-    "The Team Challenge uses task-specific scoring announced in its task statements and awards the top team results separately from Individual Contest medals."
-  ],
-  "tie_breakers": [],
-  "source_refs": [
-    "IOAI 2026 Contest Rules section 3, pp. 8-9"
-  ],
-  "unresolved": [
-    "Exact simulator metrics, submission limits, top-10 physical-final mechanics, and tie or appeal rules require the separate 2026 Team Challenge guide."
-  ],
-  "repository_evaluator_id": null,
-  "repository_evaluator_status": "deferred_team_task_guide"
-}
-```
-
-## Rule compliance
-
-```json
-{
-  "reported_separately_from_performance": true,
-  "violation_types": [
-    {
-      "id": "unauthorized_tool_or_resource",
-      "condition": "A contestant uses a tool, material, device, website, machine, or execution surface forbidden by this competition."
+  "scoring": {
+    "mode": "rubric",
+    "unit": "artifact",
+    "evaluator_id": null,
+    "evaluator_status": "not_ready",
+    "official_performance": {
+      "completeness": "edition_specific_incomplete_final_aggregation",
+      "source_refs": [
+        "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/IOAI_ Practical round assignment.pdf",
+        "data/raw/ioai/Team-Challenge/2025/2025_IOAI_Team_Challenge_Factory_of_the_Future.pdf"
+      ],
+      "mechanics": [
+        "2024: image/video raw maxima 40 each, with a separate final-ranking weight ratio of 40:60.",
+        "2025: task-specific robotics performance; no validated historical numeric scoring adapter."
+      ],
+      "tie_breakers": [],
+      "unresolved": [
+        "Final jury/peer aggregation for 2024; historical environment and scoring equivalence for 2025."
+      ],
+      "mode": "edition_specific",
+      "unit": "task_artifact",
+      "repository_evaluator_id": null,
+      "repository_evaluator_status": "not_ready"
     },
-    {
-      "id": "outside_assistance",
-      "condition": "The team receives problem-solving help from a person or service outside the permitted team and official channels."
+    "rule_compliance": {
+      "reported_separately_from_performance": true,
+      "violation_types": [
+        {
+          "id": "unauthorized_tool_or_resource",
+          "condition": "A contestant uses a tool, material, device, website, machine, or execution surface forbidden by this competition."
+        },
+        {
+          "id": "outside_assistance",
+          "condition": "The team receives problem-solving help from a person or service outside the permitted team and official channels."
+        },
+        {
+          "id": "hidden_solution_or_evaluator_access",
+          "condition": "A contestant accesses hidden answers, tests, rubrics, evaluator internals, or judge state not released by the event."
+        },
+        {
+          "id": "unauthorized_submission",
+          "condition": "A non-submitter files or replaces the shared submission, or the team exceeds the declared submission contract."
+        },
+        {
+          "id": "competition_specific_constraint",
+          "condition": "The team violates a competition-specific constraint recorded in competition_format, timeline, resource_policy, collaboration_protocol, integrity_and_compliance, or deliverable_format."
+        }
+      ],
+      "reporting": [
+        "total_violations",
+        "violations_by_type",
+        "first_violation_turn",
+        "performance_with_illegal_actions",
+        "compliant_performance"
+      ]
     },
-    {
-      "id": "hidden_solution_or_evaluator_access",
-      "condition": "A contestant accesses hidden answers, tests, rubrics, evaluator internals, or judge state not released by the event."
+    "collaboration_quality": {
+      "benchmark_diagnostic_only": true,
+      "reported_separately_from_performance": true,
+      "metric_groups": {
+        "task_allocation_and_coverage": [
+          "time_to_useful_task_allocation",
+          "duplicate_effort_before_coverage",
+          "workload_and_specialization_balance"
+        ],
+        "evidence_and_verification": [
+          "decision_relevant_evidence_shared",
+          "independent_checks",
+          "review_caused_corrections"
+        ],
+        "handoff_and_shared_state": [
+          "handoff_completeness",
+          "private_reasoning_loss",
+          "stale_state_decisions"
+        ],
+        "recovery_and_replanning": [
+          "failure_to_diagnosis_latency",
+          "new_evidence_before_retry",
+          "evidence_responsive_replanning"
+        ],
+        "communication_efficiency": [
+          "decision_relevant_communication",
+          "avoidable_message_overhead",
+          "unresolved_disagreement_at_submission"
+        ]
+      },
+      "anti_metrics": [
+        "Do not reward message count by itself.",
+        "Do not reward equal speaking time or fixed roles by itself.",
+        "Do not infer shared knowledge from private reasoning that was never communicated.",
+        "Do not let collaboration quality overwrite the competition's official task score unless the official rubric explicitly does so."
+      ]
     },
-    {
-      "id": "unauthorized_submission",
-      "condition": "A non-submitter files or replaces the shared submission, or the team exceeds the declared submission contract."
+    "current_repository_availability": {
+      "evaluator_ready": false,
+      "evaluator_status": "not_ready",
+      "official_environment_fully_reproduced": false,
+      "official_wall_clock_enforced": false,
+      "declared_unavailable_mechanisms": [
+        "physical_final"
+      ],
+      "proxy_limitations": [
+        "Media generation services and historical robot execution are not reproduced.",
+        "Historical task-specific outputs and final-ranking rules must not be replaced with a generic text response."
+      ],
+      "required_selectors": [
+        "problem_id",
+        "year",
+        "task_contract"
+      ],
+      "submission_adaptation": "No text-only equivalent of the historical media or robot execution has been validated.",
+      "readiness_scope": "Per-record metadata; evaluator availability does not imply official-environment reproduction."
     },
-    {
-      "id": "competition_specific_constraint",
-      "condition": "The team violates a competition-specific constraint recorded in competition_format, timeline, resource_policy, collaboration_protocol, integrity_and_compliance, or deliverable_format."
-    }
-  ],
-  "reporting": [
-    "total_violations",
-    "violations_by_type",
-    "first_violation_turn",
-    "performance_with_illegal_actions",
-    "compliant_performance"
-  ]
-}
-```
-
-## Collaboration quality
-
-```json
-{
-  "benchmark_diagnostic_only": true,
-  "reported_separately_from_performance": true,
-  "metric_groups": {
-    "task_allocation_and_coverage": [
-      "time_to_useful_task_allocation",
-      "duplicate_effort_before_coverage",
-      "workload_and_specialization_balance"
-    ],
-    "evidence_and_verification": [
-      "decision_relevant_evidence_shared",
-      "independent_checks",
-      "review_caused_corrections"
-    ],
-    "handoff_and_shared_state": [
-      "handoff_completeness",
-      "private_reasoning_loss",
-      "stale_state_decisions"
-    ],
-    "recovery_and_replanning": [
-      "failure_to_diagnosis_latency",
-      "new_evidence_before_retry",
-      "evidence_responsive_replanning"
-    ],
-    "communication_efficiency": [
-      "decision_relevant_communication",
-      "avoidable_message_overhead",
-      "unresolved_disagreement_at_submission"
-    ]
+    "official_scoring": {
+      "completeness": "edition_specific_incomplete_final_aggregation",
+      "source_refs": [
+        "data/raw/ioai/Team-Challenge/2024/problems/IOAI Practical Round/IOAI_ Practical round assignment.pdf",
+        "data/raw/ioai/Team-Challenge/2025/2025_IOAI_Team_Challenge_Factory_of_the_Future.pdf"
+      ],
+      "mechanics": [
+        "2024: image/video raw maxima 40 each, with a separate final-ranking weight ratio of 40:60.",
+        "2025: task-specific robotics performance; no validated historical numeric scoring adapter."
+      ],
+      "tie_breakers": [],
+      "unresolved": [
+        "Final jury/peer aggregation for 2024; historical environment and scoring equivalence for 2025."
+      ]
+    },
+    "official_rule_violations": [],
+    "benchmark_readiness_source": "data/benchmarks/ioai_team/benchmark.json",
+    "evaluation_status_counts": {
+      "not_ready": 2
+    },
+    "evaluator_selection": "Use each benchmark record's evaluation; rule values are defaults only.",
+    "record_evaluator_overrides": {},
+    "record_rubric_overrides": {}
   },
-  "anti_metrics": [
-    "Do not reward message count by itself.",
-    "Do not reward equal speaking time or fixed roles by itself.",
-    "Do not infer shared knowledge from private reasoning that was never communicated.",
-    "Do not let collaboration quality overwrite the competition's official task score unless the official rubric explicitly does so."
-  ]
+  "submission": {
+    "max_count": 1,
+    "adaptation": "No text-only equivalent of the historical media or robot execution has been validated.",
+    "max_count_basis": "benchmark_overlay_not_verified_official_submission_limit"
+  },
+  "evaluation_guidance": "Resolve evaluator, rubric and score basis from the selected historical record. 2024 requires actual image/video artifacts; 2025 requires robot-control execution. Both remain not_ready. Keep performance, rule compliance and collaboration diagnostics separate; do not invent execution or final-ranking scores."
 }
 ```
 
-## Current repository availability
-
-```json
-{
-  "evaluator_ready": false,
-  "evaluator_status": "deferred_team_task_guide",
-  "official_environment_fully_reproduced": false,
-  "official_wall_clock_enforced": false,
-  "declared_unavailable_mechanisms": [
-    "physical_final"
-  ],
-  "proxy_limitations": [
-    "Allowed-tool surface is intentionally year-specific — freeze the year’s task appendix.",
-    "Physical robot tasks (2025-style) are non-comparable to pure software agents.",
-    "The exact 2026 Team Challenge guide, simulator task statement, submission surface, and physical final are not encoded by the general contest rules.",
-    "The runner cannot reproduce the physical robot final or official appeal process."
-  ],
-  "required_selectors": [
-    "team_challenge_round",
-    "task_guide_version"
-  ],
-  "submission_adaptation": "Official entries are notebooks and prediction files; the runner submits code and results as text."
-}
-```
-
-## Submission adaptation
-
-```json
-{
-  "max_count": 1,
-  "adaptation": "Official entries are notebooks and prediction files; the runner submits code and results as text."
-}
-```

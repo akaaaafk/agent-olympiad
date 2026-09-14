@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 1991
-
 # Odyssey of the Mind — 1991 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Super ColliderDivisions I, II & IIIThe team’s problem is to make and test a balsa wood structure. The structure will be tested to hold weight. The weight stack will be impacted with a collider to cause twisting and vibrations, affecting the structure. Time limit: 8 min.
 5. TransformationDivisions I & IIThe team’s problem is to create and present a performance that shows a series of real or imaginary changes or evolutions of something. Photographs and/or drawings illustrating each phase of the transformation must also be presented. Time limit: 8 min. Cost limit: $75 USD.
 6. Bedtime StoryPrimaryThe team’s problem is to create an original bedtime story and perform a skit where a team member must tell the story to help someone sleep.
+

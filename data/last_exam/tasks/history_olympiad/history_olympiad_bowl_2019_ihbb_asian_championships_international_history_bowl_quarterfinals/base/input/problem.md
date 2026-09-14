@@ -1,5 +1,3 @@
-# 2019-IHBB-Asian-Championships-International-History-Bowl-Quarterfinals
-
 [Q1] This country’s forces were saved by the arrival of Anton von L’Estocq’s forces during a battle in which 11,000 enemy cavalry charged through a heavy snowstorm. This country’s troops crossed the Alle River in an attempt to defeat Jean Lannes before aid arrived; however, that assault backfired on the Count of Bennigsen, and this country was forced to sign the Treaty of Tilsit. The loser at the Battles of Eylau and Friedland was, for ten points, what country whose refusal to follow the Continental System prompted a French invasion in 1812?
 
 [Q2] A strike of workers gathering this resource in Anzin inspired Zola’s novel Germinal. The first railroads in Continental Europe transported this resource from Saint--Etienne. Iron production was greatly increased by substituting wood with a processed form of this resource. The “sea” form of this resource was used in locomotives and is graded between this resource’s anthracite and bituminous forms. Coke is a form of, for ten points, what carbon--based rock which fueled the Industrial Revolution?

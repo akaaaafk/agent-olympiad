@@ -1,5 +1,3 @@
-# Buggy Rover
-
 Hide 
  Buggy Rover 
 

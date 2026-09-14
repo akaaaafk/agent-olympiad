@@ -1,0 +1,103 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.clear {
+	clear: both;
+}
+body {
+	background: url(marble-background.jpg) repeat;
+	font-family: verdana, sans-serif;
+	font-size: 14px;
+	color: #000000;
+}
+#nav {
+	height: 32px;
+	background: url(logo.png) 1px 1px no-repeat #000000;
+	border-bottom: 1px solid #666666;
+	text-align: center;
+	color: #ffffff;
+}
+@media print {
+	#nav {
+		display: none;
+	}
+}
+#nav a {
+	margin: 0 10px;
+}
+#nav a img {
+	margin-top: 7px;
+	border: none;
+}
+#container {
+	width: 700px;
+	margin: 0 auto 20px auto;
+	padding: 40px;
+	background-color: #ffffff;
+}
+#header {
+	width: 100%;
+	height: 170px;
+	padding: 20px 0;
+	text-align: center;
+}
+#line {
+	height: 50px;
+	background: url(line-background.jpg) repeat-x;
+}
+#line img {
+	margin: 8px 0;
+}
+#name {
+	height: 100px;
+	width: 670px;
+	margin: 20px auto 0 auto;
+	background: url(name-background.gif) no-repeat;
+}
+#name img {
+	margin: 34px 0;
+}
+#puzzlebody {
+	margin-bottom: 20px;
+}
+#puzzlebody p {
+	margin: 20px 0;
+}
+#puzzlebody table {
+	margin: 20px 0;
+}
+#puzzlebody a img {
+	border: 0;
+}
+#con #puzzlebody table {
+	width: 740px;
+}
+#con #puzzlebody td {
+	width: 25%;
+}
+#get #container {
+	width: 720px;
+	padding: 40px 30px;
+}
+#pen #puzzlebody p.img {
+	text-align: center;
+}
+#rus #container {
+	width: 780px;
+	padding: 0;
+}
+#rus #puzzlebody p.text {
+	padding: 20px;
+}
+#str table {
+	margin-left: 100px;
+	border: 1px solid #000000;
+}
+#str table td {
+	border: 1px solid #000000;
+	margin: 1px;
+}
+#tea h2 {
+	text-align: center;
+}

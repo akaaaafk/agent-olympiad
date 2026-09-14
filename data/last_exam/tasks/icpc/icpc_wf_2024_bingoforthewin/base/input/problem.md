@@ -1,5 +1,3 @@
-# Bingo for the Win!
-
 Hide 
  Bingo for the Win! 
 

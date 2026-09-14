@@ -1,5 +1,3 @@
-# A-Set-Bowl-Round-7
-
 [Q1] This man’s associate, Elbert A. Woodward, committed both larceny and forgery while en route to a Connecticut Senate seat. Future presidential candidate Samuel Tilden refused to let this political figure free from prison even after he testified to the Alderman Committee. This man and his New York cronies were depicted as vultures in a Harper’s Weekly political cartoon by Thomas Nast. For ten points, name this “Boss” of the political machine, Tammany Hall.
 
 [Q2] The oldest -known civ ilization to have been located in this region was the coastal, fishing-based Chinchorro Culture. This region is home to the world's largest open pit copper mine, Chuquicamata [[choo -kee-kah-MAH-tah]]. In 2003, this region was used by NASA to test its Viking landers due to its similarity to the surface of Mars. This region is believed to have been arid for at least three million years, making it the world's oldest desert. For ten points, name this extremely arid Chilean desert, which prior to 2015 had not se en precipitation for over 500 years.

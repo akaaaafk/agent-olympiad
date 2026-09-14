@@ -1,9 +1,7 @@
-# HMMT November 2018 — Guts Round
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
 
-[Page 1]
-HMMT November 2018, November 10, 2018 — GUTS ROUND
+               HMMT November 2018, November 10, 2018 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -20,6 +18,10 @@ Organization                         Team                         Team ID#
           Determine the number of solvable 2 × 2 mazes.
 
 
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
                HMMT November 2018, November 10, 2018 — GUTS ROUND
 
 Organization                         Team                         Team ID#
@@ -34,8 +36,10 @@ Organization                         Team                         Team ID#
          6. [6] An equilateral hexagon with side length 1 has interior angles 90◦, 120◦, 150◦, 90◦, 120◦, 150◦in that
            order. Find its area.
 
-[Page 2]
-HMMT November 2018, November 10, 2018 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2018, November 10, 2018 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -51,6 +55,10 @@ Organization                         Team                         Team ID#
          9. [7] Farmer James has some strange animals. His hens have 2 heads and 8 legs, his peacocks have 3
           heads and 9 legs, and his zombie hens have 6 heads and 12 legs. Farmer James counts 800 heads and
           2018 legs on his farm. What is the number of animals that Farmer James has on his farm?
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2018, November 10, 2018 — GUTS ROUND
@@ -69,8 +77,10 @@ Organization                         Team                         Team ID#
               tails, and probability 61 of landing on its side (i.e. on neither face).  It is known that if this coin is
           ﬂipped twice, the likelihood that both ﬂips will have the same result is 12. Find p.
 
-[Page 3]
-HMMT November 2018, November 10, 2018 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2018, November 10, 2018 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -92,6 +102,10 @@ Organization                         Team                         Team ID#
            nothing).
 
 
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
                HMMT November 2018, November 10, 2018 — GUTS ROUND
 
 Organization                         Team                         Team ID#
@@ -109,8 +123,10 @@ Organization                         Team                         Team ID#
              cell going through no walls. (In particular, the top left and bottom right cells must both be blank.)
           Determine the number of solvable 2 × 5 mazes.
 
-[Page 4]
-HMMT November 2018, November 10, 2018 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2018, November 10, 2018 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -123,6 +139,10 @@ Organization                         Team                         Team ID#
 
        21. [11] A function f  : {1, 2, 3, 4, 5} →{1, 2, 3, 4, 5} is said to be nasty  if there do not exist distinct
             a, b ∈{1, 2, 3, 4, 5} satisfying f(a) = b and f(b) = a. How many nasty functions are there?
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2018, November 10, 2018 — GUTS ROUND
@@ -141,8 +161,10 @@ Organization                         Team                         Team ID#
        24. [12] Let ABCD be a convex quadrilateral so that all of its sides and diagonals have integer lengths.
          Given that ∠ABC = ∠ADC = 90◦, AB = BD, and CD = 41, ﬁnd the length of BC.
 
-[Page 5]
-HMMT November 2018, November 10, 2018 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2018, November 10, 2018 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -166,6 +188,10 @@ Organization                         Team                         Team ID#
          number of sectors formed?
 
 
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
                HMMT November 2018, November 10, 2018 — GUTS ROUND
 
 Organization                         Team                         Team ID#
@@ -184,8 +210,10 @@ Organization                         Team                         Team ID#
           Note: Assume both Pretty Penny and Beautiful Bill each have an unlimited number of each type of
             coin. Pennies, nickels, dimes, quarters, and dollar bills are worth 1, 5, 10, 25, 100 cents respectively.
 
-[Page 6]
-HMMT November 2018, November 10, 2018 — GUTS ROUND
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+
+               HMMT November 2018, November 10, 2018 — GUTS ROUND
 
 Organization                         Team                         Team ID#
 
@@ -201,6 +229,10 @@ Organization                         Team                         Team ID#
        33. [17] Let ABC be a triangle with AB = 20, BC = 10, CA = 15. Let I be the incenter of ABC, and let
         BI meet AC at E and CI meet AB at F. Suppose that the circumcircles of BIF and CIE meet at a
            point D diﬀerent from I. Find the length of the tangent from A to the circumcircle of DEF.
+
+
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 
                HMMT November 2018, November 10, 2018 — GUTS ROUND

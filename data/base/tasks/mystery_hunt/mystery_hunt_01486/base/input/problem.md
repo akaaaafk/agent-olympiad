@@ -1,3 +1,5 @@
-# 2011/puzzles/world1/another_small_collection_of_immense_integers/
+# Another Small Collection of Immense Integers
 
-Another Small Collection of Immense Integers Back to World 1-2 Info > Introduction Contact HQ Events Answer Board Achievements Updates View solution Another Small Collection of Immense Integers 3390066960 2716716990 142488921960 34441680 1051397257358448 2921407440 5460 2162928096 294043460256 344760 294043460256 38544100 13344757458552 49419000 5694 3369773440 32579316
+Open `puzzle.html` for the original styled visual packet and linked images. A text preview does not replace the diagrams or blank cells.
+
+Archive limitation: Original standalone text, layout, diagrams, repeated entries and published worked examples are preserved. The exact YUI 3.2.0 reset is recovered from its publisher and checked against the same official release. Archive navigation, answer checking and points scripts are removed. Historical claims are not modernized; shared-page answer variants are not merged and host or cross-task protocols are not reconstructed.

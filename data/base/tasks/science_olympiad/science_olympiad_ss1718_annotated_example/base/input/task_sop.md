@@ -1,30 +1,13 @@
-# Task SOP
+# Task
 
-## Reference Environment
-- Competition: Science Olympiad (USA)
-- Competition id: `science_olympiad`
-- Problem id: `science_olympiad_ss1718_annotated_example`
-- Task type: `science_olympiad_event`
-- Team size: 15
-- Year / edition: 2018
-- Source: https://www.soinc.org/
+Competition: science_olympiad
 
-## Goal
-As a multi-agent team, solve the olympiad-style team task using only the materials under `base/input`. Produce the required deliverable (`team_submission`).
+Task: science_olympiad_ss1718_annotated_example
 
-## Task directory
-- Variant root: `base`
-- Input directory: `base/input`
+Edition: 2018
 
-## Inputs
-- `problem.md`
-- `082317_SS1718_AnnotatedExampleExam.pdf`
+Team size: 15
 
-## Title
-Solar System — Annotated Example Exam (Div B)
+Deliverable: event_answer_sheet
 
-## Deterministic Evaluation Rule
-Gold answers and official solution booklets are not provided in `input/`. Scoring uses the evaluator declared on the task card (gold match, rubric LLM judge, slide judge, or deferred sandbox).
-
-## Deliverables
-Return the team `team_submission` expected by this competition.
+Use the attached problem materials and the inherited competition and collaboration instructions.

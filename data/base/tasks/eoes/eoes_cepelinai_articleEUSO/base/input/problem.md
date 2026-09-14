@@ -1,5 +1,3 @@
-# cepelinai_articleEUSO
-
 Were you ever frustrated by obscure regular recipes? Have you ever wondered about 
 the volume of the spoon in “a spoonful”? Isn’t there a place for a chef that likes to follow 
 strict and unambiguous instructions? 

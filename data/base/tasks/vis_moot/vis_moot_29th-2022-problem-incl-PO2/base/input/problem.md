@@ -1,5 +1,3 @@
-# 29th-2022-problem-incl-PO2
-
 THE PROBLEM 
  
  

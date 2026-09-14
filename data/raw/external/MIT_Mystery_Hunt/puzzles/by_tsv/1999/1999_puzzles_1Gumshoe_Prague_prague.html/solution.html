@@ -1,0 +1,43 @@
+<html><head>
+<title>Prague: Solution</title>
+</head><body>
+<h1>Prague: Solution</h1>
+
+The <a href="reusefind">executable</a> contained on the first floppy that the solving team receives is an Irix (Silicon Graphics) executable, compiled from an Ada source using the GCC compiler in Ada mode on an Athena SGI (a now extinct type of workstation). Running this file on an SGI workstation output the text:
+<pre>
+	Run to the top of the stairs at the southeast end of Building 24 for
+	another great reuse find!
+</pre>
+
+<p>The string could also be retrieved by reading the file in a low level text editor (it's clearly visible even in Windows Notepad) -- doing so would also clue the
+solver to the fact that it's an Irix executable, since the file contains multiple references to MIPS, the type of CPU used by the SGI workstations.</p>
+
+<p>At the indicated location, the solving teams would find floppies imore and a sign posted above them that read: "<em><strong>Without</strong> a programmer to write the software and a platform to run it on, you're left with a pretty stupid system.</em>" This floppy contained a gzipped <a href="puzzle">plain text file named puzzle</a>, which is a piece of Ada code. The code included many commented lines (double-dashes), ignored by the compiler, and interspersed among them, a short program:</p>
+
+<PRE>
+with Text_IO;
+procedure Puzzle is
+begin
+ Text_IO.Put_Line("2 39 27 30 25 29 4 10 5 13 21 29 42 10 24 13 12 12 14 32 12 29");
+end Puzzle;
+</PRE>
+
+<p>Even without running the program, it's evident that all it does is print the following string of numbers:</p>
+
+<pre>2 39 27 30 25 29 4 10 5 13 21 29 42 10 24 13 12 12 14 32 12 29</pre>
+
+<p>Notice that the sign posted above the floppies had the word "without" in bold. That was a clue for solvers to "subtract" the "programmer" and the "platform" from the numbers output by the program. Since the programming language is Ada, the programmer is Augusta Ada Lovelace, and the platform is Irix. Thus, if we convert "Augusta Ada Lovelace Irix" to numbers, and subtract it from the string output by the program, we get:</p>
+
+<pre>
+   2  39  27  30  25  29  4  10  5  13  21  29  42  10  24  13  12  12  14  32  12  29
+-  a  u   g   u   s   t   a  a   d  a   l   o   v   e   l   a   c   e   i   r   i   x
+   1  21  7   21  19  20  1  1   4  1   12  15  22  5   12  1   3   5   9   18  9   24
+--------------------------------------------------------------------------------------
+   1  18  20  9   6   9   3  9   1  12  9   14  20  5   12  12  9   7   5   14  3   5
+   a  r   t   i   f   i   c  i   a  l   i   n   t   e   l   l   i   g   e   n   c   e
+</pre>
+
+<p>The answer is, therefore, <strong>ARTIFICIAL INTELLIGENCE</strong>.</p>
+
+</body>
+</html>

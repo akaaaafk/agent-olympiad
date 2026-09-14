@@ -1,0 +1,19 @@
+{
+  "visibility": "hidden_until_grade",
+  "gold_pointer": "data/benchmarks/mcm/benchmark.json#mcm_2017_B.gold_label",
+  "has_gold_answer": false,
+  "evaluator_id": "rubric_llm_v1",
+  "evaluator_status": "ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": "rubric_llm_v1",
+    "status": "ready",
+    "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+    "deliverable": "modeling_report",
+    "limitations": "Scores the submitted report; COMAP originality checks and award-panel calibration are not reproduced.",
+    "scorecard_path": "data/rubrics/task_scorecards/mcm.json",
+    "scorecard_key": "mcm_2017_B"
+  },
+  "rubric_path": "data/rubrics/mcm_modeling_report_100_v1.json",
+  "deliverable": "modeling_report"
+}

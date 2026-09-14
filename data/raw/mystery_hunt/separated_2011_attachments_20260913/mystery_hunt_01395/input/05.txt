@@ -1,0 +1,41 @@
+> login
+> plow
+> plant
+> harvest
+> plow
+> plant
+> harvest
+> plow
+> plant
+> harvest
+> plow
+> plant
+> harvest
+> plow
+> plant
+> harvest
+> plow
+> plant
+> harvest
+> plow
+> plant
+> harvest
+> plow
+> plant
+> harvest
+> plow
+> plant
+> harvest
+> plow
+> plant
+> harvest
+> buy cellar
+> place cellar
+> buy shovels
+> buy shovels
+> buy shovels
+> buy shovels
+> buy shovels
+> buy shovels
+> redeem 60 points
+> get ?????????? (5)

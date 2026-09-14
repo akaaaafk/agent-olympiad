@@ -182,13 +182,202 @@
     },
     "benchmark_readiness_source": "data/benchmarks/iol_team/benchmark.json",
     "evaluation_status_counts": {
-      "not_ready": 2,
-      "ready": 16,
-      "ready_with_limitations": 2
+      "not_ready": 9,
+      "ready": 8,
+      "ready_with_limitations": 1
     },
     "evaluator_selection": "Use each benchmark record's evaluation; rule values are defaults only.",
-    "record_evaluator_overrides": {},
-    "record_rubric_overrides": {}
+    "record_evaluator_overrides": {
+      "iol_team_2003": null,
+      "iol_team_2007": null,
+      "iol_team_2012": null,
+      "iol_team_2016": null,
+      "iol_team_2024": null,
+      "iol_team_2011": null,
+      "iol_team_2019": null,
+      "iol_team_2022": null,
+      "iol_team_2017": null
+    },
+    "record_rubric_overrides": {
+      "iol_team_2016": "data/rubrics/iol_team_2016_printed_points_v1.json",
+      "iol_team_2024": "data/rubrics/iol_team_2024_printed_points_v1.json",
+      "iol_team_2011": "data/rubrics/iol_team_worked_answer_100_v1.json",
+      "iol_team_2019": "data/rubrics/iol_team_worked_answer_100_v1.json",
+      "iol_team_2022": "data/rubrics/iol_team_2022_printed_points_v1.json",
+      "iol_team_2017": "data/rubrics/iol_team_2017_structured_reference_v1.json",
+      "iol_team_2012": "data/rubrics/iol_team_2012_structured_reference_v1.json"
+    },
+    "record_score_basis_overrides": {
+      "iol_team_2007": {
+        "max_score": null,
+        "basis": "100-point benchmark proxy only; no verified official maximum for this edition.",
+        "regular_score_only": true,
+        "scoring_components": null
+      },
+      "iol_team_2014": {
+        "max_score": null,
+        "basis": "100-point benchmark proxy only; no verified official maximum for this edition.",
+        "regular_score_only": true,
+        "scoring_components": null
+      },
+      "iol_team_2016": {
+        "max_score": 120,
+        "basis": "Printed official allocations: 120 regular points; partial reference only. Part a: 114; part b: 6.",
+        "regular_score_only": true,
+        "scoring_components": {
+          "total_points": 120,
+          "criteria": [
+            {
+              "id": "a",
+              "name": "Assignment a",
+              "max_score": 114,
+              "source_page": 1,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "b",
+              "name": "Assignment b",
+              "max_score": 6,
+              "source_page": 1,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            }
+          ],
+          "tie_breaker": null
+        }
+      },
+      "iol_team_2024": {
+        "max_score": 90,
+        "basis": "Printed official allocations: 90 regular points; partial reference only. M has 10 separate tie-break points.",
+        "regular_score_only": true,
+        "scoring_components": {
+          "total_points": 90,
+          "criteria": [
+            {
+              "id": "A",
+              "name": "Assignment A",
+              "max_score": 2,
+              "source_page": 3,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "B",
+              "name": "Assignment B",
+              "max_score": 2,
+              "source_page": 3,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "C",
+              "name": "Assignment C",
+              "max_score": 2,
+              "source_page": 3,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "D",
+              "name": "Assignment D",
+              "max_score": 2,
+              "source_page": 3,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "E",
+              "name": "Assignment E",
+              "max_score": 10,
+              "source_page": 6,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "F",
+              "name": "Assignment F",
+              "max_score": 8,
+              "source_page": 7,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "G",
+              "name": "Assignment G",
+              "max_score": 20,
+              "source_page": 7,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "H",
+              "name": "Assignment H",
+              "max_score": 3,
+              "source_page": 7,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "I",
+              "name": "Assignment I",
+              "max_score": 4,
+              "source_page": 7,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "J",
+              "name": "Assignment J",
+              "max_score": 5,
+              "source_page": 7,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "K",
+              "name": "Assignment K",
+              "max_score": 4,
+              "source_page": 7,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            },
+            {
+              "id": "L",
+              "name": "Assignment L",
+              "max_score": 28,
+              "source_page": 8,
+              "description": "Printed allocation; full marking/executable evaluation not validated."
+            }
+          ],
+          "tie_breaker": {
+            "id": "M",
+            "max_score": 10,
+            "source_page": 9,
+            "graded_only_on_top_score_tie": true,
+            "included_in_regular_total": false
+          }
+        }
+      },
+      "iol_team_2011": {
+        "max_score": null,
+        "basis": "100-point benchmark proxy only. Official timed-release/snapshot scoring and maximum remain unverified.",
+        "grading_validation_status": "not_ready"
+      },
+      "iol_team_2019": {
+        "max_score": null,
+        "basis": "100-point benchmark proxy only; official IOL item weights/maximum unverified. Gymnastics marks are task answer values, not evaluation weights.",
+        "grading_validation_status": "not_ready"
+      },
+      "iol_team_2022": {
+        "max_score": 100,
+        "basis": "Official printed part subtotals: I=25, II=25, III=25, IV=25; maximum 100. Within-part partial credit unverified.",
+        "grading_validation_status": "not_ready"
+      },
+      "iol_team_2017": {
+        "max_score": null,
+        "basis": "Official points unknown; structured partial reference only. Legacy 100-point benchmark proxy disabled; 93 matches and 4 descriptions are not point weights.",
+        "grading_validation_status": "not_ready"
+      },
+      "iol_team_2012": {
+        "max_score": null,
+        "basis": "Official points unknown; 57 entries and two requested outputs per entry are not point weights. Legacy 100-point benchmark proxy disabled.",
+        "grading_validation_status": "not_ready"
+      }
+    },
+    "active_score_membership": {
+      "records": 18,
+      "path": "data/rubrics/iol_team_active_score_membership.json",
+      "exclusion_manifest": "data/excluded/iol_answerless_years_20260913/manifest.json",
+      "official_aggregate_max_score": null
+    }
   },
   "submission": {
     "max_count": 1

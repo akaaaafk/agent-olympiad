@@ -1,5 +1,3 @@
-# Fall-League-History-Bowl_Round-1
-
 [Q1] This woman employed the Munshi Abdul Karim as an Urdu teacher, and she described her grandson, William, as possessing "little heart and tact." This person was advised in her early rule by Lord Melbourne, before forming a longtime friendship with Prime Minister Benjamin Disraeli. The Crystal Palace Exhibition was the brainchild of this ruler's husband, Albert. For ten points, name this long -reigning monarch, who presided over much of nineteenth-century Britain.
 
 [Q2] One theory about this event claimed Judah P. Benjamin perpetrated it by enlisting the help of the Rothschild banking family from Europe. Police officer John Frederick Parker's abandonment of his post to grab a drink made this event possible. Major Rathbone was stabbed with a dagger during this event, shortly before a man shouted "Sic Semper Tyrannus" during a performance of Our American Cousin. John Wilkes Booth perpetrated, for ten points, what killing of the sixteenth president?

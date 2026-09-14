@@ -1,3 +1,5 @@
-# 2003/www.acme-corp.com/teamGuest/4/4_9.html
+# Going Nuts
 
-Going Nuts (Solution) Document 4.9: Going Nuts You look at the grid in front of you and attempt to reconstruct what was going through your boss's head. "He often thought that he might be losing it," the psychic comments. "Every shadow seemed to hold menace for him, so I suggested that sciamancy might be useful. I thought I was cut out for that type of divination, but the sciagram he came up with was beyond my skill to interpret. My dear, departed father could probably have figured it out, but I just didn't inherit his sense of spatial relationships." PDF File or PostScript File Back to the index
+Open `puzzle.html` and its linked PDF files. Their original page geometry, notation and images are preserved; no flattened preview replaces them.
+
+Archive limitation: The original PDFs are the complete static puzzle materials. PostScript alternatives, where present, are archived as inert source files and were not executed. Historical rules and visual/spatial grading remain uncertified.

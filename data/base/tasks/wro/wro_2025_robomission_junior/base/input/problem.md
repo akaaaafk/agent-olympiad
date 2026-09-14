@@ -1,5 +1,3 @@
-# RoboMission Junior 2025
-
 RoboMission 
 Junior Game Rules 
 Season 2025 

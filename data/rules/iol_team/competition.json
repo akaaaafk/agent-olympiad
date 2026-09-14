@@ -22,7 +22,8 @@
     "team_room": "allocated_specified_not_enforced"
   },
   "allowed_tools": [
-    "query_rules"
+    "query_rules",
+    "check_linguistic_rule_table"
   ],
   "resources": {
     "internet": "forbidden",

@@ -1,5 +1,3 @@
-# Hey, Better Bettor
-
 Hide 
  Hey, Better Bettor 
 

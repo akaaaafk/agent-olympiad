@@ -1,5 +1,3 @@
-# Panda Preserve
-
 Hide 
  Panda Preserve 
 

@@ -1,0 +1,1261 @@
+{
+  "schema_version": "1.1",
+  "dataset": "icm",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "icm_2015_D",
+      "year": 2015,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2016_D",
+      "year": 2016,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2016_E",
+      "year": 2016,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2016_F",
+      "year": 2016,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2017_D",
+      "year": 2017,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2017_E",
+      "year": 2017,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2017_F",
+      "year": 2017,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2021_D",
+      "year": 2021,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2021_E",
+      "year": 2021,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2021_F",
+      "year": 2021,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2022_D",
+      "year": 2022,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2022_E",
+      "year": 2022,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2022_F",
+      "year": 2022,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2024_D",
+      "year": 2024,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2024_E",
+      "year": 2024,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2024_F",
+      "year": 2024,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2025_D",
+      "year": 2025,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2025_E",
+      "year": 2025,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "icm_2025_F",
+      "year": 2025,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/icm_modeling_report_100_v1.json",
+          "sha256": "5e2ecd149cd481b67124afcc61bede2dc3cd20160a3a2b00731ecb34b3eb46f0",
+          "format": "numeric_rubric",
+          "rubric_id": "icm_modeling_report_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "problem_framing",
+              "name": "Problem framing",
+              "max_score": 15,
+              "observable": true,
+              "description": "Clarifies the modeling question, scope, and success criteria."
+            },
+            {
+              "id": "model_design",
+              "name": "Model design",
+              "max_score": 25,
+              "observable": true,
+              "description": "Builds an appropriate model with justified assumptions and structure."
+            },
+            {
+              "id": "analysis",
+              "name": "Analysis & results",
+              "max_score": 25,
+              "observable": true,
+              "description": "Computations, sensitivity, and results are coherent and decision-relevant."
+            },
+            {
+              "id": "validation",
+              "name": "Validation & limitations",
+              "max_score": 15,
+              "observable": true,
+              "description": "Checks model quality and discusses limitations honestly."
+            },
+            {
+              "id": "communication",
+              "name": "Report communication",
+              "max_score": 20,
+              "observable": true,
+              "description": "Clear written report suitable for a judging panel."
+            }
+          ],
+          "not_observable_from_deck": [
+            "live presentation",
+            "99-hour process fidelity"
+          ]
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [],
+      "limitations": "Rubric grading evaluates the submitted report; COMAP originality checks and award-level panel calibration are not reproduced.",
+      "rubric_reuse": null,
+      "scoring_basis": "Existing scoring basis retained.",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

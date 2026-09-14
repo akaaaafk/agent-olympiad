@@ -1,0 +1,39 @@
+> new game
+> get key
+> north
+> drop key
+> get sword
+> south
+> south
+> west
+> use sword
+> east
+> east
+> south
+> use sword
+> drop sword
+> get key
+> north
+> west
+> west
+> north
+> east
+> south
+> north
+> north
+> north
+> north
+> north
+> drop key
+> get ??????? (5)
+> south
+> south
+> south
+> south
+> south
+> north
+> west
+> south
+> east
+> north
+> north

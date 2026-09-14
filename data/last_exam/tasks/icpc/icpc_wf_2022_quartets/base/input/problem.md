@@ -1,5 +1,3 @@
-# Quartets
-
 Hide 
  Quartets 
 

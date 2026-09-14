@@ -1,0 +1,46 @@
+mt = {}
+
+function Seq(s)
+  return setmetatable({ value = s or ''}, mt)
+end
+function m(f,t)
+   local t2 = {}
+   for k,v in pairs(t) do t2[k] = f(v) end
+   return t2
+end
+function m2(f,t)
+   local t2 = {}
+   for i,v in ipairs(t) do t2[i] = f(i,v) end
+   return t2
+end
+function d(s)
+   local t = {}
+   for i=1,string.len(s.value) do t[i] = string.byte(s.value,i) end
+   return t
+end
+function e(t)
+   local s = ""
+   for i,v in ipairs(t) do s = s .. string.char(v) end
+   return Seq(s)
+end
+function mt.__tostring(a) return a.value end
+function mt.__add(a,b)
+   local tmp = d(a)
+   if type(b)=="number" then
+      return e(m(function(x) return x+b end,tmp))
+   else
+      local u = d(Seq(string.upper(b.value)))
+      return e(m2(function(i,x) return x+((u[i] or 64)-64) end, tmp))
+   end
+end
+function mt.__sub(a,b)
+   local tmp = d(a)
+   if type(b)=="number" then
+      return e(m(function(x) return x-b end,tmp))
+   else
+      local u = d(Seq(string.upper(b.value)))
+      return e(m2(function(i,x) return x-((u[i] or 64)-64) end, tmp))
+   end
+end
+
+print(Seq("Yonkers")-Seq("Jeweler")+Seq("Abjsibx"))

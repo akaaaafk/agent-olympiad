@@ -1,4 +1,4 @@
-# Environment — `cfa_research_challenge`
+# Environment
 
 ## Roster
 
@@ -14,10 +14,14 @@
 
 ## Allowed tools
 
-- query_rules
-- use_calculator
-- execute_code
-- web_search
+```json
+[
+  "query_rules",
+  "use_calculator",
+  "execute_code",
+  "web_search"
+]
+```
 
 ## Resources
 
@@ -58,3 +62,4 @@
   ]
 }
 ```
+

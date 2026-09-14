@@ -1,0 +1,93 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.clear {
+	clear: both;
+}
+body {
+	background: #ffffff;
+	font-family: verdana, sans-serif;
+	font-size: 14px;
+	color: #000000;
+}
+#nav {
+	height: 32px;
+	background: url(logo.png) 1px 1px no-repeat #000000;
+	border-bottom: 1px solid #666666;
+	text-align: center;
+	color: #ffffff;
+}
+@media print {
+	#nav {
+		display: none;
+	}
+}
+#nav a {
+	margin: 0 10px;
+}
+#nav a img {
+	margin-top: 7px;
+	border: none;
+}
+#container {
+	width: 780px;
+	margin: 20px auto;
+	padding-bottom: 1px;
+}
+#header {
+	width: 780px;
+	height: 196px;
+	margin: 0 auto;
+}
+#header img {
+}
+#puzzlebody {
+	margin: 20px;
+	padding-top: 1px;
+}
+#puzzlebody p {
+	margin-bottom: 20px;
+}
+#puzzlebody table {
+	margin-bottom: 20px;
+}
+#puzzlebody a img {
+	border: 0;
+}
+#all #puzzlebody {
+	font-family: "Courier New", Courier, monospace;
+}
+#all #puzzlebody p {
+	margin: 20px 0;
+}
+#bea #puzzlebody {
+	margin: 0;
+}
+#bea #puzzlebody p {
+	margin-top: 0;
+}
+#bea #puzzlebody p.text {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+#fus #puzzlebody p.img {
+	margin-top: 10px;
+	text-align: center
+}
+#fus #puzzlebody td {
+	width: 360px;
+	vertical-align: top;
+}
+#lan #puzzlebody ol {
+	padding-left: 2em;
+}
+#the #puzzlebody p {
+	margin-top: 20px;
+}
+#the #puzzlebody td img {
+	width: 250px;
+	height: 300px;
+	margin-top: 5px;
+	margin-right: 5px;
+}

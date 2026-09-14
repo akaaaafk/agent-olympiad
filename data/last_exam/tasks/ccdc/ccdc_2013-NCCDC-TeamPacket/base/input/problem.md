@@ -1,5 +1,3 @@
-# NCCDC 2013 — TJCI
-
 2013 National Collegiate Cyber Defense Competition 
  
 April 19 – 21, 2013 

@@ -26,7 +26,8 @@
   },
   "allowed_tools": [
     "query_rules",
-    "execute_code"
+    "execute_code",
+    "check_ioai_artifact_manifest"
   ],
   "resources": {
     "policy": "Selected edition's attached task_contract.json and original task PDF.",

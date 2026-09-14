@@ -1,5 +1,3 @@
-# Weather Report
-
 Hide 
  Weather Report 
 

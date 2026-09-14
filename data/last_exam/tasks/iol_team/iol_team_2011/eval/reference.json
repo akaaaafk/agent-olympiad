@@ -2,9 +2,29 @@
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/iol_team/benchmark.json#iol_team_2011.gold_label",
   "has_gold_answer": true,
-  "evaluator_id": "rubric_llm_v1",
-  "evaluator_status": "ready",
-  "rubric_path": "data/rubrics/worked_answer_100_v1.json",
-  "deliverable": "worked_answers",
-  "solution_file": "data/raw/iol/iol-2011-team-sol.en-gb.pdf"
+  "evaluator_id": null,
+  "evaluator_status": "not_ready",
+  "solution_file": "data/raw/iol/iol-2011-team-sol.en-gb.pdf",
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+    "deliverable": "team_worked_answer",
+    "judge_assets": [
+      "data/raw/iol/iol-2011-team-prob.en-gb.pdf",
+      "data/raw/iol/iol-2011-team-sol.en-gb.pdf"
+    ],
+    "limitations": [
+      "Only original pages 1-2 belong in initial input. Pages 3-7 disclose cumulative hints at 30/60/90/120/150 minutes.",
+      "Timed hint release and six answer snapshots are not implemented; do not treat this as a validated single-shot contest.",
+      "The 100-point rubric remains a benchmark proxy, not recovered official phase-dependent scoring."
+    ],
+    "scorecard_path": "data/rubrics/task_scorecards/iol_team.json",
+    "scorecard_key": "iol_team_2011",
+    "source_repair_report": "data/benchmarks/iol_followup_repair_20260913.json",
+    "scoring_validation_status": "source_repaired_runtime_and_grading_not_validated",
+    "score_basis": "100-point benchmark proxy only. Official timed-release/snapshot scoring and maximum remain unverified."
+  },
+  "rubric_path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+  "deliverable": "team_worked_answer"
 }

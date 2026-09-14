@@ -1,4 +1,4 @@
-# Environment — `eoes`
+# Environment
 
 ## Roster
 
@@ -14,9 +14,13 @@
 
 ## Allowed tools
 
-- query_rules
-- use_calculator
-- inspect_environment
+```json
+[
+  "query_rules",
+  "use_calculator",
+  "inspect_environment"
+]
+```
 
 ## Resources
 
@@ -57,3 +61,4 @@
   ]
 }
 ```
+

@@ -1,5 +1,3 @@
-# wsc_writing_gq_037
-
 You’re there now—but why? If you’ve ever forgotten why you walked into a room, you may have experienced what scientists call the doorway effect . This temporary amnesia happens when you pass through the threshold of a liminal space; scientists theorize that the brain may “reset” short-term memories when it finds itself in a new setting. Liminality is that state of being in-between: you aren’t where you were but you’re also not where you’re going. As you explore this concept, discuss with your team: what are other examples of liminal spaces and thresholds in our own lives? 
 
  Most films take you from one spot to another, through the lens of the camera, as stuff happens in front of you. But some “found footage” has become famous for losing the viewer in the in-between. Watch one of the most popular of these efforts, The Backrooms (2022), then discuss with your team: did it make you feel uneasy? Have you ever had a moment when you felt adrift in this way—and, if so, where? 

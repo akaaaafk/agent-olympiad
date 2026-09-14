@@ -1,5 +1,3 @@
-# IHBB-Championships-History-Bowl-Round-8-Varsity-and-JV
-
 [Q1] In an effort to encourage dental health, this leader encouraged his population to chew on bones because dogs do so. This leader renamed the month of September after his book Ruhnama, whose study is required to obtain a driver’s license in his country. This leader commissioned the construction of an Arch of Neutrality, which contained a golden statue of himself that rotated to face the sun in the city of Ashgabat. For ten points, name this totalitarian ruler of post--independence Turkmenistan from 1991 to his death in 2006.
 
 [Q2] Five deities were born from this goddess's necklace of 500 jewels. To lure this deity out of hiding, a dawn goddess performed a strip tease on top of an overturned tub. This goddess's brother threw a flayed horse into a room containing her weavers, causing her to retreat into a cave in anger. This goddess, who was born when her father Izanagi washed his left eye, is worshiped at the Ise [ee--say] Shrine. The Emperor of Japan descended from, for ten points, what sun goddess of Shinto myth?

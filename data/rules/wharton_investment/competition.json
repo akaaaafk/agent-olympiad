@@ -18,7 +18,8 @@
     "query_rules",
     "use_calculator",
     "execute_code",
-    "web_search"
+    "web_search",
+    "check_portfolio_weights"
   ],
   "resources": {
     "internet": "allowed",

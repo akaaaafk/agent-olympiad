@@ -1,5 +1,3 @@
-# Bowl-Round-3
-
 [Q1] The completion of this project was celebrated with the first ticker -tape parade held in New York City. Originally planned as a lighthouse on the Suez Canal, this project was built on an exclave called Bedloe's Island and rests on steel infrastructure designed by Gustave Eiffel. A broken chain lies at the feet of this sculpture, whose title figure holds a tablet in her left arm. Designed by Frederic Bartholdi, for ten points, what is this colossal sculpture of a crowned woman holding a torch in New York Harbor?
 
 [Q2] During these conflicts, Louis, Prince of Condé [[kaw -DAY]], launched a failed coup during the Surprise of Mea ux [[MOH]]. The controversial Edict of January motivated a force led by the Duke of Guise [[GEES]] to perpetrate the Vassy Massacre, beginning these wars. The patron of the failed Fort Caroline mission in Floride [[floh -REED]], Gaspard de Coligny [[koh-lihn-YEE]], was assassinated during these wars in the St. Bartholomew's Day Massacre. The persecuted Huguenot minority fought the crown forces during, for ten points, what general period of sixteenth-century wars ended by the Edict of Nantes?

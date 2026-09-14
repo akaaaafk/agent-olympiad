@@ -1,5 +1,3 @@
-# 2018-2019-IHBB-Asia-Alpha-Set-Bowl-Round-4
-
 [Q1] A battle in this state resulted in the destruction of the cruiser Zhemchug and destroyer Mousquet at the hands of SMS Emden. Lim Chong Eu masterminded the construction of the Bayan Lepas Free Industrial zone in this state. This second smallest Malaysian state by landmass is split between Province Wellesley and a namesake island. For ten points, name this Malaysian state where George Town is located.
 
 [Q2] After overthrowing Lon Nol to take power, this group set the calendar to “Year Zero” and sought to create an agrarian society. The “killing fields” were operated by, for ten points, what communist organization led by Pol Pot that ruled Cambodia in the 1970s?

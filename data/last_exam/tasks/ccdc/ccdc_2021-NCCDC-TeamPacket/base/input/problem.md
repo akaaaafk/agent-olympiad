@@ -1,5 +1,3 @@
-# NCCDC 2021 — Malachor
-
 2021 NCCDC 
  
  

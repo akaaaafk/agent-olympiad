@@ -1,5 +1,3 @@
-# IChTo-2020-Problem-Set
-
 1 
  
 Problem 1. All the Mendeleev's Elements  

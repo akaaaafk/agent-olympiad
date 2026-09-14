@@ -1,5 +1,3 @@
-# Spider Walk
-
 Hide 
  Spider Walk 
 

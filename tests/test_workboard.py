@@ -188,7 +188,7 @@ class EnvironmentIntegrationTests(unittest.TestCase):
 
     def test_board_actions_are_available_without_being_declared_tools(self):
         env = self._env()
-        self.assertEqual(env.get_available_tools(), [])
+        self.assertEqual(env.get_available_tools(), ["prepare_arml_local_sheet"])
         result = env.execute_action("Agent_1", "inspect_problem", "")
         self.assertIn("PROBLEM BOARD", result)
         self.assertEqual(env.rule_violations, [])

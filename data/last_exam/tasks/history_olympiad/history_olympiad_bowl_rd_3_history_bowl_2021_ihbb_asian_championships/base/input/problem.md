@@ -1,5 +1,3 @@
-# Rd.-3-History-Bowl-2021-IHBB-Asian-Championships
-
 [Q1] In late 2012, this man's skeleton was identified beneath the former site of Greyfriars Church. A landing at Milford Haven in 1485 was a precursor to this man becoming the last English king to die in battle. For ten points, name this man who lost the Battle of Bosworth Field to the future Tudor king, Henry VII, and who became the subject of a Shakespearean history play.
 
 [Q2] Of the main Olympian gods, this god was the only one whose na me remained the same in both Greece and Rome. This deity won a music contest against Pan and turned King Midas's ears into those of a donkey. The patron deity of Delphi, this figure was often conflated with Helios, god of the sun. For ten points, name this Greek god of prophecy, archery, and music, the twin brother of Artemis.

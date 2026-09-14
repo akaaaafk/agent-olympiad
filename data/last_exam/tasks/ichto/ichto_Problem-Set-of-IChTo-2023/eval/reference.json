@@ -2,9 +2,40 @@
   "visibility": "hidden_until_grade",
   "gold_pointer": "data/benchmarks/ichto/benchmark.json#ichto_Problem-Set-of-IChTo-2023.gold_label",
   "has_gold_answer": false,
-  "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_id": "rubric_llm_v1",
+  "evaluator_status": "ready_with_limitations",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": "rubric_llm_v1",
+    "status": "ready_with_limitations",
+    "rubric_path": "data/rubrics/ichto_report_scientific_9_reused_v1.json",
+    "deliverable": "chemistry_theory_answer_packet",
+    "limitations": "2025 scientific criteria reused across years as a 9-point written-report subtotal. No live debate, official TP conversion, or team ranking is reproduced.",
+    "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+    "scorecard_key": "ichto_Problem-Set-of-IChTo-2023",
+    "pre_reuse_evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/ichto_2025_official_scoring_v1.json",
+      "deliverable": "chemistry_theory_answer_packet",
+      "limitations": "The available official scoring rubric is edition-specific to 2025.",
+      "scorecard_path": "data/rubrics/task_scorecards/ichto.json",
+      "scorecard_key": "ichto_Problem-Set-of-IChTo-2023"
+    },
+    "rubric_reuse": {
+      "source_competition": "ichto",
+      "target_competition": "ichto",
+      "target_year": 2023,
+      "source_rubric_paths": [
+        "data/rubrics/ichto_2025_official_scoring_v1.json"
+      ],
+      "source_editions": [
+        2025
+      ],
+      "official_year_equivalence": false,
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+    }
+  },
+  "rubric_path": "data/rubrics/ichto_report_scientific_9_reused_v1.json",
+  "deliverable": "chemistry_theory_answer_packet"
 }

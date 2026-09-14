@@ -1,5 +1,3 @@
-# 2017-2018-IHBB-Alpha-Set-High-School-Bowl-Round-1
-
 [Q1] This city’s Gauleiter for two decades was Joseph Goebbels, and a famous photo taken by Yevgeny Khaldei shows a soldier raising a Soviet flag over this city’s Reichstag. The Fuhrerbunker was constructed in, for ten points, what capital city of Nazi Germany?
 
 [Q2] For ten points, name these vehicles that were first piloted by the Wright Brothers.

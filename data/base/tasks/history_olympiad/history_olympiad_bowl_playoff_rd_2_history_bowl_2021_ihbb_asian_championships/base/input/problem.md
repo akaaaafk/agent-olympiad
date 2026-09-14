@@ -1,5 +1,3 @@
-# Playoff-Rd.-2-History-Bowl-2021-IHBB-Asian-Championships
-
 [Q1] This battle was referred to by the Benedictine chronicler Orderic Vitalis as "Senlac," though it may have taken place near Caldbec and Telham Hill. Amatus of Montecassino described how one ruler was killed by an arrow to the eye at this battle, the site of which is marked by Battle Abbey. Weeks before this battle, the losers were forced to engage a Norwegian attack at Fulford and Stamford Bridge. Harold Godwinson was kille d in, for ten points, what 1066 victory for William the Conqueror?
 
 [Q2] This city's royal namesake was depicted by Charles Henry Niehaus [[NEE -haus]] in an equestrian statue known as the Apotheosis of [this city]. This city hosted a 1904 World's Fair, during which Brookings Hall was constructed for this city's Washington University. Native brewer Ellis Wainwright names a red skyscraper in this city designed by Louis Sullivan. This city is commemorated as the origin of the Lewis and Clark Expedition with the Gateway Arch. For ten points, name this Missouri city located along the Mississippi River.

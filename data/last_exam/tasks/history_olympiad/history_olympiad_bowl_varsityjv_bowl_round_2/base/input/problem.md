@@ -1,5 +1,3 @@
-# VarsityJV_Bowl-Round-2
-
 [Q1] This man used the example of a child falling down a well to explain innate goodness using the metaphor of the four beginnings. This thinker likely studied with the author of The Doctrine of the Mean, Zisi. This thinker recorded his conversations with various rulers in the last of the Four Books . For ten points, name this "second sage" who followed Confucius's ideologies.
 
 [Q2] For ten points, name this man, who served as prime minister of the United Kingdom from 1937 to 1940.

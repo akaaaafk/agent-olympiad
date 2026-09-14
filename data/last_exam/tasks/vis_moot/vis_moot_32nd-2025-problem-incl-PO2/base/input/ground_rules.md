@@ -1,0 +1,3 @@
+# Competition rules
+
+Willem C. Vis International Commercial Arbitration Moot. The team prepares a case, presents it, and responds to judges or opponents. Mixed or unresolved rulesets: the runner permits 2 to 5 active agents and defaults to 5. Collaborate only within the team under contest rules. Banned during the contest: calculators and running code. Permitted: internet access. Paper and pencil are always available. Submit one shared written memorandum; Submit the written memorial/case analysis and a concise oral outline. Treat unexposed physical, oral, live-opponent, judge, timing, or environment mechanisms as unavailable rather than simulated facts.

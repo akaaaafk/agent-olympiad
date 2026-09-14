@@ -1,4 +1,4 @@
-# Environment — `pumac_power`
+# Environment
 
 ## Roster
 
@@ -16,7 +16,11 @@
 
 ## Allowed tools
 
-- query_rules
+```json
+[
+  "query_rules"
+]
+```
 
 ## Resources
 
@@ -62,3 +66,4 @@
   ]
 }
 ```
+

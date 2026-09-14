@@ -1,4 +1,4 @@
-# Environment — `science_olympiad`
+# Environment
 
 ## Roster
 
@@ -16,8 +16,12 @@
 
 ## Allowed tools
 
-- query_rules
-- read_official_materials
+```json
+[
+  "query_rules",
+  "read_official_materials"
+]
+```
 
 ## Resources
 
@@ -41,9 +45,15 @@
     "division",
     "event"
   ],
-  "event_rules": "not_selected",
+  "event_rules": "binding_historical_rules_not_archived",
   "event_corrections": "not_selected",
-  "event_score_sheet": "not_selected"
+  "event_score_sheet": "blank_answer_sheets_in_contestant_packet",
+  "selected_packet": {
+    "season": "2017-2018",
+    "division": "B",
+    "event": "Solar System",
+    "kind": "annotated_example_exam"
+  }
 }
 ```
 
@@ -65,3 +75,4 @@
   ]
 }
 ```
+

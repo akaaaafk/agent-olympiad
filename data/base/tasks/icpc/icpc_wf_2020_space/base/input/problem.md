@@ -1,5 +1,3 @@
-# Space Walls
-
 Hide 
  Space Walls 
 

@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 1985
-
 # Odyssey of the Mind — 1985 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Hi Tech, Smarty PantsDivisions I, II & IIIDesign, build and operate a robot, “smarty Pants,” to provide answers to questions in math, science, social studies and geography; recite or display two historical facts; pick up trash; and hand in a term paper for Pat, who is sick. Time limit: 10 min. Cost limit: $40 USD.
 5. Compound FractureDivisions I, II & IIIDesign and build a series of structures out of balsa wood and glue to support the greatest weight. The structures will be four total: two base supports 3″ x 3″ x 3″ in each direction; one beam structure not less than 8 inches in length that sits atop the base supports; and one load-bearing structure that will sit atop the beam and will be the only piece in contact with the weights. The series of structures must be at least 8″ inches high and weigh no more than 35 grams.
 6. Mother Goose
+

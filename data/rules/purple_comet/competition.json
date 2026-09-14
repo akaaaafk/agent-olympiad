@@ -33,7 +33,8 @@
   },
   "allowed_tools": [
     "query_rules",
-    "use_calculator"
+    "use_calculator",
+    "prepare_purple_comet_answers"
   ],
   "resources": {
     "internet": "forbidden_for_solution_search",

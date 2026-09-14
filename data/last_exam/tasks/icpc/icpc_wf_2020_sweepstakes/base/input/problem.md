@@ -1,5 +1,3 @@
-# Sweep Stakes
-
 Hide 
  Sweep Stakes 
 

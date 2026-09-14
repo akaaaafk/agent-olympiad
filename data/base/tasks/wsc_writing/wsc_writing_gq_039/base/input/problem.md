@@ -1,5 +1,3 @@
-# wsc_writing_gq_039
-
 In the fifteenth century, Europeans launched their caravels and galleons on what would become a merciless colonial crusade around the globe. They relied on a Chinese invention, the compass , which transformed the ocean from a terrifying void into a measurable grid. Learn about other key innovations that helped these smallpox-toting explorers navigate the seas, then discuss with your team: what would the world be like today if Europeans had simply stayed home? 
 
  astrolabe | sextant | log tables and ephemerides | magnetic compass 

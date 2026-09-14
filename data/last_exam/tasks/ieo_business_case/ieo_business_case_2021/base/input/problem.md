@@ -1,5 +1,3 @@
-# Business Case — Rebirth and Evolution of JDL
-
 Rebirth and evolution of RAF2021 Business case July 2021
 
 Meet RAF2021 CEO John Smith, newly hired CEO of RAF2021, studies charts, documents, reports showing situation of RAF2021 – vision and goals, available financial resources and capacity, existing incentives to increase supply and demand of different types of vehicles all over the world, etc. John and his management team are facing challenges to decide what type of vehicle to produce to ensure company will be able to operate successfully and compete with automobile manufacturers globally. Moreover, the team must develop the sales strategy and market research for this product. Also, John, in July 2021, could now see that, nevertheless, the market recovers from the COVID-19 coronavirus, tendencies in the automotive industry and market experienced significant changes. 29 July 2021Page 2

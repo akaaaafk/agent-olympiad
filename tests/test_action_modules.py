@@ -8,6 +8,8 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
 from action_modules import MODULE_SPECS
+from action_modules.competition_flow import ACTION_NAMES as FLOW_ACTIONS
+from action_modules.competition_tools import ACTION_NAMES as PREPARATION_ACTIONS
 from tool_registry import (ACTION_REGISTRY, MODULE_ACTION_NAMES, TOOL_ACTION_NAMES,
                            render_function_tools, validate_registry, actions_for_runtime)
 
@@ -15,7 +17,7 @@ from tool_registry import (ACTION_REGISTRY, MODULE_ACTION_NAMES, TOOL_ACTION_NAM
 class ActionModuleTests(unittest.TestCase):
     def test_exact_partition(self):
         self.assertEqual({k: len(v) for k, v in MODULE_ACTION_NAMES.items()},
-                         {'common': 24, 'memory': 3, 'coach': 0, 'task_specific': 3})
+                         {'common': 24, 'memory': 3, 'coach': 0, 'task_specific': 51})
         seen = set()
         for name, specs in MODULE_SPECS.items():
             for spec in specs:
@@ -32,11 +34,11 @@ class ActionModuleTests(unittest.TestCase):
         self.assertEqual(MODULE_ACTION_NAMES['memory'], {'remember', 'recall', 'share_note'})
         self.assertIn('propose', MODULE_ACTION_NAMES['common'])
         self.assertNotIn('query_rules', MODULE_ACTION_NAMES['memory'])
-        self.assertEqual(actions_for_runtime('env'), actions_for_runtime('session'))
+        self.assertEqual(actions_for_runtime('env'), actions_for_runtime('session') - FLOW_ACTIONS)
 
     def test_original_contract_is_preserved_except_documented_v11_changes(self):
         specs = []
-        original = {n: s for n, s in ACTION_REGISTRY.items() if n != 'render_pdf'}
+        original = {n: s for n, s in ACTION_REGISTRY.items() if n != 'render_pdf' and n not in PREPARATION_ACTIONS and n not in FLOW_ACTIONS}
         # Preserve the historical contract hashes instead of blessing an
         # arbitrary new hash. Assert each intentional change before normalising:
         # v10 recall; v11 zero-turn memory, activation and answer-format help.
@@ -53,7 +55,15 @@ class ActionModuleTests(unittest.TestCase):
         for name in MODULE_ACTION_NAMES['memory']:
             spec = original[name]
             self.assertEqual(spec.budget.turns, 0)
-            self.assertEqual(spec.description, activation["memory_descriptions"][name])
+            if name == "recall":
+                self.assertEqual(spec.description,
+                    "Zero-turn auxiliary: search your own notes and team-shared notes when "
+                    "needed prior information is missing from context. "
+                    "Nonempty query requires a whole-keyword match; omit query only to browse. "
+                    "An explicit problem_id restricts results to that task; omit it for "
+                    "cross-task methods. Results rank by keyword hits and recency.")
+            else:
+                self.assertEqual(spec.description, activation["memory_descriptions"][name])
             original[name] = dataclasses.replace(
                 spec, budget=dataclasses.replace(spec.budget, turns=1),
                 description=historical_descriptions[name])
@@ -66,16 +76,31 @@ class ActionModuleTests(unittest.TestCase):
         self.assertEqual(original['work'].description, work_description + (
             " For short-answer tasks, keep reasoning above a "
             "separate final line: Final answer: <value>. Never substitute a "
-            "different problem's answer for this problem."
+            "different problem's answer for this problem. For non-programming "
+            "cross-task work, start content with 'Problem <target id>:' or include "
+            "a matching problem_id in JSON content; otherwise select_problem "
+            "first and read that task before writing."
         ))
         original['work'] = dataclasses.replace(
             original['work'], description=work_description)
         recall = original['recall']
+        self.assertEqual(next(arg.description for arg in recall.arguments if arg.name == 'problem_id'),
+            'Optional exact problem id to filter; omit to search across tasks.')
         original['recall'] = dataclasses.replace(
             recall, description='Search your own notes and notes teammates have shared, ranked by '
                                 'problem tag, query match, and recency.',
-            arguments=tuple(dataclasses.replace(arg, description='Optional keywords to match.')
-                            if arg.name == 'query' else arg for arg in recall.arguments))
+            arguments=tuple(dataclasses.replace(arg, description=(
+                'Optional keywords to match.' if arg.name == 'query' else 'Optional problem tag to prioritise.'))
+                for arg in recall.arguments))
+        # The old note_id help advertised comma-separated ids, but the action
+        # accepts exactly one. Check the correction without replacing hashes.
+        share = original['share_note']
+        self.assertEqual(share.arguments[0].description,
+                         'Id of one of your private notes returned by remember or recall.')
+        original['share_note'] = dataclasses.replace(share, arguments=(
+            dataclasses.replace(share.arguments[0], description=(
+                'Id of the note returned by remember or recall '
+                '(several ids may be comma-separated).')),))
         for _, spec in sorted(original.items()):
             value = dataclasses.asdict(spec)
             value.pop('module')

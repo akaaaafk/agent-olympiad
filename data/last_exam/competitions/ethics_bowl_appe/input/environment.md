@@ -1,4 +1,4 @@
-# Environment — `ethics_bowl_appe`
+# Environment
 
 ## Roster
 
@@ -15,7 +15,11 @@
 
 ## Allowed tools
 
-- query_rules
+```json
+[
+  "query_rules"
+]
+```
 
 ## Resources
 
@@ -98,3 +102,4 @@
   ]
 }
 ```
+

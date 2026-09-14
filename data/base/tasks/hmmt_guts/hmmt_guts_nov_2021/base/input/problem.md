@@ -1,9 +1,6 @@
-# HMMT November 2021 — Guts Round
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
-[Text extraction from the official problem-only PDF. Use the linked PDF as authoritative for diagrams and mathematical layout.]
-
-[Page 1]
-HMMT November 2021, November 13, 2021 — GUTS ROUND
+         HMMT November 2021, November 13, 2021 — GUTS ROUND
 
 Organization                      Team                      Team ID#
 
@@ -25,6 +22,11 @@ Organization                      Team                      Team ID#
    Find (r · a · d) · (t · r · i · v · i · a).
 
 
+
+
+
+ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
          HMMT November 2021, November 13, 2021 — GUTS ROUND
 
 Organization                      Team                      Team ID#
@@ -39,8 +41,9 @@ Organization                      Team                      Team ID#
 6. [6] Let ABCD be a parallelogram with AB = 480, AD = 200, and BD = 625. The angle bisector of
   ∠BAD meets side CD at point E. Find CE.
 
-[Page 2]
-HMMT November 2021, November 13, 2021 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2021, November 13, 2021 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -58,6 +61,11 @@ HMMT November 2021, November 13, 2021 — GUTS ROUND
    Given that m is positive, ﬁnd the minimum number of digits of m.
 
 
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
           HMMT November 2021, November 13, 2021 — GUTS ROUND
 
  Organization                      Team                      Team ID#
@@ -73,8 +81,9 @@ HMMT November 2021, November 13, 2021 — GUTS ROUND
     probability that the sum of the point values of the cards drawn is a multiple of 10 can be written as mn ,
    where m, n are positive integers and gcd(m, n) = 1. Find 100m + n.
 
-[Page 3]
-HMMT November 2021, November 13, 2021 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2021, November 13, 2021 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -91,6 +100,11 @@ HMMT November 2021, November 13, 2021 — GUTS ROUND
    The distance from vertex A to face BCD can be written as a c b , where a, b, c are positive integers, b is
     square-free, and gcd(a, c) = 1. Find 100a + 10b + c.
 
+
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
           HMMT November 2021, November 13, 2021 — GUTS ROUND
 
@@ -113,8 +127,9 @@ HMMT November 2021, November 13, 2021 — GUTS ROUND
    The sum of all possible values of x + y + z can be written as mn , where m, n are positive integers and
     gcd(m, n) = 1. Find 100m + n.
 
-[Page 4]
-HMMT November 2021, November 13, 2021 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2021, November 13, 2021 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -136,8 +151,9 @@ HMMT November 2021, November 13, 2021 — GUTS ROUND
    M, and TH at E. Given that the area of HM1M2T is 1440 and the area of EMT is 405, ﬁnd the area
     of AIME.
 
-[Page 5]
-HMMT November 2021, November 13, 2021 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2021, November 13, 2021 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -154,6 +170,9 @@ HMMT November 2021, November 13, 2021 — GUTS ROUND
                          C
 
 
+
+
+
                     A              B
 
 24. [12] Find the number of subsets S of {1, 2, . . . , 48} satisfying both of the following properties:
@@ -162,8 +181,9 @@ HMMT November 2021, November 13, 2021 — GUTS ROUND
 
       • There are exactly nine integers 1 ≤m ≤47 so that both m and m + 1 are in S.
 
-[Page 6]
-HMMT November 2021, November 13, 2021 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2021, November 13, 2021 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -192,6 +212,11 @@ HMMT November 2021, November 13, 2021 — GUTS ROUND
     square-free, and gcd(a, b, d) = 1. Find 1000a + 100b + 10c + d.
 
 
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
           HMMT November 2021, November 13, 2021 — GUTS ROUND
 
  Organization                      Team                      Team ID#
@@ -212,8 +237,9 @@ HMMT November 2021, November 13, 2021 — GUTS ROUND
 
     for all nonnegative integers x and y. Find f(6, 12).
 
-[Page 7]
-HMMT November 2021, November 13, 2021 — GUTS ROUND
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+          HMMT November 2021, November 13, 2021 — GUTS ROUND
 
  Organization                      Team                      Team ID#
 
@@ -238,6 +264,11 @@ HMMT November 2021, November 13, 2021 — GUTS ROUND
     can be written as a c b , where a, b, c are integers, c is positive, b is square-free, and gcd(a, c) = 1. Find
     100a + 10b + c.
 
+
+
+
+
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
           HMMT November 2021, November 13, 2021 — GUTS ROUND
 

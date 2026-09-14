@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2008
-
 # Odyssey of the Mind — 2008 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -14,3 +12,4 @@ Note: These are public synopses. Full problem packets require membership.
 4. Tee StructureDivisions I, II, III & IVThe team’s problem is to design and build a structure using only balsa wood and glue. The team will test the structure by having it support weights that are balanced on golf balls without touching anything else. The team will receive score for the amount of weight the structure holds during testing and bonus points for each golf ball used to support the weights.Cost limit: $140 USD.
 5. The Eccentrics!Divisions I, II, III & IVThis problem requires teams to create and present a humorous performance about three Eccentric Characters that demonstrate odd behavior, peculiar mannerisms, and unconventional dress. The performance will include a team-created “problem” within or involving an Earth system — the atmosphere, biosphere, cryosphere, geosphere, or hydrosphere. The Eccentric Characters, which seem to be misfits, will solve the problem. As a reward, a celebration is held in their honor and they end up launching a new fad.Cost limit: $125 USD.Sponsored by NASA.
 6. Rude AwakeningsGrades K-2This problem requires teams to create and present a humorous performance that includes a character that keeps waking up in a different time and/or place from where it fell asleep. This will happen at least three times before the character returns to where it started and something or someone stops the character from “traveling” in its sleep. The performance will also include a pet, a helpful character, and narration.Cost limit: $125 USD.
+

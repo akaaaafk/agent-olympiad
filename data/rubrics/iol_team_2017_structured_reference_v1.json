@@ -1,0 +1,199 @@
+{
+  "rubric_id": "iol_team_2017_structured_reference_v1",
+  "dataset": "iol_team",
+  "visibility": "judge_only",
+  "total_points": null,
+  "criteria": [],
+  "rubric_type": "partial_official_answer_map_no_verified_weights",
+  "grading_validation_status": "not_validated",
+  "source_file": "data/raw/iol/iol-2017-team-sol.en.pdf",
+  "source_sha256": "e831b2003e0c4cb7ade36cfc003f1650146ac9781485a57183f77559c14bbdfc",
+  "source_url": "https://ioling.org/booklets/iol-2017-team-sol.en.pdf",
+  "public_description_source": {
+    "path": "data/raw/iol/iol-2017-team-prob.en.pdf",
+    "sha256": "fadec98495be3282049e806fb44eb652f3528585b35b41c1f8e265d46aac9c9c",
+    "pdf_page": 2
+  },
+  "label_to_emoji_id": {
+    "AA": 84,
+    "AB": 7,
+    "AC": 19,
+    "AD": 13,
+    "AE": 15,
+    "AF": 85,
+    "AG": 62,
+    "AH": 36,
+    "AI": 34,
+    "AJ": 47,
+    "AK": 48,
+    "AL": 50,
+    "AM": 49,
+    "AN": 51,
+    "AO": 35,
+    "AP": 30,
+    "AQ": 25,
+    "AR": 33,
+    "AS": 45,
+    "AT": 2,
+    "AU": 4,
+    "AV": 52,
+    "AW": 53,
+    "AX": 67,
+    "AY": 46,
+    "AZ": 57,
+    "BA": 82,
+    "BB": 78,
+    "BC": 74,
+    "BD": 56,
+    "BE": 44,
+    "BF": 9,
+    "BG": 22,
+    "BH": 6,
+    "BI": 3,
+    "BJ": 54,
+    "BK": 41,
+    "BL": 58,
+    "BM": 8,
+    "BN": 28,
+    "BO": 32,
+    "BP": 5,
+    "BQ": 70,
+    "BR": 87,
+    "BS": 31,
+    "BT": 23,
+    "BU": 1,
+    "BV": 43,
+    "BW": 42,
+    "BX": 37,
+    "BY": 68,
+    "BZ": 11,
+    "CA": 38,
+    "CB": 12,
+    "CC": 28,
+    "CD": 86,
+    "CE": 83,
+    "CF": 39,
+    "CG": 17,
+    "CH": 20,
+    "CI": 55,
+    "CJ": 75,
+    "CK": 60,
+    "CL": 40,
+    "CM": 14,
+    "CN": 10,
+    "CO": 16,
+    "CP": 26,
+    "CQ": 7,
+    "CR": 13,
+    "CS": 19,
+    "CT": 29,
+    "CU": 61,
+    "CV": 62,
+    "CW": 76,
+    "CX": 69,
+    "CY": 52,
+    "CZ": 10,
+    "DA": 16,
+    "DB": 63,
+    "DC": 72,
+    "DD": 71,
+    "DE": 77,
+    "DF": 40,
+    "DG": 29,
+    "DH": 18,
+    "DI": 27,
+    "DJ": 64,
+    "DK": 65,
+    "DL": 80,
+    "DM": 66,
+    "DN": 24,
+    "DO": 21
+  },
+  "duplicate_description_groups": {
+    "7": [
+      "AB",
+      "CQ"
+    ],
+    "19": [
+      "AC",
+      "CS"
+    ],
+    "13": [
+      "AD",
+      "CR"
+    ],
+    "62": [
+      "AG",
+      "CV"
+    ],
+    "52": [
+      "AV",
+      "CY"
+    ],
+    "28": [
+      "BN",
+      "CC"
+    ],
+    "40": [
+      "CL",
+      "DF"
+    ],
+    "10": [
+      "CN",
+      "CZ"
+    ],
+    "16": [
+      "CO",
+      "DA"
+    ],
+    "29": [
+      "CT",
+      "DG"
+    ]
+  },
+  "unlabelled_emoji_descriptions": [
+    {
+      "emoji_id": 59,
+      "indonesian": "payung tertutup",
+      "solution_pdf_page": 3
+    },
+    {
+      "emoji_id": 73,
+      "indonesian": "hati biru",
+      "solution_pdf_page": 3
+    },
+    {
+      "emoji_id": 79,
+      "indonesian": "kacamata hitam",
+      "solution_pdf_page": 3
+    },
+    {
+      "emoji_id": 81,
+      "indonesian": "mulut",
+      "solution_pdf_page": 3
+    }
+  ],
+  "counts": {
+    "descriptions": 93,
+    "numbered_emoji": 87,
+    "matched_unique_emoji": 83,
+    "unmatched_emoji": 4
+  },
+  "coverage": {
+    "a": "All 93 official label-to-ID matches recovered; multiple labels may match one emoji.",
+    "b": "All four official Indonesian descriptions recovered. Valid alternative phrasings/partial credit unverified.",
+    "c": "Official solution supplies phrase-level English glosses, not a separately enumerated word dictionary or scoring key.",
+    "d": "No explicit short-grammar answer or criterion-level scoring found in the reviewed three-page solution."
+  },
+  "emoji_identity_policy": "Use original numbered problem images, not extracted Unicode code points. No Unicode substitutions generated.",
+  "legacy_proxy": {
+    "path": "data/rubrics/iol_team_worked_answer_100_v1.json",
+    "total_points": 100,
+    "official": false,
+    "active_for_this_record": false
+  },
+  "official_weights_verified": false,
+  "not_observable_from_deck": [
+    "Official part/item weights and full dictionary/grammar credit allocation"
+  ]
+}

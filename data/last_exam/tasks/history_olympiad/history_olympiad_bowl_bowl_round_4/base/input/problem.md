@@ -1,5 +1,3 @@
-# Bowl-Round-4
-
 [Q1] This man's consort may have sent Suppiluliuma I [[soo -pee-loo-LYOO-muh "the First"]] a letter while he besieged Carchemish in a possible effort to merge her royal house with that of the Hittite Empire. That queen, Ankhesenamun [[ahn-keh-sen-ah-MOON]], was one of the children of Akhenaten, as was this ruler, who may have died from complications of sickle cell anemia. Howard Carter discovered the tomb of, for ten points, what boy -king, found in the Valley of the Kings?
 
 [Q2] Following his return from exile, this monarch formally abandoned the institution of slavery in 1942 in an effort to finish the reforms of Yohannes IV. This man, who banned the Oromo language, was removed by the commu nist Derg regime. This negus [[NEH-gus]] failed to resist an Italian invasion in the 1930s, leading to his nation's occupation. The final emperor of Ethiopia was, for ten points, what monarch, sometimes known as Ras Tafari?

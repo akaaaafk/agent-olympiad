@@ -1,0 +1,57 @@
+> new game
+> down
+> right
+> cross pier
+> open door
+> enter building
+> right
+> talk men
+> go door
+> left
+> right
+> go door
+> get meat
+> get pot
+> open door
+> step plank
+> step plank
+> step plank
+> get fish
+> go door
+> go door
+> left
+> go door
+> cross pier
+> up
+> right
+> northeast
+> down
+> go tent
+> talk men
+> wear pot
+> get money
+> out
+> up
+> southwest
+> down
+> cross pier
+> right
+> go arch
+> down
+> left
+> up
+> open door
+> go door
+> get bird
+> go door
+> up
+> left
+> open door
+> talk man
+> right
+> go door
+> get shovel
+> get sword
+> hit bell
+> talk man
+> get ??????????? (6)

@@ -1,0 +1,52 @@
+{
+  "schema_version": "iiot-reference-archive/v1",
+  "problem_id": "iiot_2017_03",
+  "task_code": "manhole",
+  "round": "international_final",
+  "archive_url": "https://iio.team/competition/tasks/2017",
+  "source_links": {
+    "Statement": "https://drive.google.com/file/d/1w7Us1oaXfgUpz8T90GjFg1x-nq4vcGKe/view?usp=drive_link",
+    "Solutions": "https://drive.google.com/file/d/1s85XwUvIoEEEzNIStA2-H3gZVAxee1OK/view?usp=drive_link",
+    "Test cases": "https://drive.google.com/drive/folders/182RH_hWEWE27Caxy-TlxxEfjbcjpwL5I?usp=drive_link"
+  },
+  "reference": {
+    "path": "data/raw/iiot/2017/manhole/references/manhole.cpp",
+    "source_url": "https://drive.google.com/uc?id=1s85XwUvIoEEEzNIStA2-H3gZVAxee1OK&export=download",
+    "sha256": "fadf2c1d2746b47d0c2ed3d6662f50906cb720e77e9f85dfb11479bdf1c9d233",
+    "bytes": 906,
+    "classification": "publisher_reference_source",
+    "execution_validation": "not_run"
+  },
+  "official_scoring": {
+    "total_points": 100,
+    "subtasks": [
+      {
+        "id": 1,
+        "points": 5
+      },
+      {
+        "id": 2,
+        "points": 15
+      },
+      {
+        "id": 3,
+        "points": 20
+      },
+      {
+        "id": 4,
+        "points": 30
+      },
+      {
+        "id": 5,
+        "points": 30
+      }
+    ],
+    "mode": "all_cases_required_per_subtask",
+    "test_to_subtask_mapping": "not_archived"
+  },
+  "public_test_listing": {
+    "status": "no_testcase_link_in_publisher_archive"
+  },
+  "readiness": "not_ready",
+  "license_policy": "No redistribution permission inferred."
+}

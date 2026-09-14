@@ -1,5 +1,3 @@
-# EUSO 2013 _ TEST 1_TASK
-
 11th EUROPEAN UNION SCIENCE OLYMPIAD  Test 1 Task sheet Luxembourg, March 19th, 2013 
 Country:      Language:  
 

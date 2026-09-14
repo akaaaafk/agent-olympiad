@@ -23,7 +23,7 @@ class InspectProblemActionTests(unittest.TestCase):
         )
         # Not a contest tool: it is a desk action, so it is not gated by (and
         # does not appear in) the tool allowlist.
-        self.assertEqual(env.get_available_tools(), ["execute_code"])
+        self.assertEqual(env.get_available_tools(), ["check_icpc_io_cases", "execute_code"])
         env.execute_action("Agent_1", "execute_code", "print(1)")
 
         inspected = json.loads(

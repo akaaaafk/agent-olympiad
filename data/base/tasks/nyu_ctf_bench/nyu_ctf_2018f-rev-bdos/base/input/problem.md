@@ -1,3 +1,1 @@
-# CSAW-Finals / rev / bdos
-
 Bee-based denial of service. Maybe eventually this will print out a flag...

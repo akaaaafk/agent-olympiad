@@ -1,5 +1,3 @@
-# Maxwell's Demon
-
 Hide 
  Maxwell's Demon 
 

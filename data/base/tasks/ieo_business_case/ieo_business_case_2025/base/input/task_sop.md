@@ -1,30 +1,13 @@
-# Task SOP
+# Task
 
-## Reference Environment
-- Competition: International Economics Olympiad
-- Competition id: `ieo_business_case`
-- Problem id: `ieo_business_case_2025`
-- Task type: `business_case`
-- Team size: 5
-- Year / edition: 2025
-- Source: https://ieo-official.org/prepare
+Competition: ieo_business_case
 
-## Goal
-As a multi-agent team, solve the olympiad-style team task using only the materials under `base/input`. Produce the required deliverable (`slide_deck`).
+Task: ieo_business_case_2025
 
-## Task directory
-- Variant root: `base`
-- Input directory: `base/input`
+Edition: 2025
 
-## Inputs
-- `problem.md`
-- `2025.pdf`
+Team size: 5
 
-## Title
-Business Case — The Caspian Connector
+Deliverable: slide_deck
 
-## Deterministic Evaluation Rule
-Gold answers and official solution booklets are not provided in `input/`. Scoring uses the evaluator declared on the task card (gold match, rubric LLM judge, slide judge, or deferred sandbox).
-
-## Deliverables
-Return the team `slide_deck` expected by this competition.
+Use the attached problem materials and the inherited competition and collaboration instructions.

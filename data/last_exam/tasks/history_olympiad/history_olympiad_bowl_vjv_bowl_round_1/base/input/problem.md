@@ -1,5 +1,3 @@
-# VJV-Bowl-Round-1
-
 [Q1] This colony was the site of the failed Coddington Commission. The Great Swamp Fight, part of King Philip’s War, took place in this colony, and in 1772, a mob from here burned down the HMS Gaspee​. After the Antinomian Controversy, supporters of Anne Hutchinson fled to this colony, which was founded in 1636 by a man who founded the first Baptist church in America and advocated for separation of church and state. For 10 points, name this colony where Roger Williams founded Providence Plantations.
 
 [Q2] After this man’s death, the work in which he appears focuses on the adventures of Kaoru and Niou. Referred to as “shining” throughout the work in which he appears, this character kidnaps a tenyearold girl and attempts to raise her as the perfect wife. This character’s death is symbolized by a chapter left completely blank, and his affair with Lady Fujitsubo results in a son who becomes the emperor Reizei. For 10 points, name this protagonist of an 11thcentury “tale” by Lady Murasaki Shikibu.

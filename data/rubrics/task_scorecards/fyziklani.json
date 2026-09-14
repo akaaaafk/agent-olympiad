@@ -1,0 +1,791 @@
+{
+  "schema_version": "1.1",
+  "dataset": "fyziklani",
+  "visibility": "judge_only",
+  "records": [
+    {
+      "problem_id": "fyziklani_2012",
+      "year": 2012,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/fyziklani/2012/fyziklani_2012_en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "ea653ce671815accc82a31ee9964a693137ee7a9d79bb5e868fd6833692b69c7"
+        }
+      ],
+      "limitations": "Official references anchor correctness, but progressive unlocks, attempt decay, skips, lockouts, and timing are not reconstructed from the static archive.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized rubric score, not reconstructed live-contest points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "fyziklani_2013",
+      "year": 2013,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/fyziklani/2013/fyziklani_2013_en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "fb942431f047308b932bccfcd2c19a1faa9a7da5d0491394e2734de341898fe0"
+        }
+      ],
+      "limitations": "Official references anchor correctness, but progressive unlocks, attempt decay, skips, lockouts, and timing are not reconstructed from the static archive.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized rubric score, not reconstructed live-contest points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "fyziklani_2014",
+      "year": 2014,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/fyziklani/2014/fyziklani_2014_en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "67f88af2e56aa03e266b6ffcb2df599044a6c822f9e88bf1a5b1c5ef38d57c78"
+        }
+      ],
+      "limitations": "Official references anchor correctness, but progressive unlocks, attempt decay, skips, lockouts, and timing are not reconstructed from the static archive.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized rubric score, not reconstructed live-contest points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "fyziklani_2015",
+      "year": 2015,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/fyziklani/2015/fyziklani_2015_en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "678a126ec7d21d19867cc735f9ce5c97c7a52007e4b596511777cbebec07eac1"
+        }
+      ],
+      "limitations": "Official references anchor correctness, but progressive unlocks, attempt decay, skips, lockouts, and timing are not reconstructed from the static archive.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized rubric score, not reconstructed live-contest points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "fyziklani_2016",
+      "year": 2016,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/fyziklani/2016/fyziklani_2016_en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "43ffdcce08814eec8b77e06e028f93147b0bb10ff038c03806fbeef960d865a8"
+        }
+      ],
+      "limitations": "Official references anchor correctness, but progressive unlocks, attempt decay, skips, lockouts, and timing are not reconstructed from the static archive.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized rubric score, not reconstructed live-contest points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "fyziklani_2017",
+      "year": 2017,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/fyziklani/2017/fyziklani_2017_en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "ae917506c6844a7877240904897d26453d8e62baa48753d361f1038c272ed4ba"
+        }
+      ],
+      "limitations": "Official references anchor correctness, but progressive unlocks, attempt decay, skips, lockouts, and timing are not reconstructed from the static archive.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized rubric score, not reconstructed live-contest points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "fyziklani_2018",
+      "year": 2018,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/fyziklani/2018/fyziklani_2018_en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "fb23fd1092e08b74e183cb080eab8290b737a7f6473f132296085670a1197ff5"
+        }
+      ],
+      "limitations": "Official references anchor correctness, but progressive unlocks, attempt decay, skips, lockouts, and timing are not reconstructed from the static archive.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized rubric score, not reconstructed live-contest points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "fyziklani_2019",
+      "year": 2019,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/fyziklani/2019/fyziklani_2019_en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "394a50d2e1b2e07d51b5821d9fc0dbba6ed36469fd628bf61708175343602cdd"
+        }
+      ],
+      "limitations": "Official references anchor correctness, but progressive unlocks, attempt decay, skips, lockouts, and timing are not reconstructed from the static archive.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized rubric score, not reconstructed live-contest points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "fyziklani_2020",
+      "year": 2020,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/fyziklani/2020/fyziklani_2020_en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "334bb9dd7023baaed1cdbb1a0a68d7785a50d061f80aca91705779464fdc85d4"
+        }
+      ],
+      "limitations": "Official references anchor correctness, but progressive unlocks, attempt decay, skips, lockouts, and timing are not reconstructed from the static archive.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized rubric score, not reconstructed live-contest points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "fyziklani_2021",
+      "year": 2021,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/fyziklani/2021/fyziklani_2021_en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "c6f39b134c74e89781210fe9c8496a6d9f429278c62bff3862df9184f5fe3cff"
+        }
+      ],
+      "limitations": "Official references anchor correctness, but progressive unlocks, attempt decay, skips, lockouts, and timing are not reconstructed from the static archive.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized rubric score, not reconstructed live-contest points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "fyziklani_2022",
+      "year": 2022,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/fyziklani/2022/fyziklani_2022_en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "ffffa2dc7f23886c0990b0f021a84d6e0ea386761ce3063df02c5efe1c8a1322"
+        }
+      ],
+      "limitations": "Official references anchor correctness, but progressive unlocks, attempt decay, skips, lockouts, and timing are not reconstructed from the static archive.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized rubric score, not reconstructed live-contest points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "fyziklani_2023",
+      "year": 2023,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/fyziklani/2023/fyziklani_2023_en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "42d78574e8991491f9cb14d3fba3a5dd6f4d772c7e3470fa434a31b08da0a30f"
+        }
+      ],
+      "limitations": "Official references anchor correctness, but progressive unlocks, attempt decay, skips, lockouts, and timing are not reconstructed from the static archive.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized rubric score, not reconstructed live-contest points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "fyziklani_2024",
+      "year": 2024,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/fyziklani/2024/fyziklani_2024_en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "e8bfa492f8431bb4e33431fec9a0c0901e959c2cad1c8108f1eeb1a580facef7"
+        }
+      ],
+      "limitations": "Official references anchor correctness, but progressive unlocks, attempt decay, skips, lockouts, and timing are not reconstructed from the static archive.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized rubric score, not reconstructed live-contest points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    },
+    {
+      "problem_id": "fyziklani_2025",
+      "year": 2025,
+      "evaluation_status": "ready",
+      "evaluator_id": "rubric_llm_v1",
+      "rubrics": [
+        {
+          "path": "data/rubrics/worked_answer_100_v1.json",
+          "sha256": "be188083f7bb67476dd1739cc682bbeeb7cd19a3487700ab2a89020b2aa646b2",
+          "format": "numeric_rubric",
+          "rubric_id": "worked_answer_100_v1",
+          "total_points": 100,
+          "criteria": [
+            {
+              "id": "accuracy",
+              "name": "Answer accuracy",
+              "max_score": 50,
+              "observable": true,
+              "description": "Final answers and key intermediate claims match the official marking scheme."
+            },
+            {
+              "id": "method",
+              "name": "Method & justification",
+              "max_score": 30,
+              "observable": true,
+              "description": "Methods are valid and sufficiently justified for the awarded marks."
+            },
+            {
+              "id": "coverage",
+              "name": "Part coverage",
+              "max_score": 20,
+              "observable": true,
+              "description": "Required sub-questions are addressed."
+            }
+          ],
+          "not_observable_from_deck": []
+        }
+      ],
+      "answer_key_path": null,
+      "rubric_variant": null,
+      "official_rubric_map": null,
+      "judge_assets": [
+        {
+          "path": "data/raw/fyziklani/2025/fyziklani_2025_en.pdf",
+          "mime_type": "application/pdf",
+          "role": "judge_only",
+          "sha256": "b1c1bd23b7574561ba9c01b840265e19e46b01f0420f17d7588bc1b2c01fc417"
+        }
+      ],
+      "limitations": "Official references anchor correctness, but progressive unlocks, attempt decay, skips, lockouts, and timing are not reconstructed from the static archive.",
+      "rubric_reuse": null,
+      "scoring_basis": "normalized rubric score, not reconstructed live-contest points",
+      "numeric_rubric_available": true,
+      "gold_part_weights": [],
+      "gold_max_score": null
+    }
+  ]
+}

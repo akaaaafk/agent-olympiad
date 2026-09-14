@@ -1,5 +1,3 @@
-# Balanced Diet
-
 Hide 
  Balanced Diet 
 

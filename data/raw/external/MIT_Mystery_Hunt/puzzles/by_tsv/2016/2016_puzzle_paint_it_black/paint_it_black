@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1240, user-scalable=yes"></meta>
+  
+  <link rel="icon" href="../../static/hunt/images/icon32.png" type="image/x-icon" />
+  <title>Paint it Black &mdash; Dreamtime &mdash; MIT Mystery Hunt 2016</title>
+  <link rel="stylesheet" href="../../static/stylesheets/puzzle.css" />
+  <link rel="stylesheet" href="../../static/spoilr/css/extra.css" />
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  
+
+<link rel="stylesheet" href="../../static/round/dreamtime/stylesheets/puzzle.css" />
+
+
+  <style>
+  .navtooltip.hover {
+    display: block;
+  }
+  .navtooltip {
+    display: none;
+    position: absolute;
+    background-color: rgba(20,20,20, 1);
+    border: 1px solid #888;
+    padding: 10px 10px;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 7px black;
+    width: 13em;
+    margin: 10px 10px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body class="puzzle-page">
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation" id="nav">
+  <div class="container">
+    <div class="navbar-header">
+      <!-- mobile toggle -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-left">
+        <li><a class="navbar-link visible-xs" href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigation <b class="caret"></b></a>
+          <ul class="dropdown-menu inverse-dropdown">
+            <li><a href="../../toc.html">All Puzzles</a></li>
+            <li><a href="../../faq.html">FAQ</a></li>
+          </ul>
+        </li>
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        
+        
+        
+        <li class="dropdown">
+
+          
+            
+            <!--<a href="../../submit/puzzle/paint_it_black/">Call in Answer</a>-->
+            <a href="solution/">Solution</a>
+            
+          
+
+        </li>
+      </ul>
+
+      
+        
+          <a class="navbar-brand logo" href="../../"></a>
+        
+      
+    </div><!-- /.navbar-collapse -->
+  </div>
+</nav>
+
+  
+
+<div class="back">
+  <div class="main">
+    <a class="btn back-to-round" href="../../round/dreamtime"><span class="glyphicon glyphicon-menu-left"></span></a>
+    
+    <img id="bg-desat" src="../../static/round/dreamtime/images/bg-desat.jpg"/>
+    
+  </div>
+  <div class="puzzle">
+    <div class="header">
+      
+      
+      <img class="puzzle-logo" src="../../static/round/dreamtime/images/paint_it_black/header.png">
+      
+      
+      <h2>Paint it Black</h2>
+      
+    </div>
+    <div class="content">
+      <center><image src="images/paint_it_black.png"></center>
+
+    </div>
+  </div>
+</div>
+
+
+
+  <script src="../../static/bootstrap/javascript/bootstrap.js"></script>
+  <!--<script src="../..//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>-->
+  <script>
+    $(document).ready(function(){
+
+      $.getJSON('../../sheep.json')
+        .done(function(data) {
+          $('span.current-sheep').html(data.sheep);
+          $('span.next-update').html(data.update);
+        });
+
+      $("#nextupdate").hover(function(){
+        $('#navtooltip').addClass('hover');
+      }, function(){
+        $('#navtooltip').removeClass('hover');
+      });
+    });
+  </script>
+  
+
+
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

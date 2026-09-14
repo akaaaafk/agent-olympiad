@@ -1,3 +1,5 @@
-# 2010/puzzles/1952/temptations/
+# Temptations
 
-Temptations Temptations Jadis, the White Witch of Narnia, tried to fill the space in Edmund Pevensie's tummy with Turkish Delight and other treats suitable for a ruler.
+Open `puzzle.html` for the original styled task and its image links. The visual packet, including image-map regions, is not replaced by a text preview.
+
+Archive limitation: The original standalone archive page, diagrams, image-map links and applicable style artwork are preserved. Historical wording, repeated names, ordering and fictional premises are not modernized. No physical enactment, cross-task state or end-to-end grading is supplied.

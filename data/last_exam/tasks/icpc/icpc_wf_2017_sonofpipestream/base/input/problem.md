@@ -1,5 +1,3 @@
-# Son of Pipe Stream
-
 Hide 
  Son of Pipe Stream 
 

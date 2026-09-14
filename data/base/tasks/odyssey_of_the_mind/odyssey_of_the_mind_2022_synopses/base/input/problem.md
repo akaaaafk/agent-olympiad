@@ -1,5 +1,3 @@
-# Long-Term Problem Synopses — 2022
-
 # Odyssey of the Mind — 2022 Long-Term Problem Synopses
 
 Source: https://odysseyofthemind.com/past-problems/
@@ -19,3 +17,4 @@ While no one knows what the future holds, it’s likely OMers will have an impor
 3. Matryoshka StructureIt’s always the more the merrier with nesting dolls, also known as Matryoshka! In this problem, teams will design and build a Matryoshka Structure made of only balsa wood and glue that holds as much weight as possible. The 8+” structure will hold additional structures nested one inside the other. The more structures that are nested, the higher the score! Before weight placement can begin, the nestedstructures will be removed one-by-one to reveal a tiny character nested inside the smallest structure. The performance will have a theme about storage that includes placing weights, the structures, and thetiny character.
 4. Life is a Circus!Sometimes life seems like a circus! Teams will create a performance about a young person enjoying a regular life in our world who wakes up one day to discover they somehow were transported into a circusworld. In the circus world there will be original animals performing unexpected tricks, a clown, circus acts, and a ringmaster that announces the activities. The young person returns to the regular world thinking it was all a dream until they see a mysterious figure that turns out to be from the circus.
 5. Tri-Cycle TransportWe all know where the wheels on the bus take us, how about the wheels on an OM-Mobile? In this problem teams will design and build one or more vehicles used to transport something. Teams will build a vehicle that is powered three ways: human power, gravity, and free choice (e.g. battery, wind). The vehicle will travel forward, backward, and turn to a side. The performance will also include a funny narrator, a mechanic character, a salesperson, and a song about transportation that has a lyric repeated three times.
+

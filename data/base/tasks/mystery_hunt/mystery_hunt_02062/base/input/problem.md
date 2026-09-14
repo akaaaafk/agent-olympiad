@@ -1,3 +1,5 @@
-# 2015/puzzle/optics_lab_meta
+# Optics Lab Meta
 
-Optics Lab Meta &mdash; MIT Mystery Hunt 2015 Toggle navigation World Map The Story So Far... Useful links List of Puzzles Events Schedule Updates from Sealab Full team log FAQ Sponsors 2015 Archive Overview Location: Optics Lab View Solution Optics Lab Meta Answer: click here to reveal Once you have devised an upgrade for your submarine, call it in.
+Open `puzzle.html` for the original styled packet. Text previews do not replace visual cells, animation, colors or diagrams.
+
+Archive limitation: Only the original standalone archived body and its explicit visual dependencies are restored. Archive solution links, answer-reveal header and gold-bearing scripts, navigation and scripts are removed. Original published CSS, images and font files are preserved or mechanically relinked; original CSS font query/fragment suffixes are retained. Puzzles are not solved, historical wording is not modernized, and blank cells, geometry, colors and deliberately misspelled words are not corrected. Gold, scores, splits, license and grading/runtime readiness are unchanged and not recertified. This archived meta page contains only an instruction to call in a submarine upgrade. Other-puzzle answers, physical components and host interaction are absent; this input packet does not make the meta independently solvable.

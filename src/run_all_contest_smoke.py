@@ -161,7 +161,11 @@ class CatalogSmokeAgent:
                     self.challenged.add(eligible[0])
                     return emit("challenge", {"proposal_id": eligible[0],
                         "content": "Offline smoke objection: check assumptions and independent evidence."})
-            if "propose" in offered and len(self.proposal_authors) < required_challenges:
+            if "propose" in offered and (
+                    len(self.proposal_authors) < required_challenges
+                    or (self.config.current_turn_only and "challenge" not in offered)):
+                # A proposal from an earlier round is unreadable in the strict
+                # control. Make a fresh claim so another seat can challenge it.
                 pid = f"P{len(self.proposal_authors) + 1}"
                 self.proposal_authors[pid] = agent
                 return emit("propose", {"content": "Offline smoke proposal: draft, independently check, then submit."})
@@ -213,6 +217,9 @@ class CatalogSmokeAgent:
             target = active if active in targets else next(iter(targets), None)
             if target:
                 source = code_for(target) if task_by_id[target].programming else self.candidate_content
+                if (target != active and not task_by_id[target].programming
+                        and not self.manifest.metadata.get("artifact_contract")):
+                    source = f"Problem {target}:\n{source}"
                 arguments = {"content": source}
                 if target != active or "problem_id" in offered["work"]["parameters"].get("required", []):
                     arguments["problem_id"] = target

@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Buenard';
+  font-style: normal;
+  font-weight: 700;
+  src: url("css-24.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Coustard';
+  font-style: normal;
+  font-weight: 400;
+  src: url("css-25.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Nothing You Could Do';
+  font-style: normal;
+  font-weight: 400;
+  src: url("css-26.ttf") format('truetype');
+}

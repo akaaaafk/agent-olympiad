@@ -24,6 +24,8 @@ from contest_prompts import (
     _pending_review_queue,
 )
 
+OTC_FOCUS_VERSION = 3
+
 def _resolved_actions(
     manifest: ContestManifest,
     config: ContestRunConfig | None = None,
@@ -161,17 +163,14 @@ def _card_gate(
         # The card allows exactly one action per turn, so switching problems
         # and recording work must be a single move: work(problem_id=...).
         # Pin the registry's optional problem_id to the problems still open.
-        switchable = tuple(task.task_id for task in session.tasks if not task.locked)
+        switchable = tuple(task.task_id for task in session.visible_tasks if not task.locked)
         if switchable:
             gated.discard(work_spec)
             gated.add(
                 replace(
                     work_spec,
-                    description=(
-                        "Record durable work for the team on your current problem, "
-                        "or pass problem_id to switch to another problem and record "
-                        "the work there in the same turn."
-                    ),
+                    # Keep the canonical answer-format and task-binding contract.
+                    # Only the runtime problem choices need specialization here.
                     arguments=tuple(
                         replace(
                             argument,
@@ -235,7 +234,12 @@ def _actions_for_agent(
         base, session, config, agent, memory, answer_sheet_contest=answer_sheet_contest
     )
     gated = _gate_work_targets(gated, session, config, work_task_ids)
-    return _gate_task_operations(gated, session, config, work_task_ids)
+    gated = _gate_task_operations(gated, session, config, work_task_ids)
+    if session.competition_flow is not None:
+        allowed = session.competition_flow.allowed({spec.name for spec in gated}, agent)
+        gated = frozenset(spec for spec in gated if spec.name in allowed)
+    from contest_observation import filter_actions
+    return filter_actions(gated, session, memory, config)
 
 
 def _gate_task_operations(actions, session, config, work_task_ids):
@@ -249,7 +253,7 @@ def _gate_task_operations(actions, session, config, work_task_ids):
         hidden.add("submit")
         if active.submissions and active.submissions[-1].verdict == 'PENDING':
             hidden.update({'execute_code', 'submit_code'})
-    elif active is None and all(t.kind == "programming" for t in session.tasks):
+    elif active is None and all(t.kind == "programming" for t in session.visible_tasks):
         hidden.add("submit")
     render = next((s for s in actions if s.name == "render_pdf"), None)
     if (render is not None and render.visibility == "team" and active is not None
@@ -259,7 +263,7 @@ def _gate_task_operations(actions, session, config, work_task_ids):
     select = next((s for s in allowed if s.name == "select_problem"), None)
     if select is not None:
         existing = select.arguments[0].enum
-        targets = tuple(t.task_id for t in session.tasks if not t.locked
+        targets = tuple(t.task_id for t in session.visible_tasks if not t.locked
                         and (not existing or t.task_id in existing)
                         and (work_task_ids is None or t.task_id in work_task_ids))
         allowed.discard(select)
@@ -289,7 +293,7 @@ def _gate_work_targets(
             )
         return not (config.review_required and _task_has_independent_approval(task))
 
-    targets = tuple(task.task_id for task in session.tasks if editable(task))
+    targets = tuple(task.task_id for task in session.visible_tasks if editable(task))
     available = set(actions)
     available.discard(work)
     if targets:
@@ -354,7 +358,7 @@ def _actions_for_agent_base(
         )
     # Desk actions that take a problem id get the concrete task list so the
     # model cannot invent identifiers.
-    task_ids = tuple(task.task_id for task in session.tasks)
+    task_ids = tuple(task.task_id for task in session.visible_tasks)
     for name in ("inspect_problem", "triage_problem", "remember", "recall"):
         spec = next((spec for spec in available if spec.name == name), None)
         if spec is None:
@@ -409,12 +413,12 @@ def _actions_for_agent_base(
         }
         missing_drafts = any(
             not task.versions
-            for task in session.tasks
+            for task in session.visible_tasks
             if required_answer_task_ids is None or task.task_id in required_answer_task_ids
         )
         unapproved = config.review_required and any(
             task.versions and not _task_has_independent_approval(task)
-            for task in session.tasks
+            for task in session.visible_tasks
             if required_answer_task_ids is None or task.task_id in required_answer_task_ids
         )
         if missing_drafts or unapproved or card_blocks_submit or (
@@ -437,7 +441,7 @@ def _actions_for_agent_base(
         # re-selecting the active problem would only burn a turn.
         selectable = tuple(
             task.task_id
-            for task in session.tasks
+            for task in session.visible_tasks
             if task.task_id in work_task_ids
             and not task.locked
             and (active is None or task.task_id != active.task_id)
@@ -473,7 +477,7 @@ def _actions_for_agent_base(
     if review_enabled and (
         review_targets is not None
         or answer_sheet_contest
-        or any(task.kind == "programming" for task in session.tasks)
+        or any(task.kind == "programming" for task in session.visible_tasks)
     ):
         available = set(actions)
         review_spec = next(
@@ -802,7 +806,7 @@ def _card_task_claimed_this_turn(
             event.get("task_id") == task_id
             and event["actor"] != agent
             and event["actor"].startswith("Agent_")
-            and event["kind"] != "think"
+            and event["kind"] not in {"think", "automatic_memory", "action_error"}
         ):
             return True
     return False
@@ -815,19 +819,103 @@ def _card_task_settled(task: TaskUnit) -> bool:
     return bool(task.versions)
 
 
+def _card_repeated_mismatch_task(memory: ContestMemory, agent: str) -> str | None:
+    """Release a stuck focus after two consecutive rejected work bindings.
+
+    A successful ordinary action resets the streak. Bookkeeping and private
+    thinking neither reset it nor count as another attempt.
+    """
+    failures = []
+    for event in reversed(memory.view(agent)):
+        if event.actor != agent:
+            continue
+        if event.kind == 'action_error':
+            payload = event.payload
+            error = str(payload.get('error', '')).lower()
+            if payload.get('action') != 'work' or not any(
+                    phrase in error for phrase in ('task mismatch', 'task binding', 'cross-task')):
+                break
+            failures.append(event.task_id)
+            if len(failures) == 2:
+                return failures[0] if failures[0] == failures[1] else None
+        elif event.kind in ACTION_REGISTRY and event.kind not in MEMORY_ACTION_NAMES:
+            break
+    return None
+
+
+def _card_repeated_math_report(memory: ContestMemory, agent: str) -> str | None:
+    """Yield after two status-only visits; fresh task evidence resets the streak.
+
+    The caller supplies the baseline's permitted memory view. No private
+    history is manufactured for the current-round-only control.
+    """
+    visits = []
+    evidence = {"work", "review_answer", "propose", "challenge", "provide_evidence", "revise", "decide"}
+    for visible_event in reversed(memory.view(agent)):
+        event = visible_event.to_dict()
+        task_id = event.get("task_id")
+        if visits and task_id == visits[0] and event["kind"] in evidence:
+            break
+        if event["actor"] != agent or event["kind"] not in ACTION_REGISTRY:
+            continue
+        if event["kind"] in MEMORY_ACTION_NAMES:
+            continue
+        if event["kind"] not in {"speak", "rest"} or not task_id:
+            break
+        visits.append(task_id)
+        if len(visits) == 2:
+            return task_id if visits[0] == task_id else None
+    return None
+
+
+def _card_math_pending(session, memory, agent, *, exclude=None,
+                       work_task_ids=None, review_task_ids=None):
+    """Find a legal fresh draft, peer check, or rejected draft needing repair."""
+    available = [t for t in session.visible_tasks
+                 if t.kind != 'programming' and t.task_id != exclude and not t.locked
+                 and not t.hopeless and t.state is not TaskState.BLOCKED]
+    # Preserve parallel initial drafting, then distribute independent checks.
+    draft = [t for t in available if not t.versions
+             and (work_task_ids is None or t.task_id in work_task_ids)]
+    peer = [t for t in available if t.versions and t.versions[-1].author != agent
+            and (review_task_ids is None or t.task_id in review_task_ids)
+            and not any(not r.stale and r.version_hash == t.versions[-1].version_hash
+                        for r in t.reviews)]
+    repair = [t for t in available if t.versions
+              and (work_task_ids is None or t.task_id in work_task_ids)
+              and any(not r.stale and r.version_hash == t.versions[-1].version_hash
+                      and r.decision == 'reject' for r in t.reviews)]
+    for queue in (draft, repair, peer):
+        queue.sort(key=lambda t: (t.priority_rank, _card_task_claimed_this_turn(
+            memory, t.task_id, agent=agent, turn=session.budget.turns_used)))
+        if queue:
+            return queue[0]
+    return None
+
+
 def _card_focus_task(
     session: ContestSession,
     memory: ContestMemory,
     agent: str,
     personal_assignment: dict[str, Any] | None,
     strategic_policy: StrategicPolicy,
+    *, review_required: bool = False, work_task_ids: set[str] | None = None,
+    review_task_ids: set[str] | None = None,
 ) -> TaskUnit | None:
     """The problem this seat is on under the ``otc`` baseline.
 
     Preference order: the agent's own latest ``select_problem`` (its choice
-    stands until it switches), then the coach's advisory list, then whatever
-    the scheduler would pick next.
+    stands until it switches or repeatedly fails its work binding), then the
+    coach's advisory list. Finished math focuses yield to pending peer checks.
     """
+    # One common, stateless tie-break rotation for both memory conditions.
+    # Work on a shallow view so routing never changes the archival task order.
+    if session.visible_tasks:
+        from copy import copy
+        session = copy(session)
+        task_ids = list(session._tasks)
+        offset = max(0, session.budget.turns_used - 1) % len(task_ids)
+        session._tasks = {tid: session._tasks[tid] for tid in task_ids[offset:] + task_ids[:offset]}
     chosen: str | None = None
     own_recent: str | None = None
     programming_recent: str | None = None
@@ -846,7 +934,8 @@ def _card_focus_task(
         if event["kind"] == "skip_problem":
             released_task = str(event["task_id"])
             break
-        if own_recent is None and event.get("task_id") and event["kind"] != "think":
+        if (own_recent is None and event.get("task_id")
+                and event["kind"] not in {"think", "automatic_memory", "action_error"}):
             own_recent = str(event["task_id"])
         if (
             programming_recent is None and event.get("task_id")
@@ -857,10 +946,22 @@ def _card_focus_task(
             payload = event["payload"] if isinstance(event["payload"], dict) else {}
             chosen = str(payload.get("problem_id") or "") or None
             break
-    by_id = {task.task_id: task for task in session.tasks}
+    by_id = {task.task_id: task for task in session.visible_tasks}
+    failed_focus = _card_repeated_mismatch_task(memory, agent)
+    if failed_focus in by_id and by_id[failed_focus].kind != 'programming':
+        released_task = failed_focus
+    repeated = _card_repeated_math_report(memory, agent)
+    if repeated in by_id and by_id[repeated].kind != 'programming':
+        released_task = repeated
+    pending = (_card_math_pending(session, memory, agent, exclude=released_task,
+               work_task_ids=work_task_ids, review_task_ids=review_task_ids)
+               if review_required else None)
     if chosen is not None:
         task = by_id.get(chosen)
-        if task is not None and not task.locked and task.state is not TaskState.BLOCKED:
+        if (task is not None and task.task_id != released_task
+                and not task.locked and task.state is not TaskState.BLOCKED
+                and not (pending and task.kind != 'programming'
+                         and _task_has_independent_approval(task))):
             return task
     # Continue the seat's programming repair, rather than replacing its source
     # context with an untouched problem on every turn. Inspecting/reviewing a
@@ -889,25 +990,33 @@ def _card_focus_task(
     unseen = _next_task(session, strategic_policy, exclude_task_id=released_task)
     if (
         unseen is not None
+        and (work_task_ids is None or unseen.task_id in work_task_ids)
         and not _card_task_settled(unseen)
         and not _card_task_claimed_this_turn(memory, unseen.task_id, agent=agent, turn=session.budget.turns_used)
     ):
         # One idle seat picks up the blank problem; the rest go back to
         # verifying their own drafts instead of piling onto the same task.
         return unseen
+    if pending is not None:
+        return pending
     if assigned:
         return assigned[-1]
+    def permitted(task):
+        return task is not None and (
+            work_task_ids is None or task.task_id in work_task_ids
+            or review_task_ids is None or task.task_id in review_task_ids)
     # No suggestion left: keep verifying the seat's own last problem rather
     # than following the shared cursor onto a teammate's.
     if own_recent is not None:
         recent = by_id.get(own_recent)
         if (recent is not None and recent.task_id != released_task
-                and not recent.locked and recent.state is not TaskState.BLOCKED):
+                and not recent.locked and recent.state is not TaskState.BLOCKED
+                and permitted(recent)):
             return recent
     active = session.active_task
-    if active is not None and active.task_id != released_task and not active.locked:
+    if active is not None and active.task_id != released_task and not active.locked and permitted(active):
         return active
-    return unseen
+    return unseen if permitted(unseen) else None
 
 
 def _scheduled_agent_task(

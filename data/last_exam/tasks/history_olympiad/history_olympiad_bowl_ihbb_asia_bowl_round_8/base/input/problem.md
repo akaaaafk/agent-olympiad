@@ -1,5 +1,3 @@
-# IHBB-Asia-Bowl-Round-8
-
 [Q1] For ten points, name this general term for intentional violence committed to achieve a political or ideological goal.
 
 [Q2] In 1888, Karl Josef Bayer developed a process for refining the oxide of this element from bauxite; the smelting of this element is then typically done through the electrol ytic Hall -Heroult process. This element is the most common metal found in the Earth’s crust and is crucial for aerospace technology. For ten points, name this lightweight metal with atomic number 13 that is used in soda cans.

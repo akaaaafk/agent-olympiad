@@ -1,31 +1,13 @@
-# Task SOP
+# Task
 
-## Reference Environment
-- Competition: World Robot Olympiad
-- Competition id: `wro`
-- Problem id: `wro_2023_robomission_junior`
-- Task type: `robotics_mission`
-- Team size: 2-3
-- Year / edition: 2023
-- Source: https://wro-association.org/competition/2023-season/
+Competition: wro
 
-## Goal
-As a multi-agent team, solve the olympiad-style team task using only the materials under `base/input`. Produce the required deliverable (`team_submission`).
+Task: wro_2023_robomission_junior
 
-## Task directory
-- Variant root: `base`
-- Input directory: `base/input`
-- Software fixtures: `base/software`
+Edition: 2023
 
-## Inputs
-- `problem.md`
-- `WRO-2023-RoboMission-Junior.pdf`
+Team size: 2-3
 
-## Title
-RoboMission Junior 2023
+Deliverable: observed_physical_robot_attempt
 
-## Deterministic Evaluation Rule
-Gold answers and official solution booklets are not provided in `input/`. Scoring uses the evaluator declared on the task card (gold match, rubric LLM judge, slide judge, or deferred sandbox).
-
-## Deliverables
-Return the team `team_submission` expected by this competition.
+Use the attached problem materials and the inherited competition and collaboration instructions.

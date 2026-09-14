@@ -1,5 +1,3 @@
-# 2017-2018-IHBB-Alpha-Set-High-School-Bowl-Round-5
-
 [Q1] This government was founded after its leader won the Battle of Sekigahara against the Toyotomi clan. This government’s policy of sakoku came to an end when Matthew Perry’s Black Ships forced the opening of Japan through the 1854 Convention of Kanagawa. For ten points, name this last Japanese shogunate.
 
 [Q2] Xenophon’s Anabasis describes ten thousand Greek soldiers of this type who fought Artaxerxes II of Persia. A war named for these people was won by Hamilcar Barca and led to his conquest of Spain. Famed soldiers of this type include slingers from Rhodes and archers from Crete. Greeks who fought for Persia were, for ten points, what type of soldier that fought not for national pride, but for money?

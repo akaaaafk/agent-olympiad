@@ -3,8 +3,39 @@
   "gold_pointer": "data/benchmarks/gcch_harvard/benchmark.json#gcch_harvard_case-2020.gold_label",
   "has_gold_answer": false,
   "evaluator_id": null,
-  "evaluator_status": null,
-  "rubric_path": null,
-  "deliverable": null,
-  "solution_file": null
+  "evaluator_status": "not_ready",
+  "solution_file": null,
+  "evaluation": {
+    "evaluator_id": null,
+    "status": "not_ready",
+    "rubric_path": "data/rubrics/gcch_harvard_2024_2026_v1.json",
+    "deliverable": "case_recommendation_deck_and_pitch",
+    "limitations": "Same-competition cross-year protocol reuse is allowed. The archived protocol has no executable numeric criteria; numeric rubric integration is still required. Other-year task answers and unpublished weights are not substituted.",
+    "scorecard_path": "data/rubrics/task_scorecards/gcch_harvard.json",
+    "scorecard_key": "gcch_harvard_case-2020",
+    "pre_reuse_evaluation": {
+      "evaluator_id": null,
+      "status": "not_ready",
+      "rubric_path": "data/rubrics/gcch_harvard_2024_2026_v1.json",
+      "deliverable": "case_recommendation_deck_and_pitch",
+      "limitations": "The archived rubric is edition-aligned only for 2024–2026.",
+      "scorecard_path": "data/rubrics/task_scorecards/gcch_harvard.json",
+      "scorecard_key": "gcch_harvard_case-2020"
+    },
+    "rubric_reuse": {
+      "source_competition": "gcch_harvard",
+      "target_competition": "gcch_harvard",
+      "target_year": 2020,
+      "source_rubric_paths": [
+        "data/rubrics/gcch_harvard_2024_2026_v1.json"
+      ],
+      "source_editions": [
+        "2024-2026"
+      ],
+      "official_year_equivalence": false,
+      "scoring_basis": "Same-competition criteria reuse; not other-year answers or verified official historical scoring."
+    }
+  },
+  "rubric_path": "data/rubrics/gcch_harvard_2024_2026_v1.json",
+  "deliverable": "case_recommendation_deck_and_pitch"
 }

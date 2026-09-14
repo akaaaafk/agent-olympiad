@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Zyzzlvaria, We Love You!</title>
+<link rel="stylesheet" href="../../../styles/puzzle.css"/>
+<link rel="stylesheet" media="print" href="../../../styles/print.css"/>
+
+</head>
+<body class="puzzle virtual_sectors zyzzlvaria_we_love_you">
+<div id="header">
+<div class="planet"><a href="../../../puzzles/virtual-sectors.php"><img src="../../../images/title-virtual_sectors.png" alt="Virtual Sectors"/></a></div>
+<div class="check_answer"><a href="answer"><img src="../../../images/check-answer.png" alt="Check Answer"/></a></div>
+<div class="solution"><a href="../SOLUTION/"><img src="../../../images/solution.png" alt="Solution"/></a></div>
+<div class="puzzle-id-image"><div></div></div>
+</div>
+
+<div id="content">
+  <div id="title">
+    <h1>Zyzzlvaria, We Love You!</h1>
+    <div class="cartouche"></div>
+  </div>
+
+<p>As you assuredly know, the Exalted Government of Zyzzlvaria commissions a new Galactic Anthem each time an Interstellar Astronomical Par-tay rolls around. This time, you are honored to be one of fifty stellar songwriting teams selected to put the glory of Zyzzlvaria to music.
+</p><p>Obviously, you must adhere to the eternal standards for eternal standards:
+</p>
+<ul><li>1. Your anthem must feature at least two instruments that contain the letter Z.
+</li><li>2. Your anthem must contain at least two different rhymes for "Zyzzlvaria."
+</li><li>3. Your anthem must include at least eight different words that contain a double-Z.
+</li><li>4. Your anthem must end on a dramatically high note or a dramatically low note.
+</li></ul>
+<p>We encourage creativity in your efforts to meet these requirements, but don't try anything lame like making up fake words. That got Xevus the Loud beheaded in 2017. Twice. Leaving him with only three more heads. 
+</p><p>Please be prepared to submit your anthem as an mp3 audio file, accompanied by a description of how your song satisfies the first three rules. (We hope the fourth will be self-evident no matter how you choose to interpret it.) When you do so, we will give you the appropriate reward. Hail, Zyzzlvaria, Oh Hail!
+</p>
+<p>Once your anthem is complete, send it to zyzzlcon3009@gmail.com and call HQ to let us know it's on the way.</p>
+
+
+
+
+</div>
+
+<div id="footer"></div>
+</body><script type="module" src="/checkanswer.js"></script>
+</html>

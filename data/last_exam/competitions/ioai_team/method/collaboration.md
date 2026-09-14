@@ -1,24 +1,102 @@
-# Method — `ioai_team`
+# Team method
 
-How this benchmark's agents are asked to work. Projected from `data/rules/ioai_team/collaboration.json`.
-
-## Agent constraints
-
-- Apply this competition's own roster, timing, tool, collaboration, submission, and scoring rules; do not import rules from another contest.
-- Collaborate only within the team under contest rules.
-- Banned during the contest: calculators. Conditional: internet access is translation site only unless team task guide allows more and running code is task specific environment only. Paper and pencil are always available. Work only from the materials provided with the problem.
-- Treat private reasoning and notes as unknown to teammates until you communicate the decision-relevant content.
-- Do not access hidden solutions, answer keys, evaluator internals, or unauthorized outside problem-solving help.
-- Keep sourced evidence, analysis, recommendations, and presentation claims distinct, then reconcile them into one internally consistent artifact.
-- Do not cite a source, experiment, market action, or judge interaction unless it was actually available and observed in the task environment.
-- Do not generalize Individual Contest website permissions to the Team Challenge; use only the task-specific environment and the organizer-designated translation site.
-- Only designated submitters may make the shared submission: Agent_1.
-- Use only the official mechanisms that the current task actually exposes; do not claim physical, oral, live-opponent, judge, or environment actions that were not observed.
-
-## Information / deliberation / communication
+## Collaboration configuration
 
 ```json
 {
+  "agent_roles": [
+    {
+      "name": "Agent_1",
+      "title": "captain and submission lead",
+      "may_submit": true,
+      "duties": [
+        "Track task-specific rules and submission requirements.",
+        "Resolve model-selection disagreements."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": [
+        "timeline",
+        "collaboration_protocol",
+        "deliverable_format"
+      ]
+    },
+    {
+      "name": "Agent_2",
+      "title": "data and modeling specialist",
+      "may_submit": false,
+      "duties": [
+        "Prepare data and candidate models.",
+        "State modeling assumptions."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": [
+        "timeline"
+      ]
+    },
+    {
+      "name": "Agent_3",
+      "title": "experiment and evaluation specialist",
+      "may_submit": false,
+      "duties": [
+        "Design comparisons and inspect metrics.",
+        "Guard hidden-test integrity."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": [
+        "resource_policy"
+      ]
+    },
+    {
+      "name": "Agent_4",
+      "title": "tool and provenance lead",
+      "may_submit": false,
+      "duties": [
+        "Track allowed tools and websites.",
+        "Record sources and reproducibility details."
+      ],
+      "information_access": [
+        "contest_rules"
+      ],
+      "rule_expertise": [
+        "timeline",
+        "collaboration_protocol",
+        "deliverable_format"
+      ]
+    }
+  ],
+  "rule_sections": {
+    "competition_format": [
+      "Apply the selected historical team task and its four-member roster."
+    ],
+    "timeline": [
+      "2024: four hours. 2025: exact duration remains unspecified. Runner turns are not official elapsed time."
+    ],
+    "resource_policy": [
+      "Use the selected task_contract.json. Permissions vary by edition and task."
+    ],
+    "collaboration_protocol": [
+      "Keep collaboration within the selected edition's permitted team and official channels."
+    ],
+    "integrity_and_compliance": [
+      "Protect judge-only solutions and do not claim unavailable actions or outside assistance."
+    ],
+    "deliverable_format": [
+      "Follow the selected task_contract.json; media/program artifacts and their required documentation are not interchangeable."
+    ],
+    "evaluation_criteria": [
+      "Use the selected record's rubric and score basis. Both historical evaluators remain not_ready."
+    ],
+    "runtime_limitations": [
+      "Media generation services and historical robot execution are not reproduced.",
+      "Historical task-specific outputs and final-ranking rules must not be replaced with a generic text response."
+    ]
+  },
   "information_policy": {
     "mode": "role_specialized",
     "shared": [
@@ -41,69 +119,110 @@ How this benchmark's agents are asked to work. Projected from `data/rules/ioai_t
       "majority_bias"
     ]
   },
+  "agent_constraints": [
+    "Apply this competition's own roster, timing, tool, collaboration, submission, and scoring rules; do not import rules from another contest.",
+    "Collaborate only within the team under contest rules.",
+    "Apply the selected historical task_contract.json; do not import rules from another year or contest.",
+    "Treat private reasoning and notes as unknown to teammates until you communicate the decision-relevant content.",
+    "Do not access hidden solutions, answer keys, evaluator internals, or unauthorized outside problem-solving help.",
+    "Keep sourced evidence, analysis, recommendations, and presentation claims distinct, then reconcile them into one internally consistent artifact.",
+    "Do not cite a source, experiment, market action, or judge interaction unless it was actually available and observed in the task environment.",
+    "Apply the selected historical task_contract.json; do not import rules from another year or contest.",
+    "Only designated submitters may make the shared submission: Agent_1.",
+    "Use only the official mechanisms that the current task actually exposes; do not claim physical, oral, live-opponent, judge, or environment actions that were not observed."
+  ],
   "communication": {
     "mode": "unlimited"
+  },
+  "simulation": {
+    "max_turns": 30,
+    "scheduler": "src_collaboration_draft",
+    "turn_budget_basis": "standardized experiment budget: 30 global turns; official contest timing is recorded separately",
+    "selector_enforcement": "task_specific_guide_required",
+    "physical_final": "unavailable",
+    "open_table_coach": {
+      "enabled": true,
+      "status": "counterfactual_otc_collaboration_overlay_not_official_competition_rule",
+      "may_submit": false,
+      "allowed_tools": [],
+      "counts_toward_shared_api_and_token_budget": true,
+      "contestant_turn_policy": {
+        "mode": "private_deliberation_then_single_action",
+        "allowed_actions": [
+          "work",
+          "speak",
+          "rest"
+        ],
+        "exactly_one_action": true,
+        "unstructured_response": "rest",
+        "final_submission": "reviewed_answer_sheet",
+        "visibility": {
+          "think": "private",
+          "work": "shared",
+          "speak": "team",
+          "rest": "private"
+        },
+        "max_chars_by_action": {
+          "think": 2400,
+          "work": 8000,
+          "speak": 1000,
+          "rest": 80
+        },
+        "memory_entries": {
+          "private_think_per_agent": 3,
+          "shared_work": 18,
+          "group_messages": 12,
+          "public_messages": 24
+        },
+        "private_think_calls_per_turn": 1,
+        "discussion_policy": {
+          "report_after_work": true,
+          "silent_work_turn_requires_discussion": true,
+          "conflicts_require_targeted_speak": true
+        }
+      },
+      "precontest_brief": {
+        "turn": 0,
+        "problem_access": false,
+        "allowed_actions": [
+          "speak",
+          "rest"
+        ],
+        "advice_scope": [
+          "time allocation within the rule card",
+          "team coordination and handoffs",
+          "independent verification",
+          "reconciling the required final deliverable"
+        ]
+      },
+      "opening_discussion": {
+        "enabled": false,
+        "problem_access": false,
+        "allowed_actions": [],
+        "purpose": "Coach exits permanently after the single turn-0 blind brief."
+      },
+      "after_opening_access": false,
+      "min_turns": 3,
+      "protocol_version": "otc_turn0_review_v1",
+      "review_required": true,
+      "action_surface": "registry_bundles_v1",
+      "action_bundles": [
+        "common",
+        "desk",
+        "memory",
+        "independent_review",
+        "competition_tools",
+        "deliberation_if_structured"
+      ]
+    },
+    "deliverable_pipeline": {
+      "version": "otc_artifact_v1",
+      "kind": "external_environment",
+      "fidelity": "benchmark_adaptation_not_official_equivalence",
+      "status": "requires_specialized_adapter",
+      "reason": "Live, physical or interactive performance requires its own environment and scoring adapter."
+    }
   }
 }
 ```
 
-## Simulation
-
-```json
-{
-  "max_turns": 24,
-  "scheduler": "src_collaboration_draft",
-  "turn_budget_basis": "official clock n/a turns vs floor 13 (4 teammates x 2 turns + 1 answer parts + 4 for synthesis)",
-  "selector_enforcement": "task_specific_guide_required",
-  "physical_final": "unavailable"
-}
-```
-
-## Rule sections
-
-```json
-{
-  "competition_format": [
-    "Competition model: The team researches, authors, and defends a judged artifact.",
-    "The source-recorded active team has 4 members."
-  ],
-  "timeline": [
-    "Benchmark adaptation: no official numeric duration is encoded in the available primary-source record; simulation.max_turns is only a runner safety budget.",
-    "Source-recorded competition rule: The Team Challenge duration depends on its format and may range from a few hours to a full day; no single exact official duration is encoded here."
-  ],
-  "resource_policy": [
-    "Source-recorded resource policy: Banned during the contest: calculators. Conditional: internet access is translation site only unless team task guide allows more and running code is task specific environment only. Paper and pencil are always available. Work only from the materials provided with the problem."
-  ],
-  "collaboration_protocol": [
-    "Source-recorded collaboration rule: Collaborate only within the team under contest rules.",
-    "Source-recorded competition rule: The Team Challenge is an official team event, but its format, environment, and scoring are task-specific.",
-    "Source-recorded competition rule: Team Challenge tasks are provided in English, and contestants may use only the translation website designated by the organizers.",
-    "Source-recorded competition rule: Contestants may not communicate with people outside the contest hall during the Team Challenge.",
-    "Source-recorded competition rule: Approved and prohibited items follow the Team Challenge rules and task guide; permissions from the Individual Contest technical appendix do not automatically apply.",
-    "Source-recorded competition rule: Team Challenge scoring is announced in the task statements and must not be inferred from the Individual Contest normalization formula.",
-    "Source-recorded competition rule: The Team Challenge duration depends on its format and may range from a few hours to a full day; no single exact official duration is encoded here.",
-    "Source-recorded competition rule: Appeals must be filed through Team Leaders within the organizer's announced window."
-  ],
-  "integrity_and_compliance": [
-    "Benchmark safety rule: do not use hidden solutions, evaluator internals, unauthorized outside assistance, or resources forbidden by this competition.",
-    "Source-recorded competition rule: Contestants may not communicate with people outside the contest hall during the Team Challenge.",
-    "Source-recorded competition rule: Approved and prohibited items follow the Team Challenge rules and task guide; permissions from the Individual Contest technical appendix do not automatically apply."
-  ],
-  "deliverable_format": [
-    "Runner answer contract: Submit a structured report or slide outline covering analysis, recommendation, and evidence.",
-    "Official deliverable: code and predictions.",
-    "Benchmark adaptation: Official entries are notebooks and prediction files; the runner submits code and results as text.",
-    "Source-recorded competition rule: The Team Challenge is an official team event, but its format, environment, and scoring are task-specific.",
-    "Source-recorded competition rule: The Team Challenge duration depends on its format and may range from a few hours to a full day; no single exact official duration is encoded here."
-  ],
-  "evaluation_criteria": [
-    "Repository evaluation status: Task performance is specified per artifact in rubric mode, but the repository evaluator is deferred_team_task_guide; do not invent a completed score."
-  ],
-  "runtime_limitations": [
-    "Runtime limitation: Allowed-tool surface is intentionally year-specific — freeze the year’s task appendix.",
-    "Runtime limitation: Physical robot tasks (2025-style) are non-comparable to pure software agents.",
-    "Runtime limitation: The exact 2026 Team Challenge guide, simulator task statement, submission surface, and physical final are not encoded by the general contest rules.",
-    "Runtime limitation: The runner cannot reproduce the physical robot final or official appeal process."
-  ]
-}
-```

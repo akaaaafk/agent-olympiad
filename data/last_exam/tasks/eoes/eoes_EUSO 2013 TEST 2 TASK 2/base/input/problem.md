@@ -1,5 +1,3 @@
-# EUSO 2013 TEST 2 TASK 2
-
 11th EUROPEAN UNION SCIENCE OLYMPIAD  Test 2 Task sheet Luxembourg, March 21th, 2013   
  Renewable Energy   
 Country:      Language:  

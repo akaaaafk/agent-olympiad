@@ -1,3 +1,5 @@
-# 2010/puzzles/1804/box_sets/
+# Box Sets
 
-Box Sets Box Sets Excerpt from the Journal of Alexander von Humboldt: The intricate and sometimes imperfect designs found on Aztec tile work were always a big hit, though the tiles themselves were typically laid out in rather mundane patterns.
+Open `puzzle.html` for the original styled task and its image links. The visual packet, including image-map regions, is not replaced by a text preview.
+
+Archive limitation: The original standalone archive page, diagrams, image-map links and applicable style artwork are preserved. Historical wording, repeated names, ordering and fictional premises are not modernized. No physical enactment, cross-task state or end-to-end grading is supplied.

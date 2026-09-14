@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/tr/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb"> 
+<head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta http-equiv="Content-Style-Type" content="text/css" /> 
+  <meta http-equiv="Content-Language" content="en-GB" /> 
+  <title>Dr Ox's Experiment</title> 
+  <link rel="stylesheet" type="text/css" href="../../../styles/puzzles.css" media="screen" /> 
+  <link rel="stylesheet" type="text/css" href="../../../styles/puzzles.css" media="print" /> 
+  <script type="text/javascript" src="../../../support/jquery-1.3.2.min.js"></script> 
+  <script src="../../../support/flowplayer-3.1.4.min.js"></script> 
+  <style> 
+    a.player {
+      display: block;
+      margin-top: 10px;
+      height: 75px;
+      width: 320px;
+    } 
+  </style> 
+</head> 
+ 
+<body>
+<!-- FlowPlayer scripting --> 
+<script> 
+$(function () {
+ 
+$f("a.player", "../../../support/flowplayer-3.1.5.swf", {
+  onBeforeClick: function() {
+    $f().unload();
+
+    var wrap = $(this.getParent());
+    wrap.find("img").fadeOut();
+    wrap.animate({width:320, height:240},500,function() {
+      $f(this).load();
+    });
+
+    return false;
+ },
+ 
+ onUnload: function() {
+  $(this.getParent()).animate({width:320, height:75},500, function() {
+    $(this).find("img").fadeIn();
+  });
+ },
+ 
+ onFinish: function() {
+   this.unload();
+ }
+});
+});
+</script> 
+<div id="container">
+
+  <div id="header">
+    <div id="header-content">
+      <a id="back-to-round" href="../"><img src="../../../images/return-to-1871.gif" /></a>
+      <a id="solution" href="solution.html"><img src="../../../images/solution.gif" /></a>
+    </div><!--end of id="header-content"-->
+  </div><!--end of id="header"-->
+
+  <div id="main">
+    <div id="page">
+      <div id="page-top">
+        <img id="page-stamp" src="../../../images/stamp-1871.gif" />
+        <h1 id="page-heading">Dr Ox's Experiment</h1>
+      </div>
+
+      <div id="page-center">
+        <div id="page-left">&nbsp;</div>
+        <div id="page-right">&nbsp;</div>
+
+        <div id="page-content">
+          <span class="flavortext">
+            <p>One of Verne's short stories, "Dr. Ox's Experiment," is about a mad scientist who uses an entire town for his evil research. At the culmination of the story, Dr. Ox's associate Ygene tries to tell him that the experiment should be called off, but Ox refuses to listen and would end up incarcerated or worse if not for a freak accident at his factory. This cautionary tale just goes to show that listening to one's advisors is the seventeenth most important thing for a competent supervillain to keep in mind.</p>
+          </span>
+
+          <div class="center" style="width:320px">
+            <a class="player" href="dr_oxs_experiment_01.flv"><img class="center" src="play.gif" /></a>
+            <a class="player" href="dr_oxs_experiment_02.flv"><img class="center" src="play.gif" /></a>
+            <a class="player" href="dr_oxs_experiment_03.flv"><img class="center" src="play.gif" /></a>
+            <a class="player" href="dr_oxs_experiment_04.flv"><img class="center" src="play.gif" /></a>
+            <a class="player" href="dr_oxs_experiment_05.flv"><img class="center" src="play.gif" /></a>
+            <a class="player" href="dr_oxs_experiment_06.flv"><img class="center" src="play.gif" /></a>
+            <a class="player" href="dr_oxs_experiment_07.flv"><img class="center" src="play.gif" /></a>
+            <a class="player" href="dr_oxs_experiment_08.flv"><img class="center" src="play.gif" /></a>
+          </div>
+
+        </div><!--end of id="page-content"-->
+      </div><!--end of id="page-center"-->
+
+      <div id="page-bottom">&nbsp;</div>
+
+    </div><!--end of id="page"-->
+  </div><!--end of id="main"-->
+
+</div><!--end of id="container"-->
+
+</body><script type="module" src="/checkanswer.js"></script>
+</html>
