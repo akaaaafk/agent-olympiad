@@ -1,7 +1,15 @@
 """Structured, auditable evaluators for team-task submissions."""
 
 from .default_rubrics import ensure_default_rubrics
+from .error_taxonomy import ERROR_CODES, classify_errors
 from .finalize import apply_registered_judge
+from .collaboration_score import (
+    CoordinationScoreResult,
+    InteractionHelpfulnessResult,
+    score_coordination,
+    score_interaction_helpfulness,
+)
+from .cce import CCEAction, CCEResult, normalize_actions, score_cce
 from .gold import GoldAnswerEvaluator, load_gold_parts
 from .modes import (
     EvalMode,
@@ -32,22 +40,44 @@ from .slides_pipeline import (
     evaluate_slide_deck,
     resolve_problem_task_pdf,
 )
+from .team_metrics import (
+    METRIC_DEFINITIONS,
+    Action,
+    Message,
+    TeamTranscript,
+    adapt_transcript,
+    compute_team_metrics,
+)
 
 __all__ = [
     "Criterion",
     "CriterionResult",
+    "CCEAction",
+    "CCEResult",
+    "ERROR_CODES",
     "EvalMode",
     "EvalPacket",
     "EvaluationError",
     "EvaluationResult",
     "EvaluatorSpec",
     "GoldAnswerEvaluator",
+    "METRIC_DEFINITIONS",
+    "Message",
+    "CoordinationScoreResult",
     "QuestionSpec",
     "RegistryError",
     "Rubric",
     "RubricDocumentEvaluator",
     "SlideDeckEvaluator",
+    "TeamTranscript",
+    "Action",
+    "adapt_transcript",
     "apply_registered_judge",
+    "classify_errors",
+    "compute_team_metrics",
+    "normalize_actions",
+    "score_cce",
+    "score_coordination",
     "build_competition_packet",
     "build_question_packet",
     "build_task_asset",
