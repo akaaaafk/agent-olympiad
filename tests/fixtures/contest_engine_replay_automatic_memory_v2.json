@@ -1,0 +1,27 @@
+{
+  "automatic_memory_version": 2,
+  "work_task_binding_version": 1,
+  "note": "Exact full execution, prompt and checkpoint hashes. Prior fixtures are preserved. Shared work binding and error receipts apply equally to all baselines; only OTC gets automatic memory.",
+  "cases": {
+    "single_agent/math/fresh": "a7d1fa2803e4160fb9fc5a25b588e579cc49dcee9ce9d677fb5dac62e8507e37",
+    "single_agent/math/resume": "67b265f1d3bb37c7c92343a766e07c62d18f38d47f1b08d87743037ec70abe10",
+    "single_agent/code/fresh": "6d6df8cd59a3315e99eafd529ba989402046d7d84369e77ccdfca4bc8c0d27cc",
+    "single_agent/code/resume": "7e14e4c91429a71d2d579ebfb6a3e0215c2ea34c9a40e97e40c4f5a1d88b41f0",
+    "decentralized/math/fresh": "d36d9cb2a4cf55afe30c47deb154bd9b4196f9286f995658c786c7e0b03d883a",
+    "decentralized/math/resume": "42aae608a3a371d4e919125d8ae11fb747fb672e758cc1abfccbd1dc43b95878",
+    "decentralized/code/fresh": "f894773f9b96a0bfa157e4acef0146b3979d8e720539a6f29950222e3794bc30",
+    "decentralized/code/resume": "bd73f728666bfaf7ff38684cb569ce01252226895cef4e1aa2919f3ce7063095",
+    "centralized/math/fresh": "366353daf822f4fe478d6b621c9d96aa7f09a1fb03eab7b4b5ba6e2b22fb5fda",
+    "centralized/math/resume": "981cd1f827c18dbbc08f6d8e8362ddc5239494922d0a1c7bad862079a58ce084",
+    "centralized/code/fresh": "12ce49eb6ad7fc3bc67f7fa6e6045e0fc77a11529e5308276cd570f44b08a049",
+    "centralized/code/resume": "8a6a5ba49466dca61319e3b2f88b927c780fbca6c74d9341f5e9e0f1b4f6c1a7",
+    "vallina_otc/math/fresh": "58030a6ef6345205508d81019f92839a40bb22cd6558870089804e54fe2bfacd",
+    "vallina_otc/math/resume": "29e5cdd4468c3725ae37980a5a7ef5adb17e946ab3bb261347ceda8c5903c206",
+    "vallina_otc/code/fresh": "662540ffae78ea076a9c5976a3b74e30efe5b11f0c52593884d7125afa268bf6",
+    "vallina_otc/code/resume": "14aafd8d9697daf23b611d18fe905f2a0c0b58875ff70cb25630b7e90fdd9f42",
+    "otc/math/fresh": "765c9b0dfc609da0543723df5903e6c074b8579e3ae14a9c4cfb8b1903de8bf5",
+    "otc/math/resume": "6b5cd02aefc6e83a1144da18c22beaea901be7dfd13d6658ce9d75a6e554975e",
+    "otc/code/fresh": "e72753dc92dfee39ce3236dc7eb22ca0a08bda08cbeaba44b2339a19d65681da",
+    "otc/code/resume": "71d8176de77a6f25a5992b46eb6327bd68ff4327359213b49717b94a1aeef80e"
+  }
+}

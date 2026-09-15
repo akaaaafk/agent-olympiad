@@ -15,7 +15,7 @@ sys.path.insert(0, str(REPO_ROOT / "src"))
 from artifacts.pdf_ingest import PdfIngestError, parse_pdf, slice_pdf
 from evaluation.default_rubrics import ensure_default_rubrics
 from evaluation.finalize import apply_registered_judge
-from evaluation.gold import GoldAnswerEvaluator, load_gold_parts, parse_numbered_answers
+from evaluation.gold import GoldAnswerEvaluator, answers_match, load_gold_parts, parse_numbered_answers
 from evaluation.modes import QuestionSpec, build_competition_packet, build_question_packet
 from evaluation.registry import RegistryError, resolve_evaluator_spec, strategy_kind
 import json
@@ -71,9 +71,71 @@ class GoldEvaluatorTests(unittest.TestCase):
         self.assertEqual(result.total_score, 12)
         self.assertEqual(result.max_score, 12)
 
+    def test_parse_team_tokens_and_semicolons(self):
+        team = parse_numbered_answers(
+            "T-1 135432 T-2 2√10 T-3 32 T-4 49/3"
+        )
+        self.assertEqual(team["1"], "135432")
+        self.assertEqual(team["2"], "2√10")
+        self.assertEqual(team["3"], "32")
+
+        semi = parse_numbered_answers(
+            "135432; 2sqrt(10); 32; 49/3; (2+sqrt(2),1+sqrt(2))"
+        )
+        self.assertEqual(semi["1"], "135432")
+        self.assertEqual(semi["2"], "2sqrt(10)")
+        self.assertEqual(semi["5"], "(2+sqrt(2),1+sqrt(2))")
+
+    def test_semicolon_sheet_scores_against_gold(self):
+        parts = load_gold_parts(
+            {
+                "parts": [
+                    {"id": "1", "expected": "135432", "points": 5},
+                    {"id": "2", "expected": "2√10", "points": 5, "aliases": ["2sqrt(10)"]},
+                    {"id": "3", "expected": "32", "points": 5},
+                ]
+            }
+        )
+        submission = "135432; 2sqrt(10); 32"
+        result = GoldAnswerEvaluator(parts=parts, submission_text=submission).evaluate()
+        self.assertEqual(result.total_score, 15)
+
     def test_missing_structured_gold_raises(self):
         with self.assertRaises(Exception):
             load_gold_parts({"expected_answer": "only a blob"})
+
+    def test_negative_answers_keep_sign_when_parsed(self):
+        parsed = parse_numbered_answers("1. (-6, 13)\n2. -21\n3. 52\n")
+        self.assertEqual(parsed["2"], "-21")
+
+    def test_answers_match_rejects_digit_prefix_substrings(self):
+        self.assertFalse(
+            answers_match("5sqrt(11)", r"\log_3(125\sqrt{11})")
+        )
+        self.assertFalse(answers_match("-21", "21"))
+        self.assertTrue(answers_match("-21", "slope -21"))
+        self.assertTrue(answers_match("-21", "-21"))
+
+    def test_radical_spelling_is_equivalent(self):
+        self.assertTrue(
+            answers_match(
+                "(6+√3)/2",
+                "3+sqrt(3)/2",
+                aliases=("3+√3/2",),
+            )
+        )
+
+    def test_arml_q4_log_form_does_not_score_against_radical_gold(self):
+        parts = load_gold_parts(
+            {
+                "parts": [
+                    {"id": "4", "expected": "5√11", "points": 4, "aliases": ["5\\sqrt{11}"]},
+                ]
+            }
+        )
+        submission = "4. \\log_3(125\\sqrt{11})"
+        result = GoldAnswerEvaluator(parts=parts, submission_text=submission).evaluate()
+        self.assertEqual(result.total_score, 0)
 
 
 class RegistryAndModeTests(unittest.TestCase):
@@ -134,14 +196,14 @@ class RubricScaleTests(unittest.TestCase):
 class RubricDocumentTests(unittest.TestCase):
     def test_mock_document_judge(self):
         ensure_default_rubrics()
-        rubric = load_rubric(REPO_ROOT / "data/rubrics/wsc_writing_28_v1.json")
+        rubric = load_rubric(REPO_ROOT / "data/rubrics/wsc_writing_100_v1.json")
 
         def mock_request(request: LLMRequest) -> LLMResponse:
             payload = {
                 "criteria": [
                     {
                         "id": c.id,
-                        "score": c.max_score / 2,
+                        "score": (c.min_score + c.max_score) / 2,
                         "max_score": c.max_score,
                         "evidence": ["para 1"],
                         "justification": "ok",
@@ -150,7 +212,7 @@ class RubricDocumentTests(unittest.TestCase):
                     }
                     for c in rubric.criteria
                 ],
-                "total_score": rubric.total_points / 2,
+                "total_score": sum((c.min_score + c.max_score) / 2 for c in rubric.criteria),
                 "max_score": rubric.total_points,
                 "warnings": [],
                 "limitations": [],
@@ -164,7 +226,7 @@ class RubricDocumentTests(unittest.TestCase):
             submission_text="Cooperation enables teams to solve harder problems.",
             media="text",
         ).evaluate()
-        self.assertEqual(result.total_score, 14)
+        self.assertEqual(result.total_score, 80)
         self.assertEqual(result.evaluator_id, "rubric_llm_v1")
 
 
@@ -178,12 +240,12 @@ class FinalizeJudgeTests(unittest.TestCase):
             "evaluation": {
                 "evaluator_id": "rubric_llm_v1",
                 "status": "ready",
-                "rubric_path": "data/rubrics/wsc_writing_28_v1.json",
+                "rubric_path": "data/rubrics/wsc_writing_100_v1.json",
                 "deliverable": "written_essay",
             },
             "gold_label": {"grading_rubric": "Clear thesis."},
         }
-        rubric = load_rubric(REPO_ROOT / "data/rubrics/wsc_writing_28_v1.json")
+        rubric = load_rubric(REPO_ROOT / "data/rubrics/wsc_writing_100_v1.json")
 
         def mock_request(request: LLMRequest) -> LLMResponse:
             payload = {
@@ -223,8 +285,8 @@ class FinalizeJudgeTests(unittest.TestCase):
         )
         self.assertTrue(graded["graded"])
         self.assertEqual(graded["method"], "rubric_llm_v1")
-        self.assertEqual(graded["score"], 28)
-        self.assertEqual(graded["max_score"], 28)
+        self.assertEqual(graded["score"], 100)
+        self.assertEqual(graded["max_score"], 100)
 
     def test_leaves_gold_and_offline_untouched(self):
         gold_grade = {

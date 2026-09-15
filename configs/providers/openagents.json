@@ -1,0 +1,8 @@
+{
+  "base_url": "https://api-gateway.openagents.org/v1",
+  "base_url_env": "OPENAGENTS_BASE_URL",
+  "api_key_env": "OPENAGENTS_API_KEY",
+  "model": "glm-5.2",
+  "model_env": "OPENAGENTS_MODEL",
+  "api": "chat_completions"
+}
