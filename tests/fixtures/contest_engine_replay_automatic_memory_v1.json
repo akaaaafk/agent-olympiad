@@ -1,0 +1,10 @@
+{
+  "automatic_memory_version": 1,
+  "note": "Only memory-on OTC changes. Scripted model omits semantic block to exercise automatic excerpt fallback. The other 16 full execution fingerprints remain pinned to the previous fixture. New semantic consolidation, scope, provenance, budget and resume behavior is asserted in test_automatic_memory and test_checkpoint_cursor.",
+  "cases": {
+    "otc/math/fresh": "f4a18df3c8fe85d3efce11955e94f6cab63896286c83b4200b41446205aca678",
+    "otc/math/resume": "23e125f0eaf48a0b789831744aa32af48b21dc72b7301b811951b50b7326bf43",
+    "otc/code/fresh": "86f3bf147e5bd0f7680f0d21743c39994ae6ce500d1fb5ff2b0acb4972502a09",
+    "otc/code/resume": "ff414f077a86ad4ec5ccb7b12ce59cb95c814798e15bacca5b335c9b2c598e94"
+  }
+}

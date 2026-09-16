@@ -33,6 +33,8 @@ def _resolve_rubric_path(problem: dict, repo_root: Path) -> Path | None:
 
 
 def _reference_text(problem: dict) -> str:
+    if (problem.get('evaluation') or {}).get('reference_policy') == 'rubric_only':
+        return ''
     gold = problem.get("gold_label") or {}
     if gold.get("parts"):
         lines = []
@@ -58,9 +60,11 @@ def apply_registered_judge(
     request_fn (offline smoke), returns quick_grade unchanged.
     """
     method = quick_grade.get("method")
-    if method in {"gold_substring_match", "judge_sandbox_required"}:
+    if method in {"gold_substring_match", "gold_answer_v1"}:
         return quick_grade
-    if quick_grade.get("graded") and method not in {None, "llm_judge_required"}:
+    if method == "programming_sample_judge" and quick_grade.get("graded"):
+        return quick_grade
+    if quick_grade.get("graded") and method not in {None, "llm_judge_required", "judge_sandbox_required"}:
         return quick_grade
     if not submission_text.strip():
         return {
@@ -69,17 +73,43 @@ def apply_registered_judge(
             "method": method or "llm_judge_required",
             "reason": "No submission text to judge.",
         }
-    if request_fn is None:
+    if request_fn is None and method not in {"judge_sandbox_required", "programming_judge"}:
         return quick_grade
 
     evaluation = dict(problem.get("evaluation") or {})
-    if evaluation.get("status") == "deferred":
+    if evaluation.get("status") == "deferred" and evaluation.get("evaluator_id") != "programming_judge":
         return {
             **quick_grade,
             "graded": False,
             "method": "evaluator_deferred",
             "reason": f"evaluation.status=deferred ({evaluation.get('evaluator_id')})",
         }
+
+    # Programming: sample-based local judge (secret tests still deferred).
+    if method in {"judge_sandbox_required", "programming_judge"} or evaluation.get(
+        "evaluator_id"
+    ) == "programming_judge":
+        from .programming_judge import judge_programming_submission
+
+        competition_id = str(
+            problem.get("competition_id")
+            or (work_dir.name if work_dir else "")
+            or ""
+        )
+        # Prefer explicit competition id from problem; fall back via path heuristics.
+        if not competition_id or competition_id in {"judge", "smoke_judge"}:
+            competition_id = "icpc" if problem.get("kattis_id") else "iiot"
+        judged = judge_programming_submission(
+            problem,
+            submission_text,
+            competition_id=competition_id,
+            repo_root=repo_root or REPO_ROOT,
+            fetch_kattis=True,
+        )
+        return judged.to_grade_dict(submitted_by=quick_grade.get("submitted_by"))
+
+    if request_fn is None:
+        return quick_grade
 
     ensure_default_rubrics()
     root = repo_root or REPO_ROOT

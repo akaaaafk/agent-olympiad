@@ -7,26 +7,131 @@ from dataclasses import dataclass
 from typing import Any
 
 from .models import Criterion, CriterionResult, EvaluationError, EvaluationResult, Rubric
+from .final_answer import extract_final_answer
 
 
+# Classic: "1. answer" / "1) answer" / "Problem 1: answer" / "Q1. answer"
+# Require space after '.' so decimals / sci-notation like "6.0e7" are not ids.
 ANSWER_LINE_RE = re.compile(
-    r"(?m)^\s*(?:problem\s*)?(\d+)\s*[.):\-]\s*(.+?)\s*$",
+    r"(?m)^\s*(?:(?:problem|q|part)\s*)?(\d+)\s*(?:[):=\-]|\.(?=\s))\s*(.+?)\s*$",
     re.IGNORECASE,
+)
+# Inline numbered tokens anywhere in the blob.
+# Avoid treating decimals / sci-notation (6.0e7) as answer ids.
+INLINE_NUM_RE = re.compile(
+    r"(?i)(?:^|[;\s])(?:(?:problem|q|part|t|team)\s*)?(?<!\d)(\d+)(?:[):=\-]|\.(?=\s))\s*",
 )
 
 
 def normalize_answer(value: str) -> str:
     text = value.lower().strip()
     text = text.replace("−", "-").replace("–", "-")
+    text = text.replace("√", "sqrt")
+    text = re.sub(r"sqrt\s*\(", "sqrt(", text)
+    text = re.sub(r"\\sqrt\s*\{([^}]+)\}", r"sqrt(\1)", text)
+    # Treat the compact radical spelling ``sqrt3`` (including the form
+    # produced by replacing Unicode ``√3`` above) as ``sqrt(3)``.  Without
+    # this, otherwise equivalent answers such as ``3+√3/2`` and
+    # ``3+sqrt(3)/2`` normalize to different strings.
+    text = re.sub(r"\bsqrt\s*([A-Za-z0-9]+)", r"sqrt(\1)", text)
+    text = re.sub(r"\\frac\s*\{([^}]+)\}\s*\{([^}]+)\}", r"(\1)/(\2)", text)
+    text = text.replace("$", "").replace("\\", "")
+    # Collapse common scientific-notation spellings before stripping spaces.
+    # 6.0 x 10^7 / 6.0×10^{7} / 6.0e7 / 6.0 x 107  -> 6.0*10^7
+    text = text.replace("×", "x").replace("·", "x")
+    text = re.sub(
+        r"(\d+(?:\.\d+)?)\s*[x*]\s*10\s*[\^]?\s*\{?\s*([+-]?\d+)\s*\}?",
+        r"\1*10^\2",
+        text,
+    )
+    text = re.sub(
+        r"(\d+(?:\.\d+)?)\s*[x*]\s*10([+-]?\d+)\b",
+        r"\1*10^\2",
+        text,
+    )
+    text = re.sub(
+        r"(\d+(?:\.\d+)?)\s*[eE]\s*([+-]?\d+)\b",
+        r"\1*10^\2",
+        text,
+    )
     text = re.sub(r"\s+", "", text)
-    text = text.replace("$", "")
     return text
 
 
+def _clean_answer_value(raw: str) -> str:
+    text = raw.strip()
+    # Preserve leading minus on numeric answers; only strip separators like "=- ".
+    text = re.sub(r"^[:=\s]+", "", text)
+    # Stop before the next numbered / T- token if glued on one line.
+    text = re.split(
+        r"(?i)\s+(?:t-?\d+\b|(?:problem|q|part|team)\s*\d+\s*[.):=\-])",
+        text,
+        maxsplit=1,
+    )[0]
+    text = text.strip(" ;,|")
+    return text.strip()
+
+
 def parse_numbered_answers(submission: str) -> dict[str, str]:
+    """Parse contest answer sheets in several common agent formats.
+
+    Supports:
+      - ``1. ans`` / ``1) ans`` / ``Problem 1: ans`` (line-oriented)
+      - ``T-1 ans`` / ``T1: ans`` / ``Team 1 - ans`` tokens
+      - inline ``1. a 2. b`` on one line
+      - ordered ``a; b; c`` lists when no ids are present
+    """
+    text = (submission or "").strip()
+    if not text:
+        return {}
+
     answers: dict[str, str] = {}
-    for match in ANSWER_LINE_RE.finditer(submission):
-        answers[match.group(1)] = match.group(2).strip()
+
+    # 1) Line-oriented classic numbering
+    for match in ANSWER_LINE_RE.finditer(text):
+        answers[match.group(1)] = _clean_answer_value(match.group(2))
+
+    # 2) T-/Team- tokens (may be space-separated on one line)
+    if re.search(r"(?i)\bT-?\d+\b|\bTeam\s*\d+\b", text):
+        parts = re.split(r"(?i)(?=\b(?:T-?\d+\b|Team\s*\d+\b))", text)
+        for part in parts:
+            m = re.match(
+                r"(?i)^\s*(?:T-?|Team\s*)(\d+)\s*[.):=\-]?\s*(.*)$",
+                part.strip(),
+                re.S,
+            )
+            if not m:
+                continue
+            val = _clean_answer_value(m.group(2))
+            if val:
+                answers[m.group(1)] = val
+
+    # 3) Inline "1. ... 2. ..." if still sparse
+    if len(answers) < 2:
+        spans = list(INLINE_NUM_RE.finditer(text))
+        for i, match in enumerate(spans):
+            start = match.end()
+            end = spans[i + 1].start() if i + 1 < len(spans) else len(text)
+            val = _clean_answer_value(text[start:end])
+            if val:
+                answers[match.group(1)] = val
+
+    # 4) Ordered semicolon / pipe / newline list with no ids
+    if not answers:
+        chunks = [c.strip() for c in re.split(r"[;\n|]+", text) if c.strip()]
+        if len(chunks) >= 3:
+            for idx, chunk in enumerate(chunks, start=1):
+                chunk = re.sub(r"^\d+\s*[.):=\-]\s*", "", chunk).strip()
+                if chunk:
+                    answers[str(idx)] = chunk
+
+    # 5) Ordered comma list of short tokens (last resort)
+    if not answers:
+        chunks = [c.strip() for c in text.split(",") if c.strip()]
+        if len(chunks) >= 5 and all(len(c) <= 40 for c in chunks):
+            for idx, chunk in enumerate(chunks, start=1):
+                answers[str(idx)] = chunk
+
     return answers
 
 
@@ -37,7 +142,8 @@ class GoldPart:
     points: float
     aliases: tuple[str, ...] = ()
     reference: str = ""
-    match_mode: str = "normalized"  # normalized | exact | reference_llm
+    match_mode: str = "normalized"  # normalized | exact | reference_llm | numeric
+    numeric_spec: dict | None = None
 
 
 def load_gold_parts(gold_label: dict[str, Any]) -> list[GoldPart]:
@@ -49,11 +155,15 @@ def load_gold_parts(gold_label: dict[str, Any]) -> list[GoldPart]:
             parts.append(
                 GoldPart(
                     id=str(item["id"]),
-                    expected=str(item.get("expected") or ""),
+                    expected=str(item['expected']) if item.get('expected') is not None else "",
                     points=float(item.get("points", item.get("max_score", 1))),
                     aliases=tuple(str(value) for value in item.get("aliases", [])),
                     reference=str(item.get("reference") or ""),
-                    match_mode=str(item.get("match_mode") or ("normalized" if item.get("expected") else "reference_llm")),
+                    match_mode=str(
+                        item.get("match_mode")
+                        or ("normalized" if item.get("expected") is not None and str(item['expected']) else "reference_llm")
+                    ),
+                    numeric_spec=item.get('numeric_spec'),
                 )
             )
         return parts
@@ -97,15 +207,42 @@ def gold_parts_to_rubric(
 
 
 def answers_match(expected: str, actual: str, aliases: tuple[str, ...] = ()) -> bool:
-    candidates = (expected,) + aliases
-    norm_actual = normalize_answer(actual)
-    for candidate in candidates:
-        norm_expected = normalize_answer(candidate)
-        if not norm_expected:
-            continue
-        if norm_expected == norm_actual or norm_expected in norm_actual or norm_actual in norm_expected:
-            return True
-    return False
+    """Compare the selected final value, never an incidental number in a proof."""
+    selected = extract_final_answer(actual).final_answer
+    norm_actual = normalize_answer(selected)
+    # Only recognised units may be omitted. Removing arbitrary letters turns
+    # "8 is incorrect" or "8garbage" into the accepted numeric answer "8".
+    norm_actual_core = re.sub(
+        r"(?<=[0-9)\]])(?:[kmc]?m(?:\^[23])?(?:/s(?:\^2)?)?|kg|g|s|"
+        r"dollars?|degrees?|\u00b0)$",
+        "", norm_actual,
+    )
+    actuals = {value for value in (norm_actual, norm_actual_core) if value}
+    return any(
+        normalize_answer(candidate) in actuals
+        for candidate in (expected,) + aliases
+        if normalize_answer(candidate)
+    )
+
+
+def _digit_part_id(part_id: str) -> str | None:
+    """Map Q1/q1/Problem1 style ids onto bare digit keys used by parsers."""
+    text = str(part_id).strip()
+    if text.isdigit():
+        return text
+    match = re.fullmatch(r"(?i)(?:q|part|problem|t|team)?-?(\d+)", text)
+    if match:
+        return match.group(1)
+    return None
+
+
+def _lookup_parsed_answer(parsed: dict[str, str], part_id: str) -> str:
+    if part_id in parsed and parsed[part_id]:
+        return parsed[part_id]
+    digit_id = _digit_part_id(part_id)
+    if digit_id and parsed.get(digit_id):
+        return parsed[digit_id]
+    return ""
 
 
 @dataclass
@@ -115,7 +252,7 @@ class GoldAnswerEvaluator:
     parts: list[GoldPart]
     submission_text: str
     evaluator_id: str = "gold_answer_v1"
-    evaluator_version: str = "1.0.0"
+    evaluator_version: str = "1.2.0"
     model: str = "deterministic"
 
     def evaluate(self) -> EvaluationResult:
@@ -127,20 +264,25 @@ class GoldAnswerEvaluator:
             if part.expected and part.match_mode != "reference_llm"
         ] or [
             # Allow explicit reference_llm parts that still carry an expected short string.
-            part for part in self.parts if part.expected
+            part
+            for part in self.parts
+            if part.expected
         ]
         if not gradeable:
             raise EvaluationError(
                 "No short-answer gold parts to grade. Use rubric_llm_v1 instead."
             )
         rubric = gold_parts_to_rubric(gradeable)
-        parsed = parse_numbered_answers(self.submission_text)
+        single_part = len(gradeable) == 1
+        parsed = (
+            {gradeable[0].id: self.submission_text}
+            if single_part and self.submission_text.strip()
+            else parse_numbered_answers(self.submission_text)
+        )
         criteria: list[CriterionResult] = []
         warnings: list[str] = []
         skipped = [
-            part.id
-            for part in self.parts
-            if part.id not in {g.id for g in gradeable}
+            part.id for part in self.parts if part.id not in {g.id for g in gradeable}
         ]
         if skipped:
             warnings.append(
@@ -150,15 +292,27 @@ class GoldAnswerEvaluator:
 
         if not parsed:
             warnings.append(
-                "Could not parse numbered answers (expected lines like '1. ...')."
+                "Could not parse numbered answers "
+                "(expected '1. ...', 'T-1 ...', 'Q1. ...', or semicolon-separated values)."
             )
 
         for part in gradeable:
-            actual = parsed.get(part.id, "")
-            correct = bool(actual) and answers_match(part.expected, actual, part.aliases)
+            raw_actual = _lookup_parsed_answer(parsed, part.id)
+            extracted = extract_final_answer(
+                raw_actual, part_id=part.id if single_part else None,
+            )
+            actual = extracted.final_answer
+            if part.match_mode == 'numeric':
+                from .numeric import compare_numeric
+                numeric_result = compare_numeric(part.numeric_spec, actual)
+                correct = numeric_result['correct']
+            else:
+                correct = bool(actual) and answers_match(part.expected, actual, part.aliases)
             score = part.points if correct else 0.0
             evidence = [
+                f"submitted_raw[{part.id}]={raw_actual or '(missing)'}",
                 f"submitted[{part.id}]={actual or '(missing)'}",
+                f"answer_extraction[{part.id}]={extracted.method}",
                 f"expected[{part.id}]={part.expected}",
             ]
             criteria.append(
@@ -167,7 +321,8 @@ class GoldAnswerEvaluator:
                     score=score,
                     max_score=part.points,
                     evidence=evidence,
-                    justification=(
+                    justification=('Unit-aware comparison with explicit per-part tolerances: ' + numeric_result['reason']
+                        if part.match_mode == 'numeric' else
                         "Exact/normalized match against gold."
                         if correct
                         else "No normalized match against gold."
@@ -180,7 +335,7 @@ class GoldAnswerEvaluator:
         result = EvaluationResult(
             evaluator_id=self.evaluator_id,
             evaluator_version=self.evaluator_version,
-            prompt_version="deterministic_gold_v1",
+            prompt_version="deterministic_gold_v5",
             model=self.model,
             rubric_id=rubric.rubric_id,
             criteria=criteria,
@@ -188,11 +343,13 @@ class GoldAnswerEvaluator:
             max_score=rubric.total_points,
             warnings=warnings,
             limitations=[
-                "Deterministic string match only; equivalent forms may be marked wrong.",
+                "Numeric mode uses explicit units/tolerances; other modes retain string normalization.",
                 "Only curated short-answer parts are included in this score.",
             ],
             artifact_checks={
-                "parsed_answer_ids": sorted(parsed),
+                "parsed_answer_ids": sorted(
+                    parsed, key=lambda x: int(x) if x.isdigit() else x
+                ),
                 "skipped_part_ids": skipped,
             },
         )

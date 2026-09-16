@@ -1,0 +1,8 @@
+{
+  "base_url": "https://api.vectorengine.ai/v1",
+  "base_url_env": "VECTORENGINE_BASE_URL",
+  "api_key_env": "VECTORENGINE_API_KEY",
+  "model": "claude-sonnet-5",
+  "model_env": "VECTORENGINE_MODEL",
+  "api": "chat_completions"
+}

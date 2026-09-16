@@ -56,10 +56,6 @@ def resolve_problem_task_pdf(problem: dict[str, Any], repo_root: Path | None = N
         if asset.get("role") == "agent_visible" and path_text.endswith(".pdf"):
             path = Path(path_text)
             return path if path.is_absolute() else root / path
-    source = problem.get("source_file")
-    if source:
-        path = Path(str(source))
-        return path if path.is_absolute() else root / path
     return None
 
 

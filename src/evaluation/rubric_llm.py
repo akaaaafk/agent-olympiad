@@ -33,7 +33,7 @@ class RubricDocumentEvaluator:
     image_work_dir: Path | None = None
     evaluator_id: str = "rubric_llm_v1"
     evaluator_version: str = "1.0.0"
-    prompt_version: str = "rubric_document_v1"
+    prompt_version: str = "rubric_document_v2_full_text"
     task_label: str = "contest task"
     deliverable_label: str = "team submission"
 
@@ -70,16 +70,16 @@ class RubricDocumentEvaluator:
             json.dumps(self.rubric.as_prompt_dict(), indent=2),
         ]
         if self.task_text.strip():
-            sections.extend(["TASK TEXT:", self.task_text.strip()[:12000]])
+            sections.extend(["TASK TEXT:", self.task_text.strip()])
         if self.reference_text.strip():
             sections.extend(
                 [
                     "OFFICIAL REFERENCE / MARKING NOTES (judge-only):",
-                    self.reference_text.strip()[:12000],
+                    self.reference_text.strip(),
                 ]
             )
         if self.submission_text.strip():
-            sections.extend(["SUBMISSION TEXT:", self.submission_text.strip()[:16000]])
+            sections.extend(["SUBMISSION TEXT:", self.submission_text.strip()])
         if self.media in {"pdf", "images"}:
             sections.append(
                 "Additional task/submission files or page images are attached. "
@@ -151,7 +151,7 @@ class RubricDocumentEvaluator:
                 attachments.append(
                     LLMAttachment(path=image.path, mime_type=image.mime_type, role="judge_only")
                 )
-        self.prompt_version = "rubric_document_images_v1"
+        self.prompt_version = "rubric_document_images_v2_full_text"
         return tuple(attachments)
 
     def evaluate(self) -> EvaluationResult:

@@ -1,0 +1,33 @@
+{
+  "base_url": "https://api-gateway.openagents.org/v1",
+  "base_url_env": "OPENAGENTS_BASE_URL",
+  "api_key_env": "OPENAGENTS_API_KEY",
+  "model": "glm-5.2",
+  "model_env": "OPENAGENTS_MODEL",
+  "api": "chat_completions",
+  "models_refreshed_at": "2026-09-15",
+  "models": [
+    "deepseek-3.2",
+    "deepseek-4-flash",
+    "deepseek-v4-flash-0731",
+    "deepseek-v4-pro",
+    "deepseek-v4-pro-0813",
+    "gemma-4-31B-it",
+    "glm-5.2",
+    "glm-5.3",
+    "glm-5.3-flash",
+    "kimi-k2.6",
+    "kimi-k3",
+    "llama-4-maverick",
+    "mimo-v2.5-pro",
+    "minimax-m2.5",
+    "mistral-3-14B",
+    "nemotron-3-nano-omni",
+    "nemotron-3-ultra-550b",
+    "nemotron-nano-12b-v2-vl",
+    "openai-gpt-oss-120b",
+    "openai-gpt-oss-20b",
+    "qwen3.5-397b-a17b",
+    "qwen3.8-max"
+  ]
+}
