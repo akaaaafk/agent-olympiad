@@ -142,8 +142,9 @@ class GoldPart:
     points: float
     aliases: tuple[str, ...] = ()
     reference: str = ""
-    match_mode: str = "normalized"  # normalized | exact | reference_llm | numeric
+    match_mode: str = "normalized"  # normalized | exact | reference_llm | numeric | structured_reference
     numeric_spec: dict | None = None
+    answer_spec: dict | None = None
 
 
 def load_gold_parts(gold_label: dict[str, Any]) -> list[GoldPart]:
@@ -164,6 +165,7 @@ def load_gold_parts(gold_label: dict[str, Any]) -> list[GoldPart]:
                         or ("normalized" if item.get("expected") is not None and str(item['expected']) else "reference_llm")
                     ),
                     numeric_spec=item.get('numeric_spec'),
+                    answer_spec=item.get('answer_spec'),
                 )
             )
         return parts
@@ -252,7 +254,7 @@ class GoldAnswerEvaluator:
     parts: list[GoldPart]
     submission_text: str
     evaluator_id: str = "gold_answer_v1"
-    evaluator_version: str = "1.2.0"
+    evaluator_version: str = "1.3.0"
     model: str = "deterministic"
 
     def evaluate(self) -> EvaluationResult:
@@ -306,6 +308,9 @@ class GoldAnswerEvaluator:
                 from .numeric import compare_numeric
                 numeric_result = compare_numeric(part.numeric_spec, actual)
                 correct = numeric_result['correct']
+            elif part.match_mode == 'structured_reference':
+                from .reference_answers import reference_matches
+                correct = reference_matches(part.answer_spec, actual)
             else:
                 correct = bool(actual) and answers_match(part.expected, actual, part.aliases)
             score = part.points if correct else 0.0
@@ -323,6 +328,8 @@ class GoldAnswerEvaluator:
                     evidence=evidence,
                     justification=('Unit-aware comparison with explicit per-part tolerances: ' + numeric_result['reason']
                         if part.match_mode == 'numeric' else
+                        'Deterministic comparison with the registered set, sequence or range contract.'
+                        if part.match_mode == 'structured_reference' else
                         "Exact/normalized match against gold."
                         if correct
                         else "No normalized match against gold."
@@ -335,7 +342,7 @@ class GoldAnswerEvaluator:
         result = EvaluationResult(
             evaluator_id=self.evaluator_id,
             evaluator_version=self.evaluator_version,
-            prompt_version="deterministic_gold_v5",
+            prompt_version="deterministic_gold_v6",
             model=self.model,
             rubric_id=rubric.rubric_id,
             criteria=criteria,
@@ -343,7 +350,7 @@ class GoldAnswerEvaluator:
             max_score=rubric.total_points,
             warnings=warnings,
             limitations=[
-                "Numeric mode uses explicit units/tolerances; other modes retain string normalization.",
+                "Numeric and structured-reference modes use explicit contracts; remaining modes use string normalization.",
                 "Only curated short-answer parts are included in this score.",
             ],
             artifact_checks={

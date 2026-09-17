@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import math
+import logging
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any
@@ -188,6 +189,32 @@ def load_rubric(path: str | Path) -> Rubric:
     return rubric
 
 
+def _load_evaluator_json(text: str) -> tuple[Any, int]:
+    """Repair only backslashes explicitly rejected by the JSON decoder.
+
+    Valid escapes (including Unicode and already escaped LaTeX) are untouched.
+    Structural errors still fail; this cannot supply missing scores or fields.
+    """
+    repairs = 0
+    while True:
+        try:
+            return json.loads(text), repairs
+        except json.JSONDecodeError as exc:
+            if exc.msg != "Invalid \\escape" or text[exc.pos:exc.pos + 1] != "\\":
+                raise
+            text = text[:exc.pos] + "\\" + text[exc.pos:]
+            repairs += 1
+
+
+def load_judge_json(text: str) -> Any:
+    """Use the same conservative escape repair for auxiliary judges."""
+    payload, repairs = _load_evaluator_json(text)
+    if repairs:
+        logging.getLogger(__name__).warning(
+            "Repaired %s invalid JSON backslash escape(s) in judge output.", repairs)
+    return payload
+
+
 def parse_evaluation_payload(
     raw_text: str,
     *,
@@ -204,13 +231,13 @@ def parse_evaluation_payload(
     if text.startswith("```"):
         text = restrip_code_fence(text)
     try:
-        payload = json.loads(text)
+        payload, escape_repairs = _load_evaluator_json(text)
     except json.JSONDecodeError as exc:
         start, end = text.find("{"), text.rfind("}")
         if start < 0 or end <= start:
             raise EvaluationError(f"Evaluator did not return JSON: {exc}") from exc
         try:
-            payload = json.loads(text[start : end + 1])
+            payload, escape_repairs = _load_evaluator_json(text[start : end + 1])
         except json.JSONDecodeError as nested_exc:
             raise EvaluationError(f"Malformed evaluator JSON: {nested_exc}") from nested_exc
 
@@ -235,6 +262,10 @@ def parse_evaluation_payload(
         _require_finite_numbers("Reported total_score", reported_total)
         computed_total = sum(item.score for item in criteria)
         total_warnings = list(warnings or [])
+        if escape_repairs:
+            total_warnings.append(
+                f"Repaired {escape_repairs} invalid JSON backslash escape(s) in judge output."
+            )
         if abs(reported_total - computed_total) > 1e-6:
             total_warnings.append(
                 f"Judge reported total_score={reported_total:g} but the criterion "

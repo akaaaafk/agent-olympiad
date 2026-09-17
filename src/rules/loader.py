@@ -7,7 +7,8 @@ from .storage import load_rule_card_payload
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_RULES_ROOT = REPO_ROOT / "data" / "rules"
+from dataset_paths import data_root
+DEFAULT_RULES_ROOT = data_root() / "rules"
 
 
 def load_rule_card(

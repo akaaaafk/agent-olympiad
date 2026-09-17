@@ -171,6 +171,23 @@ def main() -> None:
         args.submission_text.read_text(encoding="utf-8") if args.submission_text else ""
     )
 
+    if evaluation_meta.get('grading_policy') == 'gold_else_llm_v1':
+        if not args.submission_text or args.submission or args.media != 'text' or args.mode != 'competition':
+            raise SystemExit('Mixed gold/LLM packet scoring requires --submission-text and --media text --mode competition')
+        from contest_manifest import ManifestTask
+        from contest_task_judge import judge_task
+        task = ManifestTask(problem['problem_id'], problem['problem_id'], None,
+                            str(problem.get('problem_description') or ''), str(problem.get('task_type') or ''),
+                            float(problem['total_points']), False, problem)
+        scored = judge_task(task, submission_text, resolve_request_fn(provider=args.provider, model=args.model))
+        payload = {'packet': packet_meta, 'evaluation': {**scored, 'total_score': scored['score']}}
+        out = args.output.resolve() if args.output else run_dir / 'evaluation.json'
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(json.dumps(payload, indent=2), encoding='utf-8')
+        print(f"[gold_else_llm_v1] Score: {scored['score']:g}/{scored['max_score']:g}")
+        print(f"Saved: {out}")
+        return
+
     if kind == "gold" or spec.id == "gold_answer_v1":
         if problem and problem.get("gold_label"):
             gold_label = problem["gold_label"]

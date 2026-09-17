@@ -6,7 +6,8 @@ import json
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-RUBRIC_DIR = REPO_ROOT / "data" / "rubrics"
+from dataset_paths import data_root
+RUBRIC_DIR = data_root() / "rubrics"
 
 
 DEFAULT_RUBRICS: dict[str, dict] = {

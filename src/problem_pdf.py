@@ -13,7 +13,8 @@ from contextlib import contextmanager
 from dataclasses import replace
 
 ROOT = Path(__file__).resolve().parents[1]
-REGISTRY = ROOT / "data/problem_pdf_allowlist.json"
+from dataset_paths import data_root
+REGISTRY = data_root() / "problem_pdf_allowlist.json"
 MAX_PAGES = 2
 
 

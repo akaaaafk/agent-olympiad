@@ -296,7 +296,14 @@ class CompetitionFlow:
 
 
 def bind_competition_flow(manifest, session, config):
+    if flow_type(manifest) == "collaborative_writing_v1":
+        from writing_flow import WritingFlow
+        return WritingFlow(manifest, session, config)
     if flow_type(manifest) is None:
+        if (manifest.competition_id == "wsc_writing" and any(
+                t.benchmark.get("evaluation", {}).get("assessment_scope") == "three_author_staged_written"
+                for t in manifest.tasks)):
+            raise ValueError("use a three-prompt WSC manifest with competition_flow=collaborative_writing_v1")
         if session._competition_flow_checkpoint is not None:
             raise ValueError("cannot restore a competition flow checkpoint in ordinary mode")
         return None

@@ -4,7 +4,7 @@ The turn budget is derived from the official contest clock: one turn stands
 for ``minutes_per_turn`` (5 min by default) of contest time, so ARML Local
 (45 minutes) uses the experiment minimum of 10 turns; a 5-hour ICPC is 60 turns.
 Durations round up and defaults are clamped to 10-90 turns.
-An explicit ``max_turns`` override still wins.
+Explicit overrides use the same 10-90 turn bounds.
 """
 
 from __future__ import annotations
@@ -14,8 +14,19 @@ import math
 
 MAX_TURNS_CAP = 90
 DEFAULT_MINUTES_PER_TURN = 5.0
-# Default experiment minimum; explicit short smoke overrides remain valid.
+# Minimum turn budget for all production entrypoints.
 MIN_RECOMMENDED_TURNS = 10
+
+
+def validate_positive_budget(name, value):
+    if value is not None and (isinstance(value, bool) or not isinstance(value, (int, float))
+                              or not math.isfinite(value) or value <= 0):
+        raise ValueError(f'{name} must be finite and positive when specified')
+
+
+def validate_temperature(value):
+    if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or value < 0:
+        raise ValueError('temperature must be finite and non-negative')
 
 
 def turns_for_duration(
@@ -115,12 +126,16 @@ def resolve_contest_budget(
     """Merge registry defaults with explicit run-time overrides.
 
     ``max_turns`` defaults to the duration-derived value and an explicit
-    override is still clamped to ``[1, MAX_TURNS_CAP]``.
+    override is still clamped to ``[MIN_RECOMMENDED_TURNS, MAX_TURNS_CAP]``.
     """
+    for name, value in [('max_api_calls', max_api_calls),
+                        ('max_output_tokens_per_call', max_output_tokens_per_call),
+                        ('max_total_tokens', max_total_tokens)]:
+        validate_positive_budget(name, value)
     base = COMPETITION_BUDGET_REGISTRY.get(competition_id, DEFAULT_CONTEST_BUDGET)
     overrides: dict[str, int | float | None] = {}
     if max_turns is not None:
-        overrides["max_turns"] = max(1, min(MAX_TURNS_CAP, int(max_turns)))
+        overrides["max_turns"] = max(MIN_RECOMMENDED_TURNS, min(MAX_TURNS_CAP, math.ceil(max_turns)))
     if max_api_calls is not None:
         overrides["max_api_calls"] = max_api_calls
     if max_output_tokens_per_call is not None:

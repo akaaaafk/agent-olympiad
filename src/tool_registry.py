@@ -61,7 +61,7 @@ DELIBERATION_ACTION_NAMES = frozenset(
 #     the wire; ``sleep``, ``submit_final``, ``write_scratchpad``,
 #     ``write_private_notes``, ``verify_problem``, ``message_group`` and the
 #     old workboard verbs are unknown actions. Rule cards were rewritten.
-ACTION_SET_VERSION = 11
+ACTION_SET_VERSION = 13
 # Ownership and render availability changed; existing 29 argument schemas remain.
 ACTION_MODULE_VERSION = 3
 PACK_NAMES: tuple[str, ...] = (
@@ -503,7 +503,8 @@ def validate_registry(
         if not spec.runtimes or not spec.runtimes <= ALL_RUNTIMES:
             errors.append(f"invalid runtimes for action {name}: {sorted(spec.runtimes)}")
         elif spec.runtimes != ALL_RUNTIMES and not (
-            (spec.pack == "contest_flow" or name == "read_problem_pdf")
+            (spec.pack == "contest_flow" or name == "read_problem_pdf" or name in {
+                'start_environment','reset_environment','inspect_environment','execute_environment_command'})
             and spec.runtimes == frozenset({"session"})
         ):
             # Versioned multi-task flows require ContestSession state. Legacy

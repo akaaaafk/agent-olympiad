@@ -165,9 +165,10 @@ def pending_contest_evaluations(result: dict[str, Any], expected: dict[str, Any]
                 or not row.get('graded')
                 or row.get('submission_sha256') != hashlib.sha256(submitted.encode('utf-8')).hexdigest()):
             pending.append('task:' + key)
-    if evaluation.get("judge_collab"):
-        if not has_scores(result.get("coordination"),
-                          ("communication_score", "planning_score", "coordination_score")):
+    solo = (result.get('system_variant') or (expected['settings'].get('config') or {}).get('system_variant')) == 'single_agent'
+    if evaluation.get("judge_collab") and not solo:
+        from saved_run_metrics import valid_coordination
+        if not valid_coordination(result.get("coordination")):
             pending.append("coordination")
         if not has_scores(result.get("interaction"), ("interaction_helpfulness_score",)):
             pending.append("interaction")

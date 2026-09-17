@@ -7,6 +7,7 @@ from types import MappingProxyType
 from typing import Mapping
 from .competition_tools import SPECS as COMPETITION_TOOL_SPECS
 from .competition_flow import SPECS as FLOW_SPECS, ACTION_NAMES as FLOW_ACTIONS, flow_type
+from .ctf_environment import SPECS as CTF_SPECS, NAMES as CTF_ACTIONS
 
 _action = partial(make_action, module="task_specific")
 
@@ -60,7 +61,7 @@ SPECS = (
 )
 
 
-SPECS = SPECS + COMPETITION_TOOL_SPECS + FLOW_SPECS
+SPECS = SPECS + COMPETITION_TOOL_SPECS + FLOW_SPECS + CTF_SPECS
 
 _PROGRAMMING_COMPETITIONS = frozenset({"icpc", "iiot", "codeforces"})
 _MATH_COMPETITIONS = frozenset(
@@ -125,21 +126,12 @@ class CompetitionInterface:
 
 
 def _has_resource(benchmark: dict[str, Any], action: str) -> bool:
+    if action in CTF_ACTIONS:
+        from ctf_environment_runtime import available
+        return available(benchmark)
+    from runtime_resources import has_resource
     role = {"read_lab_equipment": "lab", "read_star_chart": "star"}[action]
-    fixtures = benchmark.get("tool_fixtures") or {}
-    if any(role in str(key).lower() for key in fixtures):
-        return True
-    for asset in benchmark.get("assets") or []:
-        if not isinstance(asset, dict):
-            continue
-        path = Path(str(asset.get("path") or ""))
-        label = f"{asset.get('role', '')} {path}".lower()
-        if not path.is_absolute():
-            path = REPO_ROOT / path
-        if role in label and path.is_file():
-            return True
-    return False
-
+    return has_resource(benchmark, role)
 
 def resolve_contest_interface(
     manifest: ContestManifest, *, rule_card: RuleCard | None = None,

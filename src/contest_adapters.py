@@ -129,6 +129,7 @@ class EnvironmentTaskExecutor:
         self.benchmark_root = str(benchmark_root)
         self.repo_root = _repo_root_from_benchmark_root(self.benchmark_root)
         self._environments: dict[str, OlympiadEnvironment] = {}
+        self.submission_run_id = None
         self.renderer = renderer
         self.rule_card = rule_card
 
@@ -183,7 +184,10 @@ class EnvironmentTaskExecutor:
                 problem_data=public_task,
                 rule_card=self.rule_card,
             )
-        return self._environments[task.parent_problem_id]
+        env = self._environments[task.parent_problem_id]
+        if self.submission_run_id:
+            env.submission_run_id = self.submission_run_id
+        return env
 
     def __call__(
         self,
@@ -209,6 +213,14 @@ class EnvironmentTaskExecutor:
     ) -> dict[str, Any]:
         if action == "render_pdf" and self.renderer is not None:
             return self.renderer(task, action, arguments)
+        from action_modules.ctf_environment import NAMES as CTF_ACTIONS
+        if action in CTF_ACTIONS:
+            from tool_registry import competition_permissions
+            if action not in (competition_permissions(self.manifest.competition_id, rule_card=self.rule_card) or set()):
+                raise ValueError('Docker tool is not permitted by this competition')
+            from ctf_environment_runtime import execute
+            return execute(self.manifest.competition_id, task.parent_problem_id,
+                           self.submission_run_id, action, arguments)
         from action_modules.competition_tools import ACTION_NAMES
         if action in ACTION_NAMES:
             from competition_tool_runtime import execute_preparation_tool, public_context
@@ -296,7 +308,10 @@ class GradingUnavailable(ValueError):
 
 def _grade_non_programming(task: ManifestTask, answer: str, competition_id: str = '') -> tuple[float, float]:
     gold = task.benchmark.get("gold_label") or {}
+    exact_flag = competition_id in {'cybench','nyu_ctf_bench'} or task.task_type == 'ctf'
     def match(expected, actual, aliases=()):
+        if exact_flag:
+            return bool(actual.strip()) and any(actual.strip()==value.strip() for value in (expected,*aliases))
         if competition_id != 'qanta':
             return answers_match(expected, actual, aliases)
         # QANTA braces mark answerline emphasis, not literal answer characters.
@@ -310,7 +325,7 @@ def _grade_non_programming(task: ManifestTask, answer: str, competition_id: str 
         answer,
     )
     candidate = (
-        final_markers[-1].strip().rstrip(".")
+        (final_markers[-1].strip() if exact_flag else final_markers[-1].strip().rstrip("."))
         if final_markers
         else answer.strip()
     )

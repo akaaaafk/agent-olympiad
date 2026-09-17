@@ -28,7 +28,8 @@ def report_row(result):
         reasons[name] = reason
         return "N/A"
 
-    row = {"system_variant": result.get("system_variant", "N/A"),
+    row = {"model": (settings.get('execution') or {}).get('model', 'N/A'),
+           "system_variant": result.get("system_variant", "N/A"),
            "rule_card_mode": (result.get("baseline") or config.get("baseline") or {}).get("rule_card", "N/A"),
            "rule_card_hash": config.get("rule_card_hash") or "N/A"}
     for key in ("score", "max_score"):

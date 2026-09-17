@@ -377,6 +377,9 @@ def _coerce_emulated_tool_call(text: str) -> LLMToolCall:
         value = function
     name = value.get("name", value.get("action"))
     arguments = value.get("arguments", value.get("parameters"))
+    if arguments is None:
+        # Open-weight models often omit arguments for no-argument tools.
+        arguments = {}
     if not isinstance(name, str) or not name.strip():
         raise ValueError("tool call is missing a string name")
     if isinstance(arguments, str):
@@ -513,31 +516,67 @@ def make_tinker_request_fn(
 
     def call(request: LLMRequest) -> LLMResponse:
         request = pdf_text_request(request)
-        if not request.tools or request.tool_choice == "none":
-            text = caller(request.system_prompt, request.user_prompt)
-            return LLMResponse(
-                text=text,
-                provider="tinker",
-                model=model,
-                usage={
-                    "output_tokens": max(1, len(text) // 4),
-                    "api_calls": 1,
-                    "action_transport": "prompt_json",
-                },
-            )
-
-        system = request.system_prompt + _tinker_tool_prompt(request.tools)
+        tools = bool(request.tools and request.tool_choice != "none")
+        system = request.system_prompt + (_tinker_tool_prompt(request.tools) if tools else "")
         user = request.user_prompt
-        output_tokens = 0
-        last_text = ""
-        last_error = "unknown tool-call error"
-        requested_attempts = request.metadata.get("max_transport_attempts")
-        attempts = max_tool_retries + 1
-        if isinstance(requested_attempts, int):
-            attempts = max(1, min(attempts, requested_attempts))
+        attempts = max_tool_retries + 1 if tools else 1
+        remaining_calls = request.metadata.get("max_transport_attempts")
+        if isinstance(remaining_calls, int):
+            attempts = min(attempts, max(0, remaining_calls))
+        remaining_tokens = request.metadata.get("max_transport_output_tokens")
+        if not isinstance(remaining_tokens, int):
+            remaining_tokens = None
+        override = request.metadata.get("max_output_tokens_override")
+        output_tokens = input_tokens = api_calls = retries = 0
+        last_text, last_error, finish = "", "sampling budget exhausted", None
         for attempt in range(attempts):
-            last_text = caller(system, user)
-            output_tokens += max(1, len(last_text) // 4)
+            if remaining_tokens is not None and remaining_tokens <= 0:
+                break
+            limit = max_output_tokens
+            if isinstance(override, int):
+                limit = min(limit, override)
+            if remaining_tokens is not None:
+                limit = min(limit, remaining_tokens)
+            if limit <= 0:
+                break
+            if getattr(caller, "supports_sampling_metadata", False) is True:
+                # Transport owns retries; nested SDK retries cannot bypass the
+                # API-call budget and every completed sample has native usage.
+                caller.last_usage = {}
+                try:
+                    last_text = caller(system, user, max_retries=1, max_output_tokens_override=limit)
+                except RuntimeError as exc:
+                    sampled_usage = caller.last_usage
+                    if not sampled_usage:
+                        raise
+                    return LLMResponse("", "tinker", model, usage={**sampled_usage,
+                        "output_tokens": output_tokens + sampled_usage["output_tokens"],
+                        "input_tokens": input_tokens + sampled_usage.get("input_tokens", 0),
+                        "api_calls": api_calls + sampled_usage.get("api_calls", 1),
+                        "max_output_tokens": limit, "tool_error": str(exc),
+                        "action_transport": "emulated" if tools else "prompt_json"})
+                usage = caller.last_usage
+            else:
+                last_text = caller(system, user)
+                usage = {"output_tokens": max(1, len(last_text) // 4), "api_calls": 1}
+            used = usage["output_tokens"]
+            output_tokens += used
+            input_tokens += usage.get("input_tokens", 0)
+            api_calls += usage.get("api_calls", 1)
+            finish = usage.get("finish_reason")
+            if remaining_tokens is not None:
+                remaining_tokens -= used
+            retries = attempt
+            response_usage = {"output_tokens": output_tokens, "input_tokens": input_tokens,
+                              "max_output_tokens": limit, "api_calls": api_calls,
+                              "tool_retries": retries, "finish_reason": finish,
+                              "action_transport": "emulated" if tools else "prompt_json"}
+            if finish == "length" or used > limit:
+                last_error = "sample truncated or exceeded output budget"
+                finish = "length"
+                break
+            if not tools:
+                return LLMResponse(last_text, "tinker", model, usage=response_usage)
             try:
                 tool_call = _coerce_emulated_tool_call(last_text)
                 error = _validate_emulated_tool_call(tool_call, request.tools)
@@ -545,46 +584,18 @@ def make_tinker_request_fn(
                     raise ValueError(error)
             except ValueError as exc:
                 last_error = str(exc)
-                if attempt >= max_tool_retries:
-                    break
-                user = (
-                    f"{request.user_prompt}\n\n"
-                    "YOUR PREVIOUS TOOL CALL WAS INVALID\n"
-                    f"Error: {last_error}\n"
-                    f"Invalid output: {last_text[:1200]}\n"
-                    "Return one corrected JSON tool-call object only."
-                )
+                user = (f"{request.user_prompt}\n\nYOUR PREVIOUS TOOL CALL WAS INVALID\n"
+                        f"Error: {last_error}\nInvalid output: {last_text[:1200]}\n"
+                        "Return one corrected JSON tool-call object only.")
                 continue
-            return LLMResponse(
-                text="",
-                provider="tinker",
-                model=model,
-                usage={
-                    "output_tokens": output_tokens,
-                    "api_calls": attempt + 1,
-                    "tool_retries": attempt,
-                    "action_transport": "emulated",
-                },
-                tool_calls=(
-                    LLMToolCall(
-                        name=tool_call.name,
-                        arguments=tool_call.arguments,
-                        call_id=f"tinker-emulated-{attempt + 1}",
-                    ),
-                ),
-            )
-        return LLMResponse(
-            text=last_text,
-            provider="tinker",
-            model=model,
-            usage={
-                "output_tokens": output_tokens,
-                "api_calls": attempts,
-                "tool_retries": attempts - 1,
-                "tool_error": last_error,
-                "action_transport": "emulated",
-            },
-        )
+            return LLMResponse("", "tinker", model, usage=response_usage,
+                tool_calls=(LLMToolCall(tool_call.name, tool_call.arguments,
+                                       f"tinker-emulated-{attempt + 1}"),))
+        return LLMResponse(last_text, "tinker", model, usage={
+            "output_tokens": output_tokens, "input_tokens": input_tokens,
+            "max_output_tokens": limit if api_calls else 0, "api_calls": api_calls,
+            "tool_retries": retries, "tool_error": last_error,
+            "finish_reason": finish, "action_transport": "emulated" if tools else "prompt_json"})
 
     call.supports_attachments = False
     call.supports_pdf_text = True
@@ -999,7 +1010,13 @@ def make_tinker_caller(
             client, tokenizer = new_client, new_tokenizer
         return client, tokenizer
 
-    def call(system_prompt: str, user_prompt: str, max_retries: int = 3) -> str:
+    def call(system_prompt: str, user_prompt: str, max_retries: int = 3,
+             *, max_output_tokens_override: int | None = None) -> str:
+        output_limit = max_output_tokens
+        if max_output_tokens_override is not None:
+            output_limit = min(output_limit, max_output_tokens_override)
+        if output_limit <= 0 or max_retries <= 0:
+            raise ValueError("Tinker sampling budget is exhausted")
         sampling_client, sampling_tokenizer = resources()
         messages = [
             {"role": "system", "content": system_prompt},
@@ -1015,7 +1032,7 @@ def make_tinker_caller(
             input_ids = encoded["input_ids"] if hasattr(encoded, "keys") else encoded
             prompt = tinker.ModelInput.from_ints(input_ids)
             sampling_params = tinker.SamplingParams(
-                max_tokens=max_output_tokens,
+                max_tokens=output_limit,
                 temperature=temperature,
             )
         except Exception as exc:
@@ -1049,6 +1066,11 @@ def make_tinker_caller(
         if not response.sequences:
             raise RuntimeError("Tinker returned no sampled sequences.")
         sequence = response.sequences[0]
+        reason = str(getattr(sequence, "stop_reason", "stop")).lower()
+        call.last_usage = {"input_tokens": len(input_ids),
+                           "output_tokens": len(sequence.tokens),
+                           "api_calls": attempt + 1,
+                           "finish_reason": "length" if reason in {"length", "max_tokens", "max_length"} else reason}
         try:
             text = sampling_tokenizer.decode(
                 sequence.tokens, skip_special_tokens=True
@@ -1065,6 +1087,7 @@ def make_tinker_caller(
             )
         return text
 
+    call.supports_sampling_metadata = True
     return call
 
 

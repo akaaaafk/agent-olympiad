@@ -14,11 +14,13 @@ planning fields so CS is a second signal beside task accuracy.
 from __future__ import annotations
 
 import json
+import math
 import re
 from dataclasses import asdict, dataclass, field
 from typing import Any
 
 from llm import LLMRequest, RequestFn
+from .models import load_judge_json
 
 
 def _truncate(text: str, limit: int = 12000) -> str:
@@ -193,7 +195,7 @@ def _parse_score(raw: str) -> tuple[float, str]:
             lines = lines[:-1]
         text = "\n".join(lines).strip()
     try:
-        payload = json.loads(text)
+        payload = load_judge_json(text)
     except json.JSONDecodeError:
         start, end = text.find("{"), text.rfind("}")
         if start < 0 or end <= start:
@@ -201,9 +203,9 @@ def _parse_score(raw: str) -> tuple[float, str]:
             if not match:
                 raise ValueError(f"Could not parse collaboration score JSON: {raw[:200]}")
             return float(match.group(1)), ""
-        payload = json.loads(text[start : end + 1])
+        payload = load_judge_json(text[start : end + 1])
     score = float(payload["score"])
-    if score < 0 or score > 5:
+    if not math.isfinite(score) or score < 0 or score > 5:
         raise ValueError(f"Score out of range: {score}")
     return score, str(payload.get("justification") or "")
 
@@ -280,6 +282,8 @@ def score_coordination(
         )
     )
     pscore, p_just = _parse_score(p_resp.text)
+    if pscore < 1:
+        raise ValueError('Planning score must be between 1 and 5')
     model = model or p_resp.model
 
     return CoordinationScoreResult(
@@ -458,12 +462,12 @@ def score_interaction_helpfulness(
             lines = lines[:-1]
         text = "\n".join(lines).strip()
     try:
-        payload = json.loads(text)
+        payload = load_judge_json(text)
     except json.JSONDecodeError:
         start, end = text.find("{"), text.rfind("}")
         if start < 0 or end <= start:
             raise ValueError(f"Could not parse IHS JSON: {resp.text[:200]}")
-        payload = json.loads(text[start : end + 1])
+        payload = load_judge_json(text[start : end + 1])
 
     score = float(payload["score"])
     if score < 0 or score > 5:

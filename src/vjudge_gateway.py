@@ -10,6 +10,7 @@ Examples:
 
 from __future__ import annotations
 
+import hashlib
 import argparse
 import json
 import sys
@@ -34,6 +35,36 @@ _RUNS: dict[str, dict[str, Any]] = {}
 _LOCK = threading.Lock()
 _REMOTE_CALL_LOCK = threading.Lock()
 _REMOTE_CLIENTS: dict[str, Any] = {}
+_RECEIPTS_PATH: Path | None = None
+
+
+def _load_receipts(path: Path) -> None:
+    """Recover bound receipts on server restart; no source or cookie is stored."""
+    if not path.exists():
+        return
+    rows = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(rows, dict) or any(
+        not isinstance(row, dict) or row.get("gateway_run_id") != key
+        or not isinstance(row.get("request_sha256"), str)
+        or len(row["request_sha256"]) != 64 for key, row in rows.items()
+    ):
+        raise ValueError("Invalid gateway receipts; refusing unbound cache reuse")
+    _RUNS.update(rows)
+
+
+def _save_receipts() -> None:
+    # Caller holds _LOCK. Omit arbitrary remote raw data from durable storage.
+    if _RECEIPTS_PATH is None:
+        return
+    fields = {"gateway_run_id", "idempotency_key", "request_sha256", "contest_id",
+              "oj", "problem", "language", "vjudge_run_id", "run_id", "status",
+              "verdict", "remote_run_id", "time_ms", "memory_kb", "poll_url"}
+    rows = {key: {name: value for name, value in row.items() if name in fields}
+            for key, row in _RUNS.items()}
+    _RECEIPTS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    temporary = _RECEIPTS_PATH.with_suffix(".tmp")
+    temporary.write_text(json.dumps(rows, ensure_ascii=False), encoding="utf-8")
+    temporary.replace(_RECEIPTS_PATH)
 
 
 def _remote_client(oj: str):
@@ -99,6 +130,7 @@ class GatewayHandler(BaseHTTPRequestHandler):
                 row = {**row, **remote.to_dict(), "gateway_run_id": run_id}
                 with _LOCK:
                     _RUNS[run_id] = row
+                    _save_receipts()
             _json_response(self, 200, row)
             return
         _json_response(self, 404, {"error": "not found"})
@@ -123,38 +155,45 @@ class GatewayHandler(BaseHTTPRequestHandler):
                 raise ValueError("problem and source are required")
             if not request.contest_id and not request.oj:
                 raise ValueError("oj is required for problem-mode submit")
-            if request.idempotency_key:
-                with _LOCK:
-                    for existing in _RUNS.values():
-                        if existing.get("idempotency_key") == request.idempotency_key:
-                            _json_response(self, 200, existing)
-                            return
-            poll = bool(data.get("poll", True))
-            client = _remote_client(request.oj)
-            gateway_run_id = uuid.uuid4().hex
+            fingerprint = hashlib.sha256(json.dumps({
+                "contest_id": request.contest_id, "oj": request.oj,
+                "problem": request.problem, "language": request.language,
+                "source": request.source, "open_source": request.open_source,
+            }, sort_keys=True).encode()).hexdigest()
+            # Lookup, remote side effect and publication share one serialization
+            # boundary so simultaneous retries cannot both submit.
             with _REMOTE_CALL_LOCK:
-                if poll:
-                    remote = client.submit_and_poll(request)
-                else:
-                    remote = client.submit(request)
-            row = {
-                "gateway_run_id": gateway_run_id,
-                "idempotency_key": request.idempotency_key,
-                "contest_id": request.contest_id,
-                "oj": request.oj,
-                "problem": request.problem,
-                "language": request.language,
-                "vjudge_run_id": remote.run_id,
-                **remote.to_dict(),
-            }
-            with _LOCK:
-                _RUNS[gateway_run_id] = row
+                with _LOCK:
+                    existing = next((row for row in _RUNS.values()
+                        if request.idempotency_key and row.get("idempotency_key") == request.idempotency_key), None)
+                if existing is not None:
+                    if existing.get("request_sha256") != fingerprint:
+                        _json_response(self, 409, {"error": "Idempotency key payload mismatch", "status": "failed"})
+                    else:
+                        _json_response(self, 200, existing)
+                    return
+                client = _remote_client(request.oj)
+                gateway_run_id = uuid.uuid4().hex
+                remote = client.submit_and_poll(request) if bool(data.get("poll", True)) else client.submit(request)
+                row = {
+                    "gateway_run_id": gateway_run_id, "idempotency_key": request.idempotency_key,
+                    "request_sha256": fingerprint, "contest_id": request.contest_id,
+                    "oj": request.oj, "problem": request.problem, "language": request.language,
+                    "vjudge_run_id": remote.run_id, **remote.to_dict(),
+                }
+                with _LOCK:
+                    _RUNS[gateway_run_id] = row
+                    _save_receipts()
             _json_response(self, 200, row)
         except Exception as exc:  # noqa: BLE001 - gateway boundary
             _json_response(self, 400, {"error": str(exc), "status": "failed"})
 
 
 def cmd_serve(args: argparse.Namespace) -> int:
+    global _RECEIPTS_PATH
+    _RECEIPTS_PATH = REPO_ROOT / "tmp" / "vjudge_gateway" / "receipts.json"
+    with _LOCK:
+        _load_receipts(_RECEIPTS_PATH)
     host = args.host
     port = int(args.port)
     server = ThreadingHTTPServer((host, port), GatewayHandler)

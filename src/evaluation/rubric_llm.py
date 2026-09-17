@@ -15,7 +15,8 @@ from artifacts.assets import Asset
 from artifacts.pdf_ingest import parse_pdf
 from llm import LLMAttachment, LLMRequest, RequestFn
 
-from .models import EvaluationError, EvaluationResult, Rubric, parse_evaluation_payload
+from .models import EvaluationError, EvaluationResult, Rubric
+from .structured_judge import evaluate_structured_response
 
 MediaAttach = Literal["text", "pdf", "images"]
 
@@ -161,27 +162,25 @@ class RubricDocumentEvaluator:
             and self.media == "text"
         ):
             raise EvaluationError("RubricDocumentEvaluator needs submission text or PDF.")
-        response = self.request_fn(
+        # Attachment rendering may update prompt_version; resolve it first.
+        attachments = self._attachments()
+        result = evaluate_structured_response(
+            self.request_fn,
             LLMRequest(
                 system_prompt=self._system_prompt(),
                 user_prompt=self._user_prompt(),
-                attachments=self._attachments(),
+                attachments=attachments,
                 purpose="evaluation",
                 metadata={
                     "evaluator_id": self.evaluator_id,
                     "rubric_id": self.rubric.rubric_id,
                     "media": self.media,
                 },
-            )
-        )
-        result = parse_evaluation_payload(
-            response.text,
+            ),
             rubric=self.rubric,
             evaluator_id=self.evaluator_id,
             evaluator_version=self.evaluator_version,
             prompt_version=self.prompt_version,
-            model=response.model,
-            usage=response.usage,
         )
         for limitation in self.rubric.not_observable_from_deck:
             if limitation not in result.limitations:

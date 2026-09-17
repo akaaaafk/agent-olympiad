@@ -1,4 +1,5 @@
 import ast
+import uuid
 import hashlib
 import json
 import math
@@ -39,7 +40,8 @@ from tools_search import live_web_search, looks_like_answer_lookup
 from workboard import Workboard
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DEFAULT_BENCHMARK_PATH = os.path.join(REPO_ROOT, "data", "benchmarks")
+from dataset_paths import data_root
+DEFAULT_BENCHMARK_PATH = str(data_root() / "benchmarks")
 
 TEAM_SIZE_MATRIX = {
     "iol_team": 4,
@@ -169,13 +171,7 @@ class OlympiadEnvironment:
 
         budget = resolve_contest_budget(
             competition_id,
-            max_turns=(
-                max_turns
-                if max_turns is not None
-                else self.rule_card.max_turns
-                if self.rule_card is not None
-                else None
-            ),
+            max_turns=max_turns,
             max_api_calls=max_api_calls,
             max_output_tokens_per_call=max_output_tokens_per_call,
             max_total_tokens=max_total_tokens,
@@ -220,6 +216,7 @@ class OlympiadEnvironment:
         self.submitted_by: Optional[str] = None
         self.wrong_submissions = 0
         self.submission_attempts = 0
+        self.submission_run_id = uuid.uuid4().hex
         self.remote_submission: dict[str, Any] | None = None
         self.remote_submission_source: str | None = None
         self.rule_violations: list[str] = []
@@ -322,26 +319,9 @@ class OlympiadEnvironment:
         return list(self.allowed_tools)
 
     def _tool_has_runtime_resource(self, tool: str) -> bool:
-        role = {
-            "read_lab_equipment": "lab",
-            "read_star_chart": "star",
-        }.get(tool)
-        if role is None:
-            return True
-        fixtures = self.problem_data.get("tool_fixtures") or {}
-        if role in fixtures or any(role in str(key).lower() for key in fixtures):
-            return True
-        for asset in self.problem_data.get("assets") or []:
-            if not isinstance(asset, dict):
-                continue
-            path_text = str(asset.get("path") or "")
-            label = f"{asset.get('role', '')} {path_text}".lower()
-            path = Path(path_text)
-            if not path.is_absolute():
-                path = Path(REPO_ROOT) / path
-            if role in label and path.is_file():
-                return True
-        return False
+        from runtime_resources import has_resource
+        role = {"read_lab_equipment": "lab", "read_star_chart": "star"}.get(tool)
+        return True if role is None else has_resource(self.problem_data, role)
 
     def rules_metadata(self) -> dict[str, Any]:
         metadata = self.rules_baseline.metadata()
@@ -1859,25 +1839,8 @@ class OlympiadEnvironment:
         return json.dumps(self._pdf_renderer(None, "render_pdf", {"content": content}))
 
     def _tool_asset_text(self, role_substring: str, payload: str) -> str | None:
-        """Load text/JSON assets from problem metadata for lab/star tools."""
-        needle = role_substring.lower()
-        for asset in self.problem_data.get("assets") or []:
-            role = str(asset.get("role") or "").lower()
-            path_text = str(asset.get("path") or "")
-            if needle not in role and needle not in path_text.lower():
-                continue
-            path = Path(path_text)
-            if not path.is_absolute():
-                path = Path(REPO_ROOT) / path
-            if path.is_file():
-                return path.read_text(encoding="utf-8", errors="replace")[:8000]
-        fixtures = self.problem_data.get("tool_fixtures") or {}
-        key = payload.strip() or role_substring
-        if key in fixtures:
-            return str(fixtures[key])[:8000]
-        if role_substring in fixtures:
-            return str(fixtures[role_substring])[:8000]
-        return None
+        from runtime_resources import resource_text
+        return resource_text(self.problem_data, role_substring, payload)
 
     def _submit_code(self, payload: str, *, agent_name: str) -> str:
         """Use the remote judge when configured, otherwise fall back locally."""
@@ -2017,8 +1980,8 @@ class OlympiadEnvironment:
                 }
         source, language = extract_source_and_language(answer, fallback=local_language)
         key = (
-            f"{id(self)}:{self.competition_id}:{self.problem_id}:"
-            f"{self.submission_attempts}"
+            f"{self._submission_scope()}:{self.competition_id}:{self.problem_id}:"
+            f"{hashlib.sha256(source.encode()).hexdigest()}:{language}"
         )
         return submit_via_gateway(
             contest_id=contest_for_request,
@@ -2029,6 +1992,11 @@ class OlympiadEnvironment:
             idempotency_key=key,
             poll=True,
         )
+
+    def _submission_scope(self) -> str:
+        if not getattr(self, "submission_run_id", None):
+            self.submission_run_id = uuid.uuid4().hex
+        return self.submission_run_id
 
     def record_wrong_submission(self) -> None:
         """WA/TLE/RE: burn contest clock (remove remaining time), don't stack a bonus.
@@ -2327,6 +2295,7 @@ class OlympiadEnvironment:
         self.submitted_by = None
         self.wrong_submissions = 0
         self.submission_attempts = 0
+        self.submission_run_id = uuid.uuid4().hex
         self.remote_submission = None
         self.remote_submission_source = None
         self.rule_violations.clear()

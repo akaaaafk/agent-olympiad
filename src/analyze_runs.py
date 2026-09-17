@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import hashlib
 import os
 import tempfile
 from collections import defaultdict
@@ -59,19 +60,63 @@ def _condition(row: dict[str, Any]) -> str | None:
     return None
 
 
+# These are shared experimental controls, not treatment/baseline identifiers.
+_CONTROL_FIELDS = ('provider', 'model', 'temperature', 'max_turns', 'max_api_calls',
+                   'max_tokens', 'max_output_tokens', 'protocol_version',
+                   'source_hashes', 'evaluation', 'rules_identity')
+
+
+def comparison_controls(row):
+    identity = row.get('run_identity') or {}
+    settings = identity.get('settings') or {}
+    config = settings.get('config') or {}
+    execution = settings.get('execution') or {}
+    controls = dict(row.get('comparison_controls') or {})
+    for key in _CONTROL_FIELDS:
+        # Saved resolved identity takes precedence over display labels/overrides.
+        if key in execution:
+            controls[key] = execution[key]
+        elif key in config:
+            controls[key] = config[key]
+        elif key in settings:
+            controls[key] = settings[key]
+        elif key not in controls and key in row:
+            controls[key] = row[key]
+    guidance = config.get('rule_guidance', '')
+    if 'OFFICIAL COMPETITION RULES (shared by every baseline)\n' in guidance:
+        try:
+            public = guidance.split('OFFICIAL COMPETITION RULES (shared by every baseline)\n', 1)[1]
+            public = json.JSONDecoder().raw_decode(public)[0]
+            controls['rules_identity'] = hashlib.sha256(
+                json.dumps(public, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+        except (ValueError, TypeError):
+            pass
+    # An explicit rules identity must describe public rules, not baseline policy.
+    # Never infer it from a missing hash or from a display label.
+    missing = [key for key in _CONTROL_FIELDS if key not in controls or
+               (controls[key] is None and key not in {'max_api_calls', 'max_tokens'})]
+    if execution:
+        controls['execution'] = execution
+    for key in ('seed', 'max_simulated_minutes', 'minutes_per_turn', 'action_set_version', 'module_version'):
+        for source in (row, config, settings):
+            if key in source:
+                controls[key] = source[key]
+                break
+    return controls, missing
+
+
+def _control_key(row):
+    controls, missing = comparison_controls(row)
+    if missing:
+        # Incomplete historical records are visible individually, never pooled.
+        return 'unverified:'
+    return json.dumps(controls, sort_keys=True, ensure_ascii=False, allow_nan=False)
+
+
 def _comparable_key(row: dict[str, Any]) -> tuple[Any, ...]:
-    return tuple(
-        row.get(key)
-        for key in (
-            "competition",
-            "problem_id",
-            "task_id",
-            "team",
-            "model_label",
-            "model",
-            "rules_mode",
-        )
-    )
+    return tuple(row.get(key) for key in (
+        'competition', 'problem_id', 'task_id', 'team', 'model_label', 'model', 'rules_mode'
+    )) + (_control_key(row),)
 
 
 def compute_decompositions(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -101,7 +146,13 @@ def compute_decompositions(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any
             for name in ("solo", "subagent", "team")
         }
         unavailable = [name for name, score in scores.items() if score is None]
-        if missing:
+        control_missing = comparison_controls(group[0])[1]
+        if control_missing:
+            reason = 'unverified_settings:' + ','.join(control_missing)
+            if missing:
+                reason += ';missing_or_duplicate_cells:' + ','.join(missing)
+            division = cohesion = None
+        elif missing:
             reason = "missing_or_duplicate_cells:" + ",".join(missing)
             division = cohesion = None
         elif unavailable:
@@ -156,6 +207,8 @@ def compute_decompositions(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any
                         key,
                     )
                 ),
+                "comparison_controls": comparison_controls(group[0])[0],
+                "comparison_verified": not bool(control_missing),
                 "scores": {**scores, "transcript_ceiling": ceiling},
                 "division_gain": division,
                 "cohesion_gain": cohesion,
@@ -172,12 +225,16 @@ def group_summaries(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
 
     groups: dict[tuple[Any, Any, Any, Any], list[float]] = defaultdict(list)
     counts: dict[tuple[Any, Any, Any, Any], int] = defaultdict(int)
-    for row in rows:
+    for index, row in enumerate(rows):
         key = (
             row.get("competition"),
             row.get("schema"),
             row.get("team"),
             row.get("rules_mode", "off"),
+            _control_key(row) if not comparison_controls(row)[1] else f"unverified:{index}",
+            row.get('condition') or row.get('system_variant'),
+            (row.get('run_identity') or {}).get('fingerprint'),
+            row.get('team_size'),
         )
         counts[key] += 1
         score = normalized_task_score(row)
@@ -189,6 +246,11 @@ def group_summaries(rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
             "schema": key[1],
             "team": key[2],
             "rules_mode": key[3],
+            "comparison_verified": not key[4].startswith('unverified:'),
+            "comparison_controls": json.loads(key[4]) if not key[4].startswith('unverified:') else None,
+            "condition": key[5],
+            "run_fingerprint": key[6],
+            "team_size": key[7],
             "runs": counts[key],
             "scored_runs": len(groups[key]),
             "mean_normalized_task_score": (

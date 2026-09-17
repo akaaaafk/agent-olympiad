@@ -59,6 +59,17 @@ def apply_registered_judge(
     Leaves gold matches and programming-sandbox stubs untouched. Without a
     request_fn (offline smoke), returns quick_grade unchanged.
     """
+    if (problem.get('evaluation') or {}).get('grading_policy') == 'gold_else_llm_v1':
+        if request_fn is None:
+            return quick_grade
+        from contest_manifest import ManifestTask
+        from contest_task_judge import judge_task
+        key = str(problem['problem_id'])
+        task = ManifestTask(key, key, None, str(problem.get('problem_description') or ''),
+                            str(problem.get('task_type') or ''), float(problem['total_points']), False, problem)
+        scored = judge_task(task, submission_text, request_fn)
+        return {**scored, 'correct': scored['score'] >= scored['max_score'],
+                'submitted_by': quick_grade.get('submitted_by')}
     method = quick_grade.get("method")
     if method in {"gold_substring_match", "gold_answer_v1"}:
         return quick_grade

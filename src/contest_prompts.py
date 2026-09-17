@@ -404,10 +404,10 @@ def _system_prompt(
             "unreviewed, or sample-failing candidates. In-contest review and tool "
             "rules still apply to your actions; they do not veto final collection."
         )
+    if config.rule_guidance:
+        base += "\n" + config.rule_guidance
     features = config.features
     if features.coach == "none" and not features.structured_context:
-        if config.rule_guidance:
-            return base + f"\nCONTEST RULES\n{config.rule_guidance}"
         return base
     reviewed_programming = task_family == "programming" and config.review_required
     if features.coach == "leader":
@@ -635,8 +635,6 @@ def _system_prompt(
         strategic += f"\nCOACH OPENING SUMMARY (after the opening turn; the coach has left)\n{opening_summary}"
     if card_block:
         strategic += f"\n{card_block}"
-    elif config.rule_guidance:
-        strategic += f"\nCONTEST RULES\n{config.rule_guidance}"
     if config.current_turn_only:
         strategic += "\n" + GUIDANCE
     return strategic
@@ -764,6 +762,12 @@ def _user_prompt(
             "answer_bonus after permitted team consultation. No shared work, messages, review "
             "or memory sharing during tossups. Empty spoken answers explicitly pass.\n\n"
         )
+        if session.competition_flow.public_state()["type"] == "collaborative_writing_v1":
+            submission_rule = ("WSC WRITING FLOW (enforced for every baseline): "
+                + json.dumps(session.competition_flow.public_state(), ensure_ascii=False)
+                + ("\nYou are the sole writer for all three prompts. Plan, write each response, then use start_peer_review for self-editing and review_writing_response on each response. This is self-editing, not independent peer approval. Generic work and submit are disabled. Submit all three responses using submit_writing_packet.\n\n"
+                   if config.system_variant == "single_agent" else
+                   "\nPlanning permits team discussion. During writing, use only your assigned private writing actions; no team communication. During peer review, edit only your assigned peer response. Generic work and submit are disabled. Submit three complete responses using submit_writing_packet.\n\n"))
     if _is_answer_sheet_contest(manifest):
         if config.final_review_required:
             submission_rule = (
@@ -869,7 +873,9 @@ def _user_prompt(
         f"{manifest.metadata.get('competition_description') or 'No additional format description.'}\n"
         f"TASK STATUS {status}\n"
         f"BUDGET {budget}\n\n"
-        + ("DEADLINE POLICY: Only explicit competition hand-ins count. Pending drafts "
+        + ("DEADLINE POLICY: Available WSC writing drafts are collected at the deadline; missing responses score zero.\n\n"
+           if session.competition_flow is not None and session.competition_flow.public_state()["deadline_policy"] == "collect_writing_drafts" else
+           "DEADLINE POLICY: Only explicit competition hand-ins count. Pending drafts "
            "and unspoken answers remain unsubmitted when the session ends.\n\n"
            if session.competition_flow is not None else
         "DEADLINE POLICY: When the session ends, the environment automatically "

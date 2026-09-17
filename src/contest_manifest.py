@@ -185,6 +185,11 @@ def load_contest_manifest(
         programming = task_type in {"algorithmic_programming", "programming"} or (
             evaluation.get("evaluator_id") == "programming_judge"
         )
+        # Explicit source-review adaptation submits code as a text artifact.
+        # It must never enter the live programming-judge/submission path.
+        if (evaluation.get('evaluator_id') == 'rubric_llm_v1'
+                and evaluation.get('grading_policy') == 'source_review_llm_v1'):
+            programming = False
         parts = (row.get("gold_label") or {}).get("parts") or []
         if split_parts and not programming and not parts:
             raise ValueError(f"Cannot split {problem_id}: no structured part IDs")

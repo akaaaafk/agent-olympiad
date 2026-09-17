@@ -17,6 +17,7 @@ from dataclasses import asdict, dataclass, field
 from typing import Any
 
 from llm import LLMRequest, RequestFn
+from .models import load_judge_json
 
 _SUBMISSION_ACTIONS = {"submit", "submit_code", "submit_final", "submit_run"}
 _EXCLUDED_AGENTS = {"coach", "contest_control", "contest control", "judge", "official"}
@@ -71,12 +72,12 @@ def _parse_json_object(raw: str) -> dict[str, Any]:
             lines = lines[:-1]
         text = "\n".join(lines).strip()
     try:
-        value = json.loads(text)
+        value = load_judge_json(text)
     except json.JSONDecodeError:
         start, end = text.find("{"), text.rfind("}")
         if start < 0 or end <= start:
             raise ValueError(f"Could not parse CCE judge JSON: {raw[:200]}")
-        value = json.loads(text[start : end + 1])
+        value = load_judge_json(text[start : end + 1])
     if not isinstance(value, dict):
         raise ValueError("CCE judge must return a JSON object")
     return value

@@ -111,8 +111,9 @@ MATH_CONTESTS = frozenset(
         "wmtc",
     }
 )
-DEFAULT_RULES_ROOT = REPO_ROOT / "data" / "rules"
-DEFAULT_BENCHMARK_ROOT = REPO_ROOT / "data" / "benchmarks"
+from dataset_paths import data_root
+DEFAULT_RULES_ROOT = data_root() / "rules"
+DEFAULT_BENCHMARK_ROOT = data_root() / "benchmarks"
 
 
 class ContestRulesUnavailable(ValueError):
@@ -666,28 +667,13 @@ def _row_is_complete(
 
 
 def _resolve_model(provider: str, supplied_model: str | None) -> str:
-    if supplied_model:
-        return supplied_model
-    if provider == "vectorengine":
-        from env_config import provider_config
-        return provider_config(provider)["model"]
-    if provider == "openai":
-        return os.environ.get("OPENAI_MODEL") or "gpt-4.1"
-    if provider == "openagents":
-        from env_config import openagents_config
-        return openagents_config()["model"]
-    if provider == "tinker":
-        from env_config import tinker_config
-        return tinker_config()["model"]
-    return DEFAULT_MODEL
+    from env_config import require_explicit_model
+    return require_explicit_model(supplied_model)
 
 
 def _resolve_judge_provider(agent_provider: str, judge_provider: str | None) -> str:
-    if judge_provider:
-        return judge_provider
-    if agent_provider == "tinker":
-        return "tinker"
-    return "perplexity"
+    from env_config import resolve_run_provider
+    return resolve_run_provider(agent_provider, judge_provider)
 
 
 def _judge_api_key_name(provider: str) -> str:
@@ -708,17 +694,10 @@ def _resolve_judge_model(
     agent_model: str,
     supplied_model: str | None,
 ) -> str:
+    _resolve_judge_provider(agent_provider, judge_provider)
     if supplied_model:
         return supplied_model
-    if judge_provider == agent_provider:
-        return agent_model
-    if judge_provider in {"openagents", "vectorengine"}:
-        return _resolve_model(judge_provider, None)
-    if judge_provider == "tinker":
-        return _resolve_model("tinker", None)
-    if judge_provider in {"openai", "oai"}:
-        return "gpt-4.1"
-    return DEFAULT_MODEL
+    return agent_model
 
 
 def _make_live_query(
@@ -1039,6 +1018,10 @@ def run_one(
 
 def _prepare_contest_run(args: argparse.Namespace) -> tuple:
     """Resolve the same effective contest settings for execution and reuse."""
+    from env_config import consume_run_credentials
+    consume_run_credentials(args)
+    from contest_budget import validate_temperature
+    validate_temperature(args.temperature)
     system_variant = canonical_baseline(args.system_variant)
     transport = (
         provider_action_transport(args.provider)
@@ -1077,20 +1060,9 @@ def _prepare_contest_run(args: argparse.Namespace) -> tuple:
         args.max_output_tokens = contest_budget.max_output_tokens_per_call or TINKER_DEFAULT_MAX_TOKENS
     if args.max_output_tokens <= 0:
         raise ValueError("--max-output-tokens must be positive.")
-    contest_rules = get_contest_rules(manifest.competition_id)
-    encoded_team_size = (
-        int(contest_rules.team_size)
-        if contest_rules and contest_rules.team_size.isdigit()
-        else 0
-    )
-    team_size = args.team_size or encoded_team_size or int(
-        manifest.tasks[0].benchmark.get("team_size") or 3
-    )
-    if system_variant == "single_agent":
-        team_size = 1
-    # Rule-card baselines: the card is mandatory and it also fixes the
-    # roster. Without --team-size the card's default roster is used; an
-    # explicit size outside the card's range is a configuration error.
+    from competition_guidance import fixed_team_size
+    team_size = fixed_team_size(manifest.competition_id, system_variant,
+                                requested=args.team_size, rules_root=args.rules_root)
     contest_rule_card = None
     baseline_features = BASELINES[system_variant]
     rules_mode = args.rules_mode or baseline_features.rule_card
@@ -1100,8 +1072,8 @@ def _prepare_contest_run(args: argparse.Namespace) -> tuple:
         raise ValueError("otc requires --rules-mode enforced; off/prompt_only would change its protocol")
     if rules_mode == "enforced" and baseline_features.coach != "card":
         raise ValueError("--rules-mode enforced is supported only by the otc contest baseline; use prompt_only for other baselines")
-    if rules_mode == "off" and (args.rules_root is not None or args.rules_strict):
-        raise ValueError("--rules-root/--rules-strict require an enabled --rules-mode")
+    if rules_mode == "off" and args.rules_strict:
+        raise ValueError("--rules-strict requires an enabled --rules-mode")
     baseline_features = replace(baseline_features, rule_card=rules_mode)
     if baseline_features.rule_card != "off":
         contest_rule_card = load_rule_card(manifest.competition_id, rules_root=args.rules_root)
@@ -1112,35 +1084,7 @@ def _prepare_contest_run(args: argparse.Namespace) -> tuple:
             if args.rules_strict:
                 raise ValueError(str(unavailable))
             raise unavailable
-        if not args.team_size and rules_mode == "enforced":
-            team_size = contest_rule_card.team_size_default
-        elif rules_mode == "enforced" and not (
-            contest_rule_card.team_size_min
-            <= team_size
-            <= contest_rule_card.team_size_max
-        ):
-            raise SystemExit(
-                f"--team-size {team_size} is outside the {manifest.competition_id} "
-                f"rule card range {contest_rule_card.team_size_min}-"
-                f"{contest_rule_card.team_size_max}."
-            )
-    rule_guidance = ""
-    if contest_rules:
-        rule_guidance = (
-            f"Team: {contest_rules.team_size}; duration: {contest_rules.duration}; "
-            f"tools: {contest_rules.tools_official}; scoring: "
-            f"{contest_rules.scoring_official}; penalties: "
-            f"{contest_rules.penalties_official}; search: "
-            f"{contest_rules.search_policy}."
-        )
-    if rules_mode == "prompt_only":
-        # Prompt-only exposes the card's roster without enforcing its size on
-        # the experiment's active seats.
-        visible = agent_view(contest_rule_card)
-        assert_agent_view_hides_eval(visible)
-        # The selected card is authoritative for this condition; do not append
-        # the legacy static guidance, which may describe different constraints.
-        rule_guidance = "RULE CARD (prompt_only)\n" + json.dumps(visible, ensure_ascii=False)
+    rule_guidance = ""  # Built from public competition.json after runtime settings resolve.
     brief_file = getattr(args, "coach_brief_file", None)
     try:
         shared_brief = brief_file.read_text(encoding="utf-8-sig").strip() if brief_file is not None else None
@@ -1172,6 +1116,9 @@ def _prepare_contest_run(args: argparse.Namespace) -> tuple:
         features=baseline_features,
         precontest_brief=shared_brief,
     )
+    from competition_guidance import competition_guidance
+    run_config = replace(run_config, rule_guidance=competition_guidance(
+        manifest, run_config, rules_root=args.rules_root))
     # Delivery is an environment contract, not an OTC strategy feature.
     # Inspect the card without attaching it to rule-card-off contestants.
     from artifact_contract import delivery_route
@@ -1185,7 +1132,8 @@ def _prepare_contest_run(args: argparse.Namespace) -> tuple:
     model = _resolve_model(args.provider, args.model) if args.live else "mock"
     judge_provider = _resolve_judge_provider(args.provider, args.judge_provider)
     judge_model = _resolve_judge_model(judge_provider, args.provider, model, args.judge_model)
-    judge_collab = bool(args.live and (args.judge_collab if args.judge_collab is not None else True))
+    judge_collab = bool(args.live and system_variant != 'single_agent'
+                        and (args.judge_collab if args.judge_collab is not None else True))
     judge_cce = bool(args.live and args.judge_cce)
     from contest_task_judge import task_judge_specs
     task_specs = task_judge_specs(manifest) if args.live and args.judge_task is not False else {}
@@ -1225,7 +1173,9 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--benchmark-root", type=Path, default=DEFAULT_BENCHMARK_ROOT)
     parser.add_argument("--live", action="store_true")
     parser.add_argument("--provider", choices=PROVIDERS, default="perplexity")
-    parser.add_argument("--model", default=None)
+    parser.add_argument("--model", default=None, help="Required for live runs; no default")
+    from env_config import add_run_credentials
+    add_run_credentials(parser)
     parser.add_argument(
         "--max-output-tokens",
         type=int,
@@ -1247,7 +1197,7 @@ def _build_parser() -> argparse.ArgumentParser:
         default=None,
         help=(
             "Override contest turn budget (default: official duration / 5 min "
-            "per turn, e.g. ARML 1h = 12 turns; hard cap 90)"
+            "per turn; defaults and explicit overrides are clamped to 10-90)"
         ),
     )
     parser.add_argument("--no-synthesize", action="store_true")
@@ -1283,7 +1233,7 @@ def _build_parser() -> argparse.ArgumentParser:
         "--judge-provider",
         choices=JUDGE_PROVIDERS,
         default=None,
-        help="LLM provider for task/collab judges (default: tinker when --provider tinker, else perplexity)",
+        help="Must match --provider; omitted judges inherit the solver provider.",
     )
     parser.add_argument(
         "--judge-model",
@@ -1334,7 +1284,7 @@ def _build_parser() -> argparse.ArgumentParser:
         "--team-size",
         type=int,
         default=None,
-        help="Override contest-session team size.",
+        help="Optional assertion of the fixed roster: 1 for single_agent, otherwise competition.json active_default.",
     )
     parser.add_argument(
         "--max-api-calls",
@@ -1421,7 +1371,8 @@ def _run_contest_auxiliary_judges(
 ):
     """Persist each independent judge so retries never repeat contestant execution."""
     evaluation = run_identity["settings"]["evaluation"]
-    if not (evaluation.get("judge_collab") or evaluation.get("judge_cce") or evaluation.get("task_judges")):
+    if not ((evaluation.get("judge_collab") and run_config.system_variant != 'single_agent')
+            or evaluation.get("judge_cce") or evaluation.get("task_judges")):
         return []
     from contest_reporting import metered_judge
     request_fn = metered_judge(request_fn, result)
@@ -1538,6 +1489,16 @@ def main() -> None:
     load_repo_dotenv(REPO_ROOT / ".env")
     parser = _build_parser()
     args = parser.parse_args()
+    from env_config import consume_run_credentials
+    try:
+        consume_run_credentials(args)
+    except ValueError as exc:
+        parser.error(str(exc))
+    try:
+        args.judge_provider = _resolve_judge_provider(args.provider, args.judge_provider)
+    except ValueError as exc:
+        parser.error(str(exc))
+    print(f"Run provider: {args.provider} (solver, planning/Coach, task and collaboration judges)", flush=True)
 
     if not args.contest_manifest:
         if any(value == "--system-variant" or value.startswith("--system-variant=")
@@ -1552,6 +1513,9 @@ def main() -> None:
 
     judge_task = args.judge_task if args.judge_task is not None else bool(args.live)
     judge_collab = args.judge_collab if args.judge_collab is not None else bool(args.live)
+    if (args.contest_manifest and canonical_baseline(args.system_variant) == 'single_agent'
+            or not args.contest_manifest and args.schema == 'single_agent'):
+        judge_collab = False
     judge_provider = _resolve_judge_provider(args.provider, args.judge_provider)
     try:
         model = (
@@ -1583,8 +1547,8 @@ def main() -> None:
             raise ValueError("--resume requires an explicit --output directory.")
         if args.max_output_tokens is not None and args.max_output_tokens <= 0:
             raise ValueError("--max-output-tokens must be positive.")
-        if args.temperature < 0:
-            raise ValueError("--temperature must be non-negative.")
+        from contest_budget import validate_temperature
+        validate_temperature(args.temperature)
         judge_model = _resolve_judge_model(
             judge_provider,
             args.provider,
@@ -1788,6 +1752,8 @@ def main() -> None:
         from contest_reporting import write_report
         result["report"] = write_report(out_dir, result)
         _write_json_atomic(out_dir / "contest_session.json", result)
+        from saved_run_metrics import write_metrics
+        write_metrics(out_dir, result)
         elapsed = (result.get("timing") or {}).get("elapsed_seconds")
         elapsed_text = (
             f"{float(elapsed):.1f}s" if elapsed is not None else "N/A"

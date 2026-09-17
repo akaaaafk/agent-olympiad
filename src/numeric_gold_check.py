@@ -7,7 +7,8 @@ from pathlib import Path
 from evaluation.numeric import compare_numeric, validate_spec
 
 ROOT = Path(__file__).resolve().parents[1]
-REGISTRY = 'data/judge_references/numeric_gold/fyziklani_v1.json'
+from dataset_paths import data_root
+REGISTRY = str(data_root() / 'judge_references/numeric_gold/fyziklani_v1.json')
 
 
 def load_packet(row):

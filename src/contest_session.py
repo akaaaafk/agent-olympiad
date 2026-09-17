@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import uuid
 from dataclasses import asdict, dataclass, field
 from enum import Enum
 from typing import Any, Literal
@@ -212,6 +213,7 @@ class ContestSession:
         self.competition_flow = None
         self._competition_flow_checkpoint = None
         self._flow_committing = False
+        self.submission_run_id = uuid.uuid4().hex
         self.current_turn_only = False
 
     @property
@@ -340,6 +342,8 @@ class ContestSession:
     ) -> AnswerVersion:
         task = self._require_active_task()
         self.require_visible_task(task.task_id)
+        if self.competition_flow is not None and hasattr(self.competition_flow, "require_answer_creation"):
+            self.competition_flow.require_answer_creation()
         if (self.competition_flow is not None and not self._flow_committing
                 and self.competition_flow.state["phase"] in {"tossup_open", "tossup_buzzed"}):
             raise ValueError("tossup answers must use the recognized spoken-answer action")
@@ -606,6 +610,7 @@ class ContestSession:
             "active_task_id": self._active_task_id,
             "events": [dict(event) for event in self._events],
             "final_summary": self._final_summary,
+            "submission_run_id": self.submission_run_id,
             **({"current_turn_only": True} if self.current_turn_only else {}),
             **({"competition_flow": self.competition_flow.checkpoint()}
                if self.competition_flow is not None else
@@ -653,6 +658,7 @@ class ContestSession:
         session._active_task_id = checkpoint["active_task_id"]
         session._events = [dict(event) for event in checkpoint["events"]]
         session._final_summary = checkpoint["final_summary"]
+        session.submission_run_id = checkpoint.get("submission_run_id") or session.submission_run_id
         session.current_turn_only = bool(checkpoint.get("current_turn_only", False))
         from copy import deepcopy
         session._competition_flow_checkpoint = deepcopy(checkpoint.get("competition_flow"))

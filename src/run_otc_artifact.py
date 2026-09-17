@@ -17,32 +17,50 @@ def main(argv=None):
     parser.add_argument('--rubric', type=Path)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--rules-root', type=Path)
-    parser.add_argument('--team-size', type=int)
+    parser.add_argument('--team-size', type=int,
+                        help='Optional assertion of fixed roster: 1 for single_agent, otherwise competition.json active_default')
     parser.add_argument('--max-turns', type=int)
     parser.add_argument('--max-api-calls', type=int)
-    parser.add_argument('--max-tokens', type=int, default=220000)
-    parser.add_argument('--max-output-tokens', type=int, default=8192)
+    parser.add_argument('--max-total-tokens', '--max-tokens', dest='max_tokens', type=int)
+    parser.add_argument('--max-output-tokens', type=int)
+    parser.add_argument('--temperature', type=float, default=0.2)
     parser.add_argument('--provider', default='perplexity')
-    parser.add_argument('--model')
-    parser.add_argument('--judge-provider')
+    parser.add_argument('--model', required=True)
+    from env_config import add_run_credentials
+    add_run_credentials(parser)
+    parser.add_argument('--judge-provider', help='Must match --provider; defaults to the same service')
     parser.add_argument('--judge-model')
     parser.add_argument('--resume', action='store_true')
+    parser.add_argument('--evaluation-only', action='store_true',
+                        help='With --resume, evaluate a finalized saved submission after code updates')
     parser.add_argument('--prepare-only', action='store_true')
     args = vars(parser.parse_args(argv))
     from env_config import load_repo_dotenv
     load_repo_dotenv()
+    from env_config import resolve_run_provider
+    try:
+        from env_config import consume_run_credentials
+        consume_run_credentials(args)
+        args['judge_provider'] = resolve_run_provider(args['provider'], args['judge_provider'])
+    except ValueError as exc:
+        parser.error(str(exc))
+    print(f"Run provider: {args['provider']} (solver, planning/Coach, task and collaboration judges)", flush=True)
     resume, prepare = args.pop('resume'), args.pop('prepare_only')
+    evaluation_only = args.pop('evaluation_only')
+    if evaluation_only and not resume:
+        parser.error('--evaluation-only requires --resume')
     run = prepare_artifact_run(**args)
     if prepare:
         print(json.dumps({'identity': run['identity']['fingerprint'],
                           'kind': run['contract'].kind, 'team_size': run['config'].team_size,
                           'turns': run['config'].max_turns, 'api_calls': run['config'].max_api_calls}))
         return 0
-    result = run_artifact_contest(run, resume=resume,
+    result = run_artifact_contest(run, resume=resume, evaluation_only=evaluation_only,
         agent_request=resolve_request_fn(provider=run['provider'], model=run['model'],
-                                        max_output_tokens=run['max_output_tokens']),
+                                        max_output_tokens=run['max_output_tokens'],
+                                        temperature=run['temperature']),
         judge_request=resolve_request_fn(provider=run['judge_provider'], model=run['judge_model'],
-                                        max_output_tokens=run['max_output_tokens']))
+                                        max_output_tokens=run['max_output_tokens'], temperature=0.2))
     print(json.dumps({'status': result['status'], 'output': str(args['output'])}))
     return 0 if result['status'] == 'complete' else 2
 

@@ -161,6 +161,9 @@ class ContestRunConfig:
     )
 
     def __post_init__(self) -> None:
+        from contest_budget import validate_positive_budget
+        for name in ('max_api_calls', 'max_tokens', 'max_simulated_minutes'):
+            validate_positive_budget(name, getattr(self, name))
         validate_computer_capacity(self.computer_capacity)
         if self.team_size < 1 or self.max_turns < 1:
             raise ValueError("team_size and max_turns must be positive")

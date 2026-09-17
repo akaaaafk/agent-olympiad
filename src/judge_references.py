@@ -6,13 +6,14 @@ from dataclasses import replace
 from llm import LLMAttachment
 
 ROOT = Path(__file__).resolve().parents[1]
+from dataset_paths import data_root
 
 
 def benchmark_for_asset(competition, digest):
-    index = ROOT / 'data/judge_references/winners/index.json'
+    index = data_root() / 'judge_references/winners/index.json'
     if index.exists() and any(r['sha256'] == digest for r in json.loads(index.read_text(encoding='utf-8'))['records']):
         raise ValueError('Awarded work cannot be used as a contestant task PDF')
-    path = ROOT / 'data/benchmarks' / competition / 'benchmark.json'
+    path = data_root() / 'benchmarks' / competition / 'benchmark.json'
     if not path.exists():
         return None
     rows = json.loads(path.read_text(encoding='utf-8'))
@@ -28,7 +29,7 @@ def benchmark_for_asset(competition, digest):
 
 
 def winner_references(problem_id):
-    index = ROOT / 'data/judge_references/winners/index.json'
+    index = data_root() / 'judge_references/winners/index.json'
     if not index.exists() or not problem_id:
         return []
     records = json.loads(index.read_text(encoding='utf-8'))['records']

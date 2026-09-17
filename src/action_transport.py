@@ -23,7 +23,15 @@ def request_single_action(request_fn: RequestFn, request: LLMRequest) -> LLMResp
     calls_used = tokens_used = retries = 0
     input_tokens_used = 0
     rejected = []
-    current = request
+    remaining_output = request.metadata.get("max_transport_output_tokens")
+    if budget == 0 or remaining_output == 0:
+        return LLMResponse("", "", "", usage={"api_calls": 0, "output_tokens": 0,
+                           "tool_error": "Action transport budget exhausted"})
+    initial_metadata = dict(request.metadata)
+    if remaining_output is not None:
+        initial_metadata["max_output_tokens_override"] = min(int(remaining_output),
+            int(initial_metadata.get("max_output_tokens_override") or remaining_output))
+    current = replace(request, metadata=initial_metadata)
     for attempt in range(2):
         response = request_fn(current)
         exhausted = response.usage.get("finish_reason") == "length"
@@ -71,6 +79,7 @@ def request_single_action(request_fn: RequestFn, request: LLMRequest) -> LLMResp
                 "\n\nACTION RESPONSE REJECTED\nYour reasoning output hit its token limit. "
                 "No action executed. Return exactly one available function call with concise arguments.",
                 metadata={**request.metadata, "max_output_tokens_override": increased_limit,
+                          "max_transport_output_tokens": remaining,
                           "max_transport_attempts": None if budget is None else budget - calls_used})
             continue
         current = replace(request, user_prompt=(
@@ -82,6 +91,7 @@ def request_single_action(request_fn: RequestFn, request: LLMRequest) -> LLMResp
             + serialized
             + "\nReturn only your selected single call, then wait for its result."
         ), metadata={**request.metadata,
+                     "max_transport_output_tokens": remaining,
                      **({"max_output_tokens_override": min(remaining,
                          int(response.usage.get("max_output_tokens") or remaining))}
                         if remaining is not None else {}),

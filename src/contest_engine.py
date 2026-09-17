@@ -13,6 +13,7 @@ import otc_runtime
 import automatic_memory
 import contest_observation
 import problem_pdf
+from contest_adapters import EnvironmentTaskExecutor
 from answer_identity import WORK_TASK_BINDING_VERSION
 from action_modules.coach import prepare_brief
 from action_modules.contracts import ArgumentSpec
@@ -135,6 +136,8 @@ class _ContestEngine:
                 and not session_checkpoint.get("current_turn_only")):
             raise ValueError("current-turn-only context requires a new run or a matching checkpoint")
         self.session.current_turn_only = self.config.current_turn_only
+        if callable(getattr(action_request_fn, "bind_session", None)):
+            action_request_fn.bind_session(self.session)
         if not self.session.budget.wall_started_at:
             self.session.budget.wall_started_at = self.segment_started_at
         self.prior_wall_seconds = float(self.session.budget.wall_seconds_used or 0.0)
@@ -165,6 +168,8 @@ class _ContestEngine:
         self.transport_retries = 0
         self.transport_failures = 0
         self.executor = task_action_executor or _default_executor
+        if isinstance(self.executor, EnvironmentTaskExecutor):
+            self.executor.submission_run_id = self.session.submission_run_id
         self.strategic_policy = StrategicPolicy(stall_turns=self.config.stall_turns)
         self.archived_events = self.memory.archival_snapshot()["events"]
         self.final_review_started = any(
@@ -203,7 +208,12 @@ class _ContestEngine:
         self.policy = self.config.otc_policy
         self.card = self.config.rule_card if self.policy is not None else None
         self.programming_contest = any(task.programming for task in self.manifest.tasks)
-        if self.policy is not None and "submit_code" in self.policy.allowed_actions and not self.programming_contest:
+        source_review_only = bool(self.manifest.tasks) and all(
+            t.benchmark.get('evaluation', {}).get('evaluator_id') == 'rubric_llm_v1'
+            and t.benchmark.get('evaluation', {}).get('grading_policy') == 'source_review_llm_v1'
+            for t in self.manifest.tasks)
+        if (self.policy is not None and "submit_code" in self.policy.allowed_actions
+                and not self.programming_contest and not source_review_only):
             raise ValueError(
                 f"rule card for {self.manifest.competition_id} allows submit_code but the "
                 "manifest has no programming task"
@@ -1817,7 +1827,7 @@ class _ContestEngine:
                 "programming_workflow_v4" if self.config.review_required and any(task.programming for task in self.manifest.tasks)
                 else None
             ),
-            "deadline_policy": ("explicit_handins_only" if self.competition_flow else
+            "deadline_policy": (self.competition_flow.public_state()["deadline_policy"] if self.competition_flow else
                                 "attempt_available_candidates_v1" if self.config.deadline_submit else "disabled"),
             **({"competition_flow": self.competition_flow.public_state()} if self.competition_flow else {}),
             "deadline_submit": self.config.deadline_submit,

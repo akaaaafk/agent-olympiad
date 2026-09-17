@@ -23,6 +23,7 @@ from evaluation.rubric_llm import RubricDocumentEvaluator
 from evaluation.finalize import _reference_text
 from llm import LLMAttachment, LLMRequest, provider_capabilities, pdf_text_request
 from rules.loader import load_rule_card
+from dataset_paths import data_root
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -63,24 +64,26 @@ def _write(path, value):
 
 def prepare_artifact_run(*, competition, task_pdf, output, rubric=None, task_pages=None,
                          task_text='', team_size=None, max_turns=None, max_api_calls=None,
-                         max_tokens=220000, provider='perplexity', model=None,
+                         max_tokens=None, provider='perplexity', model=None,
                          judge_provider=None, judge_model=None, rules_root=None,
-                         max_output_tokens=8192, system_variant='otc'):
+                         max_output_tokens=None, system_variant='otc', temperature=0.2):
     system_variant = canonical_baseline(system_variant)
     aliases = {'pplx': 'perplexity', 'oai': 'openai', 'tml': 'tinker'}
     provider = aliases.get(provider, provider)
-    judge_provider = aliases.get(judge_provider, judge_provider) or provider
+    from env_config import resolve_run_provider
+    judge_provider = resolve_run_provider(provider, judge_provider)
     if provider not in {'perplexity', 'openai', 'openagents', 'tinker'} or judge_provider not in {'perplexity', 'openai', 'openagents', 'tinker'}:
         raise ValueError('Artifact runner requires a PDF/image-capable provider')
-    from env_config import openagents_config
-    defaults = {'perplexity': 'openai/gpt-5.4', 'openai': 'gpt-4.1'}
-    if 'openagents' in {provider, judge_provider}:
-        defaults['openagents'] = openagents_config()['model']
-    if 'tinker' in {provider, judge_provider}:
-        from env_config import tinker_config
-        defaults['tinker'] = tinker_config()['model']
-    model = model or defaults[provider]
-    judge_model = judge_model or (model if judge_provider == provider else defaults[judge_provider])
+    from env_config import require_explicit_model
+    model = require_explicit_model(model)
+    judge_model = require_explicit_model(judge_model) if judge_model is not None else model
+    from contest_budget import resolve_contest_budget
+    budget = resolve_contest_budget(competition, max_turns=max_turns,
+        max_api_calls=max_api_calls, max_total_tokens=max_tokens)
+    if max_output_tokens is None:
+        max_output_tokens = budget.max_output_tokens_per_call or 8192
+    from contest_budget import validate_temperature
+    validate_temperature(temperature)
     if max_output_tokens <= 0:
         raise ValueError('max_output_tokens must be positive')
     card = load_rule_card(competition, rules_root=rules_root, required=True)
@@ -93,7 +96,8 @@ def prepare_artifact_run(*, competition, task_pdf, output, rubric=None, task_pag
     if benchmark:
         from evaluation_readiness import require_ready
         require_ready([benchmark])
-    references = winner_references(benchmark.get('problem_id') if benchmark else None)
+    references = ([] if (benchmark or {}).get('evaluation', {}).get('reference_policy') == 'rubric_only'
+                  else winner_references(benchmark.get('problem_id') if benchmark else None))
     if benchmark and rubric is None and (benchmark.get('evaluation') or {}).get('rubric_path'):
         rubric_path = ROOT / benchmark['evaluation']['rubric_path']
         rubric_obj = load_rubric(rubric_path)
@@ -116,29 +120,42 @@ def prepare_artifact_run(*, competition, task_pdf, output, rubric=None, task_pag
             task_asset.page_end - task_asset.page_start + 1 > 20):
         raise ValueError('Image rubric judge supports up to 20 task pages; select --task-pages '
                          'explicitly or use a PDF-capable judge provider')
-    count = team_size if team_size is not None else (1 if system_variant == 'single_agent' else card.team_size_default)
-    turns = max_turns if max_turns is not None else int(card.simulation['max_turns'])
-    config = ContestRunConfig(system_variant, count, turns, max_api_calls=max_api_calls,
-                              max_tokens=max_tokens,
+    from competition_guidance import fixed_team_size
+    count = fixed_team_size(competition, system_variant, requested=team_size, rules_root=rules_root)
+    config = ContestRunConfig(system_variant, count, budget.max_turns,
+                              max_api_calls=budget.max_api_calls,
+                              max_tokens=budget.max_total_tokens,
                               rule_card=card if system_variant in {'otc', 'vallina_otc'} else None,
-                              minutes_per_turn=0)
+                              minutes_per_turn=budget.minutes_per_turn,
+                              max_simulated_minutes=max(budget.duration_minutes or 0,
+                                  budget.max_turns * budget.minutes_per_turn),
+                              submission_turn=budget.max_turns)
     if config.otc_policy is not None and config.otc_policy.char_limit('work') < contract.max_source_chars:
         raise ValueError('Rule card work limit is smaller than artifact source limit')
+    task_instructions = task_text or 'Solve the attached official task and produce the required deliverable.'
+    benchmark_instructions = (benchmark or {}).get('evaluation', {}).get('benchmark_instructions')
+    if benchmark_instructions:
+        task_instructions += '\n\n' + str(benchmark_instructions)
     manifest = ContestManifest(f'{competition}-artifact', competition, (
         ManifestTask('deliverable', 'deliverable', None,
-                     task_text or 'Solve the attached official task and produce the required deliverable.',
+                     task_instructions,
                      'artifact', rubric_obj.total_points, False, {}),
     ), metadata={'task_family': 'general', 'artifact_contract': asdict(contract)})
+    from competition_guidance import competition_guidance
+    config = replace(config, rule_guidance=competition_guidance(manifest, config, rules_root=rules_root))
     identity = build_run_identity(manifest, config, execution={
         'pipeline': contract.version, 'provider': provider, 'model': model,
-        'max_output_tokens': max_output_tokens,
+        'max_output_tokens': max_output_tokens, 'temperature': temperature,
         'action_transport': provider_capabilities(provider).action_transport,
         'task_delivery': task_delivery,
-        'budget_basis': 'rule-card simulation rounds; no inferred official clock',
+        'budget_basis': 'contest_budget: duration-derived defaults, 5 minutes/turn, 10-90 turns',
         'task_pdf_sha256': task_asset.sha256,
         'compiler_identity': compiler_identity,
         'task_pages': [task_asset.page_start, task_asset.page_end],
     }, evaluation={'provider': judge_provider or provider, 'model': judge_model,
+                   'temperature': 0.2,
+                   'judge_collab': system_variant != 'single_agent',
+                   'required_metrics_version': 0 if system_variant == 'single_agent' else 1,
                    'rubric_sha256': file_sha256(rubric_path),
                    'benchmark_problem_id': (benchmark or {}).get('problem_id'),
                    'benchmark_reference_sha256': content_hash(_reference_text(benchmark or {})),
@@ -147,7 +164,8 @@ def prepare_artifact_run(*, competition, task_pdf, output, rubric=None, task_pag
                 benchmark=benchmark, winner_references=references,
                 config=config, manifest=manifest, identity=identity, output=Path(output),
                 provider=provider, judge_provider=judge_provider or provider,
-                model=model, judge_model=judge_model, max_output_tokens=max_output_tokens)
+                model=model, judge_model=judge_model, max_output_tokens=max_output_tokens,
+                temperature=temperature)
 
 
 def _attachments(asset, provider, work_dir, role='agent_visible'):
@@ -167,7 +185,7 @@ def _evaluation_binding(identity, receipt, evaluation):
             'evaluation_sha256': content_hash(evaluation)}
 
 
-def _validate_completed_result(prepared, result, output):
+def _validate_completed_result(prepared, result, output, *, require_metrics=True):
     """Certify the result snapshot, not just the directory's identity file."""
     validate_run_identity(result.get('run_identity'), prepared['identity'],
                           artifact=output / 'result.json')
@@ -196,15 +214,93 @@ def _validate_completed_result(prepared, result, output):
         checked = EvaluationResult(**{**evaluation, 'criteria': [
             CriterionResult(**item) for item in evaluation['criteria']]})
         checked.validate(rubric)
+        if require_metrics and (prepared['identity']['settings'].get('evaluation', {}).get('required_metrics_version')
+                                or result.get('coordination_required')):
+            from saved_run_metrics import coordination_complete
+            if not coordination_complete(output, result):
+                raise ValueError('Required collaboration evaluation is pending')
     except (KeyError, TypeError, OSError) as exc:
         raise ValueError(f'Incomplete completed artifact: {exc}') from exc
 
 
+def _coordination_context(prepared, output, contest, judge_request):
+    if contest.get('system_variant') == 'single_agent':
+        return '', judge_request
+    text_path = output / 'task_extracted.txt'
+    if not text_path.exists():
+        text_path = output / 'coordination_task.txt'
+        if not text_path.exists():
+            asset = prepared['task_asset']
+            try:
+                packet = pdf_text_request(LLMRequest('', '\n\n'.join(t.prompt for t in prepared['manifest'].tasks),
+                    attachments=(LLMAttachment(asset.path, 'application/pdf', page_start=asset.page_start,
+                                               page_end=asset.page_end),)))
+                text = packet.user_prompt
+            except ValueError:
+                # Visual providers can solve scanned tasks. Do not require text
+                # extraction for their post-contest collaboration evaluation.
+                text = '\n\n'.join(t.prompt for t in prepared['manifest'].tasks)
+                _write(output / 'coordination_task_assets.json', dict(path=str(asset.path.resolve()),
+                    sha256=asset.sha256, pages=[asset.page_start, asset.page_end]))
+            text_path.write_text(text, encoding='utf-8')
+    task_text = text_path.read_text(encoding='utf-8')
+    from saved_run_metrics import task_context_judge
+    judge_request = task_context_judge(output, contest, judge_request, prepared['judge_provider'])
+    return task_text, judge_request
+
+
+def _finish_required_metrics(prepared, result, output, judge_request):
+    from saved_run_metrics import ensure_coordination, write_metrics
+    contest = json.loads((output / 'contest_session.json').read_text(encoding='utf-8'))
+    task_text, judge_request = _coordination_context(prepared, output, contest, judge_request)
+    saved = ensure_coordination(output, result=result, task_text=task_text,
+        judge_request=judge_request, judge_provider=prepared['judge_provider'],
+        judge_model=prepared['judge_model'])
+    result['coordination_required'] = contest.get('system_variant') != 'single_agent'
+    result['evaluation_pending'] = [] if saved['status'] in {'complete', 'not_applicable'} else ['coordination']
+    result['coordination'] = saved.get('coordination')
+    result['coordination_evaluation_usage'] = saved.get('evaluation_usage')
+    result['required_metrics'] = write_metrics(output, contest, result, saved)
+    if result.get('graded'):
+        result['status'] = 'evaluation_pending' if result['evaluation_pending'] else 'complete'
+    elif result['evaluation_pending']:
+        result['status'] = 'evaluation_pending'
+    else:
+        result['status'] = 'unsubmitted'
+    _write(output / 'result.json', result)
+    return result
+
+
 def run_artifact_contest(prepared, *, agent_request, judge_request, resume=False,
-                         renderer=None):
+                         renderer=None, evaluation_only=False):
     p = prepared
     output = p['output'].resolve()
     identity_path = output / 'run_identity.json'
+    if evaluation_only:
+        if not resume:
+            raise ValueError('evaluation_only requires resume')
+        # Completed solver work is immutable. Permit source changes only for
+        # explicit re-evaluation, recording the current evaluator provenance.
+        stored = json.loads(identity_path.read_text(encoding='utf-8'))
+        validate_run_identity(stored, stored, artifact=identity_path)
+        session_path = output / 'contest_session.json'
+        contest = json.loads(session_path.read_text(encoding='utf-8'))
+        validate_run_identity(contest.get('run_identity'), stored, artifact=session_path)
+        if (contest.get('session_checkpoint') or {}).get('final_summary') is None:
+            raise ValueError('evaluation_only requires finalized contestants')
+        settings = dict(p['identity']['settings'])
+        for key in ('source_hashes', 'action_set_version', 'protocol_version', 'module_version'):
+            settings[key] = stored['settings'][key]
+        # An explicitly supplied archived rubric is equivalent only when its
+        # byte hash matches the original; the hash remains strictly checked.
+        settings['evaluation'] = dict(settings['evaluation'])
+        settings['evaluation']['rubric_override'] = stored['settings']['evaluation']['rubric_override']
+        validate_run_identity(stored, {'settings': settings, 'fingerprint': content_hash(settings)},
+                              artifact=identity_path)
+        with (output / 'evaluation_resume_identity.jsonl').open('a', encoding='utf-8') as stream:
+            stream.write(json.dumps({'solver_identity': stored['fingerprint'],
+                'evaluation_identity': p['identity']}, ensure_ascii=False) + '\n')
+        p = dict(p, identity=stored)
     if output.exists() and any(output.iterdir()):
         if not resume or not identity_path.is_file():
             raise ValueError('Nonempty output requires --resume and a matching run identity')
@@ -216,13 +312,15 @@ def run_artifact_contest(prepared, *, agent_request, judge_request, resume=False
     _write(identity_path, p['identity'])
     if (output / 'result.json').is_file():
         result = json.loads((output / 'result.json').read_text(encoding='utf-8'))
-        if result.get('status') == 'complete':
-            _validate_completed_result(p, result, output)
-            return result
+        if result.get('status') == 'complete' or result.get('graded') and result.get('status') == 'evaluation_pending':
+            _validate_completed_result(p, result, output, require_metrics=False)
+            return _finish_required_metrics(p, result, output, judge_request)
+        if result.get('status') in {'unsubmitted', 'evaluation_pending'} and not result.get('graded'):
+            return _finish_required_metrics(p, result, output, judge_request)
     renderer = renderer or ArtifactRenderer(output / 'versions', p['contract'])
     if p['contract'].source_format == 'latex' and getattr(renderer, 'compiler_identity', None) != p['identity']['settings']['execution']['compiler_identity']:
         raise ValueError('LaTeX compiler changed after preflight; prepare a fresh run')
-    executor = EnvironmentTaskExecutor(p['manifest'], benchmark_root=ROOT / 'data/benchmarks',
+    executor = EnvironmentTaskExecutor(p['manifest'], benchmark_root=data_root() / 'benchmarks',
                                       renderer=renderer, rule_card=p['card'])
     task_attachments = _attachments(p['task_asset'], p['provider'], output / 'task_pages')
     if provider_capabilities(p['provider']).pdf_text:
@@ -233,6 +331,7 @@ def run_artifact_contest(prepared, *, agent_request, judge_request, resume=False
             'text_sha256': sha256(packet.user_prompt.encode('utf-8')).hexdigest(),
             'pages': [p['task_asset'].page_start, p['task_asset'].page_end],
             'limitations': ['Text extraction can lose diagrams, equations and layout; no OCR.']})
+    live_session = None
     review_attachment_cache = {}
     checkpoint = None
     checkpoint_path = output / 'contest_checkpoint.json'
@@ -246,6 +345,12 @@ def run_artifact_contest(prepared, *, agent_request, judge_request, resume=False
 
     def invoke(fn, request):
         response = fn(request)
+        if request.purpose == 'evaluation':
+            # Persist before parsing so malformed responses remain diagnosable.
+            with (output / 'judge_responses.jsonl').open('a', encoding='utf-8') as stream:
+                stream.write(json.dumps({'model': response.model, 'usage': response.usage,
+                    'metadata': request.metadata, 'text': response.text},
+                    ensure_ascii=False) + '\n')
         with calls_path.open('a', encoding='utf-8') as stream:
             stream.write(json.dumps({'purpose': request.purpose, 'model': response.model,
                 'usage': response.usage, 'tool_calls': [asdict(x) for x in response.tool_calls]},
@@ -256,7 +361,13 @@ def run_artifact_contest(prepared, *, agent_request, judge_request, resume=False
         if coach:
             return request  # Coach must never see the task PDF or rendered answer.
         attachments = task_attachments
-        if renderer.latest:
+        visible = bool(renderer.latest)
+        if visible and p['config'].current_turn_only:
+            visible = live_session is not None and any(
+                live_session.version_created_this_turn(version.version_hash)
+                and sha256(version.content.encode('utf-8')).hexdigest() == renderer.latest['source_sha256']
+                for task in live_session.tasks for version in task.versions)
+        if visible:
             key = renderer.latest['source_sha256']
             if key not in review_attachment_cache:
                 asset = build_task_asset(Path(renderer.latest['pdf']))
@@ -274,6 +385,10 @@ def run_artifact_contest(prepared, *, agent_request, judge_request, resume=False
 
     def act(request):
         return invoke(agent_request, decorate(request))
+    def bind_session(session):
+        nonlocal live_session
+        live_session = session
+    act.bind_session = bind_session
     act.supports_attachments = provider_capabilities(p['provider']).attachments
     act.supports_pdf_text = provider_capabilities(p['provider']).pdf_text
 
@@ -296,13 +411,14 @@ def run_artifact_contest(prepared, *, agent_request, judge_request, resume=False
         _write(session_path, contest)
     source = contest['submissions'].get('deliverable', '')
     if not source:
-        result = dict(status='unsubmitted', graded=False,
+        result = dict(status='evaluation_pending', graded=False,
+                      coordination_required=True, evaluation_pending=['coordination'],
                       reason='No artifact candidate was available for submission',
                       contest_file=str(session_path), run_identity=p['identity'])
         result['submission_diagnostics'] = submission_diagnostics(
             contest['session_checkpoint']['tasks'][0], p['config'].review_required)
         _write(output / 'result.json', result)
-        return result
+        return _finish_required_metrics(p, result, output, judge_request)
     task = contest['session_checkpoint']['tasks'][0]
     latest = task['versions'][-1]
     current_reviews = [r for r in task['reviews'] if not r['stale']
@@ -320,8 +436,11 @@ def run_artifact_contest(prepared, *, agent_request, judge_request, resume=False
         raise ValueError('Submitted artifact lacks current independent approval/render evidence')
     receipt = renderer(None, 'render_pdf', {'content': source})
     rubric = load_rubric(p['rubric'])
+    from contest_reporting import metered_judge
+    task_judge_state = {}
+    measured_task_judge = metered_judge(judge_request, task_judge_state)
     def judge(request):
-        return invoke(judge_request, request)
+        return invoke(measured_task_judge, request)
     _write(output / 'evaluation_status.json', {'status': 'started', 'pdf_sha256': receipt['pdf_sha256']})
     from judge_references import with_rule_context
     judge = with_rule_context(judge, p['card'].rules_text)
@@ -348,12 +467,19 @@ def run_artifact_contest(prepared, *, agent_request, judge_request, resume=False
     except Exception as exc:
         _write(output / 'evaluation_status.json', {'status': 'failed', 'error': str(exc)})
         raise
-    result = dict(status='complete', graded=True, artifact=receipt, evaluation=evaluation,
+    result = dict(status='evaluation_pending', graded=True, artifact=receipt, evaluation=evaluation,
+                  official_score_equivalent=False,
+                  coordination_required=True, evaluation_pending=['coordination'],
                   run_identity=p['identity'], contest_file=str(session_path),
                   comparability=p['card'].comparability,
                   scope='artifact-only proxy; does not score live/physical performance',
                   generation_budget=contest['budget'], judge_budget_separate=True)
+    benchmark_evaluation = (p.get('benchmark') or {}).get('evaluation') or {}
+    for key in ('grading_scope', 'score_basis', 'execution_verified'):
+        if key in benchmark_evaluation:
+            result[key] = benchmark_evaluation[key]
+    result['task_evaluation_usage'] = task_judge_state.get('evaluation_usage')
     result['evaluation_binding'] = _evaluation_binding(p['identity'], receipt, evaluation)
     _write(output / 'result.json', result)
     _write(output / 'evaluation_status.json', {'status': 'complete'})
-    return result
+    return _finish_required_metrics(p, result, output, judge_request)

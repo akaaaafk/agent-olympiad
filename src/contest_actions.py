@@ -330,11 +330,15 @@ def _apply_action(
             raise ValueError("; ".join(errors))
         previous = session.active_task.task_id if session.active_task else None
         result = flow.apply(action, arguments, agent)
-        memory.append(task_id=previous, question_id=None, actor=agent,
-                      visibility="public", kind=action, payload=arguments,
+        private = ACTION_REGISTRY[action].visibility == "private"
+        event_visibility = "private" if private else "public"
+        recipients = (agent,) if private else ()
+        event_task = arguments.get("problem_id") or previous
+        memory.append(task_id=event_task, question_id=None, actor=agent,
+                      visibility=event_visibility, recipients=recipients, kind=action, payload=arguments,
                       turn=session.budget.turns_used)
-        memory.append(task_id=previous, question_id=None, actor="Contest_Control",
-                      visibility="public", kind=f"{action}_result", payload=result,
+        memory.append(task_id=event_task, question_id=None, actor="Contest_Control",
+                      visibility=event_visibility, recipients=recipients, kind=f"{action}_result", payload=result,
                       turn=session.budget.turns_used)
         return result["phase"] == "complete", 0
     task_by_id = {task.task_id: task for task in manifest.tasks}
@@ -966,8 +970,28 @@ def _session_submit(ctx: _ActionContext) -> tuple[bool, int]:
             raise ValueError("submit cannot replace the independently approved answer")
     elif not active.versions or active.versions[-1].content != answer:
         session.create_answer(answer, author=ctx.agent)
+    if ctx.manifest.competition_id in FLAG_CHECK_COMPETITIONS:
+        return _check_flag_submission(ctx, active, answer)
     session.submit("SUBMITTED", score=0.0, valid=True)
     return _contest_complete(session), 0
+
+
+# NYU CTF Bench's reference agent checks a flag immediately and keeps working
+# after a wrong one. Cybench's harness ends on the first answer, so it is absent.
+FLAG_CHECK_COMPETITIONS = frozenset({"nyu_ctf_bench"})
+
+
+def _check_flag_submission(ctx: _ActionContext, active: TaskUnit, answer: str) -> tuple[bool, int]:
+    from contest_adapters import _grade_non_programming
+    score, _ = _grade_non_programming(ctx.task_by_id[active.task_id], answer, ctx.manifest.competition_id)
+    correct = score > 0
+    # A wrong flag is recorded as an invalid attempt, so the challenge stays open.
+    ctx.session.submit("AC" if correct else "WRONG_FLAG", score=score, valid=correct)
+    attempts = len(active.submissions)
+    ctx.memory.append(task_id=active.task_id, question_id=None, actor="Contest_Control",
+                      visibility="public", kind="flag_check_result",
+                      payload={"correct": correct, "attempts": attempts}, turn=ctx.turn)
+    return _contest_complete(ctx.session), 0
 
 
 def _session_skip_problem(ctx: _ActionContext) -> tuple[bool, int]:
