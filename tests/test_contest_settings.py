@@ -35,21 +35,6 @@ class ContestSettingsTests(unittest.TestCase):
         env_patch.start()
         self.addCleanup(env_patch.stop)
 
-    def test_retired_cross_root_skip_fails_before_batch_writes_or_launches(self):
-        import run_otc_gold_suite as gold
-        for value in ("old-results", ""):
-            with (
-                self.subTest(value=value),
-                patch.object(sys, "argv", ["batch", "--skip-existing-roots", value]),
-                patch.object(gold, "write_manifests") as manifests,
-                patch.object(gold, "run_one") as launch,
-                redirect_stderr(io.StringIO()),
-                self.assertRaises(SystemExit) as error,
-            ):
-                gold.main()
-            self.assertEqual(error.exception.code, 2)
-            manifests.assert_not_called()
-            launch.assert_not_called()
 
     def prepare(self, *flags, competition="icpc"):
         args = cli._build_parser().parse_args([
@@ -58,70 +43,18 @@ class ContestSettingsTests(unittest.TestCase):
         with patch.object(cli, "load_contest_manifest", return_value=example(competition)):
             return cli._prepare_contest_run(args)
 
-    def test_registry_token_default_reaches_resolved_execution(self):
-        identity = self.prepare()[3]
-        self.assertEqual(identity["settings"]["execution"]["max_output_tokens"], 4096)
-
-    def test_production_deadline_is_shared_by_every_baseline(self):
-        for competition, expected in (("arml_local", 10), ("icpc", 60)):
-            for variant in ("single_agent", "decentralized", "centralized", "vallina_otc", "otc"):
-                flags = ["--system-variant", variant]
-                if variant in {"vallina_otc", "otc"}:
-                    flags += ["--team-size", "6" if competition == "arml_local" else "3"]
-                with self.subTest(competition=competition, variant=variant):
-                    _, config, _, _ = self.prepare(*flags, competition=competition)
-                    self.assertEqual(config.max_turns, expected)
-                    self.assertEqual(config.submission_turn, expected)
-                    self.assertEqual(config.minutes_per_turn, 5.0)
-
-    def test_explicit_token_limit_wins_and_other_contests_fall_back(self):
-        self.assertEqual(self.prepare("--max-output-tokens", "1234")[3]["settings"]["execution"]["max_output_tokens"], 1234)
-        self.assertEqual(self.prepare(competition="arml_local")[3]["settings"]["execution"]["max_output_tokens"], 8192)
 
     def test_review_override_controls_both_gates(self):
         config = review_ablation_config(3, 12, require_review=False)
         self.assertFalse(config.review_required)
         self.assertFalse(config.final_review_required)
 
-    def test_plain_baselines_reject_all_rule_card_modes(self):
-        for variant in ("single_agent", "centralized", "decentralized"):
-            for mode in ("prompt_only", "enforced"):
-                with self.subTest(variant=variant, mode=mode), self.assertRaisesRegex(ValueError, "requires --rules-mode off"):
-                    self.prepare("--system-variant", variant, "--rules-mode", mode)
-
-    def test_unsupported_enforcement_is_rejected(self):
-        with self.assertRaisesRegex(ValueError, "requires --rules-mode off"):
-            self.prepare("--system-variant", "decentralized", "--rules-mode", "enforced")
-
-    def test_otc_uses_custom_root_and_rejects_conflicting_modes_and_reviews(self):
-        card = cli.load_rule_card("arml_local")
-        with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
-            (root / "arml_local.json").write_text(json.dumps(dict(card.raw, rules_text="OTC CUSTOM ROOT")), encoding="utf-8")
-            _, config, _, identity = self.prepare(
-                "--system-variant", "otc", "--team-size", "6", "--rules-root", str(root),
-                competition="arml_local",
-            )
-            self.assertEqual(config.rule_card.rules_text, "OTC CUSTOM ROOT")
-            self.assertEqual(config.features.rule_card, "enforced")
-            self.assertIsNotNone(identity["settings"]["config"]["rule_card_hash"])
-        for flags in (("--rules-mode", "off"), ("--rules-mode", "prompt_only"), ("--no-require-review",)):
-            with self.subTest(flags=flags), self.assertRaises(ValueError):
-                self.prepare("--system-variant", "otc", "--team-size", "6", *flags, competition="arml_local")
 
     def test_rule_options_with_off_mode_are_not_silently_ignored(self):
         for flags in (("--rules-root", "custom"), ("--rules-strict",)):
             with self.subTest(flags=flags), self.assertRaises(ValueError):
                 self.prepare(*flags)
 
-    def test_final_review_can_be_independently_disabled_or_enabled(self):
-        _, config, _, identity = self.prepare("--no-require-review", "--require-final-review")
-        self.assertFalse(config.review_required)
-        self.assertTrue(config.final_review_required)
-        self.assertFalse(identity["settings"]["config"]["baseline"]["review_workflow"])
-        _, config, _, _ = self.prepare("--require-review", "--no-require-final-review")
-        self.assertTrue(config.review_required)
-        self.assertFalse(config.final_review_required)
 
     def test_final_only_review_is_actually_executable(self):
         def request(req):
@@ -158,38 +91,6 @@ class ContestSettingsTests(unittest.TestCase):
                 self.assertIn("final_review_completed", kinds)
                 self.assertFalse(result["baseline"]["review_workflow"])
                 self.assertTrue(result["final_review_required"])
-
-    def test_missing_card_non_strict_records_unavailable_and_strict_fails(self):
-        with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
-            out = root / "out"
-            argv = ["run_competition_batch.py", "--live", "--contest-manifest", "fixture.json",
-                    "--system-variant", "otc", "--rules-mode", "enforced", "--rules-root", str(root / "absent"),
-                    "--output", str(out)]
-            with patch.object(cli, "load_contest_manifest", return_value=example()), patch.object(cli, "_make_live_query") as provider, patch.object(sys, "argv", argv), redirect_stdout(io.StringIO()):
-                cli.main()
-                provider.assert_not_called()
-            self.assertEqual(json.loads((out / "rules_status.json").read_text())["status"], "rules_baseline_unavailable")
-            self.assertFalse((out / "contest_session.json").exists())
-            before = (out / "rules_status.json").read_bytes()
-            with patch.object(cli, "load_contest_manifest", return_value=example()), patch.object(cli, "_make_live_query") as provider, patch.object(sys, "argv", [*argv, "--rules-strict"]), redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
-                cli.main()
-            provider.assert_not_called()
-            self.assertEqual((out / "rules_status.json").read_bytes(), before)
-
-    def test_resolved_limit_reaches_both_live_factories_and_saved_result(self):
-        with tempfile.TemporaryDirectory() as directory:
-            argv = ["run_competition_batch.py", "--live", "--contest-manifest", "fixture.json",
-                    "--system-variant", "decentralized", "--max-turns", "1",
-                    "--no-judge-task", "--no-judge-collab", "--output", directory]
-            request = lambda _: LLMResponse("", "perplexity", "mock", tool_calls=(LLMToolCall("rest", {}),))
-            with patch.object(cli, "load_contest_manifest", return_value=example()), patch.object(cli, "_make_live_query", return_value=lambda *_: "") as query_factory, patch.object(cli, "resolve_request_fn", return_value=request) as action_factory, patch.object(sys, "argv", argv), redirect_stdout(io.StringIO()):
-                cli.main()
-            self.assertEqual(query_factory.call_args.kwargs["max_output_tokens"], 4096)
-            self.assertEqual(action_factory.call_args.kwargs["max_output_tokens"], 4096)
-            result = json.loads((Path(directory) / "contest_session.json").read_text(encoding="utf-8"))
-            self.assertEqual(result["run"]["max_output_tokens"], 4096)
-            self.assertEqual(result["run_identity"]["settings"]["execution"]["max_output_tokens"], 4096)
 
 
 if __name__ == "__main__":

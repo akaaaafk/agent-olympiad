@@ -12,6 +12,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 PYTHON_IMAGE = 'python:3.11-slim@sha256:9534e5a8e315485d4061ed659af0fd78a284c015f9b73661b41d6bab25604534'
+PYTHON_TOOLS_IMAGE = 'agent-olympiad-python-tools:v1'
 
 
 class IsolationUnavailable(RuntimeError):
@@ -53,7 +54,8 @@ with tempfile.TemporaryFile() as out, tempfile.TemporaryFile() as err:
 
 
 def run_python_isolated(source: str, *, stdin: str = '', timeout_sec: float = 5,
-                        memory_mb: int = 256, output_bytes: int = 1024 * 1024) -> PythonExecution:
+                        memory_mb: int = 256, output_bytes: int = 1024 * 1024,
+                        image: str = PYTHON_IMAGE) -> PythonExecution:
     docker = shutil.which('docker')
     if docker is None:
         raise IsolationUnavailable('Docker is required; host execution is disabled.')
@@ -72,7 +74,7 @@ def run_python_isolated(source: str, *, stdin: str = '', timeout_sec: float = 5,
             '--cpus', '1', '--user', '65534:65534',
             '--tmpfs', '/tmp:rw,noexec,nosuid,size=64m', '--workdir', '/tmp',
             '--mount', f'type=bind,source={script.resolve()},target=/submission/main.py,readonly',
-            PYTHON_IMAGE, 'python', '-I', '-c', _SUPERVISOR,
+            image, 'python', '-I', '-c', _SUPERVISOR,
             str(output_bytes), str(timeout_sec)]
         try:
             process = subprocess.run(command, input=stdin, capture_output=True,

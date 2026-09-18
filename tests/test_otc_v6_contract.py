@@ -35,9 +35,9 @@ class OtcV6ContractTests(unittest.TestCase):
                                'sample_verdict': 'AC'})
         return config, session, memory
 
-    def test_all_thirteen_cards_have_the_same_protocol_contract(self):
+    def test_all_cards_have_the_same_protocol_contract(self):
         names = ('arml_local', 'arml_national_team', 'cfa_research_challenge',
-                 'codeforces', 'history_olympiad', 'hmmt_guts', 'icpc',
+                 'history_olympiad', 'hmmt_guts', 'icpc',
                  'mystery_hunt', 'nyu_ctf_bench', 'purple_comet', 'qanta',
                  'science_bowl', 'wmtc')
         for name in names:

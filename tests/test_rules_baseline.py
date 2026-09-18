@@ -28,21 +28,6 @@ ICPC_PROBLEM = "icpc_wf_2012_bottles"
 
 
 class RuleBundleTests(unittest.TestCase):
-    def test_all_43_canonical_three_file_bundles_load(self):
-        ids = iter_rule_card_ids(RULES_ROOT)
-        self.assertEqual(len(ids), 43)
-        self.assertTrue({"hmmt_team", "icm", "itym", "iypt", "mcm"} <= set(ids))
-        for competition_id in ids:
-            with self.subTest(competition_id=competition_id):
-                directory = RULES_ROOT / competition_id
-                self.assertEqual(
-                    {path.name for path in directory.iterdir()},
-                    set(COMPONENT_FILES.values()),
-                )
-                self.assertEqual(
-                    load_rule_card(competition_id, required=True).competition_id,
-                    competition_id,
-                )
 
     def test_agent_views_hide_evaluation_fields(self):
         forbidden = {

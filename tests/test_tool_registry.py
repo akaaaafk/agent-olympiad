@@ -74,7 +74,7 @@ class ActionRegistryTests(unittest.TestCase):
         # v4 added the rule-card ``deliberation`` pack; v5 unified the legacy
         # environment surface (aliases + runtime tags); v6 made every action
         # available in both runtimes. Deliberation is still not common.
-        self.assertEqual(ACTION_SET_VERSION, 11)
+        self.assertEqual(ACTION_SET_VERSION, 14)
         self.assertEqual(
             {name for name, spec in ACTION_REGISTRY.items() if spec.pack == "deliberation"},
             {"propose", "challenge", "provide_evidence", "revise", "decide"},
@@ -364,7 +364,8 @@ class ActionRegistryTests(unittest.TestCase):
         session_names = actions_for_runtime("session")
         # v6: one vocabulary, implemented on both paths.
         from action_modules.competition_flow import ACTION_NAMES as FLOW_ACTIONS
-        self.assertEqual(env_names, session_names - FLOW_ACTIONS - {"read_problem_pdf"})
+        from action_modules.ctf_environment import NAMES as CTF_ACTIONS
+        self.assertEqual(env_names, session_names - FLOW_ACTIONS - CTF_ACTIONS - {"read_problem_pdf"})
         self.assertEqual(session_names, frozenset(ACTION_REGISTRY))
         self.assertEqual(len(env_names), 73)
         env_icpc = resolve_action_names("icpc", runtime="env")

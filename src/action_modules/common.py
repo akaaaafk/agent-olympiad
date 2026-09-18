@@ -64,7 +64,10 @@ SPECS = (
             "active problem. Without problem_id it shows your current problem "
             "(or the whole board / latest code history where that applies). "
             "Self-verification context only; it never counts as an "
-            "independent review."
+            "independent review. In contest sessions, pass version_hash plus "
+            "offset/limit to read one saved answer in character pages; default "
+            "inspection returns previews. In the legacy environment, paging "
+            "reads the visible inspection snapshot and returns its snapshot hash."
         ),
         (
             _OPTIONAL_PROBLEM_ID,
@@ -73,6 +76,12 @@ SPECS = (
                 description="Optional aspect to re-check, such as edge cases.",
                 required=False,
             ),
+            ArgumentSpec('version_hash', required=False,
+                         description='Exact visible answer-version hash from inspection; omit for an overview.'),
+            ArgumentSpec('offset', type='integer', required=False,
+                         description='Zero-based character offset, default 0. A nonzero offset requires version_hash.'),
+            ArgumentSpec('limit', type='integer', required=False,
+                         description='Characters per requested page, 1-4000; default 2000.'),
         ),
         visibility="private",
         text_payload=("problem_id", "focus"),

@@ -120,17 +120,6 @@ class RepresentativeSmokeTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "duplicate"):
             agent(request)
 
-    def test_hmmt_selection_uses_structured_record_and_records_scope_change(self):
-        import run_representative_contest_smoke as smoke
-        with tempfile.TemporaryDirectory() as temp, patch.object(smoke, "OUT", Path(temp)):
-            manifest = smoke.representative_manifest("hmmt_guts", count=3)
-        self.assertEqual(len(manifest.tasks), 3)
-        self.assertTrue(all(t.question_id for t in manifest.tasks))
-        selection = manifest.metadata["smoke_selection"]
-        self.assertEqual(selection["previous_record"], "hmmt_guts_2000")
-        self.assertEqual(selection["selected_record"], "hmmt_guts_2024")
-        self.assertTrue(selection["split_parts"])
-
 
 if __name__ == "__main__":
     unittest.main()

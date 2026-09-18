@@ -72,7 +72,9 @@ def prepare_artifact_run(*, competition, task_pdf, output, rubric=None, task_pag
     provider = aliases.get(provider, provider)
     from env_config import resolve_run_provider
     judge_provider = resolve_run_provider(provider, judge_provider)
-    if provider not in {'perplexity', 'openai', 'openagents', 'tinker'} or judge_provider not in {'perplexity', 'openai', 'openagents', 'tinker'}:
+    from env_config import PUBLIC_PROFILE_PROVIDERS
+    allowed_providers = {'perplexity', 'openai', 'openagents', 'tinker', *PUBLIC_PROFILE_PROVIDERS}
+    if provider not in allowed_providers or judge_provider not in allowed_providers:
         raise ValueError('Artifact runner requires a PDF/image-capable provider')
     from env_config import require_explicit_model
     model = require_explicit_model(model)
@@ -105,7 +107,8 @@ def prepare_artifact_run(*, competition, task_pdf, output, rubric=None, task_pag
         raise ValueError('Award reference PDFs require a PDF-capable judge provider')
     if task_asset.page_end - task_asset.page_start + 1 > 100:
         raise ValueError('Task exceeds 100 pages; explicitly select the intended page range')
-    task_delivery = 'extracted_text_v1' if provider_capabilities(provider).pdf_text else 'pdf_or_images'
+    task_delivery = ('paged_pdf_v1' if provider == 'tinker' and provider_capabilities(provider, model).attachments
+                     else 'extracted_text_v1' if provider_capabilities(provider, model).pdf_text else 'pdf_or_images')
     if task_delivery == 'extracted_text_v1':
         # Preflight extraction before model calls; save the exact packet at run time.
         pdf_text_request(LLMRequest('', '', attachments=(LLMAttachment(
@@ -136,13 +139,19 @@ def prepare_artifact_run(*, competition, task_pdf, output, rubric=None, task_pag
     benchmark_instructions = (benchmark or {}).get('evaluation', {}).get('benchmark_instructions')
     if benchmark_instructions:
         task_instructions += '\n\n' + str(benchmark_instructions)
+    metadata = {'task_family': 'general', 'artifact_contract': asdict(contract)}
+    if task_delivery == 'paged_pdf_v1':
+        from artifact_pdf_reader import asset_document
+        metadata['artifact_task_pdf'] = asset_document(task_asset)
     manifest = ContestManifest(f'{competition}-artifact', competition, (
         ManifestTask('deliverable', 'deliverable', None,
                      task_instructions,
                      'artifact', rubric_obj.total_points, False, {}),
-    ), metadata={'task_family': 'general', 'artifact_contract': asdict(contract)})
+    ), metadata=metadata)
     from competition_guidance import competition_guidance
     config = replace(config, rule_guidance=competition_guidance(manifest, config, rules_root=rules_root))
+    from rules.runtime import bind_runtime_budget
+    card = bind_runtime_budget(card, config)
     identity = build_run_identity(manifest, config, execution={
         'pipeline': contract.version, 'provider': provider, 'model': model,
         'max_output_tokens': max_output_tokens, 'temperature': temperature,
@@ -153,6 +162,7 @@ def prepare_artifact_run(*, competition, task_pdf, output, rubric=None, task_pag
         'compiler_identity': compiler_identity,
         'task_pages': [task_asset.page_start, task_asset.page_end],
     }, evaluation={'provider': judge_provider or provider, 'model': judge_model,
+                   'pdf_delivery': 'pdf_page_evidence_v1' if judge_provider == 'tinker' else 'full_document',
                    'temperature': 0.2,
                    'judge_collab': system_variant != 'single_agent',
                    'required_metrics_version': 0 if system_variant == 'single_agent' else 1,
@@ -226,6 +236,16 @@ def _validate_completed_result(prepared, result, output, *, require_metrics=True
 def _coordination_context(prepared, output, contest, judge_request):
     if contest.get('system_variant') == 'single_agent':
         return '', judge_request
+    if prepared['judge_provider'] == 'tinker':
+        # Keep full task images out of a single coordination request too.
+        asset = prepared['task_asset']
+        _write(output / 'coordination_task_assets.json', dict(path=str(asset.path.resolve()),
+            sha256=asset.sha256, pages=[asset.page_start, asset.page_end]))
+        text_path = output / 'coordination_task.txt'
+        text_path.write_text('\n\n'.join(t.prompt for t in prepared['manifest'].tasks), encoding='utf-8')
+        from saved_run_metrics import task_context_judge
+        return text_path.read_text(encoding='utf-8'), task_context_judge(
+            output, contest, judge_request, prepared['judge_provider'], model=prepared['judge_model'])
     text_path = output / 'task_extracted.txt'
     if not text_path.exists():
         text_path = output / 'coordination_task.txt'
@@ -245,7 +265,7 @@ def _coordination_context(prepared, output, contest, judge_request):
             text_path.write_text(text, encoding='utf-8')
     task_text = text_path.read_text(encoding='utf-8')
     from saved_run_metrics import task_context_judge
-    judge_request = task_context_judge(output, contest, judge_request, prepared['judge_provider'])
+    judge_request = task_context_judge(output, contest, judge_request, prepared['judge_provider'], model=prepared['judge_model'])
     return task_text, judge_request
 
 
@@ -322,8 +342,11 @@ def run_artifact_contest(prepared, *, agent_request, judge_request, resume=False
         raise ValueError('LaTeX compiler changed after preflight; prepare a fresh run')
     executor = EnvironmentTaskExecutor(p['manifest'], benchmark_root=data_root() / 'benchmarks',
                                       renderer=renderer, rule_card=p['card'])
-    task_attachments = _attachments(p['task_asset'], p['provider'], output / 'task_pages')
-    if provider_capabilities(p['provider']).pdf_text:
+    paged = bool(p['manifest'].metadata.get('artifact_task_pdf'))
+    initial_asset = replace(p['task_asset'], page_end=min(p['task_asset'].page_end,
+                            p['task_asset'].page_start + 1)) if paged else p['task_asset']
+    task_attachments = _attachments(initial_asset, p['provider'], output / 'task_pages')
+    if provider_capabilities(p['provider'], p['model']).pdf_text:
         packet = pdf_text_request(LLMRequest('', '', attachments=task_attachments))
         (output / 'task_extracted.txt').write_text(packet.user_prompt, encoding='utf-8')
         _write(output / 'task_delivery.json', {'mode': 'extracted_text_v1',
@@ -357,17 +380,44 @@ def run_artifact_contest(prepared, *, agent_request, judge_request, resume=False
                 ensure_ascii=False) + '\n')
         return response
 
-    def decorate(request, *, coach=False):
-        if coach:
-            return request  # Coach must never see the task PDF or rendered answer.
-        attachments = task_attachments
+    def review_visible():
         visible = bool(renderer.latest)
         if visible and p['config'].current_turn_only:
             visible = live_session is not None and any(
                 live_session.version_created_this_turn(version.version_hash)
                 and sha256(version.content.encode('utf-8')).hexdigest() == renderer.latest['source_sha256']
                 for task in live_session.tasks for version in task.versions)
-        if visible:
+        return visible
+
+    def review_document():
+        if not review_visible():
+            return None
+        from artifact_pdf_reader import asset_document
+        asset = build_task_asset(Path(renderer.latest['pdf']))
+        if asset.sha256 != renderer.latest['pdf_sha256']:
+            raise ValueError('Rendered candidate PDF changed before review')
+        return asset_document(asset, label='Current rendered candidate')
+
+    def decorate(request, *, coach=False):
+        if coach:
+            return request  # Coach must never see the task PDF or rendered answer.
+        if paged:
+            selected = request.metadata.get('problem_pdf_read')
+            attachments = request.attachments if selected else task_attachments
+            reading = ('\nPDF delivery is paginated. Document 1 is the official task; '
+                       'document 2, when listed, is the current rendered candidate. '
+                       'Use read_problem_pdf(problem_id="deliverable", pages=[...], document=1 or 2) '
+                       'to read at most two pages on your next action call. '
+                       'Only the selected pages are attached; other pages remain available.\n')
+            if selected:
+                reading += 'Attached selection: ' + json.dumps(selected) + '\n'
+            else:
+                reading += f'Attached document 1 pages {initial_asset.page_start}-{initial_asset.page_end}.\n'
+            return replace(request, system_prompt=request.system_prompt + '\n' +
+                p['contract'].prompt(review_required=p['config'].review_required),
+                user_prompt=request.user_prompt + reading, attachments=attachments)
+        attachments = task_attachments + request.attachments
+        if review_visible():
             key = renderer.latest['source_sha256']
             if key not in review_attachment_cache:
                 asset = build_task_asset(Path(renderer.latest['pdf']))
@@ -382,15 +432,20 @@ def run_artifact_contest(prepared, *, agent_request, judge_request, resume=False
         request = LLMRequest(system_prompt=system, user_prompt=user,
                              purpose='coach' if coach else 'private_think')
         return invoke(agent_request, decorate(request, coach=coach)).text
+    query.request = lambda request: invoke(agent_request, decorate(request, coach=request.purpose == 'coach'))
+    query.supports_budgeted_requests = True
+    query.max_output_tokens = p['max_output_tokens']
 
     def act(request):
         return invoke(agent_request, decorate(request))
     def bind_session(session):
         nonlocal live_session
         live_session = session
+        if paged:
+            session.artifact_review_document = review_document
     act.bind_session = bind_session
-    act.supports_attachments = provider_capabilities(p['provider']).attachments
-    act.supports_pdf_text = provider_capabilities(p['provider']).pdf_text
+    act.supports_attachments = provider_capabilities(p['provider'], p['model']).attachments
+    act.supports_pdf_text = provider_capabilities(p['provider'], p['model']).pdf_text
 
     def persist(session, memory):
         _write(checkpoint_path, {'session': session, 'memory': memory,
@@ -440,7 +495,15 @@ def run_artifact_contest(prepared, *, agent_request, judge_request, resume=False
     task_judge_state = {}
     measured_task_judge = metered_judge(judge_request, task_judge_state)
     def judge(request):
+        if request.metadata.get('pdf_paging_stage') == 'final':
+            task_judge_state['pdf_paging'] = {
+                'version': request.metadata['pdf_paging_version'],
+                'coverage': request.metadata['pdf_page_coverage']}
         return invoke(measured_task_judge, request)
+    if p['judge_provider'] == 'tinker':
+        from evaluation.pdf_paging import paged_judge
+        judge = paged_judge(judge, output / 'rubric_pdf_evidence',
+                           cache_namespace=p['identity']['settings']['evaluation'])
     _write(output / 'evaluation_status.json', {'status': 'started', 'pdf_sha256': receipt['pdf_sha256']})
     from judge_references import with_rule_context
     judge = with_rule_context(judge, p['card'].rules_text)
@@ -465,8 +528,13 @@ def run_artifact_contest(prepared, *, agent_request, judge_request, resume=False
                 image_work_dir=output / 'evaluation', task_label=p['card'].competition_id)
             evaluation = evaluated.evaluate().to_dict()
     except Exception as exc:
-        _write(output / 'evaluation_status.json', {'status': 'failed', 'error': str(exc)})
+        _write(output / 'evaluation_status.json', {'status': 'failed', 'error': str(exc),
+                                                  **task_judge_state})
         raise
+    if task_judge_state.get('pdf_paging'):
+        from evaluation.pdf_paging import LIMITATION
+        evaluation.setdefault('limitations', []).append(LIMITATION)
+        evaluation['prompt_version'] += '+pdf_page_evidence_v1'
     result = dict(status='evaluation_pending', graded=True, artifact=receipt, evaluation=evaluation,
                   official_score_equivalent=False,
                   coordination_required=True, evaluation_pending=['coordination'],
@@ -479,6 +547,8 @@ def run_artifact_contest(prepared, *, agent_request, judge_request, resume=False
         if key in benchmark_evaluation:
             result[key] = benchmark_evaluation[key]
     result['task_evaluation_usage'] = task_judge_state.get('evaluation_usage')
+    if task_judge_state.get('pdf_paging'):
+        result['pdf_paging'] = task_judge_state['pdf_paging']
     result['evaluation_binding'] = _evaluation_binding(p['identity'], receipt, evaluation)
     _write(output / 'result.json', result)
     _write(output / 'evaluation_status.json', {'status': 'complete'})

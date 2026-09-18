@@ -33,12 +33,12 @@ class ContestAuxiliaryResumeTests(unittest.TestCase):
         self.out = self.root / "runs/case"
         self.manifest = ContestManifest("fixture", "arml_local", tuple(
             ManifestTask(name, name, None, "Question " + name, "math", 1, False,
-                         {"problem_id": name, "gold_label": {"expected_answer": "42"}})
+                         {"problem_id": name, "gold_label": {"expected_answer": "42"},
+                          "evaluation": {"status": "ready", "evaluator_id": "gold_answer_v1"}})
             for name in ("q1", "q2")))
         self.forbid_contestants = False
         self.action_calls = 0
         self.query_factories = 0
-        self.action_factories = 0
         def agent(request):
             if self.forbid_contestants:
                 raise AssertionError("Contestant called during evaluation-only resume")
@@ -53,12 +53,14 @@ class ContestAuxiliaryResumeTests(unittest.TestCase):
             self.query_factories += 1
             return lambda *args: "Coordinate and check."
         def resolve(*, provider, **kwargs):
-            if provider == "perplexity":
-                if self.forbid_contestants:
-                    raise AssertionError("Contestant action provider started during judge resume")
-                self.action_factories += 1
-                return agent
-            return Mock(side_effect=AssertionError("Scoring functions are mocked"))
+            # The current run policy uses one provider for agents and judges.
+            # Judge adapters may be constructed during evaluation-only resume;
+            # contestant callbacks and planning factories must remain unused.
+            def request(request):
+                if request.tools:
+                    return agent(request)
+                raise AssertionError("Scoring functions are mocked")
+            return request
         self.coord = Mock(return_value=scored({
             "communication_score": 2, "planning_score": 4, "coordination_score": 3}))
         self.interaction = Mock(return_value=scored({"interaction_helpfulness_score": 4}))
@@ -70,11 +72,11 @@ class ContestAuxiliaryResumeTests(unittest.TestCase):
                             ("score_coordination", self.coord),
                             ("score_interaction_helpfulness", self.interaction), ("score_cce", self.cce)):
             self.stack.enter_context(patch.object(cli, name, value))
-        self.stack.enter_context(patch.dict(os.environ, {"OPENAI_API_KEY": "offline-fixture-not-a-key"}))
+        self.stack.enter_context(patch.dict(os.environ, {"PERPLEXITY_API_KEY": "offline-fixture-not-a-key"}))
 
-    def invoke(self, *, resume=False, variant="single_agent", cce=False, collab=True):
+    def invoke(self, *, resume=False, variant="decentralized", cce=False, collab=True):
         argv = ["batch", "--live", "--provider", "perplexity", "--model", "mock",
-                "--judge-provider", "openai", "--judge-model", "mock",
+                "--judge-provider", "perplexity", "--judge-model", "mock",
                 "--contest-manifest", "unused.json", "--system-variant", variant,
                 "--max-turns", "1", "--output", str(self.out),
                 "--judge-collab" if collab else "--no-judge-collab"]
@@ -104,13 +106,19 @@ class ContestAuxiliaryResumeTests(unittest.TestCase):
                 self.coord.reset_mock()
                 self.interaction.reset_mock()
                 self.coord.side_effect = RuntimeError("Synthetic judge outage")
+                if variant == 'single_agent':
+                    self.assertEqual(self.invoke(variant=variant), 0)
+                    self.coord.assert_not_called()
+                    self.interaction.assert_not_called()
+                    self.assertFalse(self.result()['run_identity']['settings']['evaluation']['judge_collab'])
+                    continue
                 self.assertEqual(self.invoke(variant=variant), 1)
                 before = self.result()
                 self.assertIn("coordination_error", before)
                 self.assertIn("interaction", before)
                 self.assertEqual(inspect_contest_output(self.out, before["run_identity"]), "resume")
                 self.assertEqual(self.interaction.call_count, 1)
-                counters = (self.action_calls, self.query_factories, self.action_factories)
+                counters = (self.action_calls, self.query_factories)
                 self.forbid_contestants = True
                 self.coord.side_effect = None
                 self.assertEqual(self.invoke(resume=True, variant=variant), 0)
@@ -118,7 +126,7 @@ class ContestAuxiliaryResumeTests(unittest.TestCase):
                 self.preserved(before, after)
                 self.assertEqual(self.coord.call_count, 2)
                 self.assertEqual(self.interaction.call_count, 1)
-                self.assertEqual(counters, (self.action_calls, self.query_factories, self.action_factories))
+                self.assertEqual(counters, (self.action_calls, self.query_factories))
                 self.assertEqual(after["evaluation_pending"], [])
                 self.assertNotIn("coordination_error", after)
                 self.assertEqual(inspect_contest_output(self.out, after["run_identity"]), "complete")
@@ -185,6 +193,7 @@ class ContestAuxiliaryResumeTests(unittest.TestCase):
         result = self.result()
         job = {"id": "case", "route": "native", "competition": "icpc", "manifest": "unused.json"}
         with patch.object(cli, "inspect_contest_run", return_value=("resume", result["run_identity"])), \
+             patch.object(run_pipeline, "validate_job_readiness"), \
              patch("contest_manifest.load_contest_manifest", side_effect=AssertionError("No contestant preflight")), \
              patch.object(run_pipeline.subprocess, "run", side_effect=AssertionError("No Docker")), \
              patch.object(run_pipeline.urllib.request, "urlopen", side_effect=AssertionError("No gateway")):

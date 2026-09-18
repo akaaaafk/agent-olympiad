@@ -40,14 +40,14 @@ def main() -> None:
     total = len(ready_rows) + len(not_ready_rows)
 
     lines = [
-        "# All competitions readiness（比赛名_年份）",
+        "# All competitions readiness (competition_year)",
         "",
         f"> Updated **{date.today():%Y-%m-%d}** from the active canonical `data/benchmarks/index.json` entries. The historical filename is retained so existing links do not break.",
         "",
-        f"- 竞赛种类：**{len(tracks)}**",
-        f"- 其中至少一条 ready-ish：**{len(tracks) - len(fully_not_ready)}**",
-        f"- 完全 not_ready：**{len(fully_not_ready)}**",
-        f"- 记录总数：**{total}**（ready-ish **{len(ready_rows)}** + not_ready **{len(not_ready_rows)}**）",
+        f"- Competition tracks: **{len(tracks)}**",
+        f"- Tracks with at least one ready-ish record: **{len(tracks) - len(fully_not_ready)}**",
+        f"- Entirely not_ready tracks: **{len(fully_not_ready)}**",
+        f"- Total records: **{total}** (ready-ish **{len(ready_rows)}** + not_ready **{len(not_ready_rows)}**)",
         "",
         "Status legend: `ready`, `ready_with_limitations`, and `remote_judge_ready` pass the current readiness-label preflight; `not_ready` does not.",
         "",
@@ -65,15 +65,15 @@ def main() -> None:
         lines.append(f"| `{cid}` | {ready_count} | {len(rows) - ready_count} | {len(rows)} | {status_text(counts)} |")
     lines.append(f"| **total** | **{len(ready_rows)}** | **{len(not_ready_rows)}** | **{total}** | {status_text(all_counts)} |")
 
-    lines += ["", "## Ready-ish（比赛名_年份）", "", f"共 **{len(ready_rows)}** 条。", ""]
+    lines += ["", "## Ready-ish (competition_year)", "", f"**{len(ready_rows)}** records.", ""]
     lines += [f"- `{row['problem_id']}`  `{status(row)}`" for _, row in ready_rows]
     lines += [
         "",
-        "## Not ready（比赛名_年份）",
+        "## Not ready (competition_year)",
         "",
-        f"共 **{len(not_ready_rows)}** 条。",
+        f"**{len(not_ready_rows)}** records.",
         "",
-        f"### 完全没有 ready 的竞赛（{len(fully_not_ready)}）",
+        f"### Tracks without any ready records ({len(fully_not_ready)})",
         "",
     ]
     lines += [f"- `{cid}`" for cid in fully_not_ready]

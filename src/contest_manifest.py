@@ -116,7 +116,8 @@ def _numbered_prompts(text: str, part_ids: list[str]) -> dict[str, str]:
     cursor = 0
     for part_id in part_ids:
         match = re.search(
-            rf"(?:^|\s)(?:[A-Za-z]-)?{re.escape(part_id)}[.)]\s+",
+            rf"(?:^|\s)(?:(?:[A-Za-z]-)?{re.escape(part_id)}[.)]\s+|"
+            rf"Problem[ \t]+{re.escape(part_id)}[ \t]*\r?\n)",
             problem_text[cursor:],
         )
         if match is None:

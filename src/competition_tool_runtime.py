@@ -84,8 +84,9 @@ def execute_preparation_tool(action: str, arguments: dict[str, Any], context: di
     errors = validate_action_payload(ACTION_REGISTRY[action], arguments)
     if errors:
         raise ValueError("; ".join(errors))
-    if len(json.dumps(arguments, ensure_ascii=False)) > 60000:
-        raise ValueError("preparation input exceeds 60000 characters")
+    from argument_limits import PREPARATION_MAX_CHARS
+    if len(json.dumps(arguments, ensure_ascii=False)) > PREPARATION_MAX_CHARS:
+        raise ValueError(f"preparation input exceeds {PREPARATION_MAX_CHARS} characters")
     issues, warnings = [], []
     data = {}
     candidate = ""

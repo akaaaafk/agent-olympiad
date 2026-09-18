@@ -23,10 +23,13 @@ def fixed_team_size(competition_id, baseline, *, requested=None, rules_root=None
 
 
 def competition_guidance(manifest, config, *, rules_root=None):
+    heading = 'OFFICIAL COMPETITION RULES (shared by every baseline)'
     root = Path(rules_root) if rules_root is not None else data_root() / 'rules'
     path = root / manifest.competition_id / 'competition.json'
     if path.is_file():
         raw = json.loads(path.read_text(encoding='utf-8-sig'))
+        if raw.get('provenance', {}).get('rules_scope') == 'isolated_archived_puzzle':
+            heading = 'BENCHMARK PUZZLE RULES (historical full-event rules not reproduced)'
         # No collaboration.json, evaluator instructions, gold or reference assets.
         fields = ('competition_id', 'team', 'execution', 'resources', 'deliverable',
                   'human_constraints', 'rules_text')
@@ -45,7 +48,7 @@ def competition_guidance(manifest, config, *, rules_root=None):
         'task_count': len(manifest.tasks),
         'tasks': [{'task_id': task.task_id, 'max_score': task.max_score} for task in manifest.tasks],
     }
-    return ('OFFICIAL COMPETITION RULES (shared by every baseline)\n' + official
+    return (heading + '\n' + official
             + '\nBENCHMARK ADAPTATION (actual settings for this run)\n'
             + json.dumps(runtime, ensure_ascii=False, sort_keys=True)
             + '\nOfficial team sizes, ages, round lengths and question counts describe the human contest. '

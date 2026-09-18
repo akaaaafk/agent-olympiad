@@ -1261,6 +1261,26 @@ class OlympiadEnvironment:
     def _act_inspect_problem(
         self, agent_name: str, arguments: dict[str, Any], _: Invocation
     ) -> str:
+        text = self._inspection_text(agent_name, arguments)
+        if not any(key in arguments for key in ('version_hash', 'offset', 'limit')):
+            return text
+        import hashlib
+        from work_content import DEFAULT_PAGE_CHARS, text_page
+        version_hash = hashlib.sha256(text.encode('utf-8')).hexdigest()
+        requested_hash = arguments.get('version_hash')
+        offset = arguments.get('offset', 0)
+        try:
+            if offset and not requested_hash:
+                raise ValueError('version_hash is required for a nonzero offset')
+            if requested_hash and requested_hash != version_hash:
+                raise ValueError('Inspection snapshot changed; read offset 0 without version_hash again')
+            return json.dumps({'version_hash': version_hash, 'snapshot': True,
+                               **text_page(text, offset, arguments.get('limit', DEFAULT_PAGE_CHARS))},
+                              ensure_ascii=False)
+        except ValueError as exc:
+            return f'Inspection error: {exc}'
+
+    def _inspection_text(self, agent_name: str, arguments: dict[str, Any]) -> str:
         problem_id = str(arguments.get("problem_id") or "").strip()
         focus = str(arguments.get("focus") or "").strip()
         if self.workboard is not None:
@@ -2118,9 +2138,9 @@ class OlympiadEnvironment:
         return f"Calculator output: {self._safe_calculate(payload)}"
 
     def _run_code(self, payload: str) -> str:
-        from isolated_python import IsolationUnavailable, run_python_isolated
+        from isolated_python import IsolationUnavailable, PYTHON_TOOLS_IMAGE, run_python_isolated
         try:
-            proc = run_python_isolated(payload)
+            proc = run_python_isolated(payload, image=PYTHON_TOOLS_IMAGE)
             if proc.timed_out:
                 return "Code error: execution timed out after 5 seconds."
             if proc.output_limited:

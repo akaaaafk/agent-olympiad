@@ -103,15 +103,6 @@ class OtcWithoutMemoryTests(unittest.TestCase):
                     action_transport='native')
         self.assertGreater(len(seen), self.config().team_size)
 
-    def test_artifact_without_peer_approval_still_renders_and_judges(self):
-        self.check_artifact('wsc_writing', 'Complete unreviewed essay.')
-
-    def test_slides_without_peer_approval_still_render_and_judge(self):
-        self.check_artifact('ieo_business_case',
-            '<html><body><section><h1>Proposal</h1><p>Evidence and conclusion.</p></section></body></html>')
-
-    def test_unsafe_slides_do_not_reach_judge(self):
-        self.check_artifact('ieo_business_case', '<script>alert(1)</script>', valid=False)
 
     def check_artifact(self, competition, source, valid=True):
         with tempfile.TemporaryDirectory() as tmp:

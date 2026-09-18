@@ -7,6 +7,7 @@ extracted text, page images, or both. Keep page counts within context limits.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+import hashlib
 from pathlib import Path
 from typing import Literal
 
@@ -69,11 +70,18 @@ def extract_pdf_text(
     if not path.is_file() or path.read_bytes()[:5] != b"%PDF-":
         raise PdfIngestError(f"Not a readable PDF: {path}")
     reader = PdfReader(str(path))
+    from artifacts.reviewed_pdf_text import REVIEWED_PAGES, REVIEWED_FULL_PAGES
+    reviewed = REVIEWED_PAGES.get(hashlib.sha256(path.read_bytes()).hexdigest(), {})
+    full_review = REVIEWED_FULL_PAGES.get(hashlib.sha256(path.read_bytes()).hexdigest(), {})
     start, end = _resolve_range(len(reader.pages), page_start, page_end)
     warnings: list[str] = []
     chunks: list[str] = []
     for index in range(start - 1, end):
         page_text = reader.pages[index].extract_text() or ""
+        if index + 1 in full_review:
+            page_text = full_review[index + 1]
+        if not page_text.strip() and index + 1 in reviewed:
+            page_text = reviewed[index + 1]
         if not page_text.strip():
             warnings.append(f"Page {index + 1} produced no extractable text.")
         chunks.append(f"--- page {index + 1} ---\n{page_text.strip()}")

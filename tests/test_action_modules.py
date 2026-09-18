@@ -10,6 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
 from action_modules import MODULE_SPECS
 from action_modules.competition_flow import ACTION_NAMES as FLOW_ACTIONS
 from action_modules.competition_tools import ACTION_NAMES as PREPARATION_ACTIONS
+from action_modules.ctf_environment import NAMES as CTF_ACTIONS
 from tool_registry import (ACTION_REGISTRY, MODULE_ACTION_NAMES, TOOL_ACTION_NAMES,
                            render_function_tools, validate_registry, actions_for_runtime)
 
@@ -17,7 +18,7 @@ from tool_registry import (ACTION_REGISTRY, MODULE_ACTION_NAMES, TOOL_ACTION_NAM
 class ActionModuleTests(unittest.TestCase):
     def test_exact_partition(self):
         self.assertEqual({k: len(v) for k, v in MODULE_ACTION_NAMES.items()},
-                         {'common': 25, 'memory': 3, 'coach': 0, 'task_specific': 51})
+                         {'common': 25, 'memory': 3, 'coach': 0, 'task_specific': 61})
         seen = set()
         for name, specs in MODULE_SPECS.items():
             for spec in specs:
@@ -34,11 +35,11 @@ class ActionModuleTests(unittest.TestCase):
         self.assertEqual(MODULE_ACTION_NAMES['memory'], {'remember', 'recall', 'share_note'})
         self.assertIn('propose', MODULE_ACTION_NAMES['common'])
         self.assertNotIn('query_rules', MODULE_ACTION_NAMES['memory'])
-        self.assertEqual(actions_for_runtime('env'), actions_for_runtime('session') - FLOW_ACTIONS - {'read_problem_pdf'})
+        self.assertEqual(actions_for_runtime('env'), actions_for_runtime('session') - FLOW_ACTIONS - CTF_ACTIONS - {'read_problem_pdf'})
 
-    def test_original_contract_is_preserved_except_documented_v11_changes(self):
+    def test_original_contract_is_preserved_except_documented_extensions(self):
         specs = []
-        original = {n: s for n, s in ACTION_REGISTRY.items() if n not in {'render_pdf', 'read_problem_pdf'} and n not in PREPARATION_ACTIONS and n not in FLOW_ACTIONS}
+        original = {n: s for n, s in ACTION_REGISTRY.items() if n not in {'render_pdf', 'read_problem_pdf'} and n not in PREPARATION_ACTIONS and n not in FLOW_ACTIONS and n not in CTF_ACTIONS}
         # Preserve the historical contract hashes instead of blessing an
         # arbitrary new hash. Assert each intentional change before normalising:
         # v10 recall; v11 zero-turn memory, activation and answer-format help.
@@ -83,6 +84,20 @@ class ActionModuleTests(unittest.TestCase):
         ))
         original['work'] = dataclasses.replace(
             original['work'], description=work_description)
+        # v14 adds optional answer pagination. Normalize only this documented
+        # addition; the original hashes below still cover every older field.
+        inspect = original['inspect_problem']
+        extension = (' In contest sessions, pass version_hash plus '
+                     'offset/limit to read one saved answer in character pages; default '
+                     'inspection returns previews. In the legacy environment, paging '
+                     'reads the visible inspection snapshot and returns its snapshot hash.')
+        self.assertTrue(inspect.description.endswith(extension))
+        self.assertEqual([(a.name, a.type, a.required) for a in inspect.arguments[2:]],
+                         [('version_hash', 'string', False), ('offset', 'integer', False),
+                          ('limit', 'integer', False)])
+        original['inspect_problem'] = dataclasses.replace(
+            inspect, description=inspect.description[:-len(extension)],
+            arguments=inspect.arguments[:2])
         recall = original['recall']
         self.assertEqual(next(arg.description for arg in recall.arguments if arg.name == 'problem_id'),
             'Optional exact problem id to filter; omit to search across tasks.')

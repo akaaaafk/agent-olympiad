@@ -14,13 +14,13 @@ from evaluation.collaboration_score import score_coordination, _parse_score
 from llm import LLMResponse, LLMAttachment
 
 
-def task_context_judge(directory, contest, request_fn, provider):
+def task_context_judge(directory, contest, request_fn, provider, *, model=None):
     """Scanned tasks use verified original task media, never judge-only sources."""
     from llm import provider_capabilities
     path = Path(directory) / 'coordination_task_assets.json'
     if not path.is_file():
         return request_fn
-    if not provider_capabilities(provider).attachments:
+    if not getattr(request_fn, 'supports_attachments', provider_capabilities(provider).attachments):
         raise ValueError('Scanned collaboration task requires a visual judge provider')
     asset = json.loads(path.read_text(encoding='utf-8'))
     original = contest['run_identity']['settings']['execution']
@@ -35,6 +35,11 @@ def task_context_judge(directory, contest, request_fn, provider):
         attachments = _attachments(task, provider, Path(directory) / 'coordination_task_pages')
     else:
         attachments = (attachment,)
+    if provider in {'tinker', 'tml'}:
+        from evaluation.pdf_paging import paged_judge
+        evaluation = ((contest.get('run_identity') or {}).get('settings') or {}).get('evaluation') or {}
+        request_fn = paged_judge(request_fn, Path(directory) / 'coordination_pdf_evidence',
+                                cache_namespace={'provider': provider, 'model': model or evaluation.get('model')})
     def request(req):
         return request_fn(replace(req, attachments=attachments)
                           if req.purpose == 'collaboration_communication_score' else req)
@@ -149,6 +154,9 @@ def ensure_coordination(directory, *, result, task_text, judge_request, judge_pr
         if key in cached:
             return LLMResponse(**cached[key])
         response = measured(req)
+        limitation = response.usage.get('pdf_paging_limitation')
+        if limitation and limitation not in saved.setdefault('limitations', []):
+            saved['limitations'].append(limitation)
         score, _ = _parse_score(response.text)
         minimum = 1 if req.purpose == 'collaboration_planning_score' else 0
         if not finite(score) or not minimum <= score <= 5:

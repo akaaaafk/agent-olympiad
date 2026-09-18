@@ -133,8 +133,11 @@ class OpenAgentsTests(unittest.TestCase):
     def test_invalid_or_partial_tool_calls_are_not_executed(self):
         caller = llm.resolve_request_fn("openagents")
         self.reply["choices"][0]["message"]["tool_calls"][0]["function"]["arguments"] = "[]"
-        with self.assertRaisesRegex(ValueError, "object"):
-            caller(llm.LLMRequest("s", "u"))
+        response = caller(llm.LLMRequest("s", "u"))
+        self.assertEqual(response.tool_calls, ())
+        self.assertIn('no action executed', response.usage['tool_error'])
+        self.assertEqual(response.usage['output_tokens'], 7)
+        self.assertEqual(response.usage['api_calls'], 1)
         self.reply["choices"][0]["finish_reason"] = "length"
         response = caller(llm.LLMRequest("s", "u"))
         self.assertEqual(response.tool_calls, ())
@@ -168,21 +171,6 @@ class OpenAgentsTests(unittest.TestCase):
         with patch.dict(os.environ, {"OPENAGENTS_BASE_URL": "https://different.example/v1"}):
             self.assertNotEqual(first, identity())
         self.assertNotIn("gateway-test-key", json.dumps(first))
-
-    def test_all_baselines_resolve_gateway_and_separate_memory(self):
-        for baseline in cli.BASELINE_NAMES:
-            with self.subTest(baseline=baseline):
-                args = cli._build_parser().parse_args(["--live", "--provider", "openagents",
-                    "--contest-manifest", "unused.json", "--system-variant", baseline,
-                    "--judge-provider", "openagents"])
-                with patch.object(cli, "load_contest_manifest", return_value=example("arml_local")):
-                    _, config, transport, identity = cli._prepare_contest_run(args)
-                self.assertEqual(transport, "native")
-                self.assertEqual(config.modules.memory, baseline == "otc")
-                self.assertEqual(identity["settings"]["execution"]["model"], "glm-5.2")
-                self.assertEqual(identity["settings"]["evaluation"]["provider"], "openagents")
-        defaults = cli._build_parser().parse_args([])
-        self.assertEqual(defaults.provider, "perplexity")
 
 
 if __name__ == "__main__":

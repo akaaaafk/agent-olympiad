@@ -27,10 +27,11 @@ from scripts.build_data_packages import build_packages
 
 
 class Store:
-    def __init__(self, root: Path):
+    def __init__(self, root: Path, backup_root: Path | None = None):
         self.root = root.resolve()
         self.stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-        self.backup = self.root / "data/excluded" / f"integrity_repair_{self.stamp}"
+        archive_root = Path(backup_root).resolve() if backup_root is not None else self.root / "data/excluded"
+        self.backup = archive_root / f"integrity_repair_{self.stamp}"
         self.raw, self.parsed, self.hashes = {}, {}, {}
         self.changes, self.archived = [], []
 
@@ -90,7 +91,8 @@ class Store:
         if not destination.is_relative_to(self.backup.resolve()) or destination.exists():
             raise ValueError(f"Unsafe or occupied archive destination: {destination}")
         destination.parent.mkdir(parents=True, exist_ok=True)
-        record = dict(path=p.relative_to(self.root).as_posix(), backup=destination.relative_to(self.root).as_posix())
+        backup_name = destination.relative_to(self.root).as_posix() if destination.is_relative_to(self.root) else str(destination)
+        record = dict(path=p.relative_to(self.root).as_posix(), backup=backup_name)
         if p.is_file():
             record["sha256"] = self.sha(name)
         os.replace(p, destination)
@@ -463,8 +465,9 @@ def validate(store, index, benchmarks, rules, stage):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--derived-only", action="store_true")
+    parser.add_argument("--backup-root", type=Path, help="Archive replaced data outside the checkout (optional)")
     args = parser.parse_args()
-    store = Store(ROOT)
+    store = Store(ROOT, backup_root=args.backup_root)
     report = dict(operation="dataset_integrity_repair", timestamp_utc=store.stamp,
                   split_policy="Preserve all existing splits; no random split invented.",
                   license_policy="Preserve unverified licensing; do not infer permission.")
@@ -567,7 +570,7 @@ def main():
         report.update(after_records=index["total_records"], evaluation_status_counts=summary["evaluation_status_counts"],
                       unresolved=dict(splits=summary["split_counts"], licenses=summary["license_status_counts"],
                                       not_ready=summary["evaluation_status_counts"].get("not_ready", 0)),
-                      backup=store.backup.relative_to(ROOT).as_posix(), status="completed")
+                      backup=store.backup.relative_to(ROOT).as_posix() if store.backup.is_relative_to(ROOT) else str(store.backup), status="completed")
         store.finish(report)
         print(json.dumps(report, ensure_ascii=False, indent=2), flush=True)
     except Exception as exc:

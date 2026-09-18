@@ -33,6 +33,8 @@ def create_with_retry(create, payload, *, max_attempts=3, observe=None, sleep=ti
                 observe(row)
             if not retry:
                 exc.gateway_attempts = attempts
+                exc.usage = dict(api_calls=len(attempts), unknown_usage_attempts=len(attempts),
+                                 gateway_attempts=attempts)
                 raise
             sleep(delay)
         else:
@@ -42,4 +44,3 @@ def create_with_retry(create, payload, *, max_attempts=3, observe=None, sleep=ti
             if observe:
                 observe(row)
             return response, attempts
-

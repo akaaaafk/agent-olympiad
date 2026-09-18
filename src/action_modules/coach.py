@@ -53,8 +53,11 @@ def coach_brief_prompts(
         f"{scope}\n"
         "Do not assign problems (you have not seen them). Do not call actions. "
         "Return plain text, at most "
-        f"{policy.char_limit('work') or 2400} characters, organised as short "
-        "numbered points the contestants can act on."
+        f"{policy.brief_char_limit} characters, organised as short "
+        "numbered points the contestants can act on. "
+        "Include an explicit brevity rule for contestants from turn 1: keep work "
+        "drafts short (key steps plus a Final answer line), keep speak messages "
+        "to one or two short status sentences, and never write a long essay first."
     )
     user = (
         f"PRE-CONTEST BRIEF\nCompetition: {card.competition_id}\n"
@@ -72,6 +75,8 @@ def coach_brief_prompts(
            "drafts and reviews are visible. Private, group and public history expire. ")
         +
         "Recommend remember/recall/share_note only when the memory module is enabled.\n"
+        "Instruct the team to stay well under action character limits from the first "
+        "turn: compact work drafts, short speak updates, no long preambles.\n"
         + (
             "This brief happens before the clock starts (turn 0) and costs the team "
             "no contest turn.\n"
@@ -108,7 +113,7 @@ def prepare_brief(
     from contest_session import BudgetExceededError
     from rulecard_policy import clip_text
     if supplied_brief is not None:
-        if not supplied_brief.strip() or len(supplied_brief) > (policy.char_limit("work") or 2400):
+        if not supplied_brief.strip() or len(supplied_brief) > policy.brief_char_limit:
             raise ValueError("The supplied Coach brief must fit the nonempty opening-brief character limit")
         memory.append(
             task_id=None, question_id=None, actor=COACH_AGENT, visibility="public",
@@ -130,7 +135,7 @@ def prepare_brief(
     )
     response = query(system, user)
     exhausted = not charge_tokens(response)
-    guidance, _ = clip_text(response.strip(), policy.char_limit("work"))
+    guidance, _ = clip_text(response.strip(), policy.brief_char_limit)
     memory.append(
         task_id=None, question_id=None, actor=COACH_AGENT, visibility="public",
         kind=BRIEF_EVENT, payload={

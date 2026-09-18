@@ -13,6 +13,7 @@ import otc_runtime
 import automatic_memory
 import contest_observation
 import problem_pdf
+import work_content
 from contest_adapters import EnvironmentTaskExecutor
 from answer_identity import WORK_TASK_BINDING_VERSION
 from action_modules.coach import prepare_brief
@@ -23,13 +24,14 @@ from contest_modules import MODULE_VERSION
 from computer_capacity import session_computer_state
 from contest_actions import _is_answer_sheet_contest, _required_answer_sheet_task_ids, _set_work_assignment, _next_task, _task_has_independent_approval, _apply_action
 from actions import parse_typed_action, validate_action_invocation
-from action_transport import request_single_action
+from action_transport import request_single_action, VERSION as ACTION_TRANSPORT_VERSION
+from argument_limits import VERSION as ARGUMENT_LIMITS_VERSION
 from contest_budget import estimate_tokens
 from evaluation.final_answer import extract_final_answer
 from contest_manifest import ContestManifest
 from contest_memory import ContestMemory
 from contest_session import BudgetExceededError, ContestBudgetState, ContestSession, TaskUnit
-from llm import LLMRequest, RequestFn
+from llm import LLMRequest, LLMResponse, RequestFn
 from programming_workflow import ProgrammingProgress
 from rulecard_policy import WORKSTATION_ACTION_NAMES, clip_text
 from rules.baseline import card_content_hash
@@ -68,6 +70,7 @@ class _AgentTurn:
     arguments: dict[str, Any] = field(default_factory=dict)
     transport_log_index: int | None = None
     memory_actions_used: int = 0
+    pdf_reads_used: int = 0
     think_completed: bool = False
     memory_feedback: list[dict[str, Any]] = field(default_factory=list)
     prepared: bool = False
@@ -164,9 +167,13 @@ class _ContestEngine:
         )
         self.actions = _resolved_actions(self.manifest, self.config)
         self.action_transport_log: list[dict[str, Any]] = []
+        self.action_sampling_log: list[dict[str, Any]] = []
+        self.transport_drafts: dict[str, dict[str, Any]] = {}
         self.transport_api_calls = 0
         self.transport_retries = 0
         self.transport_failures = 0
+        self.transport_failure_streaks: dict[str, int] = {}
+        self.transport_abort_reason: str | None = None
         self.executor = task_action_executor or _default_executor
         if isinstance(self.executor, EnvironmentTaskExecutor):
             self.executor.submission_run_id = self.session.submission_run_id
@@ -228,6 +235,8 @@ class _ContestEngine:
         "coach_budget_exhausted", "opening_summary", "opening_turn",
         "action_transport_log", "transport_api_calls", "transport_retries",
         "transport_failures",
+        "action_sampling_log", "transport_drafts",
+        "transport_failure_streaks", "transport_abort_reason",
     )
 
     def _runtime_settings(self) -> dict[str, Any]:
@@ -241,6 +250,10 @@ class _ContestEngine:
             }
         }
         settings.update(
+            work_content_version=work_content.VERSION,
+            action_transport_version=ACTION_TRANSPORT_VERSION,
+            argument_limits_version=ARGUMENT_LIMITS_VERSION,
+            work_content_limits=work_content.action_argument_limits(self.manifest),
             work_task_binding_version=WORK_TASK_BINDING_VERSION,
             baseline=asdict(self.config.features),
             review_required=self.config.review_required,
@@ -252,6 +265,9 @@ class _ContestEngine:
         )
         if self.config.modules.memory:
             settings["automatic_memory_version"] = automatic_memory.VERSION
+        if self.action_transport == 'emulated':
+            from tinker_action import VERSION
+            settings['emulated_action_transport_version'] = VERSION
         if self.config.current_turn_only:
             settings["current_turn_context_version"] = contest_observation.VERSION
         if self.policy is not None:
@@ -314,6 +330,7 @@ class _ContestEngine:
                 for spec in sorted(turn.available_actions, key=lambda spec: spec.name)
             ],
             "memory_actions_used": turn.memory_actions_used,
+            "pdf_reads_used": turn.pdf_reads_used,
             "think_completed": turn.think_completed,
             "memory_feedback": turn.memory_feedback,
             "prepared": turn.prepared,
@@ -357,6 +374,8 @@ class _ContestEngine:
                         or pending["agent"] != cursor["agents"][cursor["next_seat"]]
                         or type(pending["memory_actions_used"]) is not int
                         or not 0 <= pending["memory_actions_used"] <= memory_module.MAX_SIDE_CALLS_PER_TURN
+                        or type(pending.get('pdf_reads_used', 0)) is not int
+                        or not 0 <= pending.get('pdf_reads_used', 0) <= problem_pdf.MAX_READS_PER_SEAT
                         or not pending["prepared"]):
                     raise ValueError("invalid pending seat")
                 by_name = {spec.name: spec for spec in self.actions}
@@ -379,11 +398,15 @@ class _ContestEngine:
                     programming_source_required=pending["programming_source_required"],
                     available_actions=available,
                     memory_actions_used=pending["memory_actions_used"],
+                    pdf_reads_used=pending.get('pdf_reads_used', 0),
                     think_completed=pending["think_completed"],
                     memory_feedback=deepcopy(pending["memory_feedback"]),
                     prepared=True,
                 )
             for name in self._RUNTIME_FIELDS:
+                if name in {'action_sampling_log', 'transport_drafts', 'transport_failure_streaks',
+                            'transport_abort_reason'} and name not in runtime['state']:
+                    continue
                 setattr(self, name, deepcopy(runtime["state"][name]))
             self._phase, self._round_cursor, self._pending_turn = phase, cursor, turn
         except (KeyError, TypeError, ValueError) as exc:
@@ -398,15 +421,35 @@ class _ContestEngine:
 
     def _charge_tokens(self, text: str) -> bool:
         """Charge estimated tokens; False when the token budget ran dry."""
-        count = estimate_tokens(text)
-        remaining = (
-            None
-            if self.session.budget.max_tokens is None
-            else max(0, self.session.budget.max_tokens - self.session.budget.tokens_used)
-        )
-        charged = count if remaining is None else min(count, remaining)
-        self.session.consume_budget(tokens=charged)
-        return charged >= count
+        from text_call_budget import AccountedText
+        from llm_usage import charge_reserved_usage
+        if isinstance(text, AccountedText):
+            return text.accepted
+        usage = charge_reserved_usage(self.session.budget,
+            {'api_calls': 0, 'output_tokens': estimate_tokens(text)}, reserved_calls=0)
+        return not usage['budget_overrun']
+
+    def _record_model_usage(self, usage, *, purpose, accepted, reason=''):
+        counters = {key: usage[key] for key in (
+            'api_calls', 'input_tokens', 'output_tokens', 'unknown_usage_attempts',
+            'tokens_basis', 'budget_overrun', 'tool_retries', 'finish_reason', 'transport_failed')
+            if key in usage}
+        self.memory.append(task_id=self.session.active_task.task_id if self.session.active_task else None,
+            question_id=None, actor='Runtime', visibility='private', recipients=(), kind='model_usage',
+            payload={'purpose': purpose, **counters, 'accepted': accepted, 'reason': reason},
+            turn=self.session.budget.turns_used)
+
+    def _call_query(self, query, system, user, *, purpose):
+        from text_call_budget import call_text, AccountedText
+        response = call_text(query, self.session, system, user, purpose=purpose)
+        if isinstance(response, AccountedText):
+            self._record_model_usage(response.usage, purpose=purpose,
+                                     accepted=response.accepted, reason=response.reason)
+            if response.request_failed:
+                from llm_usage import ModelRequestError
+                self._persist_checkpoint()
+                raise ModelRequestError(response.reason, response.usage)
+        return response
 
     def final_review_pending(self) -> list[TaskUnit]:
         required_ids = _required_answer_sheet_task_ids(self.manifest)
@@ -439,7 +482,8 @@ class _ContestEngine:
             manifest=(self.competition_flow.public_manifest() if self.competition_flow else self.manifest), session=self.session, memory=self.memory,
             team_size=self.config.team_size, max_turns=self.config.max_turns,
             max_api_calls=self.config.max_api_calls,
-            query=self.coach_query_fn or self.query_llm_fn,
+            query=lambda system, user: self._call_query(self.coach_query_fn or self.query_llm_fn,
+                                                       system, user, purpose='coach'),
             charge_tokens=self._charge_tokens,
             supplied_brief=self.config.precontest_brief,
         )
@@ -472,23 +516,8 @@ class _ContestEngine:
                 self.coach_budget_exhausted = True
             else:
                 coach_system, coach_user = _leader_plan_prompts(planning_manifest, self.config)
-                coach_response = plan_query(coach_system, coach_user)
-                coach_tokens = estimate_tokens(coach_response)
-                remaining_tokens = (
-                    None
-                    if self.session.budget.max_tokens is None
-                    else max(
-                        0,
-                        self.session.budget.max_tokens - self.session.budget.tokens_used,
-                    )
-                )
-                charged_tokens = (
-                    coach_tokens
-                    if remaining_tokens is None
-                    else min(coach_tokens, remaining_tokens)
-                )
-                self.session.consume_budget(tokens=charged_tokens)
-                self.coach_budget_exhausted = charged_tokens < coach_tokens
+                coach_response = self._call_query(plan_query, coach_system, coach_user, purpose='leader_plan')
+                self.coach_budget_exhausted = not self._charge_tokens(coach_response)
                 self.coach_plan = _normalize_coach_plan(coach_response, planning_manifest, self.config)
                 if self.config.leader is not None:
                     # The leader may touch every problem; workers keep their lists.
@@ -570,6 +599,7 @@ class _ContestEngine:
                     )
 
     def run(self) -> dict[str, Any]:
+        self._check_transport_circuit()
         if self._phase in {"setup", "rounds"}:
             self._prepare_coach()
             self.finished = self.finished or self.coach_budget_exhausted
@@ -587,6 +617,12 @@ class _ContestEngine:
                 result["session_checkpoint"], self.memory.to_checkpoint_json()
             )
         return result
+
+    def _check_transport_circuit(self) -> None:
+        if self.transport_abort_reason:
+            # This is an infrastructure failure, NOT a completed zero-score
+            # contest. Keep the charged checkpoint and do not run deadlines.
+            raise RuntimeError(self.transport_abort_reason)
 
     def _start_round(self) -> bool:
         switches_at_turn_start = self.switches
@@ -650,6 +686,7 @@ class _ContestEngine:
             cursor["next_seat"] += 1
             self._pending_turn = None
             self._persist_checkpoint()
+            self._check_transport_circuit()
         active = self.session.active_task
         if (
             not self.finished
@@ -707,6 +744,9 @@ class _ContestEngine:
         # Prepare/schedule the seat once. Memory bookkeeping must not rotate
         # the task cursor, repeat private thinking, or consume the real action.
         while not self.finished:
+            if turn.pdf_reads_used >= problem_pdf.MAX_READS_PER_SEAT:
+                turn.available_actions = frozenset(
+                    spec for spec in turn.available_actions if spec.name != 'read_problem_pdf')
             if turn.memory_actions_used >= memory_module.MAX_SIDE_CALLS_PER_TURN:
                 turn.available_actions = frozenset(
                     spec for spec in turn.available_actions
@@ -727,6 +767,18 @@ class _ContestEngine:
             )
             visible_before = len(self.memory.view(turn.agent)) if auxiliary else 0
             succeeded = self._apply_agent_action(turn)
+            if turn.action == 'read_problem_pdf':
+                # Deliver requested pages in this same seat/round. Waiting for
+                # the next round would make reads unusable without memory or
+                # accidentally reintroduce cross-round private state.
+                turn.pdf_reads_used += 1
+                self.memory.append(task_id=self.session.active_task.task_id if self.session.active_task else None,
+                    question_id=None, actor=turn.agent, visibility='private', recipients=(turn.agent,),
+                    kind='pdf_read_call', payload={'succeeded': succeeded,
+                        'reads_used': turn.pdf_reads_used, 'turn_cost': 0}, turn=self.session.budget.turns_used)
+                self._refresh_agent_actions(turn)
+                self._persist_checkpoint()
+                continue
             if not auxiliary:
                 if self.config.modules.memory:
                     automatic_memory.sync(self.memory, viewer=turn.agent,
@@ -1083,7 +1135,7 @@ class _ContestEngine:
                         self.session.active_task.task_id if self.session.active_task else None)
                 if self.config.current_turn_only:
                     think_system += "\n" + contest_observation.GUIDANCE
-                think_response = self.query_llm_fn(think_system, think_prompt)
+                think_response = self._call_query(self.query_llm_fn, think_system, think_prompt, purpose='private_think')
                 if not self._charge_tokens(think_response):
                     think_ok = False
                 bounded_response, cut = clip_text(
@@ -1162,6 +1214,10 @@ class _ContestEngine:
             programming_source_required=turn.programming_source_required,
             think_ledger=think_ledger,
         )
+        if any(spec.name == 'read_problem_pdf' for spec in turn.available_actions):
+            turn.user_prompt += (f'\nPDF navigation: {problem_pdf.MAX_READS_PER_SEAT - turn.pdf_reads_used} '
+                'page-read calls remain in this seat turn. Each read immediately returns to you with '
+                'the selected pages before your ordinary action. All model calls use the shared API/token budget.\n')
         if self.config.modules.memory:
             turn.system_prompt += "\n" + memory_module.turn_guidance(turn.memory_actions_used)
             if turn.memory_feedback:
@@ -1169,6 +1225,18 @@ class _ContestEngine:
                     turn.memory_feedback, ensure_ascii=False,
                 )
         return True
+
+    def _charge_action_response(self, response):
+        from llm_usage import response_usage, charge_reserved_usage, completion_error
+        usage = charge_reserved_usage(self.session.budget, response_usage(response))
+        self.transport_api_calls += usage['api_calls']
+        self.transport_retries += max(0, int(usage.get('tool_retries') or 0))
+        error = completion_error(usage)
+        self.transport_failures += int(bool(error))
+        self._record_model_usage(usage, purpose='contest_action',
+            accepted=not (error or usage['budget_overrun']),
+            reason=error or ('Provider exceeded the requested budget' if usage['budget_overrun'] else ''))
+        return usage
 
     def _request_action(self, turn: _AgentTurn) -> bool:
         if self.action_request_fn is not None:
@@ -1199,32 +1267,49 @@ class _ContestEngine:
                         None if self.session.budget.max_tokens is None else
                         max(0, self.session.budget.max_tokens - self.session.budget.tokens_used)
                     ),
+                    # Transport drafts are private, unexecuted buffers, scoped
+                    # again by the adapter to this session/actor/active task.
+                    "unexecuted_action_draft": self.transport_drafts.get(turn.agent),
+                    "action_argument_limits": work_content.action_argument_limits(self.manifest),
+                    "action_argument_limits_by_task": work_content.action_argument_limits_by_task(self.manifest),
+                    "action_payload_limits": work_content.action_payload_limits(),
                 },
                 tools=turn.function_tools,
                 tool_choice="required",
             )
-            with problem_pdf.attached_request(request, self.manifest, self.session, self.memory, turn.agent,
-                    text_only=getattr(self.action_request_fn, "supports_pdf_text", False)) as request:
-                response = request_single_action(self.action_request_fn, request)
-            reported_api_calls = max(
-                1,
-                int(response.usage.get("api_calls") or 1),
+            pdf_session, pdf_memory = contest_observation.observe(self.session, self.memory, self.config)
+            transport_started = False
+            try:
+                with problem_pdf.attached_request(request, self.manifest, pdf_session, pdf_memory, turn.agent,
+                        text_only=getattr(self.action_request_fn, "supports_pdf_text", False)) as request:
+                    transport_started = True
+                    response = request_single_action(self.action_request_fn, request)
+            except Exception as exc:
+                from llm_usage import failure_usage
+                reported = failure_usage(exc) if transport_started else {'api_calls': 0, 'output_tokens': 0}
+                error = 'Action request failed: ' + type(exc).__name__
+                self._charge_action_response(LLMResponse('', 'unknown', 'unknown',
+                    usage={**reported, 'tool_error': error}))
+                self.action_transport_log.extend(
+                    {'turn': self.session.budget.turns_used, 'agent': turn.agent, **call}
+                    for call in reported.get('rejected_tool_calls', ()))
+                _append_action_error(self.memory, self.session, turn.agent, error)
+                # Keep the pending seat, with every spent retry already charged.
+                # Resuming can use only the remaining quota and cannot replay a
+                # rejected partial action as an executed one.
+                self._persist_checkpoint()
+                raise
+            self.action_sampling_log.extend(
+                {'turn': self.session.budget.turns_used, 'agent': turn.agent,
+                 'task_id': request.metadata['task_id'], **sample}
+                for sample in response.usage.get('sampling_trace', ())
             )
-            self.transport_api_calls += reported_api_calls
-            self.transport_retries += max(
-                0,
-                int(response.usage.get("tool_retries") or 0),
-            )
-            self.transport_failures += int(
-                not response.tool_calls
-                and bool(response.usage.get("tool_error"))
-            )
-            if reported_api_calls > 1:
-                try:
-                    self.session.consume_budget(api_calls=reported_api_calls - 1)
-                except BudgetExceededError:
-                    self.finished = True
-                    return False
+            draft = response.usage.get('unexecuted_action_draft')
+            if draft and not response.tool_calls:
+                self.transport_drafts[turn.agent] = deepcopy(draft)
+            else:
+                self.transport_drafts.pop(turn.agent, None)
+            recorded_usage = self._charge_action_response(response)
             self.action_transport_log.extend(
                 {"turn": self.session.budget.turns_used, "agent": turn.agent, **call}
                 for call in response.usage.get("rejected_tool_calls", ())
@@ -1242,42 +1327,30 @@ class _ContestEngine:
                 }
                 for call in response.tool_calls
             )
-            serialized_calls = json.dumps(
-                [
-                    {
-                        "name": call.name,
-                        "arguments": call.arguments,
-                    }
-                    for call in response.tool_calls
-                ],
-                ensure_ascii=False,
-            )
-            token_count = int(
-                response.usage.get("output_tokens")
-                or response.usage.get("completion_tokens")
-                or estimate_tokens(serialized_calls or response.text)
-            )
+            if recorded_usage.get('transport_failed'):
+                from llm_usage import ModelRequestError
+                self._persist_checkpoint()
+                raise ModelRequestError(str(response.usage.get('tool_error') or 'Action transport failed'),
+                                        recorded_usage)
+            if recorded_usage['budget_overrun'] or recorded_usage['api_calls'] == 0:
+                self.finished = True
+                return False
         else:
-            response = self.query_llm_fn(turn.system_prompt, turn.user_prompt)
-            token_count = estimate_tokens(response)
-        remaining_tokens = (
-            None
-            if self.session.budget.max_tokens is None
-            else max(
-                0,
-                self.session.budget.max_tokens - self.session.budget.tokens_used,
-            )
-        )
-        charged_tokens = (
-            token_count
-            if remaining_tokens is None
-            else min(token_count, remaining_tokens)
-        )
-        self.session.consume_budget(tokens=charged_tokens)
-        if charged_tokens < token_count:
-            self.finished = True
-            return False
+            response = self._call_query(self.query_llm_fn, turn.system_prompt, turn.user_prompt,
+                                        purpose='contest_action')
+            if not self._charge_tokens(response):
+                self.finished = True
+                return False
         if self.action_request_fn is not None:
+            provider_key = f'{response.provider}:{response.model}'
+            transport_failed = not response.tool_calls and bool(response.usage.get('tool_error'))
+            streak = self.transport_failure_streaks.get(provider_key, 0) + 1 if transport_failed else 0
+            self.transport_failure_streaks[provider_key] = streak
+            if streak >= 3:
+                self.transport_abort_reason = (
+                    f'Action transport circuit open for {provider_key}: {streak} consecutive '
+                    'requests exhausted recovery without a valid tool call. Checkpoint preserved; '
+                    'contest not finalized. Validate the adapter in a fresh probe before restarting.')
             if not response.tool_calls:
                 turn.action, turn.arguments, error = (
                     None,
@@ -1336,7 +1409,7 @@ class _ContestEngine:
             return False
         if turn.transport_log_index is not None:
             self.action_transport_log[turn.transport_log_index]["executed"] = True
-        if any(
+        if turn.action == 'read_problem_pdf' or any(
             spec.name == turn.action and memory_module.is_auxiliary_action(spec)
             for spec in turn.available_actions
         ):
@@ -1622,6 +1695,39 @@ class _ContestEngine:
                     self.session.select_task(deadline_active_task_id)
                 self._persist_checkpoint()
 
+    def _desk_diagnostics(self, event_kind_counts: dict[str, int]) -> dict[str, Any]:
+        desk_diagnostics = {
+            "inspect_count": event_kind_counts.get("inspect_problem", 0),
+            "notes_recorded": event_kind_counts.get("note", 0),
+            "notes_shared": event_kind_counts.get("note_shared", 0),
+            "recall_count": event_kind_counts.get("recall", 0),
+            "triage_changes": event_kind_counts.get("task_triaged", 0),
+            "items_hopeless": sum(task.hopeless for task in self.session.tasks),
+            "repeat_draft_attempts": event_kind_counts.get("work_duplicate", 0),
+        }
+        if self.policy is not None:
+            desk_diagnostics["otc"] = {
+                "think_calls": event_kind_counts.get(otc_runtime.THINK_EVENT, 0),
+                "content_clipped": event_kind_counts.get("card_content_clipped", 0),
+                "coach_brief": bool(self.coach_guidance),
+                "coach_calls": event_kind_counts.get(otc_runtime.BRIEF_EVENT, 0),
+                "review_required": self.config.review_required,
+                "final_review_required": self.config.final_review_required,
+                "coach_opening_summary": bool(self.opening_summary),
+                "communication": otc_runtime.communication_budget(self.memory, self.policy).report(),
+                "deliberation": (
+                    otc_runtime.deliberation_ledger(self.memory).report()
+                    if self.policy.structured_deliberation
+                    else None
+                ),
+                "repair_budget_exhausted": event_kind_counts.get(
+                    "programming_repair_budget_exhausted", 0
+                ),
+                "speak": event_kind_counts.get("speak", 0),
+                "direct_messages": event_kind_counts.get("direct_message", 0),
+            }
+        return desk_diagnostics
+
     def _build_result(self) -> dict[str, Any]:
         deadline_events = self.memory.archival_snapshot()["events"]
         deadline_attempts = [e for e in deadline_events if e["kind"] == "programming_deadline_submit_started"]
@@ -1701,36 +1807,7 @@ class _ContestEngine:
         event_kind_counts: dict[str, int] = {}
         for event in all_events:
             event_kind_counts[event["kind"]] = event_kind_counts.get(event["kind"], 0) + 1
-        desk_diagnostics = {
-            "inspect_count": event_kind_counts.get("inspect_problem", 0),
-            "notes_recorded": event_kind_counts.get("note", 0),
-            "notes_shared": event_kind_counts.get("note_shared", 0),
-            "recall_count": event_kind_counts.get("recall", 0),
-            "triage_changes": event_kind_counts.get("task_triaged", 0),
-            "items_hopeless": sum(task.hopeless for task in self.session.tasks),
-            "repeat_draft_attempts": event_kind_counts.get("work_duplicate", 0),
-        }
-        if self.policy is not None:
-            desk_diagnostics["otc"] = {
-                "think_calls": event_kind_counts.get(otc_runtime.THINK_EVENT, 0),
-                "content_clipped": event_kind_counts.get("card_content_clipped", 0),
-                "coach_brief": bool(self.coach_guidance),
-                "coach_calls": event_kind_counts.get(otc_runtime.BRIEF_EVENT, 0),
-                "review_required": self.config.review_required,
-                "final_review_required": self.config.final_review_required,
-                "coach_opening_summary": bool(self.opening_summary),
-                "communication": otc_runtime.communication_budget(self.memory, self.policy).report(),
-                "deliberation": (
-                    otc_runtime.deliberation_ledger(self.memory).report()
-                    if self.policy.structured_deliberation
-                    else None
-                ),
-                "repair_budget_exhausted": event_kind_counts.get(
-                    "programming_repair_budget_exhausted", 0
-                ),
-                "speak": event_kind_counts.get("speak", 0),
-                "direct_messages": event_kind_counts.get("direct_message", 0),
-            }
+        desk_diagnostics = self._desk_diagnostics(event_kind_counts)
         segment_seconds = time.perf_counter() - self.wall_t0
         ended_at = datetime.now(timezone.utc).isoformat()
         self.session.budget.wall_seconds_used = self.prior_wall_seconds + segment_seconds
@@ -1769,6 +1846,9 @@ class _ContestEngine:
                 self.manifest, rule_card=self.config.rule_card
             ).report(),
             "action_transport_log": self.action_transport_log,
+            **({'action_sampling_log': self.action_sampling_log,
+                'unexecuted_transport_drafts': self.transport_drafts}
+               if self.action_sampling_log or self.transport_drafts else {}),
             "precontest_coach_guidance": self.coach_guidance,
             "precontest_coach_plan": self.coach_plan,
             "coach_opening_summary": self.opening_summary,

@@ -16,7 +16,8 @@ def audit():
     import pymupdf
     rows = []
     snapshot = {}
-    for path in sorted((ROOT / "data/benchmarks").glob("*/benchmark.json")):
+    index = json.loads((ROOT / "data/benchmarks/index.json").read_text(encoding="utf-8-sig"))
+    for path in sorted(ROOT / track["benchmark_path"] for track in index["olympiads"]):
         snapshot[str(path.relative_to(ROOT))] = hashlib.sha256(path.read_bytes()).hexdigest()
         rows.extend((path.parent.name, row) for row in json.loads(path.read_text(encoding="utf-8-sig")))
     judge_hashes = {a.get("sha256") for _, r in rows for a in r.get("assets", [])

@@ -319,7 +319,7 @@ def coach_opening_prompts(
         "coaches afterwards. Do not solve problems and do not call actions. "
         "Return only one JSON object with this schema: "
         '{"summary":"text the whole team reads (<= '
-        f"{policy.char_limit('work') or 2400} chars)\","
+        f"{policy.brief_char_limit} chars)\","
         '"work_assignments":{"Agent_1":["exact problem_id"]},'
         '"task_order":["exact problem_id"],'
         '"watch_points":["..."]}. '
@@ -362,6 +362,8 @@ def think_system_prompt(
         f"{', '.join(sorted(action_names))}. "
         "Treat this as no more than five minutes of human scratch work: prioritize, "
         "decide, and stop instead of expanding a long internal analysis. "
+        "Keep this think short; plan a compact work or speak payload for the next "
+        "action instead of rehearsing a full write-up here. "
         + (f"Write at most {limit} characters total. "
            "Write plain-text reasoning and 'NEXT ACTION: <action name>', followed "
            "by the required memory_update block. JSON is allowed only inside that "
@@ -416,7 +418,11 @@ def protocol_text(
         "same turn (the switch and the draft are one move); a problem that already "
         "has a draft is left for verification and your focus advances to the next "
         "one without a draft.",
-        f"Character limits per action: {limits}. Longer content is cut.",
+        f"Character limits per action: {limits}. Longer content is cut or rejected.",
+        "Brevity from turn 1: stay well under those limits on the first attempt. "
+        "For work, write a compact derivation plus an explicit Final answer line; "
+        "do not dump a long private essay into the draft. For speak, send one short "
+        "team status or disagreement note, not a full answer sheet or long report.",
         f"Roles allowed to submit: {', '.join(sorted(policy.submitters))}.",
     ]
     if policy.min_turns:

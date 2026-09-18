@@ -192,7 +192,7 @@ class DockerProgrammingJudge:
     def build_run_command(self, executable: Path) -> list[str]:
         timeout_seconds = max(1, math.ceil(self.package.limits.time_ms / 1000))
         return [
-            "docker", "run", "--rm", *self._security_flags(),
+            "docker", "run", "--rm", "-i", *self._security_flags(),
             "--mount", f"type=bind,source={executable.resolve()},target=/submission/main,readonly",
             self.package.images.get("cpp17", "gcc:14"),
             "timeout", f"{timeout_seconds}s", "/submission/main",

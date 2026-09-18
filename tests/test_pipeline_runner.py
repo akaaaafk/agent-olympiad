@@ -1,10 +1,12 @@
 """All-track registration preserves blocked jobs and input visibility."""
 import importlib.util
+import csv
 import json
 from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
+import shutil
 
 SPEC = importlib.util.spec_from_file_location('pipeline', Path(__file__).resolve().parents[1] / 'scripts/run_pipeline.py')
 pipeline = importlib.util.module_from_spec(SPEC)
@@ -12,6 +14,28 @@ SPEC.loader.exec_module(pipeline)
 
 
 class PipelineTests(unittest.TestCase):
+    def test_report_reconciles_verified_completed_judge_from_cached_pending_state(self):
+        source = Path(__file__).resolve().parents[1] / (
+            'results/mini_all_single_agent_20260917_090449/runs/ccdc_4a40678ce9eeee69')
+        if not (source / 'contest_session.json').is_file():
+            self.skipTest('Saved repaired run not installed')
+        saved = pipeline.read(source / 'contest_session.json')
+        if saved.get('evaluation_pending'):
+            self.skipTest('Fixture has not been evaluated')
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            shutil.copytree(source, out / 'runs/a')
+            registry = {'jobs': [dict(id='a', competition='ccdc', session='2025',
+                                     route='native', blockers=[])]}
+            states = {'a': {'status': 'evaluation_pending', 'reason': 'stale',
+                            'run_identity': saved['run_identity']}}
+            pipeline.report(out, registry, states)
+            self.assertEqual(states['a']['status'], 'complete')
+            with (out / 'summary.tsv').open(newline='', encoding='utf-8') as stream:
+                row = next(csv.DictReader(stream, delimiter='\t'))
+            self.assertEqual(row['status'], 'complete')
+            self.assertEqual(float(row['score']), saved['grade']['score'])
+
     def test_registration_retains_unrunnable_track_and_never_uses_judge_pdf(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -25,7 +49,7 @@ class PipelineTests(unittest.TestCase):
             pipeline.write(root / 'proof.json', [{'problem_id': 'proof_1', 'provenance': {
                 'assets': [{'path': 'solutions.pdf', 'role': 'judge_only'}]}}])
             pipeline.write(root / 'external.json', [{'problem_id': 'external_1'}])
-            with patch.object(pipeline, 'ROOT', root):
+            with patch.object(pipeline, 'ROOT', root), patch.object(pipeline, 'DATA', root / 'data'):
                 registry = pipeline.register(root / 'out')
             self.assertEqual(registry['track_count'], 2)
             self.assertEqual(registry['session_count'], 2)
@@ -40,7 +64,8 @@ class PipelineTests(unittest.TestCase):
             pipeline.write(out / 'runs/a/contest_session.json', {'grade': {'score': 12, 'max_score': 60}})
             pipeline.report(out, registry, {})
             self.assertEqual(pipeline.read(out / 'batch_status.json')['counts'], {'pending': 1})
-            self.assertIn('12', (out / 'summary.tsv').read_text())
+            with (out / 'summary.tsv').open(newline='', encoding='utf-8') as stream:
+                self.assertEqual(next(csv.DictReader(stream, delimiter='\t'))['score'], '')
 
 
 if __name__ == '__main__':

@@ -23,7 +23,7 @@ def read(path):
     return json.loads((ROOT/path).read_text(encoding="utf-8-sig"))
 
 
-def audit(label):
+def audit(label, layouts=("base", "last_exam")):
     digests, checked_pdfs, issues, review, records, tracks = {}, set(), [], [], {}, []
     def digest(path):
         p = (ROOT/path).resolve()
@@ -146,7 +146,7 @@ def audit(label):
     if len(records) != index["total_records"]:
         add("global_record_count_mismatch", "catalog", expected=len(records), actual=index["total_records"])
     # Verify both actual derived layouts, not only their metadata manifests.
-    for layout in ("base", "last_exam"):
+    for layout in layouts:
         cards = read(f"data/{layout}/task_cards.json")
         if Counter(v["task_id"] for v in cards["tasks"]) != Counter(records.keys()) or cards["n_tasks"] != len(records):
             add("derived_membership_mismatch", layout)
@@ -190,7 +190,8 @@ def audit(label):
         if summary[field] != expected:
             add("summary_drift", "catalog", field=field, expected=expected, actual=summary[field])
     report = dict(audited_at_utc=datetime.now(timezone.utc).isoformat(), label=label,
-        scope="All active canonical records, declared assets, scorecards and both generated layouts; no contest/runtime execution or universal semantic certification.",
+        scope="All active canonical records, declared assets and scorecards; no contest/runtime execution or universal semantic certification.",
+        audited_layouts=list(layouts),
         active_tracks=len(tracks), active_records=len(records), status_counts=dict(statuses), split_counts=dict(splits), license_counts=dict(licenses),
         unique_files_hashed=len(digests), declared_pdfs_header_checked=len(checked_pdfs),
         issue_counts=dict(Counter(i["kind"] for i in issues)), review_candidate_counts=dict(Counter(i["kind"] for i in review)),
@@ -204,4 +205,14 @@ def audit(label):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("label", choices=("before", "after"))
-    audit(parser.parse_args().label)
+    parser.add_argument('--report-dir', type=Path, help='Fresh output directory; preserve previous audit evidence.')
+    args = parser.parse_args()
+    if args.report_dir:
+        destination = (ROOT / args.report_dir).resolve()
+        if not destination.is_relative_to(ROOT / 'output'):
+            raise ValueError('Fresh audit reports must be under output')
+        if (destination / (args.label+'.json')).exists():
+            raise FileExistsError('Use a fresh audit report directory')
+        CACHE = destination.relative_to(ROOT).as_posix()
+    report = audit(args.label)
+    sys.exit(bool(report['issues']))

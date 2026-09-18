@@ -101,6 +101,12 @@ class OpenTablePolicy:
         limit = self.max_chars_by_action.get(key)
         return int(limit) if limit else None
 
+    @property
+    def brief_char_limit(self) -> int:
+        """Coach advice has its own cap; draft growth must not expand it."""
+        return int(self.raw.get('precontest_brief', {}).get('max_chars')
+                   or self.char_limit('work') or 2400)
+
     def counted_message_actions(self) -> frozenset[str]:
         """Actions charged against the card's communication budget."""
         if not self.communication_limited:
@@ -146,6 +152,9 @@ def open_table_policy(
         "open_table_coach requires precontest_brief and opening_discussion",
     )
     assert isinstance(precontest, dict) and isinstance(opening, dict)
+    if 'max_chars' in precontest:
+        _require(type(precontest['max_chars']) is int and precontest['max_chars'] > 0,
+                 'precontest_brief.max_chars must be a positive integer')
     brief_turn = precontest.get("turn")
     _require(
         brief_turn == 0
@@ -242,7 +251,10 @@ def open_table_policy(
     )
 
     min_turns = int(raw.get("min_turns") or 0)
-    _require(min_turns <= int(card.simulation.get("max_turns") or min_turns),
+    # Validate the authored protocol against its authored budget. A short smoke
+    # run may end earlier; binding its display budget must not rewrite policy.
+    authored = card.raw.get('simulation') or card.simulation
+    _require(min_turns <= int(authored.get("max_turns") or min_turns),
              "card min_turns exceeds max_turns")
     _require(min_turns >= 0, "min_turns must be non-negative")
 

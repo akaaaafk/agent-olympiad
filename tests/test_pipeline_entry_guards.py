@@ -26,6 +26,15 @@ class AssetBoundaryTests(unittest.TestCase):
         self.root_patch = patch.object(pipeline, "ROOT", self.root)
         self.root_patch.start()
         self.addCleanup(self.root_patch.stop)
+        # The catalog root is resolved at import time; point it at the fixture too.
+        self.data_patch = patch.object(pipeline, "DATA", self.root / "data")
+        self.data_patch.start()
+        self.addCleanup(self.data_patch.stop)
+        # Fixture rows carry no evaluation metadata; readiness is covered elsewhere.
+        self.ready_patch = patch.object(pipeline, "validate_job_readiness")
+        self.ready_patch.start()
+        self.addCleanup(self.ready_patch.stop)
+        pipeline.write(self.root / "data/evaluation_access_policy.json", {"excluded_tracks": []})
         pipeline.write(self.root / "data/benchmarks/index.json", {"olympiads": [
             {"id": "proof", "benchmark_path": "proof.json"}
         ]})
@@ -41,7 +50,8 @@ class AssetBoundaryTests(unittest.TestCase):
         (self.root / "nested").mkdir()
 
     def row(self, assets=None, source="solutions.pdf"):
-        row = {"problem_id": "proof_1", "source_file": source}
+        row = {"problem_id": "proof_1", "source_file": source,
+               "evaluation": {"status": "ready", "evaluator_id": "rubric"}}
         if assets is not None:
             row["provenance"] = {"assets": assets}
         pipeline.write(self.root / "proof.json", [row])
@@ -55,6 +65,25 @@ class AssetBoundaryTests(unittest.TestCase):
         job = self.register()
         self.assertNotIn("task_pdf", job)
         self.assertTrue(job["blockers"])
+
+    def test_unready_hunt_puzzles_do_not_block_ready_puzzles_of_same_year(self):
+        pipeline.write(self.root / 'data/benchmarks/index.json', {'olympiads': [
+            {'id': 'mystery_hunt', 'benchmark_path': 'hunt.json'}]})
+        for component, data in (
+            ('competition', {'deliverable': {'official_deliverable': 'puzzle_answer'}}),
+            ('collaboration', {}), ('evaluation', {})):
+            pipeline.write(self.root / 'data/rules/mystery_hunt' / (component+'.json'), data)
+        pipeline.write(self.root / 'hunt.json', [
+            {'problem_id': 'solvable', 'year': 2012,
+             'evaluation': {'status': 'ready', 'evaluator_id': 'gold_answer_v1'}},
+            {'problem_id': 'missing_input', 'year': 2012,
+             'evaluation': {'status': 'not_ready', 'evaluator_id': None}}])
+        jobs = pipeline.register(self.root / 'out')['jobs']
+        self.assertEqual(len(jobs), 2)
+        ready = next(j for j in jobs if j['problem_ids'] == ['solvable'])
+        blocked = next(j for j in jobs if j['problem_ids'] == ['missing_input'])
+        self.assertEqual(ready['blockers'], [])
+        self.assertTrue(blocked['blockers'])
 
     def test_conflicting_roles_use_canonical_path_and_fail_closed(self):
         self.row([
@@ -103,6 +132,21 @@ class AssetBoundaryTests(unittest.TestCase):
             pipeline.command(job, self.root / "out",
                              SimpleNamespace(provider="mock", model="mock"))
 
+    def test_artifact_command_forwards_shared_settings_to_identity_and_child(self):
+        self.row([{"path": "problems.pdf", "role": "agent_visible"}])
+        job = self.register()
+        args = SimpleNamespace(provider='mock', model='mock', max_turns=12,
+            max_api_calls=50, max_total_tokens=10000, max_output_tokens=3000, temperature=0.4)
+        with patch('otc_artifact_pipeline.prepare_artifact_run', return_value={'identity': {}}) as prepare:
+            cmd = pipeline.command(job, self.root / 'out', args, expected_identities={})
+        for flag, value in (('--max-turns', '12'), ('--max-api-calls', '50'),
+                            ('--max-total-tokens', '10000'), ('--max-output-tokens', '3000'),
+                            ('--temperature', '0.4')):
+            self.assertEqual(cmd[cmd.index(flag) + 1], value)
+        self.assertEqual(prepare.call_args.kwargs['max_tokens'], 10000)
+        self.assertEqual(prepare.call_args.kwargs['max_turns'], 12)
+        self.assertEqual(prepare.call_args.kwargs['temperature'], 0.4)
+
     def test_valid_existing_registry_can_build_artifact_command(self):
         self.row([{"path": "problems.pdf", "role": "agent_visible"}])
         job = self.register()
@@ -117,6 +161,9 @@ class CompletionPreflightTests(unittest.TestCase):
         self.job = {"id": "icpc-test", "competition": "icpc",
                     "route": "native", "manifest": "fixture.json"}
         self.args = SimpleNamespace(provider="mock", model="mock")
+        ready = patch.object(pipeline, "validate_job_readiness")
+        ready.start()
+        self.addCleanup(ready.stop)
         self.manifest = SimpleNamespace(tasks=[SimpleNamespace(
             programming=True, benchmark={"evaluation": {
                 "vjudge_prob_num": "A", "status": "remote_judge_ready",
@@ -156,13 +203,14 @@ class CompletionPreflightTests(unittest.TestCase):
                 inspect.assert_called_once()
 
     def test_ready_resume_keeps_resume_flag_and_health_probe(self):
-        with patch("run_competition_batch.inspect_contest_run", return_value=("resume", {})), \
+        with patch.dict("os.environ", {"VJUDGE_GATEWAY_URL": "http://127.0.0.1:9876/"}), \
+             patch("run_competition_batch.inspect_contest_run", return_value=("resume", {})), \
              patch("contest_manifest.load_contest_manifest", return_value=self.manifest), \
              patch.object(pipeline.subprocess, "run", return_value=SimpleNamespace(stdout="0", returncode=0)), \
              patch.object(pipeline.urllib.request, "urlopen", return_value=io.StringIO('{"ok": true}')) as health:
             cmd = pipeline.command(self.job, Path("unused"), self.args)
         self.assertIn("--resume", cmd)
-        health.assert_called_once()
+        health.assert_called_once_with('http://127.0.0.1:9876/v1/health', timeout=5)
 
 
 class BatchExitTests(unittest.TestCase):
@@ -175,21 +223,33 @@ class BatchExitTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             out = Path(directory)
             pipeline.write(out / "registry.json", {"jobs": jobs})
+            identities = {}
             def run(*args, **kwargs):
                 if artifact_status is not None:
-                    pipeline.write(out / "runs/a/result.json", {"status": artifact_status})
+                    pipeline.write(out / "runs/a/result.json", {"status": artifact_status,
+                                   "run_identity": identities["a"]})
+                    # Artifact runs persist the contest session beside result.json.
+                    pipeline.write(out / "runs/a/contest_session.json", {})
                 elif returncode == 0:
                     pipeline.write(out / "runs/a/contest_session.json", {"grade": {"graded": True}})
                 return SimpleNamespace(returncode=returncode)
             command_values = iter(commands or [["mock-runner"]])
-            def command_result(job, output, args, *, completed_results=None):
+            def command_result(job, output, args, *, completed_results=None, expected_identities=None):
+                from contest_run_identity import content_hash
+                identity = {"settings": {"case": job['id']}, "fingerprint": content_hash({"case": job['id']})}
+                identities[job['id']] = identity
+                if expected_identities is not None:
+                    expected_identities[job['id']] = identity
                 value = next(command_values)
                 if value is None and completed_results is not None:
                     completed_results[job["id"]] = {"grade": {"graded": True}}
+                    pipeline.write(out / 'runs' / job['id'] / 'contest_session.json',
+                                   completed_results[job['id']])
                 return value
-            with patch.object(sys, "argv", ["run_pipeline.py", stage, "--output", str(out), *extra]), \
+            with patch.object(sys, "argv", ["run_pipeline.py", stage, "--model", "mock", "--output", str(out), *extra]), \
                  patch.object(pipeline, "command", side_effect=command_result) as command, \
-                 patch.object(pipeline.subprocess, "run", side_effect=run) as process:
+                 patch.object(pipeline, "run_child", side_effect=run) as process, \
+                 patch("contest_run_identity.read_completed_contest_result", return_value={"grade": {"graded": True}}):
                 code = pipeline.main()
             state = pipeline.read(out / "batch_status.json")
             self.assertFalse((out / "pipeline.lock").exists())

@@ -19,9 +19,9 @@ def write(p, value):
     p.write_text(json.dumps(value, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
 
 stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
-backup = ROOT/'data/excluded'/f'requested_year_filter_{stamp}'
+backup = ROOT.parent/'dataset_backups'/f'requested_year_filter_{stamp}'
 base = ROOT/'data/benchmarks'
-policy = {'odyssey_of_the_mind': (2010, True), 'qanta': (2010, True),
+policy = {'odyssey_of_the_mind': (2010, True), 'qanta': (2011, True),
           'science_bowl': (None, True), 'wharton_investment': (None, True),
           'cfa_research_challenge': (2010, False)}
 changes = {}

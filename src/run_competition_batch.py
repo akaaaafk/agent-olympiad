@@ -61,7 +61,7 @@ from evaluation.finalize import apply_registered_judge
 from env_config import load_repo_dotenv
 from llm import (
     make_perplexity_caller,
-    make_tinker_caller,
+    make_tinker_query_fn,
     provider_action_transport,
     resolve_query_fn,
     resolve_request_fn,
@@ -75,8 +75,9 @@ DEFAULT_MODEL = "openai/gpt-5.4-mini"
 TINKER_DEFAULT_MODEL = "Qwen/Qwen3.6-35B-A3B"
 TINKER_DEFAULT_MAX_TOKENS = 8192
 TINKER_DEFAULT_TEMPERATURE = 0.2
-PROVIDERS = ("perplexity", "tinker", "openagents", "openai", "vectorengine")
-JUDGE_PROVIDERS = ("perplexity", "tinker", "openai", "openagents", "vectorengine")
+from env_config import PUBLIC_PROFILE_PROVIDERS
+PROVIDERS = ("perplexity", "tinker", "openagents", "openai", "vectorengine", *PUBLIC_PROFILE_PROVIDERS)
+JUDGE_PROVIDERS = ("perplexity", "tinker", "openai", "openagents", "vectorengine", *PUBLIC_PROFILE_PROVIDERS)
 
 TRACKED_TOOLS = (
     "execute_code",
@@ -677,6 +678,9 @@ def _resolve_judge_provider(agent_provider: str, judge_provider: str | None) -> 
 
 
 def _judge_api_key_name(provider: str) -> str:
+    if provider in PUBLIC_PROFILE_PROVIDERS:
+        from env_config import RUN_API_KEY_ENV
+        return RUN_API_KEY_ENV[provider]
     if provider == "vectorengine":
         return "VECTORENGINE_API_KEY"
     if provider == "openagents":
@@ -707,25 +711,44 @@ def _make_live_query(
     max_output_tokens: int = TINKER_DEFAULT_MAX_TOKENS,
     temperature: float = TINKER_DEFAULT_TEMPERATURE,
 ):
+    if provider in PUBLIC_PROFILE_PROVIDERS:
+        from llm import LLMRequest
+        request_fn = resolve_request_fn(provider=provider, model=model,
+            max_output_tokens=max_output_tokens, temperature=temperature)
+        def public_query(system_prompt, user_prompt):
+            response = request_fn(LLMRequest(system_prompt, user_prompt, purpose='contest_deliberation'))
+            if response.usage.get('tool_error'):
+                raise ValueError(response.usage['tool_error'])
+            return response.text
+        public_query.request = request_fn
+        public_query.supports_budgeted_requests = True
+        public_query.max_output_tokens = max_output_tokens
+        return public_query
     if provider in {"openagents", "openai", "vectorengine"}:
         from llm import LLMRequest
         request_fn = resolve_request_fn(
             provider=provider, model=model, max_output_tokens=max_output_tokens,
             temperature=temperature,
         )
-        def query(system_prompt, user_prompt):
+        def request(req):
+            from dataclasses import replace
             concise_deliberation = model.lower().startswith(("glm-", "deepseek-"))
-            metadata = ({"disable_reasoning": True,
-                         "max_output_tokens_override": min(max_output_tokens, 2048)}
-                        if concise_deliberation else {})
-            response = request_fn(LLMRequest(system_prompt, user_prompt,
-                purpose="contest_deliberation", metadata=metadata))
+            metadata = dict(req.metadata)
+            if concise_deliberation:
+                metadata.update(disable_reasoning=True, max_output_tokens_override=min(
+                    metadata.get('max_output_tokens_override', max_output_tokens), 2048))
+            return request_fn(replace(req, metadata=metadata))
+        def query(system_prompt, user_prompt):
+            response = request(LLMRequest(system_prompt, user_prompt, purpose='contest_deliberation'))
             if response.usage.get("tool_error"):
                 raise ValueError(response.usage["tool_error"])
             return response.text
+        query.request = request
+        query.supports_budgeted_requests = True
+        query.max_output_tokens = max_output_tokens
         return query
     if provider == "tinker":
-        return make_tinker_caller(
+        return make_tinker_query_fn(
             model=model,
             max_output_tokens=max_output_tokens,
             temperature=temperature,

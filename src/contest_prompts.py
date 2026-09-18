@@ -14,10 +14,11 @@ from contest_actions import _is_answer_sheet_contest, _local_run_reports, _sampl
 from contest_manifest import ContestManifest, TaskFamily
 from contest_memory import ContestMemory
 from contest_session import ContestSession, TaskUnit
-from tool_registry import DESK_ACTION_NAMES, ActionSpec, render_action_instructions
+from tool_registry import ACTION_REGISTRY, DESK_ACTION_NAMES, ActionSpec, render_action_instructions
 
 from contest_config import ContestRunConfig
 from contest_observation import GUIDANCE, observe
+from work_content import draft_preview, work_guidance
 
 
 def _task_rows(session: ContestSession) -> list[dict[str, Any]]:
@@ -187,10 +188,14 @@ def _shared_review_history(
         rows = []
         for version in versions:
             content = version.content
+            paging = {}
             if max_content_chars is not None and len(content) > max_content_chars:
                 content = content[:max_content_chars] + "…"
+                paging = {'content_chars': len(version.content),
+                          'read_with': 'inspect_problem', 'next_offset': max_content_chars}
             rows.append(
                 {
+                    **paging,
                     "version_hash": version.version_hash,
                     "parent_hash": version.parent_hash,
                     "author": version.author,
@@ -366,10 +371,11 @@ def _system_prompt(
                  'are unavailable. Normal shared drafts, conversation and current task state remain available.')
     if action_names & DESK_ACTION_NAMES:
         desk_guidance = {
-            "inspect_problem": "inspect_problem reads any problem's statement and full "
-            "version/review/submission history without moving the team's active "
-            "problem; use it to check another problem or to self-verify before you "
-            "act.",
+            "inspect_problem": "inspect_problem reads a visible problem's statement and "
+            "version/review/submission history without moving the team's active problem. "
+            "Answer previews are bounded: read a full answer with problem_id, its exact "
+            "version_hash, offset=0 and limit=2000; continue with content_page.next_offset. "
+            "Use it to check another problem or self-verify before acting.",
             "remember": "remember stores a private note (intermediate result, dead end, "
             "reminder) that survives outside the visible transcript.",
             "recall": "recall searches your notes and shared notes.",
@@ -601,7 +607,9 @@ def _system_prompt(
     elif task_family == "short_answer":
         strategic += (
             "\nSHORT-ANSWER WORKFLOW: This is not a programming task. Answer the "
-            "questions directly and concisely. For a packet, use work for a numbered "
+            "questions directly and concisely from the first turn. Keep each work "
+            "draft compact: short reasoning plus an explicit final answer; keep speak "
+            "to brief status lines. For a packet, use work for a numbered "
             "answer sheet such as `Q1: answer`; for one question, give its explicit "
             "final answer. Never save a status update or ask for source code. "
             + ("Reviewers " if config.review_required or config.final_review_required else "You ")
@@ -667,6 +675,13 @@ def _user_prompt(
         "This task is already selected for you; act on it directly instead of "
         "calling select_problem again."
     )
+    if (active is not None and personal_assignment is not None and policy is None
+            and active.task_id not in personal_assignment.get('work_tasks', ())):
+        active_instruction = (
+            'This shared active task is outside your work assignment. Do not draft for it. '
+            'Select an assigned task if you need to revise your work, or use another '
+            'currently available action. Your assignment and the action list remain authoritative.'
+        )
     if config.review_required or final_review_phase:
         active_instruction += (
             " This is a work target, not a review assignment. For review_answer, "
@@ -717,10 +732,14 @@ def _user_prompt(
         if version is None:
             continue
         row["prompt"] = task_by_id[task.task_id].prompt
-        row["answer"] = version.content
+        preview = draft_preview(version.content)
+        row['answer'] = preview['content']
+        row['content_page'] = preview['content_page']
         if task.kind == "programming":
             # Reviewers approve the exact frozen source, so show all of it.
             row["source"] = version.content
+            row['answer'] = version.content
+            row.pop('content_page')
             row["sample_report"] = sample_reports.get(version.version_hash)
             row["author_report"] = local_run_reports.get(version.version_hash)
     pending_reviews = json.dumps(pending_rows, ensure_ascii=False)
@@ -858,14 +877,35 @@ def _user_prompt(
         review_target_rule
         +
         "SHARED ANSWER REVIEW HISTORY (answer previews are truncated to 800 chars; "
-        "the complete, untruncated source of every version you may review is given "
-        f"under YOUR ELIGIBLE PENDING REVIEWS)\n{shared_reviews}\n\n"
+        "use inspect_problem with problem_id and version_hash for full answer pages. "
+        "Eligible programming source is shown in full under YOUR ELIGIBLE PENDING REVIEWS)\n"
+        f"{shared_reviews}\n\n"
         f"YOUR ELIGIBLE PENDING REVIEWS\n{pending_reviews}\n\n"
     ) if review_enabled else (
         "SHARED ANSWER HISTORY (answer previews are truncated to 800 chars; "
         "use inspect_problem for complete versions)\n"
         f"{shared_reviews}\n\n"
     )
+    # Explicit reads must reach the next request even when the general memory
+    # projection runs out of space. The observation and viewer filters above
+    # preserve current-round expiry and private result visibility.
+    page_event = None
+    for event in reversed(memory.view(agent)):
+        spec = ACTION_REGISTRY.get(event.kind)
+        if event.actor == agent and spec is not None and spec.budget.turns:
+            # Deliver the read for its next decision, not as a permanent extra
+            # memory channel after that decision has produced another action.
+            if event.kind != 'inspect_problem':
+                page_event = None
+            break
+        if (page_event is None and event.kind == 'inspect_problem_result'
+                and event.payload.get('requested_version')):
+            page_event = event
+    page_block = (
+        'REQUESTED ANSWER PAGE (read-only; no independent approval is implied)\n'
+        + json.dumps({'problem_id': page_event.task_id,
+                      'versions': page_event.payload['versions']}, ensure_ascii=False) + '\n\n'
+        if page_event else '')
     return (
         f"CONTEST {manifest.session_id}\n"
         f"TASK FAMILY {manifest.task_family}\n"
@@ -873,6 +913,7 @@ def _user_prompt(
         f"{manifest.metadata.get('competition_description') or 'No additional format description.'}\n"
         f"TASK STATUS {status}\n"
         f"BUDGET {budget}\n\n"
+        + work_guidance(manifest, active.task_id if active else None)
         + ("DEADLINE POLICY: Available WSC writing drafts are collected at the deadline; missing responses score zero.\n\n"
            if session.competition_flow is not None and session.competition_flow.public_state()["deadline_policy"] == "collect_writing_drafts" else
            "DEADLINE POLICY: Only explicit competition hand-ins count. Pending drafts "
@@ -891,5 +932,6 @@ def _user_prompt(
         f"{problem_pdf.prompt_context(manifest, session, memory, agent)}"
         f"{source_requirement}{source_block}"
         f"{review_block}"
+        f"{page_block}"
         f"{'VISIBLE MEMORY' if config.modules.memory else 'VISIBLE CONVERSATION'}\n{json.dumps(context, ensure_ascii=False)}"
     )

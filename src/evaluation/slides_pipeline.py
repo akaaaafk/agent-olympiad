@@ -48,9 +48,39 @@ def build_task_asset(task_pdf: Path, pages: str | None = None) -> Asset:
     )
 
 
+def resolve_declared_task_bundle(problem: dict[str, Any], repo_root: Path) -> Path | None:
+    """Use an explicit complete contestant bundle, never an arbitrary first PDF."""
+    bundle = problem.get('provenance', {}).get('pdftext_bundle')
+    if not bundle:
+        return None
+    root = Path(repo_root)
+    assets = problem.get('assets') or problem.get('provenance', {}).get('assets', [])
+    public = {(root / a['path']).resolve(): a for a in assets
+              if a.get('role') == 'agent_visible' and str(a.get('path', '')).lower().endswith('.pdf')}
+    hidden = {(root / a['path']).resolve() for a in assets
+              if a.get('role') == 'judge_only' and a.get('path')}
+    target = (root / bundle.get('path', '')).resolve()
+    parts = bundle.get('original_contestant_pdfs') or []
+    originals = [(root / p.get('path', '')).resolve() for p in parts]
+    if (target not in public or target in hidden or not originals
+            or len(set(originals)) != len(originals)
+            or set(originals) != set(public) - {target}
+            or any(p in hidden for p in originals)):
+        raise ValueError('Declared task bundle must cover all and only contestant PDFs')
+    for path, spec in [(target, bundle), *zip(originals, parts)]:
+        if (not path.is_file() or not spec.get('sha256')
+                or file_sha256(path) != spec['sha256']
+                or public[path].get('sha256') != spec['sha256']):
+            raise ValueError('Declared task bundle or source changed; rebuild and review the packet')
+    return target
+
+
 def resolve_problem_task_pdf(problem: dict[str, Any], repo_root: Path | None = None) -> Path | None:
     """Resolve the official case PDF from benchmark problem metadata."""
     root = Path(repo_root) if repo_root else REPO_ROOT
+    bundle = resolve_declared_task_bundle(problem, root)
+    if bundle is not None:
+        return bundle
     for asset in problem.get("assets") or []:
         path_text = str(asset.get("path") or "")
         if asset.get("role") == "agent_visible" and path_text.endswith(".pdf"):

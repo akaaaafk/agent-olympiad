@@ -46,15 +46,42 @@ class MockTeam:
 
 
 class ArtifactPipelineTests(unittest.TestCase):
+    def test_iypt_shared_source_limit_matches_otc_work_limit(self):
+        card = load_rule_card('iypt', required=True)
+        contract = contract_for(card)
+        self.assertEqual(contract.max_source_chars, 8000)
+        validate_source('x' * 8000, contract)
+        with self.assertRaisesRegex(ValueError, 'oversized'):
+            validate_source('x' * 8001, contract)
+        for variant in ('otc', 'vallina_otc'):
+            config = ContestRunConfig(variant, card.team_size_default, 20, rule_card=card)
+            self.assertEqual(config.otc_policy.char_limit('work'), contract.max_source_chars)
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         self.task = self.root / 'task.pdf'
-        writer = PdfWriter()
-        writer.add_blank_page(width=720, height=540)
-        with self.task.open('wb') as stream:
-            writer.write(stream)
+        from reportlab.pdfgen import canvas
+        task_pdf = canvas.Canvas(str(self.task), pagesize=(720, 540))
+        task_pdf.drawString(40, 500, 'Synthetic task: write a report explaining the supplied evidence and assumptions.')
+        task_pdf.save()
+
+    def test_artifact_uses_shared_budget_and_records_sampling(self):
+        from contest_budget import resolve_contest_budget
+        for requested in (None, 1, 91):
+            prepared = prepare_artifact_run(competition='vis_moot', task_pdf=self.task,
+                output=self.root / 'new', provider='openai', model='mock',
+                max_turns=requested, temperature=0.6)
+            budget = resolve_contest_budget('vis_moot', max_turns=requested)
+            config = prepared['config']
+            self.assertEqual(config.max_turns, budget.max_turns)
+            self.assertEqual(config.minutes_per_turn, 5)
+            self.assertEqual(config.max_simulated_minutes, budget.max_turns * 5)
+            self.assertEqual(config.submission_turn, budget.max_turns)
+            self.assertIsNone(config.max_tokens)
+            self.assertEqual(prepared['identity']['settings']['execution']['temperature'], 0.6)
+            self.assertEqual(prepared['temperature'], 0.6)
 
     def prepare(self, competition='vis_moot'):
         return prepare_artifact_run(competition=competition, task_pdf=self.task,
@@ -68,16 +95,22 @@ class ArtifactPipelineTests(unittest.TestCase):
             confidence=1, observable=c.observable) for c in rubric.criteria],
             'total_score': sum(c.min_score for c in rubric.criteria),
             'max_score': rubric.total_points, 'warnings': [], 'limitations': []}
-        return Mock(return_value=LLMResponse(json.dumps(payload), 'mock', 'mock-judge'))
+        def respond(request):
+            if request.purpose.startswith('collaboration_'):
+                return LLMResponse(json.dumps({'score': 4, 'justification': 'Synthetic collaboration judgment.'}),
+                                   'mock', 'mock-judge')
+            return LLMResponse(json.dumps(payload), 'mock', 'mock-judge')
+        return Mock(side_effect=respond)
 
     def test_all_cards_configured_without_claiming_live_environment_support(self):
         ids = iter_rule_card_ids(DEFAULT_RULES_ROOT)
-        benchmark_ids = {
-            path.parent.name
-            for path in (ROOT / "data" / "benchmarks").glob("*/benchmark.json")
-        }
+        entries = json.loads((ROOT / 'data/benchmarks/index.json').read_text(encoding='utf-8'))['olympiads']
+        benchmark_ids = {entry['id'] for entry in entries}
         excluded = set(json.loads((ROOT / 'data/evaluation_access_policy.json').read_text(encoding='utf-8'))['excluded_tracks'])
-        self.assertEqual(set(ids) - excluded, benchmark_ids)
+        self.assertTrue(benchmark_ids.isdisjoint(excluded))
+        self.assertTrue(benchmark_ids.issubset(set(ids)))
+        for entry in entries:
+            self.assertTrue((ROOT / entry['benchmark_path']).is_file(), entry['id'])
         for name in ids:
             card = load_rule_card(name)
             ContestRunConfig('otc', card.team_size_default, card.simulation['max_turns'], rule_card=card)
@@ -106,7 +139,9 @@ class ArtifactPipelineTests(unittest.TestCase):
         result = run_artifact_contest(prepared, agent_request=team, judge_request=judge)
         self.assertEqual(result['status'], 'complete')
         self.assertEqual(file_sha256(Path(result['artifact']['pdf'])), result['artifact']['pdf_sha256'])
-        self.assertEqual(judge.call_count, 1)
+        rubric_calls = [c for c in judge.call_args_list if not c.args[0].purpose.startswith('collaboration_')]
+        self.assertEqual(len(rubric_calls), 1)
+        self.assertEqual(result['required_metrics']['CS'], 4.0)
         coach = [r for r in team.requests if r.purpose == 'coach']
         self.assertEqual(len(coach), 1)
         self.assertFalse(coach[0].attachments)
@@ -117,7 +152,7 @@ class ArtifactPipelineTests(unittest.TestCase):
         for request in team.requests:
             self.assertNotIn('STRUCTURED RUBRIC:', request.user_prompt)
             self.assertNotIn('rubric_path', request.system_prompt)
-        submission = judge.call_args.args[0].attachments[-1]
+        submission = rubric_calls[0].args[0].attachments[-1]
         self.assertEqual(file_sha256(submission.path), result['artifact']['pdf_sha256'])
         same = run_artifact_contest(prepared, agent_request=Mock(side_effect=AssertionError()),
                                     judge_request=Mock(side_effect=AssertionError()), resume=True)
@@ -143,7 +178,14 @@ class ArtifactPipelineTests(unittest.TestCase):
                     return response
                 result = run_artifact_contest(prepared, agent_request=act, judge_request=judge)
                 self.assertEqual(result['status'], 'complete')
-                self.assertEqual(file_sha256(judge.call_args.args[0].attachments[-1].path),
+                if variant == 'single_agent':
+                    self.assertFalse(result['coordination_required'])
+                    self.assertFalse(prepared['identity']['settings']['evaluation']['judge_collab'])
+                    self.assertFalse(any(c.args[0].purpose.startswith('collaboration_') for c in judge.call_args_list))
+                    self.assertEqual(result['required_metrics']['CS'], 'N/A')
+                    self.assertFalse((prepared['output'] / 'coordination_task.txt').exists())
+                rubric_call = next(c for c in judge.call_args_list if c.args[0].attachments)
+                self.assertEqual(file_sha256(rubric_call.args[0].attachments[-1].path),
                                  result['artifact']['pdf_sha256'])
                 contest = json.loads(Path(result['contest_file']).read_text(encoding='utf-8'))
                 self.assertEqual(contest['modules'], config.modules.as_dict())
@@ -159,7 +201,7 @@ class ArtifactPipelineTests(unittest.TestCase):
         result = run_artifact_contest(prepared, agent_request=MockTeam('Complete draft.', False),
                                       judge_request=judge)
         self.assertEqual(result['status'], 'complete')
-        self.assertEqual(judge.call_count, 1)
+        self.assertEqual(sum(bool(c.args[0].attachments) for c in judge.call_args_list), 1)
         contest = json.loads(Path(result['contest_file']).read_text(encoding='utf-8'))
         self.assertTrue(any(r['decision'] == 'reject' for r in contest['session_checkpoint']['tasks'][0]['reviews']))
         collected = next(e for e in contest['memory']['events'] if e['kind'] == 'deadline_drafts_submitted')
@@ -175,7 +217,8 @@ class ArtifactPipelineTests(unittest.TestCase):
         self.assertTrue(result['artifact']['previews'])
         contest = json.loads(Path(result['contest_file']).read_text(encoding='utf-8'))
         self.assertTrue(any(e['kind'] == 'render_pdf' for e in contest['memory']['events']))
-        self.assertEqual(file_sha256(judge.call_args.args[0].attachments[-1].path), result['artifact']['pdf_sha256'])
+        rubric_call = next(c for c in judge.call_args_list if c.args[0].attachments)
+        self.assertEqual(file_sha256(rubric_call.args[0].attachments[-1].path), result['artifact']['pdf_sha256'])
 
     def test_rejected_explicit_pdf_is_submitted_at_deadline(self):
         prepared = self.prepare()
@@ -184,8 +227,9 @@ class ArtifactPipelineTests(unittest.TestCase):
             agent_request=MockTeam('Rejected explicit candidate.', approve=False, draft_action='render_pdf'),
             judge_request=judge)
         self.assertEqual(result['status'], 'complete')
-        self.assertEqual(judge.call_count, 1)
-        self.assertEqual(file_sha256(judge.call_args.args[0].attachments[-1].path), result['artifact']['pdf_sha256'])
+        self.assertEqual(sum(bool(c.args[0].attachments) for c in judge.call_args_list), 1)
+        rubric_call = next(c for c in judge.call_args_list if c.args[0].attachments)
+        self.assertEqual(file_sha256(rubric_call.args[0].attachments[-1].path), result['artifact']['pdf_sha256'])
 
     def test_unreviewed_slides_are_collected_and_rendered_for_judging(self):
         prepared = self.prepare('ieo_business_case')
@@ -202,7 +246,7 @@ class ArtifactPipelineTests(unittest.TestCase):
         contest = json.loads(Path(result['contest_file']).read_text(encoding='utf-8'))
         self.assertEqual(contest['session_checkpoint']['tasks'][0]['reviews'], [])
         self.assertEqual(Path(result['artifact']['source']).read_text(encoding='utf-8'), source)
-        self.assertEqual(judge.call_count, 1)
+        self.assertEqual(sum(bool(c.args[0].attachments) for c in judge.call_args_list), 1)
 
     def test_slide_candidate_is_html_then_pdf_and_reviewed_before_grading(self):
         prepared = self.prepare('ieo_business_case')
@@ -241,13 +285,135 @@ class ArtifactPipelineTests(unittest.TestCase):
             judge_request=self.judge(prepared))
         self.assertEqual(result['status'], 'complete')
 
+    def test_invalid_judge_response_recovers_in_one_run_without_repeating_solver(self):
+        from otc_artifact_pipeline import run_contest
+        prepared = self.prepare()
+        valid_judge = self.judge(prepared)
+        task_attempts = []
+        def judge(request):
+            if request.purpose == 'evaluation':
+                task_attempts.append(request)
+                if len(task_attempts) == 1:
+                    return LLMResponse('{"criteria":', 'mock', 'mock-judge',
+                                       usage={'output_tokens': 7})
+            return valid_judge(request)
+        with patch('otc_artifact_pipeline.run_contest', wraps=run_contest) as solver:
+            result = run_artifact_contest(prepared,
+                agent_request=MockTeam('Approved complete draft.'), judge_request=judge)
+        solver.assert_called_once()
+        self.assertEqual(result['status'], 'complete')
+        self.assertEqual(len(task_attempts), 2)
+        self.assertEqual(task_attempts[0].attachments, task_attempts[1].attachments)
+        self.assertEqual(result['task_evaluation_usage']['api_calls'], 2)
+        raw = [json.loads(line) for line in
+               (prepared['output'] / 'judge_responses.jsonl').read_text().splitlines()]
+        self.assertEqual(len(raw), 2)
+        self.assertEqual(raw[0]['text'], '{"criteria":')
+        self.assertEqual(raw[1]['metadata']['evaluation_attempt'], 2)
+
+    def test_evaluation_only_after_code_update_preserves_solver_and_raw_response(self):
+        from contest_run_identity import content_hash
+        from evaluation.models import EvaluationError
+        prepared = self.prepare()
+        malformed = LLMResponse('{"bad":', 'mock', 'mock-judge')
+        with self.assertRaises(EvaluationError):
+            run_artifact_contest(prepared, agent_request=MockTeam('Approved complete draft.'),
+                                 judge_request=Mock(return_value=malformed))
+        output = prepared['output']
+        session_bytes = (output / 'contest_session.json').read_bytes()
+        identity_bytes = (output / 'run_identity.json').read_bytes()
+        raw = json.loads((output / 'judge_responses.jsonl').read_text().splitlines()[0])
+        self.assertEqual(raw['text'], malformed.text)
+        changed = dict(prepared)
+        changed['identity'] = json.loads(json.dumps(prepared['identity']))
+        changed['identity']['settings']['source_hashes']['evaluation/models.py'] = 'updated'
+        changed['identity']['settings']['action_set_version'] += 1
+        changed['identity']['settings']['evaluation']['rubric_override'] = True
+        changed['identity']['fingerprint'] = content_hash(changed['identity']['settings'])
+        forbidden_solver = Mock(side_effect=AssertionError('Solver must not run'))
+        with self.assertRaises(ValueError):
+            run_artifact_contest(changed, resume=True, agent_request=forbidden_solver,
+                                 judge_request=self.judge(prepared))
+        wrong_settings = json.loads(json.dumps(changed['identity']))
+        wrong_settings['settings']['evaluation']['model'] = 'different-judge'
+        wrong_settings['fingerprint'] = content_hash(wrong_settings['settings'])
+        with self.assertRaises(ValueError):
+            run_artifact_contest(dict(changed, identity=wrong_settings), resume=True,
+                                 evaluation_only=True, agent_request=forbidden_solver,
+                                 judge_request=self.judge(prepared))
+        wrong_rubric = json.loads(json.dumps(changed['identity']))
+        wrong_rubric['settings']['evaluation']['rubric_sha256'] = 'changed-rubric'
+        wrong_rubric['fingerprint'] = content_hash(wrong_rubric['settings'])
+        with self.assertRaises(ValueError):
+            run_artifact_contest(dict(changed, identity=wrong_rubric), resume=True,
+                                 evaluation_only=True, agent_request=forbidden_solver,
+                                 judge_request=self.judge(prepared))
+        unfinished = json.loads(session_bytes)
+        unfinished['session_checkpoint']['final_summary'] = None
+        (output / 'contest_session.json').write_text(json.dumps(unfinished), encoding='utf-8')
+        with self.assertRaisesRegex(ValueError, 'finalized'):
+            run_artifact_contest(changed, resume=True, evaluation_only=True,
+                                 agent_request=forbidden_solver, judge_request=self.judge(prepared))
+        (output / 'contest_session.json').write_bytes(session_bytes)
+        result = run_artifact_contest(changed, resume=True, evaluation_only=True,
+                                     agent_request=forbidden_solver, judge_request=self.judge(prepared))
+        self.assertEqual(result['status'], 'complete')
+        forbidden_solver.assert_not_called()
+        self.assertEqual((output / 'contest_session.json').read_bytes(), session_bytes)
+        self.assertEqual((output / 'run_identity.json').read_bytes(), identity_bytes)
+        audit = json.loads((output / 'evaluation_resume_identity.jsonl').read_text().splitlines()[0])
+        self.assertEqual(audit['evaluation_identity'], changed['identity'])
+
     def test_oversized_source_is_not_silently_truncated_and_scored(self):
         prepared = self.prepare()
         judge = self.judge(prepared)
         result = run_artifact_contest(prepared,
             agent_request=MockTeam('x' * 60001), judge_request=judge)
         self.assertEqual(result['status'], 'unsubmitted')
-        judge.assert_not_called()
+        self.assertTrue(all(c.args[0].purpose.startswith('collaboration_') for c in judge.call_args_list))
+
+    def test_required_cs_failure_resumes_judges_without_solver_render_or_rubric(self):
+        prepared = self.prepare()
+        rubric_judge = self.judge(prepared)
+        failed = False
+        def first(request):
+            nonlocal failed
+            if request.purpose == 'collaboration_planning_score' and not failed:
+                failed = True
+                raise RuntimeError('Synthetic transient judge failure')
+            return rubric_judge(request)
+        result = run_artifact_contest(prepared, agent_request=MockTeam('Complete research note.'), judge_request=first)
+        self.assertEqual(result['status'], 'evaluation_pending')
+        self.assertEqual(result['evaluation_pending'], ['coordination'])
+        self.assertEqual(result['required_metrics']['CS'], 'N/A')
+        saved_session = Path(result['contest_file']).read_bytes()
+        artifact = result['artifact']
+        retry_calls = []
+        def retry(request):
+            retry_calls.append(request.purpose)
+            self.assertEqual(request.purpose, 'collaboration_planning_score')
+            return rubric_judge(request)
+        resumed = run_artifact_contest(prepared, agent_request=Mock(side_effect=AssertionError('Solver rerun')),
+            judge_request=retry, renderer=Mock(side_effect=AssertionError('Render rerun')), resume=True)
+        self.assertEqual(resumed['status'], 'complete')
+        self.assertEqual(resumed['required_metrics']['CS'], 4)
+        self.assertEqual(resumed['artifact'], artifact)
+        self.assertEqual(Path(result['contest_file']).read_bytes(), saved_session)
+        self.assertEqual(retry_calls, ['collaboration_planning_score'])
+
+    def test_crash_after_rubric_cannot_leave_a_false_complete_result(self):
+        prepared = self.prepare()
+        with patch('saved_run_metrics.ensure_coordination', side_effect=ValueError('Synthetic pre-evaluation interruption')):
+            with self.assertRaisesRegex(ValueError, 'interruption'):
+                run_artifact_contest(prepared, agent_request=MockTeam('Complete report.'),
+                                     judge_request=self.judge(prepared))
+        saved = json.loads((prepared['output'] / 'result.json').read_text(encoding='utf-8'))
+        self.assertTrue(saved['graded'])
+        self.assertEqual(saved['status'], 'evaluation_pending')
+        self.assertEqual(saved['evaluation_pending'], ['coordination'])
+        resumed = run_artifact_contest(prepared, agent_request=Mock(side_effect=AssertionError('Solver rerun')),
+                                      judge_request=self.judge(prepared), resume=True)
+        self.assertEqual(resumed['status'], 'complete')
 
     def test_legacy_entry_delegates_to_canonical_runner(self):
         import run_presentation_artifact as legacy

@@ -217,8 +217,11 @@ class ContestRunConfig:
                 ),
             )
             if (self.precontest_brief is not None
-                    and len(self.precontest_brief) > (self.otc_policy.char_limit("work") or 2400)):
+                    and len(self.precontest_brief) > self.otc_policy.brief_char_limit):
                 raise ValueError("The supplied Coach brief exceeds the opening-brief character limit")
+        if self.rule_card is not None:
+            from rules.runtime import bind_runtime_budget
+            object.__setattr__(self, 'rule_card', bind_runtime_budget(self.rule_card, self))
 
     @property
     def current_turn_only(self) -> bool:

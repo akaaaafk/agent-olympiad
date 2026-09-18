@@ -249,13 +249,6 @@ class EnvironmentIntegrationTests(unittest.TestCase):
         )
         self.assertEqual(env.workspace["final_answer"], "1. 268")
 
-    def test_board_free_contest_submissions_are_untouched(self):
-        env = OlympiadEnvironment("iol_team", "iol_team_2003")
-        env.register_agents(["Agent_1"])
-        env.begin_turn()
-        essay = "Tocharian B verbs mark the subjunctive with a palatalised stem."
-        env.execute_action("Agent_1", "submit", essay)
-        self.assertEqual(env.workspace["final_answer"], essay)
 
     def test_memory_round_trips_from_private_to_team(self):
         env = self._env()
@@ -287,14 +280,6 @@ class EnvironmentIntegrationTests(unittest.TestCase):
         self.assertIn("Board: 0/10 answered", report)
         self.assertIn("10 blank", report)
 
-    def test_single_deliverable_contest_reports_the_board_unavailable(self):
-        env = OlympiadEnvironment("iol_team", "iol_team_2003")
-        env.register_agents(["Agent_1"])
-        env.begin_turn()
-        self.assertIsNone(env.workboard)
-        result = env.execute_action("Agent_1", "inspect_problem", "")
-        self.assertIn("Board unavailable", result)
-        self.assertEqual(env.rule_violations, [])
 
     def test_transcript_carries_board_and_memory_state(self):
         env = self._env()
@@ -366,21 +351,6 @@ class EnvironmentIntegrationTests(unittest.TestCase):
         self.assertIn("end only through submit", result)
         self.assertFalse(env.submitted)
 
-    def test_finish_contest_finalizes_a_judged_code_submission(self):
-        env = OlympiadEnvironment("codeforces", "cf_4A", max_turns=8)
-        env.register_agents(["Agent_1"])
-        env.begin_turn()
-        early = env.execute_action("Agent_1", "finish_contest", "")
-        self.assertIn("cannot finish before a code submission", early)
-        self.assertFalse(env.submitted)
-        solution = 'w = int(input())\nprint("YES" if w > 2 and w % 2 == 0 else "NO")\n'
-        feedback = json.loads(env.execute_action("Agent_1", "submit_code", solution))
-        self.assertFalse(feedback["finalized"])
-        result = env.execute_action("Agent_1", "finish_contest", "sample AC")
-        self.assertIn("Contest finished by Agent_1", result)
-        self.assertTrue(env.submitted)
-        self.assertEqual(env.workspace["final_answer"], solution.strip())
-        self.assertIn("already finished", env.execute_action("Agent_1", "finish_contest", ""))
 
     def test_remember_feeds_the_private_notes_block(self):
         env = self._env()

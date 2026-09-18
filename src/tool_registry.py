@@ -61,7 +61,8 @@ DELIBERATION_ACTION_NAMES = frozenset(
 #     the wire; ``sleep``, ``submit_final``, ``write_scratchpad``,
 #     ``write_private_notes``, ``verify_problem``, ``message_group`` and the
 #     old workboard verbs are unknown actions. Rule cards were rewritten.
-ACTION_SET_VERSION = 13
+# v14: inspect_problem adds version-bound character pagination.
+ACTION_SET_VERSION = 14
 # Ownership and render availability changed; existing 29 argument schemas remain.
 ACTION_MODULE_VERSION = 3
 PACK_NAMES: tuple[str, ...] = (

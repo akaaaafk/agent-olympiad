@@ -19,6 +19,7 @@ from contest_manifest import ContestManifest
 from contest_config import PROTOCOL_VERSION, ContestRunConfig
 from tool_registry import ACTION_SET_VERSION
 from contest_modules import MODULE_VERSION
+import work_content
 
 
 class RunCompatibilityError(ValueError):
@@ -58,9 +59,9 @@ def build_run_identity(
     # Endpoint changes define different experiments even when model IDs match.
     # Keep authentication credentials out of saved identities.
     execution, evaluation = dict(execution), dict(evaluation)
-    from env_config import openagents_config
+    from env_config import openagents_config, PUBLIC_PROFILE_PROVIDERS
     for settings in (execution, evaluation):
-        if settings.get("provider") in {"openagents", "vectorengine"}:
+        if settings.get("provider") in {"openagents", "vectorengine", *PUBLIC_PROFILE_PROVIDERS}:
             from env_config import provider_config
             profile = provider_config(settings["provider"])
             settings["base_url"] = profile["base_url"].rstrip("/")
@@ -76,6 +77,8 @@ def build_run_identity(
             settings["api"] = ("chat_completions" if str(settings.get("model", "")).lower().startswith("glm-")
                                else "responses")
     resolved.update(
+        work_content_version=work_content.VERSION,
+        work_content_limits=work_content.action_argument_limits(manifest),
         baseline=asdict(config.features),
         review_required=config.review_required,
         final_review_required=config.final_review_required,
@@ -139,6 +142,38 @@ def validate_run_identity(
         reject("configuration mismatch: " + ", ".join(differences[:12]))
 
 
+def validate_finalized_run_identity(
+    stored: Any, expected: dict[str, Any], *, artifact: Path,
+) -> bool:
+    """Validate a finished result, allowing only recorded source-hash drift.
+
+    A final contestant result is an immutable receipt: its stored identity must
+    still be internally valid, and every effective experiment setting must
+    match.  Code edited *after* that receipt was written cannot change the
+    result, so source-only drift may be reported and summarized.  This helper
+    must never be used to resume execution or pending auxiliary evaluation.
+
+    Returns ``True`` when source hashes differ and were accepted.
+    """
+    def reject(reason: str) -> None:
+        raise RunCompatibilityError(
+            f"Cannot reuse {artifact}: {reason}. Use a fresh --output directory; "
+            "the existing artifacts have not been changed."
+        )
+
+    if not isinstance(stored, dict) or not isinstance(stored.get("settings"), dict):
+        reject("missing resolved run identity (legacy or incomplete artifact)")
+    if stored.get("fingerprint") != content_hash(stored["settings"]):
+        reject("stored run identity is corrupt")
+    if stored["fingerprint"] == expected["fingerprint"]:
+        return False
+    differences = _differences(stored["settings"], expected["settings"])
+    if differences and all(item == "source_hashes" or item.startswith("source_hashes.")
+                           for item in differences):
+        return True
+    reject("configuration mismatch: " + ", ".join(differences[:12]))
+
+
 def _read_artifact(path: Path) -> dict[str, Any]:
     try:
         payload = json.loads(path.read_text(encoding="utf-8"))
@@ -192,25 +227,17 @@ def _inspect_contest_output(
     This check never writes, starts providers, or submits anything to a judge.
     Both batch schedulers and the CLI use it before deciding to skip or resume.
     """
-    config_path = out_dir / "run_config.json"
-    if config_path.exists():
-        validate_run_identity(_read_artifact(config_path), expected, artifact=config_path)
     settings = expected["settings"]
-    checkpoint_path = out_dir / "contest_checkpoint.json"
-    if checkpoint_path.exists():
-        checkpoint = _read_artifact(checkpoint_path)
-        validate_run_identity(checkpoint.get("run_identity"), expected, artifact=checkpoint_path)
-        if (
-            checkpoint.get("protocol_version") != settings["protocol_version"]
-            or checkpoint.get("action_set_version") != settings["action_set_version"]
-            or not isinstance(checkpoint.get("session"), dict)
-            or not isinstance(checkpoint.get("memory"), str)
-        ):
-            raise RunCompatibilityError(f"Cannot reuse {checkpoint_path}: invalid checkpoint envelope")
     result_path = out_dir / "contest_session.json"
+    # A completed result is self-contained. Check it before resumable state so
+    # a source edit made after final submission cannot hide already-finished
+    # work. Pending evaluation below remains strict and therefore cannot run
+    # against changed source.
     if result_path.exists():
         result = _read_artifact(result_path)
-        validate_run_identity(result.get("run_identity"), expected, artifact=result_path)
+        source_drift = validate_finalized_run_identity(
+            result.get("run_identity"), expected, artifact=result_path,
+        )
         for key in ("session_id", "competition_id", "protocol_version", "action_set_version"):
             if result.get(key) != settings[key]:
                 raise RunCompatibilityError(f"Cannot reuse {result_path}: inconsistent {key}")
@@ -224,7 +251,29 @@ def _inspect_contest_output(
             or result["session_checkpoint"].get("final_summary") is None
         ):
             raise RunCompatibilityError(f"Cannot reuse {result_path}: incomplete final result")
-        return ("resume" if pending_contest_evaluations(result, expected) else "complete"), result
+        if pending_contest_evaluations(result, expected):
+            if source_drift:
+                raise RunCompatibilityError(
+                    f"Cannot reuse {result_path}: source_hashes changed after finalized contestant work; "
+                    "pending auxiliary evaluation requires a fresh --output directory"
+                )
+            return "resume", result
+        return "complete", result
+
+    config_path = out_dir / "run_config.json"
+    if config_path.exists():
+        validate_run_identity(_read_artifact(config_path), expected, artifact=config_path)
+    checkpoint_path = out_dir / "contest_checkpoint.json"
+    if checkpoint_path.exists():
+        checkpoint = _read_artifact(checkpoint_path)
+        validate_run_identity(checkpoint.get("run_identity"), expected, artifact=checkpoint_path)
+        if (
+            checkpoint.get("protocol_version") != settings["protocol_version"]
+            or checkpoint.get("action_set_version") != settings["action_set_version"]
+            or not isinstance(checkpoint.get("session"), dict)
+            or not isinstance(checkpoint.get("memory"), str)
+        ):
+            raise RunCompatibilityError(f"Cannot reuse {checkpoint_path}: invalid checkpoint envelope")
     return ("resume" if checkpoint_path.exists() else "new"), None
 
 

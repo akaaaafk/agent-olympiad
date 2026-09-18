@@ -46,6 +46,10 @@ class DeliveryRouteBaselineTests(unittest.TestCase):
                     self.assertFalse(config.modules.memory)
                     self.assertEqual(config.features.rule_card, "off")
                     self.assertIsNone(identity["settings"]["config"]["rule_card_hash"])
+                    self.assertIn('OFFICIAL COMPETITION RULES', config.rule_guidance)
+                    self.assertIn('"official_minutes": 45', config.rule_guidance)
+                    self.assertNotIn('10×4 pts typical', config.rule_guidance)
+                    self.assertEqual(identity['settings']['config']['rule_guidance'], config.rule_guidance)
 
     def test_otc_native_presets_keep_existing_module_difference(self):
         with tempfile.TemporaryDirectory() as directory:

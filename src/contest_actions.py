@@ -25,9 +25,10 @@ from programming_candidates import execution_key, failed_execution
 from rulecard_policy import OpenTablePolicy, WORKSTATION_ACTION_NAMES, clip_text
 from strategy import StrategicPolicy
 from tool_registry import ACTION_REGISTRY, DELIBERATION_ACTION_NAMES, DESK_ACTION_NAMES
+from work_content import (DEFAULT_PAGE_CHARS, draft_preview, text_page,
+                          validate_work_content, work_char_limit)
 
 _INSPECT_STATEMENT_CHARS = 6000
-_INSPECT_VERSION_CHARS = 2000
 
 _CARD_CLIPPED_FIELDS: dict[str, str] = {
     "work": "content",
@@ -158,33 +159,60 @@ def _inspect_problem_payload(
     memory: ContestMemory,
     *,
     focus: str = "",
+    version_hash: str | None = None,
+    offset: int = 0,
+    limit: int = DEFAULT_PAGE_CHARS,
 ) -> dict[str, Any]:
     """Read-only snapshot of one task for ``inspect_problem``."""
     sample_reports = _sample_reports(memory)
     local_reports = _local_run_reports(memory)
+    # Validate even for an empty task; a bad read must not silently succeed.
+    if type(offset) is not int or offset < 0:
+        raise ValueError('offset must be a non-negative integer character position')
+    text_page('', limit=limit)
+    if offset and not version_hash:
+        raise ValueError('version_hash is required for a nonzero offset')
+    versions = task.versions
+    if version_hash:
+        versions = [v for v in versions if v.version_hash == version_hash]
+        if not versions:
+            raise ValueError('requested hash is not a visible version of this problem')
+    rows = []
+    for version in versions:
+        if version_hash:
+            page = text_page(version.content, offset, limit)
+            content = page.pop('content')
+        else:
+            preview = draft_preview(version.content)
+            content, page = preview['content'], preview['content_page']
+        rows.append({
+            'version_hash': version.version_hash, 'parent_hash': version.parent_hash,
+            'author': version.author, 'evidence_refs': list(version.evidence_refs),
+            'content': content, 'content_page': page,
+            'sample_report': sample_reports.get(version.version_hash),
+            'author_report': local_reports.get(version.version_hash),
+        })
     return {
         "problem_id": task.task_id,
         "focus": focus,
         "statement": _clip(manifest_task.prompt, _INSPECT_STATEMENT_CHARS),
         "task_type": manifest_task.task_type,
-        "programming": manifest_task.programming,
+        "programming": manifest_task.programming or manifest_task.task_type in {
+            "algorithmic_programming", "programming"},
+        "execution_judge": manifest_task.programming,
+        "grading_policy": manifest_task.benchmark.get("evaluation", {}).get("grading_policy"),
+        "submission_format": (
+            "Complete C++ source as a shared text artifact, with correctness and complexity explanation; static source review, not official execution."
+            if manifest_task.benchmark.get("evaluation", {}).get("grading_policy") == "source_review_llm_v1"
+            else "Follow the task's submission instructions."),
         "max_score": manifest_task.max_score,
         "state": task.state.value,
         "priority": task.priority,
         "triage_reason": task.triage_reason,
         "locked": task.locked,
-        "versions": [
-            {
-                "version_hash": version.version_hash,
-                "parent_hash": version.parent_hash,
-                "author": version.author,
-                "evidence_refs": list(version.evidence_refs),
-                "content": _clip(version.content, _INSPECT_VERSION_CHARS),
-                "sample_report": sample_reports.get(version.version_hash),
-                "author_report": local_reports.get(version.version_hash),
-            }
-            for version in task.versions
-        ],
+        "versions": rows,
+        "requested_version": version_hash,
+        "reading": "Use problem_id, version_hash, offset=content_page.next_offset and limit=2000 to read more. Offsets count characters; saved content is never clipped.",
         "reviews": [asdict(review) for review in task.reviews],
         "submissions": [asdict(submission) for submission in task.submissions],
         "independent_approval": _task_has_independent_approval(task),
@@ -203,6 +231,7 @@ def _apply_card_rules(
     session: ContestSession,
     memory: ContestMemory,
     policy: OpenTablePolicy,
+    work_limit_checked: bool = False,
 ) -> dict[str, Any]:
     """Character limits, message budget and deliberation validity from the card.
 
@@ -227,6 +256,8 @@ def _apply_card_rules(
         otc_runtime.communication_budget(memory, policy) if action in counted else None
     )
     field_name = _CARD_CLIPPED_FIELDS.get(action)
+    if action == 'work' and work_limit_checked:
+        field_name = None
     if field_name and field_name in arguments:
         text = str(arguments[field_name] or "")
         limit = policy.char_limit(action)
@@ -362,6 +393,11 @@ def _apply_action(
     contract = manifest.metadata.get("artifact_contract")
     if action in {"work", "render_pdf"} and contract and len(str(arguments.get("content", ""))) > contract["max_source_chars"]:
         raise ValueError("Oversized artifact source; revise it explicitly instead of silently clipping")
+    work_target = str(arguments.get('problem_id') or (active.task_id if active else ''))
+    if action == 'work':
+        validate_work_content(manifest, work_target, arguments.get('content', ''))
+    elif action == 'submit' and arguments.get('answer') is not None:
+        validate_work_content(manifest, work_target, arguments['answer'])
     if action == "work" and not contract:
         target_id = str(arguments.get("problem_id") or (active.task_id if active else "")).strip()
         target = task_by_id.get(target_id)
@@ -404,6 +440,7 @@ def _apply_action(
             session=session,
             memory=memory,
             policy=config.otc_policy,
+            work_limit_checked=work_char_limit(manifest, work_target) is not None,
         )
     if action in COMPUTER_ACTIONS and config.computer_capacity is not None:
         resource_state = session_computer_state(
@@ -632,6 +669,8 @@ def _session_inspect_problem(ctx: _ActionContext) -> tuple[bool, int]:
     session, memory = observe(ctx.session, ctx.memory, ctx.config)
     if ctx.event_task_id is None:
         raise RuntimeError("pass problem_id or select a problem before inspect_problem")
+    if ctx.event_task_id not in {t.task_id for t in session.visible_tasks}:
+        raise ValueError('Problem is not visible in this contest phase.')
     ctx.memory.append(
         task_id=ctx.event_task_id,
         question_id=None,
@@ -644,6 +683,9 @@ def _session_inspect_problem(ctx: _ActionContext) -> tuple[bool, int]:
             session.task(ctx.event_task_id),
             memory,
             focus=str(ctx.arguments.get("focus") or ""),
+            version_hash=ctx.arguments.get('version_hash'),
+            offset=ctx.arguments.get('offset', 0),
+            limit=ctx.arguments.get('limit', DEFAULT_PAGE_CHARS),
         ),
         turn=ctx.turn,
     )

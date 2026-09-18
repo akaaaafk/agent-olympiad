@@ -17,10 +17,70 @@ from analyze_runs import (
     compute_decompositions,
     main,
     normalized_task_score,
+    group_summaries,
 )
 
 
 class AnalyzeRunsTests(unittest.TestCase):
+    @staticmethod
+    def controls():
+        return dict(provider='tinker', model='mock', temperature=0.2, max_turns=10,
+                    max_api_calls=None, max_tokens=None, max_output_tokens=8192,
+                    protocol_version='current', source_hashes={'runner.py': 'hash'},
+                    evaluation={'judge_model': 'judge'}, rules_identity='public-rules-hash')
+
+    def paired_rows(self):
+        return [dict(competition='demo', problem_id='p1', team='model', schema=c,
+                     condition=c, grade_score=score, grade_max_score=10,
+                     comparison_controls=self.controls())
+                for c, score in [('solo', 4), ('subagent', 6), ('team', 8)]]
+
+    def test_changed_controls_never_produce_cross_setting_gains(self):
+        for key, value in [('provider', 'other'), ('temperature', 0.8), ('max_turns', 90),
+                           ('max_tokens', 100), ('source_hashes', {'runner.py': 'changed'}),
+                           ('evaluation', {'judge_model': 'other'}), ('rules_identity', 'other')]:
+            rows=self.paired_rows()
+            rows[-1]['comparison_controls'][key]=value
+            with self.subTest(key=key):
+                result=compute_decompositions(rows)
+                self.assertEqual(len(result), 2)
+                self.assertTrue(all(r['division_gain'] is None and r['cohesion_gain'] is None for r in result))
+
+    def test_missing_controls_are_unverified_and_not_averaged(self):
+        rows=self.paired_rows()
+        for row in rows:
+            del row['comparison_controls']
+        results=compute_decompositions(rows)
+        self.assertTrue(all(not r['comparison_verified'] and r['division_gain'] is None for r in results))
+        self.assertTrue(all('unverified_settings' in r['gain_reason'] for r in results))
+        self.assertEqual(len(group_summaries([dict(rows[0]), dict(rows[0])])), 2)
+
+    def test_saved_identity_controls_override_display_values(self):
+        rows=self.paired_rows()
+        for row in rows:
+            c=row.pop('comparison_controls')
+            row['run_identity']={'settings': {
+                'config': {'max_turns': c.pop('max_turns'), 'max_api_calls': None,
+                           'max_tokens': None, 'system_variant': row['condition'],
+                           'rule_guidance': 'OFFICIAL COMPETITION RULES (shared by every baseline)\n{"competition_id":"demo"}\nBENCHMARK ADAPTATION'},
+                'execution': {'provider': c.pop('provider'), 'model': c.pop('model'),
+                              'temperature': c.pop('temperature'), 'max_output_tokens': c.pop('max_output_tokens')},
+                'protocol_version': 'current', 'source_hashes': c['source_hashes'],
+                'evaluation': c['evaluation']}}
+        self.assertEqual(len(compute_decompositions(rows)), 1)
+        self.assertIsNone(compute_decompositions(rows)[0]['gain_reason'])
+        rows[-1]['run_identity']['settings']['config']['max_turns']=90
+        rows[-1]['max_turns']=10
+        self.assertEqual(len(compute_decompositions(rows)), 2)
+
+    def test_group_means_separate_provider_and_budget(self):
+        rows=[self.paired_rows()[0] for _ in range(3)]
+        rows[1]['comparison_controls']['provider']='other'
+        rows[2]['comparison_controls']['max_turns']=90
+        groups=group_summaries(rows)
+        self.assertEqual(len(groups), 3)
+        self.assertTrue(all(g['runs']==1 for g in groups))
+
     def test_normalized_score_and_complete_decomposition(self):
         rows = [
             {
@@ -49,6 +109,8 @@ class AnalyzeRunsTests(unittest.TestCase):
                 "transcript_ceiling": 0.9,
             },
         ]
+        for row in rows:
+            row['comparison_controls'] = self.controls()
         self.assertEqual(normalized_task_score(rows[0]), 0.4)
         result = compute_decompositions(rows)[0]
         self.assertAlmostEqual(result["division_gain"], 0.2)

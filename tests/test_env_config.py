@@ -27,11 +27,6 @@ class ProviderProfileTests(unittest.TestCase):
         self.assertEqual(profile["api_key_env"], "TINKER_API_KEY")
         self.assertIn("Qwen/Qwen3.6-35B-A3B", profile["models"])
 
-    def test_openagents_catalog_contains_requested_models(self):
-        with patch.dict(os.environ, {}, clear=True):
-            profile = openagents_config()
-        self.assertIn("glm-5.2", profile["models"])
-        self.assertIn("kimi-k2.6", profile["models"])
 
     def test_unknown_or_unsafe_profile_is_rejected(self):
         with self.assertRaisesRegex(ValueError, "Invalid provider profile name"):

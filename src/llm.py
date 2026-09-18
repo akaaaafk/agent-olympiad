@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any, Callable, Literal, Optional
 
 from pypdf import PdfReader, PdfWriter
+from llm_usage import local_preflight
 
 QueryFn = Callable[[str, str], str]
 
@@ -105,16 +106,25 @@ _PROVIDER_CAPABILITIES: dict[str, ProviderCapabilities] = {
     ),
     "openagents": ProviderCapabilities(native_tools=True, token_usage=True, attachments=True),
     "vectorengine": ProviderCapabilities(native_tools=True, token_usage=True, attachments=False),
-    # Tinker 0.26 exposes plain sampling but no tools/JSON-schema parameter.
+    # Tinker exposes sampling (including vision) but no native tool parameter.
     # Its adapter therefore renders the same schemas into the prompt, validates
     # the sampled call, and performs bounded repair attempts.
-    "tinker": ProviderCapabilities(emulated_tools=True, pdf_text=True),
-    "tml": ProviderCapabilities(emulated_tools=True, pdf_text=True),
+    "tinker": ProviderCapabilities(emulated_tools=True, attachments=True, token_usage=True),
+    "tml": ProviderCapabilities(emulated_tools=True, attachments=True, token_usage=True),
+    "anthropic": ProviderCapabilities(native_tools=True, token_usage=True, attachments=True),
+    "gemini": ProviderCapabilities(native_tools=True, token_usage=True, attachments=True),
+    "deepseek": ProviderCapabilities(native_tools=True, token_usage=True, pdf_text=True),
+    "openai_compatible": ProviderCapabilities(native_tools=True, token_usage=True, pdf_text=True),
 }
 
 
-def provider_capabilities(provider: str) -> ProviderCapabilities:
+def provider_capabilities(provider: str, model: str | None = None) -> ProviderCapabilities:
     """Return explicit capabilities instead of branching on provider names."""
+    if provider.lower().strip() in {'tinker', 'tml'} and model is not None:
+        from tinker_vision import renderer_name
+        vision = renderer_name(model) is not None
+        return ProviderCapabilities(emulated_tools=True, token_usage=True,
+                                    attachments=vision, pdf_text=not vision)
     return _PROVIDER_CAPABILITIES.get(
         provider.lower().strip(),
         ProviderCapabilities(),
@@ -125,6 +135,7 @@ def provider_action_transport(provider: str) -> ActionTransport:
     return provider_capabilities(provider).action_transport
 
 
+@local_preflight
 def _attachment_bytes(attachment: LLMAttachment) -> bytes:
     if not attachment.path.is_file():
         raise ValueError(f"Missing LLM attachment: {attachment.path}")
@@ -147,6 +158,7 @@ def _attachment_bytes(attachment: LLMAttachment) -> bytes:
     return output.getvalue()
 
 
+@local_preflight
 def _openai_style_content(request: LLMRequest) -> list[dict[str, str]]:
     content: list[dict[str, str]] = [{"type": "input_text", "text": request.user_prompt}]
     for attachment in request.attachments:
@@ -181,7 +193,7 @@ def _response_output_text(data: dict[str, Any]) -> str:
         return "\n".join(chunks)
     if any(item.get("type") == "function_call" for item in data.get("output", [])):
         return ""
-    return str(data)
+    return ''
 
 
 def parse_response_tool_calls(data: dict[str, Any]) -> tuple[LLMToolCall, ...]:
@@ -213,6 +225,47 @@ def parse_response_tool_calls(data: dict[str, Any]) -> tuple[LLMToolCall, ...]:
     return tuple(calls)
 
 
+@local_preflight
+def _request_output_limit(request, configured, *, allow_expansion=False):
+    limit = request.metadata.get('max_output_tokens_override')
+    limit = configured if limit is None else limit
+    if type(limit) is not int or limit <= 0:
+        raise ValueError('max_output_tokens must be a positive integer')
+    if not allow_expansion:
+        limit = min(limit, configured)
+    attempts = request.metadata.get('max_transport_attempts')
+    if attempts is not None and attempts <= 0:
+        return 0
+    remaining = request.metadata.get('max_transport_output_tokens')
+    return max(0, min(limit, remaining)) if remaining is not None else limit
+
+
+def _native_response(data, *, provider, model, usage, text=None):
+    """Responses-shaped payloads are validated before any consumer sees output."""
+    usage = dict(usage)
+    status = data.get('status')
+    if status is not None:
+        usage['provider_status'] = status
+    if status not in {None, 'completed'} or data.get('error'):
+        details = data.get('incomplete_details') or {}
+        reason = details.get('reason') if isinstance(details, dict) else None
+        usage.update(finish_reason='length' if reason == 'max_output_tokens' else reason or status or 'failed',
+                     provider_finish_reason=reason or status,
+                     tool_error='Incomplete or rejected native response; no partial output accepted')
+        return LLMResponse('', provider, model, usage=usage)
+    try:
+        calls = parse_response_tool_calls(data)
+        visible = _response_output_text(data) if text is None else text
+        if not isinstance(visible, str):
+            raise ValueError('Invalid response text')
+    except (ValueError, TypeError, KeyError, AttributeError):
+        return LLMResponse('', provider, model, usage={**usage,
+            'tool_error': 'Malformed native function-call response; no action executed'})
+    if not calls and not visible.strip():
+        return LLMResponse('', provider, model, usage={**usage, 'tool_error': 'Empty native response'})
+    return LLMResponse(visible, provider, model, usage=usage, tool_calls=calls)
+
+
 def make_openai_responses_caller(model: str = "gpt-4.1", *, max_output_tokens: int = 8192,
                                  temperature: float = 0.2) -> RequestFn:
     """Create a file-capable OpenAI Responses API caller (PDF + images)."""
@@ -228,13 +281,18 @@ def make_openai_responses_caller(model: str = "gpt-4.1", *, max_output_tokens: i
 
     from openai import OpenAI
 
-    client = OpenAI(api_key=api_key)
+    # Count each transport attempt ourselves; SDK retries bypass shared budgets.
+    client = OpenAI(api_key=api_key, max_retries=0)
 
     def call(request: LLMRequest) -> LLMResponse:
+        limit = _request_output_limit(request, max_output_tokens, allow_expansion=True)
+        if limit == 0:
+            return LLMResponse('', 'openai', model, usage={'api_calls': 0, 'output_tokens': 0,
+                                                         'tool_error': 'No remaining transport budget'})
         kwargs: dict[str, Any] = {
             "model": model,
             "instructions": request.system_prompt,
-            "max_output_tokens": request.metadata.get("max_output_tokens_override", max_output_tokens),
+            "max_output_tokens": limit,
             "temperature": temperature,
             "input": [{"role": "user", "content": _openai_style_content(request)}],
         }
@@ -246,17 +304,13 @@ def make_openai_responses_caller(model: str = "gpt-4.1", *, max_output_tokens: i
         response = client.responses.create(
             **kwargs,
         )
-        usage = {}
+        data = response.model_dump()
+        usage = data.get('usage') or {}
         if getattr(response, "usage", None):
             raw_usage = response.usage
             usage = raw_usage.model_dump() if hasattr(raw_usage, "model_dump") else {}
-        return LLMResponse(
-            text=response.output_text,
-            provider="openai",
-            model=model,
-            usage=usage,
-            tool_calls=parse_response_tool_calls(response.model_dump()),
-        )
+        return _native_response(data, text=response.output_text, provider='openai', model=model,
+                                usage={**usage, 'api_calls': 1, 'max_output_tokens': limit})
 
     return call
 
@@ -265,7 +319,7 @@ def make_perplexity_responses_caller(
     model: str = "openai/gpt-5.4",
     *,
     max_output_tokens: int = 16000,
-    temperature: float = 0.2,
+    temperature: float | None = 0.2,
 ) -> RequestFn:
     """Perplexity Agent API caller with multi-image (and optional PDF) attachments.
 
@@ -281,12 +335,18 @@ def make_perplexity_responses_caller(
     headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
 
     def call(request: LLMRequest, max_retries: int = 5) -> LLMResponse:
+        attempt_limit = request.metadata.get('max_transport_attempts')
+        attempts = min(max_retries, max_retries if attempt_limit is None else attempt_limit)
+        output_limit = _request_output_limit(request, max_output_tokens)
+        if attempts <= 0 or output_limit <= 0:
+            return LLMResponse('', 'perplexity', model, usage={
+                'api_calls': 0, 'output_tokens': 0, 'tool_error': 'No remaining transport budget'})
         content = _openai_style_content(request)
         payload = {
             "model": model,
             "input": [{"role": "user", "content": content}],
-            "max_output_tokens": request.metadata.get("max_output_tokens_override", max_output_tokens),
-            "temperature": temperature,
+            "max_output_tokens": output_limit,
+            **({'temperature': temperature} if temperature is not None else {}),
         }
         if request.system_prompt.strip():
             payload["instructions"] = request.system_prompt
@@ -296,7 +356,7 @@ def make_perplexity_responses_caller(
             if request.parallel_tool_calls is not None:
                 payload["parallel_tool_calls"] = request.parallel_tool_calls
         last_error: Exception | None = None
-        for attempt in range(max_retries):
+        for attempt in range(attempts):
             try:
                 resp = requests.post(
                     "https://api.perplexity.ai/v1/agent",
@@ -312,13 +372,12 @@ def make_perplexity_responses_caller(
                     )
                 data = resp.json()
                 usage = data.get("usage") if isinstance(data.get("usage"), dict) else {}
-                return LLMResponse(
-                    text=_response_output_text(data),
-                    provider="perplexity",
-                    model=model,
-                    usage={**usage, "max_output_tokens": payload["max_output_tokens"]},
-                    tool_calls=tuple(LLMToolCall("web_search" if call.name == "contest_web_search" else call.name, call.arguments, call.call_id) for call in parse_response_tool_calls(data)),
-                )
+                response = _native_response(data, provider='perplexity', model=model,
+                    usage={**usage, 'api_calls': attempt + 1, 'unknown_usage_attempts': attempt,
+                           'max_output_tokens': output_limit})
+                return replace(response, tool_calls=tuple(LLMToolCall(
+                    'web_search' if call.name == 'contest_web_search' else call.name,
+                    call.arguments, call.call_id) for call in response.tool_calls))
             except requests.exceptions.SSLError as exc:
                 last_error = RuntimeError(
                     "TLS failed talking to api.perplexity.ai (often a huge image "
@@ -326,15 +385,17 @@ def make_perplexity_responses_caller(
                     "--pages 1-1. Original error: "
                     f"{exc}"
                 )
-                if attempt < max_retries - 1:
+                if attempt < attempts - 1:
                     time.sleep(5 * (attempt + 1))
                 else:
+                    last_error.usage = {'api_calls': attempt + 1, 'unknown_usage_attempts': attempt + 1}
                     raise last_error from exc
             except requests.exceptions.RequestException as exc:
                 last_error = exc
-                if attempt < max_retries - 1:
+                if attempt < attempts - 1:
                     time.sleep(15 * (attempt + 1))
                 else:
+                    exc.usage = {'api_calls': attempt + 1, 'unknown_usage_attempts': attempt + 1}
                     raise
         raise RuntimeError(f"Perplexity multimodal call failed: {last_error}")
 
@@ -342,22 +403,28 @@ def make_perplexity_responses_caller(
 
 
 def _json_objects(text: str) -> list[Any]:
-    """Decode JSON values embedded in fences or provider-specific tags."""
+    """Decode the whole action envelope; never salvage an inner JSON fragment."""
     cleaned = (text or "").strip()
     cleaned = re.sub(r"^```(?:json)?\s*", "", cleaned, flags=re.IGNORECASE)
     cleaned = re.sub(r"\s*```$", "", cleaned)
-    cleaned = cleaned.replace("<tool_call>", "").replace("</tool_call>", "")
-    decoder = json.JSONDecoder()
-    values: list[Any] = []
-    for index, char in enumerate(cleaned):
-        if char not in "[{":
-            continue
-        try:
-            value, _ = decoder.raw_decode(cleaned[index:])
-        except json.JSONDecodeError:
-            continue
-        values.append(value)
-    return values
+    if cleaned.startswith('<tool_call>') and cleaned.endswith('</tool_call>'):
+        cleaned = cleaned[len('<tool_call>'):-len('</tool_call>')].strip()
+    def unique_keys(pairs):
+        value = {}
+        for key, item in pairs:
+            if key in value:
+                raise ValueError(f'duplicate JSON key: {key}')
+            value[key] = item
+        return value
+    def invalid_constant(value):
+        raise ValueError(f'invalid JSON constant: {value}')
+    if not cleaned.startswith(('{', '[')):
+        raise ValueError('response contains no JSON tool-call object at its start')
+    try:
+        return [json.loads(cleaned, object_pairs_hook=unique_keys, parse_constant=invalid_constant)]
+    except json.JSONDecodeError as exc:
+        raise ValueError(f'Invalid action JSON at line {exc.lineno}, column {exc.colno}, '
+                         f'char {exc.pos}: {exc.msg}') from exc
 
 
 def _coerce_emulated_tool_call(text: str) -> LLMToolCall:
@@ -467,20 +534,26 @@ def _tinker_tool_prompt(tools: tuple[dict[str, Any], ...]) -> str:
         "Choose exactly one function from the schemas below. Return only one "
         'JSON object shaped as {"name":"function_name","arguments":{...}}. '
         "Do not use Markdown, prose, XML, or additional calls. Enum values are "
-        "strict: copy one exactly as shown.\n"
+        "strict: copy one exactly as shown. Start directly with the JSON object. "
+        "Keep reasoning concise inside the applicable argument on the first attempt; "
+        "never prepend a solution or write a long essay before the JSON. "
+        "Use the exact argument fields in the selected schema (for example code for submit_code).\n"
         f"FUNCTION SCHEMAS:\n{json.dumps(compact_tools, ensure_ascii=False)}"
     )
 
 
+@local_preflight
 def pdf_text_request(request: LLMRequest) -> LLMRequest:
     """Convert host-selected PDF pages to text without forwarding binary files.
 
     LLMRequest still enforces contestant/judge separation before conversion.
-    Empty scanned pages fail explicitly; this route does not claim OCR/vision.
+    Unreviewed scanned pages fail explicitly; this route does not claim OCR/vision.
     """
     if not request.attachments:
         return request
     from artifacts.pdf_ingest import extract_pdf_text
+    from artifacts.reviewed_pdf_text import prepare_judge_pdf_text
+    request = prepare_judge_pdf_text(request)
     sections = [request.user_prompt,
                 "PDF TEXT DELIVERY: extracted text only; diagrams and layout may be lost."]
     for index, attachment in enumerate(request.attachments, 1):
@@ -490,12 +563,14 @@ def pdf_text_request(request: LLMRequest) -> LLMRequest:
             page_start=attachment.page_start, page_end=attachment.page_end)
         if warnings:
             raise ValueError("PDF text delivery failed: " + "; ".join(warnings))
+        if index - 1 in request.metadata.get('compact_pdf_attachment_indices', []):
+            text = re.sub(r'\s+', ' ', text)
         sections.append(f"PDF {index} ({attachment.role}) TEXT:\n{text}")
     user = "\n\n".join(sections)
     if len(user) > 600000:
         raise ValueError("PDF text request exceeds 600000 characters; select fewer pages.")
     return replace(request, user_prompt=user, attachments=(),
-                   metadata={**request.metadata, "pdf_delivery": "extracted_text_v1"})
+                   metadata={**request.metadata, "pdf_delivery": "reviewed_text_v2"})
 
 
 def make_tinker_request_fn(
@@ -508,97 +583,60 @@ def make_tinker_request_fn(
     """Adapt Tinker sampling to the provider-neutral request/tool interface."""
     if max_tool_retries < 0:
         raise ValueError("max_tool_retries must be non-negative")
-    caller = make_tinker_caller(
-        model,
-        max_output_tokens=max_output_tokens,
-        temperature=temperature,
-    )
+    caller = make_tinker_caller(model, max_output_tokens=max_output_tokens, temperature=temperature)
+    from tinker_vision import renderer_name, request_images
+    vision = renderer_name(model) is not None
 
     def call(request: LLMRequest) -> LLMResponse:
-        request = pdf_text_request(request)
-        tools = bool(request.tools and request.tool_choice != "none")
-        system = request.system_prompt + (_tinker_tool_prompt(request.tools) if tools else "")
-        user = request.user_prompt
-        attempts = max_tool_retries + 1 if tools else 1
-        remaining_calls = request.metadata.get("max_transport_attempts")
-        if isinstance(remaining_calls, int):
-            attempts = min(attempts, max(0, remaining_calls))
-        remaining_tokens = request.metadata.get("max_transport_output_tokens")
-        if not isinstance(remaining_tokens, int):
-            remaining_tokens = None
-        override = request.metadata.get("max_output_tokens_override")
-        output_tokens = input_tokens = api_calls = retries = 0
-        last_text, last_error, finish = "", "sampling budget exhausted", None
-        for attempt in range(attempts):
-            if remaining_tokens is not None and remaining_tokens <= 0:
-                break
-            limit = max_output_tokens
-            if isinstance(override, int):
-                limit = min(limit, override)
-            if remaining_tokens is not None:
-                limit = min(limit, remaining_tokens)
-            if limit <= 0:
-                break
-            if getattr(caller, "supports_sampling_metadata", False) is True:
-                # Transport owns retries; nested SDK retries cannot bypass the
-                # API-call budget and every completed sample has native usage.
-                caller.last_usage = {}
-                try:
-                    last_text = caller(system, user, max_retries=1, max_output_tokens_override=limit)
-                except RuntimeError as exc:
-                    sampled_usage = caller.last_usage
-                    if not sampled_usage:
-                        raise
-                    return LLMResponse("", "tinker", model, usage={**sampled_usage,
-                        "output_tokens": output_tokens + sampled_usage["output_tokens"],
-                        "input_tokens": input_tokens + sampled_usage.get("input_tokens", 0),
-                        "api_calls": api_calls + sampled_usage.get("api_calls", 1),
-                        "max_output_tokens": limit, "tool_error": str(exc),
-                        "action_transport": "emulated" if tools else "prompt_json"})
-                usage = caller.last_usage
-            else:
-                last_text = caller(system, user)
-                usage = {"output_tokens": max(1, len(last_text) // 4), "api_calls": 1}
-            used = usage["output_tokens"]
-            output_tokens += used
-            input_tokens += usage.get("input_tokens", 0)
-            api_calls += usage.get("api_calls", 1)
-            finish = usage.get("finish_reason")
-            if remaining_tokens is not None:
-                remaining_tokens -= used
-            retries = attempt
-            response_usage = {"output_tokens": output_tokens, "input_tokens": input_tokens,
-                              "max_output_tokens": limit, "api_calls": api_calls,
-                              "tool_retries": retries, "finish_reason": finish,
-                              "action_transport": "emulated" if tools else "prompt_json"}
-            if finish == "length" or used > limit:
-                last_error = "sample truncated or exceeded output budget"
-                finish = "length"
-                break
-            if not tools:
-                return LLMResponse(last_text, "tinker", model, usage=response_usage)
-            try:
-                tool_call = _coerce_emulated_tool_call(last_text)
-                error = _validate_emulated_tool_call(tool_call, request.tools)
-                if error:
-                    raise ValueError(error)
-            except ValueError as exc:
-                last_error = str(exc)
-                user = (f"{request.user_prompt}\n\nYOUR PREVIOUS TOOL CALL WAS INVALID\n"
-                        f"Error: {last_error}\nInvalid output: {last_text[:1200]}\n"
-                        "Return one corrected JSON tool-call object only.")
-                continue
-            return LLMResponse("", "tinker", model, usage=response_usage,
-                tool_calls=(LLMToolCall(tool_call.name, tool_call.arguments,
-                                       f"tinker-emulated-{attempt + 1}"),))
-        return LLMResponse(last_text, "tinker", model, usage={
-            "output_tokens": output_tokens, "input_tokens": input_tokens,
-            "max_output_tokens": limit if api_calls else 0, "api_calls": api_calls,
-            "tool_retries": retries, "tool_error": last_error,
-            "finish_reason": finish, "action_transport": "emulated" if tools else "prompt_json"})
+        images = request_images(request) if vision else ()
+        if not vision:
+            request = pdf_text_request(request)
+        elif images:
+            request = replace(request, metadata={**request.metadata, 'pdf_delivery': 'vision_images_v1'})
+        if request.tools and request.tool_choice != "none":
+            from tinker_action import request_action
+            return request_action(caller, request, model=model,
+                                  max_output_tokens=max_output_tokens,
+                                  max_tool_retries=max_tool_retries, images=images)
+        from tinker_completion import complete
+        return complete(caller, request, model, max_output_tokens, max_tool_retries, images)
 
-    call.supports_attachments = False
-    call.supports_pdf_text = True
+    call.supports_attachments = vision
+    call.supports_pdf_text = not vision
+    return call
+
+
+def make_tinker_query_fn(
+    model: str,
+    *,
+    max_output_tokens: int = 8192,
+    temperature: float = 0.2,
+    max_retries: int = 2,
+) -> QueryFn:
+    """Return a text-only Tinker caller with the same truncation contract as requests.
+
+    Contest deliberation and Coach planning use ``QueryFn`` rather than the
+    request/tool interface.  They must still resume a length-stopped native
+    sample exactly, and reject it if the shared turn budget cannot finish it.
+    """
+    caller = make_tinker_caller(
+        model, max_output_tokens=max_output_tokens, temperature=temperature,
+    )
+
+    def request(request):
+        from tinker_completion import complete
+        return complete(caller, request, model, max_output_tokens, max_retries)
+
+    def call(system_prompt: str, user_prompt: str) -> str:
+        response = request(LLMRequest(system_prompt, user_prompt, purpose='contest_deliberation'))
+        if response.usage.get("tool_error"):
+            raise RuntimeError(response.usage["tool_error"])
+        return response.text
+
+    call.supports_sampling_metadata = True
+    call.request = request
+    call.supports_budgeted_requests = True
+    call.max_output_tokens = max_output_tokens
     return call
 
 
@@ -614,7 +652,9 @@ def make_vectorengine_caller(model=None, *, max_output_tokens=8192, temperature=
         temperature=temperature)
     def call(request):
         if request.attachments:
-            raise ValueError('VectorEngine attachment support has not been verified.')
+            error = ValueError('VectorEngine attachment support has not been verified.')
+            error.usage = {'api_calls': 0, 'output_tokens': 0, 'unknown_usage_attempts': 0}
+            raise error
         return caller(request)
     call.supports_attachments = False
     return call
@@ -643,7 +683,8 @@ def _make_chat_completions_caller(model: str, *, provider: str, api_key: str,
     from openai import OpenAI
     client = OpenAI(api_key=api_key, base_url=base_url, timeout=180.0, max_retries=0)
 
-    def call(request: LLMRequest) -> LLMResponse:
+    @local_preflight
+    def prepare_content(request: LLMRequest):
         content: list[dict[str, Any]] = [{"type": "text", "text": request.user_prompt}]
         for attachment in request.attachments:
             if attachment.role != "agent_visible" and request.purpose == "generation":
@@ -663,15 +704,17 @@ def _make_chat_completions_caller(model: str, *, provider: str, api_key: str,
                     "url": f"data:{attachment.mime_type};base64,{encoded}"}})
             else:
                 raise ValueError(f"Unsupported attachment MIME type: {attachment.mime_type}")
-        output_limit = request.metadata.get("max_output_tokens_override", max_output_tokens)
-        if not isinstance(output_limit, int) or isinstance(output_limit, bool) or output_limit <= 0:
-            raise ValueError("max_output_tokens must be a positive integer")
-        if provider in {"openagents", "vectorengine"}:
-            output_limit = min(output_limit, max_output_tokens)
+        return content
+
+    def call(request: LLMRequest) -> LLMResponse:
+        output_limit = _request_output_limit(request, max_output_tokens, allow_expansion=provider == 'openai')
+        if output_limit == 0:
+            return LLMResponse('', provider, model, usage={'api_calls': 0, 'output_tokens': 0,
+                                                         'tool_error': 'No remaining transport budget'})
         kwargs: dict[str, Any] = {
             "model": model, "max_tokens": output_limit, "temperature": temperature,
             "messages": [{"role": "system", "content": request.system_prompt},
-                         {"role": "user", "content": content}],
+                         {"role": "user", "content": prepare_content(request)}],
         }
         if model.lower().startswith("glm-"):
             kwargs["reasoning_effort"] = "medium"
@@ -699,11 +742,23 @@ def _make_chat_completions_caller(model: str, *, provider: str, api_key: str,
             )
         else:
             response = client.chat.completions.create(**kwargs).model_dump()
+        raw_usage = response.get('usage') or {}
+        usage = {**raw_usage, 'max_output_tokens': output_limit,
+                 'api_calls': len(gateway_attempts) if gateway_attempts else 1}
+        if 'prompt_tokens' in raw_usage:
+            usage['input_tokens'] = raw_usage['prompt_tokens']
+        if 'completion_tokens' in raw_usage:
+            usage['output_tokens'] = raw_usage['completion_tokens']
+        if gateway_attempts:
+            usage.update(gateway_attempts=gateway_attempts,
+                         unknown_usage_attempts=sum(a['usage_unknown'] for a in gateway_attempts))
         choices = response.get("choices") or []
         if not choices:
-            raise ValueError(f"{provider} returned no completion choices.")
+            return LLMResponse('', provider, model, usage={**usage, 'tool_error': 'No completion choices'})
         choice = choices[0]
-        message = choice["message"]
+        message = choice.get('message') or {}
+        usage.update(finish_reason=choice.get('finish_reason'),
+                     reasoning_chars=len(message.get('reasoning_content') or ''))
         incomplete = choice.get("finish_reason") in {"length", "content_filter"}
         deliberation_truncated = (
             choice.get("finish_reason") == "length"
@@ -711,19 +766,16 @@ def _make_chat_completions_caller(model: str, *, provider: str, api_key: str,
             and not request.tools
             and bool(message.get("content"))
         )
-        calls = parse_response_tool_calls({"output": [
-            {"type": "function_call", "call_id": item.get("id", ""), **item["function"]}
-            for item in ([] if incomplete else message.get("tool_calls") or [])
-        ]})
-        usage = response.get("usage") or {}
+        try:
+            calls = parse_response_tool_calls({"output": [
+                {"type": "function_call", "call_id": item.get("id", ""), **item["function"]}
+                for item in ([] if incomplete else message.get("tool_calls") or [])
+            ]})
+        except (ValueError, TypeError, KeyError, AttributeError):
+            return LLMResponse('', provider, model, usage={**usage,
+                'tool_error': 'Malformed native function-call response; no action executed'})
         return LLMResponse("" if incomplete and not deliberation_truncated else message.get("content") or "", provider, model, {
-            **usage, "input_tokens": usage.get("prompt_tokens", 0),
-            "output_tokens": usage.get("completion_tokens", 0),
-            "finish_reason": choice.get("finish_reason"), "max_output_tokens": output_limit,
-            "reasoning_chars": len(message.get("reasoning_content") or ""),
-            **({"api_calls": len(gateway_attempts), "gateway_attempts": gateway_attempts,
-                "unknown_usage_attempts": sum(a["usage_unknown"] for a in gateway_attempts)}
-               if gateway_attempts else {}),
+            **usage,
             **({"deliberation_truncated": True} if deliberation_truncated else {}),
             **({"tool_error": "Incomplete or filtered completion; no action executed."}
                if incomplete and not deliberation_truncated else {}),
@@ -741,6 +793,11 @@ def resolve_request_fn(
 ) -> RequestFn:
     """Factory for multimodal judges/agents."""
     provider = provider.lower().strip()
+    from env_config import PUBLIC_PROFILE_PROVIDERS
+    if provider in PUBLIC_PROFILE_PROVIDERS:
+        from public_providers import make_public_caller
+        return make_public_caller(provider, model, max_output_tokens=max_output_tokens,
+                                  temperature=temperature)
     if provider == "vectorengine":
         return make_vectorengine_caller(model, max_output_tokens=max_output_tokens, temperature=temperature)
     if provider == "openagents":
@@ -927,6 +984,10 @@ def make_perplexity_caller(
                     raise
 
     if api == "agent":
+        call_agent.request = make_perplexity_responses_caller(
+            model, max_output_tokens=max_output_tokens, temperature=temperature)
+        call_agent.supports_budgeted_requests = True
+        call_agent.max_output_tokens = max_output_tokens
         return call_agent
     return call_sonar
 
@@ -982,6 +1043,10 @@ def make_tinker_caller(
 
     client = None
     tokenizer = None
+    vision_renderer = None
+    text_renderer = None
+    from tinker_model_policy import model_policy, make_text_renderer, context_limit, stop_sequences
+    policy = model_policy(model)
     transient_errors = tuple(
         error_type
         for name in (
@@ -1011,37 +1076,89 @@ def make_tinker_caller(
         return client, tokenizer
 
     def call(system_prompt: str, user_prompt: str, max_retries: int = 3,
-             *, max_output_tokens_override: int | None = None) -> str:
+             *, max_output_tokens_override: int | None = None,
+             continuation_tokens: list[int] | None = None,
+             preserve_whitespace: bool = False,
+             assistant_prefix: str = '', stop: list[str] | None = None,
+             images: tuple = ()) -> str:
+        nonlocal vision_renderer, text_renderer
+        call.last_sample_tokens = []
+        call.last_usage = {'api_calls': 0, 'input_tokens': 0, 'output_tokens': 0,
+                           'unknown_usage_attempts': 0}
+        def failure(message):
+            error = RuntimeError(message)
+            error.usage = dict(call.last_usage)
+            return error
         output_limit = max_output_tokens
         if max_output_tokens_override is not None:
             output_limit = min(output_limit, max_output_tokens_override)
         if output_limit <= 0 or max_retries <= 0:
             raise ValueError("Tinker sampling budget is exhausted")
-        sampling_client, sampling_tokenizer = resources()
+        try:
+            sampling_client, sampling_tokenizer = resources()
+        except RuntimeError as exc:
+            exc.usage = dict(call.last_usage)
+            raise
         messages = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
         ]
         try:
-            encoded = sampling_tokenizer.apply_chat_template(
-                messages,
-                tokenize=True,
-                add_generation_prompt=True,
-                enable_thinking=False,
-            )
-            input_ids = encoded["input_ids"] if hasattr(encoded, "keys") else encoded
-            prompt = tinker.ModelInput.from_ints(input_ids)
+            if images:
+                from tinker_vision import make_renderer, generation_input
+                if vision_renderer is None:
+                    vision_renderer = make_renderer(model, sampling_tokenizer)
+                prompt = generation_input(vision_renderer, sampling_tokenizer, system_prompt,
+                                          user_prompt, images, assistant_prefix, continuation_tokens)
+                input_length = prompt.length
+            elif policy.renderer:
+                from tinker_vision import generation_input
+                if text_renderer is None:
+                    text_renderer = make_text_renderer(policy, sampling_tokenizer)
+                prompt = generation_input(text_renderer, sampling_tokenizer, system_prompt,
+                                          user_prompt, (), assistant_prefix, continuation_tokens)
+                input_length = prompt.length
+            else:
+                encoded = sampling_tokenizer.apply_chat_template(
+                    messages,
+                    tokenize=True,
+                    add_generation_prompt=True,
+                    **({'enable_thinking': False} if policy.disable_thinking_kwarg else {}),
+                )
+                input_ids = encoded["input_ids"] if hasattr(encoded, "keys") else encoded
+                if assistant_prefix:
+                    input_ids = list(input_ids) + list(sampling_tokenizer.encode(assistant_prefix, add_special_tokens=False))
+                if continuation_tokens:
+                    input_ids = list(input_ids) + list(continuation_tokens)
+                input_length = len(input_ids)
+                prompt = tinker.ModelInput.from_ints(input_ids)
+            # Use the verified deployment override when present; otherwise use
+            # this model's tokenizer limit. Never truncate evidence to fit.
+            context_window = context_limit(policy, sampling_tokenizer)
+            if context_window is not None:
+                available = context_window - input_length - 256
+                if available < min(output_limit, 1024):
+                    raise ValueError('Tinker context window has insufficient output space: '
+                                     f'{input_length} input tokens, {context_window} context limit')
+                output_limit = min(output_limit, available)
+            active_renderer = vision_renderer if images else text_renderer
+            effective_stop = stop_sequences(sampling_tokenizer, active_renderer, stop)
             sampling_params = tinker.SamplingParams(
                 max_tokens=output_limit,
                 temperature=temperature,
+                **({'stop': effective_stop} if effective_stop is not None else {}),
             )
         except Exception as exc:
-            raise RuntimeError(
+            raise failure(
                 f"Tinker prompt preparation failed: {_safe_api_error(exc)}"
             ) from exc
 
         last_error: Exception | None = None
         for attempt in range(max_retries):
+            # Until a sequence arrives, the attempted request has unknown token
+            # usage. Preserve that attempt even if sampling or decoding fails.
+            call.last_usage = {'api_calls': attempt + 1, 'input_tokens': 0,
+                               'output_tokens': 0, 'unknown_usage_attempts': attempt + 1}
             try:
                 response = sampling_client.sample(
                     prompt,
@@ -1054,40 +1171,60 @@ def make_tinker_caller(
                 if attempt < max_retries - 1:
                     time.sleep(2**attempt)
             except Exception as exc:
-                raise RuntimeError(
+                raise failure(
                     f"Tinker sampling failed: {_safe_api_error(exc)}"
                 ) from exc
         else:
-            raise RuntimeError(
+            raise failure(
                 f"Tinker sampling failed after {max_retries} attempts: "
                 f"{_safe_api_error(last_error or RuntimeError('unknown error'))}"
             ) from last_error
 
         if not response.sequences:
-            raise RuntimeError("Tinker returned no sampled sequences.")
+            raise failure("Tinker returned no sampled sequences.")
         sequence = response.sequences[0]
+        call.last_sample_tokens = list(sequence.tokens)
         reason = str(getattr(sequence, "stop_reason", "stop")).lower()
-        call.last_usage = {"input_tokens": len(input_ids),
+        call.last_usage = {"input_tokens": input_length,
+                           "chat_template": (getattr(vision_renderer, '_renderer_name', policy.template)
+                                             if images else policy.template),
+                           "chat_template_model": model,
+                           "max_output_tokens": output_limit,
                            "output_tokens": len(sequence.tokens),
                            "api_calls": attempt + 1,
+                           "unknown_usage_attempts": attempt,
                            "finish_reason": "length" if reason in {"length", "max_tokens", "max_length"} else reason}
         try:
-            text = sampling_tokenizer.decode(
-                sequence.tokens, skip_special_tokens=True
-            ).strip()
+            # Continuation chunks can begin mid-thought/mid-special-token.
+            # Decode the full sampled prefix through the model's renderer.
+            from tinker_model_policy import decode_response
+            decoder = active_renderer if not policy.supports_prefix else None
+            text = decode_response(sampling_tokenizer, decoder,
+                                   list(continuation_tokens or []) + list(sequence.tokens))
+            if not preserve_whitespace:
+                text = text.strip()
         except Exception as exc:
-            raise RuntimeError(
+            raise failure(
                 f"Tinker decode failed: {_safe_api_error(exc)}"
             ) from exc
-        if not isinstance(text, str) or not text.strip():
+        if not isinstance(text, str) or (not text.strip() and not preserve_whitespace
+                                        and not (decoder is not None and call.last_usage['finish_reason'] == 'length')):
             stop_reason = getattr(sequence, "stop_reason", None)
-            raise RuntimeError(
+            raise failure(
                 f"Tinker returned an empty decoded completion "
                 f"(stop_reason={stop_reason!r})."
             )
         return text
 
     call.supports_sampling_metadata = True
+    call.supports_continuation = True
+    call.supports_prefix = policy.supports_prefix
+    def decode_completion_tokens(tokens):
+        from tinker_model_policy import decode_response
+        return decode_response(resources()[1],
+                               (vision_renderer or text_renderer) if not policy.supports_prefix else None,
+                               tokens)
+    call.decode_completion_tokens = decode_completion_tokens
     return call
 
 

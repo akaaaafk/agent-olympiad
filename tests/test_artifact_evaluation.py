@@ -4,6 +4,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import Mock
 
 from pypdf import PdfWriter
 
@@ -20,6 +21,7 @@ from artifacts.slides import (
 )
 from evaluation.models import EvaluationError, load_rubric, parse_evaluation_payload
 from evaluation.slides import SlideDeckEvaluator
+from evaluation.rubric_llm import RubricDocumentEvaluator
 from llm import LLMAttachment, LLMResponse, _attachment_bytes
 
 
@@ -171,6 +173,26 @@ class EvaluationSchemaTests(unittest.TestCase):
         )
         self.assertEqual(result.total_score, 40)
 
+    def test_invalid_latex_escapes_are_repaired_without_changing_valid_escapes(self):
+        raw = self.valid_payload().replace(
+            'Grounded justification.', r'Use \(\sqrt{2}\); newline\nquote\" and escaped \\sqrt{3}.')
+        for wrapped in (raw, '```json\n' + raw + '\n```', 'Judge output:\n' + raw):
+            with self.subTest(wrapped=wrapped[:12]):
+                result = parse_evaluation_payload(
+                    wrapped, rubric=self.rubric, evaluator_id='test',
+                    evaluator_version='1', prompt_version='test', model='mock')
+                self.assertEqual(result.total_score, 40)
+                self.assertEqual(result.criteria[0].justification,
+                                 'Use \\(\\sqrt{2}\\); newline\nquote" and escaped \\sqrt{3}.')
+                self.assertTrue(any('escape' in warning for warning in result.warnings))
+
+    def test_escape_repair_does_not_accept_broken_structure(self):
+        raw = self.valid_payload().replace('Grounded justification.', r'Use \sqrt{2}.')
+        raw = raw.replace('"total_score": 40', '"total_score":')
+        with self.assertRaises(EvaluationError):
+            parse_evaluation_payload(raw, rubric=self.rubric, evaluator_id='test',
+                                     evaluator_version='1', prompt_version='test', model='mock')
+
     def test_inconsistent_total_is_recomputed_with_a_warning(self):
         payload = json.loads(self.valid_payload())
         payload["total_score"] = 41
@@ -184,6 +206,57 @@ class EvaluationSchemaTests(unittest.TestCase):
         )
         self.assertEqual(result.total_score, 40)
         self.assertTrue(any("total_score=41" in warning for warning in result.warnings))
+
+    def test_document_judge_retries_invalid_json_and_counts_all_attempts(self):
+        request = Mock(side_effect=[
+            LLMResponse('{"criteria":', 'mock', 'judge', usage={'input_tokens': 10, 'output_tokens': 3}),
+            LLMResponse(self.valid_payload(), 'mock', 'judge', usage={'input_tokens': 20, 'output_tokens': 30}),
+        ])
+        result = RubricDocumentEvaluator(request_fn=request, rubric=self.rubric,
+                                        submission_text='Saved submitted answer.').evaluate()
+        self.assertEqual(request.call_count, 2)
+        self.assertEqual(result.total_score, 40)
+        self.assertEqual(result.usage['api_calls'], 2)
+        self.assertEqual(result.usage['input_tokens'], 30)
+        self.assertEqual(result.usage['output_tokens'], 33)
+        self.assertEqual(result.usage['format_retries'], 1)
+        retry = request.call_args.args[0]
+        self.assertIn('Saved submitted answer.', retry.user_prompt)
+        self.assertEqual(retry.purpose, 'evaluation')
+        self.assertEqual(retry.metadata['evaluation_attempt'], 2)
+
+    def test_document_judge_stops_after_three_invalid_responses(self):
+        request = Mock(return_value=LLMResponse('{"criteria":', 'mock', 'judge'))
+        with self.assertRaisesRegex(EvaluationError, '3 attempts'):
+            RubricDocumentEvaluator(request_fn=request, rubric=self.rubric,
+                                    submission_text='Saved answer.').evaluate()
+        self.assertEqual(request.call_count, 3)
+
+    def test_document_judge_does_not_retry_service_or_input_errors(self):
+        request = Mock(side_effect=RuntimeError('service unavailable'))
+        with self.assertRaisesRegex(RuntimeError, 'service unavailable'):
+            RubricDocumentEvaluator(request_fn=request, rubric=self.rubric,
+                                    submission_text='Saved answer.').evaluate()
+        self.assertEqual(request.call_count, 1)
+        request.reset_mock()
+        with self.assertRaises(EvaluationError):
+            RubricDocumentEvaluator(request_fn=request, rubric=self.rubric).evaluate()
+        request.assert_not_called()
+
+    def test_document_judge_retries_out_of_range_score_but_accepts_valid_zero(self):
+        payload = json.loads(self.valid_payload())
+        for criterion in payload['criteria']:
+            criterion['score'] = 0
+        payload['total_score'] = 0
+        zero = json.dumps(payload)
+        payload['criteria'][0]['score'] = 999
+        payload['total_score'] = 999
+        request = Mock(side_effect=[LLMResponse(json.dumps(payload), 'mock', 'judge'),
+                                   LLMResponse(zero, 'mock', 'judge')])
+        result = RubricDocumentEvaluator(request_fn=request, rubric=self.rubric,
+                                        submission_text='Saved answer.').evaluate()
+        self.assertEqual(result.total_score, 0)
+        self.assertEqual(request.call_count, 2)
 
     def test_slide_evaluator_uses_both_pdfs_and_adds_limitations(self):
         with tempfile.TemporaryDirectory() as temp_dir:

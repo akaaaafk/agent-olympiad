@@ -109,8 +109,15 @@ def run():
         for job in jobs:
             dest = OUT / 'runs' / job['id']
             result_path = dest / 'result.json'
-            if result_path.exists() and read(result_path).get('status') in {'complete', 'unsubmitted'}:
-                print(f"skip_terminal {job['id']}", flush=True)
+            if result_path.exists() and (read(result_path).get('graded') or read(result_path).get('status') == 'unsubmitted'):
+                # Completed historical rubric results are immutable. Backfill
+                # only missing collaboration metrics rather than preparing a
+                # solver under changed code or redoing its rubric evaluation.
+                code = subprocess.run([sys.executable, '-u', str(ROOT / 'src/evaluate_saved_metrics.py'),
+                    '--output', str(dest), '--judge-provider', 'tinker', '--judge-model', MODEL], cwd=ROOT).returncode
+                print(f"evaluation_only {job['id']} exit={code}", flush=True)
+                if code and read(result_path).get('graded'):
+                    raise RuntimeError(f'Required evaluation pending: {dest}; retry the queue to backfill')
                 continue
             if prepare_artifact_run(**options(job))['identity'] != job['run_identity']:
                 raise ValueError('Runtime/config changed; preserve this run and use a fresh output')

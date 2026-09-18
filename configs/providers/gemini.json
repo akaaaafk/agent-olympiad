@@ -1,0 +1,8 @@
+{
+  "api": "gemini_generate_content",
+  "api_key_env": "GEMINI_API_KEY",
+  "base_url_env": "GEMINI_BASE_URL",
+  "base_url": "https://generativelanguage.googleapis.com/v1beta",
+  "model_env": "GEMINI_MODEL",
+  "model": ""
+}

@@ -4,6 +4,18 @@ __pycache__/
 .env
 .env.save
 *.pid
+.pytest_cache/
+.venv/
+.codex_tmp/
+
+# Local bulky artifacts: keep on disk, do not scan in git status
+data/.cache/
+data/excluded/
+data/base/
+data/last_exam/
+tmp/
+output/
+results/
 
 # Run logs (result JSON/MD are kept)
 initial_experiments/results/logs/

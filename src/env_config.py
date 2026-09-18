@@ -86,7 +86,11 @@ RUN_API_KEY_ENV = {
     'perplexity': 'PERPLEXITY_API_KEY', 'openai': 'OPENAI_API_KEY',
     'openagents': 'OPENAGENTS_API_KEY', 'tinker': 'TINKER_API_KEY',
     'vectorengine': 'VECTORENGINE_API_KEY',
+    'anthropic': 'ANTHROPIC_API_KEY', 'gemini': 'GEMINI_API_KEY',
+    'deepseek': 'DEEPSEEK_API_KEY', 'openai_compatible': 'OPENAI_COMPATIBLE_API_KEY',
 }
+PROVIDERS = tuple(RUN_API_KEY_ENV)
+PUBLIC_PROFILE_PROVIDERS = ('anthropic', 'gemini', 'deepseek', 'openai_compatible')
 
 
 def require_explicit_model(model):
@@ -96,6 +100,7 @@ def require_explicit_model(model):
 
 
 def add_run_credentials(parser):
+    parser.add_argument('--base-url', help='Override the selected provider endpoint; never switches providers')
     group = parser.add_mutually_exclusive_group()
     group.add_argument('--api-key', help='API key for the selected provider; never persisted')
     group.add_argument('--api-key-env', help='Read the API key from this environment variable')
@@ -104,6 +109,17 @@ def add_run_credentials(parser):
 def consume_run_credentials(args):
     """Install a runtime key for SDKs/child processes, then discard CLI fields."""
     mapping = args if isinstance(args, dict) else vars(args)
+    endpoint = mapping.pop('base_url', None)
+    if endpoint is not None:
+        provider = resolve_run_provider(mapping['provider'])
+        if provider not in PUBLIC_PROFILE_PROVIDERS:
+            raise ValueError('--base-url is for the new public interfaces; use existing provider configuration otherwise')
+        target_url = provider.upper() + '_BASE_URL'
+        parsed = urlsplit(endpoint)
+        if (parsed.scheme not in {'http', 'https'} or not parsed.hostname
+                or parsed.username or parsed.password or parsed.query or parsed.fragment):
+            raise ValueError('Base URL must be HTTP(S), without credentials, query or fragment')
+        os.environ[target_url] = endpoint.rstrip('/')
     key = mapping.pop('api_key', None)
     variable = mapping.pop('api_key_env', None)
     if variable is not None:

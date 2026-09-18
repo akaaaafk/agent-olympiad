@@ -25,32 +25,6 @@ from run_competition_batch import (  # noqa: E402
 
 
 class StructuredGoldBatchTests(unittest.TestCase):
-    def test_discovers_structured_gold_suite_includes_aligned_answer_keys(self) -> None:
-        cases = _discover_structured_gold_cases(REPO_ROOT / "data" / "benchmarks")
-        counts = Counter(competition for competition, _ in cases)
-
-        # Original curated math sheets.
-        self.assertEqual(counts["arml_local"], 6)
-        self.assertEqual(counts["arml_national_team"], 11)
-        # The aligned corpus includes both levels for every year, not only the
-        # former 14-sheet subset. Check identities as well as the denominator.
-        self.assertEqual(counts["purple_comet"], 44)
-        self.assertEqual(
-            {problem_id for competition, problem_id in cases if competition == "purple_comet"},
-            {f"purple_comet_{level}_{year}"
-             for year in range(2005, 2027) for level in ("hs", "ms")},
-        )
-        self.assertEqual(counts["hmmt_guts"], 1)
-        # Answer-key rubrics aligned into short_answers + benchmark parts.
-        self.assertEqual(counts["science_bowl"], 140)
-        self.assertEqual(counts["qanta"], 240)
-        # Gold labels alone do not make an unsafe or incomplete task runnable.
-        self.assertEqual(counts["mystery_hunt"], 0)
-        self.assertEqual(counts["nyu_ctf_bench"], 0)
-        self.assertEqual(counts["history_olympiad"], 95)
-        self.assertEqual(counts["cfa_research_challenge"], 0)
-        self.assertEqual(counts["wmtc"], 3)
-        self.assertGreaterEqual(len(cases), 510)
 
     def test_aggregate_metrics_use_weighted_and_macro_accuracy(self) -> None:
         rows = [

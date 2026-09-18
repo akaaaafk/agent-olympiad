@@ -48,7 +48,7 @@ class CapacityConfigurationTests(unittest.TestCase):
     def test_global_minimum_applies_to_official_short_contests(self):
         self.assertEqual(MIN_RECOMMENDED_TURNS, 10)
         self.assertEqual(resolve_contest_budget("arml_national_team").max_turns, 10)
-        self.assertEqual(resolve_contest_budget("icpc", max_turns=1).max_turns, 1)
+        self.assertEqual(resolve_contest_budget("icpc", max_turns=1).max_turns, 10)
 
     def test_capacity_is_part_of_contest_identity(self):
         with tempfile.TemporaryDirectory() as root:

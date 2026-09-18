@@ -4,8 +4,16 @@ from __future__ import annotations
 import json
 from dataclasses import replace
 
-from contest_budget import estimate_tokens
 from llm import LLMRequest, LLMResponse, RequestFn
+from llm_usage import response_usage, sum_usage, completion_error, failure_usage, ModelRequestError
+from argument_limits import violations, violation_text, native_rewrite_prompts, valid_replacement
+
+VERSION = 2
+
+
+def action_output_tokens(response: LLMResponse) -> int:
+    """Preserve reported zeroes; estimate visible output only when usage is absent."""
+    return response_usage(response)['output_tokens']
 
 
 def request_single_action(request_fn: RequestFn, request: LLMRequest) -> LLMResponse:
@@ -21,40 +29,77 @@ def request_single_action(request_fn: RequestFn, request: LLMRequest) -> LLMResp
     limit = request.metadata.get("max_transport_attempts")
     budget = limit if isinstance(limit, int) else None
     calls_used = tokens_used = retries = 0
-    input_tokens_used = 0
     rejected = []
+    attempts = []
+    repair_lock = None
     remaining_output = request.metadata.get("max_transport_output_tokens")
     if budget == 0 or remaining_output == 0:
         return LLMResponse("", "", "", usage={"api_calls": 0, "output_tokens": 0,
                            "tool_error": "Action transport budget exhausted"})
     initial_metadata = dict(request.metadata)
-    if remaining_output is not None:
+    if remaining_output is not None and initial_metadata.get('max_output_tokens_override') is not None:
         initial_metadata["max_output_tokens_override"] = min(int(remaining_output),
             int(initial_metadata.get("max_output_tokens_override") or remaining_output))
     current = replace(request, metadata=initial_metadata)
     for attempt in range(2):
-        response = request_fn(current)
+        try:
+            response = request_fn(current)
+            response = replace(response, usage=response_usage(response))
+        except Exception as exc:
+            usage = {**failure_usage(exc), **sum_usage(attempts + [failure_usage(exc)]),
+                     'tool_retries': retries, 'rejected_tool_calls': rejected,
+                     'transport_failed': True}
+            raise ModelRequestError('Action provider request failed: ' + type(exc).__name__, usage) from exc
+        attempts.append(response.usage)
         exhausted = response.usage.get("finish_reason") == "length"
-        if len(response.tool_calls) <= 1 and not exhausted and attempt == 0:
+        if completion_error(response.usage) and not exhausted:
+            response = replace(response, tool_calls=())
+        length_rows = []
+        replacement_error = ''
+        if len(response.tool_calls) == 1 and not exhausted:
+            call = response.tool_calls[0]
+            length_rows = violations(call.name, call.arguments, request.metadata)
+            if repair_lock:
+                from llm import _validate_emulated_tool_call
+                original, prior_rows, tool = repair_lock
+                if (not valid_replacement(original, call, prior_rows, tool)
+                        or _validate_emulated_tool_call(call, request.tools)):
+                    replacement_error = 'Length repair changed fixed arguments/action or violated the schema; nothing executed.'
+        total_used = sum_usage(attempts)
+        over_budget = ((budget is not None and total_used['api_calls'] > budget)
+            or (remaining_output is not None and total_used['output_tokens'] > remaining_output))
+        if replacement_error or over_budget:
+            response = replace(response, tool_calls=(), usage={**response.usage,
+                'tool_error': replacement_error or 'Provider exceeded the action recovery budget; nothing executed.'})
+            break
+        if response.usage.get('transport_recovery_managed') is True:
+            # Staged emulation owns one shared budget across selection, raw
+            # body sampling and continuations. Never restart its exhausted loop.
+            if exhausted or len(response.tool_calls) > 1 or length_rows:
+                return replace(response, tool_calls=(), usage={**response.usage,
+                    'tool_error': response.usage.get('tool_error') or
+                    (violation_text(call.name, length_rows) if length_rows else
+                     'Incomplete or multiple actions rejected; no partial action executed.')})
             return response
-        calls_used += max(1, int(response.usage.get("api_calls") or 1))
+        if len(response.tool_calls) <= 1 and not exhausted and not length_rows and attempt == 0:
+            return response
+        calls_used += response.usage['api_calls']
         serialized = json.dumps([{"name": c.name, "arguments": c.arguments}
                                  for c in response.tool_calls], ensure_ascii=False)
-        tokens_used += int(response.usage.get("output_tokens")
-                           or response.usage.get("completion_tokens")
-                           or estimate_tokens(serialized or response.text))
-        input_tokens_used += int(response.usage.get("input_tokens") or response.usage.get("prompt_tokens") or 0)
+        tokens_used += action_output_tokens(response)
         retries += max(0, int(response.usage.get("tool_retries") or 0))
-        if len(response.tool_calls) <= 1 and not exhausted:
+        if len(response.tool_calls) <= 1 and not exhausted and not length_rows:
             break
         rejected.extend({"call_id": c.call_id, "name": c.name,
                          "arguments": c.arguments, "executed": False,
-                         "rejection_reason": "output_token_limit" if exhausted else "multiple_actions_in_one_response"}
+                         "rejection_reason": "output_token_limit" if exhausted else "argument_character_limit" if length_rows else "multiple_actions_in_one_response",
+                         **({'length_violations': length_rows} if length_rows else {})}
                         for c in response.tool_calls)
         if attempt == 1 or (budget is not None and calls_used >= budget):
             response = replace(response, tool_calls=(), usage={
                 **response.usage,
-                "tool_error": ("Output token limit reached; no partial action executed." if exhausted else
+                "tool_error": (violation_text(call.name, length_rows) if length_rows else
+                               "Output token limit reached; no partial action executed." if exhausted else
                                "Response must contain exactly one action; no calls from the batch executed."),
             })
             break
@@ -65,9 +110,29 @@ def request_single_action(request_fn: RequestFn, request: LLMRequest) -> LLMResp
                 "tool_error": "Output token budget exhausted; no partial action executed."})
             break
         retries += 1
+        if length_rows:
+            from llm import _validate_emulated_tool_call
+            tool = next((t for t in request.tools if t.get('name') == call.name), None)
+            if tool is None or _validate_emulated_tool_call(call, request.tools):
+                response = replace(response, tool_calls=(), usage={**response.usage,
+                    'tool_error': 'Overlimit call also violates the selected schema; nothing executed.'})
+                retries -= 1
+                break
+            repair_lock = call, length_rows, tool
+            system, user = native_rewrite_prompts(call.name, call.arguments, length_rows)
+            current = replace(request, system_prompt=system, user_prompt=user,
+                tools=(tool,), tool_choice='required', attachments=(),
+                metadata={**request.metadata, 'argument_length_recovery': True,
+                    'max_transport_attempts': None if budget is None else budget - calls_used,
+                    'max_transport_output_tokens': remaining,
+                    **({'max_output_tokens_override': min(remaining,
+                        int(response.usage.get('max_output_tokens') or remaining))}
+                       if remaining is not None else {})})
+            continue
         if exhausted:
             previous_limit = int(response.usage.get("max_output_tokens") or 8192)
-            increased_limit = previous_limit
+            retry_ceiling = int(response.usage.get("max_retry_output_tokens") or previous_limit)
+            increased_limit = min(previous_limit * 2, retry_ceiling)
             if remaining is not None:
                 increased_limit = min(increased_limit, remaining)
             if increased_limit <= 0:
@@ -77,8 +142,10 @@ def request_single_action(request_fn: RequestFn, request: LLMRequest) -> LLMResp
                 break
             current = replace(request, user_prompt=request.user_prompt +
                 "\n\nACTION RESPONSE REJECTED\nYour reasoning output hit its token limit. "
-                "No action executed. Return exactly one available function call with concise arguments.",
+                "No action executed. Return exactly one available function call with concise arguments. "
+                "Do not include a solution preamble or reasoning outside the call JSON.",
                 metadata={**request.metadata, "max_output_tokens_override": increased_limit,
+                          "action_length_recovery": True,
                           "max_transport_output_tokens": remaining,
                           "max_transport_attempts": None if budget is None else budget - calls_used})
             continue
@@ -97,10 +164,6 @@ def request_single_action(request_fn: RequestFn, request: LLMRequest) -> LLMResp
                         if remaining is not None else {}),
                      "max_transport_attempts": None if budget is None else budget - calls_used})
     return replace(response, usage={
-        **response.usage, "api_calls": calls_used, "output_tokens": tokens_used,
-        "input_tokens": input_tokens_used,
-        **({"completion_tokens": tokens_used} if "completion_tokens" in response.usage else {}),
-        **({"prompt_tokens": input_tokens_used} if "prompt_tokens" in response.usage else {}),
-        **({"total_tokens": input_tokens_used + tokens_used} if "total_tokens" in response.usage else {}),
+        **response.usage, **sum_usage(attempts),
         "tool_retries": retries, "rejected_tool_calls": rejected,
     })

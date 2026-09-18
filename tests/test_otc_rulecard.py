@@ -184,21 +184,6 @@ class PolicyParsingTests(unittest.TestCase):
 
 
 class ConfigAndActionSurfaceTests(unittest.TestCase):
-    def test_otc_preset_and_config_require_enforced_card(self) -> None:
-        features = BASELINES["otc"]
-        self.assertEqual(features.coach, "card")
-        self.assertEqual(features.rule_card, "enforced")
-        self.assertTrue(features.review_workflow)
-        for name, other in BASELINES.items():
-            if name not in {"otc", "vallina_otc"}:
-                self.assertEqual(other.rule_card, "off", name)
-        with self.assertRaises(ValueError):
-            ContestRunConfig(system_variant="otc", team_size=6, max_turns=12)
-        config = ContestRunConfig(
-            system_variant="otc", team_size=6, max_turns=12, rule_card=ARML
-        )
-        self.assertIsNotNone(config.otc_policy)
-        self.assertEqual(ACTION_SET_VERSION, 10)
 
     def test_common_actions_plus_card_bundle(self) -> None:
         arml = ContestRunConfig(

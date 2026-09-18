@@ -35,7 +35,8 @@ class PipelineCompletionStateTests(unittest.TestCase):
                 "metrics": {"task_utility": 0 if graded else None},
                 "session_checkpoint": {"final_summary": {}}}
             job = {"id": "case", "route": "native", "competition": "arml_local",
-                   "session": "fixture", "manifest": "unused.json", "blockers": []}
+                   "session": "fixture", "manifest": "unused.json", "blockers": [],
+                   "problem_ids": ["q"]}
             run_pipeline.write(out / "registry.json", {"jobs": [job]})
             result_path = out / "runs/case/contest_session.json"
             run_pipeline.write(result_path, result)
@@ -45,8 +46,9 @@ class PipelineCompletionStateTests(unittest.TestCase):
                 return inspect_contest_output(dest, identity), identity
             history = []
             with patch.object(run_competition_batch, "inspect_contest_run", side_effect=inspect), \
+                 patch.object(run_pipeline, "validate_job_readiness"), \
                  patch.object(run_pipeline.subprocess, "run", side_effect=AssertionError("Do not rerun contestants")), \
-                 patch.object(sys, "argv", ["pipeline", "run", "--output", str(out)]), \
+                 patch.object(sys, "argv", ["pipeline", "run", "--model", "mock", "--output", str(out)]), \
                  redirect_stdout(io.StringIO()):
                 for _ in range(2):
                     code = run_pipeline.main()

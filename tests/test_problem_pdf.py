@@ -108,7 +108,7 @@ class PdfReaderTests(unittest.TestCase):
                 call = LLMToolCall('work', {'problem_id': 'q', 'content': 'Problem q: Final answer: 4'})
             return LLMResponse('', 'mock', 'vision', usage={'output_tokens': 5}, tool_calls=(call,))
         result = run_contest(manifest, lambda *_: '',
-                             ContestRunConfig('single_agent', 1, 2), action_request_fn=request_fn)
+                             ContestRunConfig('single_agent', 1, 1), action_request_fn=request_fn)
         self.assertEqual(len(calls), 2)
         self.assertEqual(result['submissions']['q'], 'Problem q: Final answer: 4')
 

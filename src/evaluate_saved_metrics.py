@@ -121,7 +121,7 @@ def process_run(directory, *, judge_provider=None, judge_model=None, report_only
             return resolved(request)
         sidecar = ensure_coordination(directory, result=result, task_text=text,
             judge_request=(judge_request if variant == 'single_agent' else
-                           task_context_judge(directory, contest, judge_request, provider)),
+                           task_context_judge(directory, contest, judge_request, provider, model=model)),
             judge_provider=provider, judge_model=model)
     row = write_metrics(directory, contest, result if result_bytes is not None else None, sidecar)
     assert session_path.read_bytes() == session_bytes, 'Historical contestant session was modified'

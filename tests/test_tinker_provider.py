@@ -26,6 +26,7 @@ class TransientTinkerError(Exception):
 def _native_sdk(encoded, decoded="  exact response\n", sequences=None):
     tokenizer = Mock()
     tokenizer.apply_chat_template.return_value = encoded
+    tokenizer.encode.side_effect = lambda text, **kwargs: [ord(c) for c in text]
     tokenizer.decode.return_value = decoded
     client = Mock()
     client.get_tokenizer.return_value = tokenizer
@@ -66,7 +67,8 @@ class TinkerCallerTests(unittest.TestCase):
         sdk, *_ = _native_sdk([1, 2])
         with patch.dict(
             os.environ,
-            {"TINKER_API_KEY": "tinker:tml-abc123 这个是注释"},
+            # Keep non-ASCII suffix coverage while keeping source text English.
+            {"TINKER_API_KEY": "tinker:tml-abc123 \u8fd9\u4e2a\u662f\u6ce8\u91ca"},
             clear=True,
         ), patch.dict(sys.modules, {"tinker": sdk}):
             llm.make_tinker_caller(MODEL)
@@ -115,6 +117,80 @@ class TinkerCallerTests(unittest.TestCase):
                 tokenizer.decode.assert_called_with(
                     [7, 8], skip_special_tokens=True
                 )
+
+    def test_prefill_and_continuation_use_exact_tokens_and_charge_full_input(self):
+        sdk, _, _, tokenizer, _ = _native_sdk([1, 2], decoded=' tail\n')
+        with patch.dict(os.environ, {'TINKER_API_KEY': 'secret'}, clear=True), patch.dict(sys.modules, {'tinker': sdk}):
+            caller = llm.make_tinker_caller(MODEL, max_output_tokens=32)
+            caller('system', 'user', assistant_prefix='{"name":"', stop=['"'])
+            sdk.ModelInput.from_ints.assert_called_with([1, 2] + [ord(c) for c in '{"name":"'])
+            sdk.SamplingParams.assert_called_with(max_tokens=32, temperature=0.2, stop=['"'])
+            self.assertEqual(caller.last_usage['input_tokens'], 11)
+            self.assertEqual(caller('system', 'user', continuation_tokens=[41, 42], preserve_whitespace=True), ' tail\n')
+            sdk.ModelInput.from_ints.assert_called_with([1, 2, 41, 42])
+            sdk.SamplingParams.assert_called_with(max_tokens=32, temperature=0.2)
+            self.assertEqual(caller.last_usage['input_tokens'], 4)
+            self.assertEqual(caller.last_usage['output_tokens'], 2)
+            self.assertEqual(caller.last_sample_tokens, [7, 8])
+            caller.decode_completion_tokens([41, 42, 7, 8])
+            tokenizer.decode.assert_called_with([41, 42, 7, 8], skip_special_tokens=True)
+
+    def test_query_caller_resumes_length_stopped_deliberation(self):
+        first = SimpleNamespace(tokens=[65], stop_reason='length')
+        second = SimpleNamespace(tokens=[66], stop_reason='stop')
+        sdk, _, client, tokenizer, result = _native_sdk([1, 2], decoded='ignored')
+        result.result.side_effect = [SimpleNamespace(sequences=[first]),
+                                     SimpleNamespace(sequences=[second])]
+        tokenizer.decode.side_effect = lambda tokens, **_kwargs: ''.join(chr(token) for token in tokens)
+        with patch.dict(os.environ, {'TINKER_API_KEY': 'secret'}, clear=True), patch.dict(sys.modules, {'tinker': sdk}):
+            query = llm.make_tinker_query_fn(MODEL, max_output_tokens=8)
+            self.assertEqual(query('system', 'user'), 'AB')
+        self.assertEqual(client.sample.call_count, 2)
+
+    def test_budgeted_query_caps_continuation_and_records_generated_tokens(self):
+        from text_call_budget import call_text
+        sdk, _, client, tokenizer, result = _native_sdk([1, 2])
+        result.result.side_effect = [
+            SimpleNamespace(sequences=[SimpleNamespace(tokens=[65, 65], stop_reason='length')]),
+            SimpleNamespace(sequences=[SimpleNamespace(tokens=[66], stop_reason='stop')])]
+        tokenizer.decode.side_effect = lambda tokens, **kwargs: ''.join(map(chr, tokens))
+        budget = SimpleNamespace(max_api_calls=2, api_calls_used=1, max_tokens=3, tokens_used=0)
+        with patch.dict(os.environ, {'TINKER_API_KEY': 'fixture'}, clear=True), patch.dict(sys.modules, {'tinker': sdk}):
+            query = batch._make_live_query('tinker', MODEL, max_output_tokens=2)
+            response = call_text(query, SimpleNamespace(budget=budget), 'System', 'User', purpose='private_think')
+        self.assertEqual(response, 'AAB')
+        self.assertTrue(response.accepted)
+        self.assertEqual((budget.api_calls_used, budget.tokens_used), (2, 3))
+        self.assertEqual([c.kwargs['max_tokens'] for c in sdk.SamplingParams.call_args_list], [2, 1])
+        self.assertEqual(client.sample.call_count, 2)
+
+    def test_failed_continuation_retains_the_failed_attempt_and_previous_tokens(self):
+        from text_call_budget import call_text
+        sdk, _, client, _, result = _native_sdk([1, 2])
+        result.result.side_effect = [
+            SimpleNamespace(sequences=[SimpleNamespace(tokens=[65], stop_reason='length')]),
+            TransientTinkerError('Fixture failure')]
+        budget = SimpleNamespace(max_api_calls=2, api_calls_used=1, max_tokens=10, tokens_used=0)
+        with patch.dict(os.environ, {'TINKER_API_KEY': 'fixture'}, clear=True), patch.dict(sys.modules, {'tinker': sdk}):
+            query = batch._make_live_query('tinker', MODEL, max_output_tokens=2)
+            response = call_text(query, SimpleNamespace(budget=budget), 'System', 'User', purpose='private_think')
+        self.assertFalse(response.accepted)
+        self.assertEqual(response, '')
+        self.assertEqual(client.sample.call_count, 2)
+        self.assertEqual((budget.api_calls_used, budget.tokens_used), (2, 1))
+        self.assertEqual(response.usage['unknown_usage_attempts'], 1)
+
+    def test_prompt_preparation_failure_does_not_count_as_sampling(self):
+        from text_call_budget import call_text
+        sdk, _, client, tokenizer, _ = _native_sdk([1, 2])
+        tokenizer.apply_chat_template.side_effect = ValueError('Fixture preparation failure')
+        budget = SimpleNamespace(max_api_calls=2, api_calls_used=1, max_tokens=10, tokens_used=0)
+        with patch.dict(os.environ, {'TINKER_API_KEY': 'fixture'}, clear=True), patch.dict(sys.modules, {'tinker': sdk}):
+            query = batch._make_live_query('tinker', MODEL, max_output_tokens=2)
+            response = call_text(query, SimpleNamespace(budget=budget), 'System', 'User', purpose='private_think')
+        self.assertFalse(response.accepted)
+        client.sample.assert_not_called()
+        self.assertEqual((budget.api_calls_used, budget.tokens_used), (0, 0))
 
     def test_retries_only_transient_sampling_failures_and_sanitizes(self):
         sdk, _, client, tokenizer, result = _native_sdk([1])
@@ -279,6 +355,24 @@ class TinkerRequestFnTests(unittest.TestCase):
         self.assertIn("no JSON", response.usage["tool_error"])
         self.assertEqual(caller.call_count, 2)
 
+    def test_emulated_no_argument_tool_may_omit_arguments(self):
+        caller = Mock(return_value='{"name": "start_environment"}')
+        tools = (
+            {
+                "type": "function",
+                "name": "start_environment",
+                "parameters": {"type": "object", "properties": {}, "additionalProperties": False},
+            },
+        )
+        with patch.object(llm, "make_tinker_caller", return_value=caller):
+            response = llm.make_tinker_request_fn(MODEL)(
+                llm.LLMRequest(system_prompt="sys", user_prompt="user", tools=tools,
+                               tool_choice="required")
+            )
+
+        self.assertEqual([(c.name, c.arguments) for c in response.tool_calls], [("start_environment", {})])
+        self.assertEqual(response.usage["api_calls"], 1)
+
     def test_provider_capabilities_choose_transport(self):
         self.assertEqual(llm.provider_action_transport("perplexity"), "native")
         self.assertEqual(llm.provider_action_transport("openai"), "native")
@@ -287,27 +381,22 @@ class TinkerRequestFnTests(unittest.TestCase):
 
 
 class CompetitionProviderTests(unittest.TestCase):
-    def test_tinker_model_default_and_environment_override(self):
-        with patch.dict(os.environ, {}, clear=True):
-            self.assertEqual(batch._resolve_model("tinker", None), MODEL)
-        with patch.dict(os.environ, {"TINKER_MODEL": "custom/model"}, clear=True):
-            self.assertEqual(
-                batch._resolve_model("tinker", None),
-                "custom/model",
-            )
-        self.assertEqual(
-            batch._resolve_model("tinker", "explicit/model"),
-            "explicit/model",
-        )
+    def test_tinker_run_requires_explicit_model(self):
+        for environment in ({}, {"TINKER_MODEL": "custom/model"}):
+            with patch.dict(os.environ, environment, clear=True):
+                with self.assertRaisesRegex(ValueError, '--model'):
+                    batch._resolve_model('tinker', None)
+        self.assertEqual(batch._resolve_model('tinker', 'explicit/model'), 'explicit/model')
+
 
     def test_provider_selection(self):
-        tinker = Mock(return_value="tinker-call")
+        tinker = Mock(return_value=lambda _system, _user: "tinker-call")
         perplexity = Mock(return_value="pplx-call")
-        with patch.object(batch, "make_tinker_caller", tinker), patch.object(
+        with patch.object(batch, "make_tinker_query_fn", tinker), patch.object(
             batch, "make_perplexity_caller", perplexity
         ):
             self.assertEqual(
-                batch._make_live_query("tinker", MODEL), "tinker-call"
+                batch._make_live_query("tinker", MODEL)("system", "user"), "tinker-call"
             )
             self.assertEqual(
                 batch._make_live_query("perplexity", "pplx-model"), "pplx-call"

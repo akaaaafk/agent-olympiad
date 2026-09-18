@@ -16,7 +16,10 @@ def write_json(path: Path, value) -> None:
 
 def write_text(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(text, encoding="utf-8")
+    # Source packets can contain CRLF/CR. Windows translation of existing
+    # CRLF produces CRCRLF, read back as extra blank lines.
+    text = text.replace('\r\n', '\n').replace('\r', '\n')
+    path.write_text(text, encoding="utf-8", newline='\n')
 
 
 def safe_name(value: str) -> str:

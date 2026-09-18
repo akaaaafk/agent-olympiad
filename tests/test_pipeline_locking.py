@@ -21,7 +21,7 @@ class PipelineLockingTests(unittest.TestCase):
                 pipeline.write(out / "registry.json", {"jobs": []})
                 pipeline.write(out / "batch_status.json", {"jobs": {}, "counts": {}})
                 before = {p.name: p.read_bytes() for p in out.iterdir()}
-                with patch.object(sys, "argv", ["pipeline", stage, "--output", str(out)]), \
+                with patch.object(sys, "argv", ["pipeline", stage, "--model", "mock", "--output", str(out)]), \
                      patch.object(pipeline, "register", side_effect=AssertionError("Premature registration")), \
                      patch.object(pipeline, "report", side_effect=AssertionError("Premature reporting")):
                     with self.assertRaises(FileExistsError):
@@ -39,7 +39,7 @@ class PipelineLockingTests(unittest.TestCase):
             def report(path, registry, states):
                 phases.append("report")
                 self.assertTrue((path / "pipeline.lock").is_file())
-            with patch.object(sys, "argv", ["pipeline", "all", "--output", str(out)]), \
+            with patch.object(sys, "argv", ["pipeline", "all", "--model", "mock", "--output", str(out)]), \
                  patch.object(pipeline, "register", side_effect=register), \
                  patch.object(pipeline, "report", side_effect=report):
                 self.assertEqual(pipeline.main(), 0)
@@ -51,7 +51,7 @@ class PipelineLockingTests(unittest.TestCase):
             with self.subTest(stage=stage), tempfile.TemporaryDirectory() as directory:
                 out = Path(directory)
                 pipeline.write(out / "registry.json", {"jobs": []})
-                with patch.object(sys, "argv", ["pipeline", stage, "--output", str(out)]), \
+                with patch.object(sys, "argv", ["pipeline", stage, "--model", "mock", "--output", str(out)]), \
                      patch.object(pipeline, "register", side_effect=RuntimeError("registration failed")), \
                      patch.object(pipeline, "report", side_effect=RuntimeError("report failed")):
                     with self.assertRaises(RuntimeError):
@@ -62,7 +62,7 @@ class PipelineLockingTests(unittest.TestCase):
         for limit in ("0", "-1"):
             with self.subTest(limit=limit), tempfile.TemporaryDirectory() as directory:
                 out = Path(directory) / "new-output"
-                with patch.object(sys, "argv", ["pipeline", "all", "--output", str(out), "--limit", limit]), \
+                with patch.object(sys, "argv", ["pipeline", "all", "--model", "mock", "--output", str(out), "--limit", limit]), \
                      patch.object(pipeline, "register", side_effect=AssertionError("Invalid limit started work")), \
                      redirect_stderr(io.StringIO()), redirect_stdout(io.StringIO()):
                     with self.assertRaises(SystemExit) as raised:

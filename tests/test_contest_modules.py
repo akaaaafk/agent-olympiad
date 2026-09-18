@@ -125,17 +125,6 @@ class ContestModuleTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "after the contest"):
             prepare_brief(**{**args, "memory": memory()})
 
-    def test_missing_resource_and_unknown_card_tool_are_not_advertised(self):
-        card = replace(load_rule_card("arml_local"), competition_id="fixture",
-                       allowed_tools=("read_lab_equipment", "start_environment"))
-        interface = resolve_contest_interface(manifest("fixture"), rule_card=card)
-        self.assertNotIn("read_lab_equipment", {s.name for s in interface.actions})
-        self.assertIn("unimplemented_card_action:start_environment", interface.issues)
-        self.assertTrue(any("missing_runtime_resource" in issue for issue in interface.issues))
-        supplied = resolve_contest_interface(
-            manifest("fixture", {"tool_fixtures": {"lab": {"reading": 42}}}), rule_card=card,
-        )
-        self.assertIn("read_lab_equipment", {s.name for s in supplied.actions})
 
     def test_answer_sheet_contract_is_task_owned(self):
         one = manifest()

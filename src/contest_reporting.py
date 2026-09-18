@@ -6,6 +6,7 @@ import os
 import tempfile
 import time
 from pathlib import Path
+from llm_usage import normalized_usage
 
 
 def finite(value):
@@ -48,13 +49,12 @@ def report_row(result):
                        if finite(row["Communication"]) and finite(row["Planning"]) else None, unavailable)
     for label, key in (("turns", "turns_used"), ("api_calls", "api_calls_used"), ("tokens", "tokens_used"), ("sec", "wall_seconds_used")):
         row[label] = number(label, budget.get(key), "runtime_usage_unavailable")
-    provider = (settings.get("execution") or {}).get("provider")
-    row["tokens_basis"] = "estimated_output_text_length" if provider == "tinker" else "runtime_output_token_budget"
+    row["tokens_basis"] = "runtime_output_token_budget"
     usage = result.get("evaluation_usage")
     disabled = not evaluation.get("judge_collab") and not evaluation.get("judge_cce")
     for label, key in (("eval_api_calls", "api_calls"), ("eval_tokens", "output_tokens"), ("eval_sec", "sec")):
         row[label] = number(label, usage.get(key) if usage else 0 if disabled else None, "evaluation_usage_not_recorded")
-    row["eval_tokens_basis"] = "estimated_output_text_length" if evaluation.get("provider") == "tinker" else "provider_reported_output_tokens"
+    row["eval_tokens_basis"] = "provider_reported_output_tokens"
     if usage and usage.get("unmetered_calls"):
         row["eval_tokens"] = "N/A"
         reasons["eval_tokens"] = "partial_usage: provider_call_failed_or_usage_missing"
@@ -69,20 +69,19 @@ def metered_judge(request_fn, result):
     def call(request):
         usage = result.setdefault("evaluation_usage", {"api_calls": 0, "output_tokens": 0, "sec": 0.0, "unmetered_calls": 0})
         started = time.monotonic()
-        usage["api_calls"] += 1
+        def charge(reported):
+            row = normalized_usage(reported)
+            usage['api_calls'] += row['api_calls']
+            usage['output_tokens'] += row['output_tokens']
+            usage['unmetered_calls'] += row['unknown_usage_attempts']
         try:
             response = request_fn(request)
-            reported = response.usage or {}
-            usage["api_calls"] += max(0, int(reported.get("api_calls", 1)) - 1)
-            tokens = reported.get("output_tokens", reported.get("completion_tokens"))
-            if finite(tokens):
-                usage["output_tokens"] += tokens
-            else:
-                usage["unmetered_calls"] += 1
-            return response
-        except Exception:
-            usage["unmetered_calls"] += 1
+        except Exception as exc:
+            charge(getattr(exc, 'usage', None))
             raise
+        else:
+            charge(response.usage)
+            return response
         finally:
             usage["sec"] += time.monotonic() - started
     return call

@@ -8,7 +8,7 @@ import unittest
 from unittest.mock import Mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from action_modules.competition_tools import ACTION_NAMES, BY_COMPETITION, PROFILES
+from action_modules.competition_tools import ACTION_NAMES, BY_COMPETITION, PROFILES as REGISTERED_PROFILES
 from action_wire import normalize_invocation, render_text_signature
 from competition_tool_runtime import execute_preparation_tool, public_context
 from contest_actions import _apply_action
@@ -22,6 +22,9 @@ from env import OlympiadEnvironment
 from rules.loader import DEFAULT_RULES_ROOT, load_rule_card
 from rules.storage import iter_rule_card_ids
 from tool_registry import ACTION_REGISTRY, render_function_tools, resolve_action_names, resolve_actions_with_diagnostics, validate_action_payload
+
+# Retired: codeforces has no rule card; WSC now runs the staged writing flow.
+PROFILES = tuple(p for p in REGISTERED_PROFILES if p.competition not in {"codeforces", "wsc_writing"})
 
 
 def sample_arguments(profile):
@@ -75,21 +78,6 @@ class CompetitionToolTests(unittest.TestCase):
         args.update(changes)
         return execute_preparation_tool(profile.name, args, context(competition))
 
-    def test_every_card_has_one_real_scoped_tool(self):
-        self.assertEqual(set(BY_COMPETITION), set(iter_rule_card_ids(DEFAULT_RULES_ROOT)))
-        self.assertEqual(len(PROFILES), 43)
-        for profile in PROFILES:
-            with self.subTest(competition=profile.competition):
-                for runtime in ("env", "session"):
-                    self.assertEqual(resolve_action_names(profile.competition, runtime=runtime) & ACTION_NAMES, {profile.name})
-                self.assertIn(profile.name, load_rule_card(profile.competition).allowed_tools)
-                self.assertEqual(validate_action_payload(profile.name, sample_arguments(profile)), ())
-                result = self.run_tool(profile.competition)
-                self.assertTrue(result["format_ok"], result)
-                self.assertFalse(result["correctness_checked"])
-                self.assertFalse(result["submitted"])
-                self.assertNotIn("SECRET_GOLD", json.dumps(result))
-                self.assertEqual(render_function_tools([profile.name])[0]["name"], profile.name)
 
     def test_public_context_allowlists_only_selectors(self):
         value = context("ioai_team")

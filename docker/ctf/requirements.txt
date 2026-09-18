@@ -1,0 +1,11 @@
+# Contestant-side analysis tools. Challenge/server dependencies remain upstream.
+pycryptodome
+requests
+sympy
+pillow
+mmh3
+numpy
+scipy
+z3-solver
+pwntools
+uncompyle6

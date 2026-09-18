@@ -149,6 +149,15 @@ def kill(proc):
 
 def worker(j,key):
  dest=Path(j['output']);result=dest/('result.json' if j['kind']=='artifact' else 'contest_session.json')
+ if j['kind']=='artifact' and result.exists() and (read(result).get('graded') or read(result).get('status')=='unsubmitted'):
+  # Source changes must not force a completed paid solver/rubric run to repeat.
+  code=subprocess.run([sys.executable,'-u',str(ROOT/'src/evaluate_saved_metrics.py'),
+    '--output',str(dest),'--judge-provider','tinker','--judge-model',MODEL],cwd=ROOT,
+    env=dict(os.environ,TINKER_API_KEY=key)).returncode
+  state=dict(id=j['id'],competition=j['competition'],variant=j['variant'],kind=j['kind'],
+    status=('complete' if read(result).get('graded') else 'unsubmitted') if code==0 else 'evaluation_pending',exit_code=code)
+  write(OUT/'states'/(j['id']+'.json'),state)
+  return state
  if j['kind']=='artifact':
   from otc_artifact_pipeline import prepare_artifact_run
   prepared=prepare_artifact_run(**j['artifact_options'])

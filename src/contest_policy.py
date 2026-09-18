@@ -1109,6 +1109,15 @@ def _scheduled_agent_task(
             return task
         if not _task_has_independent_approval(task) and latest.author != agent:
             return task
+    # A first draft is still editable work until it is submitted. When every
+    # assigned initial draft exists, keep this seat on an eligible assigned
+    # revision target instead of inheriting another worker's shared cursor.
+    # Earlier draft/review/programming priorities remain unchanged.
+    for task_id in work_task_ids:
+        task = session.task(task_id)
+        if (schedulable(task) and task.kind != 'programming' and task.versions
+                and not any(s.version_hash == task.versions[-1].version_hash for s in task.submissions)):
+            return task
     return None
 
 

@@ -2,6 +2,7 @@
 from __future__ import annotations
 from functools import partial
 import json
+from work_content import event_preview
 from .contracts import ActionSpec, ArgumentSpec, make_action, _TEXT, _OPTIONAL_PROBLEM_ID
 
 MAX_SIDE_CALLS_PER_TURN = 3
@@ -258,7 +259,7 @@ def agent_context(
         visible = [event for event in visible if event.kind not in _MEMORY_ONLY_EVENTS]
     return [
         {"turn": event.turn, "actor": event.actor,
-         "kind": event.kind, "payload": event.payload}
+         "kind": event.kind, "payload": event_preview(event)}
         for event in visible[-12:]
     ]
 

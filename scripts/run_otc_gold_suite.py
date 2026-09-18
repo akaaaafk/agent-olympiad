@@ -25,6 +25,7 @@ from contest_config import BASELINE_NAMES, BASELINE_ALIASES, canonical_baseline
 from contest_batch_summary import summarize
 from contest_budget import resolve_contest_budget  # noqa: E402
 from rules.loader import load_rule_card  # noqa: E402
+from competition_descriptions import COMPETITION_DESCRIPTIONS, DEFAULT_DESCRIPTION  # noqa: E402
 from run_competition_batch import inspect_contest_run  # noqa: E402
 from contest_run_identity import RunCompatibilityError, inspect_contest_output  # noqa: E402
 
@@ -55,55 +56,6 @@ TASK_FAMILIES = {
     "wmtc": "mathematics",
 }
 
-COMPETITION_DESCRIPTIONS = {
-    "arml_local": (
-        "ARML local mathematics team rounds: solve a numbered set of contest "
-        "problems and submit one shared answer sheet."
-    ),
-    "arml_national_team": (
-        "ARML national team mathematics rounds: teammates divide a difficult "
-        "numbered problem set and combine answers on one sheet."
-    ),
-    "arml_national_power": (
-        "ARML National Power Round: a long collaborative proof / exploration "
-        "packet. Produce a clear written solution with justifications; partial "
-        "credit is rubric-based when an exact answer key is unavailable."
-    ),
-    "arml_power": (
-        "ARML Power Contest (mail-in): collaborative multi-part proof packets. "
-        "Write structured solutions with reasoning; exact short-answer keys may "
-        "be unavailable and grading may be unsupported until a rubric judge runs."
-    ),
-    "science_bowl": (
-        "Science Bowl toss-up and bonus questions across scientific subjects, "
-        "answered directly with a short choice, term, or value."
-    ),
-    "qanta": (
-        "Academic quiz-bowl questions: identify the requested person, place, "
-        "work, event, or concept from progressively specific clues."
-    ),
-    "mystery_hunt": (
-        "MIT Mystery Hunt-style puzzles: infer the puzzle mechanism and extract "
-        "a final answer word or phrase."
-    ),
-    "history_olympiad": (
-        "History Bowl/Olympiad packets containing many numbered history toss-up "
-        "and bonus questions that require concise factual answers."
-    ),
-    "purple_comet": (
-        "Purple Comet online team mathematics: solve a timed numbered set for "
-        "the middle- or high-school division and submit short final answers."
-    ),
-    "hmmt_guts": (
-        "HMMT Guts Round: a fast team mathematics contest with a long numbered "
-        "packet (36 questions in the 2024 case); prioritize broad answer-sheet "
-        "coverage and preserve every solved numbered answer."
-    ),
-    "wmtc": (
-        "World Mathematics Team Championship team round: solve 14 linked or "
-        "standalone numbered mathematics questions on one shared answer sheet."
-    ),
-}
 
 # Packet contests: split into per-question tasks when prompts are numbered.
 SPLIT_PARTS = {"arml_local", "arml_national_team"}
@@ -258,10 +210,7 @@ def write_manifests(competitions: list[str]) -> list[Path]:
                 ),
                 "split_parts": split_parts,
                 "task_family": TASK_FAMILIES.get(competition, "general"),
-                "competition_description": COMPETITION_DESCRIPTIONS.get(
-                    competition,
-                    "Solve the provided contest task and submit its required deliverable.",
-                ),
+                "competition_description": COMPETITION_DESCRIPTIONS.get(competition, DEFAULT_DESCRIPTION),
             }
             if split_parts:
                 problem, gradeable = included[0]

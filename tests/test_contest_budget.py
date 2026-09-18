@@ -59,6 +59,12 @@ class ContestBudgetTests(unittest.TestCase):
         self.assertIsNone(budget.duration_minutes)
         self.assertEqual(budget.max_turns, 90)
 
+    def test_explicit_turn_overrides_use_ten_to_ninety_bounds(self):
+        for requested, expected in ((-1, 10), (0, 10), (1, 10), (9, 10),
+                                    (10, 10), (10.2, 11), (89, 89), (90, 90), (91, 90)):
+            with self.subTest(requested=requested):
+                self.assertEqual(resolve_contest_budget('icpc', max_turns=requested).max_turns, expected)
+
     def test_runtime_override(self):
         budget = resolve_contest_budget("icpc", max_turns=10, max_total_tokens=100_000)
         self.assertEqual(budget.max_turns, 10)
@@ -118,8 +124,9 @@ class ContestBudgetTests(unittest.TestCase):
             CollabConfig(rounds=2, synthesize=False),
         )
         by_turn = result["tokens_by_turn"]
-        self.assertEqual(len(by_turn), 2)
-        self.assertEqual([row["turn"] for row in by_turn], [1, 2])
+        self.assertEqual(env.max_turns, 10)
+        self.assertEqual(len(by_turn), 10)
+        self.assertEqual([row["turn"] for row in by_turn], list(range(1, 11)))
         self.assertEqual(sum(row["tokens"] for row in by_turn), result["tokens_used"])
         self.assertEqual(sum(row["api_calls"] for row in by_turn), result["api_calls"])
         self.assertGreater(by_turn[0]["tokens"], 0)

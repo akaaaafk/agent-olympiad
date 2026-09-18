@@ -6,6 +6,7 @@ import json
 import re
 from dataclasses import asdict, dataclass
 from typing import Any, Iterable, Literal
+from work_content import event_preview
 
 Visibility = Literal["public", "private", "group", "judge"]
 _VISIBILITIES = {"public", "private", "group", "judge"}
@@ -392,7 +393,7 @@ class ContestMemory:
                 "turn": event.turn,
                 "actor": event.actor,
                 "kind": event.kind,
-                "payload": event.payload,
+                "payload": event_preview(event),
             }
             for event in visible
             if event.task_id == current_task_id

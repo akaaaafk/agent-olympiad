@@ -21,6 +21,7 @@ from contest_manifest import ContestManifest, ManifestTask
 from contest_runner import ContestRunConfig
 from contest_run_identity import (
     RunCompatibilityError, build_run_identity, inspect_contest_output,
+    read_completed_contest_result,
 )
 
 
@@ -161,6 +162,34 @@ class IdentityTests(unittest.TestCase):
         with self.assertRaisesRegex(RunCompatibilityError, "execution.model"):
             inspect_contest_output(self.root, changed)
 
+    def test_finalized_result_allows_only_source_hash_drift(self):
+        identity = self.identity()
+        self.write("run_config.json", identity)
+        self.write("contest_session.json", self.result(identity))
+        (self.source / "engine.py").write_text("VERSION = 2\n", encoding="utf-8")
+        changed_source = self.identity()
+        self.assertEqual(inspect_contest_output(self.root, changed_source), "complete")
+        self.assertEqual(
+            read_completed_contest_result(self.root, changed_source)["run_identity"], identity,
+        )
+        incompatible = self.identity(execution={**self.execution, "model": "model-b"})
+        with self.assertRaisesRegex(RunCompatibilityError, "execution.model"):
+            inspect_contest_output(self.root, incompatible)
+
+    def test_source_drift_cannot_resume_pending_auxiliary_evaluation(self):
+        identity = build_run_identity(
+            manifest(), self.config, execution=self.execution,
+            evaluation={"judge_collab": True}, source_root=self.source,
+        )
+        self.write("contest_session.json", self.result(identity))
+        (self.source / "engine.py").write_text("VERSION = 2\n", encoding="utf-8")
+        changed_source = build_run_identity(
+            manifest(), self.config, execution=self.execution,
+            evaluation={"judge_collab": True}, source_root=self.source,
+        )
+        with self.assertRaisesRegex(RunCompatibilityError, "pending auxiliary evaluation"):
+            inspect_contest_output(self.root, changed_source)
+
     def test_partial_checkpoint_requires_matching_identity_and_action_version(self):
         identity = self.identity()
         self.assertEqual(inspect_contest_output(self.root, identity), "new")
@@ -185,9 +214,10 @@ class CliIdentityTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.out = Path(self.temp.name) / "run"
         self.argv = ["--contest-manifest", "fixture.json", "--output", str(self.out),
-                     "--system-variant", "vanilla", "--team-size", "1", "--max-turns", "3",
+                     "--system-variant", "single_agent", "--model", "mock", "--team-size", "1", "--max-turns", "3",
                      "--max-api-calls", "3", "--no-judge-collab", "--no-judge-task"]
-        patcher = patch.object(cli, "load_contest_manifest", return_value=manifest())
+        patcher = patch.object(cli, "load_contest_manifest",
+                               return_value=replace(manifest(), competition_id="arml_local"))
         patcher.start()
         self.addCleanup(patcher.stop)
 

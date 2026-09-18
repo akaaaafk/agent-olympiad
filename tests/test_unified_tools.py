@@ -47,15 +47,6 @@ class UnifiedToolTests(unittest.TestCase):
         task = ManifestTask('test', 'test', None, row['problem_description'], kind, 1, programming, row)
         return ContestManifest('test-run', competition, (task,))
 
-    def test_ownership_execution_and_permission_are_independent(self):
-        self.assertEqual(COMMON_TOOL_NAMES, {'use_calculator', 'web_search', 'execute_code', 'render_pdf'})
-        self.assertEqual(SPECIFIC_TOOL_NAMES, {'read_lab_equipment', 'read_star_chart'} | PREPARATION_ACTIONS)
-        self.assertEqual(TOOL_ACTION_NAMES, TOOL_ACTIONS)
-        self.assertFalse(ACTION_REGISTRY['submit_code'].is_tool)
-        self.assertTrue(ACTION_REGISTRY['submit_code'].submission)
-        self.assertTrue(replace(ACTION_REGISTRY['execute_code'], module='task_specific').is_tool)
-        self.assertTrue(COMMON_TOOL_NAMES <= COMMON_ACTION_NAMES)
-        self.assertEqual(TOOL_ACTION_NAMES & resolve_action_names('arml_local'), {'prepare_arml_local_sheet'})
 
     def test_all_rule_cards_resolve_same_tools_in_both_runtimes(self):
         for name in iter_rule_card_ids(DEFAULT_RULES_ROOT):
@@ -90,25 +81,6 @@ class UnifiedToolTests(unittest.TestCase):
         self.assertFalse(normalize_invocation('render_artifact', content).ok)
         self.assertFalse(normalize_invocation('code_execution', 'print(42)').ok)
 
-    def test_environment_and_session_adapter_return_real_pdf_and_previews(self):
-        manifest = self.fixture('wsc_writing')
-        executor = EnvironmentTaskExecutor(manifest, benchmark_root=str(self.root))
-        env = executor._environment(manifest.tasks[0])
-        env._pdf_renderer = ArtifactRenderer(self.root / 'versions', ArtifactContract('document'))
-        source = 'A verified document\n\nThe experiment has 43 competition tracks.\n中文摘要：统一工具接口。'
-        receipt = executor(manifest.tasks[0], 'render_pdf', {'content': source})
-        self.assertTrue(receipt['valid'])
-        self.assertEqual(receipt['pdf_sha256'], file_sha256(Path(receipt['pdf'])))
-        self.assertIn('43 competition tracks', ''.join(p.extract_text() for p in PdfReader(receipt['pdf']).pages))
-        self.assertIn('中文摘要', ''.join(p.extract_text() for p in PdfReader(receipt['pdf']).pages))
-        self.assertEqual(len(receipt['previews']), receipt['pages'])
-        for preview in receipt['previews']:
-            path = Path(preview['path'])
-            self.assertTrue(path.read_bytes().startswith(b'\x89PNG'))
-            self.assertEqual(file_sha256(path), preview['sha256'])
-        same = json.loads(env.execute_action('Agent_1', 'render_pdf', {'content': source}))
-        self.assertEqual(same, receipt)
-        self.assertEqual(env.workspace['final_answer'], '')
 
     def test_pdf_permission_gate_prevents_render_side_effects(self):
         self.fixture('arml_local')

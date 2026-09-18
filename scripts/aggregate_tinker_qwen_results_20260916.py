@@ -11,6 +11,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from contest_reporting import REPORT_FIELDS, report_row
+from saved_run_metrics import flat_metrics, coordination_complete, valid_coordination
 
 BATCHES = [
     ("tinker_task_based_arml_icpc_20260914", ROOT / "results" / "tinker_task_based_arml_icpc_20260914"),
@@ -18,6 +19,9 @@ BATCHES = [
 ]
 if (ROOT / 'results/tinker_requested_current_20260916/registry.json').exists():
     BATCHES.append(('tinker_requested_current_20260916', ROOT / 'results/tinker_requested_current_20260916'))
+for registry in sorted((ROOT / 'results').glob('*/registry.json')):
+    if registry.parent.name not in {name for name, _ in BATCHES}:
+        BATCHES.append((registry.parent.name, registry.parent))
 
 BASE_FIELDS = [
     "batch",
@@ -57,13 +61,14 @@ def aggregate_batch(batch_name: str, batch_dir: Path):
     lane_state = lane_statuses(batch_dir)
     rows = []
     for job in registry.get("jobs", []):
-        if job.get('kind') == 'artifact':
-            continue  # Artifact result.json rows are reported separately.
         # Unified queue also references older outputs for resume/evaluation.
         # Count those in their original batches rather than duplicating them.
         if job.get('output') and Path(job['output']).parent != batch_dir / 'runs':
             continue
-        result_path = batch_dir / "runs" / job["id"] / "contest_session.json"
+        directory = batch_dir / 'runs' / job['id']
+        artifact = (job.get('kind') == 'artifact' or job.get('route') in {'document', 'slides'}
+                    or batch_name == 'tinker_mcm_pdftext_20260916')
+        result_path = directory / ('result.json' if artifact else 'contest_session.json')
         base = {
             "batch": batch_name,
             "job_id": job["id"],
@@ -78,8 +83,27 @@ def aggregate_batch(batch_name: str, batch_dir: Path):
         metrics = {field: "" for field in REPORT_FIELDS}
         if result_path.exists():
             result = read_json(result_path)
-            status = "evaluation_pending" if result.get("evaluation_pending") else "complete"
-            metrics.update(report_row(result))
+            contest = read_json(directory / 'contest_session.json') if artifact else result
+            sidecar_path = directory / 'coordination_required.json'
+            sidecar = read_json(sidecar_path) if sidecar_path.is_file() else None
+            if sidecar and not coordination_complete(directory, result):
+                sidecar = {'status': 'pending', 'error': 'Required collaboration evaluation missing or stale'}
+            if artifact and sidecar is None:
+                sidecar = {'status': 'pending', 'error': 'Required collaboration evaluation missing'}
+            status = result.get('status', 'complete')
+            if result.get('evaluation_pending') or sidecar and sidecar.get('status') not in {'complete', 'not_applicable'}:
+                status = 'evaluation_pending'
+            elif not artifact and (result.get('grade') or {}).get('graded') is not True:
+                status = 'ungraded'
+            elif (not artifact and sidecar is None and contest.get('system_variant') != 'single_agent'
+                  and not valid_coordination(contest.get('coordination'))):
+                status = 'evaluation_pending'
+            metrics.update(flat_metrics(contest, result if artifact else None, sidecar))
+            settings = (contest.get('run_identity') or {}).get('settings') or {}
+            base['competition'] = base['competition'] or settings.get('competition_id')
+            base['variant'] = base['variant'] or contest.get('system_variant')
+            base['session_id'] = base['session_id'] or contest.get('session_id')
+            base['problem_ids'] = json.dumps(job.get('problem_ids') or [job.get('problem_id')], ensure_ascii=True)
         else:
             status = lane_state.get(job["id"], "unfinished")
             state_path = batch_dir / 'states' / (job['id'] + '.json')
@@ -93,7 +117,8 @@ def main():
     rows = []
     for batch_name, batch_dir in BATCHES:
         rows.extend(aggregate_batch(batch_name, batch_dir))
-    out_dir = BATCHES[-1][1] / "aggregates"
+    preferred = ROOT / 'results/tinker_requested_current_20260916'
+    out_dir = (preferred if preferred.is_dir() else BATCHES[-1][1]) / 'aggregates'
     out_dir.mkdir(parents=True, exist_ok=True)
     stamp = time.strftime("%Y%m%d_%H%M%S")
     fields = BASE_FIELDS + [field for field in REPORT_FIELDS if field not in BASE_FIELDS]

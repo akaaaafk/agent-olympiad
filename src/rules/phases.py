@@ -1,7 +1,7 @@
 """Contest phase schedules from collaboration rule cards.
 
 When ``simulation.phases`` is present and rules are enforced, actions are gated
-by the active phase (e.g. IEO prep day vs slide-lock day).
+by the active phase. Schedules must have competition-specific source support.
 """
 
 from __future__ import annotations

@@ -68,16 +68,13 @@ class ProgrammingJudgeTests(unittest.TestCase):
     def test_programming_synthesis_keeps_first_valid_source_submission(self):
         env = OlympiadEnvironment("icpc", "icpc_wf_2012_bottles", max_turns=1)
         calls = []
-        responses = iter(
-            [
-                "Delegate implementation and verification.",
-                "import sys\nprint(sys.stdin.read())\n",
-            ]
-        )
-
         def query(system, user):
             calls.append((system, user))
-            return next(responses)
+            if "complete stdin/stdout source program" in system:
+                return "import sys\nprint(sys.stdin.read())\n"
+            if len(calls) == 1:
+                return "Delegate implementation and verification."
+            return "ACTION: rest | PAYLOAD: ready for synthesis"
 
         result = run_centralized(
             env,
@@ -89,7 +86,8 @@ class ProgrammingJudgeTests(unittest.TestCase):
         self.assertEqual(
             result["final_answer"], "import sys\nprint(sys.stdin.read())"
         )
-        self.assertEqual(len(calls), 2)
+        self.assertEqual(sum("complete stdin/stdout source program" in system
+                             for system, _ in calls), 1)
         self.assertIn("complete stdin/stdout source program", calls[-1][0])
         self.assertNotIn("numbered answer sheet", calls[-1][0])
 

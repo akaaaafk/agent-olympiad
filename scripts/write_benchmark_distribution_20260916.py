@@ -4,6 +4,7 @@ import csv
 import json
 from datetime import datetime
 from pathlib import Path
+from build_mini_data import question_units
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT/'data/benchmarks'
@@ -30,7 +31,7 @@ index=read(BASE/'index.json')
 names={t['id']:t['name'] for t in index['olympiads']}
 catalog={t['id']:read(ROOT/t['benchmark_path']) for t in index['olympiads']}
 special={
- 'arml_power':'15 seasonal sessions',
+ 'arml_power':f"{len(catalog['arml_power'])} seasonal sessions",
  'purple_comet':'22 annual editions; 44 HS/MS sessions',
  'wmtc':'1 edition; 3 age-group sessions',
  'history_olympiad':'Mixed IHO/IHBB packets; edition count unresolved',
@@ -44,7 +45,7 @@ special={
 }
 counts={
  'arml_local':'65 subquestions', 'arml_national_team':'110 subquestions',
- 'arml_power':'15 packets; 74 scoring parts', 'hmmt_team':'140 subquestions',
+ 'arml_power':f"{len(catalog['arml_power'])} packets; {sum(question_units(r)[0] for r in catalog['arml_power'])} scoring parts", 'hmmt_team':'140 subquestions',
  'purple_comet':'1,050 subquestions', 'wmtc':'42 subquestions',
  'fyziklani':'858 scoring parts', 'science_olympiad':'1 example packet; 100 scoring parts',
 }
@@ -58,8 +59,8 @@ lines=['# Benchmark Distribution and Completed Qwen Runs', '',
  '- Scoring parts are not automatically independent questions. Question counts are not multiplied by the three settings.',
  '- Catalog inclusion does not imply evaluation readiness. `not_ready` records remain explicitly marked.', '',
  '## Current full catalog', '',
- '| Competition / track | Editions or sessions | Years represented | Distinct years | Questions / tasks | Records |',
- '|---|---|---|---:|---|---:|']
+ '| Competition / track | Editions or sessions | Years represented | Distinct years | Questions / tasks | Records | Total questions |',
+ '|---|---|---|---:|---|---:|---:|']
 for cid,rows in catalog.items():
     years=sorted({r['year'] for r in rows if isinstance(r.get('year'),int)})
     unknown=sum(r.get('year') is None for r in rows)
@@ -82,14 +83,18 @@ for cid,rows in catalog.items():
     if cid=='cybench':
         edition='4 source competition editions'
     n=str(len(years))+(' + unknown' if unknown and cid!='wsc_writing' else '')
-    lines.append(f"| {names.get(cid,cid)} (`{cid}`) | {edition} | {yearstr} | {n} | {count} | {len(rows)} |")
+    total_questions = sum(question_units(row)[0] for row in rows)
+    lines.append(f"| {names.get(cid,cid)} (`{cid}`) | {edition} | {yearstr} | {n} | {count} | {len(rows)} | {total_questions:,} |")
 total=sum(map(len,catalog.values()))
 assert total==index['total_records']
+total_question_units = sum(question_units(row)[0] for rows in catalog.values() for row in rows)
+lines += ['', f"'Total questions' counts all data in the active full catalog: all years and all readiness statuses across the {len(catalog)} tracks, including all {total:,} records. It is not restricted to mini data or completed runs. Per record, use structured `gold_label.parts`, then `questions`, then a positive `n_questions` or `question_count`; otherwise count one whole-task unit. Scoring parts and whole-task fallbacks are not necessarily independent questions. No count is multiplied by baseline settings. " + f'**Total question/task units: {total_question_units:,}.**']
 lines+=['',f'**Total: {len(catalog)} tracks and {total:,} mixed-unit records.** Codeforces has been removed from the active catalog.', '',
  '## Applied scope reductions', '',
  '| Track | Policy | Before | After |', '|---|---|---:|---:|',
  '| Odyssey of the Mind | Remove pre-2010 and unknown-year records | 50 | 18 |',
  '| QANTA | Remove pre-2010 and unknown-year records | 240 | 110 |',
+ f"| QANTA | Keep strictly post-2010 years (2011+); archive original raw and old QANTA catalogs outside this checkout | 110 | {len(catalog['qanta'])} |",
  '| DOE Science Bowl | Remove unknown-year records | 140 | 120 |',
  '| Wharton Investment | Remove unknown-year records | 4 | 3 |',
  '| CFA Research Challenge | Remove pre-2010 records | 19 | 17 |',
@@ -102,15 +107,15 @@ lines+=['',f'**Total: {len(catalog)} tracks and {total:,} mixed-unit records.** 
  f"| MIT Mystery Hunt | Remove all pre-2010 records | 247 | {len(catalog['mystery_hunt'])} |",
  f"| EOES / EUSO | Remove 2003, 2004 and 2006 | 30 | {len(catalog['eoes'])} |",
  f"| IYPT | Keep strictly post-2010 years (2011+) | 39 | {len(catalog['iypt'])} |",
- f"| IJSO Practical | Keep strictly post-2010 years (2011+) | 15 | {len(catalog['ijso_practical'])} |",
- f"| IOL Team | Keep strictly post-2010 years (2011+) | 18 | {len(catalog['iol_team'])} |",
+ '| IJSO Practical | Keep strictly post-2010 years (2011+) | 15 | 11 |',
+ '| IOL Team | Keep strictly post-2010 years (2011+) | 18 | 13 |',
+ f"| IJSO Practical | Delete unready 2011 and 2015 editions and exclusive sources | 11 | {len(catalog['ijso_practical'])} |",
+ f"| IOL Team | Delete unready 2011, 2012, 2016, 2017, 2019, 2022 and 2024 editions and exclusive sources | 13 | {len(catalog['iol_team'])} |",
+ f"| ARML Power | Delete unready Spring 2022 edition and exclusive sources | 15 | {len(catalog['arml_power'])} |",
  f"| ITYM | Keep strictly post-2010 years (2011+) | 17 | {len(catalog['itym'])} |",
  f"| EOES / EUSO | Keep strictly post-2010 years (2011+); already satisfied after earlier exclusions | 24 | {len(catalog['eoes'])} |", '',
- 'Removed records and pre-edit catalogs are archived under:', '',
- '- `data/excluded/requested_year_filter_20260916T171748Z/`',
- '- `data/excluded/nyu_finals_only_20260916T172357Z/`',
- '- `data/excluded/integrity_repair_20260916T173742Z/` (Mystery Hunt and EOES exclusions)',
- '- `data/excluded/integrity_repair_20260916T180733Z/` (post-2010 filters)', '',
+ 'Historical backup payloads formerly stored under `data/excluded/` were deleted by request on 2026-09-16. Four referenced audit manifests remain. The IOL/IJSO/ARML Power unready-edition cleanup retains only deletion inventories under `docs/cleanup_audits/`, not historical task copies.', '',
+ 'QANTA original raw files, pre-filter catalogs and QANTA-only backups are stored outside this checkout under `E:/agent_olympiad/dataset_backups/qanta_post2010_*/`. Current QANTA data is restricted to 2011+; text, answers and splits are preserved. Historical paid outputs and active frozen snapshots are preserved. QANTA remains excluded from dispatch.', '',
  'NYU identity audit found no duplicate IDs, source paths, or year/event/category/challenge identities before the stage filter. The current 66 records represent 11 Finals editions, 2013-2023.', '',
  '### NYU Finals distribution', '', '| Year | Questions |', '|---|---:|']
 for y,n in sorted(collections.Counter(r['year'] for r in catalog['nyu_ctf_bench']).items()):
@@ -135,11 +140,11 @@ lines+=['', '## Data source and experiment scope alignment', '',
 snapshot=ROOT.parent/'qwen-extension-runtime-20260915/data/benchmarks'
 for cid in ['history_olympiad','qanta','science_bowl','nyu_ctf_bench']:
     frozen=read(snapshot/cid/'benchmark.json')
-    current={r['problem_id'] for r in catalog[cid]}
+    current={r['problem_id'] for r in catalog.get(cid, [])}
     excluded={r['problem_id'] for r in frozen}-current
     lines.append(f'| {cid} | {len(frozen)} | {len(current)} | {len(excluded)} |')
 lines+=['',
- 'The registered History extension jobs reference 92 distinct packets / 5,462 questions across 7 years. The current main catalog contains 28 packets / 1,648 questions across 5 years. The full frozen History JSON has 95 records; not all were registered for execution.', '',
+ 'The registered History extension jobs reference 92 distinct packets / 5,462 questions across 7 years. History Olympiad has been removed from the active main catalog by user request. The full frozen History JSON has 95 records; not all were registered for execution.', '',
  'For a current-catalog comparison, include only jobs whose **entire** registered question set remains in the catalog. This membership check alone does not establish identical content, evaluator versions, token budgets, or task grouping. Mixed-membership historical sessions are excluded as a whole; do not reinterpret a historical score as a score on a shortened session.', '',
  'New experiments should use newly generated manifests and a new frozen snapshot/output identity from the current catalog. Existing completed paid runs should not be rerun merely to recount them.', '',
  '## Completed Qwen runs: historical registered scope', '',

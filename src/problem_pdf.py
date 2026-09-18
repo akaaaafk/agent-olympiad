@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 from dataset_paths import data_root
 REGISTRY = data_root() / "problem_pdf_allowlist.json"
 MAX_PAGES = 2
+MAX_READS_PER_SEAT = 2
 
 
 class ProblemPdfError(ValueError):
@@ -23,6 +24,9 @@ class ProblemPdfError(ValueError):
 
 
 def approved_assets(row, *, root=None, registry=None):
+    from artifact_pdf_reader import ArtifactPdfRow, verified_documents
+    if isinstance(row, ArtifactPdfRow):
+        return verified_documents(row)
     root = Path(root or ROOT).resolve()
     registry = Path(registry or REGISTRY)
     if not registry.is_file():
@@ -44,6 +48,9 @@ def approved_assets(row, *, root=None, registry=None):
             continue
         path = (root / entry["path"]).resolve()
         if not path.is_relative_to(root) or not path.is_file():
+            continue
+        # A mini registry cannot authorize reads from the parent dataset.
+        if registry.resolve().parent.name == "mini_data" and not path.is_relative_to(registry.resolve().parent):
             continue
         if hashlib.sha256(path.read_bytes()).hexdigest() != entry["sha256"]:
             continue
@@ -100,6 +107,8 @@ def read_problem_pdf(row, pages=None, document=1, *, root=None, registry=None, r
 
 def access_identity(manifest):
     """Freeze reviewed scope in run identity so resume cannot change access."""
+    if manifest.metadata.get('artifact_task_pdf'):
+        return [manifest.metadata['artifact_task_pdf']]
     ids = {t.parent_problem_id for t in manifest.tasks}
     if not REGISTRY.is_file():
         return []
@@ -112,6 +121,9 @@ def visible_benchmark(manifest, session, task):
 
     Subset-only experiments also require their own separately reviewed packet.
     """
+    if manifest.metadata.get('artifact_task_pdf') and task.task_id == 'deliverable':
+        from artifact_pdf_reader import row_for
+        return row_for(manifest, session)
     if task.question_id is not None:
         visible = {t.task_id for t in session.visible_tasks}
         released = {t.question_id for t in manifest.tasks
@@ -138,6 +150,10 @@ def request_attachments(manifest, session, memory, agent):
     if latest is None:
         return ()
     task, payload = latest
+    if manifest.metadata.get('artifact_task_pdf') and payload['document'] > 1:
+        assets = approved_assets(visible_benchmark(manifest, session, task))
+        if len(assets) < payload['document'] or assets[payload['document'] - 1]['sha256'] != payload['sha256']:
+            return ()  # A revised or expired candidate invalidates old page selections.
     # Revalidate host registry and file hash on every model request, including resume.
     result, attachments = read_problem_pdf(visible_benchmark(manifest, session, task), payload["pages"], payload["document"])
     if result["sha256"] != payload["sha256"]:
@@ -165,7 +181,11 @@ def attached_request(request, manifest, session, memory, agent, *, text_only=Fal
         return
     attachments = request_attachments(manifest, session, memory, agent)
     try:
-        yield replace(request, attachments=request.attachments + attachments)
+        latest = latest_read(manifest, session, memory, agent)
+        metadata = dict(request.metadata)
+        if attachments and latest:
+            metadata['problem_pdf_read'] = latest[1]
+        yield replace(request, attachments=request.attachments + attachments, metadata=metadata)
     finally:
         for attachment in attachments:
             attachment.path.unlink(missing_ok=True)
