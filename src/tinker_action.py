@@ -12,10 +12,11 @@ from typing import Any
 from llm import (LLMRequest, LLMResponse, LLMToolCall, _coerce_emulated_tool_call,
                  _json_objects, _validate_emulated_tool_call)
 from llm_usage import normalized_usage, failure_usage
+from answer_content import action_content_error
 from argument_limits import (field_limits, violations, violation_text, raw_rewrite_prompts,
                              rewrite_target, EDITING_RULES, preserves_structure)
 
-VERSION = 'staged_raw_arguments_v6_shared_limits'
+VERSION = 'staged_raw_arguments_v7_answer_command_guard'
 HEADER_TOKENS = 512
 
 
@@ -524,7 +525,8 @@ def request_action(caller, request: LLMRequest, *, model: str, max_output_tokens
                     selected, body_field = _selection(raw, request.tools)
                     body_fields = [body_field] if body_field else []
                     selection_draft = draft_before_sample
-                error = _length_error(selected, request) or ''
+                error = (action_content_error(selected.name, selected.arguments, request.metadata)
+                         or _length_error(selected, request) or '')
                 if error:
                     raise ValueError(error)
             except ValueError as exc:
@@ -588,6 +590,17 @@ def request_action(caller, request: LLMRequest, *, model: str, max_output_tokens
         pending_body = None
         completed = LLMToolCall(selected.name, {**selected.arguments, body_field: body},
                                 f'tinker-staged-{index + 1}')
+        command_error = action_content_error(completed.name, completed.arguments, request.metadata)
+        if command_error:
+            error = entry['error'] = command_error
+            # This is a wrong action, not an overlong answer. Do not send it to
+            # the editing-only rewriter or infer/execute the embedded command.
+            # Re-selection uses the unchanged tools and shared attempt budget.
+            phase, selected, body_field = 'select', None, None
+            pending_body = pending_metadata = None
+            body, prefix_tokens, selection_tokens = '', [], []
+            body_rewrite_attempt, body_rewrite_target = 0, None
+            continue
         current_schema = next(t for t in request.tools if t.get('name') == selected.name).get('parameters', {})
         error = (_length_error(completed, request)
                  or ('empty required raw argument' if not body.strip() and body_field in current_schema.get('required', []) else None))

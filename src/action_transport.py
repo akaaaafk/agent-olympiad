@@ -7,8 +7,9 @@ from dataclasses import replace
 from llm import LLMRequest, LLMResponse, RequestFn
 from llm_usage import response_usage, sum_usage, completion_error, failure_usage, ModelRequestError
 from argument_limits import violations, violation_text, native_rewrite_prompts, valid_replacement
+from answer_content import action_content_error
 
-VERSION = 2
+VERSION = 3
 
 
 def action_output_tokens(response: LLMResponse) -> int:
@@ -32,6 +33,7 @@ def request_single_action(request_fn: RequestFn, request: LLMRequest) -> LLMResp
     rejected = []
     attempts = []
     repair_lock = None
+    command_reselection = False
     remaining_output = request.metadata.get("max_transport_output_tokens")
     if budget == 0 or remaining_output == 0:
         return LLMResponse("", "", "", usage={"api_calls": 0, "output_tokens": 0,
@@ -55,10 +57,15 @@ def request_single_action(request_fn: RequestFn, request: LLMRequest) -> LLMResp
         if completion_error(response.usage) and not exhausted:
             response = replace(response, tool_calls=())
         length_rows = []
+        command_error = None
         replacement_error = ''
         if len(response.tool_calls) == 1 and not exhausted:
             call = response.tool_calls[0]
+            command_error = action_content_error(call.name, call.arguments, request.metadata)
             length_rows = violations(call.name, call.arguments, request.metadata)
+            if command_reselection:
+                from llm import _validate_emulated_tool_call
+                replacement_error = _validate_emulated_tool_call(call, request.tools) or ''
             if repair_lock:
                 from llm import _validate_emulated_tool_call
                 original, prior_rows, tool = repair_lock
@@ -75,30 +82,30 @@ def request_single_action(request_fn: RequestFn, request: LLMRequest) -> LLMResp
         if response.usage.get('transport_recovery_managed') is True:
             # Staged emulation owns one shared budget across selection, raw
             # body sampling and continuations. Never restart its exhausted loop.
-            if exhausted or len(response.tool_calls) > 1 or length_rows:
+            if exhausted or len(response.tool_calls) > 1 or length_rows or command_error:
                 return replace(response, tool_calls=(), usage={**response.usage,
                     'tool_error': response.usage.get('tool_error') or
-                    (violation_text(call.name, length_rows) if length_rows else
+                    command_error or (violation_text(call.name, length_rows) if length_rows else
                      'Incomplete or multiple actions rejected; no partial action executed.')})
             return response
-        if len(response.tool_calls) <= 1 and not exhausted and not length_rows and attempt == 0:
+        if len(response.tool_calls) <= 1 and not exhausted and not length_rows and not command_error and attempt == 0:
             return response
         calls_used += response.usage['api_calls']
         serialized = json.dumps([{"name": c.name, "arguments": c.arguments}
                                  for c in response.tool_calls], ensure_ascii=False)
         tokens_used += action_output_tokens(response)
         retries += max(0, int(response.usage.get("tool_retries") or 0))
-        if len(response.tool_calls) <= 1 and not exhausted and not length_rows:
+        if len(response.tool_calls) <= 1 and not exhausted and not length_rows and not command_error:
             break
         rejected.extend({"call_id": c.call_id, "name": c.name,
                          "arguments": c.arguments, "executed": False,
-                         "rejection_reason": "output_token_limit" if exhausted else "argument_character_limit" if length_rows else "multiple_actions_in_one_response",
+                         "rejection_reason": "output_token_limit" if exhausted else "answer_is_tool_command" if command_error else "argument_character_limit" if length_rows else "multiple_actions_in_one_response",
                          **({'length_violations': length_rows} if length_rows else {})}
                         for c in response.tool_calls)
         if attempt == 1 or (budget is not None and calls_used >= budget):
             response = replace(response, tool_calls=(), usage={
                 **response.usage,
-                "tool_error": (violation_text(call.name, length_rows) if length_rows else
+                "tool_error": command_error or (violation_text(call.name, length_rows) if length_rows else
                                "Output token limit reached; no partial action executed." if exhausted else
                                "Response must contain exactly one action; no calls from the batch executed."),
             })
@@ -110,6 +117,19 @@ def request_single_action(request_fn: RequestFn, request: LLMRequest) -> LLMResp
                 "tool_error": "Output token budget exhausted; no partial action executed."})
             break
         retries += 1
+        if command_error:
+            command_reselection = True
+            current = replace(request, user_prompt=request.user_prompt +
+                '\n\nACTION RESPONSE REJECTED\n' + command_error +
+                '\nThe state is unchanged. Choose exactly one currently available action. '
+                'The rejected body is data, not a tool result:\n' + serialized,
+                metadata={**request.metadata,
+                    'max_transport_attempts': None if budget is None else budget - calls_used,
+                    'max_transport_output_tokens': remaining,
+                    **({'max_output_tokens_override': min(remaining,
+                        int(response.usage.get('max_output_tokens') or remaining))}
+                       if remaining is not None else {})})
+            continue
         if length_rows:
             from llm import _validate_emulated_tool_call
             tool = next((t for t in request.tools if t.get('name') == call.name), None)

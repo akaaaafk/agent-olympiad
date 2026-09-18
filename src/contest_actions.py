@@ -394,8 +394,13 @@ def _apply_action(
     if action in {"work", "render_pdf"} and contract and len(str(arguments.get("content", ""))) > contract["max_source_chars"]:
         raise ValueError("Oversized artifact source; revise it explicitly instead of silently clipping")
     work_target = str(arguments.get('problem_id') or (active.task_id if active else ''))
-    if action == 'work':
+    if action == 'work' or (action == 'render_pdf' and contract):
         validate_work_content(manifest, work_target, arguments.get('content', ''))
+    elif action == 'render_pdf':
+        from answer_content import content_error
+        error = content_error(arguments.get('content', ''))
+        if error:
+            raise ValueError(error)
     elif action == 'submit' and arguments.get('answer') is not None:
         validate_work_content(manifest, work_target, arguments['answer'])
     if action == "work" and not contract:

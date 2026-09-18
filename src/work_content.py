@@ -3,7 +3,7 @@ from typing import Any
 
 from contest_manifest import ContestManifest, ManifestTask
 
-VERSION = 2
+VERSION = 3
 DRAFT_MAX_CHARS = 8000
 PREVIEW_CHARS = 800
 DEFAULT_PAGE_CHARS = 2000
@@ -69,6 +69,12 @@ def action_payload_limits() -> dict:
 
 
 def validate_work_content(manifest: ContestManifest, task_id: str | None, content: Any) -> None:
+    task = next((t for t in manifest.tasks if t.task_id == task_id), None)
+    if manifest.metadata.get('artifact_contract') or task is None or not is_source_task(task):
+        from answer_content import content_error
+        error = content_error(content)
+        if error:
+            raise ValueError(error)
     limit = work_char_limit(manifest, task_id)
     if limit is not None and len(str(content)) > limit:
         raise ValueError(

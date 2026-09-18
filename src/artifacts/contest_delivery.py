@@ -44,6 +44,10 @@ class _SafeHTML(HTMLParser):
 def validate_source(content: str, contract: ArtifactContract):
     if not content.strip() or len(content) > contract.max_source_chars:
         raise ValueError('Empty or oversized artifact source')
+    from answer_content import content_error
+    error = content_error(content)
+    if error:
+        raise ValueError(error)
     if contract.kind == 'slides':
         # Reject CSS escapes as well as imports/URLs; never let authored HTML read
         # local files or fetch resources while the browser renders it.

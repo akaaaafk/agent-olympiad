@@ -1273,6 +1273,9 @@ class _ContestEngine:
                     "action_argument_limits": work_content.action_argument_limits(self.manifest),
                     "action_argument_limits_by_task": work_content.action_argument_limits_by_task(self.manifest),
                     "action_payload_limits": work_content.action_payload_limits(),
+                    "source_task_ids": [task.task_id for task in self.manifest.tasks
+                                        if work_content.is_source_task(task)
+                                        and not self.manifest.metadata.get('artifact_contract')],
                 },
                 tools=turn.function_tools,
                 tool_choice="required",
@@ -1383,6 +1386,16 @@ class _ContestEngine:
 
     def _apply_agent_action(self, turn: _AgentTurn) -> bool:
         acted_task = self.session.active_task
+        if turn.action == "work":
+            requested_work = str(turn.arguments.get("problem_id") or "").strip()
+            if requested_work:
+                # work(problem_id=...) can select and write in one action.
+                # Snapshot that target, not the previous shared cursor. Keep
+                # target/permission validation in the dispatcher below.
+                acted_task = next(
+                    (task for task in self.session.tasks if task.task_id == requested_work),
+                    None,
+                )
         before_versions = len(acted_task.versions) if acted_task else 0
         before_source = acted_task.versions[-1] if acted_task and acted_task.versions else None
         before_events = len(self.memory.archival_snapshot()["events"])

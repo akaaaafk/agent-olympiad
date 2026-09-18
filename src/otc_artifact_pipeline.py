@@ -406,8 +406,10 @@ def run_artifact_contest(prepared, *, agent_request, judge_request, resume=False
             attachments = request.attachments if selected else task_attachments
             reading = ('\nPDF delivery is paginated. Document 1 is the official task; '
                        'document 2, when listed, is the current rendered candidate. '
-                       'Use read_problem_pdf(problem_id="deliverable", pages=[...], document=1 or 2) '
-                       'to read at most two pages on your next action call. '
+                       'To read other pages, select the actual read_problem_pdf action and supply '
+                       'problem_id, pages (at most two) and document in its tool arguments. '
+                       'Do not put a reader command in work.content or render_pdf.content; '
+                       'those fields are the answer itself, not operations to execute. '
                        'Only the selected pages are attached; other pages remain available.\n')
             if selected:
                 reading += 'Attached selection: ' + json.dumps(selected) + '\n'
