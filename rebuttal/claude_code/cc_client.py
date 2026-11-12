@@ -22,6 +22,7 @@ import json
 import os
 import shutil
 import subprocess
+import sys
 import uuid
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -29,6 +30,27 @@ from typing import Any, Callable
 
 DEFAULT_MODEL = "claude-haiku-4-5"
 CLAUDE_BIN = os.environ.get("CLAUDE_CODE_BIN") or shutil.which("claude") or "claude"
+
+
+def _claude_command(binary: str) -> list[str]:
+    """Argv prefix that runs ``binary`` without a shell in between.
+
+    On Windows ``shutil.which("claude")`` finds npm's ``claude.cmd`` shim, and
+    cmd.exe re-parses the JSON arguments (quotes, ``&``, ``|``, ``<``) and caps
+    the line at 8191 characters. Go to the native ``claude.exe`` the shim wraps
+    instead. A ``.py`` stand-in (``tests/fake_claude.py``) runs with this Python.
+    """
+    path = Path(binary)
+    if path.suffix.lower() == ".py":
+        return [sys.executable, str(path)]
+    if path.suffix.lower() in (".cmd", ".bat"):
+        native = path.parent / "node_modules" / "@anthropic-ai" / "claude-code" / "bin" / "claude.exe"
+        if native.is_file():
+            return [str(native)]
+    return [binary]
+
+
+CLAUDE_CMD = _claude_command(CLAUDE_BIN)
 
 # Never available, whatever the competition allows.
 ALWAYS_DENIED = (
@@ -150,7 +172,7 @@ class ClaudeCodeAgent:
         """Command line for one invocation; the prompt itself is sent on stdin."""
         allow, deny = self._permission_rules()
         cmd = [
-            CLAUDE_BIN, "-p",
+            *CLAUDE_CMD, "-p",
             "--model", self.model,
             "--output-format", "json",
             "--max-turns", str(self.max_inner_turns),
