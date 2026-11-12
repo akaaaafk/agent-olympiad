@@ -16,6 +16,7 @@ The model is the runner's own ``--model``.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import sys
@@ -52,7 +53,8 @@ def main(argv: list[str] | None = None) -> int:
     rules_root = _arg(rest, "--rules-root")
     base = Path(os.environ.get("AO_CC_WORKSPACE_ROOT") or tempfile.gettempdir()) / "ao_cc_workspaces"
     seats = ClaudeCodeSeats(
-        competition_id=competition, workspace_root=base / f"{output.parent.name}__{output.name}", model=model,
+        competition_id=competition, workspace_root=base / f"{output.name}_{hashlib.sha256(str(output).encode()).hexdigest()[:10]}",
+        model=model,
         max_inner_turns=int(os.environ.get("AO_CC_MAX_INNER_TURNS") or 8),
         session_mode=os.environ.get("AO_CC_SESSION_MODE") or "per_call",
         rules_root=Path(rules_root) if rules_root else None,
