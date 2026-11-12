@@ -44,6 +44,10 @@ def main(argv=None) -> int:
     pre.add_argument("--data-root", type=Path, default=ROOT / "data" / "mini_data")
     pre.add_argument("--max-inner-turns", type=int, default=None)
     pre.add_argument("--session-mode", choices=("per_call", "per_seat"), default=None)
+    pre.add_argument("--bedrock-model", default=None,
+                   help="run Claude Code on AWS Bedrock with this model id / inference profile ARN "
+                        "(sets AO_CC_BEDROCK_MODEL; AWS credentials from the normal AWS chain)")
+    pre.add_argument("--aws-region", default=None, help="Bedrock region (default us-east-1)")
     ours, rest = pre.parse_known_args(argv)
     if any(a == "--system-variant" or a.startswith("--system-variant=") for a in rest):
         raise SystemExit("use --setting instead of --system-variant")
@@ -51,6 +55,10 @@ def main(argv=None) -> int:
         raise SystemExit("the provider is fixed to the Claude Code route")
 
     os.environ["AGENT_OLYMPIAD_DATA_ROOT"] = str(ours.data_root.resolve())
+    if ours.bedrock_model:
+        os.environ["AO_CC_BEDROCK_MODEL"] = ours.bedrock_model
+    if ours.aws_region:
+        os.environ["AO_CC_AWS_REGION"] = ours.aws_region
     if ours.max_inner_turns:
         os.environ["AO_CC_MAX_INNER_TURNS"] = str(ours.max_inner_turns)
     if ours.session_mode:
@@ -100,7 +108,8 @@ def main(argv=None) -> int:
     sys.argv = ["run_pipeline.py", *rest, "--provider", "anthropic", "--system-variant", variant,
                 *([] if out_arg else ["--output", str(out)])]
     print(f"Claude Code setting={ours.setting} variant={variant} team_size="
-          f"{1 if variant == 'single_agent' else ours.team_size} data={ours.data_root} rules={overlay}", flush=True)
+          f"{1 if variant == 'single_agent' else ours.team_size} data={ours.data_root} rules={overlay} "
+          f"backend={'bedrock:' + ours.bedrock_model if ours.bedrock_model else 'first_party'}", flush=True)
     return pipeline.main()
 
 

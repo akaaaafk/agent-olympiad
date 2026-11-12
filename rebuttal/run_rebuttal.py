@@ -48,9 +48,18 @@ def main(argv=None) -> dict:
     p.add_argument("--session-mode", default="per_call", choices=("per_call", "per_seat"),
                    help="otc only: fresh Claude Code conversation per engine call, or one per seat")
     p.add_argument("--output", type=Path, default=None)
+    p.add_argument("--bedrock-model", default=None,
+                   help="run Claude Code on AWS Bedrock with this model id / inference profile ARN "
+                        "(sets AO_CC_BEDROCK_MODEL; AWS credentials from the normal AWS chain)")
+    p.add_argument("--aws-region", default=None, help="Bedrock region (default us-east-1)")
     p.add_argument("--workspace-root", type=Path, default=None,
                    help="where agent workspaces live (default: a temp dir outside the repo)")
     args = p.parse_args(argv)
+    import os
+    if args.bedrock_model:
+        os.environ["AO_CC_BEDROCK_MODEL"] = args.bedrock_model
+    if args.aws_region:
+        os.environ["AO_CC_AWS_REGION"] = args.aws_region
 
     stamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
     manifest = policy.load_manifest(args.manifest)

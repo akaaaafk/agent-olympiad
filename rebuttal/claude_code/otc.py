@@ -273,7 +273,9 @@ def install(seats: ClaudeCodeSeats):
 def write_harness_summary(seats: ClaudeCodeSeats, output: Path, **extra) -> dict[str, Any]:
     summary = seats.summary()
     calls = summary.pop("calls")
-    harness = {"backend": "claude_code", "model": seats.model, "max_inner_turns": seats.max_inner_turns,
+    from .cc_client import backend_label, bedrock_model
+    harness = {"backend": "claude_code", "model": seats.model, "model_backend": backend_label(),
+               "bedrock_model": bedrock_model(), "max_inner_turns": seats.max_inner_turns,
                "note": f"engine provider label '{ROUTE_PROVIDER}' is only the route; every model call "
                        "(contestants, Coach, judges) went to a Claude Code instance", **extra, **summary}
     output.mkdir(parents=True, exist_ok=True)

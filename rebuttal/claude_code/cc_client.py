@@ -72,6 +72,21 @@ _SCRUBBED_ENV = (
 )
 
 # runner(cmd, cwd, env, timeout_s, stdin_text) -> parsed JSON result of ``claude -p``
+# Optional AWS Bedrock backend (Claude Code's native Bedrock support). Set
+# AO_CC_BEDROCK_MODEL to a Bedrock model id or (application) inference profile
+# ARN; credentials come from the normal AWS chain (env, ~/.aws, SSO...).
+BEDROCK_MODEL_ENV = "AO_CC_BEDROCK_MODEL"
+BEDROCK_REGION_ENV = "AO_CC_AWS_REGION"
+
+
+def bedrock_model() -> str | None:
+    return (os.environ.get(BEDROCK_MODEL_ENV) or "").strip() or None
+
+
+def backend_label() -> str:
+    return "bedrock" if bedrock_model() else "first_party"
+
+
 # The engine insists on a judge API key for its provider route; the Claude Code
 # route sets this placeholder, which must never reach the real CLI.
 KEY_PLACEHOLDER = "claude-code-route-no-key"
@@ -103,6 +118,7 @@ class CCResult:
             "cc_inner_turns": self.num_turns,
             "cc_cost_usd": self.cost_usd,
             "cc_session_id": self.session_id,
+            "cc_backend": backend_label(),
             "cc_permission_denials": len(self.permission_denials),
             "tokens_basis": "provider_reported",
         }
@@ -186,7 +202,7 @@ class ClaudeCodeAgent:
         allow, deny = self._permission_rules()
         cmd = [
             *CLAUDE_CMD, "-p",
-            "--model", self.model,
+            "--model", bedrock_model() or self.model,
             "--output-format", "json",
             "--max-turns", str(self.max_inner_turns),
             "--permission-mode", "dontAsk",
@@ -216,6 +232,13 @@ class ClaudeCodeAgent:
         env = {k: v for k, v in os.environ.items() if k not in _SCRUBBED_ENV}
         if env.get("ANTHROPIC_API_KEY") == KEY_PLACEHOLDER:
             env.pop("ANTHROPIC_API_KEY")
+        arn = bedrock_model()
+        if arn:
+            env["CLAUDE_CODE_USE_BEDROCK"] = "1"
+            env["AWS_REGION"] = os.environ.get(BEDROCK_REGION_ENV) or env.get("AWS_REGION") or "us-east-1"
+            for name in ("ANTHROPIC_MODEL", "ANTHROPIC_SMALL_FAST_MODEL", "ANTHROPIC_DEFAULT_HAIKU_MODEL"):
+                env[name] = arn
+            env.pop("ANTHROPIC_API_KEY", None)
         env["CLAUDE_CODE_DISABLE_AUTO_MEMORY"] = "1"
         env["DISABLE_AUTOUPDATER"] = "1"
         if self.max_output_tokens:

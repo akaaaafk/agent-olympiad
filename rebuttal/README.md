@@ -136,3 +136,17 @@ dry-run the mini pipeline without model calls. They check that the
 command is restricted (no web or subagents, dontAsk, path denies) and that all
 three settings run end to end, including the real OTC engine with three
 Claude Code seats.
+
+## AWS Bedrock backend
+
+All entry points accept `--bedrock-model <model id or inference-profile ARN>` (and
+`--aws-region`, default `us-east-1`). Child jobs read it from `AO_CC_BEDROCK_MODEL` /
+`AO_CC_AWS_REGION`. Claude Code then runs with its native Bedrock support
+(`CLAUDE_CODE_USE_BEDROCK=1`, `ANTHROPIC_MODEL` and the small/fast model set to
+that id). AWS credentials come from the normal AWS chain (env, `~/.aws`, SSO).
+Every call records `cc_backend` (`bedrock` / `first_party`), and
+`claude_code_harness.json` records `model_backend`.
+
+The engine's `--model` label (for example `claude-haiku-4-5`) is unchanged, so
+a resumed output root would mix backends silently. Use a fresh `--output` when
+you switch backends.

@@ -127,3 +127,16 @@ def test_judge_requests_use_judge_instance():
     assert ClaudeCodeSeats.seat_of(LLMRequest("s", "x", purpose="collaboration_planning_score")) == "Judge"
     assert ClaudeCodeSeats.seat_of(LLMRequest("s", "x", purpose="evaluation")) == "Judge"
     assert ClaudeCodeSeats.seat_of(LLMRequest("coach brief", "x", purpose="coach")) == "Coach"
+
+
+def test_bedrock_switch(tmp_path, monkeypatch):
+    arn = "arn:aws:bedrock:us-east-1:000000000000:application-inference-profile/test"
+    monkeypatch.setenv("AO_CC_BEDROCK_MODEL", arn)
+    agent = ClaudeCodeAgent(name="A", workspace=tmp_path / "ws", runner=FakeRunner())
+    cmd = agent.build_command("hi", append_system_prompt=None, json_schema=None, resume=False)
+    assert cmd[cmd.index("--model") + 1] == arn
+    env = agent._env()
+    assert env["CLAUDE_CODE_USE_BEDROCK"] == "1" and env["AWS_REGION"] == "us-east-1"
+    assert env["ANTHROPIC_MODEL"] == arn and "ANTHROPIC_API_KEY" not in env
+    agent.run("hi")
+    assert agent.calls[-1]["cc_backend"] == "bedrock"
