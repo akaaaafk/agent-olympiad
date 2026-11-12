@@ -37,6 +37,8 @@ from llm import (  # noqa: E402  (policy puts src/ on sys.path)
 )
 
 PROVIDER_LABEL = "claude_code"
+ROUTE_PROVIDER = "anthropic"  # engine provider name whose calls are routed to Claude Code
+JUDGE_PURPOSES = {"evaluation", "grading", "judge"}
 _AGENT_RE = re.compile(r"\bYou are (Agent_\d+|Group_Leader)\b")
 
 SEAT_NOTE = (
@@ -103,7 +105,8 @@ class ClaudeCodeSeats:
 
     def agent(self, seat: str) -> ClaudeCodeAgent:
         if seat not in self.agents:
-            tools = () if seat == "Coach" else self.seat_tools
+            # Coach: blind brief, no tools. Judge: may only Read staged attachments.
+            tools = () if seat == "Coach" else ("Read",) if seat == "Judge" else self.seat_tools
             self.agents[seat] = ClaudeCodeAgent(
                 name=seat, workspace=self.workspace_root / seat, model=self.model, tools=tools,
                 denied_paths=policy.denied_paths(), max_inner_turns=self.max_inner_turns,
@@ -113,7 +116,14 @@ class ClaudeCodeSeats:
         return self.agents[seat]
 
     @staticmethod
+    def is_judge(request: LLMRequest) -> bool:
+        purpose = request.purpose or ""
+        return purpose in JUDGE_PURPOSES or purpose.startswith(("collaboration_", "cce_"))
+
+    @staticmethod
     def seat_of(request: LLMRequest) -> str:
+        if ClaudeCodeSeats.is_judge(request):
+            return "Judge"
         agent = (request.metadata or {}).get("agent")
         if agent:
             return str(agent)
@@ -133,15 +143,16 @@ class ClaudeCodeSeats:
         return "\n\nATTACHED FILES (read them with your Read tool):\n" + "\n".join(names)
 
     def _new_session(self, agent: ClaudeCodeAgent) -> bool:
-        return self.session_mode == "per_call" or agent.session_id is None
+        return self.session_mode == "per_call" or agent.name == "Judge" or agent.session_id is None
 
     # -- RequestFn for typed actions ------------------------------------------
     def request(self, request: LLMRequest) -> LLMResponse:
         seat = self.seat_of(request)
         agent = self.agent(seat)
         prompt = request.user_prompt + self._stage_attachments(agent, request)
+        note = "" if seat == "Judge" else SEAT_NOTE
         if not request.tools:
-            res = agent.run(prompt, append_system_prompt=(request.system_prompt or "") + SEAT_NOTE,
+            res = agent.run(prompt, append_system_prompt=(request.system_prompt or "") + note,
                             new_session=self._new_session(agent), purpose=request.purpose)
             usage = res.usage_row()
             if res.is_error:
@@ -149,7 +160,7 @@ class ClaudeCodeSeats:
             return LLMResponse(res.text, PROVIDER_LABEL, self.model, usage=usage)
 
         schema = _action_schema(request.tools)
-        system = (request.system_prompt or "") + SEAT_NOTE
+        system = (request.system_prompt or "") + note
         rows, rejected = [], []
         res = agent.run(prompt + _tool_contract(request.tools), append_system_prompt=system,
                         json_schema=schema, new_session=self._new_session(agent), purpose=request.purpose)
@@ -213,24 +224,85 @@ class ClaudeCodeSeats:
                 "calls": [c for a in self.agents.values() for c in a.calls]}
 
 
-def run_otc(manifest_path: Path, *, output: Path, workspace_root: Path, model: str, team_size: int,
-            variant: str = "otc", max_inner_turns: int = 8, max_output_tokens: int | None = None,
-            max_turns: int | None = None, session_mode: str = "per_call", extra_args: list[str] | None = None,
-            runner=None) -> dict[str, Any]:
-    """Run the unchanged OTC engine with Claude Code seats; returns contest_session.json."""
+def install(seats: ClaudeCodeSeats):
+    """Route every ``anthropic`` model call of the engine/pipelines to Claude Code.
+
+    Returns a function that undoes the patch. Providers other than
+    ``anthropic`` are left alone.
+    """
+    import os
+    import llm
+    import run_competition_batch as rcb
+    from .cc_client import KEY_PLACEHOLDER
+    # Satisfy the engine's "judge key present" preflight; cc_client strips it again.
+    os.environ.setdefault("ANTHROPIC_API_KEY", KEY_PLACEHOLDER)
+    patched = []
+
+    def wrap_resolve(original):
+        def resolve(provider="perplexity", model=None, **kw):
+            if str(provider).lower().strip() == ROUTE_PROVIDER:
+                return seats.request
+            return original(provider=provider, model=model, **kw)
+        return resolve
+
+    def wrap_live_query(original):
+        def make(provider, model_, **kw):
+            if str(provider).lower().strip() == ROUTE_PROVIDER:
+                return seats.query_fn()
+            return original(provider, model_, **kw)
+        return make
+
+    targets = [(llm, "resolve_request_fn", wrap_resolve), (rcb, "resolve_request_fn", wrap_resolve),
+               (rcb, "_make_live_query", wrap_live_query)]
+    try:
+        import run_otc_artifact
+        targets.append((run_otc_artifact, "resolve_request_fn", wrap_resolve))
+    except Exception:  # artifact runner unavailable: native routes still work
+        pass
+    for module, name, wrapper in targets:
+        original = getattr(module, name)
+        patched.append((module, name, original))
+        setattr(module, name, wrapper(original))
+
+    def restore():
+        for module, name, original in reversed(patched):
+            setattr(module, name, original)
+    return restore
+
+
+def write_harness_summary(seats: ClaudeCodeSeats, output: Path, **extra) -> dict[str, Any]:
+    summary = seats.summary()
+    calls = summary.pop("calls")
+    harness = {"backend": "claude_code", "model": seats.model, "max_inner_turns": seats.max_inner_turns,
+               "note": f"engine provider label '{ROUTE_PROVIDER}' is only the route; every model call "
+                       "(contestants, Coach, judges) went to a Claude Code instance", **extra, **summary}
+    output.mkdir(parents=True, exist_ok=True)
+    (output / "claude_code_harness.json").write_text(json.dumps(harness, ensure_ascii=False, indent=2),
+                                                     encoding="utf-8")
+    (output / "claude_code_calls.json").write_text(json.dumps(calls, ensure_ascii=False, indent=2),
+                                                   encoding="utf-8")
+    return harness
+
+
+def run_engine(manifest_path: Path, *, output: Path, workspace_root: Path, model: str, team_size: int,
+               variant: str = "otc", max_inner_turns: int = 8, max_output_tokens: int | None = None,
+               max_turns: int | None = None, session_mode: str = "per_call", extra_args: list[str] | None = None,
+               runner=None) -> dict[str, Any]:
+    """Run one contest-engine preset with Claude Code seats; returns contest_session.json + harness.
+
+    ``variant`` is any engine preset: ``single_agent`` (team size forced to 1),
+    ``decentralized``, ``otc``, ``vallina_otc``...
+    """
     import run_competition_batch as rcb
 
     manifest = policy.load_manifest(manifest_path)
     output.mkdir(parents=True, exist_ok=True)
-    rules_root = policy.team_rules_overlay(manifest.competition_id, team_size, output)
+    size = 1 if variant == "single_agent" else team_size
+    rules_root = policy.team_rules_overlay(manifest.competition_id, max(size, 2), output)
     seats = ClaudeCodeSeats(competition_id=manifest.competition_id, workspace_root=workspace_root, model=model,
                             max_inner_turns=max_inner_turns, max_output_tokens=max_output_tokens,
                             session_mode=session_mode, rules_root=rules_root, runner=runner)
-
-    orig = (rcb._make_live_query, rcb.resolve_request_fn)
-    rcb._make_live_query = lambda provider, model_, **kw: seats.query_fn()
-    rcb.resolve_request_fn = lambda provider="anthropic", model=None, **kw: seats.request
-    argv = ["run_competition_batch.py", "--live", "--provider", "anthropic", "--model", model,
+    argv = ["run_competition_batch.py", "--live", "--provider", ROUTE_PROVIDER, "--model", model,
             "--contest-manifest", str(manifest_path), "--system-variant", variant,
             "--rules-root", str(rules_root), "--output", str(output / "engine"),
             "--no-judge-task", "--no-judge-collab", "--action-calling", "native"]
@@ -239,22 +311,19 @@ def run_otc(manifest_path: Path, *, output: Path, workspace_root: Path, model: s
     if max_output_tokens is not None:
         argv += ["--max-output-tokens", str(max_output_tokens)]
     argv += list(extra_args or [])
+    restore = install(seats)
     old_argv = sys.argv
     try:
         sys.argv = argv
         rcb.main()
     finally:
         sys.argv = old_argv
-        rcb._make_live_query, rcb.resolve_request_fn = orig
-
-    session_path = output / "engine" / "contest_session.json"
-    result = json.loads(session_path.read_text(encoding="utf-8"))
-    harness = {"backend": "claude_code", "model": model, "team_size": team_size,
-               "rules_overlay": str(rules_root), "max_inner_turns": max_inner_turns,
-               "note": "provider label 'anthropic' in run/run_identity is the engine route; "
-                       "every call actually went to a Claude Code instance", **seats.summary()}
-    result["run"]["harness"] = {k: v for k, v in harness.items() if k != "calls"}
-    session_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
-    (output / "claude_code_calls.json").write_text(json.dumps(harness["calls"], ensure_ascii=False, indent=2),
-                                                   encoding="utf-8")
+        restore()
+    result = json.loads((output / "engine" / "contest_session.json").read_text(encoding="utf-8"))
+    result["harness"] = write_harness_summary(seats, output, team_size=size, variant=variant,
+                                              rules_overlay=str(rules_root))
     return result
+
+
+def run_otc(manifest_path: Path, **kw) -> dict[str, Any]:
+    return run_engine(manifest_path, **kw)

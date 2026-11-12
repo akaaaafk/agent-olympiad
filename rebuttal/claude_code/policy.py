@@ -102,26 +102,30 @@ def answers_schema(task_ids: list[str], *, with_message: bool) -> dict[str, Any]
     return {"type": "object", "properties": props, "required": required, "additionalProperties": False}
 
 
-def team_rules_overlay(competition_id: str, team_size: int, out_dir: Path,
+def team_rules_overlay(competition_id: str | None, team_size: int, out_dir: Path,
                        rules_root: Path | None = None) -> Path:
     """Copy the rules tree with the active roster pinned to ``team_size``.
 
     Used so the OTC engine and the multi setting run with the same number of
-    Claude Code instances. The original rules are left untouched; the overlay
+    Claude Code instances. ``competition_id=None`` pins every competition. The original rules are left untouched; the overlay
     path and the size are recorded in the run outputs.
     """
     src_root = Path(rules_root) if rules_root else data_root() / "rules"
+    if not src_root.is_dir():  # mini_data may keep rules at the canonical data/rules path
+        src_root = REPO_ROOT / "data" / "rules"
     dst_root = out_dir / "rules_overlay"
     if dst_root.exists():
         shutil.rmtree(dst_root)
     shutil.copytree(src_root, dst_root)
-    path = dst_root / competition_id / "competition.json"
-    raw = json.loads(path.read_text(encoding="utf-8-sig"))
-    team = raw.setdefault("team", {})
-    team.update(active_min=team_size, active_default=team_size, active_max=team_size,
-                roster_max=max(team_size, int(team.get("roster_max") or 0)),
-                rebuttal_override=f"active roster pinned to {team_size} Claude Code instances")
-    path.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding="utf-8")
+    paths = ([dst_root / competition_id / "competition.json"] if competition_id
+             else sorted(dst_root.glob("*/competition.json")))
+    for path in paths:
+        raw = json.loads(path.read_text(encoding="utf-8-sig"))
+        team = raw.setdefault("team", {})
+        team.update(active_min=team_size, active_default=team_size, active_max=team_size,
+                    roster_max=max(team_size, int(team.get("roster_max") or 0)),
+                    rebuttal_override=f"active roster pinned to {team_size} Claude Code instances")
+        path.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding="utf-8")
     return dst_root
 
 

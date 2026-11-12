@@ -33,9 +33,11 @@ class FakeRunner:
 
     def __init__(self):
         self.commands = []
+        self.prompts = []
 
-    def __call__(self, cmd, cwd, env, timeout):
+    def __call__(self, cmd, cwd, env, timeout, stdin_text):
         self.commands.append(cmd)
+        self.prompts.append(stdin_text)
         schema = json.loads(cmd[cmd.index("--json-schema") + 1]) if "--json-schema" in cmd else None
         base = {"session_id": "fake-session-0001", "usage": {"input_tokens": 10, "output_tokens": 5},
                 "total_cost_usd": 0.001, "num_turns": 1, "is_error": False}
@@ -99,8 +101,29 @@ def test_otc_engine_uses_claude_code_seats(tmp_path):
     runner = FakeRunner()
     session = run_otc(MANIFEST, output=tmp_path / "out", workspace_root=tmp_path / "ws", model="fake",
                       team_size=3, max_turns=10, runner=runner)
-    harness = session["run"]["harness"]
+    harness = session["harness"]
     assert harness["backend"] == "claude_code"
     assert set(harness["seats"]) <= {"Coach", "Agent_1", "Agent_2", "Agent_3"}
     assert {"Agent_1", "Agent_2", "Agent_3"} <= set(harness["seats"])
     assert len(runner.commands) == harness["total"]["api_calls"]
+
+
+@needs_data
+def test_engine_presets_single_and_multi(tmp_path):
+    from claude_code.otc import run_engine
+    single = run_engine(MANIFEST, output=tmp_path / "s", workspace_root=tmp_path / "ws_s", model="fake",
+                        team_size=3, variant="single_agent", max_turns=10, runner=FakeRunner())
+    assert single["harness"]["team_size"] == 1 and set(single["harness"]["seats"]) == {"Agent_1"}
+    multi = run_engine(MANIFEST, output=tmp_path / "m", workspace_root=tmp_path / "ws_m", model="fake",
+                       team_size=3, variant="decentralized", max_turns=10, runner=FakeRunner())
+    assert set(multi["harness"]["seats"]) == {"Agent_1", "Agent_2", "Agent_3"}
+    assert (tmp_path / "m" / "claude_code_harness.json").is_file()
+
+
+def test_judge_requests_use_judge_instance():
+    from claude_code.otc import ClaudeCodeSeats
+    from llm import LLMRequest
+    assert ClaudeCodeSeats.seat_of(LLMRequest("You are Agent_2, one contestant", "x")) == "Agent_2"
+    assert ClaudeCodeSeats.seat_of(LLMRequest("s", "x", purpose="collaboration_planning_score")) == "Judge"
+    assert ClaudeCodeSeats.seat_of(LLMRequest("s", "x", purpose="evaluation")) == "Judge"
+    assert ClaudeCodeSeats.seat_of(LLMRequest("coach brief", "x", purpose="coach")) == "Coach"

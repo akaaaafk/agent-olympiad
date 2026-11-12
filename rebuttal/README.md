@@ -21,7 +21,7 @@ seat's own Claude Code instance.
 | per invocation | Claude Code `--max-turns` = `--max-inner-turns` (default 8) |
 | grading | `contest_adapters.grade_contest_result` (same deterministic grader as the engine) |
 
-## The three settings
+## The three settings (standalone loops for single/multi, see below for the engine presets)
 
 1. **single** (`claude_code/single.py`): one persistent Claude Code session
    gets the whole packet. One `claude -p` invocation per round, resuming the
@@ -46,14 +46,66 @@ seat's own Claude Code instance.
    tree (`<output>/rules_overlay`). The original rules are untouched, and ARML
    Local's official roster is 6.
 
-## Run
+## Two implementations of single / multi
+
+`run_rebuttal.py --impl engine` is the default, and it is the only one the
+mini pipeline uses. It runs single and multi as contest-engine presets, with
+every call going to Claude Code:
+
+| setting | engine preset | seats |
+|---|---|---|
+| single | `single_agent` | 1 |
+| multi | `decentralized` (open table: no Coach, rule card, review or memory) | `--team-size` (3) |
+| otc | `otc` / `vallina_otc` | `--team-size` (3) |
+
+So the three settings share the task executor, which covers answer sheets,
+ICPC/Kattis, CTF and PDF artifacts, as well as the grader and budgets. Only the
+team protocol differs. `--impl standalone` keeps the earlier Claude Code
+loops (`single.py` / `multi.py`), which handle answer-sheet contests only.
+
+## Full mini catalog
+
+```bash
+python rebuttal/run_mini_cc.py all --setting single --model claude-haiku-4-5 --output results/mini_cc_single
+python rebuttal/run_mini_cc.py all --setting multi  --model claude-haiku-4-5 --output results/mini_cc_multi
+python rebuttal/run_mini_cc.py all --setting otc    --model claude-haiku-4-5 --output results/mini_cc_otc
+```
+
+This is `scripts/run_mini_dataset.py` (that is, `run_pipeline.py` on
+`data/mini_data`) with three changes:
+
+- each child job runs through `rebuttal/cc_child.py`;
+- `--setting` picks the preset;
+- every competition's roster is pinned to `--team-size` through
+  `<output>/rules_overlay`.
+
+Everything else is the pipeline's own code: registration, Docker and
+VJudge/Kattis checks for ICPC, the CTF image check, artifact routes, resume
+(rerun the same command) and `report`. Pipeline filters such as
+`--competitions`, `--years`, `--sessions` and `--limit` pass through.
+
+Judges (task rubric, collaboration, CCE) also go to Claude Code. They use a
+`Judge` instance with the same model, a fresh session per call, and only
+`Read` access to the attachments staged in its own folder. This follows the
+repo rule that solver and judges use the same provider. `--provider anthropic`
+is only the internal route. The adapter sets a placeholder `ANTHROPIC_API_KEY`
+for the engine's preflight and strips it before invoking `claude`, so the CLI
+keeps using your normal login.
+
+Environment knobs for child jobs: `AO_CC_MAX_INNER_TURNS` (default 8),
+`AO_CC_SESSION_MODE` (`per_call` / `per_seat`), `AO_CC_WORKSPACE_ROOT`.
+Each job writes `claude_code_harness.json` (seats, per-seat usage, cost) and
+`claude_code_calls.json` next to its contest output.
+
+## Run one manifest
 
 ```bash
 export AGENT_OLYMPIAD_DATA_ROOT=/path/to/data      # needs benchmarks/, contest_manifests/, rules/
 M=$AGENT_OLYMPIAD_DATA_ROOT/contest_manifests/arml_local_2009.json
-python rebuttal/run_rebuttal.py --setting single --manifest $M
-python rebuttal/run_rebuttal.py --setting multi  --manifest $M --team-size 3
+python rebuttal/run_rebuttal.py --setting single --manifest $M                 # engine single_agent
+python rebuttal/run_rebuttal.py --setting multi  --manifest $M --team-size 3   # engine decentralized
 python rebuttal/run_rebuttal.py --setting otc    --manifest $M --team-size 3
+python rebuttal/run_rebuttal.py --setting single --manifest $M --impl standalone
 ```
 
 This needs the `claude` CLI on PATH and logged in (or `CLAUDE_CODE_BIN`).
@@ -78,7 +130,9 @@ the internal route the adapter hooks into. `run.harness.backend` is
 AGENT_OLYMPIAD_DATA_ROOT=/path/to/data python -m pytest rebuttal/tests -q
 ```
 
-These tests run offline with a fake Claude Code runner. They check that the
+These tests run offline with a fake Claude Code runner. `rebuttal/tests/fake_claude.py`
+can stand in for the CLI (`CLAUDE_CODE_BIN=rebuttal/tests/fake_claude.py`) to
+dry-run the mini pipeline without model calls. They check that the
 command is restricted (no web or subagents, dontAsk, path denies) and that all
 three settings run end to end, including the real OTC engine with three
 Claude Code seats.

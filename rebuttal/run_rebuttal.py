@@ -42,6 +42,9 @@ def main(argv=None) -> dict:
                    help="Claude Code --max-turns per invocation (same for every setting)")
     p.add_argument("--max-output-tokens", type=int, default=None)
     p.add_argument("--otc-variant", default="otc", help="otc or vallina_otc")
+    p.add_argument("--impl", default="engine", choices=("engine", "standalone"),
+                   help="single/multi: engine presets (single_agent / decentralized) with Claude Code seats, "
+                        "or the standalone Claude Code harness loops")
     p.add_argument("--session-mode", default="per_call", choices=("per_call", "per_seat"),
                    help="otc only: fresh Claude Code conversation per engine call, or one per seat")
     p.add_argument("--output", type=Path, default=None)
@@ -59,20 +62,21 @@ def main(argv=None) -> dict:
     common = dict(model=args.model, max_inner_turns=args.max_inner_turns, max_output_tokens=args.max_output_tokens)
     started = datetime.now(timezone.utc)
 
-    if args.setting == "single":
+    if args.setting == "single" and args.impl == "standalone":
         from claude_code.single import run_single
         result = run_single(manifest, workspace_root=ws, rounds=rounds, **common)
-    elif args.setting == "multi":
+    elif args.setting == "multi" and args.impl == "standalone":
         from claude_code.multi import run_multi
         result = run_multi(manifest, workspace_root=ws, rounds=rounds, team_size=args.team_size, **common)
     else:
-        from claude_code.otc import run_otc
-        session = run_otc(args.manifest, output=out, workspace_root=ws, team_size=args.team_size,
-                          variant=args.otc_variant, max_turns=rounds, session_mode=args.session_mode, **common)
-        result = {"setting": "otc", "team_size": args.team_size, "variant": session["system_variant"],
-                  "submissions": session["submissions"], "budget": session["budget"],
-                  "usage": session["run"]["harness"]["total"], "harness": session["run"]["harness"],
-                  "engine_output": str(out / "engine")}
+        from claude_code.otc import run_engine
+        variant = {"single": "single_agent", "multi": "decentralized"}.get(args.setting, args.otc_variant)
+        session = run_engine(args.manifest, output=out, workspace_root=ws, team_size=args.team_size,
+                             variant=variant, max_turns=rounds, session_mode=args.session_mode, **common)
+        result = {"setting": args.setting, "impl": "engine", "team_size": session["harness"]["team_size"],
+                  "variant": session["system_variant"], "submissions": session["submissions"],
+                  "budget": session["budget"], "usage": session["harness"]["total"],
+                  "harness": session["harness"], "engine_output": str(out / "engine")}
 
     result["grade"] = policy.grade(manifest, result["submissions"])
     result.update(session_id=manifest.session_id, competition_id=manifest.competition_id, model=args.model,

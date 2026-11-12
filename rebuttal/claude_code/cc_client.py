@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import json
 import os
+import shutil
 import subprocess
 import uuid
 from dataclasses import dataclass, field
@@ -27,7 +28,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 DEFAULT_MODEL = "claude-haiku-4-5"
-CLAUDE_BIN = os.environ.get("CLAUDE_CODE_BIN", "claude")
+CLAUDE_BIN = os.environ.get("CLAUDE_CODE_BIN") or shutil.which("claude") or "claude"
 
 # Never available, whatever the competition allows.
 ALWAYS_DENIED = (
@@ -46,7 +47,12 @@ _SCRUBBED_ENV = (
     "CLAUDE_CODE_REMOTE_SESSION_ID",
 )
 
-Runner = Callable[[list[str], Path, dict[str, str], float], dict[str, Any]]
+# runner(cmd, cwd, env, timeout_s, stdin_text) -> parsed JSON result of ``claude -p``
+# The engine insists on a judge API key for its provider route; the Claude Code
+# route sets this placeholder, which must never reach the real CLI.
+KEY_PLACEHOLDER = "claude-code-route-no-key"
+
+Runner = Callable[[list[str], Path, dict[str, str], float, str], dict[str, Any]]
 
 
 @dataclass
@@ -78,8 +84,12 @@ class CCResult:
         }
 
 
-def _subprocess_runner(cmd: list[str], cwd: Path, env: dict[str, str], timeout: float) -> dict[str, Any]:
-    proc = subprocess.run(cmd, cwd=str(cwd), env=env, capture_output=True, text=True, timeout=timeout)
+def _subprocess_runner(cmd: list[str], cwd: Path, env: dict[str, str], timeout: float,
+                       stdin_text: str) -> dict[str, Any]:
+    # The prompt goes through stdin and the system prompt through a file, so
+    # long contest prompts never hit the Windows command-line length limit.
+    proc = subprocess.run(cmd, cwd=str(cwd), env=env, input=stdin_text, capture_output=True, text=True,
+                          encoding="utf-8", errors="replace", timeout=timeout)
     out = proc.stdout.strip()
     try:
         return json.loads(out.splitlines()[-1] if out else "{}")
@@ -127,11 +137,20 @@ class ClaudeCodeAgent:
             deny += [f"Read(/{path}/**)", f"Edit(/{path}/**)", f"Write(/{path}/**)"]
         return allow, deny
 
+    def _prompt_file(self, text: str) -> Path:
+        # Outside the workspace so the file never shows up in the agent's own scratch dir.
+        folder = self.workspace.parent / "_system_prompts"
+        folder.mkdir(parents=True, exist_ok=True)
+        path = folder / f"{self.name}.txt"
+        path.write_text(text, encoding="utf-8")
+        return path
+
     def build_command(self, prompt: str, *, append_system_prompt: str | None,
                       json_schema: dict[str, Any] | None, resume: bool) -> list[str]:
+        """Command line for one invocation; the prompt itself is sent on stdin."""
         allow, deny = self._permission_rules()
         cmd = [
-            CLAUDE_BIN, "-p", prompt,
+            CLAUDE_BIN, "-p",
             "--model", self.model,
             "--output-format", "json",
             "--max-turns", str(self.max_inner_turns),
@@ -146,7 +165,7 @@ class ClaudeCodeAgent:
         for shared in self.shared_dirs:
             cmd += ["--add-dir", str(Path(shared).resolve())]
         if append_system_prompt:
-            cmd += ["--append-system-prompt", append_system_prompt]
+            cmd += ["--append-system-prompt-file", str(self._prompt_file(append_system_prompt))]
         if json_schema is not None:
             cmd += ["--json-schema", json.dumps(json_schema, ensure_ascii=False)]
         if resume and self.session_id:
@@ -160,6 +179,8 @@ class ClaudeCodeAgent:
 
     def _env(self) -> dict[str, str]:
         env = {k: v for k, v in os.environ.items() if k not in _SCRUBBED_ENV}
+        if env.get("ANTHROPIC_API_KEY") == KEY_PLACEHOLDER:
+            env.pop("ANTHROPIC_API_KEY")
         env["CLAUDE_CODE_DISABLE_AUTO_MEMORY"] = "1"
         env["DISABLE_AUTOUPDATER"] = "1"
         if self.max_output_tokens:
@@ -175,7 +196,7 @@ class ClaudeCodeAgent:
                                  json_schema=json_schema, resume=resume)
         runner = self.runner or _subprocess_runner
         try:
-            data = runner(cmd, self.workspace, self._env(), self.timeout_s)
+            data = runner(cmd, self.workspace, self._env(), self.timeout_s, prompt)
         except subprocess.TimeoutExpired:
             data = {"is_error": True, "result": "Claude Code invocation timed out", "subtype": "timeout"}
         result = CCResult(
