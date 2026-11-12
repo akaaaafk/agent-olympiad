@@ -23,6 +23,7 @@ import os
 import shutil
 import subprocess
 import sys
+import time
 import uuid
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -51,6 +52,7 @@ def _claude_command(binary: str) -> list[str]:
 
 
 CLAUDE_CMD = _claude_command(CLAUDE_BIN)
+LAUNCH_RETRIES = 8  # about 70 s of backoff in total
 
 # Never available, whatever the competition allows.
 ALWAYS_DENIED = (
@@ -110,8 +112,19 @@ def _subprocess_runner(cmd: list[str], cwd: Path, env: dict[str, str], timeout: 
                        stdin_text: str) -> dict[str, Any]:
     # The prompt goes through stdin and the system prompt through a file, so
     # long contest prompts never hit the Windows command-line length limit.
-    proc = subprocess.run(cmd, cwd=str(cwd), env=env, input=stdin_text, capture_output=True, text=True,
-                          encoding="utf-8", errors="replace", timeout=timeout)
+    # A launch that fails with OSError never reached the model, so it is safe
+    # to retry. This covers the CLI binary being replaced by an update or
+    # reinstall (missing file, or a half-written exe: WinError 216) for a few
+    # seconds while a long batch is running.
+    for attempt in range(LAUNCH_RETRIES + 1):
+        try:
+            proc = subprocess.run(cmd, cwd=str(cwd), env=env, input=stdin_text, capture_output=True,
+                                  text=True, encoding="utf-8", errors="replace", timeout=timeout)
+            break
+        except OSError:
+            if attempt == LAUNCH_RETRIES:
+                raise
+            time.sleep(min(2 ** attempt, 15))
     out = proc.stdout.strip()
     try:
         return json.loads(out.splitlines()[-1] if out else "{}")
