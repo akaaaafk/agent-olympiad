@@ -28,7 +28,7 @@ seat's own Claude Code instance.
    same session. It returns its answer sheet as structured output each round
    and may stop early with `done`.
 2. **multi** (`claude_code/multi.py`): N persistent Claude Code instances
-   (`--team-size`, default 3 = the OTC roster), round-robin each round. They
+   (`--team-size`, default `official` = the competition's own roster, the same one OTC uses), round-robin each round. They
    share a team message board, one shared answer sheet (last write wins), and
    a shared `team/` directory. There is no Coach, rule card, review gate,
    memory module, DM or leader. The shared sheet is submitted.
@@ -55,8 +55,8 @@ every call going to Claude Code:
 | setting | engine preset | seats |
 |---|---|---|
 | single | `single_agent` | 1 |
-| multi | `decentralized` (open table: no Coach, rule card, review or memory) | `--team-size` (3) |
-| otc | `otc` / `vallina_otc` | `--team-size` (3) |
+| multi | `decentralized` (open table: no Coach, rule card, review or memory) | competition roster (= OTC) |
+| otc | `otc` / `vallina_otc` | competition roster |
 
 So the three settings share the task executor, which covers answer sheets,
 ICPC/Kattis, CTF and PDF artifacts, as well as the grader and budgets. Only the

@@ -47,6 +47,14 @@ def claude_code_tools(competition_id: str, rules_root: Path | None = None) -> tu
     return FILE_TOOLS + (("Bash",) if allowed & BASH_TOOLS else ())
 
 
+def official_team_size(competition_id: str, rules_root: Path | None = None) -> int:
+    """The competition's own active roster (team.active_default), the one OTC uses."""
+    size = (competition_json(competition_id, rules_root).get("team") or {}).get("active_default")
+    if type(size) is not int or size < 1:
+        raise ValueError(f"{competition_id}: competition.json has no integer team.active_default")
+    return size
+
+
 def public_rules_text(competition_id: str, rules_root: Path | None = None) -> str:
     raw = competition_json(competition_id, rules_root)
     if not raw:

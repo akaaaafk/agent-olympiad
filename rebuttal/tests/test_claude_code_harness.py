@@ -140,3 +140,13 @@ def test_bedrock_switch(tmp_path, monkeypatch):
     assert env["ANTHROPIC_MODEL"] == arn and "ANTHROPIC_API_KEY" not in env
     agent.run("hi")
     assert agent.calls[-1]["cc_backend"] == "bedrock"
+
+
+@needs_data
+def test_official_roster_matches_otc(tmp_path):
+    from claude_code.otc import run_engine
+    n = policy.official_team_size("arml_local")
+    multi = run_engine(MANIFEST, output=tmp_path / "m", workspace_root=tmp_path / "ws", model="fake",
+                       team_size=None, variant="decentralized", max_turns=10, runner=FakeRunner())
+    assert multi["harness"]["team_size"] == n and multi["harness"]["rules_overlay"] is None
+    assert len([s for s in multi["harness"]["seats"] if s.startswith("Agent_")]) == n

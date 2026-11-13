@@ -1,8 +1,8 @@
 """Run one Claude Code harness setting on one contest manifest.
 
     python rebuttal/run_rebuttal.py --setting single --manifest data/contest_manifests/arml_local_2009.json
-    python rebuttal/run_rebuttal.py --setting multi  --manifest ... --team-size 3
-    python rebuttal/run_rebuttal.py --setting otc    --manifest ... --team-size 3
+    python rebuttal/run_rebuttal.py --setting multi  --manifest ...   # competition's own roster (= OTC)
+    python rebuttal/run_rebuttal.py --setting otc    --manifest ...
 
 All settings use the same model, the same restricted Claude Code tool set,
 the same number of contest rounds (the competition's engine turn budget) and
@@ -35,7 +35,8 @@ def main(argv=None) -> dict:
     p.add_argument("--setting", required=True, choices=("single", "multi", "otc"))
     p.add_argument("--manifest", required=True, type=Path)
     p.add_argument("--model", default=DEFAULT_MODEL)
-    p.add_argument("--team-size", type=int, default=3, help="multi/otc: number of Claude Code instances")
+    p.add_argument("--team-size", default="official",
+                   help="multi/otc: 'official' (default: the competition's own roster, same as OTC) or an integer")
     p.add_argument("--rounds", type=int, default=None,
                    help="contest rounds (default: the competition's engine turn budget)")
     p.add_argument("--max-inner-turns", type=int, default=8,
@@ -68,6 +69,8 @@ def main(argv=None) -> dict:
     # Workspaces must sit outside the repo/data roots, which are denied to agents.
     ws = args.workspace_root or Path(tempfile.mkdtemp(prefix=f"cc_{args.setting}_"))
     rounds = policy.contest_rounds(manifest.competition_id, args.rounds)
+    pinned = None if str(args.team_size).lower() == "official" else int(args.team_size)
+    team_n = pinned or policy.official_team_size(manifest.competition_id)
     common = dict(model=args.model, max_inner_turns=args.max_inner_turns, max_output_tokens=args.max_output_tokens)
     started = datetime.now(timezone.utc)
 
@@ -76,11 +79,11 @@ def main(argv=None) -> dict:
         result = run_single(manifest, workspace_root=ws, rounds=rounds, **common)
     elif args.setting == "multi" and args.impl == "standalone":
         from claude_code.multi import run_multi
-        result = run_multi(manifest, workspace_root=ws, rounds=rounds, team_size=args.team_size, **common)
+        result = run_multi(manifest, workspace_root=ws, rounds=rounds, team_size=team_n, **common)
     else:
         from claude_code.otc import run_engine
         variant = {"single": "single_agent", "multi": "decentralized"}.get(args.setting, args.otc_variant)
-        session = run_engine(args.manifest, output=out, workspace_root=ws, team_size=args.team_size,
+        session = run_engine(args.manifest, output=out, workspace_root=ws, team_size=pinned,
                              variant=variant, max_turns=rounds, session_mode=args.session_mode, **common)
         result = {"setting": args.setting, "impl": "engine", "team_size": session["harness"]["team_size"],
                   "variant": session["system_variant"], "submissions": session["submissions"],

@@ -286,27 +286,34 @@ def write_harness_summary(seats: ClaudeCodeSeats, output: Path, **extra) -> dict
     return harness
 
 
-def run_engine(manifest_path: Path, *, output: Path, workspace_root: Path, model: str, team_size: int,
+def run_engine(manifest_path: Path, *, output: Path, workspace_root: Path, model: str, team_size: int | None,
                variant: str = "otc", max_inner_turns: int = 8, max_output_tokens: int | None = None,
                max_turns: int | None = None, session_mode: str = "per_call", extra_args: list[str] | None = None,
                runner=None) -> dict[str, Any]:
     """Run one contest-engine preset with Claude Code seats; returns contest_session.json + harness.
 
     ``variant`` is any engine preset: ``single_agent`` (team size forced to 1),
-    ``decentralized``, ``otc``, ``vallina_otc``...
+    ``decentralized``, ``otc``, ``vallina_otc``... ``team_size=None`` keeps the
+    competition's own roster (what OTC uses); an integer pins it via a rules overlay.
     """
     import run_competition_batch as rcb
 
     manifest = policy.load_manifest(manifest_path)
     output.mkdir(parents=True, exist_ok=True)
-    size = 1 if variant == "single_agent" else team_size
-    rules_root = policy.team_rules_overlay(manifest.competition_id, max(size, 2), output)
+    if variant == "single_agent":
+        size = 1
+    elif team_size is None:
+        size = policy.official_team_size(manifest.competition_id)
+    else:
+        size = team_size
+    rules_root = (None if team_size is None
+                  else policy.team_rules_overlay(manifest.competition_id, max(team_size, 2), output))
     seats = ClaudeCodeSeats(competition_id=manifest.competition_id, workspace_root=workspace_root, model=model,
                             max_inner_turns=max_inner_turns, max_output_tokens=max_output_tokens,
                             session_mode=session_mode, rules_root=rules_root, runner=runner)
     argv = ["run_competition_batch.py", "--live", "--provider", ROUTE_PROVIDER, "--model", model,
             "--contest-manifest", str(manifest_path), "--system-variant", variant,
-            "--rules-root", str(rules_root), "--output", str(output / "engine"),
+            *(["--rules-root", str(rules_root)] if rules_root else []), "--output", str(output / "engine"),
             "--no-judge-task", "--no-judge-collab", "--action-calling", "native"]
     if max_turns is not None:
         argv += ["--max-turns", str(max_turns)]
@@ -323,7 +330,7 @@ def run_engine(manifest_path: Path, *, output: Path, workspace_root: Path, model
         restore()
     result = json.loads((output / "engine" / "contest_session.json").read_text(encoding="utf-8"))
     result["harness"] = write_harness_summary(seats, output, team_size=size, variant=variant,
-                                              rules_overlay=str(rules_root))
+                                              rules_overlay=str(rules_root) if rules_root else None)
     return result
 
 

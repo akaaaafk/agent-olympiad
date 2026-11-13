@@ -13,9 +13,12 @@ This is ``scripts/run_mini_dataset.py`` (= ``scripts/run_pipeline.py`` on
 2. every child job runs through ``rebuttal/cc_child.py``, so each model call
    (seats, Coach, judges) goes to Claude Code (``--provider anthropic`` is
    the internal route);
-3. every competition's active roster is pinned to ``--team-size`` (default 3)
-   through a copied rules tree under ``<output>/rules_overlay``. single_agent
-   always uses 1 seat.
+3. team size: by default (``--team-size official``) every competition uses its
+   own roster from ``rules/<competition>/competition.json`` (team.active_default),
+   which is exactly the roster OTC uses, so multi and OTC have the same number
+   of agents per competition. ``--team-size N`` instead pins every competition
+   to N through a copied rules tree under ``<output>/rules_overlay``.
+   single_agent always uses 1 seat.
 
 Everything else (registration, Docker/VJudge-Kattis checks for ICPC, CTF image
 checks, artifact routes, resume, the report) is the pipeline's own code. Other
@@ -39,7 +42,8 @@ def main(argv=None) -> int:
     argv = list(sys.argv[1:] if argv is None else argv)
     pre = argparse.ArgumentParser(add_help=False)
     pre.add_argument("--setting", required=True, choices=sorted(VARIANTS))
-    pre.add_argument("--team-size", type=int, default=3)
+    pre.add_argument("--team-size", default="official",
+                     help="'official' (default: each competition's own roster, same as OTC) or an integer")
     pre.add_argument("--otc-variant", default="otc", choices=("otc", "vallina_otc"))
     pre.add_argument("--data-root", type=Path, default=ROOT / "data" / "mini_data")
     pre.add_argument("--max-inner-turns", type=int, default=None)
@@ -78,20 +82,21 @@ def main(argv=None) -> int:
     out_arg = next((rest[i + 1] for i, a in enumerate(rest) if a == "--output" and i + 1 < len(rest)), None)
     out = Path(out_arg or ROOT / "results" / f"mini_cc_{ours.setting}").resolve()
     out.mkdir(parents=True, exist_ok=True)
-    overlay = policy.team_rules_overlay(None, max(ours.team_size, 2), out)
-    rules_flag = ["--rules-root", str(overlay)]
+    official = str(ours.team_size).strip().lower() == "official"
+    overlay = None if official else policy.team_rules_overlay(None, max(int(ours.team_size), 2), out)
+    rules_flag = [] if official else ["--rules-root", str(overlay)]
 
-    # Identity checks inside the pipeline must see the same rules root as the child.
-    original_inspect = rcb.inspect_contest_run
-    rcb.inspect_contest_run = lambda cli: original_inspect([*cli, *rules_flag])
-    original_prepare = otc_artifact_pipeline.prepare_artifact_run
+    if overlay is not None:
+        # Identity checks inside the pipeline must see the same rules root as the child.
+        original_inspect = rcb.inspect_contest_run
+        rcb.inspect_contest_run = lambda cli: original_inspect([*cli, *rules_flag])
+        original_prepare = otc_artifact_pipeline.prepare_artifact_run
 
-    def prepare(**kw):
-        kw.setdefault("rules_root", overlay)
-        if kw.get("rules_root") is None:
-            kw["rules_root"] = overlay
-        return original_prepare(**kw)
-    otc_artifact_pipeline.prepare_artifact_run = prepare
+        def prepare(**kw):
+            if kw.get("rules_root") is None:
+                kw["rules_root"] = overlay
+            return original_prepare(**kw)
+        otc_artifact_pipeline.prepare_artifact_run = prepare
 
     original_command = pipeline.command
 
@@ -108,7 +113,8 @@ def main(argv=None) -> int:
     sys.argv = ["run_pipeline.py", *rest, "--provider", "anthropic", "--system-variant", variant,
                 *([] if out_arg else ["--output", str(out)])]
     print(f"Claude Code setting={ours.setting} variant={variant} team_size="
-          f"{1 if variant == 'single_agent' else ours.team_size} data={ours.data_root} rules={overlay} "
+          f"{1 if variant == 'single_agent' else ('official roster per competition' if official else ours.team_size)} "
+          f"data={ours.data_root} rules={overlay or 'canonical'} "
           f"backend={'bedrock:' + ours.bedrock_model if ours.bedrock_model else 'first_party'}", flush=True)
     return pipeline.main()
 
