@@ -150,3 +150,48 @@ def test_official_roster_matches_otc(tmp_path):
                        team_size=None, variant="decentralized", max_turns=10, runner=FakeRunner())
     assert multi["harness"]["team_size"] == n and multi["harness"]["rules_overlay"] is None
     assert len([s for s in multi["harness"]["seats"] if s.startswith("Agent_")]) == n
+
+
+class MaxTurnsRunner(FakeRunner):
+    """Every tool-enabled text call and first action call runs out of inner turns."""
+
+    def __call__(self, cmd, cwd, env, timeout, stdin_text):
+        tools = _flag(cmd, "--tools")
+        max_turns = int(cmd[cmd.index("--max-turns") + 1])
+        base = {"session_id": "fake-session-0002", "usage": {"input_tokens": 10, "output_tokens": 5},
+                "total_cost_usd": 0.001, "num_turns": 9}
+        out_of_turns = {**base, "is_error": True, "subtype": "error_max_turns", "result": ""}
+        if "--json-schema" not in cmd:
+            if tools not in ([], [""]) and max_turns > 2:
+                self.commands.append(cmd)
+                return out_of_turns
+        elif "action" in json.loads(cmd[cmd.index("--json-schema") + 1])["properties"] and max_turns > 3:
+            self.commands.append(cmd)
+            return out_of_turns
+        return super().__call__(cmd, cwd, env, timeout, stdin_text)
+
+
+def test_max_turns_text_call_is_finished_without_tools(tmp_path):
+    from claude_code.otc import ClaudeCodeSeats
+    from llm import LLMRequest
+    runner = MaxTurnsRunner()
+    seats = ClaudeCodeSeats(competition_id="arml_local", workspace_root=tmp_path, model="fake", runner=runner)
+    resp = seats.request(LLMRequest("You are Agent_1, one contestant", "think", purpose="private_think"))
+    assert "tool_error" not in resp.usage and resp.text
+    assert resp.usage["cc_max_turns_recovered"] == 1 and resp.usage["api_calls"] == 2
+    finish = runner.commands[-1]
+    assert _flag(finish, "--tools") == [""] and finish[finish.index("--max-turns") + 1] == "2"
+    assert "--resume" in finish
+
+
+@needs_data
+def test_otc_survives_max_turns(tmp_path):
+    from claude_code.otc import run_otc
+    runner = MaxTurnsRunner()
+    session = run_otc(MANIFEST, output=tmp_path / "out", workspace_root=tmp_path / "ws", model="fake",
+                      team_size=3, max_turns=10, runner=runner)
+    calls = json.loads((tmp_path / "out" / "claude_code_calls.json").read_text(encoding="utf-8"))
+    purposes = [c["purpose"] for c in calls]
+    assert "private_think_finish" in purposes and "action_finish" in purposes
+    # Before the fix the contest ended after the first private_think; now it uses every round.
+    assert session["budget"]["turns_used"] == 10

@@ -197,19 +197,31 @@ class ClaudeCodeAgent:
         return path
 
     def build_command(self, prompt: str, *, append_system_prompt: str | None,
-                      json_schema: dict[str, Any] | None, resume: bool) -> list[str]:
-        """Command line for one invocation; the prompt itself is sent on stdin."""
-        allow, deny = self._permission_rules()
+                      json_schema: dict[str, Any] | None, resume: bool,
+                      tools: tuple[str, ...] | None = None, max_turns: int | None = None) -> list[str]:
+        """Command line for one invocation; the prompt itself is sent on stdin.
+
+        ``tools`` / ``max_turns`` override the agent's defaults for this one call
+        (used to finish a step without tools after it ran out of inner turns).
+        """
+        saved = self.tools
+        if tools is not None:
+            self.tools = tuple(tools)
+        try:
+            allow, deny = self._permission_rules()
+            active_tools = self.tools
+        finally:
+            self.tools = saved
         cmd = [
             *CLAUDE_CMD, "-p",
             "--model", bedrock_model() or self.model,
             "--output-format", "json",
-            "--max-turns", str(self.max_inner_turns),
+            "--max-turns", str(max_turns or self.max_inner_turns),
             "--permission-mode", "dontAsk",
             "--setting-sources", "",
             "--strict-mcp-config",
             "--disable-slash-commands",
-            "--tools", *(self.tools or ("",)),
+            "--tools", *(active_tools or ("",)),
             "--allowedTools", *allow,
             "--disallowedTools", *deny,
         ]
@@ -248,10 +260,11 @@ class ClaudeCodeAgent:
     # -- invocation -------------------------------------------------------------
     def run(self, prompt: str, *, append_system_prompt: str | None = None,
             json_schema: dict[str, Any] | None = None, new_session: bool = False,
-            purpose: str = "turn") -> CCResult:
+            purpose: str = "turn", tools: tuple[str, ...] | None = None,
+            max_turns: int | None = None) -> CCResult:
         resume = self.persistent and not new_session and self.session_id is not None
         cmd = self.build_command(prompt, append_system_prompt=append_system_prompt,
-                                 json_schema=json_schema, resume=resume)
+                                 json_schema=json_schema, resume=resume, tools=tools, max_turns=max_turns)
         runner = self.runner or _subprocess_runner
         try:
             data = runner(cmd, self.workspace, self._env(), self.timeout_s, prompt)

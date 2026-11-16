@@ -83,6 +83,24 @@ def _merge_usage(rows: list[dict[str, Any]]) -> dict[str, Any]:
     return out
 
 
+# Claude Code stopped because it spent its inner tool steps before writing an
+# answer. The seat's work so far is still in its session, so we finish the step
+# in that session instead of treating it as a fatal transport error.
+RECOVERABLE_SUBTYPES = {"error_max_turns"}
+FINISH_TEXT_PROMPT = ("You have used all of your tool steps for this step. Do not use any tools now. "
+                      "Using what you have worked out so far, write your full response to the previous "
+                      "request directly as plain text.")
+FINISH_ACTION_PROMPT = ("You have used all of your tool steps for this step. Do not use any more tools. "
+                        "Using what you have worked out so far, return exactly one valid contest action "
+                        "as the structured output now.")
+FINISH_TEXT_TURNS = 2
+FINISH_ACTION_TURNS = 3
+
+
+def _ran_out_of_turns(res) -> bool:
+    return bool(res.is_error and (res.raw or {}).get("subtype") in RECOVERABLE_SUBTYPES)
+
+
 class ClaudeCodeSeats:
     """Maps engine requests to one Claude Code instance per seat."""
 
@@ -152,12 +170,24 @@ class ClaudeCodeSeats:
         prompt = request.user_prompt + self._stage_attachments(agent, request)
         note = "" if seat == "Judge" else SEAT_NOTE
         if not request.tools:
-            res = agent.run(prompt, append_system_prompt=(request.system_prompt or "") + note,
+            system = (request.system_prompt or "") + note
+            res = agent.run(prompt, append_system_prompt=system,
                             new_session=self._new_session(agent), purpose=request.purpose)
-            usage = res.usage_row()
-            if res.is_error:
+            rows = [res.usage_row()]
+            recovered = False
+            if _ran_out_of_turns(res):
+                # Finish in the same session with tools off; never fatal on its own.
+                res = agent.run(FINISH_TEXT_PROMPT, append_system_prompt=system, tools=(),
+                                max_turns=FINISH_TEXT_TURNS, purpose=f"{request.purpose or 'text'}_finish")
+                rows.append(res.usage_row())
+                recovered = True
+            usage = _merge_usage(rows) if len(rows) > 1 else rows[0]
+            if recovered:
+                usage["cc_max_turns_recovered"] = 1
+            if res.is_error and not res.text.strip():
                 usage["tool_error"] = f"Claude Code error: {res.raw.get('subtype') or res.text[:200]}"
-            return LLMResponse(res.text, PROVIDER_LABEL, self.model, usage=usage)
+            text = res.text if not res.is_error else res.text.strip()
+            return LLMResponse(text, PROVIDER_LABEL, self.model, usage=usage)
 
         schema = _action_schema(request.tools)
         system = (request.system_prompt or "") + note
@@ -177,8 +207,12 @@ class ClaudeCodeSeats:
             if attempt == 1:
                 break
             # one repair attempt in the same session
-            res = agent.run(f"Your action was rejected: {error}. Return exactly one valid action now.",
-                            append_system_prompt=system, json_schema=schema, purpose="action_repair")
+            if _ran_out_of_turns(res):
+                res = agent.run(FINISH_ACTION_PROMPT, append_system_prompt=system, json_schema=schema,
+                                max_turns=FINISH_ACTION_TURNS, purpose="action_finish")
+            else:
+                res = agent.run(f"Your action was rejected: {error}. Return exactly one valid action now.",
+                                append_system_prompt=system, json_schema=schema, purpose="action_repair")
             rows.append(res.usage_row())
         usage = _merge_usage(rows)
         usage.update(tool_retries=1, rejected_tool_calls=rejected,
